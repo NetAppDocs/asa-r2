@@ -1,14 +1,16 @@
 indexpage:
-  title: # Unquoted string 
-  lead: # Quoted string
-  summary: # Quoted string 
-  keywords: # Unquoted comma-delimited list of keywords 
-  tiles: 
-    # Tile definition 
-    - title: # Quoted or unquoted string
+  title: ASA r2 documentation
+  lead: ASA r2 documentation lead
+  summary: ASA r2 summary
+  keywords: asa r2, ontap, documentation
+  tiles:  
+    - title: Get started
       links: 
-        # Link definition
-        - title: # Quoted or unquoted string
-          url: # Path to target
-        # Next link on this tile (title/url pair)
-    # Next tile on this page (title/links)
+        - title: Learn more
+          url: /get-started/learn-about.html
+        - title: Get started
+          url: /get-started/quick-start.html
+    - title: More resources
+      links:
+        - title: ONTAP Command reference
+          url: https://docs.netapp.com/us-en/ontap-cli/
