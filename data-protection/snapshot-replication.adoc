@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapshot-replication.html
+keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication
+summary: Use Snapshot replication to copy data to a remote location for backup and disaster recovery.  Set up requires creation of a replication policy and relationship. 
+---
+= Setup Snapshop replciation on the ASA r2
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Setup Snapshot replication on your ASA r2 storage system to copy consistency groups in your cluster to a geographically remote location for backup and disaster protection. To set up Snapshot replication, you need to create a replication policy and establish a replication relationship. 

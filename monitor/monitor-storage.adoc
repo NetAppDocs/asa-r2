@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: monitor/monitor-storage.html
+keywords: 
+summary:
+---
+= Monitor ASA r2 storage utilization
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

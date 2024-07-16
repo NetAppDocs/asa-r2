@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: data-protection/create-snapshots.html
+keywords: protect data, snapshots, asa r2, data protection, create snapshots, snapshots, create consistency groups, consistency groups
+summary: To protect data on the ASA r2, you need to create a consistency group and then create a snapshot.  Data must be in a consistency group to be protected.
+---
+= Use snapshots to protect your data on the ASA r2
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To protect data on the ASA r2, you need to create a consistency group containing the storage units that you want to protect and then you need to create a snapshot.  You cannot protect data that is not in a consistency group.

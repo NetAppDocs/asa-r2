@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: learn-more/hardware-comparison.html
+keywords: 
+summary:
+---
+= Comparison between ASA r2 and other ONTAP hardware systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

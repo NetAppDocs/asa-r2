@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: data-protection/policies-schedules.html
+keywords: data protection, polices, schedules, protect data, snapshot policies, snapshot schedules, replication policies
+summary: Use data protection policies and schedules to protect data on an automated schedule.  
+---
+= Manage ONTAP data protection policies and schedules
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use snapshot policies to protect data in your storage units and consistency groups on an automated schedule. Use snapshot schedules within policies to determine how often snapshots are taken at the storage VM and cluster level.

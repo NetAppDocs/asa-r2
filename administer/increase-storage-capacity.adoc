@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: administer/increase-storage-capacity.html
+keywords: 
+summary:
+---
+= Increase storage capacity
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

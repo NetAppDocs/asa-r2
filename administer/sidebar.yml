@@ -1,0 +1,13 @@
+section: administer
+title: Administer your data
+entries:
+- title: Manage client access to storage VMs
+  url: "/administer/manage-client-vm.html"
+- title: Increase storage capacity
+  url: "/administer/increase-storage-capacity.html"  
+- title: Manage cluster networking
+  url: "/administer/manage-cluster-networking.html" 
+- title: Reboot, takeover, and give back nodes
+  url: "/administer/reboot-take-over-give-back-nodes.html" 
+- title: Rename nodes
+  url: "/administer/rename-nodes.html"   

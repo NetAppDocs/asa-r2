@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: monitor/view-event-jobs.html
+keywords: 
+summary:
+---
+= View cluster events and jobs
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

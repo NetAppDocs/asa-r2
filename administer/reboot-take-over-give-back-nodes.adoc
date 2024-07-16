@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: administer/reboot-take-over-give-back-nodes.html
+keywords: 
+summary:
+---
+= Reboot, take over, and give back nodes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

@@ -1,12 +1,12 @@
 ---
 sidebar: sidebar
-permalink: sample-article.html
+permalink: get-started/learn-about.html
 keywords: 
 summary: 
 ---
 = Page title goes here
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Use this template for articles, topics, whatever you call them. The index.adoc file does not have the correct keywords for an article page and using it as a template can cause publishing problems later on. 

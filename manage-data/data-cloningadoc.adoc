@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: manage-data/data-cloning.html
+keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups
+summary: Clone storage units and consistency groups on the ASA r2 to create data copies that can be used in isolation from production data for a variety of purposes. 
+---
+= Clone data on ASA r2 using System Manager
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Clone storage units and consistency groups to create data copies that can be used in isolation from your production data for a variety of purposes such as application development and testing or backups.

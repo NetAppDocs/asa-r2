@@ -1,0 +1,15 @@
+section: install-setup
+title: Install and setup
+entries:
+- title: Install workflow
+  url: "/install-setup/install-setup-workflow.html"
+- title: Prepare for install
+  url: "/install-setup/prepare-hardware.html"
+- title: Install hardware
+  url: "/install-setup/deploy-hardware.html"  
+- title: Cable hardware
+  url: "/install-setup/cable-hardware.html"  
+- title: Power on system
+  url: "/install-setup/power-on-system.html"  
+- title: Initialize the cluster
+  url: "/install-setup/initialize-ontap-cluster.html"  

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: secure-data/ransonware-protection.html
+keywords: asa r2, secure data, data security, ransonware, ransonware attacks, protection
+summary: Use tamperproof snapshots to secure your data.  Tamperproof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack. 
+---
+= Protect against ransomware attacks
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+For protection against ransomware attacks, replicate snapshots to a remote cluster, then lock the destination snapshots to make them tamperproof. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is compromised by a ransomware attack.

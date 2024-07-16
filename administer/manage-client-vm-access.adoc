@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: administer/manage-client-vm-access.html
+keywords: 
+summary:
+---
+= Manage client access to virtual machines on ASA r2
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

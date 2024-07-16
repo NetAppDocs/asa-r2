@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: monitor/monitor-performance.html
+keywords: 
+summary:
+---
+= Monitor ASA r2 storage performance
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

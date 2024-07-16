@@ -1,0 +1,11 @@
+section: learn-more
+title: Learn more
+entries:
+- title: Compare hardware systems
+  url: "/learn-more/hardware-comparison.html"
+- title: Software support and limitations
+  url: "/learn-more/software-support-limitations.html"  
+- title: ClI support
+  url: "/learn-more/cli-support.html"
+- title: API support
+  url: "/learn-more/api-support.html

@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: manage-data/delete-storage-units.html
+keywords: delete lun, delete namespace, delete storage unit
+summary: Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications.
+---
+= Delete storage units
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you lower the amount of physical storage required in your system or can free space needed for other host applications.

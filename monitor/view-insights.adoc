@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: monitor/view-insights.html
+keywords: 
+summary:
+---
+= View insights and analyze ASA r2 storage
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

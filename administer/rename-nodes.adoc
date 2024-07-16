@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: administer/rename-nodes.html
+keywords: 
+summary:
+---
+= Rename nodes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

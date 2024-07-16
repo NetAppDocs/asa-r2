@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: get-help/view-submit-support-case.html
+keywords: 
+summary:
+---
+= View and Submit support cases
+:icons: font
+:imagesdir: ../media/
+
+[.lead]

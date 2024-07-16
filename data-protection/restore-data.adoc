@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: data-protection/restore-data.html
+keywords: restore data, asa r2, data restoration
+summary: If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
+---
+= Restore data on the ASA r2
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.

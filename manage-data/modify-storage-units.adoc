@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: manage-data/modify-storage-units.html
+keywords: increase storage units, resize luns, resize namespaces, san, nvme,  increase lun size, increase namespace, increase, modify, edit, luns, namespaces, modify quality of service, qos, host mapping, mapping host
+summary: Respond to changes in your storage system performance and data by editing storage units to increase capacity, update Quality of Service (QoS) policies or change hosts mappings. 
+---
+= Modify storage units
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your storage system grow and change.

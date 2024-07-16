@@ -1,0 +1,13 @@
+section: manage-data
+title: Use ONTAP to manage your data
+entries:
+- title: Provision storage
+  url: "/manage-data/provision-san-storage.html"
+- title: Clone data
+  url: "/manage-data/data-cloning.html"  
+- title: Modify storage units
+  url: "/manage-data/modify-storage-units.html"  
+- title: Delete storage units
+  url: "/manage-data/delete-storage-units.html"  
+- title: Storage limit
+  url: "/manage-data/storage-limits.html"  
