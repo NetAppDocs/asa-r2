@@ -4,16 +4,32 @@ permalink: get-started/quick-start.html
 keywords: 
 summary: 
 ---
-= Page title goes here
+= Quick start for ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use this template for articles, topics, whatever you call them. The index.adoc file does not have the correct keywords for an article page and using it as a template can cause publishing problems later on. 
 
-NOTE: Delete this file before initial publishing, as the file will be published even if it's not linked to the sidebar. After you create a few articles you can use them as a starter instead. 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install and setup your hardware
 
-If your articles will be in a content sub-folder, you will need to make two adjustments to the notation shown above:
+[role="quick-margin-para"]
+Install and setup of the ASA r2 storage system and deploy it as a node in your ONTAP environment.
 
-* `:imagesdir:../media/`
-* `permalink: folder-name/sample-article.html` 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Two] Initialize your cluster
+
+[role="quick-margin-para"]
+Use System Manager to guide you through a quick and easy process to initialize your ONTAP cluster.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Three] Set up data access
+
+[role="quick-margin-para"]
+Connect your ASA r2 to your SAN clients.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Four] Provision your storage
+
+[role="quick-margin-para"]
+Provision storage to begin serving data to your SAN clients.
+
+.What's next
+You can now use System Manager to link:..data-protection/protect-data.html[protect] and link:..secure-data/data-security.html[secure] your data.
+

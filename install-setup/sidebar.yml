@@ -10,6 +10,6 @@ entries:
 - title: Cable hardware
   url: "/install-setup/cable-hardware.html"  
 - title: Power on system
-  url: "/install-setup/power-on-system.html"  
+  url: "/install-setup/power-on-hardware.html"  
 - title: Initialize the cluster
   url: "/install-setup/initialize-ontap-cluster.html"  

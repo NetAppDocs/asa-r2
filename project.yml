@@ -12,6 +12,8 @@ sidebar:
     url: /index.html
   - section: get-started
   - section: install-setup
+  - title: Videos for common task
+    url: /videos/placeholder.html
   - section: manage-data 
   - section: data-protection
   - section: secure-data

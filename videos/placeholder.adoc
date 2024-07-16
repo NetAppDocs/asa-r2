@@ -1,12 +1,11 @@
 ---
 sidebar: sidebar
-permalink: get-started/learn-about.html
+permalink: videos/placeholder.html
 keywords: 
 summary: 
 ---
-= Learn about ASA r2
+= Videos for common task
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-
