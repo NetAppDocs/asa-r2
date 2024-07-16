@@ -13,5 +13,3 @@ entries:
     url: "/manage-data/delete-storage-units.html"  
   - title: Storage limit
     url: "/manage-data/storage-limits.html"  
-- section: protect-data   
-- section: secure-data
