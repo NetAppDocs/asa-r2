@@ -1,8 +1,8 @@
 section: learn-more
 title: Learn more
 entries:
- -title: ASA r2 for ONTAP power users 
- entries: 
+- title: ASA r2 for ONTAP power users 
+  entries: 
   - title: Compare hardware systems
     url: "/learn-more/hardware-comparison.html"
   - title: Software support and limitations
