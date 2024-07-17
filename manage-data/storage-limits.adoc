@@ -4,7 +4,7 @@ permalink: manage-data/storage-limits.html
 keywords: storage limits, cluster limits, maximum lun size, supported protocols, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a70, asa a90, asa c80
 summary: ASA r2 configurations support a maximum of 2 nodes per cluster running the FC, iSCSI, NVMe/FC or NVMe/TCP protocols. 
 ---
-= Provision SAN storage on ASA r2 using System Manager
+= ASA r2 storage limits
 :icons: font
 :imagesdir: ../media/
 
