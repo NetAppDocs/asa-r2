@@ -1,13 +1,24 @@
 section: administer
-title: Administer your data
+title: Administer and monitor
 entries:
 - title: Manage client access to storage VMs
   url: "/administer/manage-client-vm.html"
-- title: Increase storage capacity
-  url: "/administer/increase-storage-capacity.html"  
+- title: Monitor usage and expand capacity 
+  entries:
+  - title: Monitor ASA r2 storage performance
+    url: "/administer/monitor-performance.html" 
+  - title: Monitor ASA r2 storage utilization
+    url: "/administer/monitor-storage.html"  
+  - title: Increase storage capacity
+    url: "/administer/increase-storage-capacity.html"  
 - title: Manage cluster networking
   url: "/administer/manage-cluster-networking.html" 
+- title: View insights
+  url: "/administer/view-insights.html"
+- title: View cluster events and jobs
+  url: "/administer/view-events-jobs.html"    
 - title: Reboot, takeover, and give back nodes
   url: "/administer/reboot-take-over-give-back-nodes.html" 
 - title: Rename nodes
   url: "/administer/rename-nodes.html"   
+ 

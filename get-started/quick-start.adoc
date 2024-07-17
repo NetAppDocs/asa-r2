@@ -15,17 +15,17 @@ summary:
 [role="quick-margin-para"]
 Install and setup of the ASA r2 storage system and deploy it as a node in your ONTAP environment.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Two] Initialize your cluster
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Initialize your cluster
 
 [role="quick-margin-para"]
 Use System Manager to guide you through a quick and easy process to initialize your ONTAP cluster.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Three] Set up data access
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Set up data access
 
 [role="quick-margin-para"]
 Connect your ASA r2 to your SAN clients.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[Four] Provision your storage
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Provision your storage
 
 [role="quick-margin-para"]
 Provision storage to begin serving data to your SAN clients.

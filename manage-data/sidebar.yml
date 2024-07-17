@@ -13,3 +13,29 @@ entries:
     url: "/manage-data/delete-storage-units.html"  
   - title: Storage limit
     url: "/manage-data/storage-limits.html"  
+- title: Protect your data
+  entries:
+   - title: Protect data
+     url: "/data-protection/protect-data.html"
+   - title: Create snapshots
+     url: "/data-protection/create-snapshots.html"
+   - title: Setup snapshot replication
+     url: "/data-protection/snapshot-replication.html"  
+   - title: Protect Kubernetes
+     url: "/data-protection/protect-kubernetes.html"  
+   - title: Restore data
+     url: "/data-protection/restore-data.html"
+   - title: Manage consistency groups
+     url: "/data-protection/manage-consistency-groups.html"  
+   - title: Manage protection policies and schedules
+     url: "/data-protection/policies-schedules.html"      
+- title: Secure your data
+  entries:
+  - title: Data security with ASA r2
+    url: "/secure-data/data-security.html"
+  - title: Encrypt data at rest
+    url: "/secure-data/encrypt-data-at-rest.html"
+  - title: Protect against ransomware attacks
+    url: "/secure-data/ransomware-protection.html" 
+  - title: Secure NVMe/TCP connections
+    url: "/secure-data/nvme-tcp-connections.html"   
