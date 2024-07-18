@@ -10,3 +10,5 @@ summary: Prepare to install the ASA r2 storage system in your ONTAP environment 
 
 [.lead]
 Prepare for install by getting the site ready, unpacking the boxes, comparing the contents of the boxes to the packing slip, and registering the ASA r2 hardware to access support benefits.
+
+include::https://raw.githubusercontent.com/NetAppDocs/ontap-systems/main/_include/install_prepare.adoc[]
