@@ -16,6 +16,8 @@ sidebar:
     url: /videos/placeholder.html
   - section: manage-data 
   - section: administer
+  - title: Maintain hardware 
+    url: /maintain-hardware.html
   - section: learn-more
   - section: get-help
   - title: Legal notices

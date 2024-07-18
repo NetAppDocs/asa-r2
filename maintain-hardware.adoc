@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: maintain-hardware.html
+keywords: 
+summary: 
+---
+= Maintain hardware
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
