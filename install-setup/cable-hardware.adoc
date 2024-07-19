@@ -13,4 +13,5 @@ Cable the ASA r2 hardware by first cabling the controllers to your network and t
 
 include::https://raw.githubusercontent.com/NetAppDocs/ontap-systems/main/_include/install_cable.adoc[]
 
-
+.What's next
+Go to link:power-on-hardware.html[Power on the ASA r2 storage system].
