@@ -11,7 +11,7 @@ summary: Learn how to attach the ASA r2 controller cables to your network and ca
 [.lead]
 Cable the ASA r2 hardware by first cabling the controllers to your network and then cabling  the controllers to your shelves.
 
-include::https://raw.githubusercontent.com/NetAppDocs/ontap-systems/main/_include/install_cable.adoc[]
+include::../_include/install_cable.adoc[]
 
-.What's next
+.What's next?
 Go to link:power-on-hardware.html[Power on the ASA r2 storage system].
