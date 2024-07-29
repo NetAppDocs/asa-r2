@@ -4,8 +4,11 @@ permalink: manage-data/data-cloning.html
 keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups
 summary: Clone storage units and consistency groups on the ASA r2 to create data copies that can be used in isolation from production data for a variety of purposes. 
 ---
-= Clone data on ASA r2 using System Manager
+= Clone data on ASA r2
+:hardbreaks:
+:nofooter:
 :icons: font
+:linkattrs:
 :imagesdir: ../media/
 
 [.lead]
@@ -27,7 +30,7 @@ Storage units can be cloned from your source storage VMs or from storage VMs tha
 --
 . Select *Storage*.
 . Hover over the name of the storage unit you want to clone.
-. Select image:icon_kaboob.gif[three vertical blue dos]; then click *Clone*.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Clone*.
 . Enter the name of the new storage unit that will be created as a clone.
 . Select the host mapping.
 +

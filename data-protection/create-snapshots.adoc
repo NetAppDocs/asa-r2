@@ -10,3 +10,12 @@ summary: To protect data on the ASA r2, you need to create a consistency group a
 
 [.lead]
 To protect data on the ASA r2, you need to create a consistency group containing the storage units that you want to protect and then you need to create a snapshot.  You cannot protect data that is not in a consistency group.
+
+== Step 1: Create a consistency group
+
+A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups to simplify storage management and data protection for application workloads spanning multiple storage units. 
+
+For example, suppose you have a database spanning 20 storage units.  If you add all 20 storage units to a single consistency group, you can manage them as a solitary dataset instead of individually. 
+
+
+== Step 2: Create a snapshot
