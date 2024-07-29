@@ -71,7 +71,7 @@ Validate that you can successfully serve data from replicated storage units on a
 .Steps
 
 1.	In System Manager, select *Protection > Replication*.
-2.	Hoover over the replication relationship you want to test, then select image:icon_kabob_gif[three vertical blue dots].
+2.	Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
 3.	Select *Test failover*.
 4.	Enter the failover information, then select *Test failover*.
 
