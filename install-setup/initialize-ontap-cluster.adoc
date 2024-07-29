@@ -10,3 +10,87 @@ summary: Learn how to initialize the ONTAP cluster on ASA r2 using System Manage
 
 [.lead]
 System Manager guides you through a quick and easy workflow to initialize an ONTAP cluster on your new ASA r2 system.
+
+During cluster initialization, your default data storage virtual machine (SVM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
+
+.Before you begin
+
+Gather the following information:
+
+* Cluster management IP address
++
+The cluster management IP address is a unique IPv4 or IPv6 address for the cluster management interface used by the cluster administrator to access the admin SVM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
+* Network subnet mask
++
+During cluster initialization, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.
+* Network gateway IP address
+* Partner node IP address
+* DNS domain names
+* DNS name server IP addresses
+* NTP server IP addresses
+* Data subnet mask
+
+.Steps
+
+. Discover you cluster network
+.. Connect your laptop to the management switch and access the network computers and devices.
+.. Open File Explorer.
+.. Select *Network*; then right-click and select *Refresh*.
+.. Select either ONTAP icon; then accept any certificates displayed on your screen.
++
+System Manager opens.
+
+. Under *Password*, create a strong password for the admin account.
++
+The password must be at least eight characters long and must contain at least one letter and one number.
+
+. Reenter the password to confirm and then select *Continue*.
+
+. Under *Network addresses*, enter the storage system name or accept the default.
++
+If you change the default storage system name the new name must begin with a letter and must be fewer than 44 characters. You can use a period (.), hyphen (-) or underscore (_) in the name.
+
+. Enter the cluster management IP address, subnet mask, gateway IP address and the IP address of the partner node; then select *Continue*.
+
+. Under *Network services*, select the desired options to *Use the Domain Name System (DNS) for resolving host names* and to *Use the Network Time Protocol (NTP) to keep times synchronized*.
++
+If you choose to use the DNS, enter the DNS domain and name servers.  If you choose to use NTP, enter the NTP servers; then select *Continue*.
+
+. Under *Encryption*, enter a passphrase for the Onboard Key Manager (OKM).
++
+Encryption of data at rest using an Onboard Key Manager (OKM) is selected by default.  If you do not want to encrypt data at rest or if you want to use an external key manager, update the selections.   
++
+Optionally, you can configure your cluster for encryption after cluster initialization is complete.
+
+. Select *Initialize*.
++
+When initialization is complete you are redirected to the cluster’s management IP address.
+
+. Under *Network*, select *Configure protocols*.
++
+[cols="2" options="header"]
+|===
+// header row
+| To configure IP, do this...
+| To configure FC and NVMe/FC, do this...
+
+// first body row
+a|
+.. Select the IP tab; then select *Configure IP interfaces*.
+.. Select *Add a data network*.
+.. Enter the data subnet information; then select *Add*.
+.. Select *Save*.
+
+a|
+.. Select the FC tab; then select *Configure FC interfaces* and/or *Configure NVMe/FC interfaces*.
+.. Select the FC and/or NVMe/FC ports; then select *Save*.
+
+// table end
+|===
+
+.Result
+Your cluster is ready to link:manage-data/provision-san-storage.html[provision storage].
+
+.What's next
+It is recommended that you download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
+

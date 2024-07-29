@@ -10,3 +10,9 @@ summary: Use Snapshot and Snapshot replication to create local and remote copies
 
 [.lead]
 Use Snapshot and Snapshot replication to protect data on your ASA r2 storage system. Snapshots create local copies of your data that you can use to restore storage units to specific points in time.  Snapshot replication can be used for data migration or disaster recovery by creating copies of your data on a cluster in a geographically remote site.
+
+Snapshots can be created on demand and can be created automatically in regular intervals based on a snapshot policy. For example, you can configure a snapshot policy to automatically create a new snapshot of changes in your cluster every day at 12:10 a.m. 
+
+.Related links
+link:https://docs.netapp.com/us-en/ontap/concepts/snapshot-copies-concept.html[Learn more about snapshots].
+link:https://docs.netapp.com/us-en/ontap/concepts/snapmirror-disaster-recovery-data-transfer-concept.html[Learn more about disaster recovery and data transfer].

@@ -9,4 +9,29 @@ summary: ASA r2 configurations support a maximum of 2 nodes per cluster running 
 :imagesdir: ../media/
 
 [.lead]
-All ASA r2 configurations support the FC, iSCSI, NVMe/FC and NVMe/TCP protocols. The maximum nodes per cluster for all ASA r2 configurations is two.
+For a complete list of the most current ASA r2 storage and configuration limits, see the NetApp Hardware Universe.
+
+ASA r2 configurations support the following:
+
+[cols="1h, 1"]
+|===
+
+| Protocols
+a| 
+* FC
+* iSCSI
+* NVMe/FC
+* NVMe/TCP
+
+
+| Max nodes per cluster
+| 2
+
+| Max storage unit size
+| 128 TB
+
+// table end
+|===
+
+.Relate links
+ link:https://hwu.netapp.com/[NetApp Hardware Universe].
