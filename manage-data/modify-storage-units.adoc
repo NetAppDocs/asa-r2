@@ -9,7 +9,7 @@ summary: Respond to changes in your storage system performance and data by editi
 :imagesdir: ../media/
 
 [.lead]
-Storage units can be edited, taken offline and deleted for various administrative reasons, system reconfiguration or performance optimization.
+Storage units can be edited or taken offline for various administrative reasons, system reconfiguration or performance optimization.
 
 == Edit storage units
 Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your storage system grow and change.
@@ -25,7 +25,7 @@ Modify the hosts that are mapped to a storage unit to assist in balancing worklo
 
 .Steps
 
-. Select *Storage*.
+. In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to edit.
 . Select image:icon_kaboob.gif[three vertical blue dots]; then select *Edit*.
 . Update the storage unit parameters as needed to increase capacity, change the QoS policy, and update the host mapping.
@@ -38,19 +38,9 @@ If you have increased the size of your storage unit, you must rescan the storage
 Take a storage unit offline to perform maintenance, to reconfigure your environment or for other administrative purposes.  Taking a storage unit offline is disruptive.  Expect hosts to experience loss of access to data on the storage unit when you take the storage unit offline.
 
 .Steps
-. Select *Storage*.
+. In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to take offline.
 . Select image:icon_kaboob.gif[three vertical blue dots]; then select *Take offline*.
 . Select to Disrupt client access and take the storage units offline; then select *Take offline*.
 
-== Delete storage units
-Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you lower the amount of physical storage required in your system or can free space needed for other host applications.
-
-.Steps
-
-. Select *Storage*.
-. Hover over the name of the storage unit you want to delete.
-. Select image:icon_kaboob.gif[three vertical blue dots]; then select *Delete*.
-. Acknowledge that the deletion cannot be undone.
-. Select *Delete*.
-
+// ONTAPDOC 1922, 2024 Sept 24

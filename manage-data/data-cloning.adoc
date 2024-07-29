@@ -28,7 +28,7 @@ Storage units can be cloned from your source storage VMs or from storage VMs tha
 
 .Clone from source
 --
-. Select *Storage*.
+. In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Clone*.
 . Enter the name of the new storage unit that will be created as a clone.
@@ -71,9 +71,9 @@ a|
 
 .Clone from remote snapshot
 --
-. Select *Protection > Replication*.
+. In System Manager, select *Protection > Replication*.
 . Hover over the *Source* you want to clone.
-. Select image:icon_kaboob.gif[three vertical blue dots], then select *Clone*.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
 . Select the source cluster and storage VM; then enter a name for the new consistency group or accept the default name.
 . Select the snapshot to clone; then select *Clone*.
 --
@@ -90,13 +90,13 @@ The clone is created from a snapshot of the original consistency group.  By defa
 
 You can also choose to create a new host group or add new hosts to the clone when it is created.
 
-Storage unit mappings are not copied as part of the cloning process.  After the clone is created, you must map storage units as needed.
+Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html[create snapshots] of the cloned consistency group after it is created.
 
 .Steps
 
-. Select *Protection > Consistency groups*.
+. In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to clone.
-. Select image:icon_kaboob.gif[three vertical blue dots], then select *Clone*.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
 . Enter a name for the new, cloned consistency group or accept the default name.
 . Select the host operating system and host mapping.
 . If you want to dissociate the clone from the source consistency group and allocate disk space, select *Split clone*.
@@ -128,3 +128,5 @@ a|
 |===
 
 . Select *Clone*.
+
+// ONTAPDOC 1922, 2024 Sept 24

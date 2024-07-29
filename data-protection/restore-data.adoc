@@ -9,4 +9,36 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 :imagesdir: ../media/
 
 [.lead]
-If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
+If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a local or remote snapshot.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Restore fom a local snapshot
+--
+. In System Manager, select *Protection > Consistency groups*.
+. Double-click the consistency group containing the data you need to restore.
++
+The consistency group details page opens.
+. Select *Snapshots*; then select the snapshot you want to restore.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Restore*.
+
+--
+
+.Restore from a remote snapshot
+--
+. In System Manager, select P*rotection > Replication*.
+. Hoover over the Source you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Restore*.
+. Select the consistency group containing the data you need restore.
+. Select the snapshot you want to restore; then select *Restore*.
+
+--
+
+====
+
+// end tabbed area
+
+// ONTAPDOC 1927, 2024 Sept 24

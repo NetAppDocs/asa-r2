@@ -10,3 +10,70 @@ summary: Use Snapshot replication to copy data to a remote location for backup a
 
 [.lead]
 Setup Snapshot replication on your ASA r2 storage system to copy consistency groups in your cluster to a geographically remote location for backup and disaster protection. To set up Snapshot replication, you need to create a replication policy and establish a replication relationship. 
+
+.Before you begin
+A SnapMirror license is required to set up Snapshot replication.
+
+== Step 1: Create a snapshot replication policy
+
+. In System Manager, select *Protection > Policies*; then select *Replication policies*.
+. Select image:icon_add_blue_bg.gif[square blue rectangle with the word add centered in white letters].
+. Enter a name for the replication policy or accept the default name; then enter a description.
+. Select the *Policy scope*.
+If you want to apply the replication policy to the entire cluster, select *Cluster*.   If you want the replication policy applied only to the storage units in a specific storage VM, select *Storage VM*; then select the storage VM .
+. Select the *Policy type*.
++
+[cols="2,6a" options="header"]
+|===
+// header row
+| If you want to...
+| Do this...
+
+| Copy data to the remote site after it is written to the source.
+a| Select *Asynchronous*.
+
+| Write data to the source and remote sites simultaneously.  
+a|
+.. Select *Synchronous*.
+.. Select *Transfer schedule*.
+.. Select to transfer all snapshots or select to create rules to determine which snapshots to transfer.
+.. Optionally, enable network compression.
+
+. Select *Save*.
+
+// table end
+|===
+
+.Related links
+Learn more about link:../administer/manage-client-vm-access.html[storage VMs for client access].
+
+== Step 2: Create a replication relationship
+
+Create a SnapMirror relationship to replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data transfer between endpoints in the NetApp data fabric. 
+
+.Before you begin
+
+If you want to create tamperproof snapshots, you must initialize the Snapshot compliance clock before you create the replication relationship.
+
+.Steps
+
+. In System Manager, select *Protection > Replication*; then select  .
+. Select the source consistency group.
+. Select the replication storage VM and the replication policy
+. Optionally, select to lock the destination snapshots to prevent deletion.
+. Accept the default to start the initial data transfer immediately or select *Advanced settings*; then select *Override transfer schedule*.
+. Select *Replicate*. 
+
+== Test replication failover
+
+Validate that you can successfully serve data from replicated storage units on a remote cluster if the source cluster is offline.  
+
+.Steps
+
+1.	In System Manager, select *Protection > Replication*.
+2.	Hoover over the replication relationship you want to test, then select image:icon_kabob_gif[three vertical blue dots].
+3.	Select *Test failover*.
+4.	Enter the failover information, then select *Test failover*.
+
+
+// ONTAPDOC 1927, 2024 Sept 24

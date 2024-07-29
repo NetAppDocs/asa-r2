@@ -10,3 +10,5 @@ summary: Use data protection policies and schedules to protect data on an automa
 
 [.lead]
 Use snapshot policies to protect data in your storage units and consistency groups on an automated schedule. Use snapshot schedules within policies to determine how often snapshots are taken at the storage VM and cluster level.
+
+// ONTAPDOC 1927, 2024 Sept 24

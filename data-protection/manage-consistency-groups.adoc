@@ -10,3 +10,5 @@ summary: Use consistency groups to perform various actions to multiple storage u
 
 [.lead]
 Use consistency groups for simplified management of storage units. Consistency groups allow you to perform various actions to multiple storage units at the same time instead of performing the same action individually on each unit.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. 
+
+// ONTAPDOC 1927, 2024 Sept 24
