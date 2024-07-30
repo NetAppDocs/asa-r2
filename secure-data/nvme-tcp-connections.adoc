@@ -10,3 +10,16 @@ summary: Enhance your data security by configuring NVMe/TCP over TLS to encrypt 
 
 [.lead]
 Enhance your data security by configuring NVMe/TCP over TLS to encrypt all data sent over the network between your NVMe/TCP host and ONTAP.
+
+.Steps
+
+. Select *Hosts*; then select *NVMe*.
+. Select image:icon_add_blue_bg.png[blue square with a plus sign followed by the word Add in white letters] .
+. Enter the host name; then select the host operating system.
+. Enter a host description; then select the storage VM to connect to the host.
+. Select image:icon_dropdown_arrow.gif[blue downward facing arrow] next to the host name.
+. Select *In-band authentication*.
++
+In-band authentication allows secure bidirectional and unidirectional authentication between your NVMe host and storage system.
+. Select *Require Transport Layer Security (TLS)*.
+. Select *Add*.

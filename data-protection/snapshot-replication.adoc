@@ -4,7 +4,7 @@ permalink: data-protection/snapshot-replication.html
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication
 summary: Use Snapshot replication to copy data to a remote location for backup and disaster recovery.  Set up requires creation of a replication policy and relationship. 
 ---
-= Setup Snapshop replciation on the ASA r2
+= Setup Snapshot replication on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
@@ -53,11 +53,11 @@ Create a SnapMirror relationship to replicate consistency groups to a remote clu
 
 .Before you begin
 
-If you want to create tamperproof snapshots, you must initialize the Snapshot compliance clock before you create the replication relationship.
+If you want to create tamperproof snapshots to protect against ransomware attacks, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
 
 .Steps
 
-. In System Manager, select *Protection > Replication*; then select  .
+. In System Manager, select *Protection > Replication*; then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Select the source consistency group.
 . Select the replication storage VM and the replication policy
 . Optionally, select to lock the destination snapshots to prevent deletion.
