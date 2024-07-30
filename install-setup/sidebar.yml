@@ -1,7 +1,7 @@
 section: install-setup
 title: Install and setup
 entries:
-- title: Installation workflow
+- title: Install workflow
   url: "/install-setup/install-setup-workflow.html"
 - title: Requirements and considerations
   url: "/install-setup-requirements.html"
