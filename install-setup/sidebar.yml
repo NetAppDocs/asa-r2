@@ -4,7 +4,7 @@ entries:
 - title: Install workflow
   url: "/install-setup/install-setup-workflow.html"
 - title: Requirements and considerations
-  url: "/install-setup-requirements.html"
+  url: "/install-setup/install-setup-requirements.html"
 - title: Prepare for install
   url: "/install-setup/prepare-hardware.html"
 - title: Install hardware
