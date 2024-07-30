@@ -9,3 +9,51 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+Use System Manager to view a list of errors or alerts that have occurred in your system along with recommended corrective actions.  You can also view system audit logs and a list of jobs that are active, completed, or failed.
+
+.Steps
+
+. From System Manager, select *Events & Jobs*.
+. View cluster events and jobs.
++
+[cols="2," options="header"]
+|===
+// header row
+
+| To view this...
+| Do this...
+
+| Cluster events
+a| Select *Events*; then select *Event log*.
+
+| Active IQ suggestions
+a| Select *Events*; then select *Active IQ suggestions*.
+
+| System alerts
+a|
+.. Select *System alerts*.
+.. Select the system alert for which you want to take action.
+.. Acknowledge or suppress the alert.
+
+| Cluster jobs
+a| Select *Jobs*.
+
+| Audit logs
+a| Select *Audit logs*.
+
+// table end
+|===
+
+== Send email notifications for cluster events and audit logs
+
+Configure your system to send a notification to specific email addresses when there is a cluster event or audit log entry.  
+
+.Steps
+
+. From System Manager, select *Cluster > Settings*.
+. Next to *Notifications management* select image:icon_kabob.gif[three vertical blue dots].
+. To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destination*s; then select *Audit log destinations*. 
+. Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters]
+. Enter the destination information; then select *Add*.
+
+// ONTAPDOC 1930, 2024 Sept 24

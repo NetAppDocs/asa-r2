@@ -29,7 +29,7 @@ The consistency group details page opens.
 
 .Restore from a remote snapshot
 --
-. In System Manager, select P*rotection > Replication*.
+. In System Manager, select *Protection > Replication*.
 . Hoover over the Source you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore*.
 . Select the consistency group containing the data you need restore.

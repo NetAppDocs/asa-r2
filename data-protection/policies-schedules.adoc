@@ -18,7 +18,7 @@ Create a snapshot policy to define how often snapshots are taken, the maximum nu
 .Steps
 
 . In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
-. Select image:icon_add_blue_bg.png[].
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter a name for the snapshot policy.
 . Select *Cluster* to apply the policy to the entire cluster or select *Storage VM* to apply the policy to an individual storage VM.
 . Select *Add a schedule*, then enter the snapshot schedule.

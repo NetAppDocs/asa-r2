@@ -3,7 +3,9 @@ title: Administer and monitor
 entries:
 - title: Manage client access to storage VMs
   url: "/administer/manage-client-vm-access.html"
-- title: Monitor usage and expand capacity 
+- title: Manage cluster networking
+  url: "/administer/manage-cluster-networking.html"   
+- title: Monitor usage and increase capacity 
   entries:
   - title: Monitor ASA r2 storage performance
     url: "/monitor/monitor-performance.html" 
@@ -11,14 +13,21 @@ entries:
     url: "/monitor/monitor-storage.html"  
   - title: Increase storage capacity
     url: "/administer/increase-storage-capacity.html"  
-- title: Manage cluster networking
-  url: "/administer/manage-cluster-networking.html" 
+- title: Update firmware
+  entries:
+  - title: Update firmware automatically
+    url: "/administer/update-firmware-automatically.html"
+  - title: Update firmware manually 
+    url: "administer/update-firmware-manually.html"  
 - title: View insights
   url: "/monitor/view-insights.html"
 - title: View cluster events and jobs
   url: "/monitor/view-events-jobs.html"    
-- title: Reboot, takeover, and give back nodes
-  url: "/administer/reboot-take-over-give-back-nodes.html" 
-- title: Rename nodes
-  url: "/administer/rename-nodes.html"   
- 
+- title: Manage nodes 
+  entries:
+  - title: Reboot, takeover, and give back nodes
+    url: "/administer/reboot-take-over-give-back-nodes.html" 
+  - title: Rename nodes
+    url: "/administer/rename-nodes.html"   
+- title: Mange user accounts and roles
+  url: "/administer/user-accounts-roles.html" 

@@ -17,7 +17,7 @@ A SnapMirror license is required to set up Snapshot replication.
 == Step 1: Create a snapshot replication policy
 
 . In System Manager, select *Protection > Policies*; then select *Replication policies*.
-. Select image:icon_add_blue_bg.gif[square blue rectangle with the word add centered in white letters].
+. Select image:icon_add_blue_bg.gif[blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter a name for the replication policy or accept the default name; then enter a description.
 . Select the *Policy scope*.
 If you want to apply the replication policy to the entire cluster, select *Cluster*.   If you want the replication policy applied only to the storage units in a specific storage VM, select *Storage VM*; then select the storage VM .

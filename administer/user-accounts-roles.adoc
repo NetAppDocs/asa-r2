@@ -1,0 +1,31 @@
+---
+sidebar: sidebar
+permalink: administer/user-accounts-rols.html
+keywords: 
+summary:
+---
+= Rename nodes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+== Configure active directory
+
+.Steps
+
+1.	From System Manager, select Cluster > Settings.
+2.	In the Security section, under Active Directory, select Configure.
+
+
+== Add user accounts and roles
+
+Enable user accounts and roles to provide various levels of cluster access.
+
+.Steps
+
+1.	From System Manager, select *Cluster > Settings*.
+2.	In the *Security* section, next to *Users and roles*, select image:icon_arrow.gif[blue arrow pointing to the right].
+3.	Under Users or Roles Select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters] . 
+
+// ONTAPDOC 1930, 2024 Sept 24

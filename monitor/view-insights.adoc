@@ -9,3 +9,10 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+View Insights in System Manager to identify best practices and configuration modifications that you can implement on your specific ASA r2 cluster to optimize cluster security and performance. 
+
+For example, suppose you have Network Time Protocol (NTP) servers configured for your cluster.  However, you are unaware that you have less than the recommended number of NTP servers needed for optimal cluster time management.  To help you prevent problems that can occur when the cluster time is inaccurate, Insights will notify you that you have too few NTP servers configured and give you options to learn more about this issue, fix it, or dismiss it.
+
+To view Insights, in System Manager, select *Insights*.
+
+// ONTAPDOC 1930, 2024 Sept 24
