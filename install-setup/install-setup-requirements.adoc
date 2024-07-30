@@ -4,7 +4,7 @@ permalink: asa-r2/install-setup-requirements.html
 keywords: asa r2, install, setup, cautions
 summary: Review the equipment needed and the lifting precautions for your platform and shelves.
 ---
-= Install requirements and considerations for ASA r2
+= Installation requirements and considerations for ASA r2
 :icons: font
 :imagesdir: ../media/
 
