@@ -14,7 +14,7 @@ Provision storage to enable SAN hosts to read and write data to specified storag
 == Step 1: Create storage units
 Create a basic storage unit to make space available to your SAN hosts for data operations.  
 
-A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for an NVMe host. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. LUNs are thinly provisioned by default.  
+A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for an NVMe host. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  If your cluster is configured to support SCSI hosts, you are prompted to create a LUN.
 
 The maximum capacity allowed for storage units is 128TB. See link:https://hwu.netapp.com/[NetApp Hardware Universe] for the most current ASA r2 storage limits.
 
@@ -64,12 +64,6 @@ b.	Enter a name for the subsystem or accept the default name.
 c.	Enter a name for the initiator.
 d.	If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
 Select *+ Add initiator* to add more initiators.
-
-a| Disable data protection
-
-Data protection using local snapshots is enabled by default.
-a|
-Under *Local protection*, deselect *Schedule snapshots*.
 
 // table end
 |===
@@ -136,7 +130,7 @@ Configuring host proximity enables ONTAP to identify the controller nearest to t
 
 == Step 3: Map the storage unit to a host
 
-Map hosts to storage units to begin serving data. Hosts can access only the storage units to which they are mapped. 
+Map hosts to storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
 
 .Steps
 
@@ -151,7 +145,7 @@ There are steps you must perform on your hosts before the hosts can read and wri
 
 .Steps
 
-. For FC, zone your FC switches by WWPN. 
+. For FC and FC/NVMe, zone your FC switches by WWPN. 
 +
 Use one zone per initiator and include all target ports in each zone.
 . Discover the new storage unit.
