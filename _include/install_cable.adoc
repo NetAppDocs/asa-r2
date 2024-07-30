@@ -153,7 +153,7 @@ These procedures show how to cable your controllers to one shelf and to two shel
 TBD
 
 .Option 1: Cable to one NS224 shelf
---
+
 Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
 
 .Steps
@@ -203,7 +203,7 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 
 .ASA A70 and A90 systems
 TBD
---
+
 .Option 1: Cable to one NS224 shelf
 
 Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
