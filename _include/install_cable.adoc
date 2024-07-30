@@ -156,7 +156,7 @@ Choose one of the following cabling options that matches your setup.
 // Start snippet: collapsible block (open on page load)
 .Option 1: Cable controllers to one NS224 shelf
 [%collapsible]
-====
+=====
 
 Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
 
@@ -174,13 +174,13 @@ image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg[Controller A e11a and e11
 +
 image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg[Cable controller B ports e11a and e11b to a single NS224 shelf]
 
-====
+=====
 // End snippet
 
 // Start snippet: collapsible block (open on page load)
 .Option 2: Cable controllers to two NS224 shelves
 [%collapsible]
-====
+=====
 Cable each controller to the NSM modules on both NS224 shelves. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
 
 .Steps
@@ -208,7 +208,7 @@ image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg[Controller-to-shelf conne
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf connections for controller B]
 
-====
+=====
 // End snippet
 --
 
@@ -217,7 +217,7 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 // Start snippet: collapsible block (open on page load)
 .Option 1: Cable to one NS224 shelf
 [%collapsible]
-====
+=====
 
 Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
 
@@ -236,13 +236,13 @@ image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg[Controller A e11a and 
 +
 image:../media/drw_a70-90_1shelf_cabling_b_ieops-1732.svg[Controller B e11a and e11b to a single NS224 shelf]
 
-====
+=====
 // End snippet
 
 // Start snippet: collapsible block (open on page load)
 .Option 2: Cable to two NS224 shelves
 [%collapsible]
-====
+=====
 Cable each controller to the NSM modules on both NS224 shelves. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
 
 *100 GbE QSFP28 copper cables*
@@ -273,7 +273,7 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg[Controller-to-shelf co
 .. Connect port e8b to shelf 1, NSM A port e0b.
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg[Controller-to-shelf connections for controller B]
-====
+=====
 // End snippet
 
 --
