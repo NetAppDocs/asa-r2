@@ -9,4 +9,4 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-Go to the https://docs.netapp.com/us-en/ontap-systems/asa-r2-landing-maintain/index.html[ASA r2 maintain documentation^]  to learn how to perform maintenance procedures on your ASA r2 system components.
+Go to the https://review.docs.netapp.com/us-en/ontap-systems_dev-vino-part-two/asa-r2-landing-maintain/index.html[ASA r2 maintain documentation^]  to learn how to perform maintenance procedures on your ASA r2 system components.
