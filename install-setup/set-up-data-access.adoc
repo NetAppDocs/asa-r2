@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: install-setup/set-up-data-access.html
+keywords: 
+summary:  
+---
+= Set up data access
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+
+== Non-disruptive data migration
+
+If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use vSphere vMotion to perform a live, non-disruptively migration of your data. 
+
+== Configure ASA r2 as a storage provider for VMware vSphere
+
+OTV 10.3 EAP
+
+== Connect non-VMware SAN clients
+
+Pointer to HU docs

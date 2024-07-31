@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: administer/manage-client-server-local-certificate-authorities.html
+keywords: 
+summary:
+---
+= Manage client/server certificates and local certificate authorities
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+== Add a client/server certificate or local certificate authorities
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Client/server certificates*, or *Local certificate authorities*.
+. Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].
+
+== Renew or delete a client/server certificate or local certificate authorities
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to Certificates, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Client/server certificates*, or *Local certificate authorities*.
+. Select the certificate you want to renew or delete.
+. Renew or delete the certificate authority.
++
+[cols="2" options="header"]
+|===
+// header row
+| To renew the certificate authority do this...
+| To delete the certificate authority do this...
+
+a|
+.. Select image:icon_kabob.gif[three vertical blue dots]; then select *Renew*.
+.. Enter or import the certificate information; then select *Renew*.
+
+a|
+Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+|===
+
+
+// ONTAPDOC 1930, 2024 Sept 24

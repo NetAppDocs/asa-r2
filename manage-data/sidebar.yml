@@ -1,6 +1,8 @@
 section: manage-data
 title: Use ONTAP to manage your data
 entries:
+- title: Videos for common task
+  url: /videos/placeholder.html
 - title: Provision storage
   entries:
   - title: Provision SAN storage

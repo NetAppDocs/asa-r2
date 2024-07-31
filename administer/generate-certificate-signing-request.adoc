@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: administer/generate-certificate-signing-request.html
+keywords: 
+summary:
+---
+= Generate a certificate signing request
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Generate a certificate signing request (CSR) to create a private key which can be used to generate a public certificate.
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right]; then select image:icon_generate_csr.png[blue rectangle containing a plus sign followed by the words generate csr].
+. Enter the subject common name; then select the country.
+. If you want to change the GSR defaults, select extended key usage, or add subject alternative names, select image:icon_more_options.png[two arrows facing diagonally opposite directions followed by the words more options].
+. Select *Generate*.
+
+// ONTAPDOC 1930, 2024 Sept 24

@@ -18,7 +18,7 @@ entries:
   - title: Update firmware automatically
     url: "/administer/update-firmware-automatically.html"
   - title: Update firmware manually 
-    url: "administer/update-firmware-manually.html"  
+    url: "/administer/update-firmware-manually.html"  
 - title: View insights
   url: "/monitor/view-insights.html"
 - title: View cluster events and jobs
@@ -31,3 +31,11 @@ entries:
     url: "/administer/rename-nodes.html"   
 - title: Mange user accounts and roles
   url: "/administer/user-accounts-roles.html" 
+- title: Manage certificates
+  entries:
+- title: Generate a certificate signing request
+  url: "/administer/generate-certificate-signing-request.html"
+- title: Manage trusted certificate authority
+  url: "/administer/manage-trusted-certificate-authority.html" 
+- title: Manage client/server certificates and local certificate authorities
+  url: "/administer/manage-client-server-local-certificate-authorities.html"   

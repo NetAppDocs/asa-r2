@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: monitor/view-event-jobs.html
+permalink: monitor/view-events-jobs.html
 keywords: 
 summary:
 ---
