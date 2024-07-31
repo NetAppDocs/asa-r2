@@ -30,4 +30,9 @@ entries:
   - title: Rename nodes
     url: "/administer/rename-nodes.html"   
 - title: Manage user accounts and roles
-  url: "/administer/user-accounts-roles.html"    
+  url: "/administer/user-accounts-roles.html" 
+- title: Manage certificates
+  entries:
+- title: Generate a certificate signing request
+  url: "/administer/generate-certificate-signing-request.html"
+- title: Manage trusted certificate authority     
