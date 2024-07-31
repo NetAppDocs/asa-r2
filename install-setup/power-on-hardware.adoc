@@ -10,3 +10,8 @@ summary: Power on each NS224 shelf to assign a unique shelf ID, power on the ASA
 
 [.lead]
 Power on your system by first powering on each NS224 shelf and assigning a unique shelf ID to ensure each shelf is distinct within the setup. Then, power on the controllers and secure the power cables to each power supply. 
+
+include::../_include/install_power_hardware.adoc[]
+
+.What's next?
+Go to link:initialize-ontap-cluster.html[Initialize the ONTAP cluster].
