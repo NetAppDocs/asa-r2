@@ -15,7 +15,7 @@ Delete a storage unit if you no longer need to maintain the data contained in th
 
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to delete.
-. Select image:icon_kaboob.gif[three vertical blue dots]; then select *Delete*.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Acknowledge that the deletion cannot be undone.
 . Select *Delete*.
 

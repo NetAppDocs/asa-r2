@@ -20,8 +20,8 @@ Create a snapshot policy to define how often snapshots are taken, the maximum nu
 . In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter a name for the snapshot policy.
-. Select *Cluster* to apply the policy to the entire cluster or select *Storage VM* to apply the policy to an individual storage VM.
-. Select *Add a schedule*, then enter the snapshot schedule.
+. Select *Cluster* to apply the policy to the entire cluster.  Select *Storage VM* to apply the policy to an individual storage VM.
+. Select *Add a schedule*; then enter the snapshot schedule.
 . Select *Add policy*.
 
 == Apply a snapshot policy to a consistency group
@@ -30,14 +30,14 @@ Apply a snapshot policy to a consistency group to automatically create snapshot 
 
 .Steps
 
-. In System Manager, select *Protection -> Policies*; then select *Snapshot policies*.
+. In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
 . Hoover over the name of the snapshot policy you want to apply.  
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Apply*.
 . Select the consistency groups to which you want to apply the snapshot policy; then select *Apply*.
 
 == Edit, delete, or disable a snapshot policy 
 
-Edit a snapshot policy to modify the policy name, maximum number of snapshots or SnapMirror label.  Delete a policy to remove it and its associated back up data from your cluster.  Disable a policy to temporarily stop the addition or transfer of snapshots specified by the policy.
+Edit a snapshot policy to modify the policy name, maximum number of snapshots or SnapMirror label.  Delete a policy to remove it and its associated back up data from your cluster.  Disable a policy to temporarily stop the creation or transfer of snapshots specified by the policy.
 
 .Steps
 
@@ -47,7 +47,7 @@ Edit a snapshot policy to modify the policy name, maximum number of snapshots or
 
 == Edit a replication policy
 
-Edit a replication policy to modify the policy description, transfer schedule, and rules.  You can also enable or disable network compression.
+Edit a replication policy to modify the policy description, transfer schedule, and rules.  You can also edit the policy to enable or disable network compression.
 
 .Steps
 

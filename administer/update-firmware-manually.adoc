@@ -4,17 +4,17 @@ permalink: administer/update-firmware-manually.html
 keywords: 
 summary:
 ---
-= Update firmware automatically
+= Update firmware manually
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you don’t have automatic updates enabled for your firmware and system files, you can install available updates manually.
+If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates and update your firmware manually.
 
 .Steps
 
 . Download your firmware update file to a server or local client.
-. From System Manager, select *Cluster > Overview*, then select *Update*.
-. Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters]
+. In System Manager, select *Cluster > Overview*, then select *Update*.
+. Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters].
 
 // ONTAPDOC 1930, 2024 Sept 24

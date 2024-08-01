@@ -9,31 +9,31 @@ summary: To protect data on the ASA r2, you need to create a consistency group a
 :imagesdir: ../media/
 
 [.lead]
-To protect data on the ASA r2, you need to create a consistency group containing the storage units that you want to protect and then you need to create a snapshot.  You cannot protect data that is not in a consistency group.
+To protect data on the ASA r2, you need to create a consistency group containing the storage units that you want to protect.  You cannot protect data that is not in a consistency group.
 
 == Step 1: Create a consistency group
 
 A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups to simplify storage management and data protection for application workloads spanning multiple storage units. 
 
-For example, suppose you have a database spanning 20 storage units.  If you add all 20 storage units to a single consistency group, you can manage them as a solitary dataset instead of individually. 
+For example, suppose you have a database spanning 20 storage units.  If you add all 20 storage units to a single consistency group, you can manage them as a solitary dataset instead of as individual units. 
 
 .Steps
 
-Create new storage units to add to your consistency group or use existing storage units.
+Create a consistency group using new storage units or create a consistency group using existing storage units.
 
 
 [role="tabbed-block"]
 ====
 
-.Create new storage units
+.Use new storage units
 --
 . In System Manager, select *Protection > Consistency groups*.
-. Select *Add*; then select *Using new storage units*.
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using new storage units*.
 . Enter a name for the new storage unit, the number of units, and the capacity per unit.
 +
 If you create more than one storage unit, each unit is created with identical capacity and parameters.  
 . Select the host operating system, format, and host mapping.
-4.	If you want to change the default Quality of Service (QoS) policy or create a new QoS policy, select *More Options*.
+. If you want to change the default Quality of Service (QoS) policy or create a new QoS policy, select *More Options*.
 +
 [cols="2,6a" options="header"]
 |===
@@ -59,10 +59,10 @@ a|
 
 .Use existing storage units
 --
-1.	In System Manager, select *Protection > Consistency groups*.
-2.	Select *Add*; then select *Using existing storage units*.
-3.	Enter a name for the consistency group; then search for and select the storage units you want to include in the consistency group.
-4.	Select *Add*.
+. In System Manager, select *Protection > Consistency groups*.
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using existing storage units*.
+. Enter a name for the consistency group; then search for and select the storage units you want to include in the consistency group.
+. Select *Add*.
 
 --
 
@@ -73,7 +73,7 @@ a|
 
 == Step 2: Create a snapshot
 
-A snapshot is a local, read-only, point-in-time copy of your consistency group that you can use for data restoration.  
+A snapshot is a local, read-only, point-in-time copy of your data that you can use for data restoration.  
 
 You can create a snapshot of a single storage unit, or you can create a snapshot of a consistency group containing multiple storage units.  Storage units must be members of a consistency group to be protected with snapshots. If you create a snapshot of a single storage unit, the other storage units in the consistency group are not protected.   If you create a snapshot of a consistency group, all the storage units in the consistency group are protected.
 
@@ -109,7 +109,7 @@ Local protection creates the snapshot on the same cluster containing the storage
 +
 .. Enter a name for the snapshot or accept the default name; then optionally, enter a SnapMirror label.
 . Select *Schedule snapshots*, to select a snapshot policy to govern the creation of your snapshots.
-.. Select a *Snapshot policy*.
+.. Select a snapshot policy.
 +
 Accept the default snapshot policy, select an existing policy, or create a new policy.
 +
@@ -124,7 +124,7 @@ a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to th
 
 | Create a new snapshot policy
 a|
-.. Select image:icon_add.gif[blue plus sign followed by the word add] ; then enter the snapshot policy parameters.
+.. Select image:icon_add.png[blue plus sign followed by the word add] ; then enter the snapshot policy parameters.
 .. Select *Add policy*.
 
 // table end

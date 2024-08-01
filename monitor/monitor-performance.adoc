@@ -15,13 +15,13 @@ For example, suppose a critical application is experiencing high latency and low
 
 == Monitor cluster performance
 
-Use cluster performance metrics to determine if you need to shift workloads to minimize latency and maximize IOPS and throughput for critical applications.
+Use cluster performance metrics to determine if you need to shift workloads to minimize latency and maximize IOPS and throughput for your critical applications.
 
 .Steps
 
-1.	From System Manager, select *Dashboard*.
-2.	Under *Performance*, view the latency, IOPS, and throughput for the cluster by hour, day, week, month, or year.
-3.	Select image:icon_download.png[blue downward arrow] to download the performance data.
+. In System Manager, select *Dashboard*.
+. Under *Performance*, view the latency, IOPS, and throughput for the cluster by hour, day, week, month, or year.
+. Select image:icon_download.png[blue downward arrow] to download the performance data.
 
 == Monitor storage unit performance
 
@@ -29,7 +29,7 @@ Use storage unit performance metrics to determine the impact of specific applica
 
 .Steps
 
-. From System Manager, select *Storage*.
+. In System Manager, select *Storage*.
 . Select the storage unit you want to monitor; then select *Overview*.
 . Under *Performance*, view the latency, IOPS, and throughput for the storage unit by hour, day, week, month, or year.
 . Select image:icon_download.png[blue downward arrow] to download the performance data.

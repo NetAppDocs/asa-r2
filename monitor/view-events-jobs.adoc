@@ -13,10 +13,10 @@ Use System Manager to view a list of errors or alerts that have occurred in your
 
 .Steps
 
-. From System Manager, select *Events & Jobs*.
+. In System Manager, select *Events & Jobs*.
 . View cluster events and jobs.
 +
-[cols="2," options="header"]
+[cols="2,4a" options="header"]
 |===
 // header row
 
@@ -50,10 +50,10 @@ Configure your system to send a notification to specific email addresses when th
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *Notifications management* select image:icon_kabob.gif[three vertical blue dots].
-. To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destination*s; then select *Audit log destinations*. 
-. Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters]
+. To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destinations*; then select *Audit log destinations*. 
+. Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters].
 . Enter the destination information; then select *Add*.
 
 // ONTAPDOC 1930, 2024 Sept 24

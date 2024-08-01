@@ -32,7 +32,7 @@ The consistency group details page opens.
 . In System Manager, select *Protection > Replication*.
 . Hoover over the Source you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore*.
-. Select the consistency group containing the data you need restore.
+. Select the consistency group containing the data you want to restore.
 . Select the snapshot you want to restore; then select *Restore*.
 
 --

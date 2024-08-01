@@ -9,13 +9,13 @@ summary: Respond to changes in your storage system performance and data by editi
 :imagesdir: ../media/
 
 [.lead]
-Storage units can be edited or taken offline for various administrative reasons, system reconfiguration or performance optimization.
+Storage units can be edited or taken offline for various administrative reasons such as system reconfiguration or performance optimization.
 
 == Edit storage units
 Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your storage system grow and change.
 
 .Increase capacity
-Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of the storage unit can be increased to the maximum size allowed by ONTAP.
+Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of the storage unit can be increased to 128 TB which is the maximum size allowed by ONTAP.
 
 .Modify QoS policy
 Change the QoS policy assigned to a storage unit to guarantee that the performance of critical workloads is not degraded due to non-critical workloads competing for system resources.
@@ -27,7 +27,7 @@ Modify the hosts that are mapped to a storage unit to assist in balancing worklo
 
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to edit.
-. Select image:icon_kaboob.gif[three vertical blue dots]; then select *Edit*.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*.
 . Update the storage unit parameters as needed to increase capacity, change the QoS policy, and update the host mapping.
 
 .What's next?
@@ -35,12 +35,12 @@ Modify the hosts that are mapped to a storage unit to assist in balancing worklo
 If you have increased the size of your storage unit, you must rescan the storage unit on the host for the host to recognize the change in size.  
 
 == Take a storage unit offline
-Take a storage unit offline to perform maintenance, to reconfigure your environment or for other administrative purposes.  Taking a storage unit offline is disruptive.  Expect hosts to experience loss of access to data on the storage unit when you take the storage unit offline.
+Take a storage unit offline to perform maintenance, to reconfigure your environment, or for other administrative purposes.  Taking a storage unit offline is disruptive.  Expect hosts to experience loss of access to data on the storage unit while the storage unit is offline.
 
 .Steps
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to take offline.
-. Select image:icon_kaboob.gif[three vertical blue dots]; then select *Take offline*.
-. Select to Disrupt client access and take the storage units offline; then select *Take offline*.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Take offline*.
+. Select to disrupt client access and take the storage units offline; then select *Take offline*.
 
 // ONTAPDOC 1922, 2024 Sept 24

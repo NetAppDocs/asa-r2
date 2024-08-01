@@ -14,21 +14,25 @@ Provision storage to enable SAN hosts to read and write data to specified storag
 == Step 1: Create storage units
 Create a basic storage unit to make space available to your SAN hosts for data operations.  
 
-A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for an NVMe host. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  If your cluster is configured to support SCSI hosts, you are prompted to create a LUN.
+A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN.  If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  
 
-The maximum capacity allowed for storage units is 128TB. See link:https://hwu.netapp.com/[NetApp Hardware Universe] for the most current ASA r2 storage limits.
+The maximum capacity allowed for storage units is 128TB. See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
 
 .Steps
 
-. Select Storage; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
+. In System Manager, select *Storage*; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
 
 . Enter a name for the new storage unit or accept the default name.
 
-. Enter the number of units and capacity; then select the host operating system, format and mapping.
+. Enter the number of units you want to create.
 
-. If you want to do any of the following, select *More Options* and follow the required steps.
+. Enter the storage unit capacity; then select the host operating system, format and mapping.
 +
-[cols="2" options="header"]
+If you are creating more than one storage unit, each unit is created with the same capacity, host operating system, format and mapping. 
+
+. If you want to do any of the following, select *More Options* and complete the required steps.
++
+[cols="2, 4a" options="header"]
 |===
 // header row
 | If you want to do this...
@@ -36,34 +40,40 @@ The maximum capacity allowed for storage units is 128TB. See link:https://hwu.ne
 
 a| Change the default Quality of Service (QoS) policy
 a| 
-.. Under *Storage and optimization*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] next to Quality of service (QoS).
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select an existing QoS policy.
 
 a| Create a new QoS policy
 a|
-.. Under *Storage and optimization*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] next to Quality of service (QoS).
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select *Define new policy*.
 .. Enter the policy parameters; then select *Add*.
 
-a| Add a new host
+a| Add a new SCSI host
 a|
-a.	Under *Host information*, select *SCSI*, then select *New hosts*.
-b.	Select *FC initiators* or *iSCSI initiators*.
-c.	Select existing host initiators or select *Add initiator* to add a new host initiator.
+.. Under *Host information*, select *SCSI* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New hosts*.
+.. Select *FC* or *iSCSI*.
+.. Select existing host initiators or select *Add initiator* to add a new host initiator.
 
 a| Create a new SCSI host group
 a| 
-.. Under *Host information*, select *SCSI*; then select *New host group*. 
+.. Under *Host information*, select *SCSI* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New host group*. 
 .. Enter a name for the host group; then select the hosts to add to the group.
 
 
-a| Create a new NVMe subsystem
+a| Add a new NVMe subsystem
 a|
-a.	Under *Host information*, select *New NVMe subsystem*.
-b.	Enter a name for the subsystem or accept the default name.
-c.	Enter a name for the initiator.
-d.	If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
-Select *+ Add initiator* to add more initiators.
+.. Under *Host information*, select *NVMe* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New NVMe subsystem*.
+.. Enter a name for the subsystem or accept the default name.
+.. Enter a name for the initiator.
+.. If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
+.. Select *+ Add initiator* to add more initiators.
 
 // table end
 |===
@@ -72,7 +82,7 @@ Select *+ Add initiator* to add more initiators.
 
 == Step 2: Add host initiators
 
-Add host initiators to your ONTAP cluster to make the host eligible to access storage units in your cluster and perform data operations.
+Add host initiators to your ONTAP ASA r2 cluster to make the host eligible to access storage units and perform data operations.
 
 .Steps
 
@@ -86,9 +96,12 @@ Add host initiators for SCSI or NVMe hosts.
 .SCSI hosts
 --
 . Select *Host*.
-. Select *SCSI*; then select image:icon_add_blue_bg.gif[icon of blue arrow pointing in downward direction].
+. Select *SCSI*; then select image:icon_add_blue_bg.png[icon of blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter the host name, select the host operating system and enter a host description.
-. If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration* and then select the destination cluster.
+. Accept the default storage VM or select a different one.
+. If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration*; then select the destination cluster.
++
+Your cluster must be in a peer relationship to replicate the host configuration.
 . Add hosts.
 +
 [cols="2" options="header"]

@@ -12,16 +12,16 @@ summary:
 
 == Configure active directory domain controller access
 
-Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable active directory account access.
+Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access.
 
 .Steps
 
-1.	From System Manager, select *Cluster > Settings*.
-2.	In the *Security* section, under *Active Directory*, select *Configure*.
+. In System Manager, select *Cluster > Settings*.
+. In the *Security* section, under *Active Directory*, select *Configure*.
 
 == Configure LDAP
 
-Configure LDAP server access so that LDAP accounts can access the storage VM that contain your storage units.
+An Lightweight Directory Access Protocol (LDAP) server enables you to centrally maintain user information. If you store your user database on an LDAP server in your environment, you can configure your storage system to look up user information in your existing LDAP database.
 
 .Before you begin
 
@@ -29,13 +29,13 @@ You must have generated a certificate signing request and added a CA-signed serv
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . In the *Security* section, next to *LDAP*, select image:icon_gear_white_bg.png[outline of a blue mechanical gear].
 . Enter the necessary LDAP server and binding information; then select *Save*.
 
 == Configure SAML authentication
 
-Security Assertion Markup Language (SAML) authentication allows users to be authenticated for web services by using a secure identity provider (IdP) instead of the direct service providers such as Active Directory and LDAP.
+Security Assertion Markup Language (SAML) authentication allows users to be authenticated by a secure identity provider (IdP) instead of the direct service providers such as Active Directory and LDAP.
 
 .Before you begin
 
@@ -46,7 +46,7 @@ See the IdP documentation for configuration.
 
 .About this task
 
-* SAML authentication applies only to the http and ontapi applications.
+* SAML authentication applies only to the `http` and `ontapi` applications.
 +
 The `http` and `ontapi` applications are used by the following web services: Service Processor Infrastructure, ONTAP APIs, or System Manager.
 * SAML authentication is applicable only for accessing the admin SVM.
@@ -57,13 +57,13 @@ The `http` and `ontapi` applications are used by the following web services: Ser
 
 .Steps
 
-. Select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Under *Security*, next to SAML authentication, select image:icon_gear_white_bg.png[blue outline of a mechanical gear] .
 . Select *Enable SAML authentication*.
 . Enter the IdP URL and the host system IP address; then select *Save*.
 +
 A confirmation window displays the metadata information, which has been automatically copied to your clipboard.
-. Go to the IdP system you specified and copy the metadata from your clipboard to update the system metada.
+. Go to the IdP system you specified; then copy the metadata from your clipboard to update the system metada.
 . Return to the confirmation window in System Manager; then select *I have configured the IdP with the host URI or metadata*.
 . Select *Logout* to enable SAML-based authentication.
 +
@@ -75,12 +75,12 @@ Roles for cluster administrators and storage VM administrators are automatically
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . In the *Security* section, next to *Users and roles*, select image:icon_arrow.gif[blue arrow pointing to the right].
-. Under *Roles*, select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters].
+. Under *Roles*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Select the role attributes.
 +
-To add multiple attributes, select image:icon_add.gif[plus sign followed by the word add in blue letters].
+To add multiple attributes, select image:icon_add.png[plus sign followed by the word add in blue letters].
 . Select *Save*.
 
 == Create an administrator account 
@@ -89,12 +89,12 @@ Create an administrator user account to enable the account user to perform speci
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . In the *Security* section, next to *Users and roles*, select image:icon_arrow.gif[blue arrow pointing to the right].
-. Under *Users*, select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters]. 
+. Under *Users*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]. 
 . Enter a username; then select a role to assign to the user.
 . Select the user login method and the authentication method.
-. To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method, 
+. To enable MFA, select image:icon_add.png[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
 . Enter a password for the user.
 . Select *Save*.
 

@@ -13,7 +13,7 @@ You might need to rename a node to align with the naming conventions of your org
 
 .Steps
 
-. From System Manager, select *Cluster > Overview*.
+. In System Manager, select *Cluster > Overview*.
 . Select image:icon_kabob.gif[three vertical blue dots] next to the node you want to rename; then select *Rename*.
 . Enter the new name for the node, then select *Rename*.
 

@@ -13,7 +13,7 @@ entries:
     url: "/manage-data/modify-storage-units.html"  
   - title: Delete storage units
     url: "/manage-data/delete-storage-units.html"  
-  - title: Storage limit
+  - title: Storage limits
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data
   entries:

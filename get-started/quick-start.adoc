@@ -9,6 +9,7 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+To get up and running with your ASA r2, you install your hardware components, initialize your cluster, set up data access on your hosts, and provision your storage.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install and setup your hardware
 
@@ -28,8 +29,8 @@ link:../install-setup/set-up-data-access.html[Connect your ASA r2 to your SAN cl
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Provision your storage
 
 [role="quick-margin-para"]
-link:../manage-data/provison-san-storage.html[Provision storage] to begin serving data to your SAN clients.
+link:../manage-data/provision-san-storage.html[Provision storage] to begin serving data to your SAN clients.
 
-.What's next
+.What's next?
 You can now use System Manager to link:../data-protection/protect-data.html[protect] and link:../secure-data/data-security.html[secure] your data.
 

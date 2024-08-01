@@ -17,11 +17,11 @@ Recommended updates for storage firmware, SP/BMC firmware and system files are a
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Enable*.
 . Read and accept the EULA.
 . Accept the defaults to automatically update your firmware and system files.  Optionally, select to show notifications or to automatically dismiss recommended updates.
-. Accept your update modifications for application to current and future updates.
+. Select to acknowledge that your update modifications will be applied to all current and future updates.
 . Select *Save*.
 
 == Disable automatic updates
@@ -30,15 +30,16 @@ Disable automatic updates if you want the flexibility to view recommended update
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Disable*.
 
 == View automatic updates
 
 View a list of firmware and system file updates that have been downloaded to your cluster and are scheduled for automatic installation.  Also view updates that have been previously automatically installed.
 
-. Steps
-. From System Manager, select *Cluster > Settings*.
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *View all automatic updates*.
 
 == Edit automatic updates
@@ -47,7 +48,7 @@ You can select to have recommended updates for your storage firmware, SP/BMC fir
 
 .Steps
 
-. From System Manager, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Edit automatic updates*.
 . Update the selections for automatic updates.
 . Select *Save*.

@@ -17,10 +17,11 @@ A SnapMirror license is required to set up Snapshot replication.
 == Step 1: Create a snapshot replication policy
 
 . In System Manager, select *Protection > Policies*; then select *Replication policies*.
-. Select image:icon_add_blue_bg.gif[blue rectangle containing a plus sign followed by the word add in white letters].
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter a name for the replication policy or accept the default name; then enter a description.
 . Select the *Policy scope*.
-If you want to apply the replication policy to the entire cluster, select *Cluster*.   If you want the replication policy applied only to the storage units in a specific storage VM, select *Storage VM*; then select the storage VM .
++
+If you want to apply the replication policy to the entire cluster, select *Cluster*.   If you want the replication policy applied only to the storage units in a specific storage VM, select *Storage VM*.
 . Select the *Policy type*.
 +
 [cols="2,6a" options="header"]
@@ -39,10 +40,10 @@ a|
 .. Select to transfer all snapshots or select to create rules to determine which snapshots to transfer.
 .. Optionally, enable network compression.
 
-. Select *Save*.
-
 // table end
 |===
+
+. Select *Save*.
 
 .Related links
 Learn more about link:../administer/manage-client-vm-access.html[storage VMs for client access].
@@ -53,27 +54,27 @@ Create a SnapMirror relationship to replicate consistency groups to a remote clu
 
 .Before you begin
 
-If you want to create tamperproof snapshots to protect against ransomware attacks, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
+If you want to create tamper-proof snapshots to protect against ransomware attacks, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
 
 .Steps
 
 . In System Manager, select *Protection > Replication*; then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Select the source consistency group.
-. Select the replication storage VM and the replication policy
+. Select the replication storage VM and the replication policy.
 . Optionally, select to lock the destination snapshots to prevent deletion.
 . Accept the default to start the initial data transfer immediately or select *Advanced settings*; then select *Override transfer schedule*.
 . Select *Replicate*. 
 
-== Test replication failover
+== Step 3: Test replication failover
 
-Validate that you can successfully serve data from replicated storage units on a remote cluster if the source cluster is offline.  
+Optionally, validate that you can successfully serve data from replicated storage units on a remote cluster if the source cluster is offline.  
 
 .Steps
 
-1.	In System Manager, select *Protection > Replication*.
-2.	Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
-3.	Select *Test failover*.
-4.	Enter the failover information, then select *Test failover*.
+. In System Manager, select *Protection > Replication*.
+. Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Test failover*.
+. Enter the failover information, then select *Test failover*.
 
 
 // ONTAPDOC 1927, 2024 Sept 24
