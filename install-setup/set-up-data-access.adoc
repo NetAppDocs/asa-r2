@@ -15,10 +15,8 @@ summary:
 
 If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use vSphere vMotion to perform a live, non-disruptively migration of your data. 
 
-== Configure ASA r2 as a storage provider for VMware vSphere
+== Connect SAN clients
 
-OTV 10.3 EAP
+SAN clients should be configured with specific parameters and settings critical for proper operation with ONTAP. The necessary configuration varies depending on the host operating system and the protocol. Correct configuration is important for best performance and successful failover.  
 
-== Connect non-VMware SAN clients
-
-Pointer to HU docs
+See ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html[VMware vSphere SCSI clients], link:https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[VMware vSphere NVMe clients] and link:https://docs.netapp.com/us-en/ontap-sanhost/overview.html[other SAN clients] to properly configure your hosts to connect to your ASA r2.
