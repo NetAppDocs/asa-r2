@@ -1,17 +1,19 @@
 ---
 sidebar: sidebar
 permalink: secure-data/ransomware-protection.html
-keywords: asa r2, secure data, data security, ransonware, ransonware attacks, protection
-summary: Use tamperproof snapshots to secure your data.  Tamperproof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack. 
+keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection
+summary: Use tamper-proof snapshots to secure your data.  Tamper-proof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack. 
 ---
 = Protect against ransomware attacks
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-For protection against ransomware attacks, replicate snapshots to a remote cluster, then lock the destination snapshots to make them tamperproof. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is compromised by a ransomware attack.
+For protection against ransomware attacks, replicate snapshots to a remote cluster, then lock the destination snapshots to make them tamper-proof. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is compromised by a ransomware attack.
 
 == Initialize the Snaplock compliance clock
+
+If you want to create tamper-proof snapshots to protect against ransomware attacks, you must initialize the Snapshot compliance clock before you create the replication relationship.
 
 .Steps
 
@@ -19,7 +21,7 @@ For protection against ransomware attacks, replicate snapshots to a remote clust
 . In the *Nodes* section, select *Initialize SnapLock Compliance Clock*.
 . Select *Initialize*.
 . Verify that the compliance clock is initialized.
-.. Select *Cluster > Overview >*.   
+.. Select *Cluster > Overview*.   
 .. In the *Nodes* section, select image:icon_show_hide.png[three blue columns on white background]; then select *SnapLock Compliance Clock*.
 
 .What’s next

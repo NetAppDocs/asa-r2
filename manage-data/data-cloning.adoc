@@ -12,7 +12,7 @@ summary: Clone storage units and consistency groups on the ASA r2 to create data
 :imagesdir: ../media/
 
 [.lead]
-Clone storage units and consistency groups to create data copies that can be used in isolation from your production data for a variety of purposes such as application development and testing or backups.
+Clone storage units and consistency groups to create data copies that can be used in isolation from your production data for a variety of purposes such as application development, testing and backups.
 
 == Clone storage units
 Clone storage units to create point-in-time, writable copies of your production data.  Use storage unit clones for essential enterprise operations such as application development and testing or provisioning of server and desktop images. 
@@ -26,16 +26,16 @@ Storage units can be cloned from your source storage VMs or from storage VMs tha
 [role="tabbed-block"]
 ====
 
-.Clone from source
+.Clone from source storage VM
 --
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Clone*.
-. Enter the name of the new storage unit that will be created as a clone.
-. Select the host mapping.
+. Accept the default name for the new storage unit that will be created as a clone or enter a new one.
+. Select the host operating system.
 +
 A new snapshot is created for the clone by default.  
-. If you want to use an existing snapshot or if you want to split the clone, select *More Options* the complete the necessary steps.
+. If you want to use an existing snapshot or if you want to split the clone, select *More Options* then complete the necessary steps.
 +
 [cols="2" options="header"]
 |===
@@ -48,10 +48,6 @@ a|
 .. Under *Snapshot to clone*, select *Use an existing snaphot*.
 .. Select the snapshot you want to use for the clone.
 
-
-a| Dissociate the clone from the source consistency storage unit and allocate disk space
-a| Under *Snapshot to clone*, select *Split clone*.
-
 a| Create a new host group
 a| 
 .. Under *Host mapping*, select *New host group*.
@@ -60,7 +56,7 @@ a|
 a| Add a new host
 a|
 .. Under *Host mapping*, select *New hosts*.
-.. Enter the name new host name; then select *FC initiators* or *iSCSI initiators*.
+.. Enter the name new host name; then select *FC* or *iSCSI*.
 .. Select the host initiators from the list of existing initiators or select *Add* to add new initiators for the host.
 
 // table end
@@ -86,11 +82,11 @@ a|
 
 Clone a consistency group to create a new consistency group that’s identical in structure, storage units, and data to the consistency group being cloned. Use a clone to perform application testing or to migrate data.  Suppose, for example, you need to migrate a production workload out of a consistency group.  You can clone the consistency group to create a copy of your production workload to maintain as a backup until the migration is complete.
 
-The clone is created from a snapshot of the original consistency group.  By default, the snapshot used for the clone is taken at the point in time that the cloning process is initiated. You can modify the default behavior to use a pre-existing snapshot. 
+The clone is created from a snapshot of the original consistency group.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
 
 You can also choose to create a new host group or add new hosts to the clone when it is created.
 
-Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html[create snapshots] of the cloned consistency group after it is created.
+Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group after it is created.
 
 .Steps
 
@@ -98,7 +94,7 @@ Storage unit mappings are copied as part of the cloning process.  Snapshot polic
 . Hover over the consistency group you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
 . Enter a name for the new, cloned consistency group or accept the default name.
-. Select the host operating system and host mapping.
+. Select the host operating system.
 . If you want to dissociate the clone from the source consistency group and allocate disk space, select *Split clone*.
 . If you want to use an existing snapshot, create a new host group or add a new host for the clone, select *More Options*.
 +
@@ -121,8 +117,8 @@ a|
 a| Add a new host
 a|
 .. Under *Host mapping*, select *New hosts*.
-.. Enter the name new host name; then select *FC initiators* or *iSCSI initiators*.
-.. Select the host initiators from the list of existing initiators or click *Add* to add new initiators for the host.
+.. Enter the name new host name; then select *FC* or *iSCSI*.
+.. Select the host initiators from the list of existing initiators or select *Add initiator* to add new initiators for the host.
 
 // table end
 |===

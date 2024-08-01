@@ -1,0 +1,97 @@
+---
+sidebar: sidebar
+permalink: administer/manage-certificates.html
+keywords: 
+summary:
+---
+= Manage certificates
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Use System Manager to generate a certificate signing request and to add, renew or delete a trusted certificate authority, client/server certificate or local certificate authorities.
+
+== Generate a certificate signing request
+
+Generate a certificate signing request (CSR) to create a private key which can be used to generate a public certificate.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right]; then select image:icon_generate_csr.png[blue rectangle containing a plus sign followed by the words generate csr].
+. Enter the subject common name; then select the country.
+. If you want to change the GSR defaults, select extended key usage, or add subject alternative names, select image:icon_more_options.png[two arrows facing diagonally opposite directions followed by the words more options]; then make the desired updates.
+. Select *Generate*.
+
+== Add a trusted certificate authority
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Trusted certificate authorities*.
+. Enter or import the certificate details; then select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters].
+
+== Renew or delete a trusted certificate authority
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Trusted certificate authorities*.
+. Select the trust certificate authority that you want to renew or delete.
+. Renew or delete the certificate authority.
++
+[cols="2" options="header"]
+|===
+// header row
+| To renew the certificate authority do this...
+| To delete the certificate authority do this...
+
+a|
+.. Select image:icon_kabob.gif[three vertical blue dots]; then select *Renew*.
+.. Enter or import the certificate information; then select *Renew*.
+
+a|
+.. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+.. Confirm that you want to delete; then select *Delete*.
+
+// table end
+|===
+
+== Add a client/server certificate or local certificate authorities
+
+.Steps
+
+. In System Manger, select *Cluster > Settings*.
+. Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Client/server certificates*, or *Local certificate authorities*.
+. Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].
+
+== Renew or delete a client/server certificate or local certificate authorities
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, next to Certificates, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Client/server certificates*, or *Local certificate authorities*.
+. Select the certificate you want to renew or delete.
+. Renew or delete the certificate authority.
++
+[cols="2" options="header"]
+|===
+// header row
+| To renew the certificate authority do this...
+| To delete the certificate authority do this...
+
+a|
+.. Select image:icon_kabob.gif[three vertical blue dots]; then select *Renew*.
+.. Enter or import the certificate information; then select *Renew*.
+
+a|
+Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+|===
+
+
+// ONTAPDOC 1930, 2024 Sept 24

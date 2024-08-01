@@ -9,4 +9,35 @@ summary: Encrypt data at rest so that it can’t be read if a disk is returned, 
 :imagesdir: ../media/
 
 [.lead]
-Encrypt data at rest so that it can’t be read if a disk is returned, lost or stolen.  Use hardware and software encryption to enable dual-layer protection. 
+Encrypt data at rest so that it can’t be read if a storage medium is repurposed, returned, misplaced, or stolen.  Use hardware and software encryption to enable dual-layer protection.
+
+NetApp Storage Encryption (NSE) supports hardware encryption using self-encrypting drives (SEDs).  SEDs encrypt data as it is written. Encrypted data can’t be read without the encryption key stored on the SED. Nodes attempting to read from an SED must be authenticated to access the encryption key.  Nodes are authenticated by obtaining an authentication key from a key manager.  Use the ASA r2 onboard key manager or an external key manager to serve authentication keys to your nodes.
+
+In addition to NSE, you can also enable software encryption to add another layer of security to your data.
+
+.Steps
+
+. In System manager, select *Cluster > Settings*.
+. In the *Security* section, under *Encryption*, select *Configure*.
+. Configure the key manager.
++
+[cols="2" options="header"]
+|===
+// header row
+| To configure the onboard key manager, do this...
+| To configure an external key manager, do this...
+
+a| 
+.. Select *Onboard Key Manager*.
+.. Enter a passphrase. 
+
+a|
+.. Select *External key manager*.
+.. Select image:icon_add.png[a blue plus sign followed by the word add].
+.. Add the KMIP server CA certificates.
+.. Add the KMIP client certificates. 
+
+// table end
+|===
+. Select *Dual-layer encryption* to enable software encryption.
+. Select *Save*.

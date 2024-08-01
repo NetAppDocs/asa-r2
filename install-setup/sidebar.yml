@@ -15,3 +15,5 @@ entries:
   url: "/install-setup/power-on-hardware.html"  
 - title: Initialize the cluster
   url: "/install-setup/initialize-ontap-cluster.html"  
+- title: Set up data access
+  url: "/install-setup/set-up-data-access.html"  

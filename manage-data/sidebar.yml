@@ -1,6 +1,8 @@
 section: manage-data
 title: Use ONTAP to manage your data
 entries:
+- title: Videos for common task
+  url: /videos/placeholder.html
 - title: Provision storage
   entries:
   - title: Provision SAN storage
@@ -11,7 +13,7 @@ entries:
     url: "/manage-data/modify-storage-units.html"  
   - title: Delete storage units
     url: "/manage-data/delete-storage-units.html"  
-  - title: Storage limit
+  - title: Storage limits
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data
   entries:
