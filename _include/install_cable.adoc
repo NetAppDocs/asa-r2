@@ -135,7 +135,7 @@ IMPORTANT: Do not plug in the power cords yet.
 
 ====
 
-== Step 2: Cable your storage controllers to the storage shelves
+== Step 2: Connect your storage controllers to the storage shelves
 These procedures show how to connect your controllers to one shelf and to two shelves. You can directly connect up to four shelves to your controllers.
 
 
