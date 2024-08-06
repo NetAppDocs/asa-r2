@@ -88,9 +88,8 @@ a|
 // table end
 |===
 
-.Result
-You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.
+. Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
 
 .What's next?
-It is recommended that you download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
+You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.
 
