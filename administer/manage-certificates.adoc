@@ -10,7 +10,9 @@ summary:
 
 [.lead]
 
-Use System Manager to generate a certificate signing request and to add, renew or delete a trusted certificate authority, client/server certificate or local certificate authorities.
+Use digital security certificates to verify the identity of remote servers. 
+
+Online Certificate Status Protocol (OCSP) validates the status of digital certificate requests from ONTAP services using SSL and Transport Layer Security (TLS) connections. 
 
 == Generate a certificate signing request
 
@@ -26,6 +28,8 @@ Generate a certificate signing request (CSR) to create a private key which can b
 
 == Add a trusted certificate authority
 
+ONTAP provides a default set of trusted root certificates for applications using Transport Layer Security (TLS).  You can add addition trusted certificate authorities as needed.
+
 .Steps
 
 . Select *Cluster > Settings*.
@@ -34,6 +38,8 @@ Generate a certificate signing request (CSR) to create a private key which can b
 . Enter or import the certificate details; then select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters].
 
 == Renew or delete a trusted certificate authority
+
+Trusted certificate authorities must be renewed annually.  If you do not want to renew an expired certificate, you should delete it.
 
 .Steps
 
@@ -62,6 +68,8 @@ a|
 
 == Add a client/server certificate or local certificate authorities
 
+Add a client/server certificate or local certificate authorities to enable secure web services.
+
 .Steps
 
 . In System Manger, select *Cluster > Settings*.
@@ -70,6 +78,8 @@ a|
 . Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].
 
 == Renew or delete a client/server certificate or local certificate authorities
+
+Client/server certificates and local certificate authorities must be renewed annually.  If you do not want to renew an expired certificate or local certificate authorities, you should delete them.
 
 .Steps
 
