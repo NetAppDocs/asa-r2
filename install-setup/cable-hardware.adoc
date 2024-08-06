@@ -4,7 +4,7 @@ permalink: install-setup/cable-hardware.html
 keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a70, asa a90, asa c80, cable controllers
 summary: Learn how to attach the ASA r2 controller cables to your network and cable the controllers to the shelves. 
 ---
-= Cable the hardware for ASA r2
+= Cable the hardware for your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
