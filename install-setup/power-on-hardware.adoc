@@ -14,4 +14,4 @@ Turn on your storage system by first powering on each NS224 shelf and assigning 
 include::../_include/install_power_hardware.adoc[]
 
 .What's next?
-After you've connected your storage controllers to the network and to the storage shelves, you link:initialize-ontap-cluster.html[initialize the ONTAP cluster].
+After you've turned on your ASA r2 storage system, you link:initialize-ontap-cluster.html[initialize the ONTAP cluster].

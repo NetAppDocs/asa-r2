@@ -14,4 +14,4 @@ After you install the rack hardware for your ASA r2 storage system, install the 
 include::../_include/install_cable.adoc[]
 
 .What's next?
-Go to link:power-on-hardware.html[Power on the ASA r2 storage system].
+After you've cabled the hardware for your ASA r2 system, you link:power-on-hardware.html[turn on the ASA r2 storage system].
