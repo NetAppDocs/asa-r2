@@ -21,7 +21,7 @@ Configure active directory (AD) domain controller access to your cluster or stor
 
 == Configure LDAP
 
-An Lightweight Directory Access Protocol (LDAP) server enables you to centrally maintain user information. If you store your user database on an LDAP server in your environment, you can configure your storage system to look up user information in your existing LDAP database.
+Configure a Lightweight Directory Access Protocol (LDAP) server to centrally maintain user information for authentication. 
 
 .Before you begin
 
