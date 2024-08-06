@@ -9,7 +9,7 @@ summary: Learn how to attach the ASA r2 controller cables to your network and ca
 :imagesdir: ../media/
 
 [.lead]
-Cable the ASA r2 hardware by first cabling the controllers to your network and then cabling  the controllers to your shelves.
+After you install the rack hardware for your ASA r2 storage system, install the network cables for the controllers, and connect the cables between the controllers and storage shelves.
 
 include::../_include/install_cable.adoc[]
 
