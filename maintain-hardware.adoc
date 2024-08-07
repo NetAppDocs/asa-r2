@@ -4,7 +4,7 @@ permalink: maintain-hardware.html
 keywords: 
 summary: 
 ---
-= Maintain hardware
+= Maintain your ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 
