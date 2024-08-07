@@ -4,7 +4,7 @@ permalink: data-protection/protect-data.html
 keywords: data protection, protect data, asa r2, snapshot, replication, snapshot replication, data replication, disaster recovery, backup
 summary: Use Snapshot and Snapshot replication to create local and remote copies of your data for backup, data migration and disaster recovery.
 ---
-= Data protection with ASA r2
+= Data protection with the ASA r2
 :icons: font
 :imagesdir: ../media/
 
