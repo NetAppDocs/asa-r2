@@ -4,8 +4,25 @@ permalink: learn-more/hardware-comparison.html
 keywords: 
 summary:
 ---
-= Comparison between ASA r2 and other ONTAP hardware systems
+= Comparison between ASA r2 and ASA
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+NetApp All-SAN Arrays (ASAs) and NetApp ASA r2s are both all-flash SAN-only solutions built on proven AFF NetApp platforms.  
+
+The ASA and ASA r2 differ in that the ASA offers hardware support that is optimized for SAN-only solutions while the ASA r2 offers optimization of hardware and software for SAN-only solutions.  On the ASA r2, ONTAP software is streamlined to provide support for necessary SAN functionality while limiting the visibility and availability of non-SAN related features and functions.  For example, System Manger running on an ASA r2 does not display options necessary to create home directories for NAS clients. ONTAP commands and REST APIs are also unavailable or limited for such features and functions.  
+
+ASAs and ASA r2s both use symmetric active-active for multipathing.  All paths are active/optimized so that in the event of a storage failover, the host does not need to wait for the ALUA transition of the failover paths to resume I/O.
+
+ASA r2s offer a single HA pair deployment.  Because there are only two nodes in the cluster, path reduction using Selective LUN Map (SLM) is not needed and therefore not supported.  Depending upon your version of ONTAP and your protocol, ASAs support up to 12 nodes per cluster. Paths between the host and storage can be reduced as needed using SLM.
+
+ASA r2 configurations are supported by the following platforms:  
+
+* ASA A1K
+* ASA A70
+* ASA A90 
+
+.More information
+
+See full configuration support and limitations for ASAs and ASA r2s in link:hwu.netapp.com[NetApp Hardware Universe^].
