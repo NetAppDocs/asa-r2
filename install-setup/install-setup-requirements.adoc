@@ -9,7 +9,7 @@ summary: Review the equipment needed and the lifting precautions for your ASA r2
 :imagesdir: ../media/
 
 [.lead]
-Before installing your storage system, review the equipment needed and the lifting precautions for your ASA r2 storage system and storage shelves. 
+Review the equipment needed and the lifting precautions for your ASA r2 storage system and storage shelves. 
 
 include::../_include/install_requirements.adoc[]
 
