@@ -9,7 +9,7 @@ summary: Get started with the install and setup of the ASA r2 storage system and
 :imagesdir: ../media/
 
 [.lead]
-Get started with the install and setup workflow for the ASA r2 storage system and deploy it as a node in your ONTAP environment. 
+Get started with the install and setup workflow for the ASA r2 storage system and deploy it as an HA pair in your ONTAP environment. 
 
 .Before you begin
 Before installing your ASA r2 storage system, review the link:install-setup-requirements.html[installation requirements and considerations].
