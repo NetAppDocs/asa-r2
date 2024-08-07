@@ -8,8 +8,10 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[Cable pull-tab orien
 
 
 == Step 1: Connect the storage controllers to your network
-Connect your controllers in a network configuration where multiple nodes in a cluster are directly connected to each other, eliminating the need for a dedicated network switch.
+Connect your controllers directly to each other and to your host network.
 
+.Before you begin
+Contact your network administrator for information about connecting your storage system to the host network switches.
 
 .About this task
 These procedures show common configurations. The specific cabling depends on the components ordered for your storage system. For comprehensive configuration and slot priority details, see link:https://hwu.netapp.com[NetApp Hardware Universe^].
@@ -17,9 +19,9 @@ These procedures show common configurations. The specific cabling depends on the
 [role="tabbed-block"]
 ====
 
-.ASA A1K system
+.ASA A1K storage system
 --
-Connect your storage controllers to your ONTAP cluster connections.
+Connect your storage controllers to each other to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
 
 .Steps
 
@@ -29,7 +31,7 @@ Connect your storage controllers to your ONTAP cluster connections.
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
 +
 .. Connect port e1a on Controller A to port e1A on Controller B.
-..  Connect port e7a on Controller A to port e1A on Controller B.
+.. Connect port e7a on Controller A to port e1A on Controller B.
 +
 *Cluster/HA interconnect cables*
 +
@@ -73,7 +75,7 @@ IMPORTANT: Do not plug in the power cords yet.
 
 
 --
-.ASA A70 and ASA A90 systems
+.ASA A70 and ASA A90 storage systems
 --
 Connect your storage controllers to your ONTAP cluster connections.
 

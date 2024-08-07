@@ -38,7 +38,7 @@ Shelf ID button
 |===
 +
 . Change the first number of the shelf ID:
- .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole located on the shelf ID button.
+ .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole to press the shelf ID button.
  .. Press and hold the shelf ID button until the first number on the digital display blinks, and then release the button.
 +
 It can take up to 15 seconds for the number to blink. This activates the shelf ID programming mode.
@@ -64,7 +64,7 @@ The second number continues to blink.
 +
 It can take up to three seconds for the number to stop blinking.
 +
-Both numbers on the digital display start blinking and the amber LED on the ODP illuminates after about five seconds, alerting you that the pending shelf ID has not yet taken effect.
+Both numbers on the digital display start blinking and the amber LED illuminates after about five seconds, alerting you that the pending shelf ID has not yet taken effect.
 
 . Power-cycle the shelf for at least 10 seconds to make the shelf ID take effect.
 +
