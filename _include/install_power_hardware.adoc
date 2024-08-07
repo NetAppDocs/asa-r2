@@ -1,5 +1,5 @@
 == Step 1: Power on the shelf and assign shelf ID
-In ONTAP storage systems, each NS224 shelf is distinguished by a unique shelf ID. This ID ensures that the shelf is distinct within your storage system setup. By default, shelf IDs are assigned as ‘00’ and ‘01’, but you may need to adjust these IDs to maintain uniqueness across your storage system.
+Each NS224 shelf is distinguished by a unique shelf ID. This ID ensures that the shelf is distinct within your storage system setup. By default, shelf IDs are assigned as ‘00’ and ‘01’, but you may need to adjust these IDs to maintain uniqueness across your storage system.
 
 .About this task
 * A valid shelf ID is 00 through 99.
@@ -33,19 +33,19 @@ Shelf ID number
 a|
 image::../media/legend_icon_04.svg[[Callout number 4,width=20]
 a|
-Shelf ID access button
+Shelf ID button
 
 |===
 +
 . Change the first number of the shelf ID:
- .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole.
- .. Press and hold the button until the first number on the digital display blinks, and then release the button.
+ .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole located on the shelf ID button.
+ .. Press and hold the shelf ID button until the first number on the digital display blinks, and then release the button.
 +
 It can take up to 15 seconds for the number to blink. This activates the shelf ID programming mode.
 +
-NOTE: If the ID takes longer than 15 seconds to blink, press and hold the button again, making sure to press it in all the way.
+NOTE: If the ID takes longer than 15 seconds to blink, press and hold the shelf ID button again, making sure to press it in all the way.
 
- .. Press and release the button to advance the number until you reach the desired number from 0 to 9.
+ .. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
 +
 Each press and release duration can be as short as one second.
 +
@@ -57,10 +57,10 @@ It can take up to three seconds for the number to blink.
 +
 The first number on the digital display stops blinking.
 
- .. Press and release the button to advance the number until you reach the desired number from 0 to 9.
+ .. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
 +
 The second number continues to blink.
-. Lock in the desired number and exit the programming mode by pressing and holding the button until the second number stops blinking.
+. Lock in the desired number and exit the programming mode by pressing and holding the shelf ID button until the second number stops blinking.
 +
 It can take up to three seconds for the number to stop blinking.
 +
@@ -80,11 +80,11 @@ A power supply is powered on as soon as the power cord is plugged in. Its bicolo
 
 
 == Step 2: Power on the controllers
-Learn how to power on the controllers.
+After you've turned on your storage shelves and assigned them unique IDs, turn on the power to the storage controllers.
 
 .Steps
 
-. Connect your laptop to the serial console port so you can monitor the boot sequence when power is applied to the controllers. 
+. Connect your laptop to the serial console port. This will allow you to monitor the boot sequence when the controllers are turned on.
 
  .. Set the serial console port on the laptop to 115,200 baud with N-8-1.
 +
