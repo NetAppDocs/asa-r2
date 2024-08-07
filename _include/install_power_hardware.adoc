@@ -107,6 +107,6 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Generic power connec
 +
 * The LEDs flash on and the fans start, which indicates that the controllers are powering on.
 +
-* The fans might be very loud when they first start up. The loud fan noise during start-up is normal.
+* The fans might be very noisy when they first start up. The fan noise during start-up is normal.
 
 . Secure the power cables using the securing device on each power supply.
