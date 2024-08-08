@@ -10,3 +10,18 @@ summary:
 
 [.lead]
 
+The new NetApp All-Flash SAN Array (ASA) r2 offers a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+
+The ASA r2 supports a single HA-pair deployment using symmetric active-active for multipathing so that all paths between the hosts and storage are active/optimized.  All SAN protocols (iSCSI, FC, NVMe/FC and NVMe/TCP) are supported.
+
+On the ASA r2, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing visibility of features and functions not supported by SAN.  This allows you to use System Manager without the need to navigate options unrelated to the administration and management of your SAN workloads. For example, because ASA r2 does not support NAS, System Manger running on an ASA r2 does not display options used to create home directories for NAS clients.
+
+ASA r2 introduces the use of storage units with consistency groups.  A storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. A consistency group is a collection of storage units that are grouped together and managed as a single unit.  ASA r2 uses storage units and consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
+
+To help secure your data against malicious attacks such as theft or ransomware, ASA r2 supports an on-board key manager, dual-layer encryption, tamper-proof snapshots, multi-factor authentication and multi-admin verification.
+
+.For more information
+
+* Learn more about ASA r2 support and limitations in link:hwu.netapp.com[NetApp Hardware Universe^].
+
+* Learn more about link:../learn-more/hardware-comparison.html[the new ASA r2 in comparison to the ASA].

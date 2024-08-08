@@ -9,14 +9,13 @@ summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hos
 :imagesdir: ../media/
 
 [.lead]
-Provision storage to enable SAN hosts to read and write data to specified storage units.  Provisioning includes creating storage units, adding host initiators, mapping the host to a storage unit and performing steps on the host necessary to enable read/write operations.
+When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you  use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also have to perform steps on the host to enable read/write operations.
 
 == Step 1: Create storage units
-Create a basic storage unit to make space available to your SAN hosts for data operations.  
 
-A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN.  If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  
+In ASA r2, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
-The maximum capacity allowed for storage units is 128TB. See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
+See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
 
 .Steps
 
@@ -35,7 +34,7 @@ If you are creating more than one storage unit, each unit is created with the sa
 [cols="2, 4a" options="header"]
 |===
 // header row
-| If you want to do this...
+| If you want...
 | Do this...
 
 a| Change the default Quality of Service (QoS) policy
@@ -86,6 +85,10 @@ NVMe initiator names are formatted as a combination of the NVMe Qualified Name (
 
 . Select *Add*.
 
+.What's next?
+
+Your storage units are created and you are ready to add your host initiators.
+
 == Step 2: Add host initiators
 
 Add host initiators to your ONTAP ASA r2 cluster to make the host eligible to access storage units and perform data operations.
@@ -108,18 +111,13 @@ Add host initiators for SCSI or NVMe hosts.
 . If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration*; then select the destination cluster.
 +
 Your cluster must be in a peer relationship to replicate the host configuration.
-. Add hosts.
+. Add new or existing hosts.
 +
 [cols="2" options="header"]
 |===
 // header row
-| To add existing hosts, do this...
-| To add new hosts, do this...
-
-a|
-.. Select *Existing hosts*.
-.. Select the host you want to add.
-.. Select *Add*.
+| Add new hosts
+| Add existing hosts
 
 a| 
 .. Select *New hosts*.
@@ -129,10 +127,19 @@ a|
 Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.
 .. If you need to add new initiators, select *Add initiators*.
 
+a|
+.. Select *Existing hosts*.
+.. Select the host you want to add.
+.. Select *Add*.
+
 // table end
 |===
 
 . Select *Add*.
+
+.What's next?
+
+Your SCSI hosts are added and you are ready to map your hosts to storage units.
 --
 
 .NVMe hosts
@@ -142,10 +149,16 @@ Configuring host proximity enables ONTAP to identify the controller nearest to t
 . Enter a name for the NVMe subsystem, select the host operating system and enter a description.
 . Select *Add initiator*.
 
+.What's next?
+
+.What's next?
+
+Your NVMe hosts are added and you are ready to map your hosts to storage units.
 --
 ====
 
 // end tabbed area
+
 
 == Step 3: Map the storage unit to a host
 
@@ -170,5 +183,9 @@ Use one zone per initiator and include all target ports in each zone.
 . Discover the new storage unit.
 . Initialize the storage unit and a create file system.
 . Verify that your host can read and write data on the storage unit.
+
+.More information
+
+For more details about host-side configuration, see link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
 
 // ONTAPDOC 1922, 2024 Sept 24
