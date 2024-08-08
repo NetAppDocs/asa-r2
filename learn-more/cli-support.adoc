@@ -10,7 +10,7 @@ summary:
 
 [.lead]
 
-Instead of traditional aggregates, ASA r2s use a common pool of storage called a storage pod.  The storage pod has access to all available disks in the storage system and is visible to both nodes in an ASA r2 HA pair.   When storage units (LUNs and NVMe namespaces) are created, ONTAP automatically creates volumes for the storage units on the storage pod.  
+Instead of traditional aggregates, which own a specific set of the disk available in a storage system, ASA r2s uses a single storage pod.  A storage pod is a common pool of storage that has access to all available disks in the storage system.  The storage pod is visible to both nodes in an ASA r2 HA pair.   When storage units (LUNs and NVMe namespaces) are created, ONTAP automatically creates volumes in the storage pod to house the storage units.
 
 Because of this simplified approach to storage management, `storage aggregate` commands are not supported on the ASA r2.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
 

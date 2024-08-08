@@ -19,3 +19,7 @@ ASA r2s do not support the following:
 * Object protocols
 * ONTAP S3 SnapMirror
 * S3 APIs
+
+.For more information
+
+See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.

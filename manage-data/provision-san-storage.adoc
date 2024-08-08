@@ -56,6 +56,10 @@ a|
 .. Under *Host Mapping*, select *New hosts*.
 .. Select *FC* or *iSCSI*.
 .. Select existing host initiators or select *Add initiator* to add a new host initiator.
++
+SCSI initiator names are formatted as a combination of the iSCSI qualified name (IQN) and the hostname, for example, iqn.1992-08.com.mv.mvinitiator
++
+FC initiators uses worldwide name (WWN), for example, 20:00:00:10:9b:1b:97:66
 
 a| Create a new SCSI host group
 a| 
@@ -74,6 +78,8 @@ a|
 .. Enter a name for the initiator.
 .. If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
 .. Select *+ Add initiator* to add more initiators.
++
+NVMe initiator names are formatted as a combination of the NVMe Qualified Name (NQN) and the Universally Unique Identifier (UUID), for example, nqn.2014-08.org.nvmexpress:uuid:62a19711-ba8c-475d-c954-0000c9f1a436.ss1
 
 // table end
 |===
