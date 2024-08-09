@@ -4,7 +4,7 @@ permalink: data-protection/manage-consistency-groups.html
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
 summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
 ---
-= Manage ONTAP consistency groups
+= Manage ONTAP consistency groups on the ASA r2
 :icons: font
 :imagesdir: ../media/
 

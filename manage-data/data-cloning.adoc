@@ -4,7 +4,7 @@ permalink: manage-data/data-cloning.html
 keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups
 summary: Clone storage units and consistency groups on the ASA r2 to create data copies that can be used in isolation from production data for a variety of purposes. 
 ---
-= Clone data on ASA r2
+= Clone data on the ASA r2
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -40,7 +40,7 @@ A new snapshot is created for the clone by default.
 [cols="2" options="header"]
 |===
 // header row
-| If you want to do this...
+| If you want...
 | Do this...
 
 a| Use an existing snapshot
@@ -101,7 +101,7 @@ Storage unit mappings are copied as part of the cloning process.  Snapshot polic
 [cols="2" options="header"]
 |===
 // header row
-| If you want to do this...
+| If you want to...
 | Do this...
 
 a| Use an existing snapshot

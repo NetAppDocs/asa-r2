@@ -13,7 +13,7 @@ entries:
   url: "/install-setup/cable-hardware.html"  
 - title: Power on system
   url: "/install-setup/power-on-hardware.html"  
-- title: Initialize the cluster
+- title: Set up the cluster
   url: "/install-setup/initialize-ontap-cluster.html"  
 - title: Set up data access
   url: "/install-setup/set-up-data-access.html"  

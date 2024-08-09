@@ -9,3 +9,120 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+
+Instead of traditional aggregates, which own a specific set of the disk available in a storage system, ASA r2s uses a single _storage pod_.  A storage pod is a common pool of storage that has access to all available disks in the storage system.  The storage pod is visible to both nodes in an ASA r2 HA pair.   When storage units (LUNs and NVMe namespaces) are created, ONTAP automatically creates volumes in the storage pod to house the storage units.
+
+Because of this simplified approach to storage management, `storage aggregate` commands are not supported on the ASA r2.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
+
+The following commands and command sets are not supported on ASA on r2s:
+
+// Start snippet: collapsible block (open on page load)
+.Unsupported `lun` commands
+[%collapsible%closed]
+====
+* `lun copy`
+* `lun geometry`
+* `lun import`
+* `lun mapping add-reportng-nodes`
+* `lun mapping-remove-reporting-nodes`
+* `lun maxsize`
+* `lun move`
+* `lun move-in-volume`
++
+This command is replaced with lun rename/vserver nvme namespace rename.
+* `lun transition`
+
+====
+// End snippet
+
+// Start snippet: collapsible block (open on page load)
+.Unsupported `volume` commands and parameters
+[%collapsible%closed]
+====
+* `volume autosize`
+* `volume create`
+* `volume delete`
+* `volume expand`
+* `volume modify`
++
+This command is not available when used in conjunction with the following parameters: 
++
+** `-anti-ransomware-state`
+** `-autosize`
+** `-autosize-mode`
+** `-autosize-shrik-threshold-percent`
+** `-autosize-reset`
+** `-group`
+** `-is-cloud-write-enabled`
+** `-is-space-enforcement-logical`
+** `-max-autosize`
+** `-min-autosize`
+** `-offline`
+** `-online`
+** `-percent-snapshot-space`
+** `-qos*`
+** `-size`
+** `-snapshot-policy`
+** `-space-guarantee`
+** `-space-mgmt-try-first`
+** `-state`
+** `-tiering-policy`
+** `-tiering-minimum-cooling-days`
+** `-user`
+** `-unix-permisions`
+** `-vserver-dr-protection`
+* `volume make-vsroot`
+* `volume mount`
+* `volume move`
+* `volume offline`
+* `volume rehost`
+* `volume rename`
+* `volume restrict`
+* `volume transition-prepare-to-downgrade`
+* `volume unmount`
+
+====
+// End snippet
+
+.Unsupported volume clone commands
+
+* `volume clone create`
+* `volume clone split`
+
+
+.Unsupported volume snaplock commands
+
+* `volume snaplock modify`
+
+.Unsupported volume snapshot commands
+
+* `volume snapshot`
+* `volume snapshot autodelete modify`
+* `volume snapshot policy modify`
+
+// Start snippet: collapsible block (open on page load)
+.Unsupported volume command sets
+[%collapsible%closed]
+====
+
+* `volume activity-tracking`
+* `volume analytics`
+* `volume conversion`
+* `volume file`
+* `volume flexcache`
+* `volume flexgroup`
+* `volume inode-upgrade`
+* `volume object-store`
+* `volume qtree`
+* `volume quota`
+* `volume reallocation`
+* `volume rebalance`
+* `volume recovery-queue`
+* `volume schedule-style`
+
+====
+// End snippet
+
+.For more information
+
+See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] for a full list of supported commands
