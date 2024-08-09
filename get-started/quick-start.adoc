@@ -32,5 +32,5 @@ link:../install-setup/set-up-data-access.html[Connect your ASA r2 to your SAN cl
 link:../manage-data/provision-san-storage.html[Provision storage] to begin serving data to your SAN clients.
 
 .What's next?
-You can now use System Manager to link:../data-protection/protect-data.html[protect] and link:../secure-data/data-security.html[secure] your data.
+You can now use System Manager to protect your data by link:../data-protection/create-snapshots.html[creating snapshots] .
 

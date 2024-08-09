@@ -12,22 +12,13 @@ summary: Clone storage units and consistency groups on the ASA r2 to create data
 :imagesdir: ../media/
 
 [.lead]
-Clone storage units and consistency groups to create data copies that can be used in isolation from your production data for a variety of purposes such as application development, testing and backups.
+Data cloning creates copies of your ASA r2 storage units and consistency groups that can be used for application development, testing, backups, data migration or other administrative functions.
 
 == Clone storage units
-Clone storage units to create point-in-time, writable copies of your production data.  Use storage unit clones for essential enterprise operations such as application development and testing or provisioning of server and desktop images. 
+When you clone a storage unit, you create a new storage unit that is a point-in-time, writable copy of the storage unit you cloned. 
 
 .Steps
 
-Storage units can be cloned from your source storage VMs or from storage VMs that have been replicated to remote destinations.
-
-// start tabbed area
-
-[role="tabbed-block"]
-====
-
-.Clone from source storage VM
---
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Clone*.
@@ -35,7 +26,7 @@ Storage units can be cloned from your source storage VMs or from storage VMs tha
 . Select the host operating system.
 +
 A new snapshot is created for the clone by default.  
-. If you want to use an existing snapshot or if you want to split the clone, select *More Options* then complete the necessary steps.
+. If you want to use an existing snapshot, create a new host group, or add a new host, select *More Options*.
 +
 [cols="2" options="header"]
 |===
@@ -63,20 +54,10 @@ a|
 |===
 
 . Select *Clone*.
---
 
-.Clone from remote snapshot
---
-. In System Manager, select *Protection > Replication*.
-. Hover over the *Source* you want to clone.
-. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
-. Select the source cluster and storage VM; then enter a name for the new consistency group or accept the default name.
-. Select the snapshot to clone; then select *Clone*.
---
+.What's next?
 
-====
-
-// end tabbed area
+You have cloned a storage unit using a snapshot on your local ASA r2.  You are now ready to use the new storage unit as needed.
 
 == Clone consistency groups
 
@@ -89,6 +70,14 @@ You can also choose to create a new host group or add new hosts to the clone whe
 Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group after it is created.
 
 .Steps
+
+// start tabbed area
+
+[role="tabbbed-block"]
+====
+
+.Clone from local snapshot
+--
 
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to clone.
@@ -124,5 +113,21 @@ a|
 |===
 
 . Select *Clone*.
+--
+
+.Clone from remote snapshot
+--
+. In System Manager, select *Protection > Replication*.
+. Hover over the *Source* you want to clone.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
+. Select the source cluster and storage VM; then enter a name for the new consistency group or accept the default name.
+. Select the snapshot to clone; then select *Clone*.
+
+.What's next?
+You have cloned a consistency group from your remote location. The new consistency group is locally available on your ASA r2 to use as needed.
+--
+====
+// end tabbed area
+
 
 // ONTAPDOC 1922, 2024 Sept 24

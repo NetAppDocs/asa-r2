@@ -91,7 +91,7 @@ Your storage units are created and you are ready to add your host initiators.
 
 == Step 2: Add host initiators
 
-Add host initiators to your ONTAP ASA r2 cluster to make the host eligible to access storage units and perform data operations.
+In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations.
 
 .Steps
 
@@ -139,7 +139,7 @@ a|
 
 .What's next?
 
-Your SCSI hosts are added and you are ready to map your hosts to storage units.
+Your SCSI hosts are added to your ASA r2 system and you are ready to map your hosts to your storage units.
 --
 
 .NVMe hosts
@@ -151,7 +151,7 @@ Your SCSI hosts are added and you are ready to map your hosts to storage units.
 
 .What's next?
 
-Your NVMe hosts are added and you are ready to map your hosts to storage units.
+Your NVMe hosts are added to your ASA r2 system and you are ready to map your hosts to your storage units.
 --
 ====
 
@@ -160,7 +160,7 @@ Your NVMe hosts are added and you are ready to map your hosts to storage units.
 
 == Step 3: Map the storage unit to a host
 
-Map hosts to storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
+After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
 
 .Steps
 
@@ -168,6 +168,10 @@ Map hosts to storage units to begin serving data. SCSI hosts can access only the
 . Hover over the name of the storage unit you want to map.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Map to hosts*.
 . Select the hosts you want to map to the storage unit; then select *Map*.
+
+.What's next?
+
+Your storage unit is mapped to your hosts and you are ready to complete the provisioning process on your hosts.
 
 == Step 4: Complete host-side provisioning
 
@@ -181,6 +185,10 @@ Use one zone per initiator and include all target ports in each zone.
 . Discover the new storage unit.
 . Initialize the storage unit and a create file system.
 . Verify that your host can read and write data on the storage unit.
+
+.What's next?
+
+You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
 
 .More information
 

@@ -17,8 +17,6 @@ entries:
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data
   entries:
-   - title: Protect data
-     url: "/data-protection/protect-data.html"
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
    - title: Set up snapshot replication

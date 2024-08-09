@@ -12,7 +12,7 @@ summary: Respond to changes in your storage system performance and data by editi
 Storage units can be edited or taken offline for various administrative reasons such as system reconfiguration or performance optimization.
 
 == Edit storage units
-Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your storage system grow and change.
+Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your ASA r2 grow and change.
 
 .Increase capacity
 Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of the storage unit can be increased to 128 TB which is the maximum size allowed by ONTAP.
