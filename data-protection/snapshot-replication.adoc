@@ -9,10 +9,12 @@ summary: Use Snapshot replication to copy data to a remote location for backup a
 :imagesdir: ../media/
 
 [.lead]
-Setup Snapshot replication on your ASA r2 storage system to copy consistency groups in your cluster to a geographically remote location for backup and disaster protection. To set up Snapshot replication, you need to create a replication policy and establish a replication relationship. 
+Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups on your ASA r2 are copied to the remote location based upon a replication policy. The replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  Replicated consistency groups can be used for disaster recovery or data migration.
+
+To set up Snapshot replication, you need to create a replication policy and establish a replication relationship between your ASA r2 and the remote location. 
 
 .Before you begin
-A SnapMirror license is required to set up Snapshot replication.
+A SnapMirror license is required to set up snapshot replication.
 
 == Step 1: Create a snapshot replication policy
 
@@ -45,12 +47,17 @@ a|
 
 . Select *Save*.
 
+.What's next?
+
+You have created a snapshot replication policy and are now ready to create a replication relationship between your ASA r2 and your remote location.
+
+
 .Related links
 Learn more about link:../administer/manage-client-vm-access.html[storage VMs for client access].
 
 == Step 2: Create a replication relationship
 
-Create a SnapMirror relationship to replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data transfer between endpoints in the NetApp data fabric. 
+A snapshot replication relationship establishes a connection between your ASA r2 and a remote location.  Create a snapshot replication relationship to replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration. 
 
 .Before you begin
 
@@ -60,10 +67,16 @@ If you want to create tamper-proof snapshots to protect against ransomware attac
 
 . In System Manager, select *Protection > Replication*; then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Select the source consistency group.
++
+The _source_ consistency group refers to the consistency group on your ASA r2 that you want to replicate.
 . Select the replication storage VM and the replication policy.
 . Optionally, select to lock the destination snapshots to prevent deletion.
-. Accept the default to start the initial data transfer immediately or select *Advanced settings*; then select *Override transfer schedule*.
+. Accept the default to start the initial data transfer immediately or to start the initial data transfer at another time, select *Advanced settings*; then select *Override transfer schedule*.
 . Select *Replicate*. 
+
+.What's next
+
+Now that you have created a replication policy and relationship, your initial data transfer begins as defined in your replication policy.  You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 goes offline.
 
 == Step 3: Test replication failover
 
@@ -75,6 +88,10 @@ Optionally, validate that you can successfully serve data from replicated storag
 . Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Test failover*.
 . Enter the failover information, then select *Test failover*.
+
+.What's next
+
+Now that your data is protect with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 is repurposed, returned, misplaced or stolen.
 
 
 // ONTAPDOC 1927, 2024 Sept 24
