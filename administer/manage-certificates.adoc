@@ -72,7 +72,7 @@ Add a client/server certificate or local certificate authorities to enable secur
 
 .Steps
 
-. In System Manger, select *Cluster > Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
 . Select *Client/server certificates*, or *Local certificate authorities*.
 . Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].

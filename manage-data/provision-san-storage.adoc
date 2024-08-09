@@ -151,8 +151,6 @@ Your SCSI hosts are added and you are ready to map your hosts to storage units.
 
 .What's next?
 
-.What's next?
-
 Your NVMe hosts are added and you are ready to map your hosts to storage units.
 --
 ====
