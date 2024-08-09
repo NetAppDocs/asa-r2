@@ -73,7 +73,7 @@ You can create clones from consistency groups stored locally on your ASA r2 or f
 
 // start tabbed area
 
-[role="tabbbed-block"]
+[role="tabbed-block"]
 ====
 
 .Clone from local snapshot
