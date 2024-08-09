@@ -9,7 +9,7 @@ summary: Respond to changes in your storage system performance and data by editi
 :imagesdir: ../media/
 
 [.lead]
-Storage units can be edited or taken offline for various administrative reasons such as system reconfiguration or performance optimization.
+To optimize your ASA r2 performance, you might need to edit your storage units or temporarily take units offline. For example, if an existing storage unit begins to host a new critical application, the Quality of Service (QoS) policy applied to the storage unit might need to be modified to support the performance level needed for the new application.
 
 == Edit storage units
 Edit a storage unit to increase its capacity, update its Quality of Service (QoS) policy or to change the hosts that are mapped to the unit. Editing the capacity, QoS policy and host mappings might be necessary as the workloads in your ASA r2 grow and change.

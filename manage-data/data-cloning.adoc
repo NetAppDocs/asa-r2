@@ -15,7 +15,7 @@ summary: Clone storage units and consistency groups on the ASA r2 to create data
 Data cloning creates copies of your ASA r2 storage units and consistency groups that can be used for application development, testing, backups, data migration or other administrative functions.
 
 == Clone storage units
-When you clone a storage unit, you create a new storage unit that is a point-in-time, writable copy of the storage unit you cloned. 
+When you clone a storage unit, you create a new storage unit on your ASA r2 that is a point-in-time, writable copy of the storage unit you cloned. 
 
 .Steps
 
@@ -57,19 +57,19 @@ a|
 
 .What's next?
 
-You have cloned a storage unit using a snapshot on your local ASA r2.  You are now ready to use the new storage unit as needed.
+You have create a new storage unit that is identical to the storage unit you cloned.  You are now ready to use the new storage unit as needed.
 
 == Clone consistency groups
 
-Clone a consistency group to create a new consistency group that’s identical in structure, storage units, and data to the consistency group being cloned. Use a clone to perform application testing or to migrate data.  Suppose, for example, you need to migrate a production workload out of a consistency group.  You can clone the consistency group to create a copy of your production workload to maintain as a backup until the migration is complete.
+When you clone a consistency group, you create a new consistency group that’s identical in structure, storage units, and data to the consistency group you cloned.  Use a consistency group clone to perform application testing or to migrate data.  Suppose, for example, you need to migrate a production workload out of a consistency group.  You can clone the consistency group to create a copy of your production workload to maintain as a backup until the migration is complete.
 
-The clone is created from a snapshot of the original consistency group.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
-
-You can also choose to create a new host group or add new hosts to the clone when it is created.
+The consistency group clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
 
 Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group after it is created.
 
 .Steps
+
+You can create clones from consistency groups stored locally on your ASA r2 or from consistency groups that have been replicated to remote locations. 
 
 // start tabbed area
 
