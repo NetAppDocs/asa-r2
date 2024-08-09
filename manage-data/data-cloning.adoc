@@ -126,6 +126,7 @@ a|
 .What's next?
 You have cloned a consistency group from your remote location. The new consistency group is locally available on your ASA r2 to use as needed.
 --
+
 ====
 // end tabbed area
 
