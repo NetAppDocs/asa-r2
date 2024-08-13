@@ -9,27 +9,28 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+To get up and running with your ASA r2, you install your hardware components, set up your cluster, set up data access from your hosts to the storage system, and provision your storage.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install and setup your hardware
 
 [role="quick-margin-para"]
-Install and setup of the ASA r2 storage system and deploy it as a node in your ONTAP environment.
+link:../install-setup/install-setup-workflow.html[Install and setup] your ASA r2 and deploy it as a node in your ONTAP environment.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Initialize your cluster
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Set up your cluster
 
 [role="quick-margin-para"]
-Use System Manager to guide you through a quick and easy process to initialize your ONTAP cluster.
+Use System Manager to guide you through a quick and easy process to link:../install-setup/initialize-ontap-cluster.html[initialize your ASA r2 ONTAP cluster].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Set up data access
 
 [role="quick-margin-para"]
-Connect your ASA r2 to your SAN clients.
+link:../install-setup/set-up-data-access.html[Connect your ASA r2 to your SAN clients].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Provision your storage
 
 [role="quick-margin-para"]
-Provision storage to begin serving data to your SAN clients.
+link:../manage-data/provision-san-storage.html[Provision storage] to begin serving data to your SAN clients.
 
-.What's next
-You can now use System Manager to link:..data-protection/protect-data.html[protect] and link:..secure-data/data-security.html[secure] your data.
+.What's next?
+You can now use System Manager to protect your data by link:../data-protection/create-snapshots.html[creating snapshots] .
 

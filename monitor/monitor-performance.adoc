@@ -4,8 +4,34 @@ permalink: monitor/monitor-performance.html
 keywords: 
 summary:
 ---
-= Monitor ASA r2 storage performance
+= Monitor cluster and storage unit performance on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+Monitor the overall performance of your cluster and the performance of specific storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  Performance can be monitored over various spans of time ranging from one hour to one year.  
+
+For example, suppose a critical application is experiencing high latency and low throughput.  You view cluster performance for the last 5 business days and notice a decrease in performance at the same time each day.  You use this information to determine that the critical application is competing for cluster resources when a non-critical process begins running in the background. You are then able to modify your QoS policy to limit the impact of the non-critical workload on system resources and to ensure that your critical workload meets minimum throughput targets.
+
+== Monitor cluster performance
+
+Use cluster performance metrics to determine if you need to shift workloads to minimize latency and maximize IOPS and throughput for your critical applications.
+
+.Steps
+
+. In System Manager, select *Dashboard*.
+. Under *Performance*, view the latency, IOPS, and throughput for the cluster by hour, day, week, month, or year.
+. Select image:icon_download.png[blue downward arrow] to download the performance data.
+
+== Monitor storage unit performance
+
+Use storage unit performance metrics to determine the impact of specific applications on latency, IOPS and throughput. 
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Select the storage unit you want to monitor; then select *Overview*.
+. Under *Performance*, view the latency, IOPS, and throughput for the storage unit by hour, day, week, month, or year.
+. Select image:icon_download.png[blue downward arrow] to download the performance data.
+
+// ONTAPDOC 1930, 2024 Sept 24

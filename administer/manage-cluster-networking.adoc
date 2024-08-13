@@ -9,3 +9,70 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+
+== Add a broadcast domain
+
+Use broadcast domains to simplify management of your cluster network by grouping network ports that belong to the same layer 2 network.  Storage virtual machines (VMs) can then use the ports in the group for data or management traffic.
+
+The “Default” broadcast domain and the “Cluster” broadcast domain are created during cluster initialization. The “Default” broadcast domain contains ports that are in the “Default” IPspace. These ports are used primarily to serve data. Cluster management and node management ports are also in this broadcast domain.  The “Cluster” broadcast domain contains ports that are in the “Cluster” IPspace.  These ports are used for cluster communication and include all cluster ports from all nodes in the cluster.
+
+You can create additional broadcast domains after your cluster has been initialized.  You can add physical ports, VLANs, or link aggregation groups/interface groups as ports to the broadcast domain. 
+
+When you create a broadcast domain, a failover group that contains the same ports is automatically created.
+
+.About this task
+
+The maximum transmission unit (MTU) of the ports added to a broadcast domain are updated to the MTU value set in the broadcast domain.
+
+.Steps
+
+.  In System Manager, select *Network > Overview*.
+. Under *Broadcast* domains, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+. Enter a name for the broadcast domain or accept the default name.
++
+All broadcast domain names must be unique within an IPspace.
+. Select the IPspace for the broadcast domain.
++
+If you don’t specify an IPspace name, the broadcast domain is created in the "Default" IPspace.
+. Enter the maximum transmission unit (MTU).
++
+MTU is the largest data packet that can be accepted in your broadcast domain.
+. Select the desired ports; then select *Save*.
+
+== Reassign ports to a different broadcast domain
+
+Ports can belong to only one broadcast domain. If you want to change the broadcast domain to which a port belongs, you need to reassign the port from its existing broadcast domain to the new broadcast domain.
+
+.Steps
+
+. In System Manager, select *Network > Overview*.
+. Under *Broadcast Domains*, select image:icon_kabob.gif[three vertical blue dots] next to the domain name; then select *Edit*.
+. Deselect the Ethernet ports that you want to reassign to another domain.
+. Select the broadcast domain to which you want to reassign the port, then select *Reassign*.
+. Select *Save*.
+
+
+== Create a VLAN
+A VLAN consists of a group of switch ports grouped together into a broadcast domain.  VLANs enable you to increase security, isolate problems, and limit available paths within your IP network infrastructure.
+
+.Before you begin
+
+The switches deployed in the network must either comply with IEEE 802.1Q standards or have a vendor-specific implementation of VLANs.
+
+.About this task:
+
+* A VLAN can’t be created on an interface group port that contains no member ports.
+* When you configure a VLAN over a port for the first time, the port might go down, resulting in a temporary disconnection of the network. Subsequent VLAN additions to the same port do not affect the port state.
+* You should not create a VLAN on a network interface with the same identifier as the native VLAN of the switch. For example, if the network interface e0b is on native VLAN 10, you should not create a VLAN e0b-10 on that interface.
+
+.Steps
+
+. In System Manager, select *Network > Ethernet ports*; then select image:icon_vlan.png[a blue plus sign followed by the word vlan].
+. Select the node and broadcast domain for the VLAN.
+. Select the port for the VLAN.
++
+The VLAN can’t be attached to a port hosting a cluster LIF or to ports assigned to the cluster IPspace.  
+. Enter a VLAN ID.
+. Select *Save*.
+
+// ONTAPDOC 1930, 2024 Sept 24

@@ -9,3 +9,93 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+ASA r2 storage units are contained inside storage virtual machines (VMs).  Storage VMs are used to serve data to your SAN clients. You must create a LIF (network interface) for your SAN clients to connect to a storage VMs and access data in the storage units. Use subnets to simplify LIF creation and use IPspaces to provide your storage VMs with their own secure storage, administration, and routing.
+
+== Create IPspaces
+
+Create IPspaces when you need your storage VMs to have their own secure storage, administration, and routing. IPspaces allow you to configure a distinct IP address space for each storage VM in your cluster.  This enables clients in administratively separate network domains to use overlapping IP addresses from the same IP address subnet range. 
+
+.Steps
+
+. Select *Network > Overview*.
+
+. Under *IPspaces*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+
+. Enter a name for the IPspace or accept the default name.
++
+An IPspace name cannot be “all” because “all” is a system-reserved name.
+
+. Select *Save*.
+
+== Create subnets
+
+Create a subnet to allocate specific blocks of IPv4 or IPv6 addresses to be used when you create LIFs . A subnet simplifies LIF creation by allowing you to specify a subnet name instead of a specific IP address and network mask for each LIF.
+
+.Before you begin
+* You must be a cluster administrator to perform this task.
+* The link:../administer/manage-cluster-networking.html#add-a-broadcast-domain[broadcast domain] and IPspace where you plan to add the subnet must already exist.
+
+.Steps
+
+. Select *Network > Overview*.
+
+. Select *Subnets*; then select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+
+. Enter the subnet name.
++
+All subnet names must be unique within an IPspace.
+
+. Enter the subnet IP address and subnet mask.
+
+. Specify the IP address range for the subnet.
++
+When you specify the IP address range for the subnet, do not overlap IP addresses with other subnets.  If IP addresses overlap, network issues can occur if different subnets or hosts attempt to use the same IP address.
+
+. Select the broadcast domain for the subnet.
+
+. Select *Add*.
+
+== Create a LIF (network interface)
+
+A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted.
+
+.Before you begin
+
+* You must be a cluster administrator to perform this task
+* If you are planning to use a subnet name to allocate the IP address and network mask value for a LIF, the subnet must already exist.
+* A LIF handling intracluster traffic between nodes should not be on the same subnet as a LIF handling management traffic or a LIF handling data traffic.
+
+.Steps
+
+. Select *Network > Overview*.
+
+. Select *Network interfaces*; then select image:icon_add_blue_bg_png[blue rectangle with a plus sign followed by the word add in white letters].
+
+. Select the interface type and protocol; then select the storage VM.
+
+. Enter a name for the LIF or accept the default name.
+
+. Select the home node for the network interface; then enter the IP address and subnet mask.
+
+. Select *Save*.
+
+
+== Modify LIFs (network interfaces)
+
+LIFs can be disabled or renamed as needed.  You can also change the LIF IP address and subnet mask.
+
+.Steps
+
+. Select *Network > Overview*; then select *Network interfaces*.
+
+. Hoover over the network interface you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
+
+. Select *Edit*.
+
+. You can disable the network interface, rename the network interface, change the IP address, and change the subnet mask.
+
+. Select *Save*.
+
+
+
+// ONTAPDOC 1930, 2024 Sept 24

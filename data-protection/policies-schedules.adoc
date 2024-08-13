@@ -4,9 +4,69 @@ permalink: data-protection/policies-schedules.html
 keywords: data protection, polices, schedules, protect data, snapshot policies, snapshot schedules, replication policies
 summary: Use data protection policies and schedules to protect data on an automated schedule.  
 ---
-= Manage ONTAP data protection policies and schedules
+= Manage ONTAP data protection policies and schedules on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Use snapshot policies to protect data in your storage units and consistency groups on an automated schedule. Use snapshot schedules within policies to determine how often snapshots are taken at the storage VM and cluster level.
+
+== Create a snapshot policy
+
+Create a snapshot policy to define how often snapshots are taken, the maximum number of snapshots allowed, and how long snapshots are retained.
+
+.Steps
+
+. In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+. Enter a name for the snapshot policy.
+. Select *Cluster* to apply the policy to the entire cluster.  Select *Storage VM* to apply the policy to an individual storage VM.
+. Select *Add a schedule*; then enter the snapshot schedule.
+. Select *Add policy*.
+
+== Apply a snapshot policy to a consistency group
+
+Apply a snapshot policy to a consistency group to automatically create snapshot copies of the consistency group in regular intervals on a pre-determined schedule.
+
+.Steps
+
+. In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
+. Hoover over the name of the snapshot policy you want to apply.  
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Apply*.
+. Select the consistency groups to which you want to apply the snapshot policy; then select *Apply*.
+
+== Edit, delete, or disable a snapshot policy 
+
+Edit a snapshot policy to modify the policy name, maximum number of snapshots or SnapMirror label.  Delete a policy to remove it and its associated back up data from your cluster.  Disable a policy to temporarily stop the creation or transfer of snapshots specified by the policy.
+
+.Steps
+
+. In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
+. Hoover over the name of the snapshot policy you want to edit.  
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*, *Delete*, or *Disable*.
+
+== Edit a replication policy
+
+Edit a replication policy to modify the policy description, transfer schedule, and rules.  You can also edit the policy to enable or disable network compression.
+
+.Steps
+
+. In System Manager, select *Protection > Policies*.
+. Select *Replication policies*.
+. Hoover over the replication policy that you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Edit*.
+. Update the policy; then select *Save*.
+
+== Create a new policy schedule
+
+Create protection policy schedules to define when data should be protected. 
+
+.Steps
+
+. Select *Protection > Policies*; then select *Schedule*.
+. Select image:icon_kabob.gif[three vertical blue dots].
+. Enter a name for the schedule; then select the schedule parameters.
+. Select *Save*.
+
+
+// ONTAPDOC 1927, 2024 Sept 24

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: administer/update-firmware-automatically.html
+keywords: 
+summary:
+---
+= Update firmware automatically
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Automatic update of firmware and system files is enabled by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates or edit update parameters to show you notifications of available updates before any action is performed.
+
+== Enable automatic updates
+
+Recommended updates for storage firmware, SP/BMC firmware and system files are automatically downloaded and installed on your ASA r2 by default.  If automatic updates have been disabled, you can enable them to reinstate the default behavior.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Enable*.
+. Read and accept the EULA.
+. Accept the defaults to automatically update your firmware and system files.  Optionally, select to show notifications or to automatically dismiss recommended updates.
+. Select to acknowledge that your update modifications will be applied to all current and future updates.
+. Select *Save*.
+
+== Disable automatic updates
+
+Disable automatic updates if you want the flexibility to view recommended updates before they are installed.  If you disable automatic updates, you need to perform firmware and system file updates manually. 
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Disable*.
+
+== View automatic updates
+
+View a list of firmware and system file updates that have been downloaded to your cluster and are scheduled for automatic installation.  Also view updates that have been previously automatically installed.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *View all automatic updates*.
+
+== Edit automatic updates
+
+You can select to have recommended updates for your storage firmware, SP/BMC firmware and your system files automatically downloaded and installed on your cluster, or you can select to have recommended updates automatically dismissed.  If you want to manually control installation or dismissal of updates, select to be notified when a recommended update is available; then you can manually select to install or dismiss it. 
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Edit automatic updates*.
+. Update the selections for automatic updates.
+. Select *Save*.
+
+// ONTAPDOC 1930, 2024 Sept 24

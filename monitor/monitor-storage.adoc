@@ -4,8 +4,40 @@ permalink: monitor/monitor-storage.html
 keywords: 
 summary:
 ---
-= Monitor ASA r2 storage utilization
+= Monitor cluster and storage unit utilization on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
+
+== Monitor cluster utilization
+
+Regularly monitor the amount of storage consumed by your cluster to ensure that, if needed, you are prepared to expand the cluster capacity before running out of space.
+
+.Steps
+
+. In System Manager, select *Dashboard*.
+. Under *Capacity*, view the amount of physical used space and the amount of available space on your cluster.
++
+The data reduction ration represents the amount of space saved through storage efficiency.
+
+== Monitor storage unit utilization 
+Monitor the amount of storage consumed by a storage unit so that you can proactively increase or decrease the size of the storage unit based on your business needs.  
+
+.Steps
+. In System Manager, select *Storage*.
+. Select the storage unit you want to monitor; then select *Overview*.
+. Under *Storage*, view the following:
++
+* Size of your storage unit
+* Amount of used space
+* Data reduction ratio
++
+The data reduction ratio represents the amount of space saved through storage efficiency
+* Snapshot used
++
+Snapshot used represents the amount of storage used by snapshots.
+
+
+// ONTAPDOC 1930, 2024 Sept 24

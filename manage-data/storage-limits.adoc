@@ -9,7 +9,7 @@ summary: ASA r2 configurations support a maximum of 2 nodes per cluster running 
 :imagesdir: ../media/
 
 [.lead]
-For a complete list of the most current ASA r2 storage and configuration limits, see the NetApp Hardware Universe.
+For a complete list of the most current ASA r2 storage and configuration limits, see NetApp Hardware Universe.
 
 ASA r2 configurations support the following:
 
@@ -33,5 +33,8 @@ a|
 // table end
 |===
 
-.Relate links
- link:https://hwu.netapp.com/[NetApp Hardware Universe].
+.Relate link
+
+link:https://hwu.netapp.com/[NetApp Hardware Universe^].
+
+// ONTAPDOC 1922, 2024 Sept 24

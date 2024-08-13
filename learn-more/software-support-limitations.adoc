@@ -9,3 +9,17 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+While the ASA r2 offers a wide range of support for SAN solutions, certain ONTAP software features are not supported.
+
+ASA r2s do not support the following:
+
+* MetroCluster 
+* SnapMirror to Cloud
+* FabricPool 
+* Object protocols
+* ONTAP S3 SnapMirror
+* S3 APIs
+
+.For more information
+
+See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.

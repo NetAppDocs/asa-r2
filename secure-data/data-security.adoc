@@ -2,11 +2,12 @@
 sidebar: sidebar
 permalink: secure-data/data-security.html
 keywords: asa r2, secure data, data security
-summary: Use encryption and tamperproof snapshots to secure your data against malicious attacks such as theft or ransomware.
+summary: Use encryption and tamper-proof snapshots to secure your data against malicious attacks such as theft or ransomware.
 ---
 = Data security with ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use encryption and tamperproof snapshots to secure your data against malicious attacks such as theft or ransomware. Encryption is available at the hardware and software layers of your storage system and, when using the NVMe/TCP protocol, you can encrypt data transferred over the network.
+Use encryption and tamper-proof snapshots to secure your data against malicious attacks such as theft or ransomware. Encryption is available at the hardware and software layers of the ASA r2 and, when using the NVMe/TCP protocol, you can also encrypt data transferred over the network.
+

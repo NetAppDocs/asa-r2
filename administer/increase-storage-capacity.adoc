@@ -1,11 +1,56 @@
 ---
 sidebar: sidebar
 permalink: administer/increase-storage-capacity.html
-keywords: 
-summary:
+keywords: increase, capacity, node, shelf, drive, expand, storage, asa r2
+summary: Add drives to a node or shelf to increase the capacity of your ASA r2 storage units. 
 ---
 = Increase storage capacity
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+Add drives to a node or shelf to increase the capacity of your ASA r2 storage units. 
+
+== Use NetApp Hardware Universe to prepare for installation of a new drive
+
+Before you install a new drive to a node or shelf, use NetApp Hardware Universe to confirm that the drive you want to add is supported by the ASA r2 platform and to identify the correct slot for the new drive.  The correct slots for adding drives vary depending on the platform model and ONTAP version.  In some cases, you need to add drives to specific slots in sequence.
+
+.Steps
+
+. Go the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
+. Under *Products*, select your hardware configurations.
+. Select your ASA r2 platform.
+. Select your ONTAP version; then select *Show Results*.
+. Beneath the graphic, select *Click here to see alternative views*; then choose the view that matches your configuration.
+
+== Install a new drive on the ASA r2
+
+The minimum number of drives you should add in a single procedure is six.  Adding a single drive might reduce performance.
+
+.About this task
+You should repeat the steps in this procedure for each drive.
+
+.Steps
+
+. Properly ground yourself.
+. Gently remove the bezel from the front of the platform.
+. Insert the new drive into the correct slot.
+.. With the cam handle in the open position, use both hands to insert the new drive.
+.. Push until the drive stops.
+.. Close the cam handle so that the drive is fully seated into the mid plane and the handle clicks into place.
++
+Be sure to close the cam handle slowly so that it aligns correctly with the face of the drive.
+. Verify that the drive's activity LED (green) is illuminated.
++
+* IF the LED is solid, the drive has power. 
+* If the LED is blinking, the drive has power and I/O is in progress. The LED will also blink if the drive firmware is being updated.   
++
+Drive firmware is automatically updated (nondisruptively) on new drives that do not have current firmware versions.
+. If your node is configured for drive auto-assignment, you can wait for ONTAP to automatically assign the new drives to a node.  If your node isn’t configured for drive auto-assignment or if preferred, you can assign the drives manually.  
++
+The new drives are not recognized until they are assigned to a node.
+
+.What’s next?
+After the new drives have been recognized, verify that they have been added and their ownership is specified correctly.
+
+// ONTAPDOC 1930, 2024 Sept 24

@@ -4,81 +4,94 @@ permalink: manage-data/provision-san-storage.html
 keywords: provision storage,san, create storage units, luns, namespaces, nvme, add host, add host initiators, map host, host mapping
 summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hosts to read and write data to specified storage units (LUNs and NVMe namespaces).  
 ---
-= Provision SAN storage on ASA r2 using System Manager
+= Provision SAN storage on ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Provision storage to enable SAN hosts to read and write data to specified storage units.  Provisioning includes creating storage units, adding host initiators, mapping the host to a storage unit and performing steps on the host necessary to enable read/write operations.
+When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you  use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also have to perform steps on the host to enable read/write operations.
 
 == Step 1: Create storage units
-Create a basic storage unit to make space available to your SAN hosts for data operations.  
 
-A basic storage unit is a LUN for SCSI hosts and an NVMe namespace for an NVMe host. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace.  If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. LUNs are thinly provisioned by default.  
+In ASA r2, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
-The maximum capacity allowed for storage units is 128TB. See link:https://hwu.netapp.com/[NetApp Hardware Universe] for the most current ASA r2 storage limits.
+See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
 
 .Steps
 
-. Select Storage; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
+. In System Manager, select *Storage*; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
 
-. Enter a name for the new storage unit or accept the default name.
+. Enter a name for the new storage unit.
 
-. Enter the number of units and capacity; then select the host operating system, format and mapping.
+. Enter the number of units you want to create.
 
-. If you want to do any of the following, select *More Options* and follow the required steps.
+. Enter the storage unit capacity; then select the host operating system, format and mapping.
 +
-[cols="2" options="header"]
+If you are creating more than one storage unit, each unit is created with the same capacity, host operating system, format and mapping. 
+
+. If you want to do any of the following, select *More Options* and complete the required steps.
++
+[cols="2, 4a" options="header"]
 |===
 // header row
-| If you want to do this...
+| If you want...
 | Do this...
 
 a| Change the default Quality of Service (QoS) policy
 a| 
-.. Under *Storage and optimization*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] next to Quality of service (QoS).
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select an existing QoS policy.
 
 a| Create a new QoS policy
 a|
-.. Under *Storage and optimization*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] next to Quality of service (QoS).
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select *Define new policy*.
 .. Enter the policy parameters; then select *Add*.
 
-a| Add a new host
+a| Add a new SCSI host
 a|
-a.	Under *Host information*, select *SCSI*, then select *New hosts*.
-b.	Select *FC initiators* or *iSCSI initiators*.
-c.	Select existing host initiators or select *Add initiator* to add a new host initiator.
+.. Under *Host information*, select *SCSI* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New hosts*.
+.. Select *FC* or *iSCSI*.
+.. Select existing host initiators or select *Add initiator* to add a new host initiator.
++
+SCSI initiator names are formatted as a combination of the iSCSI qualified name (IQN) and the hostname, for example, iqn.1992-08.com.mv.mvinitiator
++
+FC initiators uses worldwide name (WWN), for example, 20:00:00:10:9b:1b:97:66
 
 a| Create a new SCSI host group
 a| 
-.. Under *Host information*, select *SCSI*; then select *New host group*. 
+.. Under *Host information*, select *SCSI* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New host group*. 
 .. Enter a name for the host group; then select the hosts to add to the group.
 
 
-a| Create a new NVMe subsystem
+a| Add a new NVMe subsystem
 a|
-a.	Under *Host information*, select *New NVMe subsystem*.
-b.	Enter a name for the subsystem or accept the default name.
-c.	Enter a name for the initiator.
-d.	If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
-Select *+ Add initiator* to add more initiators.
-
-a| Disable data protection
-
-Data protection using local snapshots is enabled by default.
-a|
-Under *Local protection*, deselect *Schedule snapshots*.
+.. Under *Host information*, select *NVMe* for the connection protocol.
+.. Select the host operating system.
+.. Under *Host Mapping*, select *New NVMe subsystem*.
+.. Enter a name for the subsystem or accept the default name.
+.. Enter a name for the initiator.
+.. If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
+.. Select *+ Add initiator* to add more initiators.
++
+NVMe initiator names are formatted as a combination of the NVMe Qualified Name (NQN) and the Universally Unique Identifier (UUID), for example, nqn.2014-08.org.nvmexpress:uuid:62a19711-ba8c-475d-c954-0000c9f1a436.ss1
 
 // table end
 |===
 
 . Select *Add*.
 
+.What's next?
+
+Your storage units are created and you are ready to add your host initiators.
+
 == Step 2: Add host initiators
 
-Add host initiators to your ONTAP cluster to make the host eligible to access storage units in your cluster and perform data operations.
+In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations.
 
 .Steps
 
@@ -92,21 +105,19 @@ Add host initiators for SCSI or NVMe hosts.
 .SCSI hosts
 --
 . Select *Host*.
-. Select *SCSI*; then select image:icon_add_blue_bg.gif[icon of blue arrow pointing in downward direction].
+. Select *SCSI*; then select image:icon_add_blue_bg.png[icon of blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter the host name, select the host operating system and enter a host description.
-. If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration* and then select the destination cluster.
-. Add hosts.
+. Accept the default storage VM or select a different one.
+. If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration*; then select the destination cluster.
++
+Your cluster must be in a peer relationship to replicate the host configuration.
+. Add new or existing hosts.
 +
 [cols="2" options="header"]
 |===
 // header row
-| To add existing hosts, do this...
-| To add new hosts, do this...
-
-a|
-.. Select *Existing hosts*.
-.. Select the host you want to add.
-.. Select *Add*.
+| Add new hosts
+| Add existing hosts
 
 a| 
 .. Select *New hosts*.
@@ -116,10 +127,19 @@ a|
 Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.
 .. If you need to add new initiators, select *Add initiators*.
 
+a|
+.. Select *Existing hosts*.
+.. Select the host you want to add.
+.. Select *Add*.
+
 // table end
 |===
 
 . Select *Add*.
+
+.What's next?
+
+Your SCSI hosts are added to your ASA r2 system and you are ready to map your hosts to your storage units.
 --
 
 .NVMe hosts
@@ -129,14 +149,18 @@ Configuring host proximity enables ONTAP to identify the controller nearest to t
 . Enter a name for the NVMe subsystem, select the host operating system and enter a description.
 . Select *Add initiator*.
 
+.What's next?
+
+Your NVMe hosts are added to your ASA r2 system and you are ready to map your hosts to your storage units.
 --
 ====
 
 // end tabbed area
 
+
 == Step 3: Map the storage unit to a host
 
-Map hosts to storage units to begin serving data. Hosts can access only the storage units to which they are mapped. 
+After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
 
 .Steps
 
@@ -145,15 +169,29 @@ Map hosts to storage units to begin serving data. Hosts can access only the stor
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Map to hosts*.
 . Select the hosts you want to map to the storage unit; then select *Map*.
 
+.What's next?
+
+Your storage unit is mapped to your hosts and you are ready to complete the provisioning process on your hosts.
+
 == Step 4: Complete host-side provisioning
 
 There are steps you must perform on your hosts before the hosts can read and write data on your ASA r2.
 
 .Steps
 
-. For FC, zone your FC switches by WWPN. 
+. For FC and FC/NVMe, zone your FC switches by WWPN. 
 +
 Use one zone per initiator and include all target ports in each zone.
 . Discover the new storage unit.
 . Initialize the storage unit and a create file system.
 . Verify that your host can read and write data on the storage unit.
+
+.What's next?
+
+You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
+
+.More information
+
+For more details about host-side configuration, see link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
+
+// ONTAPDOC 1922, 2024 Sept 24

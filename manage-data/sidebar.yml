@@ -1,6 +1,8 @@
 section: manage-data
 title: Use ONTAP to manage your data
 entries:
+- title: Videos for common tasks
+  url: /videos/placeholder.html
 - title: Provision storage
   entries:
   - title: Provision SAN storage
@@ -11,15 +13,13 @@ entries:
     url: "/manage-data/modify-storage-units.html"  
   - title: Delete storage units
     url: "/manage-data/delete-storage-units.html"  
-  - title: Storage limit
+  - title: Storage limits
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data
   entries:
-   - title: Protect data
-     url: "/data-protection/protect-data.html"
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
-   - title: Setup snapshot replication
+   - title: Set up snapshot replication
      url: "/data-protection/snapshot-replication.html"  
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  
