@@ -27,7 +27,7 @@ See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current
 
 . Enter the storage unit capacity; then select the host operating system, format and mapping.
 +
-If you are creating more than one storage unit, each unit is created with the same capacity, host operating system, format and mapping. 
+If you create more than one storage unit, each unit is created with the same capacity, host operating system, format and mapping. 
 
 . If you want to do any of the following, select *More Options* and complete the required steps.
 +
@@ -56,11 +56,12 @@ a|
 .. Select *FC* or *iSCSI*.
 .. Select existing host initiators or select *Add initiator* to add a new host initiator.
 +
-SCSI initiator names are formatted as a combination of the iSCSI qualified name (IQN) and the hostname, for example, iqn.1992-08.com.mv.mvinitiator
-+
-FC initiators uses worldwide name (WWN), for example, 20:00:00:10:9b:1b:97:66
+An example of a valid FC WWPN is "01:02:03:04:0a:0b:0c:0d". Examples of valid iSCSI initiator names are "iqn.1995-08.com.example:string" and "eui.0123456789abcdef".
 
 a| Create a new SCSI host group
++
+In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
+
 a| 
 .. Under *Host information*, select *SCSI* for the connection protocol.
 .. Select the host operating system.
@@ -78,7 +79,7 @@ a|
 .. If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
 .. Select *+ Add initiator* to add more initiators.
 +
-NVMe initiator names are formatted as a combination of the NVMe Qualified Name (NQN) and the Universally Unique Identifier (UUID), for example, nqn.2014-08.org.nvmexpress:uuid:62a19711-ba8c-475d-c954-0000c9f1a436.ss1
+The host NQN should be formatted as <nqn.yyyy-mm.> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
 
 // table end
 |===
@@ -107,10 +108,9 @@ Add host initiators for SCSI or NVMe hosts.
 . Select *Host*.
 . Select *SCSI*; then select image:icon_add_blue_bg.png[icon of blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter the host name, select the host operating system and enter a host description.
-. Accept the default storage VM or select a different one.
 . If you want to replicate the host configuration to a destination cluster, select *Replicate host configuration*; then select the destination cluster.
 +
-Your cluster must be in a peer relationship to replicate the host configuration.
+Your cluster must be in a replication relationship to replicate the host configuration.
 . Add new or existing hosts.
 +
 [cols="2" options="header"]

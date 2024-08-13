@@ -40,6 +40,9 @@ a|
 .. Select the snapshot you want to use for the clone.
 
 a| Create a new host group
++
+In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
+
 a| 
 .. Under *Host mapping*, select *New host group*.
 .. Enter a name for the new host group; then select the host initiators to include in the group.
@@ -63,7 +66,7 @@ You have created a new storage unit that is identical to the storage unit you cl
 
 When you clone a consistency group, you create a new consistency group that’s identical in structure, storage units, and data to the consistency group you cloned.  Use a consistency group clone to perform application testing or to migrate data.  Suppose, for example, you need to migrate a production workload out of a consistency group.  You can clone the consistency group to create a copy of your production workload to maintain as a backup until the migration is complete.
 
-The consistency group clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
+The clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
 
 Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
 
@@ -76,7 +79,7 @@ You can create clones from consistency groups stored locally on your ASA r2 or f
 [role="tabbed-block"]
 ====
 
-.Clone from local snapshot
+.Clone using local snapshot
 --
 
 . In System Manager, select *Protection > Consistency groups*.
@@ -99,6 +102,9 @@ a|
 .. Select the snapshot you want to use for the clone.
 
 a| Create a new host group
++
+In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
+
 a|
 .. Under *Host mapping*, select *New host group*.
 .. Enter a name for the new host group; then select the host initiators to include in the group.
@@ -115,7 +121,7 @@ a|
 . Select *Clone*.
 --
 
-.Clone from remote snapshot
+.Clone using remote snapshot
 --
 . In System Manager, select *Protection > Replication*.
 . Hover over the *Source* you want to clone.

@@ -9,7 +9,7 @@ summary: Use Snapshot replication to copy data to a remote location for backup a
 :imagesdir: ../media/
 
 [.lead]
-Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups on your ASA r2 are copied to the remote location based upon a replication policy. The replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  Replicated consistency groups can be used for disaster recovery or data migration.
+Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups are copied to the remote location based upon a replication policy. The replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  Replicated consistency groups can be used for disaster recovery or data migration.
 
 To set up Snapshot replication, you need to create a replication policy and establish a replication relationship between your ASA r2 and the remote location. 
 
@@ -33,14 +33,16 @@ If you want to apply the replication policy to the entire cluster, select *Clust
 | Do this...
 
 | Copy data to the remote site after it is written to the source.
-a| Select *Asynchronous*.
+a| 
+.. Select *Asynchronous*.
+.. Under *Transfer schedule*.
+.. Select to transfer all snapshots or select to create rules to determine which snapshots to transfer.
+.. Optionally, enable network compression.
 
 | Write data to the source and remote sites simultaneously.  
 a|
 .. Select *Synchronous*.
-.. Select *Transfer schedule*.
-.. Select to transfer all snapshots or select to create rules to determine which snapshots to transfer.
-.. Optionally, enable network compression.
+
 
 // table end
 |===
@@ -52,12 +54,12 @@ a|
 You have created a snapshot replication policy and are now ready to create a replication relationship between your ASA r2 and your remote location.
 
 
-.Related links
+.For more information
 Learn more about link:../administer/manage-client-vm-access.html[storage VMs for client access].
 
 == Step 2: Create a replication relationship
 
-A snapshot replication relationship establishes a connection between your ASA r2 and a remote location.  Create a snapshot replication relationship to replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration. 
+A snapshot replication relationship establishes a connection between your ASA r2 and a remote location so that you can replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration. 
 
 .Before you begin
 
@@ -65,14 +67,17 @@ If you want to create tamper-proof snapshots to protect against ransomware attac
 
 .Steps
 
-. In System Manager, select *Protection > Replication*; then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
-. Select the source consistency group.
+. In System Manager, select *Protection > Replication*.
+. Select *Local sources*, then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
+. Search for and select the source consistency group.
 +
 The _source_ consistency group refers to the consistency group on your ASA r2 that you want to replicate.
-. Select the replication storage VM and the replication policy.
-. Optionally, select to lock the destination snapshots to prevent deletion.
-. Accept the default to start the initial data transfer immediately or to start the initial data transfer at another time, select *Advanced settings*; then select *Override transfer schedule*.
-. Select *Replicate*. 
+. Under *Replication destination*, select the cluster to replicate to; then select the storage VM.
+. Select the replication policy.
++
+The initial data transfer begins immediately by default.  To delay the start of the data transfer, select *Destination settings*, then deselect *Start transfer immediately*.
+. Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
+. Select *Save*. 
 
 .What's next
 
