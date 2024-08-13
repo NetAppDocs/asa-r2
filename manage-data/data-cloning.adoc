@@ -57,7 +57,7 @@ a|
 
 .What's next?
 
-You have create a new storage unit that is identical to the storage unit you cloned.  You are now ready to use the new storage unit as needed.
+You have created a new storage unit that is identical to the storage unit you cloned.  You are now ready to use the new storage unit as needed.
 
 == Clone consistency groups
 
@@ -65,7 +65,7 @@ When you clone a consistency group, you create a new consistency group that’s 
 
 The consistency group clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
 
-Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group after it is created.
+Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
 
 .Steps
 
@@ -129,5 +129,7 @@ You have cloned a consistency group from your remote location. The new consisten
 ====
 // end tabbed area
 
+.What's next
+To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group.
 
 // ONTAPDOC 1922, 2024 Sept 24
