@@ -41,3 +41,7 @@ a|
 |===
 . Select *Dual-layer encryption* to enable software encryption.
 . Select *Save*.
+
+.What's next?
+
+Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network between your NVMe/TCP host and your ASA r].

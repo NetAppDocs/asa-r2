@@ -9,7 +9,12 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 :imagesdir: ../media/
 
 [.lead]
-If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a local or remote snapshot.
+
+Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Any changes made to the storage units after the date of the snapshot is not restored.  You can only restore data that is protected with snapshots.
+
+.Steps 
+
+You can restore a consistency group from a local or remote snapshot.  
 
 // start tabbed area
 
@@ -22,23 +27,30 @@ If data in a consistency group is corrupted or lost, you can restore the entire 
 . Double-click the consistency group containing the data you need to restore.
 +
 The consistency group details page opens.
-. Select *Snapshots*; then select the snapshot you want to restore.
-. Select image:icon_kabob.gif[three vertical blue dots], then select *Restore*.
+. Select *Snapshots*.
+. Select the snapshot you want to restore; then elect image:icon_kabob.gif[three vertical blue dots].
+. Select *Restore consistency group from this snapshot*; then select *Restore*.
 
 --
 
 .Restore from a remote snapshot
 --
 . In System Manager, select *Protection > Replication*.
-. Hoover over the Source you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Local destinations*.
+. Select the *Source* you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore*.
 . Select the consistency group containing the data you want to restore.
-. Select the snapshot you want to restore; then select *Restore*.
+. Select the snapshot you want to restore; 
+. Type "restore"; then select *Restore*.
 
 --
 
 ====
 
 // end tabbed area
+
+.For more information
+
+Learn to link:create-snapshots.html[protect data on your ASA r2 using snapshots].
 
 // ONTAPDOC 1927, 2024 Sept 24
