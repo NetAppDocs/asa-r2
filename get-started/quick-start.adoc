@@ -14,7 +14,7 @@ To get up and running with your ASA r2, you install your hardware components, se
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install and setup your hardware
 
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html[Install and setup] your ASA r2 and deploy it as a node in your ONTAP environment.
+link:../install-setup/install-setup-workflow.html[Install and setup] your ASA r2 system and deploy it as an HA pair in your ONTAP environment.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Set up your cluster
 
