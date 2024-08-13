@@ -21,7 +21,7 @@ See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current
 
 . In System Manager, select *Storage*; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
 
-. Enter a name for the new storage unit or accept the default name.
+. Enter a name for the new storage unit.
 
 . Enter the number of units you want to create.
 
