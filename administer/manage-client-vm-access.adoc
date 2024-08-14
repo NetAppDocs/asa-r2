@@ -88,8 +88,6 @@ A LIF (network interface) is an IP address associated with a physical or logical
 
 . Select *Save*.
 
-.What's next
-
 
 == Modify LIFs (network interfaces)
 
