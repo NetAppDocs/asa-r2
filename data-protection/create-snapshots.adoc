@@ -133,7 +133,7 @@ a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to th
 
 | Create a new snapshot policy
 a|
-.. Select image:icon_add.png[blue plus sign followed by the word add] ; then enter the snapshot policy parameters.
+.. Select image:icon_add.gif[blue plus sign followed by the word add] ; then enter the snapshot policy parameters.
 .. Select *Add policy*.
 
 // table end

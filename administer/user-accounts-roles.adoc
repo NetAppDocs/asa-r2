@@ -80,7 +80,7 @@ Roles for cluster administrators and storage VM administrators are automatically
 . Under *Roles*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Select the role attributes.
 +
-To add multiple attributes, select image:icon_add.png[plus sign followed by the word add in blue letters].
+To add multiple attributes, select image:icon_add.gif[plus sign followed by the word add in blue letters].
 . Select *Save*.
 
 == Create an administrator account 
@@ -94,7 +94,7 @@ Create an administrator user account to enable the account user to perform speci
 . Under *Users*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]. 
 . Enter a username; then select a role to assign to the user.
 . Select the user login method and the authentication method.
-. To enable MFA, select image:icon_add.png[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
+. To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
 . Enter a password for the user.
 . Select *Save*.
 
