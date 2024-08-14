@@ -11,9 +11,12 @@ summary: Use consistency groups to perform various actions to multiple storage u
 [.lead]
 Use consistency groups for simplified management of storage units. Consistency groups allow you to perform various actions to multiple storage units at the same time instead of performing the same action individually on each unit. For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. 
 
+
 == Add snapshot data protection to a consistency group
 
-Enable local snapshots of a consistency group to provide data protection for all the storage units in the group.  
+When you add snapshot data protection to a consistency group, local snapshots of the consistency group are taken at regular intervals based on a pre-defined schedule. 
+
+You can use snapshots to link:restore-data.html[restore data] that is lost or corrupted.  
 
 .Steps
 
@@ -21,16 +24,42 @@ Enable local snapshots of a consistency group to provide data protection for all
 . Hoover over the consistency group you want to protect.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*.
 . Under *Local protection*, select *Schedule snapshots*.
-. Accept the default Snapshot policy or select a different policy.  
+. Select a snapshot policy.
 +
-Select image:icon_add.png[blue plus sign followed by the word add] to create a new policy.
-. Enter the policy parameters; then select *Add policy*.
+Accept the default snapshot policy, select an existing policy, or create a new policy.
++
+[cols="2,6a" options="header"]
+|===
+// header row
+| If you want to...
+| Do this...
+
+| Select an existing snapshot policy
+a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to the default policy; then select the existing policy that you want to use.
+
+| Create a new snapshot policy
+a|
+.. Select image:icon_add.png[blue plus sign followed by the word add]; then enter the new policy name.
+.. Select the policy scope.
+.. Under *Schedules* select image:icon_add.png[blue plus sign followed by the word add].
+.. Select the name that appears under *Schedule name*; then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direction].
+.. Select the policy schedule.
+.. Under *Maximum snapshots*, enter the maximum number of snapshots that you want to retain of the consistency group.
+.. Optionally, under *SnapMirror label* enter a SnapMirror label.
+.. Select *Save*.
+
+// table end
+|===
+
 . Select *Edit*.
+
+.What's next
+Now that your data is protect with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
 
 == Remove snapshot data protection from a consistency group
 
-Disable local snapshots of a consistency group to remove data protection from all the storage units in the group.  
+When you remove snapshot data protection from a consistency group, snapshots are disabled for all the storage units in the consistency group. 
 
 .Steps
 . In System Manager, select *Protection > Consistency groups*.
@@ -41,7 +70,11 @@ Disable local snapshots of a consistency group to remove data protection from al
 
 == Increase a consistency group
 
-Increase the amount of storage managed by a consistency group by adding new or existing storage units to the consistency group.
+Increase the amount of storage managed by a consistency group by adding storage units to the consistency group.
+
+.Steps
+
+You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
 
 // start tabbed area
 
@@ -63,17 +96,23 @@ Increase the amount of storage managed by a consistency group by adding new or e
 . Hoover over the consistency group you want to increase.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Expand*.
 . Select *Using new storage units*.
-. Select the parameters for the new storage unit; then select *Expand*.
+. Enter the number of units you want to create and the capacity per unit.
++
+If you enter a number greater than one under *Number of units*, each unit is created with the same capacity and the same host operating system.  If you need to create multiple storage units with the same host operating system, but with different capacities, select *Add a different capacity*.
+. Select *Expand*.
 
 .What’s next
 
-link:../manage-data/provision-san-storage.html#step-3-map-the-storage-unit-to-a-host[Map the newly created storage unit to a host].
-
+After you create a new storage unit, you should ../manage-data/provision-san-storage.html#step-2-add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#step-3-map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a hosts allows the storage unit to begin serving data to the host it is mapped to.
 --
 
 ====
 
 // end tabbed area
+
+.What's next?
+Existing snapshots of the consistency group won't include your newly added storage units.  You should link:create-snapshots.html#step-2-create-a-snapshot[create an immediate snapshot] of your consistency group to protect your newly added storage units until the next scheduled snapshot is automatically created.
+
 
 == Remove a storage unit from a consistency group
 If you remove a storage unit from a consistency group, all existing snapshots of the storage unit are deleted. You should remove a storage unit from a consistency group, only if you want to manage it as part of a different consistency group or if you no longer need to protect the data it contains.
@@ -86,12 +125,16 @@ If you remove a storage unit from a consistency group, all existing snapshots of
 
 == Delete a consistency group
 
-If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  Deleting the consistency group does not remove or change the properties of storage units in the consistency group. For example, suppose you delete a consistency group containing 10 storage units replicated to a remote destination.  After the consistency group is deleted, the 10 storage units previously in the consistency group are still active on the cluster and are still replicated to the remote cluster. Any new actions to the storage units are applied to each unit individually and do not impact the other previous members of the consistency group.
+If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  Deleting the consistency group does not remove or change the properties of storage units in the consistency group. For example, suppose you delete a consistency group containing 10 storage units replicated to a remote destination.  After the consistency group is deleted, the 10 storage units previously in the consistency group are still active on the cluster and are still replicated to the remote cluster. Any new action to a storage unit previously in the consistency group is applied only to that unit and does not impact the other previous members of the consistency group.
 
 .Steps
 . In System Manager, select *Protection > Consistency groups*.
 . Hoover over the consistency group you want to delete.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Accept the warning, then select *Delete*.
+
+.What's next?
+
+After you delete a consistency group, the storage units previously in the consistency group are no longer protected by snapshots.  Consider adding these storage units to another consistency group to protect them against data loss.
 
 // ONTAPDOC 1927, 2024 Sept 24

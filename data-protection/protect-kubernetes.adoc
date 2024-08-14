@@ -11,6 +11,8 @@ summary: Use Astra Control to migrate applications and data from one Kubernetes 
 [.lead]
 Use Astra Control Center to protect your Kubernetes applications.  Astra Control Center allows you to migrate applications and data from one Kubernetes cluster to another, replicate applications to a remote system using NetApp SnapMirror technology, and clone applications from staging to production.
 
+.For more information
+
 link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html[Learn more about protecting Kubernetes applications using Astra Control].
 
 // ONTAPDOC 1927, 2024 Sept 24
