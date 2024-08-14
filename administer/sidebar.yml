@@ -7,9 +7,9 @@ entries:
   url: "/administer/manage-cluster-networking.html"   
 - title: Monitor usage and increase capacity 
   entries:
-  - title: Monitor ASA r2 storage performance
+  - title: Monitor storage performance
     url: "/monitor/monitor-performance.html" 
-  - title: Monitor ASA r2 storage utilization
+  - title: Monitor storage utilization
     url: "/monitor/monitor-storage.html"  
   - title: Increase storage capacity
     url: "/administer/increase-storage-capacity.html"  
@@ -31,5 +31,5 @@ entries:
     url: "/administer/rename-nodes.html"   
 - title: Manage user accounts and roles
   url: "/administer/user-accounts-roles.html" 
-- title: Manage certificates
+- title: Manage security certificates
   url: "/administer/manage-certificates.html"     

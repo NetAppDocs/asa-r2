@@ -4,7 +4,7 @@ permalink: manage-data/provision-san-storage.html
 keywords: provision storage,san, create storage units, luns, namespaces, nvme, add host, add host initiators, map host, host mapping
 summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hosts to read and write data to specified storage units (LUNs and NVMe namespaces).  
 ---
-= Provision SAN storage on ASA r2
+= Provision SAN storage on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
@@ -59,8 +59,6 @@ a|
 An example of a valid FC WWPN is "01:02:03:04:0a:0b:0c:0d". Examples of valid iSCSI initiator names are "iqn.1995-08.com.example:string" and "eui.0123456789abcdef".
 
 a| Create a new SCSI host group
-+
-In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
 
 a| 
 .. Under *Host information*, select *SCSI* for the connection protocol.

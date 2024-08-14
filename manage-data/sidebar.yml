@@ -31,8 +31,6 @@ entries:
      url: "/data-protection/policies-schedules.html"      
 - title: Secure your data
   entries:
-  - title: Data security with ASA r2
-    url: "/secure-data/data-security.html"
   - title: Encrypt data at rest
     url: "/secure-data/encrypt-data-at-rest.html"
   - title: Protect against ransomware attacks

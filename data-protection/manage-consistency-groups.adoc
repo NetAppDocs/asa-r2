@@ -39,9 +39,9 @@ a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to th
 
 | Create a new snapshot policy
 a|
-.. Select image:icon_add.png[blue plus sign followed by the word add]; then enter the new policy name.
+.. Select image:icon_add.gif[blue plus sign followed by the word add]; then enter the new policy name.
 .. Select the policy scope.
-.. Under *Schedules* select image:icon_add.png[blue plus sign followed by the word add].
+.. Under *Schedules* select image:icon_add.gif[blue plus sign followed by the word add].
 .. Select the name that appears under *Schedule name*; then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direction].
 .. Select the policy schedule.
 .. Under *Maximum snapshots*, enter the maximum number of snapshots that you want to retain of the consistency group.

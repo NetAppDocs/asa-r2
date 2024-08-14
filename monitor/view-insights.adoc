@@ -4,7 +4,7 @@ permalink: monitor/view-insights.html
 keywords: 
 summary:
 ---
-= View insights and analyze ASA r2 storage
+= View insights and analyze ASA r2 performance
 :icons: font
 :imagesdir: ../media/
 

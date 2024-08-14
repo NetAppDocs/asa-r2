@@ -4,8 +4,17 @@ permalink: get-help/view-submit-support-case.html
 keywords: 
 summary:
 ---
-= View and Submit support cases
+= Submit and view support cases for the ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+
+If you have an issue that requires assistance, you can use System Manager to submit a case to technical support.  You can also use System Manager to view cases that are closed or in progress.
+
+You must be link:https://activeiq-link.netapp.com/[registered with Active IQ] to view support cases for your ASA r2.
+
+.Steps
+
+. To submit a case, in System Manager, select *Cluster >Support*; then select *Go to NetApp Support*.
+. To view a previously submitted case, in System Manager, select *Cluster >Support*; then select *View my cases*.

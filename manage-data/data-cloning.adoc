@@ -40,8 +40,6 @@ a|
 .. Select the snapshot you want to use for the clone.
 
 a| Create a new host group
-+
-In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
 
 a| 
 .. Under *Host mapping*, select *New host group*.
@@ -102,8 +100,6 @@ a|
 .. Select the snapshot you want to use for the clone.
 
 a| Create a new host group
-+
-In ASA r2, a host group is used to assign specific hosts the ability to see and access storage units.  If a host is not listed in the host group, the host won’t see any of the storage units mapped to the host group.
 
 a|
 .. Under *Host mapping*, select *New host group*.
