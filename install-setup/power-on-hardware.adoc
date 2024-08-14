@@ -14,4 +14,4 @@ After you install the rack hardware for your ASA r2 storage system and install t
 include::../_include/install_power_hardware.adoc[]
 
 .What's next?
-After you've turned on your ASA r2 storage system, you link:initialize-ontap-cluster.html[initialize the ONTAP cluster].
+After you've turned on your ASA r2 storage system, you link:initialize-ontap-cluster.html[set up an ONTAP ASA r2 cluster].

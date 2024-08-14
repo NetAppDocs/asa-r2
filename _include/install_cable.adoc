@@ -45,7 +45,7 @@ The following are some typical host network cabling examples. See  link:https://
 
 .. Connect ports e9a and e9b to your Ethernet data network switch as shown.
 +
-NOTE: For maximum system performance for cluster and HA traffic, it is a best practice to not use ports e1b and e7b ports for host network connections.  Use a separate host card to maximize performance.
+NOTE: For maximum system performance for cluster and HA traffic, do not use ports e1b and e7b ports for host network connections.  Use a separate host card to maximize performance.
 
 +
 *100 GbE cable*
@@ -77,7 +77,7 @@ IMPORTANT: Do not plug in the power cords yet.
 --
 .ASA A70 and ASA A90 storage systems
 --
-Connect your storage controllers to your ONTAP cluster connections.
+Connect your storage controllers to each other to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
 
 .Steps
 
@@ -88,7 +88,7 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 
 +
 .. Connect port e1a on Controller A to port e1A on Controller B.
-..  Connect port e7a on Controller A to port e1A on Controller B.
+.. Connect port e7a on Controller A to port e1A on Controller B.
 +
 *Cluster/HA interconnect cables*
 +
@@ -103,7 +103,7 @@ The following are some typical host network cabling examples. See  link:https://
 
 .. Connect ports e9a and e9b to your Ethernet data network switch as shown.
 +
-NOTE: For maximum system performance for cluster and HA traffic, it is a best practice to not use ports e1b and e7b ports for host network connections.  Use a separate host card to maximize performance.
+NOTE: For maximum system performance for cluster and HA traffic, do not use ports e1b and e7b ports for host network connections.  Use a separate host card to maximize performance.
 
 +
 *100 GbE cable*
@@ -138,7 +138,7 @@ IMPORTANT: Do not plug in the power cords yet.
 ====
 
 == Step 2: Connect your storage controllers to the storage shelves
-These procedures show how to connect your controllers to one shelf and to two shelves. You can directly connect up to four shelves to your controllers.
+The following cabling procedures show how to connect your controllers to one shelf and to two shelves. You can directly connect up to four shelves to your controllers.
 
 
 // start tabbed area
@@ -155,17 +155,17 @@ Choose one of the following cabling options that matches your setup.
 [%collapsible]
 =====
 
-Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling in blue and Controller B cabling in yellow.
+Connect each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
 
 .Steps
 
-. On controller A, cable the following connections:
+. On controller A, connect the following ports:
 .. Connect port e11a to NSM A port e0a.
 .. Connect port e11b to port NSM B port e0b.
 +
 image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg[Controller A e11a and e11b to a single NS224 shelf]
 
-. On controller B, cable the following connections:
+. On controller B, connect the following ports:
 .. Connect port e11a to NSM B port e0a.
 .. Connect port e11b to NSM A port e0b.
 +
