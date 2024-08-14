@@ -37,8 +37,8 @@ If you create more than one storage unit, each unit is created with identical ca
 [cols="2,6a" options="header"]
 |===
 // header row
-| If you want...
-| Do this...
+| Option
+| Steps
 
 | Change the default QoS policy
 a|

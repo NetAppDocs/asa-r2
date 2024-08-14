@@ -31,8 +31,8 @@ A new snapshot is created for the clone by default.
 [cols="2" options="header"]
 |===
 // header row
-| If you want...
-| Do this...
+| Option
+| Steps
 
 a| Use an existing snapshot
 a| 
