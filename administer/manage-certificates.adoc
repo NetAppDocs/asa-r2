@@ -4,7 +4,7 @@ permalink: administer/manage-certificates.html
 keywords: 
 summary:
 ---
-= Manage certificates
+= Manage security certificates on the ASA r2
 :icons: font
 :imagesdir: ../media/
 

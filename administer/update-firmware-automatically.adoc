@@ -4,7 +4,7 @@ permalink: administer/update-firmware-automatically.html
 keywords: 
 summary:
 ---
-= Update firmware automatically
+= Update firmware automatically on the ASA r2
 :icons: font
 :imagesdir: ../media/
 

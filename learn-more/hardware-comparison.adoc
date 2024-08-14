@@ -4,7 +4,7 @@ permalink: learn-more/hardware-comparison.html
 keywords: 
 summary:
 ---
-= Comparison between ASA r2 and ASA
+= Compare NetApp ASA r2 and ASA
 :icons: font
 :imagesdir: ../media/
 
