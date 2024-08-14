@@ -155,7 +155,7 @@ Choose one of the following cabling options that matches your setup.
 [%collapsible]
 =====
 
-Cable each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
+Connect each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
 
 .Steps
 
