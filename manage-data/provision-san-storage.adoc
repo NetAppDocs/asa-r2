@@ -34,8 +34,8 @@ If you create more than one storage unit, each unit is created with the same cap
 [cols="2, 4a" options="header"]
 |===
 // header row
-| If you want...
-| Do this...
+| Option
+| Step 
 
 a| Change the default Quality of Service (QoS) policy
 a| 
@@ -188,7 +188,7 @@ Use one zone per initiator and include all target ports in each zone.
 
 You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
 
-.More information
+.For more information
 
 For more details about host-side configuration, see link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
 
