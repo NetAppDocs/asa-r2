@@ -11,7 +11,7 @@ summary: Learn how to install the rail kits for the platform and shelves, and se
 [.lead]
 After you prepare to install your ASA r2 storage system, install the hardware for the system. First, install the rail kits. Then install and secure your platform in a cabinet or telco rack.
 
-include::../_include/install_hardware.adoc[]
+include::../_include/install_hardware_r2.adoc[]
 
 .What's next?
 After you've installed the hardware for your ASA r2 system, you link:cable-hardware.html[cable the hardware for your ASA r2 system].

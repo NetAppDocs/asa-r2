@@ -11,7 +11,7 @@ summary: Prepare to install the ASA r2 storage system in your ONTAP environment 
 [.lead]
 Prepare to install your ASA r2 storage system by getting the site ready, unpacking the boxes and comparing the contents of the boxes to the packing slip, and registering the system to access support benefits.
 
-include::../_include/install_prepare.adoc[]
+include::../_include/install_prepare_r2.adoc[]
 
 .What's next?
 After you've prepared to install your ASA r2 hardware, you link:deploy-hardware.html[install the hardware for your ASA r2 storage system].
