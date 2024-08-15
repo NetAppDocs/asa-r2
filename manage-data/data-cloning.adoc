@@ -91,8 +91,8 @@ You can create clones from consistency groups stored locally on your ASA r2 or f
 [cols="2" options="header"]
 |===
 // header row
-| If you want to...
-| Do this...
+| Option
+| Steps
 
 a| Use an existing snapshot
 a|

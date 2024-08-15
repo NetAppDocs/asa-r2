@@ -9,11 +9,11 @@ summary: Add drives to a node or shelf to increase the capacity of your ASA r2 s
 :imagesdir: ../media/
 
 [.lead]
-Add drives to a node or shelf to increase the capacity of your ASA r2 storage units. 
+Add drives to a node or shelf to increase the storage capacity of your ASA r2. 
 
 == Use NetApp Hardware Universe to prepare for installation of a new drive
 
-Before you install a new drive to a node or shelf, use NetApp Hardware Universe to confirm that the drive you want to add is supported by the ASA r2 platform and to identify the correct slot for the new drive.  The correct slots for adding drives vary depending on the platform model and ONTAP version.  In some cases, you need to add drives to specific slots in sequence.
+Before you install a new drive to a node or shelf, use NetApp Hardware Universe to confirm that the drive you want to add is supported by your ASA r2 platform and to identify the correct slot for the new drive.  The correct slots for adding drives vary depending on the platform model and ONTAP version.  In some cases, you need to add drives to specific slots in sequence.
 
 .Steps
 

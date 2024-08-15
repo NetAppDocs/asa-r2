@@ -19,5 +19,9 @@ You might need to reboot a node for maintenance, troubleshooting, software updat
 +
 The reason you enter for the reboot is recorded in the system audit log.
 
+.What's next?
+
+While the node is being rebooted, its HA partner performs and takeover so that there is no interruption in data service.  When the reboot is complete, the HA partner performs a giveback.
+
 
 // ONTAPDOC 1930, 2024 Sept 24

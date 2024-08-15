@@ -9,9 +9,11 @@ summary: Encrypt data at rest so that it can’t be read if a disk is returned, 
 :imagesdir: ../media/
 
 [.lead]
-Encrypt data at rest so that it can’t be read if a storage medium is repurposed, returned, misplaced, or stolen.  Use hardware and software encryption to enable dual-layer protection.
+When you encrypt data at rest, it can’t be read if a storage medium is repurposed, returned, misplaced, or stolen.  You can encrypt your data at the hardware and software level for dual-layer protection.
 
-NetApp Storage Encryption (NSE) supports hardware encryption using self-encrypting drives (SEDs).  SEDs encrypt data as it is written. Encrypted data can’t be read without the encryption key stored on the SED. Nodes attempting to read from an SED must be authenticated to access the encryption key.  Nodes are authenticated by obtaining an authentication key from a key manager.  Use the ASA r2 onboard key manager or an external key manager to serve authentication keys to your nodes.
+NetApp Storage Encryption (NSE) supports hardware encryption using self-encrypting drives (SEDs).  SEDs encrypt data as it is written. Each SED contains a unique encryption key.  Encrypted data stored on the SED can’t be read without the SED's encryption key. Nodes attempting to read from an SED must be authenticated to access the SED's encryption key.  Nodes are authenticated by obtaining an authentication key from a key manager, then presenting the authentication key to the SED.  If the authentication key is valid, the SED will give the node its encryption key to access the data it contains.  
+
+Use the ASA r2 onboard key manager or an external key manager to serve authentication keys to your nodes.
 
 In addition to NSE, you can also enable software encryption to add another layer of security to your data.
 
@@ -24,15 +26,17 @@ In addition to NSE, you can also enable software encryption to add another layer
 [cols="2" options="header"]
 |===
 // header row
-| To configure the onboard key manager, do this...
-| To configure an external key manager, do this...
+| Option
+| Steps
 
+| Configure the Onboard key Manager
 a| 
-.. Select *Onboard Key Manager*.
+.. Select *Onboard Key Manager* to add the key servers.
 .. Enter a passphrase. 
 
+| Configure an external key manager
 a|
-.. Select *External key manager*.
+.. Select *External key manager* to add the key servers.
 .. Select image:icon_add.gif[a blue plus sign followed by the word add].
 .. Add the KMIP server CA certificates.
 .. Add the KMIP client certificates. 
@@ -44,4 +48,4 @@ a|
 
 .What's next?
 
-Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network between your NVMe/TCP host and your ASA r].
+Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network] between your NVMe/TCP host and your ASA r.

@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
-permalink: administer/update-firmware-automatically.html
+permalink: administer/update-firmware.html
 keywords: 
 summary:
 ---
-= Update firmware automatically on the ASA r2
+= Update firmware on the ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Automatic update of firmware and system files is enabled by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates or edit update parameters to show you notifications of available updates before any action is performed.
+ONTAP automatically downloads and updates firmware and system files on your ASA r2 by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates or edit update parameters to show you notifications of available updates before any action is performed.
 
 == Enable automatic updates
 
@@ -52,5 +52,15 @@ You can select to have recommended updates for your storage firmware, SP/BMC fir
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Edit automatic updates*.
 . Update the selections for automatic updates.
 . Select *Save*.
+
+== Update firmware manually
+
+If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates and update your firmware manually.
+
+.Steps
+
+. Download your firmware update file to a server or local client.
+. In System Manager, select *Cluster > Overview*, then select *Update*.
+. Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters].
 
 // ONTAPDOC 1930, 2024 Sept 24

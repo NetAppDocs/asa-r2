@@ -9,6 +9,7 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
+Use System Manager to configure active directory domain controller access, LDAP and SAML authentication for your user accounts.  Create user account roles to define specific functions that users assigned to the roles can perform on your cluster.
 
 == Configure active directory domain controller access
 

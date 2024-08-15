@@ -1,8 +1,8 @@
 indexpage:
   title: ASA r2 documentation
-  lead: ASA r2 documentation lead
-  summary: ASA r2 summary
-  keywords: asa r2, ontap, documentation
+  lead: The new NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+  summary: NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+  keywords: asa r2, ontap, documentation, asa a1k, asa a70, asa a90
   tiles:  
     - title: Get started
       links: 
@@ -10,6 +10,20 @@ indexpage:
           url: /get-started/learn-about.html
         - title: Get started
           url: /get-started/quick-start.html
+    - title: Manage data
+      links: 
+        - title: Provision SAN storage
+          url: /manage-data/provision-san-storage.html
+        - title: Clone data
+          url: /manage-data/data-cloning.html          
+    - title: Protect and secure data
+      links: 
+        - title: Create snapshots
+          url: /data-protection/create-snapshots.html         
+        - title: Set up snapshot replication
+          url: /data-protection/snapshot-replication.html  
+        - title: Encrypt data at rest
+          url: /secure-data/encrypt-data-at-rest.html                                              
     - title: More resources
       links:
         - title: ONTAP Command reference
