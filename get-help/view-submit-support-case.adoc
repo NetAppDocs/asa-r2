@@ -16,5 +16,5 @@ You must be link:https://activeiq-link.netapp.com/[registered with Active IQ] to
 
 .Steps
 
-. To submit a case, in System Manager, select *Cluster >Support*; then select *Go to NetApp Support*.
+. To submit a support case, in System Manager, select *Cluster >Support*; then select *Go to NetApp Support*.
 . To view a previously submitted case, in System Manager, select *Cluster >Support*; then select *View my cases*.

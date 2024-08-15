@@ -23,6 +23,10 @@ Use cluster performance metrics to determine if you need to shift workloads to m
 . Under *Performance*, view the latency, IOPS, and throughput for the cluster by hour, day, week, month, or year.
 . Select image:icon_download.png[blue downward arrow] to download the performance data.
 
+.What's next?
+
+Use your cluster performance metrics to analyze if you need to modify your QoS policies or make other adjustments to your application workloads to maximize your overall cluster performance.
+
 == Monitor storage unit performance
 
 Use storage unit performance metrics to determine the impact of specific applications on latency, IOPS and throughput. 
@@ -33,5 +37,9 @@ Use storage unit performance metrics to determine the impact of specific applica
 . Select the storage unit you want to monitor; then select *Overview*.
 . Under *Performance*, view the latency, IOPS, and throughput for the storage unit by hour, day, week, month, or year.
 . Select image:icon_download.png[blue downward arrow] to download the performance data.
+
+.What's next?
+
+Use your storage unit performance metrics to analyze if you need to modify the QoS policies assigned to your storage units to decrease latency and maximize IOPS and throughput.
 
 // ONTAPDOC 1930, 2024 Sept 24

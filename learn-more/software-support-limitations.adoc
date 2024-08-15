@@ -11,7 +11,7 @@ summary:
 [.lead]
 While the ASA r2 offers a wide range of support for SAN solutions, certain ONTAP software features are not supported.
 
-ASA r2s do not support the following:
+ASA r2 does not support the following:
 
 * MetroCluster 
 * SnapMirror to Cloud

@@ -29,8 +29,8 @@ If you want to apply the replication policy to the entire cluster, select *Clust
 [cols="2,6a" options="header"]
 |===
 // header row
-| If you want to...
-| Do this...
+| Option
+| Steps
 
 | Copy data to the remote site after it is written to the source.
 a| 

@@ -9,7 +9,7 @@ summary: Delete storage units to lower the amount of physical storage you need o
 :imagesdir: ../media/
 
 [.lead]
-Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you lower the amount of physical storage required in your system or can free space needed for other host applications.
+Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you free space needed for other host applications.
 
 .Steps
 
@@ -18,5 +18,9 @@ Delete a storage unit if you no longer need to maintain the data contained in th
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Acknowledge that the deletion cannot be undone.
 . Select *Delete*.
+
+.What's next?
+
+Reallocate the space you freed by deleting the storage unit to storage units that need additional capacity.  You can link:../manage-data/modify-storage-units.html#edit-storage-units[edit existing storage units] to increase their size.
 
 // ONTAPDOC 1922, 2024 Sept 24

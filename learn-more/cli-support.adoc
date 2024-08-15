@@ -10,11 +10,11 @@ summary:
 
 [.lead]
 
-Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2s uses a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availiabity zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volumes containing a storage virtual machine (VM) in the storage availability zone to house the storage units.
+Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2 uses a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availiabity zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.
 
 Because of this simplified approach to storage management, `storage aggregate` commands are not supported on the ASA r2.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
 
-The following commands and command sets are not supported on ASA on r2s:
+The following commands and command sets are not supported on ASA on r2:
 
 // Start snippet: collapsible block (open on page load)
 .Unsupported `lun` commands

@@ -14,11 +14,7 @@ entries:
   - title: Increase storage capacity
     url: "/administer/increase-storage-capacity.html"  
 - title: Update firmware
-  entries:
-  - title: Update firmware automatically
-    url: "/administer/update-firmware-automatically.html"
-  - title: Update firmware manually 
-    url: "/administer/update-firmware-manually.html"  
+  url: "/administer/update-firmware.html" 
 - title: View insights
   url: "/monitor/view-insights.html"
 - title: View cluster events and jobs

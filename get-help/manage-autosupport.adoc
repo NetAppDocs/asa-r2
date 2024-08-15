@@ -73,8 +73,6 @@ AutoSupport cases will not be generated during the time you specified.  If you c
 
 == Resume support case generation
 
-If 
-
 .Steps
 
 . In system manager, select *Cluster >Settings*.
