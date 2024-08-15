@@ -93,8 +93,8 @@ You can create a snapshot of a single storage unit, or you can create a snapshot
 [cols="2,6a" options="header"]
 |===
 // header row
-| If you want to...
-| Do this...
+| Option 
+| Steps
 
 | Create a snapshot of a consistency group
 a|
@@ -125,8 +125,8 @@ Accept the default snapshot policy, select an existing policy, or create a new p
 [cols="2,6a" options="header"]
 |===
 // header row
-| If you want to...
-| Do this...
+| Option
+| Steps
 
 | Select an existing snapshot policy
 a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to the default policy; then select the existing policy that you want to use.

@@ -9,7 +9,7 @@ summary: Enhance your data security by configuring NVMe/TCP over TLS to encrypt 
 :imagesdir: ../media/
 
 [.lead]
-Enhance your data security by configuring NVMe/TCP over TLS to encrypt all data sent over the network between your NVMe/TCP host and ONTAP.
+If you are using the NVMe/TCP protocol, you can enhance your data security by configuring NVMe/TCP over TLS to encrypt all data sent over the network between your NVMe/TCP hosts and your ASA r2.
 
 .Steps
 

@@ -14,11 +14,9 @@ summary:
 
 Use broadcast domains to simplify management of your cluster network by grouping network ports that belong to the same layer 2 network.  Storage virtual machines (VMs) can then use the ports in the group for data or management traffic.
 
-The “Default” broadcast domain and the “Cluster” broadcast domain are created during cluster initialization. The “Default” broadcast domain contains ports that are in the “Default” IPspace. These ports are used primarily to serve data. Cluster management and node management ports are also in this broadcast domain.  The “Cluster” broadcast domain contains ports that are in the “Cluster” IPspace.  These ports are used for cluster communication and include all cluster ports from all nodes in the cluster.
+The “Default” broadcast domain and the “Cluster” broadcast domain are created during cluster setup. The “Default” broadcast domain contains ports that are in the “Default” IPspace. These ports are used primarily to serve data. Cluster management and node management ports are also in this broadcast domain.  The “Cluster” broadcast domain contains ports that are in the “Cluster” IPspace.  These ports are used for cluster communication and include all cluster ports from all nodes in the cluster.
 
-You can create additional broadcast domains after your cluster has been initialized.  You can add physical ports, VLANs, or link aggregation groups/interface groups as ports to the broadcast domain. 
-
-When you create a broadcast domain, a failover group that contains the same ports is automatically created.
+You can create additional broadcast domains after your cluster has been initialized.  When you create a broadcast domain, a failover group that contains the same ports is automatically created.
 
 .About this task
 
@@ -53,7 +51,7 @@ Ports can belong to only one broadcast domain. If you want to change the broadca
 
 
 == Create a VLAN
-A VLAN consists of a group of switch ports grouped together into a broadcast domain.  VLANs enable you to increase security, isolate problems, and limit available paths within your IP network infrastructure.
+A VLAN consists of switch ports grouped together into a broadcast domain.  VLANs enable you to increase security, isolate problems, and limit available paths within your IP network infrastructure.
 
 .Before you begin
 
