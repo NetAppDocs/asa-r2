@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: install-setup/install-setup-requirements.html
 keywords: asa r2, install, setup, requirements, cautions
-summary: Review the equipment needed and the lifting precautions for your ASA r2 platform and shelves.
+summary: Review the equipment needed and the lifting precautions for your ASA r2 storage system and storage shelves.
 ---
 = Installation requirements and considerations for ASA r2
 :icons: font
