@@ -35,7 +35,7 @@ If you create more than one storage unit, each unit is created with the same cap
 |===
 // header row
 | Option
-| Step 
+| Steps 
 
 a| Change the default Quality of Service (QoS) policy
 a| 
