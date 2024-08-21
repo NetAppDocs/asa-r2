@@ -10,8 +10,8 @@ sidebar:
   entries:
   - title: ASA r2 docs
     url: /index.html
+  - section: release-notes  
   - section: get-started
-  - section: install-setup
   - section: manage-data 
   - section: administer
   - title: Maintain hardware 

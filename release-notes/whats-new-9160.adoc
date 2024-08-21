@@ -1,0 +1,17 @@
+---
+sidebar: sidebar
+permalink: release-notes/whats-new-9160.html
+keywords: 
+summary:  
+---
+= What's new in ONTAP 9.16.0 for ASA r2
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about the new capabilities available in ONTAP 9.16.10 for ASA r2.
+
+
