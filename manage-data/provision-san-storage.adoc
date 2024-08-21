@@ -122,7 +122,8 @@ a|
 .. Select *FC* or *iSCSI*; then select the host initiators.
 .. Optionally, select *Configure host proximity*.
 +
-Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.
+Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.  This is only applicable if you have replicated data to a remote location.  If you have not setup snapshot replication, you do not need to select this option.
+
 .. If you need to add new initiators, select *Add initiators*.
 
 a|

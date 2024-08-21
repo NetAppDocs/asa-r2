@@ -11,7 +11,7 @@ summary: Learn how to set up the ONTAP cluster on ASA r2 using System Manager.
 [.lead]
 System Manager guides you through a quick and easy workflow to set up an ONTAP ASA r2 cluster.
 
-During cluster setup, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
+During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
 
 .Before you begin
 
@@ -19,7 +19,7 @@ Gather the following information:
 
 * Cluster management IP address
 +
-The cluster management IP address is a unique IPv4 or IPv6 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
+The cluster management IP address is a unique IPv4 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
 * Network subnet mask
 +
 During cluster setup, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.

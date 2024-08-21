@@ -10,11 +10,12 @@ summary: To protect data on the ASA r2, you need to create a consistency group a
 
 [.lead]
 
-To protect data on the ASA r2, you need to create a consistency group containing the storage units that you want to protect; then you need to create a snapshot. Storage units must be members of a consistency group to be protected by snapshots.
+To protect data on the ASA r2, you need to create a snapshot. You can create a manual snapshot of a single storage unit or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
-== Step 1: Create a consistency group
+== Step 1: Optionally, create a consistency group
 
-A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups to simplify storage management and data protection for application workloads spanning multiple storage units. 
+A consistency group is a collection of storage units that are managed as a single unit. Create consistency groups to simplify storage management and data protection for application workloads spanning multiple storage units. For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group.
+
 
 .Steps
 
@@ -84,7 +85,17 @@ A snapshot is a local, read-only copy of your data that you can use to restore s
 
 Snapshots can be created on demand and can be created automatically in regular intervals based on a link:https://review.docs.netapp.com/us-en/asa-r2_asa-r2-9160/data-protection/policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
 
-You can create a snapshot of a single storage unit, or you can create a snapshot of a consistency group containing multiple storage units.  Storage units must be members of a consistency group to be protected with snapshots. If you create a snapshot of a single storage unit, the other storage units in the consistency group are not protected.   If you create a snapshot of a consistency group, all the storage units in the consistency group are protected.
+.Types of snapshots
+
+You can create an on-demand snapshot of a single storage unit or of a consistency group.  You can create automated snapshots of a consistency group containing multiple storage units.  You cannot create automated snapshots of a single storage unit.
+
+* On-demand snapshots
++
+An on-demand snapshot of a storage unit can be created at any time. The storage unit does not need to be a member of a consistency group to be protected by an on-demand snapshot.  If you create an on-demand snapshot of a storage unit that is a member of a consistency group, the other storage units in the consistency group are not included in the on-demand snapshot.    If you create an on-demand snapshot of a consistency group, all the storage units in the consistency group are included in the snapshot.
+
+* Automated snapshots
++
+Automated snapshots can be created using snapshot policies.  To apply a snapshot policy to a storage unit for automated snapshot creation, the storage unit must be a member of a consistency group.  If you create apply a snapshot policy to a consistency group, all the storage units in the consistency group are protected with automated snapshots.
 
 .Steps
 
@@ -112,12 +123,12 @@ a|
 // table end
 |===
 
-. If you want to create an immediate snapshot, under *Local protection*, select *Add a snapshot now*.
+. If you want to create an immediate snapshot on-demand, under *Local protection*, select *Add a snapshot now*.
 +
 Local protection creates the snapshot on the same cluster containing the storage unit. 
 +
 .. Enter a name for the snapshot or accept the default name; then optionally, enter a SnapMirror label.
-. Select *Schedule snapshots*, to select a snapshot policy to govern the creation of your snapshots.
+. If you want to create automated snapshots using a snapshot policy, select *Schedule snapshots*.
 .. Select a snapshot policy.
 +
 Accept the default snapshot policy, select an existing policy, or create a new policy.
