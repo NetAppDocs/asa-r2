@@ -131,7 +131,7 @@ You have cloned a consistency group from your remote location. The new consisten
 ====
 // end tabbed area
 
-.What's next
+.What's next?
 To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group.
 
 // ONTAPDOC 1922, 2024 Sept 24

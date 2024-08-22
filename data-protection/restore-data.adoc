@@ -10,7 +10,11 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 
 [.lead]
 
-Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Any changes made to the storage units after the date of the snapshot is not restored.  You can only restore data that is protected with snapshots.
+Data in a consistency group or storage unit that is protected by snapshots can be restored if it is lost or corrupted.
+
+== Restore a consistency group
+
+Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Any changes made to the storage units after the date of the snapshot is not restored.
 
 .Steps 
 
@@ -21,7 +25,7 @@ You can restore a consistency group from a local or remote snapshot.
 [role="tabbed-block"]
 ====
 
-.Restore fom a local snapshot
+.Restore from a local snapshot
 --
 . In System Manager, select *Protection > Consistency groups*.
 . Double-click the consistency group containing the data you need to restore.
@@ -48,6 +52,22 @@ The consistency group details page opens.
 ====
 
 // end tabbed area
+
+== Restore a storage unit
+
+Restoring a storage unit replaces all the data in the storage unit with the data from a snapshot.  Any changes made to the storage unit after the date of the snapshot is not restored.
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Double-click the storage unit containing the data you need to restore.
++
+The storage unit details page opens.
+. Select *Snapshots*.
+. Select the snapshot you want to restore.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Restore*.
+. Select *Use this snapshot to restore the storage unit*; then select *Restore*.
+
 
 .For more information
 
