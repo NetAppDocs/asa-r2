@@ -99,7 +99,7 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 . Select *Network > Overview*; then select *Network interfaces*.
 
-. Hoover over the network interface you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
+. Hover over the network interface you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
 
 . Select *Edit*.
 

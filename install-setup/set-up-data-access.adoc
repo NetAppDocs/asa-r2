@@ -16,7 +16,7 @@ See ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/ontap-sa
 
 == Non-disruptive data migration
 
-If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use vSphere vMotion to perform a live, non-disruptively migration of your data.
+If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptively migration of your data.
 
 .What's next?
 

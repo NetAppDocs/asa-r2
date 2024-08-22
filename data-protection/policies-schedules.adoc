@@ -53,7 +53,7 @@ Apply a snapshot policy to a consistency group to automatically create, retain, 
 .Steps
 
 . In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
-. Hoover over the name of the snapshot policy you want to apply.  
+. Hover over the name of the snapshot policy you want to apply.  
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Apply*.
 . Select the consistency groups to which you want to apply the snapshot policy; then select *Apply*.
 
@@ -67,7 +67,7 @@ Edit a snapshot policy to modify the policy name, maximum number of snapshots or
 .Steps
 
 . In System Manager, select *Protection > Policies*; then select *Snapshot policies*.
-. Hoover over the name of the snapshot policy you want to edit.  
+. Hover over the name of the snapshot policy you want to edit.  
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*, *Delete*, or *Disable*.
 
 == Edit a replication policy
@@ -78,7 +78,7 @@ Edit a replication policy to modify the policy description, transfer schedule, a
 
 . In System Manager, select *Protection > Policies*.
 . Select *Replication policies*.
-. Hoover over the replication policy that you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
+. Hover over the replication policy that you want to edit; then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Edit*.
 . Update the policy; then select *Save*.
 
