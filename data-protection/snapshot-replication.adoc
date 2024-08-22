@@ -90,7 +90,7 @@ Optionally, validate that you can successfully serve data from replicated storag
 .Steps
 
 . In System Manager, select *Protection > Replication*.
-. Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
+. Hover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Test failover*.
 . Enter the failover information, then select *Test failover*.
 

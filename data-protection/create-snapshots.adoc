@@ -88,7 +88,7 @@ Create a snapshot of a consistency group or a storage unit.
 .Snapshot of a consistency group
 --
 . In System Manager, select *Protection > Consistency groups*.
-. Hoover over the name of the consistency group you want to protect.
+. Hover over the name of the consistency group you want to protect.
 . Select image:icon_kabob.gif[three vertical blue dots] ; then select *Protect*.
 
 . If you want to create an immediate snapshot on-demand, under *Local protection*, select *Add a snapshot now*.
@@ -130,7 +130,7 @@ The initial data transfer for replication starts immediately by default.
 .Snapshot of storage unit
 --
 . In System Manager, select *Storage*.
-. Hoover over the name of the storage unit you want to protect.
+. Hover over the name of the storage unit you want to protect.
 . Select image:icon_kabob.gif[three vertical blue dots] ; then select *Protect*.
  If you want to create an immediate snapshot on-demand, under *Local protection*, select *Add a snapshot now*.
 +
