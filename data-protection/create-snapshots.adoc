@@ -16,9 +16,6 @@ To protect data on the ASA r2, you need to create a snapshot. You can create a m
 
 A consistency group is a collection of storage units that are managed as a single unit. Create consistency groups to simplify storage management and data protection for application workloads spanning multiple storage units. For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group.
 
-
-.Steps
-
 Create a consistency group using new storage units or create a consistency group using existing storage units.
 
 
@@ -27,6 +24,8 @@ Create a consistency group using new storage units or create a consistency group
 
 .Use new storage units
 --
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using new storage units*.
 . Enter a name for the new storage unit, the number of units, and the capacity per unit.
@@ -42,6 +41,8 @@ You have created a consistency group containing the storage units you want to pr
 
 .Use existing storage units
 --
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using existing storage units*.
 . Enter a name for the consistency group; then search for and select the storage units you want to include in the consistency group.
@@ -76,8 +77,6 @@ An on-demand snapshot of a storage unit can be created at any time. The storage 
 +
 Automated snapshots can be created using snapshot policies.  To apply a snapshot policy to a storage unit for automated snapshot creation, the storage unit must be a member of a consistency group.  If you apply a snapshot policy to a consistency group, all the storage units in the consistency group are protected with automated snapshots.
 
-.Steps
-
 Create a snapshot of a consistency group or a storage unit.
 
 // start tabbed area
@@ -87,6 +86,8 @@ Create a snapshot of a consistency group or a storage unit.
 
 .Snapshot of a consistency group
 --
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the name of the consistency group you want to protect.
 . Select image:icon_kabob.gif[three vertical blue dots] ; then select *Protect*.
@@ -129,6 +130,8 @@ The initial data transfer for replication starts immediately by default.
 
 .Snapshot of storage unit
 --
+.Steps
+
 . In System Manager, select *Storage*.
 . Hover over the name of the storage unit you want to protect.
 . Select image:icon_kabob.gif[three vertical blue dots] ; then select *Protect*.

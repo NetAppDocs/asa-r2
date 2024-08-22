@@ -3,7 +3,7 @@ title: Use ONTAP to manage your data
 entries:
 - title: Videos for common tasks
   url: /videos/placeholder.html
-- title: Manage your ASA r2 storage
+- title: Manage your storage
   entries:
   - title: Provision storage
     url: "/manage-data/provision-san-storage.html"

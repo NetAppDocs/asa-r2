@@ -38,6 +38,8 @@ If you create more than one storage unit, each unit is created with the same cap
 | Steps 
 
 a| Change the default Quality of Service (QoS) policy
++
+If the default QoS policy has not previously been set on the storage virtual machine (VM) on which the storage unit is being created, this option is not available.
 a| 
 .. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select an existing QoS policy.
@@ -84,15 +86,20 @@ The host NQN should be formatted as <nqn.yyyy-mm.> followed by a fully qualified
 
 . Select *Add*.
 
+.Result
+Your storage units are created.
+
 .What's next?
 
-Your storage units are created and you are ready to add your host initiators.
+If you have not added your host initiators, you should add them now.  If you have added your host initiators, you are ready to map the storage unit to the host.
+
+.For more information
+
+Learn more about link:../administer/manage-client-vm-access.html[how ASA r2 systems use storage virtual machines].
 
 == Step 2: Add host initiators
 
 In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations.
-
-.Steps
 
 Add host initiators for SCSI or NVMe hosts.
 
@@ -103,6 +110,8 @@ Add host initiators for SCSI or NVMe hosts.
 
 .SCSI hosts
 --
+.Steps
+
 . Select *Host*.
 . Select *SCSI*; then select image:icon_add_blue_bg.png[icon of blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter the host name, select the host operating system and enter a host description.
@@ -143,6 +152,8 @@ Your SCSI hosts are added to your ASA r2 system and you are ready to map your ho
 
 .NVMe hosts
 --
+.Steps
+
 . Select *Host*.
 . Select *NVMe*; then select image:icon_add_blue_bg.png[rectangular icon with blue background and the word add centered in white letters].
 . Enter a name for the NVMe subsystem, select the host operating system and enter a description.
