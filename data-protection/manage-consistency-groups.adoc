@@ -97,7 +97,7 @@ You can add existing storage units to your consistency group or you can create n
 . Select *Using new storage units*.
 . Enter the number of units you want to create and the capacity per unit.
 +
-If you enter a number greater than one under *Number of units*, each unit is created with the same capacity and the same host operating system.  If you need to create multiple storage units with the same host operating system, but with different capacities, select *Add a different capacity*.
+If you create more that one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *Add a different capacity* to assign a different capacity to each unit.
 . Select *Expand*.
 
 .What’s next
