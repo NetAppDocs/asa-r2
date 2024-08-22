@@ -57,7 +57,7 @@ A VLAN consists of switch ports grouped together into a broadcast domain.  VLANs
 
 The switches deployed in the network must either comply with IEEE 802.1Q standards or have a vendor-specific implementation of VLANs.
 
-.About this task:
+.About this task
 
 * A VLAN can’t be created on an interface group port that contains no member ports.
 * When you configure a VLAN over a port for the first time, the port might go down, resulting in a temporary disconnection of the network. Subsequent VLAN additions to the same port do not affect the port state.
