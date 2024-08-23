@@ -71,8 +71,6 @@ When you remove snapshot data protection from a consistency group, snapshots are
 
 Expand the amount of storage managed by a consistency group by adding storage units to the consistency group.
 
-.Steps
-
 You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
 
 // start tabbed area
@@ -82,6 +80,8 @@ You can add existing storage units to your consistency group or you can create n
 
 .Add existing storage units
 --
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to expand.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Expand*.
@@ -91,6 +91,8 @@ You can add existing storage units to your consistency group or you can create n
 
 .Add new storage units
 --
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to expand.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Expand*.

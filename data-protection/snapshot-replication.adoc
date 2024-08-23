@@ -9,7 +9,7 @@ summary: Use Snapshot replication to copy data to a remote location for backup a
 :imagesdir: ../media/
 
 [.lead]
-Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups are copied to the remote location based upon a replication policy. The replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  Replicated consistency groups can be used for disaster recovery or data migration.
+Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups are copied to the remote location based upon a replication policy. Replicated consistency groups can be used for disaster recovery or data migration.
 
 To set up Snapshot replication, you need to create a replication policy and establish a replication relationship between your ASA r2 and the remote location. 
 
@@ -17,6 +17,10 @@ To set up Snapshot replication, you need to create a replication policy and esta
 A SnapMirror license is required to set up snapshot replication.
 
 == Step 1: Create a snapshot replication policy
+
+The snapshot replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  
+
+.Steps
 
 . In System Manager, select *Protection > Policies*; then select *Replication policies*.
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].

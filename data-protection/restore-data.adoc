@@ -16,8 +16,6 @@ Data in a consistency group or storage unit that is protected by snapshots can b
 
 Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Any changes made to the storage units after the date of the snapshot is not restored.
 
-.Steps 
-
 You can restore a consistency group from a local or remote snapshot.  
 
 // start tabbed area
@@ -27,6 +25,8 @@ You can restore a consistency group from a local or remote snapshot.
 
 .Restore from a local snapshot
 --
+.Steps 
+
 . In System Manager, select *Protection > Consistency groups*.
 . Double-click the consistency group containing the data you need to restore.
 +
@@ -39,6 +39,8 @@ The consistency group details page opens.
 
 .Restore from a remote snapshot
 --
+.Steps 
+
 . In System Manager, select *Protection > Replication*.
 . Select *Local destinations*.
 . Select the *Source* you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
