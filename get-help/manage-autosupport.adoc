@@ -45,7 +45,7 @@ Add members of your internal support organization to the list of email addresses
 For partners, select *Partner* for the recipient category.  Select *General* for members of your internal support organization.
 . Select save.
 
-.What's next
+.What's next?
 
 The email addresses you have added will receive new AutoSupport messages for their specific recipient category.
 
@@ -60,7 +60,7 @@ Should a problem occur on your ASA r2, AutoSupport data can significantly decrea
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Generate and send*.
 . Enter a subject for the AutoSupport message; then select *Send*.
 
-.What's next
+.What's next?
 
 Your AutoSupport data is sent to technical support.
 

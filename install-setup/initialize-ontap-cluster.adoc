@@ -2,16 +2,16 @@
 sidebar: sidebar
 permalink: install-setup/initialize-ontap-cluster.html
 keywords: asa r2, initialize cluster, set up cluster, ontap
-summary: Learn how to initialize the ONTAP cluster on ASA r2 using System Manager. 
+summary: Learn how to set up the ONTAP cluster on ASA r2 using System Manager. 
 ---
 = Set up an ONTAP ASA r2 cluster
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-System Manager guides you through a quick and easy workflow to initialize an ONTAP ASA r2 cluster.
+System Manager guides you through a quick and easy workflow to set up an ONTAP ASA r2 cluster.
 
-During cluster initialization, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
+During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
 
 .Before you begin
 
@@ -19,10 +19,10 @@ Gather the following information:
 
 * Cluster management IP address
 +
-The cluster management IP address is a unique IPv4 or IPv6 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
+The cluster management IP address is a unique IPv4 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
 * Network subnet mask
 +
-During cluster initialization, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.
+During cluster setup, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.
 * Network gateway IP address
 * Partner node IP address
 * DNS domain names
@@ -60,11 +60,11 @@ If you choose to use the DNS, enter the DNS domain and name servers.  If you cho
 +
 Encryption of data at rest using an Onboard Key Manager (OKM) is selected by default.  If you want to use an external key manager, update the selections.   
 +
-Optionally, you can configure your cluster for encryption after cluster initialization is complete.
+Optionally, you can configure your cluster for encryption after cluster setup is complete.
 
 . Select *Initialize*.
 +
-When initialization is complete, you are redirected to the cluster’s management IP address.
+When setup is complete, you are redirected to the cluster’s management IP address.
 
 . Under *Network*, select *Configure protocols*.
 +
@@ -89,6 +89,8 @@ a|
 |===
 
 . Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
++
+ActiveIQ Config Advisor is a tool for NetApp systems that checks for common configuration errors.  
 
 .What's next?
 You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.

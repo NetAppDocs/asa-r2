@@ -9,7 +9,7 @@ summary: Use Snapshot replication to copy data to a remote location for backup a
 :imagesdir: ../media/
 
 [.lead]
-Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups are copied to the remote location based upon a replication policy. The replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  Replicated consistency groups can be used for disaster recovery or data migration.
+Snapshot replication is a process in which consistency groups on your ASA r2 are copied to a geographically remote location. After the initial data replication, changes to consistency groups are copied to the remote location based upon a replication policy. Replicated consistency groups can be used for disaster recovery or data migration.
 
 To set up Snapshot replication, you need to create a replication policy and establish a replication relationship between your ASA r2 and the remote location. 
 
@@ -17,6 +17,10 @@ To set up Snapshot replication, you need to create a replication policy and esta
 A SnapMirror license is required to set up snapshot replication.
 
 == Step 1: Create a snapshot replication policy
+
+The snapshot replication policy defines when updates performed on the ASA r2 are replicated to the remote site.  
+
+.Steps
 
 . In System Manager, select *Protection > Policies*; then select *Replication policies*.
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
@@ -79,7 +83,7 @@ The initial data transfer begins immediately by default.  To delay the start of 
 . Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
 . Select *Save*. 
 
-.What's next
+.What's next?
 
 Now that you have created a replication policy and relationship, your initial data transfer begins as defined in your replication policy.  You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 goes offline.
 
@@ -90,11 +94,11 @@ Optionally, validate that you can successfully serve data from replicated storag
 .Steps
 
 . In System Manager, select *Protection > Replication*.
-. Hoover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
+. Hover over the replication relationship you want to test, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Test failover*.
 . Enter the failover information, then select *Test failover*.
 
-.What's next
+.What's next?
 
 Now that your data is protect with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 is repurposed, returned, misplaced or stolen.
 

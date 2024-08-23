@@ -68,8 +68,6 @@ The clone is created from a snapshot of the consistency group being cloned.  The
 
 Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
 
-.Steps
-
 You can create clones from consistency groups stored locally on your ASA r2 or from consistency groups that have been replicated to remote locations. 
 
 // start tabbed area
@@ -79,6 +77,7 @@ You can create clones from consistency groups stored locally on your ASA r2 or f
 
 .Clone using local snapshot
 --
+.Steps
 
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to clone.
@@ -119,6 +118,8 @@ a|
 
 .Clone using remote snapshot
 --
+.Steps
+
 . In System Manager, select *Protection > Replication*.
 . Hover over the *Source* you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
@@ -131,7 +132,7 @@ You have cloned a consistency group from your remote location. The new consisten
 ====
 // end tabbed area
 
-.What's next
+.What's next?
 To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group.
 
 // ONTAPDOC 1922, 2024 Sept 24

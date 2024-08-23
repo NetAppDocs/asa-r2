@@ -126,3 +126,101 @@ This command is not available when used in conjunction with the following parame
 .For more information
 
 See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] for a full list of supported commands
+
+== Set up an ONTAP ASA r2 cluster using the CLI
+
+It is recommended that you [link:../install-setup/initialize-ontap-cluster.html[use System Manager to set up your ONTAP ASA r2 cluster]. System Manager offers a quick and easy guided workflow to get your cluster up and running. However, if you are accustomed to working with ONTAP commands, the ONTAP command line interface (CLI) can optionally be used for cluster setup.  Cluster set up using the CLI offers no additional options or advantages than cluster set up using System Manager.  
+
+During cluster setup, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
+
+.Before you begin
+
+Gather the following information:
+
+* Cluster management IP address
++
+The cluster management IP address is a unique IPv4 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
+* Network subnet mask
++
+During cluster setup, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.
+* Network gateway IP address
+* Partner node IP address
+* DNS domain names
+* DNS name server IP addresses
+* NTP server IP addresses
+* Data subnet mask
+
+.Steps
+
+. Power on both nodes of the HA pair.
+
+. Show the nodes discovered on the local network: 
++
+[source,cli]
+----
+system node show-discovered -is-in-cluster false
+----
+
+. Start the cluster setup wizard:
++  
+[source,cli]
+----
+cluster setup
+----
+
+. Acknowledge the AutoSupport statement.
+
+. Enter values for the node management interface port, IP address, netmask and default gateway.
+
+. Press *Enter* to continue setup using the command line interface; then enter *create* to create a new cluster.
+
+. Accept the system defaults or enter your own values.
+
+. After setup on the first node is complete, log into the cluster.
+
+. Verify that the cluster is active and the first node is healthy:  
++
+[source,cli]
+----
+system node show-discovered
+----
+
+. Add the second node to the cluster:
++
+[source,cli]
+----
+cluster add-node -cluster-ip <partner_node_ip_address>
+----
+
+. Optionally, synchronize the system time across the cluster
++
+[cols="1h, 1"]
+|===
+// header column
+| Synchronize without symmetric authentication
+a| 
+[source,cli]
+----
+cluster time-service ntp server create -server <server_name>
+----
+
+| Synchronize with symmetric authentication
+a| 
+[source,cli]
+----
+cluster time-service ntp server create -server <server_ip_address> -key-id <key_id>
+----
+
+// table end
+|===
+.. Verify that the cluster is associated with an NTP server:
++
+[source,cli]
+----
+Cluster time-service ntp show
+----
+
+. Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
+
+.What's next?
+You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.
