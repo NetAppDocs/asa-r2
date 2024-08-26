@@ -9,7 +9,7 @@ summary: Power on each NS224 shelf to assign a unique shelf ID, power on the ASA
 :imagesdir: ../media/
 
 [.lead]
-After you install the hardware for your ASA r2 storage system and cable the controllers and storage shelves, you should power on your storage shelves and controllers.
+After you install the rack hardware for your ASA r2 storage system and install the cables for the controllers and storage shelves, you should power on your storage shelves and controllers.
 
 include::../_include/install_power_hardware_r2.adoc[]
 
