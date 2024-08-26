@@ -104,7 +104,7 @@ If you create more that one unit, each unit is created with the same capacity an
 
 .What’s next
 
-After you create a new storage unit, you should link:../manage-data/provision-san-storage.html#step-2-add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#step-3-map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a hosts allows the storage unit to begin serving data to the host it is mapped to.
+After you create a new storage unit, you should link:../manage-data/provision-san-storage.html#add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a hosts allows the storage unit to begin serving data to the host it is mapped to.
 --
 
 ====

@@ -4,17 +4,21 @@ permalink: install-setup/set-up-data-access.html
 keywords: 
 summary:  
 ---
-= Set up data access from your SAN hosts to your ASA r2
+= Set up data access
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-To set up data access to your SAN clients, you should ensure that specific parameters and settings on the client that are critical for proper operation with ONTAP are configured correctly. The necessary configuration varies depending on the host operating system and the protocol. Correct configuration is important for best performance and successful failover.  
+To set up data access, you should ensure that specific parameters and settings on your SAN client that are critical for proper operation with ONTAP are configured correctly.  If you are using VMware, you should migrate your virtual machines.
+
+== Set up data access from SAN hosts
+
+The configuration necessary to set up data access to your ASA r2 system from your SAN hosts varies depending on the host operating system and the protocol. Correct configuration is important for best performance and successful failover.  
 
 See ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html[VMware vSphere SCSI clients^], link:https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[VMware vSphere NVMe clients^] and link:https://docs.netapp.com/us-en/ontap-sanhost/overview.html[other SAN clients^] to properly configure your hosts to connect to your ASA r2.
 
-== Non-disruptive data migration
+== Migrate VMware virtual machines
 
 If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptively migration of your data.
 

@@ -9,13 +9,15 @@ summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hos
 :imagesdir: ../media/
 
 [.lead]
-When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you  use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also have to perform steps on the host to enable read/write operations.
+When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also need to perform steps on the host to enable read/write operations.
 
-== Step 1: Create storage units
+== Create storage units
 
 In ASA r2, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
 See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
+
+You have the option to add new host initiators and create host groups during the process of creating your new storage units.  You can optionally add new host initiators and create host groups before or after you create your storage units.
 
 .Steps
 
@@ -24,10 +26,16 @@ See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current
 . Enter a name for the new storage unit.
 
 . Enter the number of units you want to create.
-
-. Enter the storage unit capacity; then select the host operating system, format and mapping.
 +
-If you create more than one storage unit, each unit is created with the same capacity, host operating system, format and mapping. 
+If you create more than one storage unit, each unit is created with the same capacity, host operating system, and host mapping. 
+
+. Enter the storage unit capacity; then select the host operating system.
+
+. Accept the auto-selected host mapping or select a different host group for the storage unit to map to.
++
+*Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, that pre-existing host group is auto-select for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
++
+If there is no pre-existing host group for hosts running on the operating system you specified, a new host group is automatically created by ONTAP.
 
 . If you want to do any of the following, select *More Options* and complete the required steps.
 +
@@ -38,7 +46,7 @@ If you create more than one storage unit, each unit is created with the same cap
 | Steps 
 
 a| Change the default Quality of Service (QoS) policy
-+
+
 If the default QoS policy has not previously been set on the storage virtual machine (VM) on which the storage unit is being created, this option is not available.
 a| 
 .. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
@@ -91,15 +99,15 @@ Your storage units are created.
 
 .What's next?
 
-If you have not added your host initiators, you should add them now.  If you have added your host initiators, you are ready to map the storage unit to the host.
+If you did not added your host initiators when you created your storage units, you should add them now.  If you have added your host initiators, you are ready to map the storage unit to the host.
 
 .For more information
 
 Learn more about link:../administer/manage-client-vm-access.html[how ASA r2 systems use storage virtual machines].
 
-== Step 2: Add host initiators
+== Add host initiators
 
-In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations.
+In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations. 
 
 Add host initiators for SCSI or NVMe hosts.
 
@@ -167,8 +175,28 @@ Your NVMe hosts are added to your ASA r2 system and you are ready to map your ho
 
 // end tabbed area
 
+== Create host groups on the ASA r2
 
-== Step 3: Map the storage unit to a host
+On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then enabled to mount (create directories and file structures on) the storage unit.
+
+Host groups are automatically or manually created when you create your storage units.  You can optionally use the following steps to create host groups before or after storage unit creation.
+
+.Steps
+
+. From System Manager, select *Host*.
+. Select the hosts you want to add to the host group.
++
+After you select the first host, the option to add to a host group appears above the list of hosts.
+. Select *Add to host group*.
+. Search for and select the host group to which you want to add the host.
+
+
+.What's next?
+
+You have created a host group and you can now to map it to a storage unit.
+
+
+== Map the storage unit to a host
 
 After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
 
@@ -183,9 +211,9 @@ After you have created your ASA r2 storage units, and added host initiators, you
 
 Your storage unit is mapped to your hosts and you are ready to complete the provisioning process on your hosts.
 
-== Step 4: Complete host-side provisioning
+== Complete host-side provisioning
 
-There are steps you must perform on your hosts before the hosts can read and write data on your ASA r2.
+After you have created your storage units, added your host initiators and mapped your storage units, there are steps you must perform on your hosts before they can read and write data on your ASA r2.
 
 .Steps
 
