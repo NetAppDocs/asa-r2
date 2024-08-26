@@ -7,8 +7,6 @@ entries:
   entries:
   - title: Provision storage
     url: "/manage-data/provision-san-storage.html"
-  - title: Create host groups 
-    url: "/manage-data/create-host-groups.html"  
   - title: Clone data
     url: "/manage-data/data-cloning.html"  
   - title: Modify storage units
