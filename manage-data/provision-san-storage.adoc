@@ -11,13 +11,15 @@ summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hos
 [.lead]
 When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also need to perform steps on the host to enable read/write operations.
 
+You can choose to add host initiators and map them to your storage unit during the storage unit creation process, or you can optionally choose to add your host initiators, then create and map your storage units.  New host initiators can be added and mapped to existing storage units at any time.
+
 == Create storage units
 
 In ASA r2, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
 See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
 
-You have the option to add new host initiators and create host groups during the process of creating your new storage units.  You can optionally add new host initiators and create host groups before or after you create your storage units.
+Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the units are created.
 
 .Steps
 
@@ -103,12 +105,9 @@ The host NQN should be formatted as <nqn.yyyy-mm.> followed by a fully qualified
 
 . Select *Add*.
 
-.Result
-Your storage units are created.
-
 .What's next?
 
-If you did not added your host initiators when you created your storage units, you should add them now.  If you have added your host initiators, you are ready to map the storage unit to the host.
+Your storage units are created and mapped to your hosts. You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
 
 .For more information
 
@@ -116,7 +115,7 @@ Learn more about link:../administer/manage-client-vm-access.html[how ASA r2 syst
 
 == Add host initiators
 
-In addition to creating ASA r2 storage units, you need to add host initiators to your SAN hosts. These initiators make the hosts eligible to access storage units and perform data operations. 
+You can add new host initiators to your ASA r2 system at any time. Initiators make the hosts eligible to access storage units and perform data operations. 
 
 Add host initiators for SCSI or NVMe hosts.
 

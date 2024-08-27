@@ -11,6 +11,9 @@ summary: Delete storage units to lower the amount of physical storage you need o
 [.lead]
 Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you free space needed for other host applications.
 
+.Before you begin
+If the storage unit you want to delete is in a consistency group that is in replication relationship, you must link:../data-protection/manage-consistency-groups.html#remove-a-storage-unit-from-a-consistency-group[remove the storage unit from the consistency group] before you delete it.  
+
 .Steps
 
 . In System Manager, select *Storage*.
