@@ -14,4 +14,4 @@ After you prepare to install your ASA r2 storage system, install the hardware fo
 include::../_include/install_hardware_r2.adoc[]
 
 .What's next?
-After you've installed the hardware for your ASA r2 system, you link:cable-hardware.html[cable the hardware for your ASA r2 system].
+After you've installed the hardware for your ASA r2 system, you link:cable-hardware.html[cable the controllers and storage shelves for your ASA r2 system].

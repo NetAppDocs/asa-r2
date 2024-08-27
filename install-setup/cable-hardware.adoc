@@ -4,7 +4,7 @@ permalink: install-setup/cable-hardware.html
 keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a70, asa a90, asa c80, cable controllers
 summary: Learn how to attach the ASA r2 controller cables to your network and cable the controllers to the shelves. 
 ---
-= Cable the hardware for your ASA r2 storage system
+= Cable the controllers and storage shelves for your ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 
@@ -14,4 +14,4 @@ After you install the rack hardware for your ASA r2 storage system, install the 
 include::../_include/install_cable_r2.adoc[]
 
 .What's next?
-After you've cabled the hardware for your ASA r2 system, you link:power-on-hardware.html[power on the ASA r2 storage system].
+After you've connected the storage controllers to your network and then connected the controllers to your storage shelves, you link:power-on-hardware.html[power on the ASA r2 storage system].
