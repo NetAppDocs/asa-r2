@@ -56,7 +56,16 @@ a| Create a new QoS policy
 a|
 .. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select *Define new policy*.
-.. Enter the policy parameters; then select *Add*.
+.. Enter a name for the new QoS policy.
+.. Set a Qos limit, a QoS guarantee, or both.
+... Optionally, under *Limit*, enter a maximum throughput limit, a maximum IOPS limit, or both.
++
+Setting maximum throughput and IOPS for a storage unit restricts its impact on system resources so that it does not degrade the performance of critical workloads.
+... Optionally, under *Guarantee*, enter a minimum throughput, a minimum IOPS, or both.
++
+Setting minimum throughput and IOPS for a storage unit guarantees that it meets minimum performance targets regardless of demand by competing workloads. 
+
+.. Select *Add*.
 
 a| Add a new SCSI host
 a|
@@ -175,7 +184,7 @@ Your NVMe hosts are added to your ASA r2 system and you are ready to map your ho
 
 // end tabbed area
 
-== Create host groups on the ASA r2
+== Create host groups
 
 On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then enabled to mount (create directories and file structures on) the storage unit.
 
