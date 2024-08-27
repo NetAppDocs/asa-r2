@@ -184,7 +184,7 @@ Your NVMe hosts are added to your ASA r2 system and you are ready to map your ho
 
 // end tabbed area
 
-== Create host groups on the ASA r2
+== Create host groups
 
 On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then enabled to mount (create directories and file structures on) the storage unit.
 
