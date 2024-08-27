@@ -21,13 +21,13 @@ Modify the hosts that are mapped to a storage unit to assist in balancing worklo
 .Modify QoS policy
 Quality of service (QoS) policies are used to guarantee that the performance of critical workloads is not degraded by competing workloads. You can use QoS policies to set a QoS throughput _limit_ and a QoS throughput _guarantee_.  
 
-* Throughput limit
+* QoS throughput limit
 +
-The throughput _limit_ restricts the impact of a workload on system resources by limiting the throughput for the workload to a maximum number of IOPS or MBps, or IOPS and MBps. 
+The QoS throughput _limit_ restricts the impact of a workload on system resources by limiting the throughput for the workload to a maximum number of IOPS or MBps, or IOPS and MBps. 
 
-* Throughput guarantee
+* QoS throughput guarantee
 +
-The throughput _guarantee_ ensures that critical workloads meet minimum throughput targets, regardless of demand by competing workloads, by guaranteeing that the throughput for the critical workload does not fall below a minimum number of IOPS or MBps, or IOPS and MBps. 
+The QoS throughput _guarantee_ ensures that critical workloads meet minimum throughput targets, regardless of demand by competing workloads, by guaranteeing that the throughput for the critical workload does not fall below a minimum number of IOPS or MBps, or IOPS and MBps. 
 
 .Steps
 
