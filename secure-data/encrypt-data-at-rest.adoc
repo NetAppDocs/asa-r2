@@ -37,7 +37,7 @@ a|
 | Configure an external key manager
 a|
 .. Select *External key manager* to add the key servers.
-.. Select image:icon_add.gif[a blue plus sign followed by the word add].
+.. Select image:icon_add.gif[a blue plus sign followed by the word add] to add the key servers.
 .. Add the KMIP server CA certificates.
 .. Add the KMIP client certificates. 
 
