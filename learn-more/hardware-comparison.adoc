@@ -9,15 +9,15 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-NetApp All-SAN Arrays (ASAs) and NetApp ASA r2s are both all-flash SAN-only solutions built on proven AFF NetApp platforms.  
+NetApp All-SAN Array (ASA) systems and NetApp ASA r2 systems are both all-flash SAN-only solutions built on proven AFF NetApp platforms.  
 
-The ASA offers hardware support that is optimized for SAN-only solutions.  The ASA r2 offers optimization of hardware and software.  On the ASA r2, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions.  For example, System Manager running on an ASA r2 does not display options necessary to create home directories for NAS clients. ONTAP commands and REST API endpoints are also unavailable or limited for such features and functions.   
+ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software.  On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions.  For example, System Manager running on an ASA r2 system does not display options necessary to create home directories for NAS clients. ONTAP commands and REST API endpoints are also unavailable or limited for such features and functions.   
 
-ASAs and ASA r2s both use a symmetric active-active architecture for multipathing.  All paths are active/optimized so that in the event of a storage failover, the host does not need to wait for the ALUA transition of the failover paths to resume I/O.
+ASA systems and ASA r2 systems both use a symmetric active-active architecture for multipathing.  All paths are active/optimized so that in the event of a storage failover, the host does not need to wait for the ALUA transition of the failover paths to resume I/O.
 
-ASA r2 offers a single HA pair deployment.  Because there are only two nodes in the cluster, path reduction using Selective LUN Mapping (SLM) is not needed and therefore is not supported.
+ASA r2 systems offers a single HA pair deployment.  Because there are only two nodes in the cluster, path reduction using Selective LUN Mapping (SLM) is not needed and therefore is not supported.
 
 .For more information
 
-* See full configuration support and limitations for ASAs and ASA r2s in link:hwu.netapp.com[NetApp Hardware Universe^].
+* See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].

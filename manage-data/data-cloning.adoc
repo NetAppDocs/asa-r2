@@ -12,10 +12,10 @@ summary: Clone storage units and consistency groups on the ASA r2 to create data
 :imagesdir: ../media/
 
 [.lead]
-Data cloning creates copies of your ASA r2 storage units and consistency groups that can be used for application development, testing, backups, data migration or other administrative functions.
+Data cloning creates copies of storage units and consistency groups on your ASA r2 system that can be used for application development, testing, backups, data migration or other administrative functions.
 
 == Clone storage units
-When you clone a storage unit, you create a new storage unit on your ASA r2 that is a point-in-time, writable copy of the storage unit you cloned. 
+When you clone a storage unit, you create a new storage unit on your ASA r2 system that is a point-in-time, writable copy of the storage unit you cloned. 
 
 .Steps
 
@@ -68,7 +68,7 @@ The clone is created from a snapshot of the consistency group being cloned.  The
 
 Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
 
-You can create clones from consistency groups stored locally on your ASA r2 or from consistency groups that have been replicated to remote locations. 
+You can create clones from consistency groups stored locally on your ASA r2 system or from consistency groups that have been replicated to remote locations. 
 
 // start tabbed area
 
@@ -127,7 +127,7 @@ a|
 . Select the snapshot to clone; then select *Clone*.
 
 .What's next?
-You have cloned a consistency group from your remote location. The new consistency group is locally available on your ASA r2 to use as needed.
+You have cloned a consistency group from your remote location. The new consistency group is locally available on your ASA r2 system to use as needed.
 --
 ====
 // end tabbed area

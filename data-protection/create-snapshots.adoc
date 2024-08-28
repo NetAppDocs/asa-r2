@@ -10,7 +10,7 @@ summary: To protect data on the ASA r2, you need to create a consistency group a
 
 [.lead]
 
-To protect data on the ASA r2, you need to create a snapshot. You can create a manual snapshot of a single storage unit or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+To protect data on your ASA r2 system, you need to create a snapshot. You can create a manual snapshot of a single storage unit or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 

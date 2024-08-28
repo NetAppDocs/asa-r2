@@ -15,9 +15,9 @@ You can choose to add host initiators and map them to your storage unit during t
 
 == Create storage units
 
-In ASA r2, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
+On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
-See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current ASA r2 storage limits.
+See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
 
 Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the units are created.
 
@@ -107,7 +107,7 @@ The host NQN should be formatted as <nqn.yyyy-mm.> followed by a fully qualified
 
 .What's next?
 
-Your storage units are created and mapped to your hosts. You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
+Your storage units are created and mapped to your hosts. You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
 
 .For more information
 
@@ -221,7 +221,7 @@ Your storage unit is mapped to your hosts and you are ready to complete the prov
 
 == Complete host-side provisioning
 
-After you have created your storage units, added your host initiators and mapped your storage units, there are steps you must perform on your hosts before they can read and write data on your ASA r2.
+After you have created your storage units, added your host initiators and mapped your storage units, there are steps you must perform on your hosts before they can read and write data on your ASA r2 system.
 
 .Steps
 
@@ -234,7 +234,7 @@ Use one zone per initiator and include all target ports in each zone.
 
 .What's next?
 
-You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2.
+You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
 
 .For more information
 

@@ -24,7 +24,7 @@ indexpage:
           url: /data-protection/snapshot-replication.html  
         - title: Encrypt data at rest
           url: /secure-data/encrypt-data-at-rest.html                                              
-    - title: More ASA r2 resources
+    - title: More resources for ASA r2 systems
       links:
         - title: ASA datasheet 
           url: https://www.netapp.com/data-storage/all-flash-san-storage-array/

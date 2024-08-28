@@ -59,7 +59,7 @@ The `http` and `ontapi` applications are used by the following web services: Ser
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Under *Security*, next to SAML authentication, select image:icon_gear_white_bg.png[blue outline of a mechanical gear] .
+. Under *Security*, next to *SAML authentication*, select image:icon_gear_white_bg.png[blue outline of a mechanical gear] .
 . Select *Enable SAML authentication*.
 . Enter the IdP URL and the host system IP address; then select *Save*.
 +
