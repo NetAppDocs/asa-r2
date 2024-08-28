@@ -10,6 +10,8 @@ summary:
 
 [.lead]
 
+You can use System Manager to perform basic storage network administration on your ASA r2 system, for example, you can add a broadcast domain or reassign ports to a different broadcast domain.
+
 == Add a broadcast domain
 
 Use broadcast domains to simplify management of your cluster network by grouping network ports that belong to the same layer 2 network.  Storage virtual machines (VMs) can then use the ports in the group for data or management traffic.

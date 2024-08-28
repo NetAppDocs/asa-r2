@@ -35,7 +35,7 @@ Now that you have created an IPspace, you can use it to create a subnet.
 
 == Create subnets
 
-A subnet allows you to allocate specific blocks of IPv4 addresses to use when you create a LIF (network interface) . A subnet simplifies LIF creation by allowing you to specify the subnet name instead of a specific IP address and network mask for each LIF.
+A subnet allows you to allocate specific blocks of IPv4 or IPv6 addresses to use when you create a LIF (network interface) . A subnet simplifies LIF creation by allowing you to specify the subnet name instead of a specific IP address and network mask for each LIF.
 
 .Before you begin
 * You must be a cluster administrator to perform this task.

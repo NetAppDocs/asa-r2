@@ -35,5 +35,5 @@ entries:
     url: "/secure-data/encrypt-data-at-rest.html"
   - title: Protect against ransomware attacks
     url: "/secure-data/ransomware-protection.html" 
-  - title: Secure NVMe/TCP connections
+  - title: Secure NVMe connections
     url: "/secure-data/nvme-tcp-connections.html"   

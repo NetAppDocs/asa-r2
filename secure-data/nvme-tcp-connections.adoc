@@ -4,12 +4,12 @@ permalink: secure-data/nvme-tcp-connections.html
 keywords: asa r2, secure data, data security, encrypt, data at rest, data-at-rest, encryption
 summary: Enhance your data security by configuring NVMe/TCP over TLS to encrypt all data sent over the network between your NVMe/TCP host and ONTAP.
 ---
-= Secure NVMe/TCP connections with encryption on the ASA r2
+= Secure NVMe connections on your ASA r2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you are using the NVMe/TCP protocol, you can enhance your data security by configuring NVMe/TCP over TLS to encrypt all data sent over the network between your NVMe/TCP hosts and your ASA r2.
+If you are using the NVMe protocol, you can configure in-band authentication to enhance your data security.  In-band authentication allows secure bidirectional and unidirectional authentication between your NVMe hosts and your ASA r2 system. In-band authentication is available for all NVMe hosts.  If you are using the NVMe/TCP protocol, you can further enhance your data security by configuring transport layer security (TLS) to encrypt all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
 
 .Steps
 
@@ -19,7 +19,5 @@ If you are using the NVMe/TCP protocol, you can enhance your data security by co
 . Enter a host description; then select the storage VM to connect to the host.
 . Select image:icon_dropdown_arrow.gif[blue downward facing arrow] next to the host name.
 . Select *In-band authentication*.
-+
-In-band authentication allows secure bidirectional and unidirectional authentication between your NVMe host and your ASA r2.
-. Select *Require Transport Layer Security (TLS)*.
+. If you are using the NVMe/TCP protocol, select *Require Transport Layer Security (TLS)*.
 . Select *Add*.
