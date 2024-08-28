@@ -79,24 +79,81 @@ Learn more about link:../administer/manage-client-vm-access.html[storage VMs for
 
 A snapshot replication relationship establishes a connection between your ASA r2 and a remote location so that you can replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration. 
 
+For protection against ransomware attacks, when you set up your replication relationship, you can select to lock the destination snapshots. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is compromised by a ransomware attack.
+
 .Before you begin
 
-If you want to create tamper-proof snapshots to protect against ransomware attacks, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
+If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
 
+Create a replication relationship with or without locked destination snapshots.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.With locked snapshots
+--
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Select a consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Protect*.
+. Under *Remote protection*, select *Replicate to a remote cluster*.
+. Select the *Replication policy*.
++
+You must select a _vault_ replication policy.
+. Select *Destination settings*.
+. Select *Lock destination snapshots to prevent deletion*
+. Enter the maximum and minimum data retention period.
+. To delay the start of the data transfer, deselect *Start transfer immediately*.
++ 
+The initial data transfer begins immediately by default.  
+. Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
+. Select *Save*. 
+--
+
+.Without locked snapshots
+--
 .Steps
 
 . In System Manager, select *Protection > Replication*.
+. Select to create the replication relationship with local destination or local source.
+
+[cols="2,2" options="header"]
+|===
+// header row
+| Option
+| Steps
+
+// first body row
+| Local destinations
+a| 
+. Select *Local destinations*, then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters].
+. Search for and select the source consistency group.
++
+The _source_ consistency group refers to the consistency group on your ASA r2 that you want to replicate.
+
+| Local sources
+a| 
 . Select *Local sources*, then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Search for and select the source consistency group.
 +
 The _source_ consistency group refers to the consistency group on your ASA r2 that you want to replicate.
 . Under *Replication destination*, select the cluster to replicate to; then select the storage VM.
-. Select the replication policy.
-+
-The initial data transfer begins immediately by default.  To delay the start of the data transfer, select *Destination settings*, then deselect *Start transfer immediately*.
-. Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
 
+// table end
+|====
+
+. Select a replication policy.
+. To delay the start of the data transfer, select *Destination settings*; then deselect *Start transfer immediately*.
++ 
+The initial data transfer begins immediately by default.  
+. Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
 . Select *Save*. 
+
+--
+====
 
 .What's next?
 
