@@ -4,7 +4,7 @@ permalink: release-notes/whats-new-9160.html
 keywords: 
 summary:  
 ---
-= What's new in ONTAP 9.16.0 for ASA r2
+= What's new in ONTAP 9.16.0 for ASA r2 systems
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -12,6 +12,6 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-Learn about the new capabilities available in ONTAP 9.16.10 for ASA r2.
+Learn about the new capabilities available in ONTAP 9.16.10 for ASA r2 systems.
 
 

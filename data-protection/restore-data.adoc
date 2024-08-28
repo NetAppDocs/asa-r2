@@ -73,6 +73,6 @@ The storage unit details page opens.
 
 .For more information
 
-Learn to link:create-snapshots.html[protect data on your ASA r2 using snapshots].
+Learn to link:create-snapshots.html[protect data on your ASA r2 system using snapshots].
 
 // ONTAPDOC 1927, 2024 Sept 24

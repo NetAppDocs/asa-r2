@@ -93,5 +93,5 @@ a|
 ActiveIQ Config Advisor is a tool for NetApp systems that checks for common configuration errors.  
 
 .What's next?
-You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.
+You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2 system.
 
