@@ -110,6 +110,8 @@ You must select a _vault_ replication policy.
 + 
 The initial data transfer begins immediately by default.  
 . Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
++
+Your transfer schedule must be a minimum of 30 minutes to be supported.
 . Select *Save*. 
 --
 
@@ -150,6 +152,8 @@ The _source_ consistency group refers to the consistency group on your local clu
 + 
 The initial data transfer begins immediately by default.  
 . Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
++
+Your transfer schedule must be a minimum of 30 minutes to be supported.
 . Select *Save*. 
 
 --
