@@ -1,7 +1,7 @@
 section: get-started
-title: Get Started
+title: Get started
 entries:
-- title: Learn about ASA r2
+- title: Learn about your ASA r2 system
   url: "/get-started/learn-about.html"
 - title: Quick start
   url: "/get-started/quick-start.html"
