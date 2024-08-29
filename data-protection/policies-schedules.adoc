@@ -9,7 +9,7 @@ summary: Use data protection policies and schedules to protect data on an automa
 :imagesdir: ../media/
 
 [.lead]
-Use snapshot policies to protect data in your consistency groups on an automated schedule. Use protection policy schedules within snapshot policies to determine how often snapshots are taken.
+Use snapshot policies to protect data in your consistency groups on an automated schedule. Use policy schedules within snapshot policies to determine how often snapshots are taken.
 
 == Create a new protection policy schedule
 
@@ -26,7 +26,7 @@ Defining various protection policy schedules gives you the flexibility to increa
 
 .What's next?
 
-Now that you have created a new snapshot policy schedule, you can use the newly created schedule within your snapshot policies to define when snapshots are taken. 
+Now that you have created a new policy schedule, you can use the newly created schedule within your policies to define when snapshots are taken. 
 
 == Create a snapshot policy
 
@@ -58,7 +58,7 @@ Apply a snapshot policy to a consistency group to automatically create, retain, 
 . Select the consistency groups to which you want to apply the snapshot policy; then select *Apply*.
 
 .What's next?
-Now that your data is protect with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
+Now that your data is protect with snapshots, you should link:snapshot-replication.html#step-3-create-a-replication-relationship[set up a replication relationships] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
 == Edit, delete, or disable a snapshot policy 
 

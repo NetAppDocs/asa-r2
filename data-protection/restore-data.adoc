@@ -45,8 +45,8 @@ The consistency group details page opens.
 . Select *Local destinations*.
 . Select the *Source* you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore*.
-. Select the consistency group containing the data you want to restore.
-. Select the snapshot you want to restore; 
+. Select the cluster, storage VM, and consistency group to which you want to restore data.
+. Select the snapshot you want to restore from. 
 . Type "restore"; then select *Restore*.
 
 --
@@ -73,6 +73,6 @@ The storage unit details page opens.
 
 .For more information
 
-Learn to link:create-snapshots.html[protect data on your ASA r2 using snapshots].
+Learn to link:create-snapshots.html[protect data on your ASA r2 system using snapshots].
 
 // ONTAPDOC 1927, 2024 Sept 24

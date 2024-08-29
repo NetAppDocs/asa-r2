@@ -13,7 +13,7 @@ For protection against ransomware attacks, replicate snapshots to a remote clust
 
 == Initialize the Snaplock compliance clock
 
-If you want to create tamper-proof snapshots to protect against ransomware attacks, you must initialize the Snapshot compliance clock before you create the replication relationship.
+Before you can create tamper-proof snapshots, you must initialize the Snaplock compliance clock on your local and destination cluster.
 
 .Steps
 
@@ -24,6 +24,6 @@ If you want to create tamper-proof snapshots to protect against ransomware attac
 .. Select *Cluster > Overview*.   
 .. In the *Nodes* section, select image:icon_show_hide.png[three blue columns on white background]; then select *SnapLock Compliance Clock*.
 
-.What’s next
+.What’s next?
 
-link:../data-protection/snapshot-replication.html[Create a replication relationship and lock replicated snapshots].
+After you have initialized the Snaplock compliance clock on your local and destination cluster, you are ready to  link:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship[create a replication relationship with locked snapshots].

@@ -10,9 +10,9 @@ summary:
 
 [.lead]
 
-Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2 uses a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availiabity zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.
+Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2 systems use a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availiabity zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.
 
-Because of this simplified approach to storage management, `storage aggregate` commands are not supported on the ASA r2.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
+Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
 
 The following commands and command sets are not supported on ASA on r2:
 
@@ -223,4 +223,4 @@ Cluster time-service ntp show
 . Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
 
 .What's next?
-You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2.
+You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your system.

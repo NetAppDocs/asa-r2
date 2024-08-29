@@ -10,7 +10,7 @@ summary: To protect data on the ASA r2, you need to create a consistency group a
 
 [.lead]
 
-To protect data on the ASA r2, you need to create a snapshot. You can create a manual snapshot of a single storage unit or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+To protect data on your ASA r2 system, you need to create a snapshot. You can create a manual snapshot of a single storage unit or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 
@@ -97,6 +97,8 @@ Create a snapshot of a consistency group or a storage unit.
 Local protection creates the snapshot on the same cluster containing the storage unit. 
 +
 .. Enter a name for the snapshot or accept the default name; then optionally, enter a SnapMirror label.
++
+The SnapMirror label is used by the remote destination.
 
 . If you want to create automated snapshots using a snapshot policy, select *Schedule snapshots*.
 .. Select a snapshot policy.
@@ -140,6 +142,8 @@ The initial data transfer for replication starts immediately by default.
 Local protection creates the snapshot on the same cluster containing the storage unit. 
 +
 . Enter a name for the snapshot or accept the default name; then optionally, enter a SnapMirror label.
++
+The SnapMirror label is used by the remote destination.
 . If you want to create automated snapshots using a snapshot policy, select *Schedule snapshots*.
 .. Select a snapshot policy.
 +

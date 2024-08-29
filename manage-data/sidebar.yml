@@ -7,8 +7,6 @@ entries:
   entries:
   - title: Provision storage
     url: "/manage-data/provision-san-storage.html"
-  - title: Create host groups 
-    url: "/manage-data/create-host-groups.html"  
   - title: Clone data
     url: "/manage-data/data-cloning.html"  
   - title: Modify storage units
@@ -37,5 +35,5 @@ entries:
     url: "/secure-data/encrypt-data-at-rest.html"
   - title: Protect against ransomware attacks
     url: "/secure-data/ransomware-protection.html" 
-  - title: Secure NVMe/TCP connections
+  - title: Secure NVMe connections
     url: "/secure-data/nvme-tcp-connections.html"   

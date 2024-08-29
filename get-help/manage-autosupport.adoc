@@ -29,7 +29,7 @@ After you have set up your cluster, you should test your AutoSupport connectivit
 
 .What's next?
 
-Your have verified that technical support can receive AutoSupport messages from your ASA r2 and will have data needed to assist you should you experience a problem.
+Your have verified that technical support can receive AutoSupport messages from your ASA r2 system and will have data needed to assist you should you experience a problem.
 
 == Add AutoSupport recipients
 
@@ -52,7 +52,7 @@ The email addresses you have added will receive new AutoSupport messages for the
 
 == Send AutoSupport data
 
-Should a problem occur on your ASA r2, AutoSupport data can significantly decrease the time it takes to identify and resolve issues.
+Should a problem occur on your ASA r2 system, AutoSupport data can significantly decrease the time it takes to identify and resolve issues.
 
 .Steps
 
@@ -66,7 +66,7 @@ Your AutoSupport data is sent to technical support.
 
 == Suppress support case generation
 
-If you are performing an upgrade or maintenance on your ASA r2, you might want to suppress AutoSupport generation of support cases until your upgrade or maintenance is complete.
+If you are performing an upgrade or maintenance on your ASA r2 system, you might want to suppress AutoSupport generation of support cases until your upgrade or maintenance is complete.
 
 .Steps
 

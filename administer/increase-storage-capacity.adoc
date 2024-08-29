@@ -9,7 +9,7 @@ summary: Add drives to a node or shelf to increase the capacity of your ASA r2 s
 :imagesdir: ../media/
 
 [.lead]
-Add drives to a node or shelf to increase the storage capacity of your ASA r2. 
+Add drives to a node or shelf to increase the storage capacity of your ASA r2 system. 
 
 == Use NetApp Hardware Universe to prepare for installation of a new drive
 
