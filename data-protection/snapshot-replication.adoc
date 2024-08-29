@@ -119,7 +119,7 @@ The initial data transfer begins immediately by default.
 
 . In System Manager, select *Protection > Replication*.
 . Select to create the replication relationship with local destination or local source.
-
++
 [cols="2,2" options="header"]
 |===
 // header row
@@ -143,7 +143,7 @@ The _source_ consistency group refers to the consistency group on your local clu
 . Under *Replication destination*, select the cluster to replicate to; then select the storage VM.
 
 // table end
-|====
+|===
 
 . Select a replication policy.
 . To delay the start of the data transfer, select *Destination settings*; then deselect *Start transfer immediately*.
