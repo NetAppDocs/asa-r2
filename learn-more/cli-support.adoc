@@ -123,6 +123,15 @@ This command is not available when used in conjunction with the following parame
 ====
 // End snippet
 
+.Unsupported storage commands
+
+* `storage failover show-takeover`
+* `storage failover show-giveback`
+* `storage aggregate relocation`
+* `storage disk assign`
+* `storage disk partition`
+* `storage disk reassign`
+
 .For more information
 
 See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] for a full list of supported commands
