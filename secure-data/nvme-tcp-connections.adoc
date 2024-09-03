@@ -21,3 +21,7 @@ If you are using the NVMe protocol, you can configure in-band authentication to 
 . Select *In-band authentication*.
 . If you are using the NVMe/TCP protocol, select *Require Transport Layer Security (TLS)*.
 . Select *Add*.
+
+.Result
+
+The security of your data is enhanced with in-band authentication and/or TLS.

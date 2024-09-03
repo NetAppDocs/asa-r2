@@ -70,6 +70,10 @@ Edit a snapshot policy to modify the policy name, maximum number of snapshots or
 . Hover over the name of the snapshot policy you want to edit.  
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*, *Delete*, or *Disable*.
 
+.Result
+
+You have modified, deleted or disabled the snapshot policy.
+
 == Edit a replication policy
 
 Edit a replication policy to modify the policy description, transfer schedule, and rules.  You can also edit the policy to enable or disable network compression.
@@ -82,7 +86,9 @@ Edit a replication policy to modify the policy description, transfer schedule, a
 . Select *Edit*.
 . Update the policy; then select *Save*.
 
+.Result
 
+You have modified the replication policy.
 
 
 // ONTAPDOC 1927, 2024 Sept 24

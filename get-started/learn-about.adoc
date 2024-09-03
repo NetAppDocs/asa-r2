@@ -12,7 +12,7 @@ summary:
 
 The new NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
-ASA r2 systems support a single HA-pair deployment using a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  All SAN protocols (iSCSI, FC, NVMe/FC and NVMe/TCP) are supported.
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP) on a single HA-pair deployment.  SCSI protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  NVMe protocols support direct paths between the hosts and storage. 
 
 On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing visibility of features and functions not supported in SAN environments.  
 

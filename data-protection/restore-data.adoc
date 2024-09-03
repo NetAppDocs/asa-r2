@@ -55,6 +55,11 @@ The consistency group details page opens.
 
 // end tabbed area
 
+.Result
+
+Your consistency group is restored to the point in time of the snapshot used for restoration.
+
+
 == Restore a storage unit
 
 Restoring a storage unit replaces all the data in the storage unit with the data from a snapshot.  Any changes made to the storage unit after the date of the snapshot is not restored.
@@ -71,8 +76,7 @@ The storage unit details page opens.
 . Select *Use this snapshot to restore the storage unit*; then select *Restore*.
 
 
-.For more information
+.Result
 
-Learn to link:create-snapshots.html[protect data on your ASA r2 system using snapshots].
-
+Your storage unit is restored to the point in time of the snapshot used for restoration.
 // ONTAPDOC 1927, 2024 Sept 24

@@ -22,6 +22,10 @@ Before you install a new drive to a node or shelf, use NetApp Hardware Universe 
 . Select your ASA r2 platform.
 . Select your ONTAP version; then select *Show Results*.
 . Beneath the graphic, select *Click here to see alternative views*; then choose the view that matches your configuration.
+. Use the view of your configuration to confirm that your new drive is supported and the correct slot for installation.
+
+.Result
+You have confirmed that your new drive is supported and you know the appropriate slot for installation.
 
 == Install a new drive on the ASA r2
 
