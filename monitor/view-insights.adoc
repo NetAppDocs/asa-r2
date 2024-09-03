@@ -18,7 +18,11 @@ image:insights.png[screenshot of system manager insights page]
 .Steps
 
 . In System Manager, select *Insights*.
-. Review recommendations and perform corrective actions.
+. Review recommendations.
+
+.What's next
+
+Perform any necessary actions to implement best practices and optimize your cluster security and performance.
 
 
 

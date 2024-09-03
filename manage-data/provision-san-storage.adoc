@@ -9,7 +9,7 @@ summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hos
 :imagesdir: ../media/
 
 [.lead]
-When you provision storage, you ensure that your SAN hosts can read from and write data to ASA r2 storage systems. To provision storage, you use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also need to perform steps on the host to enable read/write operations.
+When you provision storage, you enable your SAN hosts to read from and write data to ASA r2 storage systems. To provision storage, you use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also need to perform steps on the host to enable read/write operations.
 
 You can choose to add host initiators and map them to your storage unit during the storage unit creation process, or you can optionally choose to add your host initiators, then create and map your storage units.  New host initiators can be added and mapped to existing storage units at any time.
 
@@ -19,7 +19,7 @@ On an ASA r2 system, a storage unit makes storage space available to your SAN ho
 
 See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
 
-Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the units are created.
+Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the storage units are created.
 
 .Steps
 
@@ -33,9 +33,9 @@ If you create more than one storage unit, each unit is created with the same cap
 
 . Enter the storage unit capacity; then select the host operating system.
 
-. Accept the auto-selected host mapping or select a different host group for the storage unit to map to.
+. Accept the auto-selected *host mapping* or select a different host group for the storage unit to be mapped to.
 +
-*Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, that pre-existing host group is auto-select for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
+*Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-select for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
 +
 If there is no pre-existing host group for hosts running on the operating system you specified, a new host group is automatically created by ONTAP.
 
@@ -62,10 +62,10 @@ a|
 .. Set a Qos limit, a QoS guarantee, or both.
 ... Optionally, under *Limit*, enter a maximum throughput limit, a maximum IOPS limit, or both.
 +
-Setting maximum throughput and IOPS for a storage unit restricts its impact on system resources so that it does not degrade the performance of critical workloads.
+Setting a maximum throughput and IOPS for a storage unit restricts its impact on system resources so that it does not degrade the performance of critical workloads.
 ... Optionally, under *Guarantee*, enter a minimum throughput, a minimum IOPS, or both.
 +
-Setting minimum throughput and IOPS for a storage unit guarantees that it meets minimum performance targets regardless of demand by competing workloads. 
+Setting a minimum throughput and IOPS for a storage unit guarantees that it meets minimum performance targets regardless of demand by competing workloads. 
 
 .. Select *Add*.
 
@@ -95,10 +95,14 @@ a|
 .. Under *Host Mapping*, select *New NVMe subsystem*.
 .. Enter a name for the subsystem or accept the default name.
 .. Enter a name for the initiator.
-.. If you want to enable In-band authentication or TLS, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
-.. Select *+ Add initiator* to add more initiators.
+.. If you want to enable in-band authentication or Transport Layer Security (TLS), select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction]; then select your options.
 +
-The host NQN should be formatted as <nqn.yyyy-mm.> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
+In-band authentication allows secure bidirectional and unidirectional authentication between your NVMe hosts and your ASA r2 system.
++
+TLS encrypts all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
+.. Select *Add initiator* to add more initiators.
++
+The host NQN should be formatted as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
 
 // table end
 |===
@@ -116,6 +120,10 @@ Learn more about link:../administer/manage-client-vm-access.html[how ASA r2 syst
 == Add host initiators
 
 You can add new host initiators to your ASA r2 system at any time. Initiators make the hosts eligible to access storage units and perform data operations. 
+
+.Before you begin
+
+If you want to replicate the host configuration to a destination cluster during the process of adding your host initiators, your cluster must be in a replication relationship.  Optionally, you can link:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship[create a replication relationship] after your host is added.
 
 Add host initiators for SCSI or NVMe hosts.
 
@@ -185,7 +193,7 @@ Your NVMe hosts are added to your ASA r2 system and you are ready to map your ho
 
 == Create host groups
 
-On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then enabled to mount (create directories and file structures on) the storage unit.
+On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then able to mount (create directories and file structures on) the storage unit.
 
 Host groups are automatically or manually created when you create your storage units.  You can optionally use the following steps to create host groups before or after storage unit creation.
 
@@ -206,7 +214,7 @@ You have created a host group and you can now to map it to a storage unit.
 
 == Map the storage unit to a host
 
-After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. SCSI hosts can access only the storage units to which they are mapped. All NVMe hosts in an NVMe subsystem can access all storage units in the subsystem.
+After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. Storage units are mapped to hosts as part of the storage unit creation process.  You can also map existing storage units to new or existing hosts at any time.
 
 .Steps
 
@@ -234,7 +242,7 @@ Use one zone per initiator and include all target ports in each zone.
 
 .What's next?
 
-You have completed the provisioning process and are ready to begin serving data.  You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
+You have completed the provisioning process and are ready to begin serving data.  You can now link:../data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
 
 .For more information
 

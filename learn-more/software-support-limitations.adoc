@@ -11,7 +11,7 @@ summary:
 [.lead]
 While ASA r2 systems offers a wide range of support for SAN solutions, certain ONTAP software features are not supported.
 
-ASA r2 systems do not support the following:
+.ASA r2 systems do not support the following:
 
 * FabricPool 
 * MetroCluster 
@@ -21,7 +21,14 @@ ASA r2 systems do not support the following:
 * SnapMirror to Cloud
 * SnapMirror to non-ASA r2 systems
 
+.ASA r2 systems support the following:
+
+* Snaplock
+* Dual-layer encryption
+
 
 .For more information
 
-See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
+* See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
+* link:../secure-data/ransomware-protection.html[Learn how to lock snapshots] on your ASA r2 system.
+* link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.

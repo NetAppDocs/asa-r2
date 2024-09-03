@@ -56,4 +56,8 @@ Configure your system to send a notification to specific email addresses when th
 . Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters].
 . Enter the destination information; then select *Add*.
 
+.Result
+
+The email address you added will now receive the specified email notifications for cluster events and audit logs.
+
 // ONTAPDOC 1930, 2024 Sept 24

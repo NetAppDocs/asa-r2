@@ -48,7 +48,7 @@ a|
 a| Add a new host
 a|
 .. Under *Host mapping*, select *New hosts*.
-.. Enter the name new host name; then select *FC* or *iSCSI*.
+.. Enter the a name for the new host; then select *FC* or *iSCSI*.
 .. Select the host initiators from the list of existing initiators or select *Add* to add new initiators for the host.
 
 // table end
@@ -82,7 +82,7 @@ You can create clones from consistency groups stored locally on your ASA r2 syst
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want to clone.
 . Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
-. Enter a name for the new, cloned consistency group or accept the default name.
+. Enter a name for consistency group clone or accept the default name.
 . Select the host operating system.
 . If you want to dissociate the clone from the source consistency group and allocate disk space, select *Split clone*.
 . If you want to use an existing snapshot, create a new host group or add a new host for the clone, select *More Options*.

@@ -90,8 +90,11 @@ A LIF (network interface) is an IP address associated with a physical or logical
 
 . Select *Save*.
 
+.Result
 
-== Modify LIFs (network interfaces)
+You have created a LIF for data access.
+
+== Modify a LIF (network interfaces)
 
 LIFs can be disabled or renamed as needed.  You can also change the LIF IP address and subnet mask.
 
@@ -106,6 +109,10 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 . You can disable the network interface, rename the network interface, change the IP address, and change the subnet mask.
 
 . Select *Save*.
+
+.Result
+
+You LIF has been modified.
 
 
 

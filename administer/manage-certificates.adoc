@@ -26,6 +26,10 @@ Generate a certificate signing request (CSR) to create a private key which can b
 . If you want to change the GSR defaults, select extended key usage, or add subject alternative names, select image:icon_more_options.png[two arrows facing diagonally opposite directions followed by the words more options]; then make the desired updates.
 . Select *Generate*.
 
+.Result
+
+You have generated a CSR to which can be used to generate a public certificate.
+
 == Add a trusted certificate authority
 
 ONTAP provides a default set of trusted root certificates for applications using Transport Layer Security (TLS).  You can add addition trusted certificate authorities as needed.
@@ -36,6 +40,10 @@ ONTAP provides a default set of trusted root certificates for applications using
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
 . Select *Trusted certificate authorities*.
 . Enter or import the certificate details; then select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters].
+
+.Result
+
+You have added a new trusted certificate authority to your ASA r2 system.
 
 == Renew or delete a trusted certificate authority
 
@@ -66,6 +74,10 @@ a|
 // table end
 |===
 
+.Result
+
+You have renewed or deleted an existing trusted certificate authority on your ASA r2 system.
+
 == Add a client/server certificate or local certificate authorities
 
 Add a client/server certificate or local certificate authorities to enable secure web services.
@@ -76,6 +88,10 @@ Add a client/server certificate or local certificate authorities to enable secur
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
 . Select *Client/server certificates*, or *Local certificate authorities*.
 . Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].
+
+.Result
+
+You have added a new client/server certificate or local authorities to your ASA r2 system.
 
 == Renew or delete a client/server certificate or local certificate authorities
 
@@ -103,5 +119,7 @@ a|
 Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 |===
 
+.Result
 
+You have renewed or deleted an existing client/server certificate or local certificate authorities on your ASA r2 system.
 // ONTAPDOC 1930, 2024 Sept 24

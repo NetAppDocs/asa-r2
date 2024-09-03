@@ -13,12 +13,16 @@ Use System Manager to configure active directory domain controller access, LDAP 
 
 == Configure active directory domain controller access
 
-Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access.
+Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access. 
 
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
 . In the *Security* section, under *Active Directory*, select *Configure*.
+
+.What's next?
+
+You can now enable AD account access on your ASA r2 system.
 
 == Configure LDAP
 
@@ -33,6 +37,10 @@ You must have generated a certificate signing request and added a CA-signed serv
 . In System Manager, select *Cluster > Settings*.
 . In the *Security* section, next to *LDAP*, select image:icon_gear_white_bg.png[outline of a blue mechanical gear].
 . Enter the necessary LDAP server and binding information; then select *Save*.
+
+.What's next?
+
+You can now use LDAP for user information and authentication.
 
 == Configure SAML authentication
 
@@ -70,6 +78,10 @@ A confirmation window displays the metadata information, which has been automati
 +
 The IdP system will display an authentication screen.
 
+.What's next?
+
+You can now use SAML authentication for your user accounts.
+
 == Create user account roles
 
 Roles for cluster administrators and storage VM administrators are automatically created when your cluster is initialized. Create additional user account roles to define specific functions that users assigned to the roles can perform on your cluster.  
@@ -83,6 +95,10 @@ Roles for cluster administrators and storage VM administrators are automatically
 +
 To add multiple attributes, select image:icon_add.gif[plus sign followed by the word add in blue letters].
 . Select *Save*.
+
+.Result
+
+A new user account is created and available for use on your ASA r2 cluster.
 
 == Create an administrator account 
 
@@ -98,5 +114,9 @@ Create an administrator user account to enable the account user to perform speci
 . To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
 . Enter a password for the user.
 . Select *Save*.
+
+.Result
+
+A new administrator account is created and available for use on your ASA r2 cluster.
 
 // ONTAPDOC 1930, 2024 Sept 24

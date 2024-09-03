@@ -24,6 +24,10 @@ Recommended updates for storage firmware, SP/BMC firmware and system files are a
 . Select to acknowledge that your update modifications will be applied to all current and future updates.
 . Select *Save*.
 
+.Result
+
+Recommended updates are automatically downloaded and installed on your ASA r2 system based upon your update selections.
+
 == Disable automatic updates
 
 Disable automatic updates if you want the flexibility to view recommended updates before they are installed.  If you disable automatic updates, you need to perform firmware and system file updates manually. 
@@ -32,6 +36,10 @@ Disable automatic updates if you want the flexibility to view recommended update
 
 . In System Manager, select *Cluster > Settings*.
 . Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Disable*.
+
+.Result
+
+Automatic updates are disabled.  You should regularly check for recommended updates and decide if you want to perform a manual installation.
 
 == View automatic updates
 
@@ -53,6 +61,10 @@ You can select to have recommended updates for your storage firmware, SP/BMC fir
 . Update the selections for automatic updates.
 . Select *Save*.
 
+.Result
+
+Automatic updates are modified based on your selections.
+
 == Update firmware manually
 
 If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates and update your firmware manually.
@@ -62,5 +74,9 @@ If you want the flexibility of viewing recommended updates before they are downl
 . Download your firmware update file to a server or local client.
 . In System Manager, select *Cluster > Overview*, then select *Update*.
 . Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters].
+
+.Result
+
+Your firmware is updated.
 
 // ONTAPDOC 1930, 2024 Sept 24
