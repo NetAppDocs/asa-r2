@@ -9,7 +9,7 @@ summary: Monitor the performance of your cluster and storage units to determine 
 :imagesdir: ../media/
 
 [.lead]
-Monitor the overall performance of your cluster and the performance of specific storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  Performance can be monitored over various spans of time ranging from one hour to one year.  
+Use System Manager to monitor the overall performance of your cluster and the performance of specific storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  Performance can be monitored over various spans of time ranging from one hour to one year.  
 
 For example, suppose a critical application is experiencing high latency and low throughput.  You view cluster performance for the last 5 business days and notice a decrease in performance at the same time each day.  You use this information to determine that the critical application is competing for cluster resources when a non-critical process begins running in the background. You are then able to modify your QoS policy to limit the impact of the non-critical workload on system resources and to ensure that your critical workload meets minimum throughput targets.
 
