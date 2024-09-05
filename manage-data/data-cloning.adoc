@@ -12,7 +12,7 @@ summary: Clone storage units and consistency groups on the ASA r2 to create data
 :imagesdir: ../media/
 
 [.lead]
-Data cloning creates copies of storage units and consistency groups on your ASA r2 system that can be used for application development, testing, backups, data migration or other administrative functions.
+Data cloning creates copies of storage units and consistency groups on your ASA r2 system using System Manager that can be used for application development, testing, backups, data migration or other administrative functions.
 
 == Clone storage units
 When you clone a storage unit, you create a new storage unit on your ASA r2 system that is a point-in-time, writable copy of the storage unit you cloned. 

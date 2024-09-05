@@ -9,7 +9,7 @@ summary: Monitor your storage utilization to ensure you have the storage capacit
 :imagesdir: ../media/
 
 [.lead]
-Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
+Use System Manager to monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
 
 == Monitor cluster utilization
 

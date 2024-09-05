@@ -10,7 +10,7 @@ summary: Create a snapshot to protect data on your ASA r2 system. You can create
 
 [.lead]
 
-To protect data on your ASA r2 system, you need to create a snapshot. You can create a manual snapshot of a single storage unit, or you can create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+To protect data on your ASA r2 system, you need to create a snapshot. You can use System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 
