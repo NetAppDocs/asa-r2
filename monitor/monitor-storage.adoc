@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: monitor/monitor-storage.html
-keywords: 
-summary:
+keywords: monitor, storage, cluster, utilization, usage
+summary: Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
 ---
 = Monitor cluster and storage unit utilization on the ASA r2
 :icons: font

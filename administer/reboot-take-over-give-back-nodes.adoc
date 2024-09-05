@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: administer/reboot-take-over-give-back-nodes.html
-keywords: reboot, take over, give back, nodes
+keywords: reboot, take over, give back, nodes, asa r2
 summary: You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  
 ---
 = Reboot, take over, and give back nodes on the ASA r2
