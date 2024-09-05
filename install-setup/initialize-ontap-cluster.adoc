@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: install-setup/initialize-ontap-cluster.html
 keywords: asa r2, initialize cluster, set up cluster, ontap
-summary: Learn how to set up the ONTAP cluster on ASA r2 using System Manager. 
+summary: Learn how to set up the ONTAP cluster on an ASA r2 system using System Manager. 
 ---
 = Set up an ONTAP ASA r2 cluster
 :icons: font

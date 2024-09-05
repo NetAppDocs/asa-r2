@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: monitor/monitor-performance.html
-keywords: 
-summary:
+keywords: monitor, cluster, performance, storage units, latency, iops, throughput
+summary: Monitor the performance of your cluster and storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  
 ---
 = Monitor cluster and storage unit performance on the ASA r2
 :icons: font
