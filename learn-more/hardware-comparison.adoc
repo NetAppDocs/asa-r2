@@ -4,20 +4,69 @@ permalink: learn-more/hardware-comparison.html
 keywords: 
 summary: ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software. 
 ---
-= Compare NetApp ASA r2 and ASA
+= Compare ASA r2 systems to other NetApp systems 
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-NetApp All-SAN Array (ASA) systems and NetApp ASA r2 systems are both all-flash SAN-only solutions built on proven AFF NetApp platforms.  ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software.  
+NetApp All-SAN Array (ASA) r2 systems offer a unified hardware and software solution for SAN-only environments built on all flash platforms.
 
-On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions.  For example, System Manager running on an ASA r2 system does not display options necessary to create home directories for NAS clients. ONTAP commands and REST API endpoints are also unavailable or limited for such features and functions.   
+On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on all other NetApp systems (ASA, AFF, FAS) is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and in EMS messages where applicable. 
 
-ASA systems and ASA r2 systems both use a symmetric active-active architecture for multipathing with SCSI protocols.  All paths are active/optimized so that in the event of a storage failover, the host does not need to wait for the ALUA transition of the failover paths to resume I/O. For NVMe protocols ASA and ASA r2 systems support direct paths between the hosts and storage. 
+You can verify the personality of your ONTAP storage from System Manager or from the ONTAP CLI. 
 
-ASA r2 systems offers a single HA pair deployment.  Because there are only two nodes in the cluster, path reduction using Selective LUN Mapping (SLM) is not needed and therefore is not supported.
+* From the System Manager menu, select *Cluster > Overview*.
+* From the CLI, enter: `san config show`
+
+The storage layer for NetApp systems running the unified ONTAP personality uses aggregates as the base unit of storage.  An aggregate owns a specific set of the disks available in a storage system.  The aggregate allocates space on the disks it owns to volumes for LUNs and namespaces.  A unified ONTAP user can use the command line interface (CLI) to create and modify aggregates, volumes, LUNs and namespaces.  
+
+The storage layer in ASA r2 systems uses a storage availability zone instead of aggregates. A storage availability zone is a common pool of storage that has access to all available disks in the storage system. The storage availability zone is visible to both nodes in an ASA r2 HA pair. When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.  Because of this automated and simplified approach to storage management, certain System Manager options, ONTAP commands, and REST API endpoints are not available or have limited usage on an ASA r2 system.  For example, because volume creation and management is automated the *Volumes* menu does not appear in System Manager for ASA r2 systems and the `volume create` command is not supported.  
+
+ASA r2 storage compares to other NetApp storage systems in the following ways:
+
+[cols=5*,options="header",cols="1h,2,2,2,2"]
+|===
+a|
+a| ASA r2
+a| ASA
+a| AFF
+a| FAS
+
+a| *ONTAP personality*
+| ASA r2
+| ASA
+| Unified
+| Unified
+
+a| *SAN protocol support*
+| Yes
+| Yes
+| Yes
+| Yes
+
+a| *NAS protocol support*
+| No
+| Yes
+| Yes
+| Yes
+
+a| *Storage layer support*
+| Storage availability zone
+| Aggregates
+| Aggregates
+| Aggregates
+
+// table end
+|===
+
+The following ASA platforms are classified as ASA r2 systems:
+
+•	ASA A1K
+•	ASA A70
+•	ASA A90
 
 .For more information
 
+* Learn more about link:https://docs.netapp.com/us-en/ontap-systems-family/intro-family.html[ONTAP hardware systems^].
 * See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
-* Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
+* Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA^].
