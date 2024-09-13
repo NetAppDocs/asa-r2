@@ -16,14 +16,6 @@ ASA r2 systems support the following:
 [cols="1h, 1"]
 |===
 
-| Protocols
-a| 
-* FC
-* iSCSI
-* NVMe/FC
-* NVMe/TCP
-
-
 | Max nodes per cluster
 | 2
 
