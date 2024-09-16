@@ -4,7 +4,7 @@ permalink: secure-data/ransomware-protection.html
 keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection
 summary: Use tamper-proof snapshots to secure your data.  Tamper-proof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack. 
 ---
-= Protect against ransomware attacks on the ASA r2
+= Protect against ransomware attacks on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

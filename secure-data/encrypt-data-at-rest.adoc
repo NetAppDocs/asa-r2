@@ -4,7 +4,7 @@ permalink: secure-data/encrypt-data-at-rest.html
 keywords: asa r2, secure data, data security, encrypt, data at rest, data-at-rest, encryption
 summary: Encrypt data at rest so that it can’t be read if a disk is returned, lost or stolen.  Use hardware and software encryption to enable dual-layer protection. 
 ---
-= Encrypt data at rest on the ASA r2
+= Encrypt data at rest on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

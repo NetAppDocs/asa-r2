@@ -4,7 +4,7 @@ permalink: monitor/monitor-storage.html
 keywords: monitor, storage, cluster, utilization, usage
 summary: Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
 ---
-= Monitor cluster and storage unit utilization on the ASA r2
+= Monitor cluster and storage unit utilization on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

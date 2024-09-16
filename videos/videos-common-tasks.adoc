@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: videos/videos-common-tasks.html
+keywords: demo,asa r2, videos
+summary: View short videos that demonstrate how to use System Manager to quickly and easily perform common task on your ASA r2 storage systems.
+---
+= ASA r2 storage system video demonstrations
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+View short videos that demonstrate how to use System Manager to quickly and easily perform common task on your ASA r2 storage systems.
+
+== Configure SAN protocols on your ASA r2 system
+
+// Start snippet: Video hosted on Panopto
+// 2 placeholders: panopto-id and "Link text"
+video::7bb6d7de-5d2f-4fb9-acf8-b1ed013881ef[panopto, title="Configure SAN protocols on your ASA r2 system"]
+// End snippet
+
+== Provisioning SAN storage
+
+// Start snippet: Video hosted on Panopto
+// 2 placeholders: panopto-id and "Link text"
+video::af51c9ae-f785-4b31-98b6-b1ed0138817d[panopto, title="Provision SAN storage on your ASA r2 system"]
+// End snippet
+
+
+== Replicate data to a remote cluster
+
+// Start snippet: Video hosted on Panopto
+// 2 placeholders: panopto-id and "Link text"
+video::dba967f7-d5b6-4fd7-85bb-b1ed013881aa[panopto, title="Replicate data to a remote cluster"]
+// End snippet
+

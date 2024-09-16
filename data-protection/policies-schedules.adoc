@@ -4,7 +4,7 @@ permalink: data-protection/policies-schedules.html
 keywords: data protection, polices, schedules, protect data, snapshot policies, snapshot schedules, replication policies
 summary: Use data protection policies and schedules to protect data on an automated schedule.  
 ---
-= Manage ONTAP data protection policies and schedules on the ASA r2
+= Manage ONTAP data protection policies and schedules on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

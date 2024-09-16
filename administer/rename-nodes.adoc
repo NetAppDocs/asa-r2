@@ -4,7 +4,7 @@ permalink: administer/rename-nodes.html
 keywords: 
 summary:
 ---
-= Rename an ASA r2 node
+= Rename a node on an ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 

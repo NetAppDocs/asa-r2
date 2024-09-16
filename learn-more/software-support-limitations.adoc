@@ -4,7 +4,7 @@ permalink: learn-more/software-support-limitations.html
 keywords: 
 summary:
 ---
-= ONTAP software support and limitations for the ASA r2
+= ONTAP software support and limitations for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
@@ -20,6 +20,8 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 * S3 APIs
 * SnapMirror to Cloud
 * SnapMirror to non-ASA r2 systems
+* Selective LUN Map (SLM)
+* iSCSI LIF failover
 
 .ASA r2 systems support the following:
 

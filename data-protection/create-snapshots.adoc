@@ -4,7 +4,7 @@ permalink: data-protection/create-snapshots.html
 keywords: protect data, snapshots, asa r2, data protection, create snapshots, snapshots, create consistency groups, consistency groups
 summary: Create a snapshot to protect data on your ASA r2 system. You can create manual snapshots, or you can use a consistency group to schedule automatic snapshots.
 ---
-= Use snapshots to protect your data on the ASA r2
+= Use snapshots to protect your data on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

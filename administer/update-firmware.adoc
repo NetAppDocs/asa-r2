@@ -4,7 +4,7 @@ permalink: administer/update-firmware.html
 keywords: 
 summary:
 ---
-= Update firmware on the ASA r2
+= Update firmware on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
