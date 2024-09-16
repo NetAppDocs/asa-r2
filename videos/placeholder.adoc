@@ -16,14 +16,14 @@ summary:
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::panopto-id[7bb6d7de-5d2f-4fb9-acf8-b1ed013881ef, title="Configure SAN protocols on your ASA r2 system"]
+video::7bb6d7de-5d2f-4fb9-acf8-b1ed013881ef[panopto, title="Configure SAN protocols on your ASA r2 system"]
 // End snippet
 
 == Provisioning SAN storage
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::panopto-id[af51c9ae-f785-4b31-98b6-b1ed0138817d, title="Provision SAN storage on your ASA r2 system"]
+video::af51c9ae-f785-4b31-98b6-b1ed0138817d[panopto, title="Provision SAN storage on your ASA r2 system"]
 // End snippet
 
 
@@ -31,6 +31,6 @@ video::panopto-id[af51c9ae-f785-4b31-98b6-b1ed0138817d, title="Provision SAN sto
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::panopto-id[dba967f7-d5b6-4fd7-85bb-b1ed013881aa, title="Provision SAN storage on your ASA r2 system"]
+video::dba967f7-d5b6-4fd7-85bb-b1ed013881aa[panopto, title="Replicate data to a remote cluster"]
 // End snippet
 
