@@ -9,5 +9,5 @@ entries:
     url: "/learn-more/software-support-limitations.html"  
   - title: CLI support
     url: "/learn-more/cli-support.html"
-  - title: API support
-    url: "/learn-more/api-support.html"
+  - title: REST API support
+    url: "/learn-more/rest-api-support.html"
