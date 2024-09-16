@@ -4,8 +4,7 @@ permalink: learn-more/rest-api-support.html
 keywords: asa, asa r2, rest, rest api, asa r2 rest api
 summary: The ASA r2 REST API is based on the REST API provided with the unified ONTAP personality, with a number of changes adapted to the unique characteristics and capabilities of the ASA r2 personality.
 ---
-
-= REST API support for ASA r2 systems
+= ONTAP REST API support for ASA r2 systems
 :hardbreaks:
 :nofooter:
 :icons: font

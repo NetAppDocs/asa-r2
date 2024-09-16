@@ -4,7 +4,7 @@ permalink: learn-more/cli-support.html
 keywords: 
 summary:
 ---
-= ONTAP CLI support for the ASA r2
+= ONTAP CLI support for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

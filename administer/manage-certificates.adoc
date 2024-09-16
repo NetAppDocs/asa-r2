@@ -4,7 +4,7 @@ permalink: administer/manage-certificates.html
 keywords: asa r2, security, certificates, digital, certificate signing request, signing, request, trusted, authority, trusted certificate authority, client, server, local certificate, authorities, add, renew, delete, generate
 summary: Use digital security certificates to verify the identity of remote servers. 
 ---
-= Manage security certificates on the ASA r2
+= Manage security certificates on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

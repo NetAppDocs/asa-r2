@@ -4,7 +4,7 @@ permalink: data-protection/snapshot-replication.html
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication
 summary: Use System Manager to copy data to a remote location for backup and disaster recovery.  Set up requires creation of a replication policy and relationship. 
 ---
-= Set up Snapshot replication on the ASA r2
+= Set up Snapshot replication on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

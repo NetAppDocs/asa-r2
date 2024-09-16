@@ -4,7 +4,7 @@ permalink: learn-more/hardware-comparison.html
 keywords: 
 summary: ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software. 
 ---
-= Compare ASA r2 systems to other NetApp systems 
+= Comparison between ASA r2 systems to other NetApp systems 
 :icons: font
 :imagesdir: ../media/
 

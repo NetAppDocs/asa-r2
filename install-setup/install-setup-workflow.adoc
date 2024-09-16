@@ -4,7 +4,7 @@ permalink: install-setup/install-setup-workflow.html
 keywords: asa r2, install, setup, workflow
 summary: Get started with the install and setup of the ASA r2 storage system and deploy it as an HA pair in your ONTAP environment.
 ---
-= Installation and configuration workflow for ASA r2
+= Installation and setup workflow for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

@@ -4,7 +4,7 @@ permalink: administer/manage-client-vm-access.html
 keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface
 summary: Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration, and routing.
 ---
-= Manage client access to virtual machines on the ASA r2
+= Manage client access to storage VMs on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

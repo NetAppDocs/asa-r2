@@ -4,7 +4,7 @@ permalink: get-started/learn-about.html
 keywords: 
 summary: 
 ---
-= Learn about ASA r2
+= Learn about ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

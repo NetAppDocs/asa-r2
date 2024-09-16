@@ -4,7 +4,7 @@ permalink: monitor/view-events-jobs.html
 keywords: 
 summary:
 ---
-= View cluster events and jobs on the ASA r2
+= View cluster events and jobs on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

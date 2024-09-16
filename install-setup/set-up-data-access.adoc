@@ -4,7 +4,7 @@ permalink: install-setup/set-up-data-access.html
 keywords: 
 summary:  
 ---
-= Set up data access
+= Enable data access from SAN hosts to your ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 

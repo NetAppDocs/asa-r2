@@ -4,7 +4,7 @@ permalink: get-help/view-submit-support-case.html
 keywords: 
 summary:
 ---
-= Submit and view support cases for the ASA r2
+= Submit and view support cases for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

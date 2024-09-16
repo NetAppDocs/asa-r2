@@ -4,7 +4,7 @@ permalink: get-started/quick-start.html
 keywords: 
 summary: 
 ---
-= Quick start for ASA r2
+= Quick start for ASA r2 storage sytems
 :icons: font
 :imagesdir: ../media/
 

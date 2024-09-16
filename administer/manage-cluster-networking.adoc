@@ -4,7 +4,7 @@ permalink: administer/manage-cluster-networking.html
 keywords: add a broadcast domain, broadcast domains, reassign ports, create a vlan, create vlans
 summary: Use System Manager to perform basic storage network administration on your ASA r2 system
 ---
-= Manage cluster networking on the ASA r2
+= Manage cluster networking on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

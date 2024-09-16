@@ -4,7 +4,7 @@ permalink: manage-data/delete-storage-units.html
 keywords: delete lun, delete namespace, delete storage unit
 summary: Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications.
 ---
-= Delete storage units on the ASA r2
+= Delete storage units on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

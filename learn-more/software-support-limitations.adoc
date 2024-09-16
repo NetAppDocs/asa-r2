@@ -4,7 +4,7 @@ permalink: learn-more/software-support-limitations.html
 keywords: 
 summary:
 ---
-= ONTAP software support and limitations for the ASA r2
+= ONTAP software support and limitations for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
