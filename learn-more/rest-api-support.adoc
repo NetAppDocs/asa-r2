@@ -5,7 +5,7 @@ keywords: asa, asa r2, rest, rest api, asa r2 rest api
 summary: The ASA r2 REST API is based on the REST API provided with the unified ONTAP personality, with a number of changes adapted to the unique characteristics and capabilities of the ASA r2 personality.
 ---
 
-= REST API support for ASA r2
+= REST API support for ASA r2 systems
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,33 +15,12 @@ summary: The ASA r2 REST API is based on the REST API provided with the unified 
 [.lead]
 The ASA r2 REST API is based on the REST API provided with the unified ONTAP personality, with a number of changes adapted to the unique characteristics and capabilities of the ASA r2 personality.
 
-== Summary of ASA r2 changes
-
-There are several areas of the ASA r2 product that differ from unified ONTAP. Many of these differences impact the REST API and its use. The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the REST API are described below.
-
-// FS 8.6, 8.11; DG 1,2
-.Default SVM creation with protocol services
-The ASA r2 system is deployed in a homogenous two-node cluster with an active-active configuration. New clusters automatically contain a default data SVM with the SAN protocols enabled. The IP data LIFs use the `default-data-blocks` service policy by default, hosting both iSCSI and NVMe/TCP.
-
-// FS 8.1, 8.2; DG 4
-.Removal of aggregates and volumes
-ASA r2 systems do not enable direct management of aggregates and volumes. Creating a LUN or namespace automatically provisions a volume using balanced placement to determine the hosting sub-aggregate. Deleting a LUN or namespace automatically deletes the volume.
-
-// FS 8.1; DG 5
-.Changes to LUN and NVMe namespace naming
-Provisioning a LUN or NVMe namespace maps directly to a new volume. This results in a simplified and common namespace. The `/vol` prefix used in the path with unified ONTAP has been removed.
-
-// FS 8.10
-.New block volume resource
-A new block-volume endpoint has been added to the REST API for ASA r2 systems. The block-volume endpoint provides access to both LUN and NVMe namespace objects, enabling an aggregated view of the resources. This is only available through the REST API.
-
-// FS 8.4; DG 3
-.Changes to thin versus thick provisioning
-The virtual disks are always exposed to external hosts as thinly provisioned. Unlike the ASA and unified ONTAP personalities, there is no option to change this behavior.
-
 == Types of API changes
 
 There are several differences between the ASA r2 system REST API and the REST API available with FAS, AFF, and ASA systems. The changes generally fall into one of several categories. Understanding the types of changes will help you better utilize the online API reference documentation.
+
+.New block volume resource
+A new block-volume endpoint has been added to the REST API for ASA r2 systems. The block-volume endpoint provides access to both LUN and NVMe namespace objects, enabling an aggregated view of the resources. This is only available through the REST API.
 
 .New ASA r2 endpoints not supported in unified ONTAP
 Several endpoints have been added to the ASA r2 REST API which are not available with unified ONTAP. For example, *storage units* provides an aggregated view of the LUNs and NVMe namespaces. There are several endpoints and they're all based on or derived from `/api/storage/storage-units`. You should also review `/api/storage/luns` and `/api/storage/namespaces`.

@@ -70,3 +70,23 @@ The following ASA platforms are classified as ASA r2 systems:
 * Learn more about link:https://docs.netapp.com/us-en/ontap-systems-family/intro-family.html[ONTAP hardware systems^].
 * See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA^].
+
+==  Summary of ASA r2 system differences
+
+The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
+
+// FS 8.6, 8.11; DG 1,2
+.Default SVM creation with protocol services
+The ASA r2 system is deployed in a homogenous two-node cluster with an active-active configuration. New clusters automatically contain a default data SVM with the SAN protocols enabled. The IP data LIFs use the `default-data-blocks` service policy by default, hosting both iSCSI and NVMe/TCP.
+
+// FS 8.1, 8.2; DG 4
+.Removal of aggregates and volumes
+ASA r2 systems do not enable direct management of aggregates and volumes. Creating a LUN or namespace automatically provisions a volume using balanced placement to determine the hosting sub-aggregate. Deleting a LUN or namespace automatically deletes the volume.
+
+// FS 8.1; DG 5
+.Changes to LUN and NVMe namespace naming
+Provisioning a LUN or NVMe namespace maps directly to a new volume. This results in a simplified and common namespace. The `/vol` prefix used in the path with unified ONTAP has been removed.
+
+// FS 8.4; DG 3
+.Changes to thin versus thick provisioning
+The virtual disks are always exposed to external hosts as thinly provisioned. Unlike the ASA and unified ONTAP personalities, there is no option to change this behavior.
