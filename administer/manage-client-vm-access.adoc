@@ -69,6 +69,8 @@ You have created a subnet which you can now use to simplify the creation of your
 
 A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted.
 
+When an IP data LIFs is created is can service iSCSI and NVMe/TCP by default.  Separate data LIFs must be created for FC and NVMe/FC.
+
 .Before you begin
 
 * You must be a cluster administrator to perform this task

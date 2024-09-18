@@ -13,7 +13,9 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 
 .ASA r2 systems do not support the following:
 
-* FabricPool 
+* iSCSI LIF failover
+* FabricPool
+* LUN thick provisioning 
 * MetroCluster 
 * Object protocols
 * ONTAP S3 SnapMirror
@@ -21,7 +23,7 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 * SnapMirror to Cloud
 * SnapMirror to non-ASA r2 systems
 * Selective LUN Map (SLM)
-* iSCSI LIF failover
+
 
 .ASA r2 systems support the following:
 
