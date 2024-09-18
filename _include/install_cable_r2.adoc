@@ -19,7 +19,7 @@ These procedures show common configurations. The specific cabling depends on the
 [role="tabbed-block"]
 ====
 
-.ASA A1K storage system
+.ASA A1K
 --
 Connect your storage controllers to each other to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
 
@@ -75,7 +75,7 @@ IMPORTANT: Do not plug in the power cords yet.
 
 
 --
-.ASA A70 and ASA A90 storage systems
+.ASA A70 and ASA A90
 --
 Connect your storage controllers to each other to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
 
@@ -146,7 +146,7 @@ The following cabling procedures show how to connect your controllers to one she
 [role="tabbed-block"]
 ====
 
-.ASA A1K system
+.ASA A1K
 --
 Choose one of the following cabling options that matches your setup.
 
@@ -209,7 +209,7 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 // End snippet
 --
 
-.ASA A70 and A90 systems
+.ASA A70 and A90
 --
 Choose one of the following cabling options that matches your setup.
 
