@@ -14,16 +14,16 @@ View short videos that demonstrate how to use ONTAP System Manager to quickly an
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::7bb6d7de-5d2f-4fb9-acf8-b1ed013881ef[panopto, title="Configure SAN protocols on your ASA r2 system"]
+video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto, title="Configure SAN protocols on your ASA r2 system"]
 // End snippet
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::2df80021-4699-4026-9d93-b1f000ca4449[panopto, title="Provision SAN storage on your ASA r2 system"]
+video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto, title="Provision SAN storage on your ASA r2 system"]
 // End snippet
 
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::59a0a320-18e8-49b3-adb8-b1f0012411aa[panopto, title="Replicate data to a remote cluster"]
+video::4b78312d-1bfa-4df5-afac-b1f0014ef80e[panopto, title="Replicate data to a remote cluster"]
 // End snippet
