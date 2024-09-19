@@ -25,6 +25,5 @@ video::2df80021-4699-4026-9d93-b1f000ca4449[panopto, title="Provision SAN storag
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::dba967f7-d5b6-4fd7-85bb-b1ed013881aa[panopto, title="Replicate data to a remote cluster"]
+video::59a0a320-18e8-49b3-adb8-b1f0012411aa[panopto, title="Replicate data to a remote cluster"]
 // End snippet
-
