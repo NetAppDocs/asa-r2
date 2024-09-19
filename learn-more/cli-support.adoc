@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: learn-more/cli-support.html
-keywords: 
-summary:
+keywords: asa r2, cli, asa r2, asa a1k, asa 70, asa 90
+summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, ASA 70, ASA 90)."
 ---
 = ONTAP CLI support for ASA r2 storage systems
 :icons: font
@@ -84,24 +84,41 @@ This command is not available when used in conjunction with the following parame
 ====
 // End snippet
 
-.Unsupported volume clone commands
+// Start snippet: collapsible block (open on page load)
+.Unsupported `volume clone` commands
+[%collapsible%closed]
+====
 
 * `volume clone create`
 * `volume clone split`
 
+====
+// End snippet
 
-.Unsupported volume snaplock commands
+// Start snippet: collapsible block (open on page load)
+.Unsupported `volume snaplock` commands
+[%collapsible%closed]
+====
 
 * `volume snaplock modify`
 
-.Unsupported volume snapshot commands
+====
+// End snippet
+
+
+// Start snippet: collapsible block (open on page load)
+.Unsupported `volume snapshot` commands
+[%collapsible%closed]
+====
 
 * `volume snapshot`
 * `volume snapshot autodelete modify`
 * `volume snapshot policy modify`
+====
+// End snippet
 
 // Start snippet: collapsible block (open on page load)
-.Unsupported volume command sets
+.Unsupported `volume` command sets
 [%collapsible%closed]
 ====
 
@@ -123,7 +140,10 @@ This command is not available when used in conjunction with the following parame
 ====
 // End snippet
 
-.Unsupported storage commands
+// Start snippet: collapsible block (open on page load)
+.Unsupported `storage` commands
+[%collapsible%closed]
+====
 
 * `storage failover show-takeover`
 * `storage failover show-giveback`
@@ -131,6 +151,8 @@ This command is not available when used in conjunction with the following parame
 * `storage disk assign`
 * `storage disk partition`
 * `storage disk reassign`
+====
+// End snippet
 
 .For more information
 
@@ -138,7 +160,7 @@ See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] f
 
 == Set up an ONTAP ASA r2 cluster using the CLI
 
-It is recommended that you [link:../install-setup/initialize-ontap-cluster.html[use System Manager to set up your ONTAP ASA r2 cluster]. System Manager offers a quick and easy guided workflow to get your cluster up and running. However, if you are accustomed to working with ONTAP commands, the ONTAP command line interface (CLI) can optionally be used for cluster setup.  Cluster set up using the CLI offers no additional options or advantages than cluster set up using System Manager.  
+It is recommended that you link:../install-setup/initialize-ontap-cluster.html[use System Manager to set up your ONTAP ASA r2 cluster]. System Manager offers a quick and easy guided workflow to get your cluster up and running. However, if you are accustomed to working with ONTAP commands, the ONTAP command line interface (CLI) can optionally be used for cluster setup.  Cluster set up using the CLI offers no additional options or advantages than cluster set up using System Manager.  
 
 During cluster setup, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
 

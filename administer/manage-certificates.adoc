@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: administer/manage-certificates.html
 keywords: asa r2, security, certificates, digital, certificate signing request, signing, request, trusted, authority, trusted certificate authority, client, server, local certificate, authorities, add, renew, delete, generate
-summary: Use digital security certificates to verify the identity of remote servers. 
+summary: "Use digital security certificates to verify the identity of remote servers."
 ---
 = Manage security certificates on ASA r2 storage systems
 :icons: font
@@ -32,14 +32,14 @@ You have generated a CSR to which can be used to generate a public certificate.
 
 == Add a trusted certificate authority
 
-ONTAP provides a default set of trusted root certificates for applications using Transport Layer Security (TLS).  You can add addition trusted certificate authorities as needed.
+ONTAP provides a default set of trusted root certificates for applications using Transport Layer Security (TLS).  You can add additional trusted certificate authorities as needed.
 
 .Steps
 
 . Select *Cluster > Settings*.
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
 . Select *Trusted certificate authorities*.
-. Enter or import the certificate details; then select image:icon_add_blue_bg.png [blue rectangle containing a plus sign followed by the word add in white letters].
+. Enter or import the certificate details; then select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 
 .Result
 
@@ -60,8 +60,8 @@ Trusted certificate authorities must be renewed annually.  If you do not want to
 [cols="2" options="header"]
 |===
 // header row
-| To renew the certificate authority do this...
-| To delete the certificate authority do this...
+| To renew the certificate authority, do this...
+| To delete the certificate authority, do this...
 
 a|
 .. Select image:icon_kabob.gif[three vertical blue dots]; then select *Renew*.
@@ -86,7 +86,7 @@ Add a client/server certificate or local certificate authorities to enable secur
 
 . In System Manager, select *Cluster > Settings*.
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
-. Select *Client/server certificates*, or *Local certificate authorities*.
+. Select *Client/server certificates* or *Local certificate authorities*.
 . Add the certificate information; then select image:icon_add_blue_bg.png[blue rectangle containing blue plus sign followed by the word add].
 
 .Result
@@ -108,8 +108,8 @@ Client/server certificates and local certificate authorities must be renewed ann
 [cols="2" options="header"]
 |===
 // header row
-| To renew the certificate authority do this...
-| To delete the certificate authority do this...
+| To renew the certificate authority, do this...
+| To delete the certificate authority, do this...
 
 a|
 .. Select image:icon_kabob.gif[three vertical blue dots]; then select *Renew*.
@@ -121,5 +121,5 @@ Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 
 .Result
 
-You have renewed or deleted an existing client/server certificate or local certificate authorities on your ASA r2 system.
+You have renewed or deleted an existing client/server certificate or local certificate authority on your ASA r2 system.
 // ONTAPDOC 1930, 2024 Sept 24

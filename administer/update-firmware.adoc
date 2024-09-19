@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: administer/update-firmware.html
-keywords: 
-summary:
+keywords: update, firmware, system files, automatic updates, automated updates, asa r2, disable, 
+summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use System Manager to disable automatic updates and view updates before they are installed."
 ---
 = Update firmware on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use System Manager to disable automated updates or edit update parameters to show you notifications of available updates before any action is performed.
+ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use ONTAP System Manager to disable automated updates or to edit update parameters to show you notifications of available updates before any action is performed.
 
 == Enable automatic updates
 

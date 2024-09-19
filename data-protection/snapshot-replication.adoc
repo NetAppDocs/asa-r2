@@ -2,9 +2,10 @@
 sidebar: sidebar
 permalink: data-protection/snapshot-replication.html
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication
-summary: Use System Manager to copy data to a remote location for backup and disaster recovery.  Set up requires creation of a replication policy and relationship. 
+summary: "Use ONTAP System Manager to copy data to a remote location for backup and disaster recovery.  Set up requires creation of a replication policy and relationship."
+searchtitle: "Replicate snapshots to a remote cluster using ONTAP System Manager| ASA r2"
 ---
-= Set up Snapshot replication on ASA r2 storage systems
+= Replicate snapshots to a remote cluster from ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
@@ -21,7 +22,7 @@ Before you can protect your data by replicating it to a remote cluster, you need
 
 . On the local cluster, in System Manager, select *Cluster > Settings*.
 . Under *Intercluster Settings* next to *Cluster peers* select image:icon_kabob.gif[three vertical blue dots], then select *Add a cluster peer*.
-. Select *Lauch remote cluster* to generate passphrase.
+. Select *Lauch remote cluster*; this generates a passphrase you'll use to authenticate with the remote cluster.
 . After the passphrase for the remote cluster is generated, paste it under *Passphrase* on the local cluster.
 . Select image:icon_add.gif[blue plus sign followed by the word add in blue letters]; then enter the intercluster network interface IP address.
 . Select *Initiate cluster peering*.

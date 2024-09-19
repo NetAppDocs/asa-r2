@@ -16,11 +16,11 @@ To set up data access, you should ensure that specific parameters and settings o
 
 The configuration necessary to set up data access to your ASA r2 system from your SAN hosts varies depending on the host operating system and the protocol. Correct configuration is important for best performance and successful failover.  
 
-See ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html[VMware vSphere SCSI clients^], link:https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[VMware vSphere NVMe clients^] and link:https://docs.netapp.com/us-en/ontap-sanhost/overview.html[other SAN clients^] to properly configure your hosts to connect to your ASA r2 system.
+See the ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html[VMware vSphere SCSI clients^], link:https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[VMware vSphere NVMe clients^] and link:https://docs.netapp.com/us-en/ontap-sanhost/overview.html[other SAN clients^] to properly configure your hosts to connect to your ASA r2 system.
 
 == Migrate VMware virtual machines
 
-If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptively migration of your data.
+If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptive migration of your data.
 
 .What's next?
 

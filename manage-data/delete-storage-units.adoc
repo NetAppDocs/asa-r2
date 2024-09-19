@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: manage-data/delete-storage-units.html
-keywords: delete lun, delete namespace, delete storage unit
-summary: Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications.
+keywords: delete lun, delete namespace, delete storage unit, asa r2
+summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
 ---
 = Delete storage units on ASA r2 storage systems
 :icons: font
@@ -24,6 +24,6 @@ If the storage unit you want to delete is in a consistency group that is in repl
 
 .What's next?
 
-Reallocate the space you freed by deleting the storage unit to storage units that need additional capacity.  You can link:../manage-data/modify-storage-units.html#edit-storage-units[edit existing storage units] to increase their size.
+Use the space you freed by deleting the storage unit by You can link:../manage-data/modify-storage-units.html#edit-storage-units[increasing the size] of storage units that need additional capacity. 
 
 // ONTAPDOC 1922, 2024 Sept 24

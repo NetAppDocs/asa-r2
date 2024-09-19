@@ -53,17 +53,6 @@ Security Assertion Markup Language (SAML) authentication allows users to be auth
 See the IdP documentation for configuration.
 * You must have the URI of the IdP.
 
-.About this task
-
-* SAML authentication applies only to the `http` and `ontapi` applications.
-+
-The `http` and `ontapi` applications are used by the following web services: Service Processor Infrastructure, ONTAP APIs, or System Manager.
-* SAML authentication is applicable only for accessing the admin SVM.
-* The following IdPs have been validated with System Manager:
-** Active Directory Federation Services
-** Cisco DUO 
-** Shibboleth
-
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
@@ -72,7 +61,7 @@ The `http` and `ontapi` applications are used by the following web services: Ser
 . Enter the IdP URL and the host system IP address; then select *Save*.
 +
 A confirmation window displays the metadata information, which has been automatically copied to your clipboard.
-. Go to the IdP system you specified; then copy the metadata from your clipboard to update the system metada.
+. Go to the IdP system you specified; then copy the metadata from your clipboard to update the system metadata.
 . Return to the confirmation window in System Manager; then select *I have configured the IdP with the host URI or metadata*.
 . Select *Logout* to enable SAML-based authentication.
 +
@@ -98,7 +87,7 @@ To add multiple attributes, select image:icon_add.gif[plus sign followed by the 
 
 .Result
 
-A new user account is created and available for use on your ASA r2 cluster.
+A new user account is created and available for use on your ASA r2 system.
 
 == Create an administrator account 
 

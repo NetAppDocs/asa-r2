@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-data/modify-storage-units.html
 keywords: increase storage units, resize luns, resize namespaces, san, nvme,  increase lun size, increase namespace, increase, modify, edit, luns, namespaces, modify quality of service, qos, host mapping, mapping host
-summary: Respond to changes in your storage system performance and data by editing storage units to increase capacity, update Quality of Service (QoS) policies or change hosts mappings. 
+summary: "Respond to changes in your storage system performance and data by editing storage units to increase capacity, update Quality of Service (QoS) policies or change hosts mappings."
 ---
 = Modify storage units on ASA r2 storage systems
 :icons: font
@@ -12,14 +12,14 @@ summary: Respond to changes in your storage system performance and data by editi
 To optimize performance on your ASA r2 system, you might need to modify your storage units to increase their capacity, update QoS policies or to change the hosts that are mapped to the units. For example, if a new, critical application workload is added to an existing storage unit, you might need to change the Quality of Service (QoS) policy applied to the storage unit to support the performance level needed for the new application.
 
 .Increase capacity
-Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of the storage unit can be increased to 128 TB which is the maximum size allowed by ONTAP.
+Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of a storage unit can be increased to 128 TB which is the maximum size allowed by ONTAP.
 
 .Modify host mappings
 Modify the hosts that are mapped to a storage unit to assist in balancing workloads or reconfiguring system resources.
 
 
 .Modify QoS policy
-Quality of service (QoS) policies are used to guarantee that the performance of critical workloads is not degraded by competing workloads. You can use QoS policies to set a QoS throughput _limit_ and a QoS throughput _guarantee_.  
+Quality of service (QoS) policies guarantee that the performance of critical workloads is not degraded by competing workloads. You can use QoS policies to set a QoS throughput _limit_ and a QoS throughput _guarantee_.  
 
 * QoS throughput limit
 +

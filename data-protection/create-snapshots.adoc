@@ -2,15 +2,16 @@
 sidebar: sidebar
 permalink: data-protection/create-snapshots.html
 keywords: protect data, snapshots, asa r2, data protection, create snapshots, snapshots, create consistency groups, consistency groups
-summary: Create a snapshot to protect data on your ASA r2 system. You can create manual snapshots, or you can use a consistency group to schedule automatic snapshots.
+summary: "Create a snapshot to back up your data on your ASA r2 system. You can create manual snapshots, or you can use a consistency group to schedule automatic snapshots."
+searchtitle: "Create snapshots to back up your data using ONTAP System Manager | ASA r2"
 ---
-= Use snapshots to protect your data on ASA r2 storage systems
+= Create snapshots to back up your data on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-To protect data on your ASA r2 system, you need to create a snapshot. You can use System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+To back up data on your ASA r2 system, you need to create a snapshot. You can use ONTAP System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 
@@ -30,7 +31,7 @@ Create a consistency group using new storage units or create a consistency group
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using new storage units*.
 . Enter a name for the new storage unit, the number of units, and the capacity per unit.
 +
-If you create more that one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *More options*; then select *Add a different capacity*.
+If you create more than one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *More options*; then select *Add a different capacity*.
 . Select the host operating system and host mapping.
 . Select *Add*.
 
@@ -63,7 +64,7 @@ You have created a consistency group containing the storage units you want to pr
 
 A snapshot is a local, read-only copy of your data that you can use to restore storage units to specific points in time.  
 
-Snapshots can be created on demand and can be created automatically in regular intervals based on a link:https://review.docs.netapp.com/us-en/asa-r2_asa-r2-9160/data-protection/policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
+Snapshots can be created on demand, or they can be created automatically in regular intervals based on a link:https://review.docs.netapp.com/us-en/asa-r2_asa-r2-9160/data-protection/policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
 
 .Types of snapshots
 
@@ -75,7 +76,7 @@ An on-demand snapshot of a storage unit can be created at any time. The storage 
 
 * Automated snapshots
 +
-Automated snapshots can be created using snapshot policies.  To apply a snapshot policy to a storage unit for automated snapshot creation, the storage unit must be a member of a consistency group.  If you apply a snapshot policy to a consistency group, all the storage units in the consistency group are protected with automated snapshots.
+Automated snapshots are created using snapshot policies.  To apply a snapshot policy to a storage unit for automated snapshot creation, the storage unit must be a member of a consistency group.  If you apply a snapshot policy to a consistency group, all the storage units in the consistency group are protected with automated snapshots.
 
 Create a snapshot of a consistency group or a storage unit.
 
