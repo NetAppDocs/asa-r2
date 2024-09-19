@@ -1,15 +1,16 @@
 ---
 sidebar: sidebar
 permalink: install-setup/initialize-ontap-cluster.html
-keywords: asa r2, initialize cluster, set up cluster, ontap
-summary: Learn how to set up the ONTAP cluster on an ASA r2 system using System Manager. 
+keywords: asa r2, asa a1k, asa a70, asa a90, initialize cluster, set up cluster, ontap
+summary: "Learn how to set up the ONTAP cluster on an ASA r2 system using System Manager." 
+searchtitle: "Set up an ONTAP cluster using ONTAP System Manager | ASA r2"
 ---
 = Set up an ONTAP cluster on your ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-System Manager guides you through a quick and easy workflow to set up an ONTAP ASA r2 cluster.
+ONTAP System Manager guides you through a quick and easy workflow to set up an ONTAP ASA r2 cluster.
 
 During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
 

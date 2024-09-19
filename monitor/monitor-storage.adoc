@@ -2,14 +2,15 @@
 sidebar: sidebar
 permalink: monitor/monitor-storage.html
 keywords: monitor, storage, cluster, utilization, usage
-summary: Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
+summary: "Monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads."
+searchtitle: "Monitor space utilization using ONTAP System Manager | ASA r2"
 ---
 = Monitor cluster and storage unit utilization on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use System Manager to monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
+Use ONTAP System Manager to monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
 
 == Monitor cluster utilization
 

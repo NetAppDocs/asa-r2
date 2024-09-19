@@ -2,15 +2,16 @@
 sidebar: sidebar
 permalink: data-protection/create-snapshots.html
 keywords: protect data, snapshots, asa r2, data protection, create snapshots, snapshots, create consistency groups, consistency groups
-summary: Create a snapshot to protect data on your ASA r2 system. You can create manual snapshots, or you can use a consistency group to schedule automatic snapshots.
+summary: "Create a snapshot to back up your data on your ASA r2 system. You can create manual snapshots, or you can use a consistency group to schedule automatic snapshots."
+searchtitle: "Create snapshots to back up your data using ONTAP System Manager | ASA r2"
 ---
-= Use snapshots to protect your data on ASA r2 storage systems
+= Create snapshots to back up your data on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-To protect data on your ASA r2 system, you need to create a snapshot. You can use System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+To back up data on your ASA r2 system, you need to create a snapshot. You can use ONTAP System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 

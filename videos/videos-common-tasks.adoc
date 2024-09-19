@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: videos/videos-common-tasks.html
 keywords: demo,asa r2, videos
-summary: View short videos that demonstrate how to use System Manager to quickly and easily perform common task on your ASA r2 storage systems.
+summary: View short videos that demonstrate how to use ONTAP System Manager to quickly and easily perform common task on your ASA r2 storage systems.
 ---
 = ASA r2 storage system video demonstrations
 :icons: font
@@ -10,7 +10,7 @@ summary: View short videos that demonstrate how to use System Manager to quickly
 
 [.lead]
 
-View short videos that demonstrate how to use System Manager to quickly and easily perform common task on your ASA r2 storage systems.
+View short videos that demonstrate how to use ONTAP System Manager to quickly and easily perform common task on your ASA r2 storage systems.
 
 == Configure SAN protocols on your ASA r2 system
 

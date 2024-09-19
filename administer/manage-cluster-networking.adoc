@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: administer/manage-cluster-networking.html
 keywords: add a broadcast domain, broadcast domains, reassign ports, create a vlan, create vlans
-summary: Use System Manager to perform basic storage network administration on your ASA r2 system
+summary: "Use ONTAP System Manager to perform basic storage network administration on your ASA r2 system."
 ---
 = Manage cluster networking on ASA r2 storage systems
 :icons: font
@@ -10,7 +10,7 @@ summary: Use System Manager to perform basic storage network administration on y
 
 [.lead]
 
-You can use System Manager to perform basic storage network administration on your ASA r2 system. For example, you can add a broadcast domain or reassign ports to a different broadcast domain.
+You can use ONTAP System Manager to perform basic storage network administration on your ASA r2 system. For example, you can add a broadcast domain or reassign ports to a different broadcast domain.
 
 == Add a broadcast domain
 

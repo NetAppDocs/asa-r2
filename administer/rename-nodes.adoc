@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: administer/rename-nodes.html
-keywords: 
-summary:
+keywords: rename, node, renaming, asa r2
+summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
 ---
 = Rename a node on an ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons.  
+You can use ONTAP System Manager to rename a node on your ASA r2 system.  You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons.  
 
 .Steps
 

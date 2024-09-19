@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: monitor/view-events-jobs.html
-keywords: 
-summary:
+keywords: view cluster events, view cluster jobs, event log, system alerts, jobs, audit logs, asa r2, event notifications, email notifications
+summary: "Use ONTAP System Manager to view a list of errors or alerts that have occurred in your system along with recommended corrective actions."
 ---
 = View cluster events and jobs on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use System Manager to view a list of errors or alerts that have occurred in your system along with recommended corrective actions.  You can also view system audit logs and a list of jobs that are active, completed, or failed.
+Use ONTAP System Manager to view a list of errors or alerts that have occurred in your system along with recommended corrective actions.  You can also view system audit logs and a list of jobs that are active, completed, or failed.
 
 .Steps
 
