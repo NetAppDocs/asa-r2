@@ -12,16 +12,16 @@ summary:
 
 The new NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
-ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP) on a single HA-pair deployment.  SCSI protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  NVMe protocols support direct paths between the hosts and storage. 
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP) on a single HA-pair deployment.  SCSI (iSCSI and FC) protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  NVMe protocols support direct paths between the hosts and storage. 
 
-On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing visibility of features and functions not supported in SAN environments.  
+On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  
 
 ASA r2 systems introduce the use of storage units with consistency groups:
 
 * A _storage unit_ makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. 
 * _A consistency group_ is a collection of storage units that are managed as a single unit.  
 
-ASA r2 systems uses storage units and consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
+ASA r2 systems use storage units and consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
 
 To help secure your data against malicious attacks such as theft or ransomware, ASA r2 systems support an on-board key manager, dual-layer encryption, tamper-proof snapshots, multi-factor authentication and multi-admin verification.
 

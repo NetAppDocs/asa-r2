@@ -9,7 +9,7 @@ summary: You might need to reboot a node for maintenance, troubleshooting, softw
 :imagesdir: ../media/
 
 [.lead]
-You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  When a node is rebooted, its HA partner automatically executes a takeover, then performs an automatic giveback after the rebooted node comes back online.
+You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  When a node is rebooted, its HA partner automatically executes a takeover. The partner node then performs an automatic giveback after the rebooted node comes back online.
 
 .Steps
 

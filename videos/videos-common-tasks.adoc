@@ -23,9 +23,8 @@ video::7bb6d7de-5d2f-4fb9-acf8-b1ed013881ef[panopto, title="Configure SAN protoc
 
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::af51c9ae-f785-4b31-98b6-b1ed0138817d[panopto, title="Provision SAN storage on your ASA r2 system"]
+video::2df80021-4699-4026-9d93-b1f000ca4449[panopto, title="Provision SAN storage on your ASA r2 system"]
 // End snippet
-
 
 == Replicate data to a remote cluster
 

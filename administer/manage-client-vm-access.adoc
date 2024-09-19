@@ -55,7 +55,7 @@ All subnet names must be unique within an IPspace.
 
 . Specify the IP address range for the subnet.
 +
-When you specify the IP address range for the subnet, do not overlap IP addresses with other subnets.  Network issues can occur if subnet IP addresses overlap and different subnets or hosts attempt to use the same IP address.
+When you specify the IP address range for the subnet, do not overlap IP addresses with other subnets.  Network issues can occur when subnet IP addresses overlap and different subnets or hosts attempt to use the same IP address.
 
 . Select the broadcast domain for the subnet.
 
@@ -69,11 +69,11 @@ You have created a subnet which you can now use to simplify the creation of your
 
 A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted.
 
-When an IP data LIFs is created is can service iSCSI and NVMe/TCP by default.  Separate data LIFs must be created for FC and NVMe/FC.
+When an IP data LIF is created, it can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
 
 .Before you begin
 
-* You must be a cluster administrator to perform this task
+* You must be a cluster administrator to perform this task.
 * The underlying physical or logical network port must have been configured to the administrative `up` status.
 * If you are planning to use a subnet name to allocate the IP address and network mask value for a LIF, the subnet must already exist.
 * A LIF handling intracluster traffic between nodes should not be on the same subnet as a LIF handling management traffic or a LIF handling data traffic.
@@ -108,13 +108,13 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 . Select *Edit*.
 
-. You can disable the network interface, rename the network interface, change the IP address, and change the subnet mask.
+. You can disable the network interface, rename the network interface, change the IP address, or change the subnet mask.
 
 . Select *Save*.
 
 .Result
 
-You LIF has been modified.
+Your LIF has been modified.
 
 
 

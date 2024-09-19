@@ -11,13 +11,11 @@ summary: Provision ONTAP storage on the ASA r2 to enable SAN (SCSI and NVMe) hos
 [.lead]
 When you provision storage, you enable your SAN hosts to read from and write data to ASA r2 storage systems. To provision storage, you use ONTAP System Manager to create storage units, add host initiators, and map the host to a storage unit. You also need to perform steps on the host to enable read/write operations.
 
-You can choose to add host initiators and map them to your storage unit during the storage unit creation process, or you can optionally choose to add your host initiators, then create and map your storage units.  New host initiators can be added and mapped to existing storage units at any time.
-
 == Create storage units
 
 On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
 
-See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
+See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
 
 Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the storage units are created.
 
@@ -35,7 +33,7 @@ If you create more than one storage unit, each unit is created with the same cap
 
 . Accept the auto-selected *host mapping* or select a different host group for the storage unit to be mapped to.
 +
-*Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-select for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
+*Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-selected for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
 +
 If there is no pre-existing host group for hosts running on the operating system you specified, a new host group is automatically created by ONTAP.
 
@@ -155,7 +153,7 @@ a|
 .. Select *FC* or *iSCSI*; then select the host initiators.
 .. Optionally, select *Configure host proximity*.
 +
-Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.  This is only applicable if you have replicated data to a remote location.  If you have not setup snapshot replication, you do not need to select this option.
+Configuring host proximity enables ONTAP to identify the controller nearest to the host for data path optimization and latency reduction.  This is only applicable if you have replicated data to a remote location.  If you have not set up snapshot replication, you do not need to select this option.
 
 .. If you need to add new initiators, select *Add initiators*.
 
@@ -209,12 +207,12 @@ After you select the first host, the option to add to a host group appears above
 
 .What's next?
 
-You have created a host group and you can now to map it to a storage unit.
+You have created a host group and you can now map it to a storage unit.
 
 
 == Map the storage unit to a host
 
-After you have created your ASA r2 storage units, and added host initiators, you need to map your hosts to your storage units to begin serving data. Storage units are mapped to hosts as part of the storage unit creation process.  You can also map existing storage units to new or existing hosts at any time.
+After you have created your ASA r2 storage units and added host initiators, you need to map your hosts to your storage units to begin serving data. Storage units are mapped to hosts as part of the storage unit creation process.  You can also map existing storage units to new or existing hosts at any time.
 
 .Steps
 
@@ -246,6 +244,6 @@ You have completed the provisioning process and are ready to begin serving data.
 
 .For more information
 
-For more details about host-side configuration, see link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
+For more details about host-side configuration, see the link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
 
 // ONTAPDOC 1922, 2024 Sept 24

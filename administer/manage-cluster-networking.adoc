@@ -10,7 +10,7 @@ summary: Use System Manager to perform basic storage network administration on y
 
 [.lead]
 
-You can use System Manager to perform basic storage network administration on your ASA r2 system, for example, you can add a broadcast domain or reassign ports to a different broadcast domain.
+You can use System Manager to perform basic storage network administration on your ASA r2 system. For example, you can add a broadcast domain or reassign ports to a different broadcast domain.
 
 == Add a broadcast domain
 
@@ -45,14 +45,14 @@ You have added a new broadcast domain.
 
 == Reassign ports to a different broadcast domain
 
-Ports can belong to only one broadcast domain. If you want to change the broadcast domain to which a port belongs, you need to reassign the port from its existing broadcast domain to the new broadcast domain.
+Ports can belong to only one broadcast domain. If you want to change the broadcast domain to which a port belongs, you need to reassign the port from its existing broadcast domain to a new broadcast domain.
 
 .Steps
 
 . In System Manager, select *Network > Overview*.
 . Under *Broadcast Domains*, select image:icon_kabob.gif[three vertical blue dots] next to the domain name; then select *Edit*.
 . Deselect the Ethernet ports that you want to reassign to another domain.
-. Select the broadcast domain to which you want to reassign the port, then select *Reassign*.
+. Select the broadcast domain to which you want to reassign the port; then select *Reassign*.
 . Select *Save*.
 
 .Result
@@ -85,6 +85,6 @@ The VLAN can’t be attached to a port hosting a cluster LIF or to ports assigne
 
 .Result
 
-You have created a VLAN to increase security, isolate problems and limit available paths within your IP network infrastructure.
+You have created a VLAN to increase security, isolate problems, and limit available paths within your IP network infrastructure.
 
 // ONTAPDOC 1930, 2024 Sept 24

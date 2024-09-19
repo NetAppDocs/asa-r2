@@ -14,7 +14,7 @@ Data in a consistency group or storage unit that is protected by snapshots can b
 
 == Restore a consistency group
 
-Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Any changes made to the storage units after the date of the snapshot is not restored.
+Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Changes made to the storage units after the snapshot was created are not restored..
 
 You can restore a consistency group from a local or remote snapshot.  
 
@@ -32,7 +32,7 @@ You can restore a consistency group from a local or remote snapshot.
 +
 The consistency group details page opens.
 . Select *Snapshots*.
-. Select the snapshot you want to restore; then elect image:icon_kabob.gif[three vertical blue dots].
+. Select the snapshot you want to restore; then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore consistency group from this snapshot*; then select *Restore*.
 
 --
@@ -47,7 +47,7 @@ The consistency group details page opens.
 . Select *Restore*.
 . Select the cluster, storage VM, and consistency group to which you want to restore data.
 . Select the snapshot you want to restore from. 
-. Type "restore"; then select *Restore*.
+. When prompted, enter "restore"; then select *Restore*.
 
 --
 
@@ -62,7 +62,7 @@ Your consistency group is restored to the point in time of the snapshot used for
 
 == Restore a storage unit
 
-Restoring a storage unit replaces all the data in the storage unit with the data from a snapshot.  Any changes made to the storage unit after the date of the snapshot is not restored.
+Restoring a storage unit replaces all the data in the storage unit with the data from a snapshot.  Changes made to the storage unit after the snapshot was created are not restored.
 
 .Steps
 

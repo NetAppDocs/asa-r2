@@ -9,7 +9,7 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use System Manager to disable automated updates or edit update parameters to show you notifications of available updates before any action is performed.
+ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use System Manager to disable automated updates or to edit update parameters to show you notifications of available updates before any action is performed.
 
 == Enable automatic updates
 
