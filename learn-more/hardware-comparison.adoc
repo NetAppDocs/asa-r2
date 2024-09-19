@@ -73,3 +73,19 @@ The following ASA platforms are classified as ASA r2 systems:
 * Learn more about link:https://docs.netapp.com/us-en/ontap-systems-family/intro-family.html[ONTAP hardware systems^].
 * See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA^].
+
+==  Summary of ASA r2 system differences
+
+The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
+
+// FS 8.6, 8.11; DG 1,2
+.Default SVM creation with protocol services
+New clusters automatically contain a default data SVM with the SAN protocols enabled. The IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
+
+// FS 8.1, 8.2; DG 4
+.Automatic volume creation
+Creating a storage unit (LUN or namespace) automatically creates a volume from the storage availability zone. This results in a simplified and common namespace. Deleting a storage unit automatically deletes the volume.
+
+// FS 8.4; DG 3
+.Changes to thin versus thick provisioning
+Storage units for are always thinly provisioned on ASA r2 storage systems. Thick provisioning is not supported.
