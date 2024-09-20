@@ -10,7 +10,7 @@ searchtitle: "Compare ASA r2 systems to other ONTAP systems"
 :imagesdir: ../media/
 
 [.lead]
-ASA r2 systems offer a unified hardware and software solution for SAN-only environments built on all flash platforms.
+ASA r2 systems offer a unified hardware and software solution for SAN-only environments built on all flash platforms. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its storage layer, supported protocols, and ONTAP personality.
 
 On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on all other ONTAP systems (ASA, AFF, FAS) is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and in EMS messages where applicable. 
 
@@ -71,5 +71,5 @@ The following ASA platforms are classified as ASA r2 systems:
 .For more information
 
 * Learn more about link:https://docs.netapp.com/us-en/ontap-systems-family/intro-family.html[ONTAP hardware systems^].
-* See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
+* See full configuration support and limitations for ASA and ASA r2 systems in the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA^].

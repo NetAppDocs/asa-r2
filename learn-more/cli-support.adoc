@@ -254,4 +254,4 @@ Cluster time-service ntp show
 . Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
 
 .What's next?
-You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your system.
+You are ready to link:../install-setup/set-up-data-access.html[set up data access] from your SAN clients to your system.
