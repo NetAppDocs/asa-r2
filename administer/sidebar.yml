@@ -28,4 +28,6 @@ entries:
 - title: Manage user accounts and roles
   url: "/administer/user-accounts-roles.html" 
 - title: Manage security certificates
-  url: "/administer/manage-certificates.html"     
+  url: "/administer/manage-certificates.html"   
+- title: Verify host connectivity
+  url: "/administer/verify-host-connectivity.html"    
