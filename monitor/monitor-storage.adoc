@@ -24,7 +24,7 @@ Regularly monitor the amount of storage consumed by your cluster to ensure that,
 The data reduction ration represents the amount of space saved through storage efficiency.
 
 .What's next?
-If your cluster is running low on space or if it doesn't have the capacity to meet a future demand, you should plan to link:administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity. 
+If your cluster is running low on space or if it doesn't have the capacity to meet a future demand, you should plan to link:../administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity. 
 
 == Monitor storage unit utilization 
 Monitor the amount of storage consumed by a storage unit so that you can proactively increase the size of the storage unit based on your business needs.  
@@ -45,7 +45,7 @@ Snapshot used represents the amount of storage used by snapshots.
 
 .What's next?
 
-If your storage unit is nearing capacity, you should link:../manage-data/modify-storage-units.html#edit-storage-units[edit the storage unit] to increase its size.
+If your storage unit is nearing capacity, you should link:../manage-data/modify-storage-units.html[modify the storage unit] to increase its size.
 
 
 // ONTAPDOC 1930, 2024 Sept 24
