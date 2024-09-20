@@ -6,7 +6,7 @@ summary: "Learn how to perform maintenance procedures on your ASA r2 system."
 ---
 = Maintain your ASA r2 storage system
 :icons: font
-:imagesdir: /media/
+:imagesdir: ./media/
 
 [.lead]
 Go to the https://docs.netapp.com/us-en/ontap-systems/asa-r2-landing-maintain/index.html[ASA r2 maintain documentation^] to learn how to perform maintenance procedures on your ASA r2 system components.
