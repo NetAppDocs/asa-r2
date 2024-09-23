@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: videos/video_transcript_configure_san_storage.html
+permalink: videos/video_transcript_provision_san_storage.html
 keywords: frontmatter, front matter
 summary: View short videos that demonstrate how to use ONTAP System Manager to quickly and easily perform common task on your ASA r2 storage systems.
 ---
-= Configure SAN protocols on your ASA r2 system
+= Configure SAN storage on your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
@@ -16,7 +16,9 @@ link:videos-common-tasks.html#video_transcript_return_provision_san_storage[Retu
 
 You can use ONTAP System Manager to quickly and easily provision storage units for hosts on your ASA r2 storage system. 
 
-For this example, we'll create six new storage units for a VMware host.  From the System Manager menu, select *Storage*, then select *Add*.  
+In this example, we'll create six new storage units for a VMware host.  
+
+From the System Manager menu, select *Storage*, then select *Add*.  
 
 Enter a name for the storage units, the number of units, and the capacity for each unit; then select your host operating system.  
 
