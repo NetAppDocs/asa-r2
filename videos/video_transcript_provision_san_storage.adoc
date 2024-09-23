@@ -16,7 +16,9 @@ link:videos-common-tasks.html#video_transcript_return_provision_san_storage[Retu
 
 You can use ONTAP System Manager to quickly and easily provision storage units for hosts on your ASA r2 storage system. 
 
-For this example, we'll create six new storage units for a VMware host.  From the System Manager menu, select *Storage*, then select *Add*.  
+In this example, we'll create six new storage units for a VMware host.  
+
+From the System Manager menu, select *Storage*, then select *Add*.  
 
 Enter a name for the storage units, the number of units, and the capacity for each unit; then select your host operating system.  
 

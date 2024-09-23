@@ -14,7 +14,7 @@ The following transcript is provided for the video `Configure SAN protocols on y
 
 link:videos-common-tasks.html#video_transcript_return_configure_san_protocols[Return to page]
 
-You can use ONTAP System Manager to quickly and easily configure your SAN protocols.  In this example we’ll configure IP addresses for iSCSI network interfaces.
+You can use ONTAP System Manager to quickly and easily configure your SAN protocols.  In this example, we’ll configure IP addresses for iSCSI network interfaces.
 
 From the System Manager dashboard, select *Configure protocols*. 
 
