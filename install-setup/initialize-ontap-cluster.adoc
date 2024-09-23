@@ -78,8 +78,10 @@ When setup is complete, you are redirected to the cluster’s management IP addr
 // first body row
 a|
 .. Select *IP*; then select *Configure IP interfaces*.
-.. Select *Add a data network*.
-.. Enter the data subnet information; then select *Add*.
+.. Select *Add a subnet*.
+.. Enter a name for the subnet, then enter the subnet IP addresses.
+.. Enter the subnet mask, and optionally enter a gateway; then select *Add*. 
+.. Select the subnet you just created; then select *Save*.
 .. Select *Save*.
 
 a|
