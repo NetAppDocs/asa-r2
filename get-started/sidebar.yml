@@ -9,7 +9,7 @@ entries:
   entries:
   - title: Install workflow
     url: "/install-setup/install-setup-workflow.html"
-  - title: Hardware requirements
+  - title: Review hardware requirements
     url: "/install-setup/install-setup-requirements.html"    
   - title: Prepare to install
     url: "/install-setup/prepare-hardware.html"
