@@ -90,5 +90,4 @@ Edit a replication policy to modify the policy description, transfer schedule, a
 
 You have modified the replication policy.
 
-
-// ONTAPDOC 1927, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1927

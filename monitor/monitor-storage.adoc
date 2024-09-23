@@ -47,5 +47,4 @@ Snapshot used represents the amount of storage used by snapshots.
 
 If your storage unit is nearing capacity, you should link:../manage-data/modify-storage-units.html[modify the storage unit] to increase its size.
 
-
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

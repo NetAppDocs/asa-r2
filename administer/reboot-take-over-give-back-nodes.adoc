@@ -23,5 +23,4 @@ The reason you enter for the reboot is recorded in the system audit log.
 
 While the node is being rebooted, its HA partner performs a takeover so that there is no interruption in data service.  When the reboot is complete, the HA partner performs a giveback.
 
-
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

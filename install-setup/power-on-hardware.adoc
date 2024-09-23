@@ -15,3 +15,5 @@ include::../_include/install_power_hardware_r2.adoc[]
 
 .What's next?
 After you've turned on your ASA r2 storage system, you link:initialize-ontap-cluster.html[set up an ONTAP ASA r2 cluster].
+
+// 2024 Sept 23, ONTAPDOC 1922

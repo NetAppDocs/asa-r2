@@ -35,3 +35,5 @@ Select a storage vM and replication policy; the select *Add*.
 The storage units must be in a consistency group for replication.  Enter a consistency group name and Select *Create*.  
   
 You have quickly and easily provisioned 6 storage units for VMware hosts with local and remote data protection.
+
+// 2024 Sept 23, ONTAPDOC 2393

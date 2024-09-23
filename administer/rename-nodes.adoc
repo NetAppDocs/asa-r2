@@ -21,4 +21,4 @@ You can use ONTAP System Manager to rename a node on your ASA r2 system.  You mi
 
 The new name is applied to the node.
 
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

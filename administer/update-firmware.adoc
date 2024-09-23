@@ -79,4 +79,4 @@ If you want the flexibility of viewing recommended updates before they are downl
 
 Your firmware is updated.
 
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

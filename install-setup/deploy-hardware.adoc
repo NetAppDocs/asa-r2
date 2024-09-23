@@ -15,3 +15,5 @@ include::../_include/install_hardware_r2.adoc[]
 
 .What's next?
 After you've installed the hardware for your ASA r2 system, you link:cable-hardware.html[cable the controllers and storage shelves for your ASA r2 system].
+
+// 2024 Sept 23, ONTAPDOC 1922

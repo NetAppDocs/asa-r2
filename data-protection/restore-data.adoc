@@ -79,4 +79,5 @@ The storage unit details page opens.
 .Result
 
 Your storage unit is restored to the point in time of the snapshot used for restoration.
-// ONTAPDOC 1927, 2024 Sept 24
+
+// 2024 Sept 24, ONTAPDOC 1927

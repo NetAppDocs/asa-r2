@@ -15,3 +15,5 @@ include::../_include/install_prepare_r2.adoc[]
 
 .What's next?
 After you've prepared to install your ASA r2 hardware, you link:deploy-hardware.html[install the hardware for your ASA r2 storage system].
+
+// 2024 Sept 23, ONTAPDOC 1922

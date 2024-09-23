@@ -60,4 +60,4 @@ Configure your system to send a notification to specific email addresses when th
 
 The email address you added will now receive the specified email notifications for cluster events and audit logs.
 
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930
