@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: administer/verify-host-connectivity.html
+keywords: host, connectivity, asa r2
+summary: "If there is an issue with host data operations, you can use ONTAP System Manager to verify that the connection from your host to your ASA r2 storage system is active."
+---
+= Verify host connectivity on your ASA r2 storage system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+"If there is an issue with host data operations, you can use ONTAP System Manager to verify that the connection from your host to your ASA r2 storage system is active."
+
+.Steps
+
+. In System Manager, select *Host*.
++
+The host connectivity status is indicated next to name of the host group as follows:
+* *OK*: Indicates all initiators are connected to both nodes.
+* *Partially Connected*: Indicates that some of the initiators are not connected both nodes.
+* *None Connected*: Indicates that no initiators are connected. 
+
+.What's next?
+
+Make updates on your host to correct connectivity issues.  ONTAP will recheck the connection status every fifteen minutes.
+
+// ONTAPDOC 1930, 2024 Sept 24

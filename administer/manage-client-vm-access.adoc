@@ -2,14 +2,15 @@
 sidebar: sidebar
 permalink: administer/manage-client-vm-access.html
 keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface
-summary: Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration, and routing.
+summary: "Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration, and routing."
+searchtitle: "Manage client access to storage using ONTAP System Manager | ASA r2"
 ---
 = Manage client access to storage VMs on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Storage units on an ASA r2 system are contained inside storage virtual machines (VMs).  Storage VMs are used to serve data to your SAN clients. Use System Manager to create a LIF (network interface) for your SAN clients to connect to a storage VM and access data in the storage units. You can optionally use subnets to simplify LIF creation and IPspaces to provide your storage VMs with their own secure storage, administration, and routing.
+Storage units on an ASA r2 system are contained inside storage virtual machines (VMs).  Storage VMs are used to serve data to your SAN clients. Use ONTAP System Manager to create a LIF (network interface) for your SAN clients to connect to a storage VM and access data in the storage units. You can optionally use subnets to simplify LIF creation and IPspaces to provide your storage VMs with their own secure storage, administration, and routing.
 
 == Create IPspaces
 
@@ -55,7 +56,7 @@ All subnet names must be unique within an IPspace.
 
 . Specify the IP address range for the subnet.
 +
-When you specify the IP address range for the subnet, do not overlap IP addresses with other subnets.  Network issues can occur if subnet IP addresses overlap and different subnets or hosts attempt to use the same IP address.
+When you specify the IP address range for the subnet, do not overlap IP addresses with other subnets.  Network issues can occur when subnet IP addresses overlap and different subnets or hosts attempt to use the same IP address.
 
 . Select the broadcast domain for the subnet.
 
@@ -69,9 +70,11 @@ You have created a subnet which you can now use to simplify the creation of your
 
 A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted.
 
+When an IP data LIF is created, it can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
+
 .Before you begin
 
-* You must be a cluster administrator to perform this task
+* You must be a cluster administrator to perform this task.
 * The underlying physical or logical network port must have been configured to the administrative `up` status.
 * If you are planning to use a subnet name to allocate the IP address and network mask value for a LIF, the subnet must already exist.
 * A LIF handling intracluster traffic between nodes should not be on the same subnet as a LIF handling management traffic or a LIF handling data traffic.
@@ -106,13 +109,13 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 . Select *Edit*.
 
-. You can disable the network interface, rename the network interface, change the IP address, and change the subnet mask.
+. You can disable the network interface, rename the network interface, change the IP address, or change the subnet mask.
 
 . Select *Save*.
 
 .Result
 
-You LIF has been modified.
+Your LIF has been modified.
 
 
 

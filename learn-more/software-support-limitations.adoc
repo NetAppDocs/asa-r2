@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: learn-more/software-support-limitations.html
-keywords: 
-summary:
+keywords: asa r2, asa a1k, asa 70, asa 90, unsupported features
+summary: "While ASA r2 systems offers a wide range of support for SAN solutions, certain ONTAP software features are not supported."
 ---
 = ONTAP software support and limitations for ASA r2 storage systems
 :icons: font
@@ -13,15 +13,16 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 
 .ASA r2 systems do not support the following:
 
-* FabricPool 
+* iSCSI LIF failover
+* FabricPool
+* LUN thick provisioning 
 * MetroCluster 
 * Object protocols
-* ONTAP S3 SnapMirror
-* S3 APIs
+* ONTAP S3 SnapMirror and S3 APIs
 * SnapMirror to Cloud
 * SnapMirror to non-ASA r2 systems
 * Selective LUN Map (SLM)
-* iSCSI LIF failover
+
 
 .ASA r2 systems support the following:
 
@@ -31,6 +32,6 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 
 .For more information
 
-* See link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
+* See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
 * link:../secure-data/ransomware-protection.html[Learn how to lock snapshots] on your ASA r2 system.
 * link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.

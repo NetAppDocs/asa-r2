@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: administer/reboot-take-over-give-back-nodes.html
-keywords: reboot, take over, give back, nodes, asa r2
-summary: You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  
+keywords: reboot, take over, give back, nodes, asa r2, asa r2, asa a1k, asa 70, asa 90
+summary: "You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons."
 ---
 = Reboot a node on an ASA r2 storage system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  When a node is rebooted, its HA partner automatically executes a takeover, then performs an automatic giveback after the rebooted node comes back online.
+You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  When a node is rebooted, its HA partner automatically executes a takeover. The partner node then performs an automatic giveback after the rebooted node comes back online.
 
 .Steps
 
