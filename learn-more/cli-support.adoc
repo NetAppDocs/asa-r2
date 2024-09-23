@@ -12,7 +12,7 @@ summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, 
 
 Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2 systems use a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availability zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.
 
-Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun` and `volume` commands, command sets and parameters is also limited.  
+Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun` and `volume` commands and parameters is also limited.  
 
 The following commands and command sets are not supported on ASA on r2:
 
@@ -162,7 +162,7 @@ See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] f
 
 It is recommended that you link:../install-setup/initialize-ontap-cluster.html[use System Manager to set up your ONTAP ASA r2 cluster]. System Manager offers a quick and easy guided workflow to get your cluster up and running. However, if you are accustomed to working with ONTAP commands, the ONTAP command line interface (CLI) can optionally be used for cluster setup.  Cluster set up using the CLI offers no additional options or advantages than cluster set up using System Manager.  
 
-During cluster setup, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization and enable encryption of data at rest.
+During cluster setup, your default data storage virtual machine (VM) is created, an initial storage unit is created, and your data LIFs are automatically discovered. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTS) for time synchronization, and enable encryption of data at rest.
 
 .Before you begin
 
