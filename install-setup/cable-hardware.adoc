@@ -296,3 +296,5 @@ image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg[Controller-to-shelf co
 
 .What's next?
 After you've connected the storage controllers to your network and then connected the controllers to your storage shelves, you link:power-on-hardware.html[power on the ASA r2 storage system].
+
+// 2024 Sept 23, ONTAPDOC 1922

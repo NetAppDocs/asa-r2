@@ -15,4 +15,4 @@ Use Astra Control Center to protect your Kubernetes applications.  Astra Control
 
 link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html[Learn more about protecting Kubernetes applications using Astra Control^].
 
-// ONTAPDOC 1927, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1927

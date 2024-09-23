@@ -86,4 +86,3 @@ Creating a storage unit (LUN or namespace) automatically creates a volume from t
 
 .Changes to thin and thick provisioning
 Storage units for are always thinly provisioned on ASA r2 storage systems. Thick provisioning is not supported.
-

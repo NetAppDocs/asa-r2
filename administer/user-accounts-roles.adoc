@@ -108,4 +108,4 @@ Create an administrator user account to enable the account user to perform speci
 
 A new administrator account is created and available for use on your ASA r2 cluster.
 
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

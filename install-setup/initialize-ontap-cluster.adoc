@@ -72,14 +72,16 @@ When setup is complete, you are redirected to the cluster’s management IP addr
 [cols="2" options="header"]
 |===
 // header row
-| To configure IP, do this...
+| To configure IP (iSCSI and NVMe/TCP), do this...
 | To configure FC and NVMe/FC, do this...
 
 // first body row
 a|
 .. Select *IP*; then select *Configure IP interfaces*.
-.. Select *Add a data network*.
-.. Enter the data subnet information; then select *Add*.
+.. Select *Add a subnet*.
+.. Enter a name for the subnet, then enter the subnet IP addresses.
+.. Enter the subnet mask, and optionally enter a gateway; then select *Add*. 
+.. Select the subnet you just created; then select *Save*.
 .. Select *Save*.
 
 a|
@@ -96,3 +98,4 @@ ActiveIQ Config Advisor is a tool for NetApp systems that checks for common conf
 .What's next?
 You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2 system.
 
+// 2024 Sept 23, ONTAPDOC 1922

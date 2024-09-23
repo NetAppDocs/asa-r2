@@ -122,4 +122,5 @@ Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 .Result
 
 You have renewed or deleted an existing client/server certificate or local certificate authority on your ASA r2 system.
-// ONTAPDOC 1930, 2024 Sept 24
+
+// 2024 Sept 24, ONTAPDOC 1930

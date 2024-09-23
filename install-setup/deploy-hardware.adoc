@@ -48,3 +48,5 @@ image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[Install cable manag
 
 .What's next?
 After you've installed the hardware for your ASA r2 system, you link:cable-hardware.html[cable the controllers and storage shelves for your ASA r2 system].
+
+// 2024 Sept 23, ONTAPDOC 1922

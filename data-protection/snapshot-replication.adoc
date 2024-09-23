@@ -182,5 +182,4 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
-
-// ONTAPDOC 1927, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1927

@@ -25,3 +25,5 @@ If you need to migrate your VM workload from an ASA storage system to an ASA r2 
 .What's next?
 
 You are ready to link:../manage-data/provision-san-storage.html[provision storage] to enable your SAN hosts to read and write data to storage units.
+
+// 2024 Sept 23, ONTAPDOC 1925

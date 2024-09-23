@@ -108,3 +108,5 @@ After your registration is approved, you can download any required software. The
 
 .What's next?
 After you've prepared to install your ASA r2 hardware, you link:deploy-hardware.html[install the hardware for your ASA r2 storage system].
+
+// 2024 Sept 23, ONTAPDOC 1922

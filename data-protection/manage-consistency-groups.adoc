@@ -151,4 +151,4 @@ If the consistency group you want to delete is in a replication relationship, yo
 
 After you delete a consistency group, the storage units previously in the consistency group are no longer protected by snapshots.  Consider adding these storage units to another consistency group to protect them against data loss.
 
-// ONTAPDOC 1927, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1927

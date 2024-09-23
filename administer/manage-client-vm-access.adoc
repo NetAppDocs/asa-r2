@@ -117,6 +117,4 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
-
-
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

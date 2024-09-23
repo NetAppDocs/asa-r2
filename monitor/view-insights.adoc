@@ -24,6 +24,4 @@ image:insights.png[screenshot of system manager insights page]
 
 Perform any necessary actions to implement best practices and optimize your cluster security and performance.
 
-
-
-// ONTAPDOC 1930, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1930

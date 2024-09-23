@@ -182,4 +182,4 @@ The initial data transfer for replication starts immediately by default.
 
 Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
-// ONTAPDOC 1927, 2024 Sept 24
+// 2024 Sept 24, ONTAPDOC 1927
