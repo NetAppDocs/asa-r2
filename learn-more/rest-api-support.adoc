@@ -71,3 +71,5 @@ You must have the following:
 The ASA r2 API documentation page is displayed with the API calls organized in major resource categories.
 
 . To see an example of an API call that’s specifically applicable only to ASA r2 systems, scroll down to the *SAN* category and click *GET /storage/storage-units*.
+
+// 2024 Sept 23, ONTAPDOC 1933

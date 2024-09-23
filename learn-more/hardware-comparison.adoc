@@ -71,7 +71,7 @@ The following ASA platforms are classified as ASA r2 systems:
 .For more information
 
 * Learn more about link:https://docs.netapp.com/us-en/ontap-systems-family/intro-family.html[ONTAP hardware systems^].
-* See full configuration support and limitations for ASA and ASA r2 systems in link:hwu.netapp.com[NetApp Hardware Universe^].
+* See full configuration support and limitations for ASA and ASA r2 systems in link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA^].
 
 ==  Summary of ASA r2 system differences
@@ -86,3 +86,5 @@ Creating a storage unit (LUN or namespace) automatically creates a volume from t
 
 .Changes to thin and thick provisioning
 Storage units for are always thinly provisioned on ASA r2 storage systems. Thick provisioning is not supported.
+
+// 2024 Sept 23, ONTAPDOC 1933
