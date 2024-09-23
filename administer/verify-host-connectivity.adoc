@@ -9,7 +9,7 @@ summary: "If there is an issue with host data operations, you can use ONTAP Syst
 :imagesdir: ../media/
 
 [.lead]
-"If there is an issue with host data operations, you can use ONTAP System Manager to verify that the connection from your host to your ASA r2 storage system is active."
+If there is an issue with host data operations, you can use ONTAP System Manager to verify that the connection from your host to your ASA r2 storage system is active.
 
 .Steps
 

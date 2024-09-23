@@ -167,7 +167,7 @@ Your transfer schedule must be a minimum of 30 minutes to be supported.
 
 Now that you have created a replication policy and relationship, your initial data transfer begins as defined in your replication policy.  You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 system goes offline.
 
-== Step 3: Test replication failover
+== Step 4: Test replication failover
 
 Optionally, validate that you can successfully serve data from replicated storage units on a remote cluster if the source cluster is offline.  
 
