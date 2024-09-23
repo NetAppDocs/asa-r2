@@ -110,7 +110,7 @@ The host NQN should be formatted as <nqn.yyyy-mm> followed by a fully qualified 
 
 .What's next?
 
-Your storage units are created and mapped to your hosts. You can now link:data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
+Your storage units are created and mapped to your hosts. You can now link:../data-protection/create-snapshots.html[create snapshots] to protect the data on your ASA r2 system.
 
 .For more information
 
