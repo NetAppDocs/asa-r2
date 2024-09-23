@@ -17,20 +17,18 @@ The ASA r2 REST API is based on the REST API provided with the unified ONTAP per
 
 == Types of API changes
 
-There are several differences between the ASA r2 system REST API and the REST API available with FAS, AFF, and ASA systems. The changes generally fall into one of several categories. Understanding the types of changes will help you better utilize the online API reference documentation.
-
-// FS 8.10
-.New block volume resource
-A new block-volume endpoint has been added to the REST API for ASA r2 systems. The block-volume endpoint provides access to both LUN and NVMe namespace objects, enabling an aggregated view of the resources. This is only available through the REST API.
+There are several types of differences between the ASA r2 system REST API and the unified ONTAP REST API available with FAS, AFF, and ASA systems. These include new endpoints available only with ASA r2 systems. Understanding the types of changes will help you better utilize the online API reference documentation.
 
 .New ASA r2 endpoints not supported in unified ONTAP
-Several endpoints have been added to the ASA r2 REST API which are not available with unified ONTAP. For example, *storage units* provides an aggregated view of the LUNs and NVMe namespaces. There are several endpoints and they're all based on or derived from `/api/storage/storage-units`. You should also review `/api/storage/luns` and `/api/storage/namespaces`.
+Several endpoints have been added to the ASA r2 REST API which are not available with unified ONTAP. 
 
-// Spec 89
-.Restrictions on the HTTP methods used for an existing endpoint
+For example, a new block-volume endpoint has been added to the REST API for ASA r2 systems. The block-volume endpoint provides access to both LUN and NVMe namespace objects, enabling an aggregated view of the resources. This is only available through the REST API.
+
+As another example, the *storage-units* endpoints provide an aggregated view of the LUNs and NVMe namespaces. There are several endpoints and they're all based on or derived from `/api/storage/storage-units`. You should also review `/api/storage/luns` and `/api/storage/namespaces`.
+
+.Restrictions on the HTTP methods used for some endpoints
 Several endpoints available with ASA r2 have restrictions on which HTTP methods can be used as compared with unified ONTAP. For example, POST and DELETE are not allowed when using the endpoint `/api/protocols/nvme/services` with ASA r2 systems.
 
-// Spec 115
 .Property changes for an endpoint and HTTP method
 Some ASA r2 system endpoints and method combinations do not support all the defined properties available in the unified ONTAP personality. For example, when using PATCH with the endpoint `api/storage/volumes/{uuid}`, several properties are not supported with ASA r2, including:
 
@@ -71,4 +69,5 @@ You must have the following:
  . Sign in using your administrator account.
 +
 The ASA r2 API documentation page is displayed with the API calls organized in major resource categories.
-. As an example of an individual API call, scroll down to the *SAN* category and click *GET /storage/storage-units*.
+
+. To see an example of an API call that’s specifically applicable only to ASA r2 systems, scroll down to the *SAN* category and click *GET /storage/storage-units*.
