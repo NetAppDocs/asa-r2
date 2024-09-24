@@ -1,0 +1,111 @@
+---
+sidebar: sidebar
+permalink: administer/user-accounts-roles.html
+keywords: 
+summary:
+---
+= Manage user accounts and roles on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use System Manager to configure active directory domain controller access, LDAP and SAML authentication for your user accounts.  Create user account roles to define specific functions that users assigned to the roles can perform on your cluster.
+
+== Configure active directory domain controller access
+
+Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access. 
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. In the *Security* section, under *Active Directory*, select *Configure*.
+
+.What's next?
+
+You can now enable AD account access on your ASA r2 system.
+
+== Configure LDAP
+
+Configure a Lightweight Directory Access Protocol (LDAP) server to centrally maintain user information for authentication. 
+
+.Before you begin
+
+You must have generated a certificate signing request and added a CA-signed server digital certificate.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. In the *Security* section, next to *LDAP*, select image:icon_gear_white_bg.png[outline of a blue mechanical gear].
+. Enter the necessary LDAP server and binding information; then select *Save*.
+
+.What's next?
+
+You can now use LDAP for user information and authentication.
+
+== Configure SAML authentication
+
+Security Assertion Markup Language (SAML) authentication allows users to be authenticated by a secure identity provider (IdP) instead of the direct service providers such as Active Directory and LDAP.
+
+.Before you begin
+
+* The IdP that you plan to use for remote authentication must be configured.
++
+See the IdP documentation for configuration.
+* You must have the URI of the IdP.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Under *Security*, next to *SAML authentication*, select image:icon_gear_white_bg.png[blue outline of a mechanical gear] .
+. Select *Enable SAML authentication*.
+. Enter the IdP URL and the host system IP address; then select *Save*.
++
+A confirmation window displays the metadata information, which has been automatically copied to your clipboard.
+. Go to the IdP system you specified; then copy the metadata from your clipboard to update the system metadata.
+. Return to the confirmation window in System Manager; then select *I have configured the IdP with the host URI or metadata*.
+. Select *Logout* to enable SAML-based authentication.
++
+The IdP system will display an authentication screen.
+
+.What's next?
+
+You can now use SAML authentication for your user accounts.
+
+== Create user account roles
+
+Roles for cluster administrators and storage VM administrators are automatically created when your cluster is initialized. Create additional user account roles to define specific functions that users assigned to the roles can perform on your cluster.  
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. In the *Security* section, next to *Users and roles*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Under *Roles*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+. Select the role attributes.
++
+To add multiple attributes, select image:icon_add.gif[plus sign followed by the word add in blue letters].
+. Select *Save*.
+
+.Result
+
+A new user account is created and available for use on your ASA r2 system.
+
+== Create an administrator account 
+
+Create an administrator user account to enable the account user to perform specific actions on your cluster based on the role assigned to the account. To enhance account security, set up multi-factor authentication (MFA) when you create the account.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. In the *Security* section, next to *Users and roles*, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Under *Users*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]. 
+. Enter a username; then select a role to assign to the user.
+. Select the user login method and the authentication method.
+. To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
+. Enter a password for the user.
+. Select *Save*.
+
+.Result
+
+A new administrator account is created and available for use on your ASA r2 cluster.
+
+// 2024 Sept 24, ONTAPDOC 1930

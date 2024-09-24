@@ -1,0 +1,37 @@
+---
+sidebar: sidebar
+permalink: videos/video_transcript_replicate_data.html
+keywords: frontmatter, front matter
+summary: View short videos that demonstrate how to use ONTAP System Manager to quickly and easily perform common task on your ASA r2 storage systems.
+---
+= Replicate data to a remote cluster from an ASA r2 storage system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+The following transcript is provided for the video `Replicate data to a remote cluster from an ASA r2 storage system`.
+
+link:videos-common-tasks.html#video_transcript_return_replicate_data[Return to page]
+
+You can use ONTAP System Manager to protect your data by scheduling snapshots of your storage units or consistency groups and replicating to a remote location.  
+
+In this example we’ll schedule snapshots for existing storage units.  
+
+From the System Manager menu, select *Storage*.  
+
+Select the storage unit you want to protect, then select *Protect*. 
+
+You can optionally create an on-demand snapshot by selecting *Add a snapshot now*. 
+
+Under *Remote protection*, select *replicate to a remote cluster*. 
+
+Select the storage VM and replication policy for replication.  By default, the initial data transfer will begin immediately.  
+
+Select *Save*.  
+
+If the storage unit is not in a consistency group, you must create one.  Enter a name for the new consistency group, then select *Create*. 
+
+You have quickly and easily replicated your consistency group to a remote cluster.
+
+// 2024 Sept 23, ONTAPDOC 2393

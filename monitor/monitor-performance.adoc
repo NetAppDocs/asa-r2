@@ -1,0 +1,46 @@
+---
+sidebar: sidebar
+permalink: monitor/monitor-performance.html
+keywords: monitor, cluster, performance, storage units, latency, iops, throughput
+summary: "Monitor the performance of your cluster and storage units to determine how latency, IOPS and throughput are impacting your critical business applications."
+searchtitle: "Monitor cluster performance using ONTAP System Manager| ASA r2"
+---
+= Monitor cluster and storage unit performance on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use ONTAP System Manager to monitor the overall performance of your cluster and the performance of specific storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  Performance can be monitored over various spans of time ranging from one hour to one year.  
+
+For example, suppose a critical application is experiencing high latency and low throughput.  When uou view cluster performance for the last five business days, you notice a decrease in performance at the same time each day.  You use this information to determine that the critical application is competing for cluster resources when a non-critical process begins running in the background. You are then able to modify your QoS policy to limit the impact of the non-critical workload on system resources and to ensure that your critical workload meets minimum throughput targets.
+
+== Monitor cluster performance
+
+Use cluster performance metrics to determine whether you need to shift workloads to minimize latency and maximize IOPS and throughput for your critical applications.
+
+.Steps
+
+. In System Manager, select *Dashboard*.
+. Under *Performance*, view the latency, IOPS, and throughput for the cluster by hour, day, week, month, or year.
+. Select image:icon_download.png[blue downward arrow] to download the performance data.
+
+.What's next?
+
+Use your cluster performance metrics to analyze if you need to modify your QoS policies or make other adjustments to your application workloads to maximize your overall cluster performance.
+
+== Monitor storage unit performance
+
+Use storage unit performance metrics to determine the impact of specific applications on latency, IOPS and throughput. 
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Select the storage unit you want to monitor; then select *Overview*.
+. Under *Performance*, view the latency, IOPS, and throughput for the storage unit by hour, day, week, month, or year.
+. Select image:icon_download.png[blue downward arrow] to download the performance data.
+
+.What's next?
+
+Use your storage unit performance metrics to analyze if you need to modify the QoS policies assigned to your storage units to decrease latency and maximize IOPS and throughput.
+
+// 2024 Sept 24, ONTAPDOC 1930

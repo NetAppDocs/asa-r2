@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: get-started/quick-start.html
+keywords: asa r2, asa a1k, asa a70, asa a90, get started, getting started, quick start, install, set up
+summary: "To get started with an ASA r2 (ASA A1K, ASA A70, ASA A90) system, install the hardware, set up the cluster, set up data access, and provision the storage."
+searchtitle: "Install and set up ASA A1K, ASA A70, and ASA A90 storage systems"
+---
+= Quick start for ASA r2 storage sytems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To get up and running with your ASA r2 system, you install your hardware components, set up your cluster, set up data access from your hosts to the storage system, and provision your storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Install and set up your hardware
+
+[role="quick-margin-para"]
+link:../install-setup/install-setup-workflow.html[Install and set up] your ASA r2 system and deploy it as an HA pair in your ONTAP environment.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Set up your cluster
+
+[role="quick-margin-para"]
+Use System Manager to guide you through a quick and easy process to link:../install-setup/initialize-ontap-cluster.html[set up your ONTAP cluster].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Set up data access
+
+[role="quick-margin-para"]
+link:../install-setup/set-up-data-access.html[Connect your ASA r2 system to your SAN clients].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Provision your storage
+
+[role="quick-margin-para"]
+link:../manage-data/provision-san-storage.html[Provision storage] to begin serving data to your SAN clients.
+
+.What's next?
+You can now use System Manager to protect your data by link:../data-protection/create-snapshots.html[creating snapshots].
+
+// 2024 Sept 23, ONTAPDOC 1922

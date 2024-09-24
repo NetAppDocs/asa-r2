@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: manage-data/delete-storage-units.html
+keywords: delete lun, delete namespace, delete storage unit, asa r2
+summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
+---
+= Delete storage units on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Delete a storage unit if you no longer need to maintain the data contained in the unit.  Deleting storage units that are no longer needed can help you free space needed for other host applications.
+
+.Before you begin
+If the storage unit you want to delete is in a consistency group that is in replication relationship, you must link:../data-protection/manage-consistency-groups.html#remove-a-storage-unit-from-a-consistency-group[remove the storage unit from the consistency group] before you delete it.  
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Hover over the name of the storage unit you want to delete.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Acknowledge that the deletion cannot be undone.
+. Select *Delete*.
+
+.What's next?
+
+You can use the space freed from the deleted storage unit to link:modify-storage-units.html[increase the size] of storage units that need additional capacity. 
+
+// ONTAPDOC 1922, 2024 Sept 24

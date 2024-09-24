@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: administer/reboot-take-over-give-back-nodes.html
+keywords: reboot, take over, give back, nodes, asa r2, asa r2, asa a1k, asa 70, asa 90
+summary: "You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons."
+---
+= Reboot a node on an ASA r2 storage system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons.  When a node is rebooted, its HA partner automatically executes a takeover. The partner node then performs an automatic giveback after the rebooted node comes back online.
+
+.Steps
+
+. In System Manager, select *Cluster > Overview*.
+. Select image:icon_kabob.gif[three vertical blue dots] next to the node you want to reboot; then select *Reboot*.
+. Enter the reason you are rebooting the node; then select *Reboot*.
++
+The reason you enter for the reboot is recorded in the system audit log.
+
+.What's next?
+
+While the node is being rebooted, its HA partner performs a takeover so that there is no interruption in data service.  When the reboot is complete, the HA partner performs a giveback.
+
+// 2024 Sept 24, ONTAPDOC 1930

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar
+permalink: install-setup/initialize-ontap-cluster.html
+keywords: asa r2, asa a1k, asa a70, asa a90, initialize cluster, set up cluster, ontap
+summary: "Learn how to set up the ONTAP cluster on an ASA r2 system using System Manager." 
+searchtitle: "Set up an ONTAP cluster using ONTAP System Manager | ASA r2"
+---
+= Set up an ONTAP cluster on your ASA r2 storage system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP System Manager guides you through a quick and easy workflow to set up an ONTAP ASA r2 cluster.
+
+During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
+
+.Before you begin
+
+Gather the following information:
+
+* Cluster management IP address
++
+The cluster management IP address is a unique IPv4 address for the cluster management interface used by the cluster administrator to access the admin storage VM and manage the cluster. You can obtain this IP address from the administrator responsible for assigning IP addresses in your organization.
+* Network subnet mask
++
+During cluster setup, ONTAP recommends a set of network interfaces appropriate for your configuration.  You can adjust the recommendation if necessary.
+* Network gateway IP address
+* Partner node IP address
+* DNS domain names
+* DNS name server IP addresses
+* NTP server IP addresses
+* Data subnet mask
+
+.Steps
+
+. Discover you cluster network
+.. Connect your laptop to the management switch and access the network computers and devices.
+.. Open File Explorer.
+.. Select *Network*; then right-click and select *Refresh*.
+.. Select either ONTAP icon; then accept any certificates displayed on your screen.
++
+System Manager opens.
+
+. Under *Password*, create a strong password for the admin account.
++
+The password must be at least eight characters long and must contain at least one letter and one number.
+
+. Reenter the password to confirm and then select *Continue*.
+
+. Under *Network addresses*, enter a storage system name or accept the default name.
++
+If you change the default storage system name, the new name must begin with a letter and must be fewer than 44 characters. You can use a period (.), hyphen (-) or underscore (_) in the name.
+
+. Enter the cluster management IP address, subnet mask, gateway IP address and the IP address of the partner node; then select *Continue*.
+
+. Under *Network services*, select the desired options to *Use the Domain Name System (DNS) for resolving host names* and to *Use the Network Time Protocol (NTP) to keep times synchronized*.
++
+If you choose to use the DNS, enter the DNS domain and name servers.  If you choose to use NTP, enter the NTP servers; then select *Continue*.
+
+. Under *Encryption*, enter a passphrase for the Onboard Key Manager (OKM).
++
+Encryption of data at rest using an Onboard Key Manager (OKM) is selected by default.  If you want to use an external key manager, update the selections.   
++
+Optionally, you can configure your cluster for encryption after cluster setup is complete.
+
+. Select *Initialize*.
++
+When setup is complete, you are redirected to the cluster’s management IP address.
+
+. Under *Network*, select *Configure protocols*.
++
+[cols="2" options="header"]
+|===
+// header row
+| To configure IP (iSCSI and NVMe/TCP), do this...
+| To configure FC and NVMe/FC, do this...
+
+// first body row
+a|
+.. Select *IP*; then select *Configure IP interfaces*.
+.. Select *Add a subnet*.
+.. Enter a name for the subnet, then enter the subnet IP addresses.
+.. Enter the subnet mask, and optionally enter a gateway; then select *Add*. 
+.. Select the subnet you just created; then select *Save*.
+.. Select *Save*.
+
+a|
+.. Select *FC*; then select *Configure FC interfaces* and/or *Configure NVMe/FC interfaces*.
+.. Select the FC and/or NVMe/FC ports; then select *Save*.
+
+// table end
+|===
+
+. Optionally, download and run link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor[ActiveIQ Config Advisor] to confirm your configuration.
++
+ActiveIQ Config Advisor is a tool for NetApp systems that checks for common configuration errors.  
+
+.What's next?
+You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2 system.
+
+// 2024 Sept 23, ONTAPDOC 1922

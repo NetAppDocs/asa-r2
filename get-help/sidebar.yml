@@ -1,0 +1,7 @@
+section: get-help
+title: Get help
+entries:
+- title: Manage AutoSupport
+  url: "/get-help/manage-autosupport.html"
+- title: Submit and view support cases
+  url: "/get-help/view-submit-support-case.html"

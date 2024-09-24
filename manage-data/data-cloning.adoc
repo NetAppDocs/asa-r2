@@ -1,0 +1,139 @@
+---
+sidebar: sidebar
+permalink: manage-data/data-cloning.html
+keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups
+summary: Clone storage units and consistency groups on the ASA r2 to create data copies to use outside of your production environment for a variety of purposes. 
+searchtitle: "Data cloning using ONTAP System Manager | ASA r2"
+---
+= Clone data on ASA r2 storage systems
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Data cloning creates copies of storage units and consistency groups on your ASA r2 system using ONTAP System Manager that can be used for application development, testing, backups, data migration or other administrative functions.
+
+== Clone storage units
+When you clone a storage unit, you create a new storage unit on your ASA r2 system that is a point-in-time, writable copy of the storage unit you cloned. 
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Hover over the name of the storage unit you want to clone.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Clone*.
+. Accept the default name for the new storage unit that will be created as a clone or enter a new one.
+. Select the host operating system.
++
+A new snapshot is created for the clone by default.  
+. If you want to use an existing snapshot, create a new host group, or add a new host, select *More Options*.
++
+[cols="2" options="header"]
+|===
+// header row
+| Option
+| Steps
+
+a| Use an existing snapshot
+a| 
+.. Under *Snapshot to clone*, select *Use an existing snaphot*.
+.. Select the snapshot you want to use for the clone.
+
+a| Create a new host group
+
+a| 
+.. Under *Host mapping*, select *New host group*.
+.. Enter a name for the new host group; then select the host initiators to include in the group.
+
+a| Add a new host
+a|
+.. Under *Host mapping*, select *New hosts*.
+.. Enter the a name for the new host; then select *FC* or *iSCSI*.
+.. Select the host initiators from the list of existing initiators or select *Add* to add new initiators for the host.
+
+// table end
+|===
+
+. Select *Clone*.
+
+.What's next?
+
+You have created a new storage unit that is identical to the storage unit you cloned.  You are now ready to use the new storage unit as needed.
+
+== Clone consistency groups
+
+When you clone a consistency group, you create a new consistency group that’s identical in structure, storage units, and data to the consistency group you cloned.  Use a consistency group clone to perform application testing or to migrate data.  Suppose, for example, you need to migrate a production workload out of a consistency group.  You can clone the consistency group to create a copy of your production workload to maintain as a backup until the migration is complete.
+
+The clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
+
+Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
+
+You can create clones from consistency groups stored locally on your ASA r2 system or from consistency groups that have been replicated to remote locations. 
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Clone using local snapshot
+--
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the consistency group you want to clone.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
+. Enter a name for consistency group clone or accept the default name.
+. Select the host operating system.
+. If you want to dissociate the clone from the source consistency group and allocate disk space, select *Split clone*.
+. If you want to use an existing snapshot, create a new host group or add a new host for the clone, select *More Options*.
++
+[cols="2" options="header"]
+|===
+// header row
+| Option
+| Steps
+
+a| Use an existing snapshot
+a|
+.. Under *Snapshot to clone*, select *Use an existing snapshot*.
+.. Select the snapshot you want to use for the clone.
+
+a| Create a new host group
+
+a|
+.. Under *Host mapping*, select *New host group*.
+.. Enter a name for the new host group; then select the host initiators to include in the group.
+
+a| Add a new host
+a|
+.. Under *Host mapping*, select *New hosts*.
+.. Enter the name new host name; then select *FC* or *iSCSI*.
+.. Select the host initiators from the list of existing initiators or select *Add initiator* to add new initiators for the host.
+
+// table end
+|===
+
+. Select *Clone*.
+--
+
+.Clone using remote snapshot
+--
+.Steps
+
+. In System Manager, select *Protection > Replication*.
+. Hover over the *Source* you want to clone.
+. Select image:icon_kabob.gif[three vertical blue dots], then select *Clone*.
+. Select the source cluster and storage VM; then enter a name for the new consistency group or accept the default name.
+. Select the snapshot to clone; then select *Clone*.
+
+.What's next?
+You have cloned a consistency group from your remote location. The new consistency group is locally available on your ASA r2 system to use as needed.
+--
+====
+// end tabbed area
+
+.What's next?
+To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group.
+
+// ONTAPDOC 1922, 2024 Sept 24
