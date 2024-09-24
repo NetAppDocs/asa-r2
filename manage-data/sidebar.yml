@@ -1,0 +1,39 @@
+section: manage-data
+title: Use ONTAP to manage your data
+entries:
+- title: Videos for common tasks
+  url: /videos/videos-common-tasks.html
+- title: Manage your storage
+  entries:
+  - title: Provision storage
+    url: "/manage-data/provision-san-storage.html"
+  - title: Clone data
+    url: "/manage-data/data-cloning.html"  
+  - title: Modify storage units
+    url: "/manage-data/modify-storage-units.html"  
+  - title: Delete storage units
+    url: "/manage-data/delete-storage-units.html"  
+  - title: Storage limits
+    url: "/manage-data/storage-limits.html"  
+- title: Protect your data
+  entries:
+   - title: Create snapshots
+     url: "/data-protection/create-snapshots.html"
+   - title: Set up snapshot replication
+     url: "/data-protection/snapshot-replication.html"  
+   - title: Protect Kubernetes
+     url: "/data-protection/protect-kubernetes.html"  
+   - title: Restore data
+     url: "/data-protection/restore-data.html"
+   - title: Manage consistency groups
+     url: "/data-protection/manage-consistency-groups.html"  
+   - title: Manage protection policies and schedules
+     url: "/data-protection/policies-schedules.html"      
+- title: Secure your data
+  entries:
+  - title: Encrypt data at rest
+    url: "/secure-data/encrypt-data-at-rest.html"
+  - title: Protect against ransomware attacks
+    url: "/secure-data/ransomware-protection.html" 
+  - title: Secure NVMe connections
+    url: "/secure-data/nvme-tcp-connections.html"   

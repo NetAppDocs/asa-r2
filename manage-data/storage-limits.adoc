@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: manage-data/storage-limits.html
+keywords: storage limits, cluster limits, maximum lun size, supported protocols, asa r2, asa a1k, asa a70, asa a90
+summary: "ASA r2 configurations support a maximum of 2 nodes per cluster running the FC, iSCSI, NVMe/FC or NVMe/TCP protocols."
+---
+= ASA r2 storage limits
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+For optimal performance, configuration and support, you should be aware of your ASA r2 storage limits.
+
+ASA r2 systems support the following:
+
+[cols="1h, 1"]
+|===
+
+| Max nodes per cluster
+| 2
+
+| Max storage unit size
+| 128 TB
+
+// table end
+|===
+
+.For more information
+
+For a complete list of the most current ASA r2 storage limits, see link:https://hwu.netapp.com/[NetApp Hardware Universe^].
+
+// ONTAPDOC 1922, 2024 Sept 24

@@ -1,0 +1,83 @@
+---
+sidebar: sidebar
+permalink: data-protection/restore-data.html
+keywords: restore data, asa r2, data restoration
+summary: If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
+---
+= Restore data on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Data in a consistency group or storage unit that is protected by snapshots can be restored if it is lost or corrupted.
+
+== Restore a consistency group
+
+Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Changes made to the storage units after the snapshot was created are not restored..
+
+You can restore a consistency group from a local or remote snapshot.  
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.Restore from a local snapshot
+--
+.Steps 
+
+. In System Manager, select *Protection > Consistency groups*.
+. Double-click the consistency group containing the data you need to restore.
++
+The consistency group details page opens.
+. Select *Snapshots*.
+. Select the snapshot you want to restore; then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Restore consistency group from this snapshot*; then select *Restore*.
+
+--
+
+.Restore from a remote snapshot
+--
+.Steps 
+
+. In System Manager, select *Protection > Replication*.
+. Select *Local destinations*.
+. Select the *Source* you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
+. Select *Restore*.
+. Select the cluster, storage VM, and consistency group to which you want to restore data.
+. Select the snapshot you want to restore from. 
+. When prompted, enter "restore"; then select *Restore*.
+
+--
+
+====
+
+// end tabbed area
+
+.Result
+
+Your consistency group is restored to the point in time of the snapshot used for restoration.
+
+
+== Restore a storage unit
+
+Restoring a storage unit replaces all the data in the storage unit with the data from a snapshot.  Changes made to the storage unit after the snapshot was created are not restored.
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Double-click the storage unit containing the data you need to restore.
++
+The storage unit details page opens.
+. Select *Snapshots*.
+. Select the snapshot you want to restore.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Restore*.
+. Select *Use this snapshot to restore the storage unit*; then select *Restore*.
+
+
+.Result
+
+Your storage unit is restored to the point in time of the snapshot used for restoration.
+
+// 2024 Sept 24, ONTAPDOC 1927

@@ -1,0 +1,90 @@
+---
+sidebar: sidebar
+permalink: release-notes/whats-new-9160.html
+keywords: 
+summary:  
+---
+= What's new in ONTAP 9.16.0 for ASA r2 systems
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about the new capabilities available in ONTAP 9.16.10 for ASA r2 systems.
+
+== Platforms
+
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+
+// first body row
+| New platforms
+a| The following new NetApp ASA r2 systems are available.  These platforms deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+// table end
+|===
+
+
+== System Manager
+
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+
+// first body row
+| link:../get-started/learn-about.html[Streamlined support for SAN-only customers]
+| System Manager is streamlined to provide support for essential SAN functionality while removing visibility of features and functions not supported in SAN environments.  
+
+// table end
+|===
+
+
+== Storage management
+
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+
+// first body row
+| link:../manage-data/provision-san-storage.html[Simplified storage management]
+a| ASA r2 systems introduce the use of storage units with consistency groups for simplified storage management.
+
+* A _storage unit_ makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. 
+* _A consistency group_ is a collection of storage units that are managed as a single unit. 
+
+// table end
+|===
+
+== Data security
+
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+
+// first body row
+| link:../secure-data/encrypt-data-at-rest.html[Onboard key manager and dual-layer encryption] 
+a| ASA r2 systems support an onboard key manager and dual-layer (hardware and software) encryption.
+
+// table end
+|===
+
+// 2024 Sept 23, ONTAPDOC 1921

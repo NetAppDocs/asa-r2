@@ -1,0 +1,82 @@
+---
+sidebar: sidebar
+permalink: administer/update-firmware.html
+keywords: update, firmware, system files, automatic updates, automated updates, asa r2, disable, 
+summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use System Manager to disable automatic updates and view updates before they are installed."
+---
+= Update firmware on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use ONTAP System Manager to disable automated updates or to edit update parameters to show you notifications of available updates before any action is performed.
+
+== Enable automatic updates
+
+Recommended updates for storage firmware, SP/BMC firmware and system files are automatically downloaded and installed on your ASA r2 system by default.  If automatic updates have been disabled, you can enable them to reinstate the default behavior.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Enable*.
+. Read and accept the EULA.
+. Accept the defaults to automatically update your firmware and system files.  Optionally, select to show notifications or to automatically dismiss recommended updates.
+. Select to acknowledge that your update modifications will be applied to all current and future updates.
+. Select *Save*.
+
+.Result
+
+Recommended updates are automatically downloaded and installed on your ASA r2 system based upon your update selections.
+
+== Disable automatic updates
+
+Disable automatic updates if you want the flexibility to view recommended updates before they are installed.  If you disable automatic updates, you need to perform firmware and system file updates manually. 
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Disable*.
+
+.Result
+
+Automatic updates are disabled.  You should regularly check for recommended updates and decide if you want to perform a manual installation.
+
+== View automatic updates
+
+View a list of firmware and system file updates that have been downloaded to your cluster and are scheduled for automatic installation.  Also view updates that have been previously automatically installed.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *View all automatic updates*.
+
+== Edit automatic updates
+
+You can select to have recommended updates for your storage firmware, SP/BMC firmware and your system files automatically downloaded and installed on your cluster, or you can select to have recommended updates automatically dismissed.  If you want to manually control installation or dismissal of updates, select to be notified when a recommended update is available; then you can manually select to install or dismiss it. 
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Edit automatic updates*.
+. Update the selections for automatic updates.
+. Select *Save*.
+
+.Result
+
+Automatic updates are modified based on your selections.
+
+== Update firmware manually
+
+If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates and update your firmware manually.
+
+.Steps
+
+. Download your firmware update file to a server or local client.
+. In System Manager, select *Cluster > Overview*, then select *Update*.
+. Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters].
+
+.Result
+
+Your firmware is updated.
+
+// 2024 Sept 24, ONTAPDOC 1930

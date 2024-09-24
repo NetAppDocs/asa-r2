@@ -1,12 +1,26 @@
 settings:
-  name: "Product Name"
+  name: ASA r2
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
-  # harmony_enabled: true
+    harmony_enabled: true
 
 sidebar: 
   entries:
+  - title: ASA r2 docs
+    url: /index.html
+  - section: release-notes  
+  - section: get-started
+  - section: manage-data 
+  - section: administer
+  - title: Maintain hardware 
+    url: /maintain-hardware.html
+  - section: learn-more
+  - section: get-help
   - title: Legal notices
     url: /legal-notices.html
+
+product-family:
+  name: ONTAP  
+  repo: ontap-family

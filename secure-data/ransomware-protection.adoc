@@ -1,0 +1,31 @@
+---
+sidebar: sidebar
+permalink: secure-data/ransomware-protection.html
+keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection
+summary: "Use tamper-proof snapshots to secure your data.  Tamper-proof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack." 
+---
+= Protect against ransomware attacks on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+For enhanced protection against ransomware attacks, replicate snapshots to a remote cluster, then lock the destination snapshots to make them tamper-proof. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is ever compromised by a ransomware attack.
+
+== Initialize the Snaplock compliance clock
+
+Before you can create tamper-proof snapshots, you must initialize the Snaplock compliance clock on your local and destination clusters.
+
+.Steps
+
+. Select *Cluster > Overview*.
+. In the *Nodes* section, select *Initialize SnapLock Compliance Clock*.
+. Select *Initialize*.
+. Verify that the compliance clock is initialized.
+.. Select *Cluster > Overview*.   
+.. In the *Nodes* section, select image:icon_show_hide.png[three blue columns on white background]; then select *SnapLock Compliance Clock*.
+
+.What’s next?
+
+After you have initialized the Snaplock compliance clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship[create a replication relationship with locked snapshots].
+
+// 2024 Sept 24, ONTAPDOC 1928
