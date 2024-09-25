@@ -16,6 +16,7 @@ If there is an issue with host data operations, you can use ONTAP System Manager
 . In System Manager, select *Host*.
 +
 The host connectivity status is indicated next to name of the host group as follows:
++
 * *OK*: Indicates all initiators are connected to both nodes.
 * *Partially Connected*: Indicates that some of the initiators are not connected both nodes.
 * *None Connected*: Indicates that no initiators are connected. 
