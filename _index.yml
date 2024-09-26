@@ -30,12 +30,6 @@ indexpage:
       links:
         - title: ASA datasheet 
           url: https://www.netapp.com/data-storage/all-flash-san-storage-array/
-        - title: ONTAP command reference
-          url: https://docs.netapp.com/us-en/ontap-cli/
-        - title: ONTAP REST API reference
-          url: https://docs.netapp.com/us-en/ontap-restapi/index.html  
-        - title: ONTAP EMS reference
-          url: https://docs.netapp.com/us-en/ontap-ems/index.html  
     - title: Other ONTAP resources
       links:
         - title: Documentation for other ONTAP systems 
