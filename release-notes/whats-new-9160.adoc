@@ -24,8 +24,8 @@ Learn about the new capabilities available in ONTAP 9.16.0 for ASA r2 systems.
 
 
 // first body row
-| New platforms
-a| The following new NetApp ASA r2 systems are available.  These platforms deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+| Platforms
+a| The following NetApp ASA r2 systems are available.  These platforms deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
 * ASA A1K
 * ASA A70
