@@ -85,6 +85,6 @@ New clusters automatically contain a default data SVM with the SAN protocols ena
 Creating a storage unit (LUN or namespace) automatically creates a volume from the storage availability zone. This results in a simplified and common namespace. Deleting a storage unit automatically deletes the associated volume.
 
 .Changes to thin and thick provisioning
-Storage units for are always thinly provisioned on ASA r2 storage systems. Thick provisioning is not supported.
+Storage units are always thinly provisioned on ASA r2 storage systems. Thick provisioning is not supported.
 
 // 2024 Sept 23, ONTAPDOC 1933
