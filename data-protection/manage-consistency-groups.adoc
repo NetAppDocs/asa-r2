@@ -55,7 +55,7 @@ then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direct
 . Select *Edit*.
 
 .What's next
-Now that your data is protect with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
+Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
 
 == Remove snapshot data protection from a consistency group
@@ -140,7 +140,7 @@ If you need to continue data protection for the storage unit, add the storage un
 If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  After a consistency group is deleted, the storage units previously in the group remain active on the cluster.
 
 .Before you begin
-If the consistency group you want to delete is in a replication relationship, you must break the relationship before you delete the consistency group. After you delete a previously replication consistency group, the storage units that were in the consistency group remain active on the cluster and their replicated copies remain on the remote cluster.
+If the consistency group you want to delete is in a replication relationship, you must break the relationship before you delete the consistency group. After you delete a replication consistency group, the storage units that were in the consistency group remain active on the cluster and their replicated copies remain on the remote cluster.
 
 
 .Steps

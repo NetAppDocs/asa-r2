@@ -12,7 +12,7 @@ searchtitle: "Monitor cluster performance using ONTAP System Manager| ASA r2"
 [.lead]
 Use ONTAP System Manager to monitor the overall performance of your cluster and the performance of specific storage units to determine how latency, IOPS and throughput are impacting your critical business applications.  Performance can be monitored over various spans of time ranging from one hour to one year.  
 
-For example, suppose a critical application is experiencing high latency and low throughput.  When uou view cluster performance for the last five business days, you notice a decrease in performance at the same time each day.  You use this information to determine that the critical application is competing for cluster resources when a non-critical process begins running in the background. You are then able to modify your QoS policy to limit the impact of the non-critical workload on system resources and to ensure that your critical workload meets minimum throughput targets.
+For example, suppose a critical application is experiencing high latency and low throughput.  When you view cluster performance for the last five business days, you notice a decrease in performance at the same time each day.  You use this information to determine that the critical application is competing for cluster resources when a non-critical process begins running in the background. You are then able to modify your QoS policy to limit the impact of the non-critical workload on system resources and to ensure that your critical workload meets minimum throughput targets.
 
 == Monitor cluster performance
 
