@@ -29,7 +29,7 @@ After you have set up your cluster, you should test your AutoSupport connectivit
 
 .What's next?
 
-Your have verified that technical support can receive AutoSupport messages from your ASA r2 system and will have data needed to assist you should you experience a problem.
+You have confirmed that technical support can receive AutoSupport messages from your ASA r2 system, ensuring they have the necessary data to assist you in case of any issues.
 
 == Add AutoSupport recipients
 
