@@ -23,7 +23,7 @@ After you have set up your cluster, you should test your AutoSupport connectivit
 
 .Steps
 
-. In system manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster >Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Test connectivity*.
 . Enter a subject for the AutoSupport message; then select *Send test AutoSupport message*.
 
@@ -37,7 +37,7 @@ Add members of your internal support organization to the list of email addresses
 
 .Steps
 
-. In system manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster >Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *More options*.
 . Next to *Email*, select image:icon_edit_pencil_blue_outline.png[pencil icon]; then select image:icon_add.gif[blue plus sign followed by the word Add].
 . Enter the email address for the recipient; then the the recipient category.
@@ -56,7 +56,7 @@ Should a problem occur on your ASA r2 system, AutoSupport data can significantly
 
 .Steps
 
-. In system manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster >Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Generate and send*.
 . Enter a subject for the AutoSupport message; then select *Send*.
 
@@ -70,7 +70,7 @@ If you are performing an upgrade or maintenance on your ASA r2 system, you might
 
 .Steps
 
-. In system manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster >Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Suppress support case generation*.
 . Specify the number of hours to suppress the generation of support cases; then select the nodes for which you do not want cases generated.
 . Select *Send*.
@@ -85,7 +85,7 @@ If you have suppressed the generation of support cases during an upgrade or main
 
 .Steps
 
-. In system manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster >Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Resume support case generation*.
 . Select the nodes for which you want to resume AutoSupport cases generated.
 . Select *Send*.
