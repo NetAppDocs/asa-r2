@@ -11,9 +11,9 @@ summary: "Use tamper-proof snapshots to secure your data.  Tamper-proof snapshot
 [.lead]
 For enhanced protection against ransomware attacks, replicate snapshots to a remote cluster, then lock the destination snapshots to make them tamper-proof. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is ever compromised by a ransomware attack.
 
-== Initialize the Snaplock compliance clock
+== Initialize the SnapLock compliance clock
 
-Before you can create tamper-proof snapshots, you must initialize the Snaplock compliance clock on your local and destination clusters.
+Before you can create tamper-proof snapshots, you must initialize the SnapLock compliance clock on your local and destination clusters.
 
 .Steps
 
@@ -26,6 +26,6 @@ Before you can create tamper-proof snapshots, you must initialize the Snaplock c
 
 .What’s next?
 
-After you have initialized the Snaplock compliance clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship[create a replication relationship with locked snapshots].
+After you have initialized the SnapLock compliance clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship[create a replication relationship with locked snapshots].
 
 // 2024 Sept 24, ONTAPDOC 1928
