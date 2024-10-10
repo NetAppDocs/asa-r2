@@ -6,4 +6,4 @@ entries:
 - title: What's new in ONTAP 9.16.1
   url: "/release-notes/whats-new-9161.html"  
 - title: Changes to ONTAP defaults and limits 
-  url: "release-notes/changes-to-limits-defaults.html"
+  url: "/release-notes/changes-to-limits-defaults.html"
