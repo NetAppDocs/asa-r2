@@ -31,7 +31,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 .For more information
 
 * Learn more about ASA r2 systems support and limitations in the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
-* Learn more about link:../learn-more/hardware-comparison.html[the new ASA r2 systems in comparison to the ASA systems].
+* Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
 // 2024 Sept 23, ONTAPDOC 1921
