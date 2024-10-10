@@ -4,7 +4,7 @@ permalink: release-notes/changes-to-limits-defaults.html
 keywords: release notes, changes, updates, defaults, limits
 summary:  
 ---
-= What's new in ONTAP 9.16.1 for ASA r2 systems
+= Changes to ONTAP limits and defaults
 :hardbreaks:
 :nofooter:
 :icons: font
