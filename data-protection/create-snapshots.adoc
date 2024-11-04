@@ -64,7 +64,7 @@ You have created a consistency group containing the storage units you want to pr
 
 A snapshot is a local, read-only copy of your data that you can use to restore storage units to specific points in time.  
 
-Snapshots can be created on demand, or they can be created automatically in regular intervals based on a link:https://review.docs.netapp.com/us-en/asa-r2_asa-r2-9160/data-protection/policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
+Snapshots can be created on demand, or they can be created automatically in regular intervals based on a link:policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
 
 .Types of snapshots
 
