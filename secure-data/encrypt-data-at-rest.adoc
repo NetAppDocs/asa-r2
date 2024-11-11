@@ -51,7 +51,7 @@ a|
 
 Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network] between your NVMe/TCP host and your ASA r2 system.
 
-If you need to switch from the onboard key manager to an external key manager or vice versa, see link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/migrate-keys-between-key-managers[Migrate ONTAP data encryption keys between key managers^].
+If you need to switch from the onboard key manager to an external key manager or vice versa, see link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/migrate-keys-between-key-managers.html[Migrate ONTAP data encryption keys between key managers^].
 
 // 2024 Nov 07, ONTAPDOC 2256
 // 2024 Sept 24, ONTAPDOC 1928
