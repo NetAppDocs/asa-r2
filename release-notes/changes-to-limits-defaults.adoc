@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: release-notes/changes-to-limits-defaults.html
+keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa 70, asa 90
+summary:  Learn about the changes to limits and defaults affecting ASA r2 systems. 
+---
+= Changes to ONTAP limits and defaults affecting ASA r2 systems
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp strives to help its customers understand the most important default and limit changes in each ONTAP release.
+
+== Changes to ONTAP limits
+
+[cols="2,4,4" options="header"]
+|===
+// header row
+| Feature
+| Limit change
+| Changed in release...
+
+| Storage units
+| The maximum number of storage units is increased from 2500 per HA pair to 10,000 per HA pair.
+| ONTAP 9.16.1
+// table end
+|===
+
+// 2024 Nov 07, ONTAPDOC 2237
