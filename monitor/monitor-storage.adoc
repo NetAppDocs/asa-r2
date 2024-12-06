@@ -21,7 +21,7 @@ Regularly monitor the amount of storage consumed by your cluster to ensure that,
 . In System Manager, select *Dashboard*.
 . Under *Capacity*, view the amount of physical used space and the amount of available space on your cluster.
 +
-The data reduction ration represents the amount of space saved through storage efficiency.
+The data reduction ratio represents the amount of space saved through storage efficiency.
 
 .What's next?
 If your cluster is running low on space or if it doesn't have the capacity to meet a future demand, you should plan to link:../administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity. 
