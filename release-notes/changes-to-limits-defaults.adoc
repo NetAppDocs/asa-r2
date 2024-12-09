@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: release-notes/changes-to-limits-defaults.html
-keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa 70, asa 90
+keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
 summary:  Learn about the changes to limits and defaults affecting ASA r2 systems. 
 ---
 = Changes to ONTAP limits and defaults affecting ASA r2 systems

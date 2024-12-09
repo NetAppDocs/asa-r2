@@ -1,9 +1,9 @@
 ---
 sidebar: sidebar
 permalink: get-started/learn-about.html
-keywords: asa r2, asa a1k, asa 70, asa 90
-summary: "ASA r2 systems (ASA A1K, ASA A70, and ASA A90) offer a unified hardware and software solution that creates a simplified experience for SAN-only customers."
-searchtitle: "Learn about ASA A1K, ASA A70, and ASA A90 storage systems"
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, learn more, learn about, get started
+summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C80, C60, C30) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
+searchtitle: "Learn about ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 systems"
 ---
 = Learn about ASA r2 storage systems
 :icons: font
@@ -11,7 +11,23 @@ searchtitle: "Learn about ASA A1K, ASA A70, and ASA A90 storage systems"
 
 [.lead]
 
-The NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+The NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+
+The following ASA platforms are classified as ASA r2 systems:
+
+* ASA A series: 
+** ASA A1K
+** ASA A70
+** ASA A90
+** ASA A50
+** ASA A30
+** ASA A20
+
+* ASA C series:
+** ASA C80
+** ASA C60
+** ASA C30
+
 
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP) on a single HA-pair deployment.  SCSI (iSCSI and FC) protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
 
@@ -34,6 +50,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
+// 2024 Jan 24, ONTAPDOC 2260
 // 2024 Dec 06, GitHub Issue 18
 // 2024 Nov 07, ONTAPDOC 2237
 // 2024 Sept 23, ONTAPDOC 1921
