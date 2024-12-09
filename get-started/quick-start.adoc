@@ -5,7 +5,7 @@ keywords: asa r2, asa a1k, asa a70, asa a90, get started, getting started, quick
 summary: "To get started with an ASA r2 (ASA A1K, ASA A70, ASA A90) system, install the hardware, set up the cluster, set up data access, and provision the storage."
 searchtitle: "Install and set up ASA A1K, ASA A70, and ASA A90 storage systems"
 ---
-= Quick start for ASA r2 storage sytems
+= Quick start for ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
