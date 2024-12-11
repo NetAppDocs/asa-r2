@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: get-started/quick-start.html
-keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, get started, getting started, quick start, install, set up
-summary: "To get started with an ASA r2 (ASA A1K, ASA A70, ASA A90) system, install the hardware, set up the cluster, set up data access, and provision the storage."
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c80 asa c60, asa c30 get started, getting started, quick start, install, set up
+summary: "To get started with an ASA r2 (ASA A1K, A90, A70, A50, A30, A20, C80, C60, C30) system, install the hardware, set up the cluster, set up data access, and provision the storage."
 searchtitle: "Install and set up ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 storage systems"
 ---
 = Quick start for ASA r2 storage sytems
@@ -35,4 +35,5 @@ link:../manage-data/provision-san-storage.html[Provision storage] to begin servi
 .What's next?
 You can now use System Manager to protect your data by link:../data-protection/create-snapshots.html[creating snapshots].
 
+// 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1922

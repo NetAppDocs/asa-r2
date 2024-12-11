@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: get-started/learn-about.html
-keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, learn more, learn about, get started
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c80 asa c60, asa c30 learn more, learn about, get started
 summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C80, C60, C30) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
 searchtitle: "Learn about ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 systems"
 ---
@@ -50,7 +50,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
-// 2024 Jan 24, ONTAPDOC 2260
+// 2025 Jan 25, ONTAPDOC 2260
 // 2024 Dec 06, GitHub Issue 18
 // 2024 Nov 07, ONTAPDOC 2237
 // 2024 Sept 23, ONTAPDOC 1921

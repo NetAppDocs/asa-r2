@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/initialize-ontap-cluster.html
-keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, initialize cluster, set up cluster, ontap
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c80 asa c60, asa c30, initialize cluster, set up cluster, ontap
 summary: "Learn how to set up the ONTAP cluster on an ASA r2 system using System Manager." 
 searchtitle: "Set up an ONTAP cluster using ONTAP System Manager | ASA r2"
 ---
@@ -98,4 +98,5 @@ ActiveIQ Config Advisor is a tool for NetApp systems that checks for common conf
 .What's next?
 You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2 system.
 
+// 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1922
