@@ -10,7 +10,9 @@ entries:
   - title: Clone data
     url: "/manage-data/data-cloning.html"  
   - title: Modify storage units
-    url: "/manage-data/modify-storage-units.html"  
+    url: "/manage-data/modify-storage-units.html" 
+  - title: Move storage units
+    url: "/manage-data/move-storage-units.html"   
   - title: Delete storage units
     url: "/manage-data/delete-storage-units.html"  
   - title: Storage limits

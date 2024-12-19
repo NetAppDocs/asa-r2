@@ -36,7 +36,7 @@ If you create more than one storage unit, each unit is created with the same cap
 +
 *Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-selected for your host mapping.  You can accept the host group that is auto-selected for your host mapping or you can select a different host group.  
 +
-If there is no pre-existing host group for hosts running on the operating system you specified, a new host group is automatically created by ONTAP.
+If there is no pre-existing host group for hosts running on the operating system you specified, ONTAP automatically creates new host group.
 
 . If you want to do any of the following, select *More Options* and complete the required steps.
 +
@@ -50,7 +50,7 @@ a| Change the default Quality of Service (QoS) policy
 
 If the default QoS policy has not previously been set on the storage virtual machine (VM) on which the storage unit is being created, this option is not available.
 a| 
-.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
 .. Select an existing QoS policy.
 
 a| Create a new QoS policy
@@ -67,6 +67,12 @@ Setting a maximum throughput and IOPS for a storage unit restricts its impact on
 Setting a minimum throughput and IOPS for a storage unit guarantees that it meets minimum performance targets regardless of demand by competing workloads. 
 
 .. Select *Add*.
+
+a| Change the default performance service level. 
+
+ASA r2 systems offer two performance levels.  The default performance level is *Extreme* which is the highest available level.  You can lower the performance level to *Performance*. 
+a| .. Under *Storage and optimization*, next to the *Performance service level*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
+.. Select *Performance*.
 
 a| Add a new SCSI host
 a|

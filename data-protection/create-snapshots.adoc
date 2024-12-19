@@ -31,7 +31,25 @@ Create a consistency group using new storage units or create a consistency group
 . Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]; then select *Using new storage units*.
 . Enter a name for the new storage unit, the number of units, and the capacity per unit.
 +
-If you create more than one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *More options*; then select *Add a different capacity*.
+If you create more than one unit, each unit is created with the same capacity and the same host operating system by default.  You can optionally assign a different capacity to each unit.
+
+. If you want to do any of the following, select *More Options* and complete the required steps.
++
+[cols="2, 4a" options="header"]
+|===
+// header row
+| Option
+| Steps 
+
+a| Assign a different capacity to each storage unit
+a| Select *Add a different capacity*.
+
+a| Change the default performance service level
+a| Under *Performance service level*, select a different service level.
+
+a| Create a child consistency group
+a| Select *Add child consistency group*.
+
 . Select the host operating system and host mapping.
 . Select *Add*.
 

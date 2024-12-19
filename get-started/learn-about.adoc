@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: 
+permalink: get-started/learn-about.html
 keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c80 asa c60, asa c30 learn more, learn about, get started
 summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C80, C60, C30) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
 searchtitle: "Learn about ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 systems"
