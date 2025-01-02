@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
 permalink: install-setup/set-up-san-host.html
-keywords: 
-summary:  
+keywords: san, host, configuration, fc, iscsi, nvme, zoning, fabric, network 
+summary:  ASA r2 systems follow the same recommendations and guidelines for SAN host configuration as all other ONTAP systems.
 ---
-= Configure SAN hosts with ASA r2 systems
+= SAN host configuration with ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
@@ -12,8 +12,9 @@ summary:
 
 ASA r2 systems follow the same recommendations and guidelines for SAN host configuration as all other ONTAP systems.
 
-It is recommended that you use two or more switches to connect your storage system to one or more SAN hosts. For iSCSI configurations, the network topology connecting your hosts, switches and storage system is referred to as a network.  For FC and FC-NVMe configurations, this same network topology is referred to as a fabric. 
-Multi-network and multi-fabric configurations (those using two or more switches) are recommended because they provide redundancy. Redundancy at the switch and storage layer makes your storage system more fault tolerant and provides support for nondisruptive operations.  
+It is recommended that you use two or more switches to connect your storage system to one or more SAN hosts. For iSCSI configurations, the network topology connecting your hosts, switches and storage system is referred to as a _network_.  For FC and FC-NVMe configurations, this same network topology is referred to as a _fabric_. 
+
+Multi-network ot multi-fabric configurations (those using two or more switches) are recommended because they provide redundancy at both the switch and storage layer.  This redundancy makes your storage system more fault tolerant and provides support for nondisruptive operations.  
 
 The following illustration is an example of an FC configuration with multiple hosts using two fabrics to access a single HA pair.  The FC target port numbers (0c, 0d, 1a, 1b) are also examples. The actual port numbers vary depending on your platform model and whether you are using expansion adapters.
 
@@ -25,7 +26,10 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/configure-f
 == Zoning recommendation for FC hosts
 
 You should configure your FC hosts to use zoning. ASA r2 systems follow the same FC host zoning recommendations and guidelines as all other ONTAP systems. 
-A zone is a logical grouping of one or more ports within a fabric. For devices to be able see each other, connect, create sessions with one another, and communicate, both ports need to have a common zone membership. Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html[FC/FC-NVMe zoning^].
+
+A zone is a logical grouping of one or more ports within a fabric. For devices to be able to discover each other, establish sessions with one another, and communicate, both ports need to have a common zone membership. 
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html[FC/FC-NVMe zoning^].
 
 
 // 2024 Dec 06, ONTAPDOC 2526
