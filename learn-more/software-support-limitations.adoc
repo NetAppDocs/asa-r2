@@ -19,8 +19,8 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 * MetroCluster 
 * Object protocols
 * ONTAP S3 SnapMirror and S3 APIs
-* SnapMirror to Cloud
-* SnapMirror to non-ASA r2 systems
+* SnapMirror (Asynchronous and Synchronous) to Cloud
+* SnapMirror (Asynchronous and Synchronous) to non-ASA r2 systems
 * Selective LUN Map (SLM)
 
 .ASA r2 systems support the following:
@@ -34,4 +34,5 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 * link:../secure-data/ransomware-protection.html[Learn how to lock snapshots] on your ASA r2 system.
 * link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.
 
+// 2024 Dec 06, GitHub issue 19
 // 2024 Sept 23, ONTAPDOC 1933
