@@ -22,6 +22,21 @@ See the ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/onta
 
 If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptive migration of your data.
 
+== Configure your ASA r2 system as a storage provider in your VMware environment
+
+You can use ONTAP tools for VMware to easily enable your ASA r2 system as a storage provider in your VMware environment.
+
+ONTAP tools for VMware vSphere is a set of tools that work in conjunction with VMware vCenter Server Virtual Appliance (vCSA) for easy management of virtual machines on your VMware ESXi hosts. 
+
+ASA r2 systems are supported by link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html[ONTAP tools for VMware vSphere 10.3] and later. 
+
+Learn how to link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware^] and then use it to do the following: 
+
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/add-vcenter.html[Add vCenter Server instances^]
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/configure-esx-server-multipath-and-timeout-settings.html[Configure your ESXi host settings^].
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/discover-storage-systems-and-hosts.html[Discover your ASA r2 storage system and hosts^].
+
+
 .What's next?
 
 You are ready to link:../manage-data/provision-san-storage.html[provision storage] to enable your SAN hosts to read and write data to storage units.
