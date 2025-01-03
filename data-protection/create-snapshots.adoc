@@ -19,12 +19,14 @@ A consistency group is a collection of storage units that are managed as a singl
 
 Create a consistency group using new storage units or create a consistency group using existing storage units.
 
+When you create a consistency group using new storage units, you can assign a different capacity to each storage unit, change the default performance service level, and create up to five child consistency groups. When you create a consistency group using existing storage units, you can add storage units that are already in use.
 
 [role="tabbed-block"]
 ====
 
 .Use new storage units
 --
+
 .Steps
 
 . In System Manager, select *Protection > Consistency groups*.

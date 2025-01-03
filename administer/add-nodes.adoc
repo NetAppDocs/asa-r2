@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: administer/add-nodes.html
+keywords: rename, node, renaming, asa r2
+summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
+---
+= Join nodes ASA r2 nodes to an ONTAP cluster
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning in ONTAP 9.16.1 you can add additional HA pairs to your ASA r2 storage system. After the new nodes of an HA pair have been cabled and powered on, you need to join them to the cluster. 
+
+.Before you begin
+
+Gather the following information:
+
+* The node IP address
+* The intercluster network interface IP address
+* The intercluster network subnet mask
+* The intercluster network gateway
+* If you want to configure the onboard key manager (OKM), you need the OKM passphrase.
+
+.Steps
+
+. In System Manager, select *Cluster > Overview*.
+. Select image:icon_kabob.gif[three vertical blue dots] next to the node you want to join to the cluster; then select *Add node*
+. Enter the IP address for each node.
+. Enter the intercluster network interface IP address, subnet mask, and gateway.
+. If you want to configure the onboard key manager (OKM), enter the OKM passphrase.
++ *Configure onboard key manager for encryption* is selected by default. 
+. Select *Add*.
+
+.Result
+
+The new HA pair is joined to the cluster.
+
+// 2024 Sept 24, ONTAPDOC 1930

@@ -135,6 +135,86 @@ The storage unit is no longer a member of the consistency group.
 .What's next
 If you need to continue data protection for the storage unit, add the storage unit to another consistency group.
 
+== Promote a single consistency group to a parent consistency group
+
+All associated storage units will be moved to a new child consistency group under the parent.
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the consistency group you want convert into a parent consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Promote to parent consistency group*.
+. Enter a name for the parent consistency group or accept the default name; then select the consistency group component type.
+. Select *Promote*.
+
+== Create a child consistency group 
+
+A child consistency group is a subset of the parent consistency group and can contain one or more storage units. You can create a new consistency group as a child to a parent consistency group or you can add an existing consistency group as a child to a parent consistency group.
+
+When you make an existing consistency group a child consistency 
+
+To move a child consistency group to a different parent consistency group, you must first detach the child consistency group from the parent consistency group.
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.From a new consistency group
+--
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the parent consistency group you want to add a child consistency group to.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Add a new child consistency group*.
+. Enter a name for the child consistency group or accept the default name; then select the consistency group component type.    
+. Select to add existing storage units to the child consistency group or to create new storage units.
++
+If you create new storage units, enter the number of units you want to create and the capacity per unit; then enter the host information.
++
+If you create more than one storage unit, each unit is created with the same capacity and the same host operating system. To assign a different capacity to each unit, select *Add a different capacity*.
+. Select *Add*.
+--
+
+.From an existing consistency group
+--
+.Steps
+. In System Manager, select *Protection > Consistency groups*.
+. Select the existing consistency group that you would like to make a child consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Move under different consistency group*.
+. Enter a new name for the child consistency group or accept the default name; then select the consistency group component type.
+. Select the existing consistency group that you would like to make the parent consistency group or select to create a new parent consistency group.
++
+If you select to create a new parent consistency group, enter a name for the parent consistency group or accept the default name; then select the consistency application component type.
+--
+. Select *Move*.
+====
+
+// end tabbed area
+
+
+== Demote a parent consistency group to a single consistency group
+
+When you demote a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the the parent is then managed as a single consistency group.
+
+.Steps 
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the parent consistency group you want to demote.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Demote to a single consistency group*.
+. Select *Demote*
+
+== Detach a child consistency group from a parent consistency group
+
+When you detach a child consistency group from a parent consistency group, the child consistency group is removed from the parent consistency group and is managed as a single consistency group.
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+
+
+
 == Delete a consistency group
 
 If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  After a consistency group is deleted, the storage units previously in the group remain active on the cluster.
