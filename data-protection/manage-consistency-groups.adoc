@@ -212,6 +212,11 @@ When you detach a child consistency group from a parent consistency group, the c
 .Steps
 
 . In System Manager, select *Protection > Consistency groups*.
+. Select the parent consistency group.
+. Select over the child consistency group you want to detach.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Detach from parent*.
+. Enter a new name for the consistency group you are detaching or accept the default name; then select the consistency group application type.
+. Select *Detach*.
 
 
 
