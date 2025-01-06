@@ -23,5 +23,7 @@ entries:
   entries:     
   - title: Set up the cluster
     url: "/install-setup/initialize-ontap-cluster.html"  
+  - title: Set up SAN host configuration
+    url: "/install-setup/set-up-san-host.html"     
   - title: Set up data access
     url: "/install-setup/set-up-data-access.html"    
