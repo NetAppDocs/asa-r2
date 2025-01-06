@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: administer/uprade-ontap.html
+permalink: administer/upgrade-ontap.html
 keywords: update, firmware, system files, automatic updates, automated updates, asa r2, disable, 
 summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use System Manager to disable automatic updates and view updates before they are installed."
 ---
