@@ -13,6 +13,8 @@ entries:
     url: "/monitor/monitor-storage.html"  
   - title: Increase storage capacity
     url: "/administer/increase-storage-capacity.html"  
+- title: Upgrade ONTAP Select
+  url: "/administer/upgrade-ontap.html"
 - title: Update firmware
   url: "/administer/update-firmware.html" 
 - title: View insights
