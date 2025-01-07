@@ -28,11 +28,17 @@ Gather the following information:
 . Enter the IP address for each node.
 . Enter the intercluster network interface IP address, subnet mask, and gateway.
 . If you want to configure the onboard key manager (OKM), enter the OKM passphrase.
-+ *Configure onboard key manager for encryption* is selected by default. 
++ 
+*Configure onboard key manager for encryption* is selected by default. 
 . Select *Add*.
 
 .Result
 
 The new HA pair is joined to the cluster.
+
+.What's next?
+
+After you add the new HA pair to the cluster, you can link:../install-setup/set-up-data-access.html[enable data access from your SAN hosts] to your new nodes.
+
 
 // 2024 Sept 24, ONTAPDOC 1930
