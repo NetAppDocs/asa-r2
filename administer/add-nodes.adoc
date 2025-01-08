@@ -4,7 +4,7 @@ permalink: administer/add-nodes.html
 keywords: rename, node, renaming, asa r2
 summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
 ---
-= Join ASA r2 nodes to an ONTAP cluster
+= Add ASA r2 nodes to an ONTAP cluster
 :icons: font
 :imagesdir: ../media/
 

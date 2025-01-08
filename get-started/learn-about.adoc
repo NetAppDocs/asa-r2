@@ -36,9 +36,7 @@ a|
 // table end
 |===
 
-
-
-ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  SCSI (iSCSI and FC) protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC and NVMe/FC protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
 
 On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  
 
