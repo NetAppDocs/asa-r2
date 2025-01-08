@@ -15,18 +15,27 @@ The NetApp ASA r2 systems deliver a unified hardware and software solution that 
 
 The following ASA platforms are classified as ASA r2 systems:
 
-* ASA A series: 
-** ASA A1K
-** ASA A70
-** ASA A90
-** ASA A50
-** ASA A30
-** ASA A20
+[cols="1h,1h" options="header"]
+|===
+// header row
+a| ASA A series 
+a| ASA C series 
 
-* ASA C series:
-** ASA C80
-** ASA C60
-** ASA C30
+a| 
+* ASA A1K
+* ASA A70
+* ASA A90
+* ASA A50
+* ASA A30
+* ASA A20
+a|
+* ASA C80
+* ASA C60
+* ASA C30
+
+// table end
+|===
+
 
 
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  SCSI (iSCSI and FC) protocols use a symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 

@@ -136,4 +136,19 @@ You have cloned a consistency group from your remote location. The new consisten
 .What's next?
 To protect your data, you should link:../data-protection/create-snapshots.html#step-2-create-a-snapshot[create snapshots] of the cloned consistency group.
 
-// ONTAPDOC 1922, 2024 Sept 24
+
+== Split consistency group clone
+
+When you split a consistency group clone, you dissociate the clone from the source consistency group and allocate disk space for the clone.  The clone becomes a standalone consistency group that can be used independently of the source consistency group.
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the consistency group clone that you want you want to split.
+. Select *Split clone*.
+. Select *Split*.
+
+.Result
+
+The clone is dissociated from the source consistency group and disk space is allocated for the clone.
+
+// 2025 Jan 24, ONTAPDOC 2264
+// 2024 Sept 24, ONTAPDOC 1922
