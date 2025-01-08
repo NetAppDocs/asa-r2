@@ -139,7 +139,7 @@ The storage unit is no longer a member of the consistency group.
 .What's next
 If you need to continue data protection for the storage unit, add the storage unit to another consistency group.
 
-== Convert an existing consistency group to a parent consistency group
+== Convert an existing consistency group into a parent consistency group
 
 Storage units cannot be directly associated with a parent consistency group.  If you convert an existing consistency group to a parent, a new child consistency group is created and the the storage units belonging to the converted consistency group are moved to the new child consistency group.  
 
