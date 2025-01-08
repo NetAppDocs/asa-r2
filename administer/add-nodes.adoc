@@ -9,7 +9,7 @@ summary: "You might need to rename a node to align with the naming conventions o
 :imagesdir: ../media/
 
 [.lead]
-Beginning in ONTAP 9.16.1 you can add additional HA pairs to your ASA r2 storage system. After the new nodes of an HA pair have been cabled and powered on, you need to join them to the cluster. 
+Beginning in ONTAP 9.16.1, ASA r2 storage system support up to 12 nodes per cluster. After the new nodes of an HA pair have been cabled and powered on, you need to join them to the cluster. 
 
 .Before you begin
 
