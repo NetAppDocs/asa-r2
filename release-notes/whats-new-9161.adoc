@@ -54,6 +54,9 @@ a|
 | Update
 | Description
 
+| Support for automatic rebalancing of storage units
+| ONTAP will automatically rebalance storage units across your storage availablity zones for optimal performance and capacity utilization.
+
 | NVMe space deallocation enabled by default
 a| Space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space. 
 
@@ -61,6 +64,7 @@ This greatly improves overall storage efficiency, especially with file systems t
  
 // table end
 |===
+
 
 // 2025 Jan 24, ONTAPDOC 2259
 // 2024 Sept 16, Git Issue 2
