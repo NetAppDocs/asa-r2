@@ -141,6 +141,8 @@ To protect your data, you should link:../data-protection/create-snapshots.html#s
 
 When you split a consistency group clone, you dissociate the clone from the source consistency group and allocate disk space for the clone.  The clone becomes a standalone consistency group that can be used independently of the source consistency group.
 
+.Steps
+
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group clone that you want you want to split.
 . Select *Split clone*.
