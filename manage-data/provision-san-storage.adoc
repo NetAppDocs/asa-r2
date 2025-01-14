@@ -70,7 +70,7 @@ Setting a minimum throughput and IOPS for a storage unit guarantees that it meet
 
 a| Change the default performance service level. 
 
-ASA r2 systems offer two performance levels.  The default performance level is *Extreme* which is the highest available level.  You can lower the performance level to *Performance*. 
+ASA r2 systems offer two performance levels.  The default performance level is *Extreme*, which is the highest available level.  You can lower the performance level to *Performance*. 
 a| .. Under *Storage and optimization*, next to the *Performance service level*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
 .. Select *Performance*.
 
