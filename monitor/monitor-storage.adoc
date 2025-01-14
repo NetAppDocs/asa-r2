@@ -28,7 +28,7 @@ If your cluster is running low on space or if it doesn't have the capacity to me
 
 == Monitor storage availability zone utilization
 
-Each HA pair in an ASA r2 systems uses a common pool of storage called a _storage availability zone_.  The storage availability zone has access to all available disks in the storage system and is visible to both nodes in the HA pair. 
+Each HA pair in an ASA r2 system uses a common pool of storage called a _storage availability zone_.  The storage availability zone has access to all available disks in the storage system and is visible to both nodes in the HA pair. 
 
 If you have 4 or more nodes in your cluster, you can view the amount of space used by the storage availability zone for each HA pair. This metric is not available for 2-node clusters. 
 

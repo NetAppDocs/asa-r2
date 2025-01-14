@@ -11,7 +11,7 @@ summary: Use consistency groups to perform various actions to multiple storage u
 [.lead]
 A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups for simplified storage management. For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. Backing up the storage units as a consistency group instead of individually also provides a consistent backup of all the units, while backing up units individually could potentially create inconsistencies.
 
-Beginning in ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchial structure, one or more consistency groups are configured as children under a parent consistency group. The parent consistency group is managed as a single unit and the child consistency groups are managed as separate units.  This simplifies data protection and management for complex data structures.    
+Beginning in ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. The parent consistency group is managed as a single unit and the child consistency groups are managed as separate units.  This simplifies data protection and management for complex data structures.    
 
 Hierarchical consistency groups allow you to apply individual snapshot policies to each child consistency group and to replicate the snapshots of all the  child consistency groups to a remote cluster as a single unit by replicating the parent.  For example, suppose you create a parent consistency group called `SVM1_app` which contains two child consistency groups: `SVM1app_data` for application data and `SVM1app_logs` for application logs.  Snapshots of `SVM1app_data` are taken every 15 minutes and snapshots of `SVM1app_logs` are taken every hour.  The parent consistency group, `SVM1_app,` has a SnapMirror policy that replicates the snapshots of both `SVM1app_data` and `SVM1app_logs` to a remote cluster every 24 hours.  The parent consistency group `SVM1_app` is managed as a single unit and the child consistency groups are managed as separate units.
 
@@ -141,7 +141,7 @@ If you need to continue data protection for the storage unit, add the storage un
 
 == Convert an existing consistency group into a parent consistency group
 
-Storage units cannot be directly associated with a parent consistency group.  If you convert an existing consistency group to a parent, a new child consistency group is created and the the storage units belonging to the converted consistency group are moved to the new child consistency group.  
+Storage units cannot be directly associated with a parent consistency group.  If you convert an existing consistency group to a parent, a new child consistency group is created and the storage units belonging to the converted consistency group are moved to the new child consistency group.  
 
 .Steps
 
@@ -201,12 +201,12 @@ If you select to create a new parent consistency group, enter a name for the par
 // end tabbed area
 
 .What's next
-After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[setup a replication policy] on the parent consistency group to replicate the snapshots of all the child consistency groups to a remote cluster as a single unit.
+After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up a replication policy] on the parent consistency group to replicate the snapshots of all the child consistency groups to a remote cluster as a single unit.
 
 
 == Demote a parent consistency group to a single consistency group
 
-When you _demote_ a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the the parent is then managed as a single consistency group.
+When you _demote_ a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the parent is then managed as a single consistency group.
 
 .Steps 
 
@@ -232,9 +232,9 @@ When you detach a child consistency group from a parent consistency group, the c
 . Enter a new name for the consistency group you are detaching or accept the default name; then select the consistency group application type.
 . Select *Detach*.
 
-.Whats next?
+.What's next?
 
-link:snapshot-replication.html[Setup a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster as a single consistency group.
+link:snapshot-replication.html[Set up a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster as a single consistency group.
 
 == Delete a consistency group
 

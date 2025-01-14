@@ -53,7 +53,7 @@ a| The following platforms are supported in ONTAP 9.16.1 for ASA r2 systems
 | Description
 
 | Support for automatic rebalancing of storage units
-| ONTAP will automatically rebalance storage units across your storage availablity zones for optimal performance and capacity utilization.
+| ONTAP will automatically rebalance storage units across your storage availability zones for optimal performance and capacity utilization.
 
 | NVMe space deallocation enabled by default
 a| Space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space. 
