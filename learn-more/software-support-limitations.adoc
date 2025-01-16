@@ -15,7 +15,7 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 
 * Default automatic iSCSI LIF failover
 +
-Automatic failover is enabled by default on iSCSI only LIFS.  In ASA r2 systems, the default networking LIF is shared between NVMe and SCSI hosts, so doesn't support automatic failover. link:https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html#enable-automatic-iscsi-lif-failover[Create an iSCSI only LIF to enable automatic iSCSI LIF failover^].  
+Automatic failover is enabled on iSCSI only LIFS by default.  In ASA r2 systems, the default networking LIF is shared between NVMe and SCSI hosts, so doesn't support automatic failover. link:https://docs.netapp.com/us-en/ontap/san-admin/asa-iscsi-lif-fo-task.html#enable-automatic-iscsi-lif-failover[Create an iSCSI only LIF to enable automatic iSCSI LIF failover^].  
 +
 When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the iSCSI LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port for an iSCSI LIF becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
 
