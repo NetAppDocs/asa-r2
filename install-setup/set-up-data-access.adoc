@@ -10,7 +10,7 @@ summary:
 
 [.lead]
 
-To set up data access, you should ensure that specific parameters and settings on your SAN client that are critical for proper operation with ONTAP are configured correctly.  If you are using VMware, you should migrate your virtual machines.
+To set up data access, you should ensure that the critical parameters and settings on your SAN client for proper operation with ONTAP are configured correctly.  If you are providing storage for your VMware environment, you should install OTV 10.3 to simply the management of your ASA r2 storage.
 
 == Set up data access from SAN hosts
 
@@ -33,8 +33,8 @@ ASA r2 systems are supported by link:https://docs.netapp.com/us-en/ontap-tools-v
 Learn how to link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware^] and then use it to do the following: 
 
 * link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/add-vcenter.html[Add vCenter Server instances^]
-* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/configure-esx-server-multipath-and-timeout-settings.html[Configure your ESXi host settings^].
-* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/discover-storage-systems-and-hosts.html[Discover your ASA r2 storage system and hosts^].
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/configure-esx-server-multipath-and-timeout-settings.html[Configure your ESXi host settings^]
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/discover-storage-systems-and-hosts.html[Discover your ASA r2 storage system and hosts^]
 
 
 .What's next?
