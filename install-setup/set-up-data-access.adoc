@@ -28,7 +28,7 @@ You can use ONTAP tools for VMware to easily enable your ASA r2 system as a stor
 
 ONTAP tools for VMware vSphere is a set of tools that work in conjunction with VMware vCenter Server Virtual Appliance (vCSA) for easy management of virtual machines on your VMware ESXi hosts. 
 
-ASA r2 systems are supported by link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html[ONTAP tools for VMware vSphere 10.3] and later. 
+ASA r2 systems are supported by link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html[ONTAP tools for VMware vSphere 10.3^] and later. 
 
 Learn how to link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware^] and then use it to do the following: 
 
