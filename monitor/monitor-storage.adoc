@@ -26,6 +26,27 @@ The data reduction ratio represents the amount of space saved through storage ef
 .What's next?
 If your cluster is running low on space or if it doesn't have the capacity to meet a future demand, you should plan to link:../administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity. 
 
+== Monitor storage availability zone utilization
+
+Each HA pair in an ASA r2 system uses a common pool of storage called a _storage availability zone_.  The storage availability zone has access to all available disks in the storage system and is visible to both nodes in the HA pair. 
+
+If you have 4 or more nodes in your cluster, you can view the amount of space used by the storage availability zone for each HA pair. This metric is not available for 2-node clusters. 
+
+.Steps
+. In System Manager, select *Cluster*; then select *Overview*.
++
+A summary of the storage availability zone utilization is displayed for each HA pair in the cluster.
+
+. If you want more detailed metrics, select a specific storage availability.
++
+Under *Overview*, the capacity of the storage availability zone, the amount of used space, and the data reduction ratio is displayed.
++ 
+Under *Storage units* a list of all the storage units in the storage availability zone is displayed.
+
+.What's next?
+If your storage availability zone is running low on space, you should plan to link:../manage-data/move-storage-units.html[move storage units] to another storage availability zone to balance the storage utilization across the cluster.
+
+
 == Monitor storage unit utilization 
 Monitor the amount of storage consumed by a storage unit so that you can proactively increase the size of the storage unit based on your business needs.  
 
