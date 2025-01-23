@@ -51,6 +51,7 @@ a| Under *Performance service level*, select a different service level.
 
 a| Create a child consistency group
 a| Select *Add child consistency group*.
+|===
 
 . Select the host operating system and host mapping.
 . Select *Add*.
