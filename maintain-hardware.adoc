@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: maintain-hardware.html
-keywords: asa r2, asa a1k, asa 70, asa 90, maintain, hardware
+keywords: asa r2, asa a1k, asa a90, asa a70, maintain, hardware
 summary: "Learn how to perform maintenance procedures on your ASA r2 system."
 ---
 = Maintain your ASA r2 storage system
@@ -11,4 +11,5 @@ summary: "Learn how to perform maintenance procedures on your ASA r2 system."
 [.lead]
 Go to the https://docs.netapp.com/us-en/ontap-systems/asa-r2-landing-maintain/index.html[ASA r2 maintenance documentation^] to learn how to perform maintenance procedures on your ASA r2 system components.
 
+// 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 24, ONTAPDOC 1931

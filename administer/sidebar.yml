@@ -13,6 +13,8 @@ entries:
     url: "/monitor/monitor-storage.html"  
   - title: Increase storage capacity
     url: "/administer/increase-storage-capacity.html"  
+- title: Upgrade ONTAP
+  url: "/administer/upgrade-ontap.html"
 - title: Update firmware
   url: "/administer/update-firmware.html" 
 - title: View insights
@@ -21,6 +23,8 @@ entries:
   url: "/monitor/view-events-jobs.html"    
 - title: Manage nodes 
   entries:
+  - title: Add nodes
+    url: "/administer/add-nodes.html"   
   - title: Reboot, takeover, and give back nodes
     url: "/administer/reboot-take-over-give-back-nodes.html" 
   - title: Rename nodes

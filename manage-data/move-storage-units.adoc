@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: manage-data/move-storage-units.html
+keywords: move lun, lun move, move namespace, move storage unit, asa r2
+summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
+---
+= Move storage units on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster.
+
+You can move a storage unit while the storage unit is online and serving data.  The move operation is non-disruptive. 
+
+.Before you begin
+
+* You must be running ONTAP 9.16.1 or later. 
+* Your cluster must consist of four or more nodes.
+
+.Steps
+
+. In System Manager, select *Storage*; then select the storage unit you want to move.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Move*.
+. Select the storage availability zone you want to move the storage unit to; then select *Move*.
+
+// ONTAPDOC-2263, 2025 Jan 24
