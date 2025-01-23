@@ -1,0 +1,20 @@
+---
+sidebar: sidebar
+permalink: administer/upgrade-ontap.html
+keywords: update, firmware, system files, automatic updates, automated updates, asa r2, disable, 
+summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use System Manager to disable automatic updates and view updates before they are installed."
+---
+= Upgrade ONTAP on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you upgrade your ONTAP software on your ASA r2 system, you can take advantage of new and enhanced ONTAP features that can help you reduce costs, accelerate critical workloads, improve security, and expand the scope of data protection available to your organization.
+
+ONTAP software upgrades for ASA r2 systems follow the same process as upgrades for other ONTAP systems.  If you have an active SupportEdge contract for Active IQ Digital Advisor (also known as Digital Advisor), you should link:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html[prepare to upgrade with Upgrade Advisor^]. Upgrade Advisor provides intelligence that helps you minimize uncertainty and risk by assessing your cluster and creating an upgrade plan specific to your configuration. If you don't have an active SupportEdge contract for Active IQ Digital Advisor, you should link:https://docs.netapp.com/us-en/ontap/upgrade/prepare.html[prepare to upgrade without Upgrade Advisor^].
+
+After you prepare for your upgrade, it is recommended that you perform upgrades using link:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html[automated non-disruptive upgrade (ANDU) from System Manager]. ANDU takes advantage of ONTAP’s high-availability (HA) failover technology to ensure that clusters continue to serve data without interruption during the upgrade.
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONTAP software upgrades]. 
+
+// 2025, Jan 24, ONTAPDOC 2621

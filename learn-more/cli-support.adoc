@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: learn-more/cli-support.html
-keywords: asa r2, cli, asa r2, asa a1k, asa 70, asa 90
+keywords: asa r2, asa r2, asa a1k, asa a90, a70, cli
 summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, ASA 70, ASA 90)."
 ---
 = ONTAP CLI support for ASA r2 storage systems
@@ -256,4 +256,5 @@ Cluster time-service ntp show
 .What's next?
 You are ready to link:../install-setup/set-up-data-access.html[set up data access] from your SAN clients to your system.
 
+// 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1933

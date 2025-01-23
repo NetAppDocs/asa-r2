@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: install-setup/install-setup-workflow.html
 keywords: asa r2, install, setup, workflow
-summary: Get started with the install and setup of the ASA r2 storage system and deploy it as an HA pair in your ONTAP environment.
+summary: Get started with the install and setup of the ASA r2 storage system and deploy it in your ONTAP environment.
 ---
 = Installation and setup workflow for ASA r2 storage systems
 :icons: font
@@ -31,4 +31,5 @@ To cable the hardware, first connect the storage controllers to your network and
 [role="quick-margin-para"]
 Before you power on the controllers, power on each NS224 shelf and assign a unique shelf ID to ensure each shelf is uniquely identified within the setup.
 
+// 2025, Jan 25, ONTAPDOC 2261
 // 2024 Sept 23, ONTAPDOC 1922
