@@ -1,6 +1,6 @@
 indexpage:
   title: ASA r2 documentation
-  lead: The NetApp ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+  lead: The NetApp ASA r2 systems (ASA A1K, A90, A70) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
   summary: NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
   keywords: asa r2, ontap, documentation, asa a1k, asa a70, asa a90
   tiles:  

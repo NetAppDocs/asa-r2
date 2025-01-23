@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/deploy-hardware.html
-keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
+keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70
 summary: Learn how to install the rail kits for the ASA r2 storage system and storage shelves, and secure the ASA r2 hardware in the cabinet or telco rack. 
 ---
 = Install your ASA r2 storage system

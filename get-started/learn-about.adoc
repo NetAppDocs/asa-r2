@@ -1,9 +1,9 @@
 ---
 sidebar: sidebar
 permalink: get-started/learn-about.html
-keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c80 asa c60, asa c30 learn more, learn about, get started
-summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C80, C60, C30) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
-searchtitle: "Learn about ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 systems"
+keywords: asa r2, asa a1k, asa a90, asa a70, learn more, learn about, get started
+summary: "ASA r2 systems (ASA A1K, A90, A70) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
+searchtitle: "Learn about ASA A1K, A90, and A70 systems"
 ---
 = Learn about ASA r2 storage systems
 :icons: font
@@ -11,30 +11,7 @@ searchtitle: "Learn about ASA A1K, A90, A70, A50, A30, A20, C80, C60, and C30 sy
 
 [.lead]
 
-The NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
-
-The following ASA platforms are classified as ASA r2 systems:
-
-[cols="1h,1h" options="header"]
-|===
-// header row
-a| ASA A series 
-a| ASA C series 
-
-a| 
-* ASA A1K
-* ASA A70
-* ASA A90
-* ASA A50
-* ASA A30
-* ASA A20
-a|
-* ASA C80
-* ASA C60
-* ASA C30
-
-// table end
-|===
+The NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC and NVMe/FC protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
 
