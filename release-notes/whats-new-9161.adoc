@@ -21,7 +21,7 @@ Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems.
 | Update
 | Description
 
-| link:data-protection/manage-consistency-groups.html[Support for hierarchical consistency groups]
+| link:../data-protection/manage-consistency-groups.html[Support for hierarchical consistency groups]
 | Hierarchical consistency groups allow you to create a parent consistency group that contains multiple child consistency groups. This simplifies data protection and management for complex data structures.
 
 |===
