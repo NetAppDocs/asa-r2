@@ -39,13 +39,18 @@ To install your ASA r2 storage system, ensure that the site and the cabinet or r
 ** 1U for most switches
 --
 
-.C30, C60, and C80
+.C30 and C60
 --
 ** 2U for a storage system
 ** 2U for each NS224 storage shelf
 ** 1U for most switches
 --
 
+.C80
+--
+** 4U in an HA configuration
+** 2U for each NS224 storage shelf
+** 1U for most switches
 ====
 +
 // end tabbed area
@@ -65,15 +70,14 @@ After you've ensured that the site and the cabinet or rack that you plan to use 
 
 . Carefully open all the boxes and lay out the contents in an organized manner.
 
-. Compare the contents you’ve unpacked with the list on the packing slip. 
+. Compare the contents you’ve unpacked with the list on the packing slip. If there are any discrepancies, note them down for further action. 
 
 +
-NOTE: You can get your packing list by scanning the QR code on the side of the shipping carton.
+You can get your packing list by scanning the QR code on the side of the shipping carton.
 
 +
 The following items are some of the contents you might see in the boxes. 
-+
-Ensure that everything in the boxes matches the list on the packing slip. If there are any discrepancies, note them down for further action.
+
 +
 
 [%rotate, grid="none", frame="none", cols="12,9,4"]
@@ -104,7 +108,7 @@ You can find the serial numbers in the following locations:
 
 - On the packing slip
 - In your confirmation email
-- On each controller or for some systems, on the System Management module of each controller
+- On each controller or for some systems, on the system management module of each controller
 +
 image::../media/drw_ssn_label.svg[Example of the system serial number,width=200]
 +
