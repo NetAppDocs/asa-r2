@@ -467,7 +467,7 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 // End snippet
 
 --
-.A70 and ASA A90
+.A70 and A90
 --
 Choose one of the following cabling options that matches your setup.
 
