@@ -128,14 +128,7 @@ image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connecti
 --
 image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
 --
-.C30 and C60
---
-image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
---
-.C80
---
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
---
+
 ====
 // end tabbed area
 
@@ -161,14 +154,7 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system a
 .A20, A30, and A50
 --
 image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
---
-.C30 and C60
---
-image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
---
-.C80
---
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+
 --
 ====
 +
