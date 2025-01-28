@@ -55,7 +55,6 @@ Shelf ID button
 . Change the first number of the shelf ID:
 .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole to press the shelf ID button.
 +
-On DS series shelves, the shelf ID button is accessible directly at the bottom of the shelf ear.
 
 .. Press and hold the shelf ID button until the first number on the digital display blinks, and then release the button.
 +
@@ -117,21 +116,26 @@ See your laptop's online help for instructions on how to configure the serial co
 [role="tabbed-block"]
 ====
 
-.A1K, A70, and A90
+.A1K
 --
 image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
 --
-
+.A70 and A90
+--
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
+--
 .A20, A30, and A50
 --
 image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
 --
-
-.C30, C60, and C80
+.C30 and C60
 --
 image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
 --
-
+.C80
+--
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
+--
 ====
 // end tabbed area
 
@@ -146,21 +150,26 @@ image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console con
 [role="tabbed-block"]
 ====
 
-.A1K, A70, and A90
+.A1K
 --
 image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
 --
-
+.A70 and A90
+--
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+--
 .A20, A30, and A50
 --
 image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
 --
-
-.C30, C60, and C80
+.C30 and C60
 --
 image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
 --
-
+.C80
+--
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+--
 ====
 +
 // end tabbed area
