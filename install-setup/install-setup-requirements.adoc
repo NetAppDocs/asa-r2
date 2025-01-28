@@ -55,13 +55,12 @@ image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20, A30, or an A50 weig
 --
 
 --
-.C30, C60, and C80
+.C30 and C60
 An ASA C30 or ASA C60 storage system can weigh up to 61.5 lbs (27.9 kg). To lift the storage system, use two people or a hydraulic lift.
 
 image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF C30, C60, or an C80 weight caution icon]
 --
 
---
 .C80
 --
 
@@ -72,41 +71,26 @@ image::../media/drw_a70-90_weight_icon_ieops-1730.svg[AFF A90, AFF A70 weight ca
 ====
 
 
-=== Storage Shelf weights
+=== Storage shelf weights
 Take the necessary precautions when moving or lifting your shelf.
+
 
 [role="tabbed-block"]
 ====
 
-.A1K, A70, and A90
+.NS224 shelf
 --
 
 An NS224 shelf can weigh up to 66.78 lbs (30.29 kg). To lift the shelf, use two people or a hydraulic lift. Keep all components in the shelf (both front and rear) to prevent unbalancing the shelf weight.
 
 image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 NSM100 lifting caution]
-endif::a1k[]
-
 
 --
-.A20, A30, and A50
+.NS224 shelf with NSM100B modules
 --
 An NS224 shelf with NSM100B modules can weigh up to 56.8 lbs (25.8 kg). To lift the shelf, use two people or a hydraulic lift. Keep all components in the shelf (both front and rear) to prevent unbalancing the shelf weight.
 
 image::../media/drw_ns224_nsm100b_lifting_weight_ieops-1832.svg[NS224 with NSM100b lifting caution]
---
-
---
-.C30 and C60
-An NS224 shelf with NSM100B modules can weigh up to 56.8 lbs (25.8 kg). To lift the shelf, use two people or a hydraulic lift. Keep all components in the shelf (both front and rear) to prevent unbalancing the shelf weight.
-
-image::../media/drw_ns224_nsm100b_lifting_weight_ieops-1832.svg[NS224 with NSM100b lifting caution]
---
-
---
-.C80
-An NS224 shelf can weigh up to 66.78 lbs (30.29 kg). To lift the shelf, use two people or a hydraulic lift. Keep all components in the shelf (both front and rear) to prevent unbalancing the shelf weight.
-
-image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 NSM100 lifting caution]
 
 --
 
