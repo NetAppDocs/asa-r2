@@ -25,13 +25,18 @@ To install your ASA r2 storage system, ensure that the site and the cabinet or r
 [role="tabbed-block"]
 ====
 
-.A1K, A70, and A90
+.A1K
 --
 ** 4U in an HA configuration
 ** 2U for each NS224 storage shelf
 ** 1U for most switches
 --
-
+.A70, and A90
+--
+** 4U in an HA configuration
+** 2U for each NS224 storage shelf
+** 1U for most switches
+--
 .A20, A30, and A50
 --
 ** 2U for a storage system
@@ -39,18 +44,7 @@ To install your ASA r2 storage system, ensure that the site and the cabinet or r
 ** 1U for most switches
 --
 
-.C30 and C60
---
-** 2U for a storage system
-** 2U for each NS224 storage shelf
-** 1U for most switches
---
 
-.C80
---
-** 4U in an HA configuration
-** 2U for each NS224 storage shelf
-** 1U for most switches
 ====
 +
 // end tabbed area
