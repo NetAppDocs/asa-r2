@@ -13,7 +13,7 @@ searchtitle: "Learn about ASA A1K, A90, and A70 systems"
 
 The NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
-ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC and NVMe/FC protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC, NVMe/FC and NVMe/TCP protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
 
 On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  
 
@@ -34,6 +34,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
+// 2025 Jan 31, ONTAPPM-103027
 // 2025 Jan 25, ONTAPDOC 2260, ONTAPDOC 2261
 // 2024 Dec 06, GitHub Issue 18
 // 2024 Nov 07, ONTAPDOC 2237
