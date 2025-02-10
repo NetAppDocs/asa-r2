@@ -54,7 +54,7 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Two-node switchless 
 --
 .A70 and A90
 --
-Use the the Cluster/HA interconnect cable to connect to connect ports e1a to e1a and ports e7a to e7a.
+Use the the Cluster/HA interconnect cable to connect ports e1a to e1a and ports e7a to e7a.
 
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
 
@@ -77,6 +77,8 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Two-node switchles
 .A20, A30, and A50
 --
 Connect the controllers to each other to create the ONTAP cluster connections.
+
+*Switchless cluster cabling*
 
 .ASA A30 and ASA A50 with two 2-port 40/100 GbE I/O modules
 [%collapsible]
@@ -145,7 +147,81 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 image:../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector, width=100px]
 +
 image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[a20 switchless cluster cabling diagram using one 25 gbe io module]
+====
 
+*Switched cluster cabling*
+
+.AFF A30 or AFF A50 with two 2-port 40/100 GbE I/O modules
+[%collapsible]
+
+====
+
+.Steps
+
+. Cable the Cluster/HA interconnect connections: 
++
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O modules in slots 2 and 4). The ports are 40/100 GbE.
++
+.. Cable controller A port e4a to cluster network switch A.
+.. Cable controller A port e2a to cluster network switch B.
+.. Cable controller B port e4a to cluster network switch A.
+.. Cable controller B port e2a to cluster network switch B.
++
+NOTE: I/O module ports e2b and e4b are unused and available for host network connectivity.
++
+*40/100 GbE Cluster/HA interconnect cables*
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 40/100 GbE cable, width=100px]
++
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[a30 and a50 switched cluster cabling diagram using two 100gbe io modules]
+
+
+====
+
+.AFF A30 or AFF A50 with one 2-port 40/100 GbE I/O module
+[%collapsible]
+
+
+====
+
+.Steps
+
+. Cable the controllers to the cluster network switches:
++
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 40/100 GbE.
++
+.. Cable controller A port e4a to cluster network switch A. 
+.. Cable controller A port e4b to cluster network switch B.
+.. Cable controller B port e4a to cluster network switch A. 
+.. Cable controller B port e4b to cluster network switch B.
++
+*40/100 GbE Cluster/HA interconnect cables*
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 40/100 GbE cable, width=100px]
++
+image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[Cable cluster connections to cluster network,width=500px]
+
+====
+
+
+.AFF A20 with one 2-port 10/25 GbE I/O module
+[%collapsible]
+====
+
+. Cable the controllers to the cluster network switches:
++
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports(on the I/O module in slot 4). The ports are 10/25 GbE.
++
+.. Cable controller A port e4a to cluster network switch A. 
+.. Cable controller A port e4b to cluster network switch B.
+.. Cable controller B port e4a to cluster network switch A. 
+.. Cable controller B port e4b to cluster network switch B.
++
+*10/25 GbE Cluster/HA interconnect cables*
++
+image:../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector, width=100px]
++
+image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg[a20 switched cluster cabling diagram using one 25gbe io module]
 
 ====
 
@@ -496,7 +572,7 @@ The graphics show controller A cabling in blue and controller B cabling in yello
 .Steps
 
 . Connect controller A to the shelf:
-.. connect controller A port e3a to NSM A port e1a.
+.. Connect controller A port e3a to NSM A port e1a.
 .. Connect controller A port e3b to NSM B port e1b.
 +
 image:../media/drw_isi_g_1_ns224_controller_a_cabling_ieops-1945.svg[Controller A ports e3a and e3b cabled to one NS224 shelf]
