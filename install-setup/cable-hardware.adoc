@@ -30,6 +30,8 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg[Cable pull tab direct
 == Step 1: Cable the cluster/HA connections
 Cable the controllers to your ONTAP cluster. This procedure differs depending on your storage system model and I/O module configuration.
 
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
+
 //open tabbed block 
 [role="tabbed-block"]
 =====
@@ -40,8 +42,6 @@ Cable the controllers to your ONTAP cluster. This procedure differs depending on
 [%collapsible]
 ====
 Use the Cluster/HA interconnect cable to connect ports e1a to e1a and ports e7a to e7a.
-
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
 
 .Steps
 
@@ -59,9 +59,9 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Two-node switchless 
 .Switched cluster cabling
 [%collapsible]
 ====
-Connect your storage controllers to the cluster network switches to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
+Use the 100 GbE cable to connect ports e1a to e1a and ports e7a to e7a.
 
-The cluster interconnect traffic and the HA traffic share the same physical ports.
+NOTE: Switched cluster configurations are supported in 9.16.1 and later.
 
 .Steps
 
@@ -86,8 +86,6 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Cable cluster co
 ====
 Use the the Cluster/HA interconnect cable to connect ports e1a to e1a and ports e7a to e7a.
 
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
-
 .Steps
 
 . Connect port e1a on Controller A to port e1a on Controller B.
@@ -105,9 +103,9 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[Two-node switchles
 .Switched cluster cabling
 [%collapsible]
 ====
-Connect your storage controllers to the cluster network switches to create the ONTAP cluster connections, and then connect the Ethernet ports on each controller to your host network.
+Use the 100 GbE cable to connect ports e1a to e1a and ports e7a to e7a.
 
-The cluster interconnect traffic and the HA traffic share the same physical ports.
+NOTE: Switched cluster configurations are supported in 9.16.1 and later.
 
 .Steps
 
