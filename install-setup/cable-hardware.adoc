@@ -37,6 +37,7 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 =====
 .A1K
 --
+Connect the controllers to each other to create the ONTAP cluster connections.
 
 .Switchless cluster cabling
 [%collapsible]
@@ -80,6 +81,7 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Cable cluster co
 --
 .A70 and A90
 --
+Connect the controllers to each other to create the ONTAP cluster connections.
 
 .Switchless cluster cabling
 [%collapsible]
