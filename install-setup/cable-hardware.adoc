@@ -16,7 +16,7 @@ After you install the rack hardware for your ASA r2 storage system, install the 
 Contact your network administrator for information about connecting the storage system to your network switches.
 
 .About this task
-* These procedures show common configurations. The specific cabling depends on the components ordered for your storage system. For comprehensive configuration and slot priority details, see link:https://hwu.netapp.com[NetApp Hardware Universe^].
+* These procedures show common configurations. The specific cabling depends on the components ordered for your storage system. For comprehensive configuration details, see link:https://hwu.netapp.com[NetApp Hardware Universe^].
 
 * The cabling graphics have arrow icons showing the proper orientation (up or down) of the cable connector pull-tab when inserting a connector into a port.
 +
@@ -260,7 +260,7 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 
 . Cable the controllers to the cluster network switches:
 +
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports(on the I/O module in slot 4). The ports are 10/25 GbE.
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 10/25 GbE.
 +
 .. Cable controller A port e4a to cluster network switch A. 
 .. Cable controller A port e4b to cluster network switch B.
