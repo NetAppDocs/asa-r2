@@ -489,7 +489,7 @@ For the maximum number of shelves supported for your storage system and for all 
 Choose one of the following cabling options that matches your setup.
 
 // Start snippet: collapsible block (open on page load)
-.Option 1: Connect the controllers to one NS224 storage shelf
+.Option 1: One NS224 storage shelf
 [%collapsible]
 =====
 
@@ -513,7 +513,7 @@ image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg[Cable controller B ports 
 // End snippet
 
 // Start snippet: collapsible block (open on page load)
-.Option 2: Connect the controllers to two NS224 storage shelves
+.Option 2: Two NS224 storage shelves
 [%collapsible]
 =====
 Connect each controller to the NSM modules on both NS224 shelves. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
@@ -552,7 +552,7 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 Choose one of the following cabling options that matches your setup.
 
 // Start snippet: collapsible block (open on page load)
-.Option 1: Connect the controllers to one NS224 storage shelf
+.Option 1: One NS224 storage shelf
 [%collapsible]
 =====
 
@@ -577,7 +577,7 @@ image:../media/drw_a70-90_1shelf_cabling_b_ieops-1732.svg[Controller B e11a and 
 // End snippet
 
 // Start snippet: collapsible block (open on page load)
-.Option 2: Connect the controllers to two NS224 storage shelves
+.Option 2: Two NS224 storage shelves
 [%collapsible]
 =====
 Connect each controller to the NSM modules on both NS224 shelves. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
