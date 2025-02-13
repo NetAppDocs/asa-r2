@@ -203,7 +203,7 @@ image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[a20 switc
 
 *Switched cluster cabling*
 
-Connect the controllers to the switches to create the ONTAP cluster connections.
+Connect the controllers to the cluster network switches to create the ONTAP cluster connections.
 
 
 .AFF A30 or AFF A50 with two 2-port 40/100 GbE I/O modules
