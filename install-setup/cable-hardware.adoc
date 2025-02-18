@@ -37,7 +37,7 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 =====
 .A1K
 --
-Create the ONTAP cluster connections. For switchless clusters, cable the controllers to each other. For switched clusters, cable the controllers to the cluster network switches.
+Create the ONTAP cluster connections. For switchless clusters, connect the controllers to each other. For switched clusters, connect the controllers to the cluster network switches.
 
 .Switchless cluster cabling
 [%collapsible]
@@ -81,7 +81,7 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Cable cluster co
 --
 .A70 and A90
 --
-Create the ONTAP cluster connections. For switchless clusters, cable the controllers to each other. For switched clusters, cable the controllers to the cluster network switches.
+Create the ONTAP cluster connections. For switchless clusters, connect the controllers to each other. For switched clusters, connect the controllers to the cluster network switches.
 
 .Switchless cluster cabling
 [%collapsible]
@@ -126,7 +126,7 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Cable cluster 
 
 .A20, A30, and A50
 --
-Create the ONTAP cluster connections. For switchless clusters, cable the controllers to each other. For switched clusters, cable the controllers to the cluster network switches.
+Create the ONTAP cluster connections. For switchless clusters, connect the controllers to each other. For switched clusters, connect the controllers to the cluster network switches.
 
 *Switchless cluster cabling*
 
