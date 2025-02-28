@@ -41,6 +41,10 @@ a| The following NetApp ASA r2 systems are supported beginning in ONTAP 9.16.1. 
 | Update
 | Description
 
+| link:../secure-data/migrate-encryption-keys-between-key-managers.html[Support for encryption key migration between key managers] 
+|
+When you switch from the ONTAP onboard key manager to an external key manager at the cluster level, you can use the ONTAP command line interface (CLI) to easily migrate the encryption keys from one key manager to the other.
+
 | link:../data-protection/manage-consistency-groups.html[Support for hierarchical consistency groups]
 | Hierarchical consistency groups allow you to create a parent consistency group that contains multiple child consistency groups. This simplifies data protection and management for complex data structures.
 
