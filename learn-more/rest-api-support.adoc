@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: learn-more/rest-api-support.html
-keywords: asa, asa r2, rest, rest api, asa r2 rest api, asa a1k, asa a90, asa a70
+keywords: asa, asa r2, rest, rest api, asa r2 rest api, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
 summary: The ASA r2 REST API is based on the REST API provided with the unified ONTAP personality, with a number of changes adapted to the unique characteristics and capabilities of the ASA r2 personality.
 ---
 
@@ -72,5 +72,5 @@ The ASA r2 API documentation page is displayed with the API calls organized in m
 
 . To see an example of an API call that’s specifically applicable only to ASA r2 systems, scroll down to the *SAN* category and click *GET /storage/storage-units*.
 
-// 2025 Jan 25, ONTAPDOC 2260
+// 2025 Feb 28, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1933
