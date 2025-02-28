@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: administer/increase-storage-capacity.html
-keywords: increase, capacity, node, shelf, drive, expand, storage, asa r2, asa a1k, asa a90, asa a70
+keywords: increase, capacity, node, shelf, drive, expand, storage, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
 summary: "Add drives to a node or shelf to increase the capacity of your ASA r2 storage units."
 ---
 = Increase storage capacity on ASA r2 storage systems
@@ -57,5 +57,6 @@ The new drives are not recognized until they are assigned to a node.
 .What’s next?
 After the new drives have been recognized, verify that they have been added and their ownership is specified correctly.
 
+// 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 24, ONTAPDOC 1930

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: learn-more/cli-support.html
-keywords: asa r2, asa r2, asa a1k, asa a90, a70, cli
-summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, ASA 70, ASA 90)."
+keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20cli
+summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, ASA 90, ASA 70, ASA A50, ASA A30, ASA A20)."
 ---
 = ONTAP CLI support for ASA r2 storage systems
 :icons: font

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: install-setup/power-on-hardware.html
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, power on
-summary: Power on each NS224 shelf to assign a unique shelf ID, power on the ASA r2 controllers, and secure the power cables. 
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, power on
+summary: Power on each shelf to assign a unique shelf ID, power on the ASA r2 controllers, and secure the power cables. 
 ---
 = Power on your ASA r2 storage system
 :icons: font
@@ -12,10 +12,13 @@ summary: Power on each NS224 shelf to assign a unique shelf ID, power on the ASA
 After you install the rack hardware for your ASA r2 storage system and install the cables for the controllers and storage shelves, you should power on your storage shelves and controllers.
 
 == Step 1: Power on the shelf and assign shelf ID
-Each NS224 shelf is distinguished by a unique shelf ID. This ID ensures that the shelf is distinct within your storage system setup. By default, shelf IDs are assigned as ‘00’ and ‘01’, but you may need to adjust these IDs to maintain uniqueness across your storage system.
+Each shelf is distinguished by a unique shelf ID. This ID ensures that the shelf is distinct within your storage system setup.
 
 .About this task
-* A valid shelf ID is 00 through 99.
+* A valid shelf ID is 01 through 99. 
++
+If you have internal shelves (storage), which are integrated within the controllers, they are assigned a fixed shelf ID of 00.
+
 * You must power cycle a shelf (unplug both power cords, wait the appropriate amount of time, and then plug them back in) for the shelf ID to take effect.
 
 .Steps
@@ -25,52 +28,53 @@ The shelf powers on and boots automatically when plugged into the power source.
 
 . Remove the left end cap to access the shelf ID button behind the faceplate.
 +
-image::../media/drw_a900_oie_change_ns224_shelf_id_ieops-836.svg[Change NS224 shelf ID,width=300px]
-
+image::../media/drw_change_ns224_shelf_id_ieops-836.svg[Change shelf ID,width=300px]
 +
 
 [cols="20%,80%"]
 |===
 a|
-image::../media/legend_icon_01.svg[Callout number 1,width=20] 
+image::../media/icon_round_1.png[Callout number 1] 
 a|
 Shelf end cap
 a|
-image::../media/legend_icon_02.svg[[Callout number 2,width=20]
+image::../media/icon_round_2.png[[Callout number 2]
 a|
 Shelf faceplate 
 a|
-image::../media/legend_icon_03.svg[[Callout number 3,width=20]
+image::../media/icon_round_3.png[[Callout number 3]
 a|
 Shelf ID number
 a|
-image::../media/legend_icon_04.svg[[Callout number 4,width=20]
+image::../media/icon_round_4.png[[Callout number 4]
 a|
 Shelf ID button
 
 |===
 +
 . Change the first number of the shelf ID:
- .. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole to press the shelf ID button.
- .. Press and hold the shelf ID button until the first number on the digital display blinks, and then release the button.
+.. Insert the straightened end of a paperclip or narrow tipped ball point pen into the small hole to press the shelf ID button.
++
+
+.. Press and hold the shelf ID button until the first number on the digital display blinks, and then release the button.
 +
 It can take up to 15 seconds for the number to blink. This activates the shelf ID programming mode.
 +
 NOTE: If the ID takes longer than 15 seconds to blink, press and hold the shelf ID button again, making sure to press it in all the way.
 
- .. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
+.. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
 +
 Each press and release duration can be as short as one second.
 +
 The first number continues to blink.
 . Change the second number of the shelf ID:
- .. Press and hold the button until the second number on the digital display blinks.
+.. Press and hold the button until the second number on the digital display blinks.
 +
 It can take up to three seconds for the number to blink.
 +
 The first number on the digital display stops blinking.
 
- .. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
+.. Press and release the shelf ID button to advance the number until you reach the desired number from 0 to 9.
 +
 The second number continues to blink.
 . Lock in the desired number and exit the programming mode by pressing and holding the shelf ID button until the second number stops blinking.
@@ -97,32 +101,73 @@ After you've turned on your storage shelves and assigned them unique IDs, turn o
 
 .Steps
 
-. Connect your laptop to the serial console port. This will allow you to monitor the boot sequence when the controllers are turned on.
+. Connect your laptop to the serial console port. This will allow you to monitor the boot sequence when the controllers are powered on.
 
- .. Set the serial console port on the laptop to 115,200 baud with N-8-1.
+.. Set the serial console port on the laptop to 115,200 baud with N-8-1.
 +
-NOTE: See your laptop's online help for instructions on how to configure the serial console port.
+See your laptop's online help for instructions on how to configure the serial console port.
 
- .. Connect the console cable to the laptop, and connect the serial console port on the controller using the console cable that came with your storage system.
+..  Connect the console cable to the laptop, and connect the serial console port on the controller using the console cable that came with your storage system.
  
 .. Connect the laptop to the switch on the management subnet.
 +
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
+// start tabbed area
++
+[role="tabbed-block"]
+====
 
- 
- .. Assign a TCP/IP address to the laptop, using one that is on the management subnet.
+.A1K
+--
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
+--
+.A70 and A90
+--
+image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connections]
+--
+.A20, A30, and A50
+--
+image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
+--
+
+====
+// end tabbed area
+
+[start=2]
+
+. Assign a TCP/IP address to the laptop, using one that is on the management subnet.
 +
 . Plug the power cords into the controller power supplies, and then connect them to power sources on different circuits.
 +
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[Generic power connection diagram]
+// start tabbed area
 +
-* The storage system begins to boot. Initial booting may take up to eight minutes. 
+[role="tabbed-block"]
+====
+
+.A1K
+--
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+--
+.A70 and A90
+--
+image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+--
+.A20, A30, and A50
+--
+image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
+
+--
+====
++
+// end tabbed area
++
+* The system begins to boot. Initial booting may take up to eight minutes. 
 +
 * The LEDs flash on and the fans start, which indicates that the controllers are powering on.
 +
 * The fans might be very noisy when they first start up. The fan noise during start-up is normal.
 
-. Secure the power cables using the securing device on each power supply.
+[start=4]
+. Secure the power cords using the securing device on each power supply.
 
 .What's next?
 After you've turned on your ASA r2 storage system, you link:initialize-ontap-cluster.html[set up an ONTAP ASA r2 cluster].

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: release-notes/changes-to-limits-defaults.html
-keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa a90, asa a70
+keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
 summary:  Learn about the changes to limits and defaults affecting ASA r2 systems. 
 ---
 = Changes to ONTAP limits and defaults affecting ASA r2 systems
@@ -36,5 +36,6 @@ If you are running ONTAP 9.16.1 with more than 2 nodes in a cluster, you cannot 
 // table end
 |===
 
+// 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 24, ONTAPDOC 2410, 2261
 // 2024 Nov 07, ONTAPDOC 2237
