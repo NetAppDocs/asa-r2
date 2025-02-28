@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: learn-more/software-support-limitations.html
-keywords: asa r2, asa a1k, asa a90, asa a70, unsupported features
+keywords: asa r2, asa a1k, asa a90, asa a70, asa, a50, asa a30, asa a20, unsupported features
 summary: "While ASA r2 systems offers a wide range of support for SAN solutions, certain ONTAP software features are not supported."
 ---
 = ONTAP software support and limitations for ASA r2 storage systems
@@ -43,6 +43,6 @@ link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encr
 * See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
 
 
-// 2025 Jan 25, ONTAPDOC 2260
+// 2025 Feb 28, ONTAPDOC 2260
 // 2024 Dec 06, GitHub issue 19
 // 2024 Sept 23, ONTAPDOC 1933
