@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: release-notes/whats-new-9161.html
-keywords: what's new, release notes, 9.16.1, asa r2, asa a1k, asa a90, asa a70
+keywords: what's new, release notes, 9.16.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
 summary:  "Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems."
 ---
 = What's new in ONTAP 9.16.1 for ASA r2 systems
@@ -14,6 +14,26 @@ summary:  "Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2
 [.lead]
 Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems.
 
+== Platforms
+
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+
+// first body row
+| Platforms
+a| The following NetApp ASA r2 systems are supported beginning in ONTAP 9.16.1.  These platforms deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
+
+* ASA A50
+* ASA A30
+* ASA A20
+
+// table end
+|===
+
 == Data protection
 [cols="2,4" options="header"]
 |===
@@ -23,6 +43,18 @@ Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems.
 
 | link:../data-protection/manage-consistency-groups.html[Support for hierarchical consistency groups]
 | Hierarchical consistency groups allow you to create a parent consistency group that contains multiple child consistency groups. This simplifies data protection and management for complex data structures.
+
+|===
+
+== Protocol support
+[cols="2,4" options="header"]
+|===
+// header row
+| Update
+| Description
+
+| link:../get-started/learn-about.html[NVMe support for symmetric Active/Active multipathing] 
+| NVMe/FC and NVMe/TCP now support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.
 
 |===
 
@@ -45,7 +77,8 @@ This greatly improves overall storage efficiency, especially with file systems t
 // table end
 |===
 
-
+// 2025 Feb 28, ONTAPDOC 2260
+// 2025 Jan 31, ONTAPPM-103027
 // 2025 Jan 24, ONTAPDOC 2259
 // 2024 Sept 16, Git Issue 2
 // 2024 Sept 23, ONTAPDOC 1921

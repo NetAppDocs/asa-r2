@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: learn-more/hardware-comparison.html
-keywords: compare asa r2, asa a1k, asa a90, asa a70
+keywords: compare asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, hardware comparison, asa r2
 summary: "ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software."
 searchtitle: "Compare ASA r2 systems to other ONTAP systems"
 ---
@@ -65,8 +65,11 @@ a| *Storage layer support*
 The following ASA platforms are classified as ASA r2 systems:
 
 * ASA A1K
-* ASA A70
 * ASA A90
+* ASA A70
+* ASA A50
+* ASA A30
+* ASA A20
 
 .For more information
 
@@ -90,6 +93,7 @@ Storage units are always thinly provisioned on ASA r2 storage systems. Thick pro
 .Changes to data compression
 Temperature-sensitive storage efficiency is not applied on ASA r2 systems. On ASA r2 systems, compression is not based on _hot_ (frequently accessed) data or _cold_ (infrequently accessed) data.  Compression begins without waiting for data to become cold. 
 
+// 2025 Feb 28, ONTAPDOC 2260
 // 2024 Jan 24, ONTAPDOC 2260
 // 2024 Oct 03, ONTAP GitHub Issue 1496
 // 2024 Sept 23, ONTAPDOC 1933
