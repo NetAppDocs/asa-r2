@@ -26,7 +26,6 @@ When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the 
 * ONTAP S3 SnapMirror and S3 APIs
 * SnapMirror (Asynchronous and Synchronous) to Cloud
 * SnapMirror (Asynchronous and Synchronous) to non-ASA r2 systems
-* Selective LUN Map (SLM)
 
 .ASA r2 systems support the following:
 
@@ -43,6 +42,7 @@ link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encr
 * See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
 
 
+// 2025 Mar 10, GitIssue 34
 // 2025 Feb 28, ONTAPDOC 2260
 // 2024 Dec 06, GitHub issue 19
 // 2024 Sept 23, ONTAPDOC 1933
