@@ -165,6 +165,8 @@ image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system
 * The LEDs flash on and the fans start, which indicates that the controllers are powering on.
 +
 * The fans might be very noisy when they first start up. The fan noise during start-up is normal.
++
+* For ASAr2 A20, A30, or A50 storage systems, the shelf ID display on the front of the system chassis does not illuminate. The system's internal shelf ID is fixed at 00.
 
 [start=4]
 . Secure the power cords using the securing device on each power supply.
