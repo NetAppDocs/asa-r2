@@ -33,7 +33,7 @@ During cluster setup, ONTAP recommends a set of network interfaces appropriate f
 
 .Steps
 
-. Discover you cluster network
+. Discover your cluster network
 .. Connect your laptop to the management switch and access the network computers and devices.
 .. Open File Explorer.
 .. Select *Network*; then right-click and select *Refresh*.
