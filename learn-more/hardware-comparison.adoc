@@ -10,9 +10,9 @@ searchtitle: "Compare ASA r2 systems to other ONTAP systems"
 :imagesdir: ../media/
 
 [.lead]
-ASA r2 systems offer a unified hardware and software solution for SAN-only environments built on all flash platforms. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its storage layer, supported protocols, and ONTAP personality.
+ASA r2 systems offer a hardware and software solution for SAN-only environments built on all flash platforms. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its storage layer, supported protocols, and ONTAP personality.
 
-On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on all other ONTAP systems (ASA, AFF, FAS) is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
+On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on ASA systems is identified as the _ASA ONTAP personality_.  ONTAP running on AFF and FAS ONTAP systems is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
 
 You can verify the personality of your ONTAP storage from System Manager or from the ONTAP CLI. 
 
@@ -93,6 +93,7 @@ Storage units are always thinly provisioned on ASA r2 storage systems. Thick pro
 .Changes to data compression
 Temperature-sensitive storage efficiency is not applied on ASA r2 systems. On ASA r2 systems, compression is not based on _hot_ (frequently accessed) data or _cold_ (infrequently accessed) data.  Compression begins without waiting for data to become cold. 
 
+// 2025 April 10, ONTAPDOC 2892
 // 2025 Feb 28, ONTAPDOC 2260
 // 2024 Jan 24, ONTAPDOC 2260
 // 2024 Oct 03, ONTAP GitHub Issue 1496
