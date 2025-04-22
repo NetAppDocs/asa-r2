@@ -166,7 +166,7 @@ image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system
 +
 * Be aware that the fans may emit a high level of noise when they first start up. The fan noise during start-up is normal.
 +
-* For ASA A20, A30, A50 and ASA C30 storage systems, the shelf ID display on the front of the system chassis does not illuminate.
+* For ASA A20, ASA A30, and ASA A50 storage systems, the shelf ID display on the front of the system chassis does not illuminate.
 
 [start=4]
 . Secure the power cords using the securing device on each power supply.
