@@ -43,7 +43,12 @@ To install your ASA r2 storage system, ensure that the site and the cabinet or r
 ** 2U for each NS224 storage shelf
 ** 1U for most switches
 --
-
+.C30
+--
+** 2U for a storage system
+** 2U for each NS224 storage shelf
+** 1U for most switches
+--
 
 ====
 +

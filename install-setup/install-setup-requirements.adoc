@@ -54,6 +54,14 @@ An ASA A20, ASA A30, or ASA A50 storage system can weigh up to 61.5 lbs (27.9 kg
 image::../media/drw_g_lifting_weight_ieops-1831.svg[ASA A20, A30, or an A50 weight caution icon]
 --
 
+.C30
+--
+
+An ASA C30 storage system can weigh up to 61.5 lbs (27.9 kg). To lift the storage system, use two people or a hydraulic lift.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[ASA A20, A30, or an A50 weight caution icon]
+--
+
 ====
 
 
