@@ -70,9 +70,9 @@ You have created a subnet which you can now use to simplify the creation of your
 
 A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted.
 
-When an IP data LIF is created, it can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
+On an ASA r2 system, you can create IP, FC, NVMe/FC LIFs.  An IP data LIF can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
 
-If you want to enable automatic iSCSI LIF failover, you must create an iSCSI only LIF.  When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the iSCSI LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port for an iSCSI LIF becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
+If you want to enable automatic iSCSI LIF failover, you must create an IP LIF for iSCSI only traffic.  When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the IP iSCSI LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port for an IP iSCSI LIF becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
 
 .Before you begin
 
@@ -89,7 +89,7 @@ If you want to enable automatic iSCSI LIF failover, you must create an iSCSI onl
 
 . Select the interface type and protocol; then select the storage VM.
 +
-To create a single protocol LIF, select only one protocol.  For example, to create an iSCSI only LIF, select *iSCSI*.
+To enable iSCSI LIF failover, select only the IP protocol.
 
 . Enter a name for the LIF or accept the default name.
 
@@ -121,4 +121,5 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
+// 2025 Apr 22, ONTAPDOC 2970
 // 2024 Sept 24, ONTAPDOC 1930
