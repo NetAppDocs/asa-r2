@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/prepare-hardware.html
-keywords: prepare, hardware installation, aff a1k, aff a70, aff a90, aff c80, asa r2, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50
+keywords: prepare, hardware installation, aff a1k, aff a70, aff a90, aff c80, asa r2, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30
 summary: Prepare to install the ASA r2 storage system in your ONTAP environment and register the hardware to access support benefits. 
 ---
 = Prepare to install an ASA r2 storage system

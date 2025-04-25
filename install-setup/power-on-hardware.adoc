@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/power-on-hardware.html
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, power on
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30, power on
 summary: Power on each shelf to assign a unique shelf ID, power on the ASA r2 controllers, and secure the power cables. 
 ---
 = Power on your ASA r2 storage system
