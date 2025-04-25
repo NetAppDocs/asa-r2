@@ -20,7 +20,7 @@ Contact your network administrator for information about connecting the storage 
 
 * The cluster/HA and host network cabling procedures show common configurations.
 +
-If you do not see your configuration here, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to cable your storage system. 
+If you do not see your configuration in the cabling procedures, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to properly cable your storage system. 
 
 * If you have an ASA A1K, ASA A70, or ASA A90 storage system, the I/O slots are numbered 1 through 11.
 +
