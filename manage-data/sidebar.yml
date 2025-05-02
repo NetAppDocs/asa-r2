@@ -42,4 +42,6 @@ entries:
   - title: Protect against ransomware attacks
     url: "/secure-data/ransomware-protection.html" 
   - title: Secure NVMe connections
-    url: "/secure-data/nvme-tcp-connections.html"   
+    url: "/secure-data/nvme-tcp-connections.html" 
+  - title: Secure IP connections
+    url: "/secure-data/iscsi-nvme-tcp-connections.html"
