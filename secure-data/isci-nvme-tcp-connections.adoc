@@ -39,7 +39,7 @@ a|
 |===
 
 
-Related information
+.What's next? 
 
 link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html[Configure IP security for the ONTAP network]
 
