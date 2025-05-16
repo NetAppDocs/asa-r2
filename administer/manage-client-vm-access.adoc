@@ -12,6 +12,27 @@ searchtitle: "Manage client access to storage using ONTAP System Manager | ASA r
 [.lead]
 Storage units on an ASA r2 system are contained inside storage virtual machines (VMs).  Storage VMs are used to serve data to your SAN clients. Use ONTAP System Manager to create a LIF (network interface) for your SAN clients to connect to a storage VM and access data in the storage units. You can optionally use subnets to simplify LIF creation and IPspaces to provide your storage VMs with their own secure storage, administration, and routing.
 
+== Create a storage VM
+
+During cluster setup, your default data storage virtual machine (VM) is created. All new storage units are created inside your default data storage VM unless you create and select a different storage VM.  You might want to can create an additional storage VM to segregate your storage units for different applications, departments or clients.  For example, you might want to create a storage VM for your development environment and another storage VM for your production environment, or you might want to create a storage VM for your finance department and another storage VM for your marketing department.
+
+.Steps
+
+. Select *Cluster > Storage VMs*.
+. Select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
+. Enter a name for the storage VM or accept the default name.
+. Under *Configure protocols*, select the protocols for the storage VM.
++
+Select *IP* for iSCSI and NVMe/TCP.  Select *FC* for Fibre Channel or NVMe/FC.
+
+. Under *Storage VM administration*, select *Manage administrator account*; then enter the username and password for the administrator account.
+. Add a network interface for the storage VM.
+. Select *Save*.
+
+.What's next?
+
+You have created a storage VM.  You can now use the storage VM to link:../manage-data/provision-san-storage.html[provision storage].
+
 == Create IPspaces
 
 An IPspace is a distinct IP address space in which storage VMs reside.  When you create IPspaces, you enable your storage VMs to have their own secure storage, administration, and routing. You also enable clients in administratively separate network domains to use overlapping IP addresses from the same IP address subnet range. 
@@ -121,5 +142,6 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
+// 2025 May 16, GitIssue 43
 // 2025 Apr 22, ONTAPDOC 2970
 // 2024 Sept 24, ONTAPDOC 1930
