@@ -122,6 +122,24 @@ To enable iSCSI LIF failover, select only the IP protocol.
 
 You have created a LIF for data access.
 
+.What's next?
+If you have created a IP LIF for iSCSI, you can use the ONTAP command line interface (CLI) to enable automatic iSCSI LIF failover.  
+
+=== Enable automatic iSCSI LIF failover
+
+If there are iSCSI LIFs on the SVM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled for automatic LIF failover either. If automatic LIF failover is not enabled and there is a failover event your iSCSI LIFs will not migrate. 
+ 
+You must use the ONTAP command line interface (CLI) to enable automatic iSCSI LIF failover.
+
+.Step 
+
+. Enable automatic iSCSI LIF failover:
++
+[source,cli]
+----
+network interface modify -vserver <SVM_name> -lif <iscsi_lif> -failover-policy sfo-partner-only -auto-revert true
+----
+
 == Modify a LIF (network interfaces)
 
 LIFs can be disabled or renamed as needed.  You can also change the LIF IP address and subnet mask.
@@ -142,6 +160,6 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
-// 2025 May 16, GitIssue 43
+// 2025 May 16, GitIssue 49
 // 2025 Apr 22, ONTAPDOC 2970
 // 2024 Sept 24, ONTAPDOC 1930
