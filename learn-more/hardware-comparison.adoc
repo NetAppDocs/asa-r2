@@ -23,7 +23,7 @@ The personality of your ONTAP storage system cannot be changed.
 
 The storage layer for ONTAP systems running the unified ONTAP personality uses aggregates as the base unit of storage.  An aggregate owns a specific set of the disks available in a storage system.  The aggregate allocates space on the disks it owns to volumes for LUNs and namespaces.  A unified ONTAP user can use the command line interface (CLI) to create and modify aggregates, volumes, LUNs and namespaces.  
 
-The storage layer in ASA r2 systems uses a storage availability zone instead of aggregates. A storage availability zone is a common pool of storage that has access to all available disks in the storage system. The storage availability zone is visible to both nodes in an ASA r2 HA pair. When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.  Because of this automated and simplified approach to storage management, certain System Manager options, ONTAP commands, and REST API endpoints are not available or have limited usage on an ASA r2 system.  For example, because volume creation and management is automated for ASA r2 systems, the *Volumes* menu does not appear in System Manager and the `volume create` command is not supported.  
+The storage layer in ASA r2 systems uses a storage availability zone instead of aggregates. A storage availability zone is a common pool of storage that has access to all available disks in the storage system. The storage availability zone is visible to both nodes in an ASA r2 HA pair. When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume within the selected storage virtual machine (VM) in the storage availability zone to house the storage unit.  Because of this automated and simplified approach to storage management, certain System Manager options, ONTAP commands, and REST API endpoints are not available or have limited usage on an ASA r2 system.  For example, because volume creation and management is automated for ASA r2 systems, the *Volumes* menu does not appear in System Manager and the `volume create` command is not supported.  
 
 ASA r2 storage compares to other ONTAP storage systems in the following ways:
 
@@ -93,6 +93,7 @@ Storage units are always thinly provisioned on ASA r2 storage systems. Thick pro
 .Changes to data compression
 Temperature-sensitive storage efficiency is not applied on ASA r2 systems. On ASA r2 systems, compression is not based on _hot_ (frequently accessed) data or _cold_ (infrequently accessed) data.  Compression begins without waiting for data to become cold. 
 
+// 2025 May 16, GitIssue 43
 // 2025 April 10, ONTAPDOC 2892
 // 2025 Feb 28, ONTAPDOC 2260
 // 2024 Jan 24, ONTAPDOC 2260
