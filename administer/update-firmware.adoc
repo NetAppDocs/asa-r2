@@ -18,9 +18,9 @@ Recommended updates for storage firmware, SP/BMC firmware and system files are a
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Enable*.
-. Read and accept the EULA.
-. Accept the defaults to automatically update your firmware and system files.  Optionally, select to show notifications or to automatically dismiss recommended updates.
+. Under *Software updates*, select *Enable*.
+. Read the EULA.
+. Accept the defaults to *Show notification* of recommended updates.  Optionally, select to *Automatically update* or to *Automatically dismiss* recommended updates.
 . Select to acknowledge that your update modifications will be applied to all current and future updates.
 . Select *Save*.
 
@@ -35,7 +35,7 @@ Disable automatic updates if you want the flexibility to view recommended update
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Disable*.
+. Under *Software updates*, select *Disable*.
 
 .Result
 
@@ -48,7 +48,7 @@ View a list of firmware and system file updates that have been downloaded to you
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *View all automatic updates*.
+. Next to *Software updates* select image:icon_arrow.gif[blue arrow pointing to the right], then select *View all automatic updates*.
 
 == Edit automatic updates
 
@@ -57,7 +57,7 @@ You can select to have recommended updates for your storage firmware, SP/BMC fir
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Next to *Automatic update* select image:icon_kabob.gif[three vertical blue dots], then select *Edit automatic updates*.
+. Next to *Software updates* select image:icon_arrow.gif[blue arrow pointing to the right], then select *All other updates*.
 . Update the selections for automatic updates.
 . Select *Save*.
 
@@ -72,8 +72,9 @@ If you want the flexibility of viewing recommended updates before they are downl
 .Steps
 
 . Download your firmware update file to a server or local client.
-. In System Manager, select *Cluster > Overview*, then select *Update*.
-. Select *Firmware update*; the select image:icon_update_firmware.png[blue rectangle containing a plus sign followed by the words update firmware in white letters].
+. In System Manager, select *Cluster > Overview*, then select *All other updates*.
+. Under *Manual Updates*, select *Add firmware files*; then select *Download from the server* or *Upload from the local client*.
+. Install the firmware update file.
 
 .Result
 
