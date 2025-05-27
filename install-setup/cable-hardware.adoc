@@ -672,6 +672,16 @@ For the maximum number of shelves supported for your storage system and for all 
 
 .A1K
 --
+// Issue ontap-systems/350 - cover NSM100B
+
+The AFF A1K storage systems support NS224 shelves with either the NSM100 or NSM100B module. The major differences between the modules are:  
+
+** NSM100 shelf modules use built-in port e0a and e0b.
+
+** NSM100B shelf modules use ports e1a and e1b in slot 1.
+
+The following cabling example shows NSM100 modules in the NS224 shelves when referring to shelf module ports.
+
 Choose one of the following cabling options that matches your setup.
 
 // Start snippet: collapsible block (open on page load)
@@ -735,6 +745,17 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 --
 .A70 and A90
 --
+
+// Issue ontap-systems/350 - cover NSM100B
+
+The AFF A70 and 90 storage systems support NS224 shelves with either the NSM100 or NSM100B module. The major differences between the modules are:  
+
+** NSM100 shelf modules use built-in ports e0a and e0b.
+
+** NSM100B shelf modules use ports e1a and e1b in slot 1.
+
+The following cabling example shows NSM100 modules in the NS224 shelves when referring to shelf module ports.
+
 Choose one of the following cabling options that matches your setup.
 
 // Start snippet: collapsible block (open on page load)
