@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: secure-data/iscsi-nvme-tcp-connections.html
+keywords: asa r2, secure data, data security, encrypt, data at rest, data-at-rest, encryption, iscsi, nvme/tcp, ipsec, data-in-flight, ip security, secure connections, secure data connections, hardware offload 
+summary: "If you are using the IP protocol on your ASA r2 system, you can configure IP security (IPsec) to enhance your data security."
+---
+= Secure IP connections on your ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you are using the IP protocol on your ASA r2 system, you can configure IP security (IPsec) to enhance your data security.  IPsec is an internet standard that provides data-in-flight encryption, authentication for the traffic flowing between the network endpoints at an IP level, and protection against replay and malicious man-in-the-middle attacks on your data. 
+
+For ASA r2 systems, IPsec is available for iSCSI and NVMe/TCP hosts.
+
+On certain ASA r2 systems, several of the cryptographic operations, such as encryption and integrity checks, can be offloaded to a supported network interface controller (NIC) card. The throughput for operations offloaded to the NIC card is approximately 5% or less.  This can significantly improve the performance and throughput of the network traffic protected by IPsec.
+
+The following NIC cards are supported for hardware offload on the following ASA r2 systems:
+
+[cols="2", options="header"]
+|===
+
+| Supported NIC card | ASA r2 systems
+
+a| X50131A - (2p, 40G/100G/200G/400G Ethernet Controller)
+
+a|
+* ASA A1K
+* ASA A90
+* ASA A70
+
+a|X60132A - (4p, 10G/25G Ethernet Controller)
+
+a|
+* ASA A50
+* ASA A30
+* ASA A20
+
+|===
+
+
+.What's next? 
+
+link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html[Configure IP security for the ONTAP network]
+
+
+// 2025 Apr 30, ONTAPDOC 2785
