@@ -565,11 +565,6 @@ image:../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector, width=100p
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cable to 40/100gbe ethernet host network switches]
 ====
 
---
-
-*FC host cabling*
---
-
 .ASA C30 with one 4-port 64 Gb/s FC I/O module
 [%collapsible]
 ====
