@@ -344,7 +344,7 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg
  
 *Switched cluster cabling*
 
-Connect the controllers to the cluster network switches to create the ONTAP cluster connections
+Connect the controllers to the cluster network switches to create the ONTAP cluster connections.
 
 .ASA C30 with two 2-port 40/100 GbE I/O modules
 [%collapsible]
@@ -676,9 +676,9 @@ For the maximum number of shelves supported for your storage system and for all 
 
 The AFF A1K storage systems support NS224 shelves with either the NSM100 or NSM100B module. The major differences between the modules are:  
 
-** NSM100 shelf modules use built-in port e0a and e0b.
+* NSM100 shelf modules use built-in port e0a and e0b.
 
-** NSM100B shelf modules use ports e1a and e1b in slot 1.
+* NSM100B shelf modules use ports e1a and e1b in slot 1.
 
 The following cabling example shows NSM100 modules in the NS224 shelves when referring to shelf module ports.
 
@@ -750,9 +750,9 @@ image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf conne
 
 The AFF A70 and 90 storage systems support NS224 shelves with either the NSM100 or NSM100B module. The major differences between the modules are:  
 
-** NSM100 shelf modules use built-in ports e0a and e0b.
+* NSM100 shelf modules use built-in ports e0a and e0b.
 
-** NSM100B shelf modules use ports e1a and e1b in slot 1.
+* NSM100B shelf modules use ports e1a and e1b in slot 1.
 
 The following cabling example shows NSM100 modules in the NS224 shelves when referring to shelf module ports.
 
@@ -823,7 +823,12 @@ image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg[Controller-to-shelf co
 --
 .A20, A30, and A50
 --
-Connect each controller to its corresponding NSM100B module on the NS224 shelf using the storage cables included  with your storage system. The cable provided could be the following type:
+The NS224 shelf cabling procedure shows NSM100B modules instead of NSM100 modules. The cabling is the same regardless of the type of NSM modules used, only the port names are different: 
+
+* NSM100B modules use ports e1a and e1b on an I/O module in slot 1.
+* NSM100 modules use built-in (onboard) ports e0a and e0b.
+
+You cable each controller to each NSM module on the NS224 shelf using the storage cables that came with your storage system, which could be the following cable type:
 
 *100 GbE QSFP28 copper cables*
 
@@ -848,7 +853,12 @@ image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg[Controller 
 
 .C30
 --
-Connect each controller to its corresponding NSM100B module on the NS224 shelf using the storage cables included  with your storage system. The cable provided could be the following type:
+The NS224 shelf cabling procedure shows NSM100B modules instead of NSM100 modules. The cabling is the same regardless of the type of NSM modules used, only the port names are different: 
+
+* NSM100B modules use ports e1a and e1b on an I/O module in slot 1.
+* NSM100 modules use built-in (onboard) ports e0a and e0b.
+
+You cable each controller to each NSM module on the NS224 shelf using the storage cables that came with your storage system, which could be the following cable type:
 
 *100 GbE QSFP28 copper cables*
 
