@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/power-on-hardware.html
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, power on
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30, power on
 summary: Power on each shelf to assign a unique shelf ID, power on the ASA r2 controllers, and secure the power cables. 
 ---
 = Power on your ASA r2 storage system
@@ -129,6 +129,11 @@ image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[Console connecti
 image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
 --
 
+.C30
+--
+image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console connections]
+--
+
 ====
 // end tabbed area
 
@@ -156,6 +161,12 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system a
 image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
 
 --
+
+.C30
+--
+image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system power connection diagram]
+
+--
 ====
 +
 // end tabbed area
@@ -166,7 +177,7 @@ image::../media/drw_psu_layout_1_ieops-1886.svg[A20 or A30 or A50 storage system
 +
 * Be aware that the fans may emit a high level of noise when they first start up. The fan noise during start-up is normal.
 +
-* For ASA A20, ASA A30, and ASA A50 storage systems, the shelf ID display on the front of the system chassis does not illuminate.
+* For ASA A20, A30, A50 and ASA C30 storage systems, the shelf ID display on the front of the system chassis does not illuminate.
 
 [start=4]
 . Secure the power cords using the securing device on each power supply.
