@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: administer/reboot-take-over-give-back-nodes.html
-keywords: reboot, take over, give back, nodes, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
+keywords: reboot, take over, give back, nodes, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30
 summary: "You might need to reboot a node for maintenance, troubleshooting, software updates or other administrative reasons."
 ---
 = Reboot a node on an ASA r2 storage system
@@ -23,6 +23,8 @@ The reason you enter for the reboot is recorded in the system audit log.
 
 While the node is being rebooted, its HA partner performs a takeover so that there is no interruption in data service.  When the reboot is complete, the HA partner performs a giveback.
 
+
+// 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2024 Sept 24, ONTAPDOC 1930
 // 2025 Jan 25, ONTAPDOC 2260
