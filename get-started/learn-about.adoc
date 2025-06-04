@@ -1,9 +1,9 @@
 ---
 sidebar: sidebar
 permalink: get-started/learn-about.html
-keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, learn more, learn about, get started
-summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
-searchtitle: "Learn about ASA A1K, A90, A70, A50, A30 and A20 systems"
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, learn more, learn about, get started
+summary: "ASA r2 systems (ASA A1K, A90, A70, A50, A30, A20, C30) offer a unified hardware and software solution for a simplified experience for SAN-only customers."
+searchtitle: "Learn about ASA A1K, A90, A70, A50, A30 A20 and C30 systems"
 ---
 = Learn about ASA r2 storage systems
 :icons: font
@@ -21,6 +21,7 @@ The following ASA platforms are classified as ASA r2 systems:
 * ASA A50
 * ASA A30
 * ASA A20
+* ASA C30
 
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC, NVMe/FC and NVMe/TCP protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
 
@@ -43,6 +44,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
+// 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 31, ONTAPPM-103027
 // 2025 Jan 25, ONTAPDOC 2260, ONTAPDOC 2261
