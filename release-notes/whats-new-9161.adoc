@@ -30,6 +30,7 @@ a| The following NetApp ASA r2 systems are supported beginning in ONTAP 9.16.1. 
 * ASA A50
 * ASA A30
 * ASA A20
+* ASA C30
 
 // table end
 |===
@@ -81,6 +82,7 @@ This greatly improves overall storage efficiency, especially with file systems t
 // table end
 |===
 
+// 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 31, ONTAPPM-103027
 // 2025 Jan 24, ONTAPDOC 2259

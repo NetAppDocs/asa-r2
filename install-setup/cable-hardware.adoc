@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: install-setup/cable-hardware.html
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa C30 cable controllers
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30 cable controllers
 summary: Learn how to attach the ASA r2 controller cables to your network and cable the controllers to the shelves. 
 ---
 = Cable the hardware for your ASA r2 storage system
@@ -883,4 +883,5 @@ image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg[Controller 
 .What's next?
 After you've connected the storage controllers to your network and then connected the controllers to your storage shelves, you link:power-on-hardware.html[power on the ASA r2 storage system].
 
+// 2025 June 04, ONTAPDOC-2994
 // 2024 Sept 23, ONTAPDOC 1922
