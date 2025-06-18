@@ -40,7 +40,15 @@ entries:
   - title: Migrate data encryption keys between key managers
     url: "/secure-data/migrate-encryption-keys-between-key-managers.html"  
   - title: Protect against ransomware attacks
-    url: "/secure-data/ransomware-protection.html" 
+    entries:
+    - title: Create tamper-proof snapshots
+      url: "/secure-data/ransomware-protection.html"
+    - title: Enable ARP/AI
+      url: "/secure-data/enable-anti-ransomware-protection.html" 
+    - title: Pause or resume ARP/AI 
+      url: "/secure-data/pause-resume-anti-ransomware-protection.html"
+    - title: Respond to ARP/AI alerts
+      url: "/secure-data/respond-anti-ransomware-protection-alerts.html"          
   - title: Secure NVMe connections
     url: "/secure-data/nvme-tcp-connections.html" 
   - title: Secure IP connections

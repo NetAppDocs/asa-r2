@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: secure-data/pause-resume-anti-ransomware-protection.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, pause, resume, suspend 
+summary: "If you are planning an unusual workload event, you can temporarily suspend ARP/AI analysis to prevent false positive detections of ransomware attacks"
+---
+= Pause or resume autonomous ransomware protection on your ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Beginning with ONTAP 9.17.1, you can use Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) to protect the data on your ASA r2 system. If you are planning an unusual workload event, you can temporarily suspend ARP/AI analysis to prevent false positive detections of ransomware attacks. Once your workload is complete, you can resume ARP/AI analysis.
+
+== Pause ARP/AI
+
+Before you begin an unusual workload event, you might need to temporarily suspend the ARP/AI analysis to prevent false positive detections of ransomware attacks.  
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Select the storage units for which you want to pause ARP/AI.
+. Select *Pause anti-ransomware*.
+
+.Result
+
+ARP/AI analysis is paused for the selected storage units, and no suspicious activity is reported to you in System Manager until you resume ARP/AI.
+
+== Resume ARP/AI
+
+If you pause ARP/AI during an unusual workload, once your workload is complete, you should resume it to protect your data against ransomware attacks.
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Select the storage units for which you want to resume ARP/AI.
+. Select *Resume anti-ransomware*.
+
+.Result
+
+Analysis of potential ransomware attacks is resumed, and suspicious activity is reported to you in System Manager.
+
+// 2025 July 24, ONTAPDOC-2701
+// 2024 Sept 24, ONTAPDOC 1928

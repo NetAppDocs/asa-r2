@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: secure-data/respond-anti-ransomware-protection-alerts.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Respond to autonomous ransomware protection alerts on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, a warning is generated on the System Manager dashboard. You should view the warning, verify the activity and, if necessary, take action to stop any potential threat to your data.
+
+.Steps
+
+. In System Manager, select *Dashboard*.
++
+If ARP has detected abnormal activity on one or more storage units, a message appears under *Warnings*.
+. Select the warning message.
+. Under *Events overview*, select the *Warnings* message that indicates the number of storage units with abnormal activity.
+. Under *Storage units with abnormal activity*, select the storage unit.
+. Select *Security*.
++
+If there is abnormal activity on the storage unit, a message is displayed under *Anti-ransomware*.
+. Select *Choose an action*.
+
+// 2025 July 24, ONTAPDOC-2701
+// 2024 Sept 24, ONTAPDOC 1928
