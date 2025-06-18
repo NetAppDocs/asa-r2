@@ -4,7 +4,7 @@ permalink: secure-data/pause-resume-anti-ransomware-protection.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, pause, resume, suspend 
 summary: "If you are planning an unusual workload event, you can temporarily suspend ARP/AI analysis to prevent false positive detections of ransomware attacks"
 ---
-= Pause or resume autonomous ransomware protection on your ASA r2 storage systems
+= Pause or resume autonomous ransomware protection with AI on your ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
