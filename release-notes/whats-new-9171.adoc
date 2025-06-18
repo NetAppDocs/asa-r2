@@ -22,7 +22,7 @@ Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems.
 | Update
 | Description
 
-| SAN data migration
+| link:https://review.docs.netapp.com/us-en/asa-r2_aherbin-asa-r2-9171/install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system[Support for data migration from a third-party storage system]
 | SAN data migration using Foreign LUN Import (FLI) is supported for ASA r2 systems.  FLI allows you to migrate data from a LUN on a third-party storage system to an ASA r2 system.  
 
 
