@@ -34,7 +34,7 @@ ASA r2 systems introduce the use of storage units with consistency groups:
 
 ASA r2 systems use storage units and consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
 
-To help secure your data against malicious attacks such as theft or ransomware, ASA r2 systems support an on-board key manager, dual-layer encryption, tamper-proof snapshots, multi-factor authentication and multi-admin verification.
+To help secure your data against malicious attacks such as theft or ransomware, ASA r2 systems support an on-board key manager, dual-layer encryption, multi-factor authentication and multi-admin verification.  Tamper-proof snapshots are also supported on secondary ASA r2 systems.
 
 ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS systems.
 
@@ -44,6 +44,7 @@ ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS syste
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
+// 2025 June 20, ONTAPDOC-3087
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 31, ONTAPPM-103027
