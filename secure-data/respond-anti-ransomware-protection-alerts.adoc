@@ -12,6 +12,30 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 
 If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, a warning is generated on the System Manager dashboard. You should view the warning, verify the activity and, if necessary, take action to stop any potential threat to your data.
 
+If an ARP/AI warning message is displayed, before you take action, you should use the appropriate application integrity checker to verify the integrity of the data on the storage unit.  Verifying the storage unit's data integrity helps you determine if the activity is acceptable or if it is a potential ransomware attack. 
+
+[cols="2,2", options="header"]
+|===
+| If the abnormal activity is ... | Then do this...
+| Acceptable | Mark the activity as a false positive.
+| A potential ransomware attack | Mark the activity as a potential ransomware attack.
+| Indeterminate | Do not take immediate action. 
+
+Instead, you should monitor the storage unit to for up to 7 days. If the storage unit continues to operate normally, you can mark the activity as a false positive. If the storage unit continues to exhibit abnormal activity, you should mark the activity as a potential ransomware attack.
+|=== 
+
+When ONTAP detects abnormal activity, it creates an ARP snapshot of the storage unit.  The default retention time for ARP snapshots varies based upon the action you take. See link:../data-protection/policies-schedules.html#edit-delete-or-disable-a-snapshot-policy[Edit, delete, or disable a snapshot policy] for steps to change the default retention times.
+
+[cols="2,2", options="header"]
+|===
+| If you take this action... | ARP snapshots are retained by default for...
+| Mark as false positive | 12 hours
+| Mark as potential ransomware attack | 7 days
+| Do not take immediate action | 10 days
+|===
+
+Default retention times can be changed.
+
 .Steps
 
 . In System Manager, select *Dashboard*.
@@ -24,6 +48,7 @@ If ARP has detected abnormal activity on one or more storage units, a message ap
 +
 If there is abnormal activity on the storage unit, a message is displayed under *Anti-ransomware*.
 . Select *Choose an action*.
+. Select *Mark as false positive* or select *Mark as potential ransomware attack*. 
 
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928
