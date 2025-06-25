@@ -68,7 +68,7 @@ Learn about the new capabilities available in ONTAP 9.16.1 for ASA r2 systems.
 // table end
 |===
 
-// 2025 July 24, ONTAPDOC-2697, ONTAPDOC-2701
+// 2025 July 24, ONTAPDOC-2697, ONTAPDOC-2701, ONTAPDOC-2708
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 31, ONTAPPM-103027

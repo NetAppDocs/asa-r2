@@ -24,7 +24,9 @@ entries:
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
    - title: Set up snapshot replication
-     url: "/data-protection/snapshot-replication.html"  
+     url: "/data-protection/snapshot-replication.html" 
+   - title: Enable business continuity with Snap Mirror active sync
+     url: "/data-protection/snap-mirror-active-sync.html"   
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  
    - title: Restore data

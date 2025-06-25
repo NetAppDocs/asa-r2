@@ -1,0 +1,60 @@
+---
+sidebar: sidebar
+permalink: /data-protection/snap-mirror-active-sync.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Enable business continuity on ASA r2 systems with SnapMirror active sync 
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+You can use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster.
+
+SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
+
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric and asymmetric active/active configurations].
+
+Support for SnapMirror active sync on ASA r2 systems varies based upon ONTAP version and host protocol.
+
+[cols="2,2" options="header"]
+|===
+| Beginning with ONTAP... | SnapMirror active sync supports...
+
+| 9.16.0
+a|
+* iSCSI
+* FF
+
+| 9.17.1
+a|
+* iSCSI
+* FC    
+* NVMe/FC
+* NVMe/TCP
+|===
+
+== NVMe protocol limitations with SnapMirror active snyc on ASA r2 systems
+
+For ASA r2 systems, the NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active snyc only on 2-node clusters and on ESXi hosts only.  Clusters larger than 2 nodes and other hosts types are not supported. 
+
+All the NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:link: data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
+
+AFD mode is supported for setting up the SnapMirror active sync relationship with NVMe protocols on your ASA r2 system.  AD mode is not supported.
+
+SnapMirror active sync with NVMe does not support the following by default:
+
+
+* Removing a storage unit from a consistenty group
+* Consistency group geometry change
+* NS copy offload
+
+.What’s next?
+link:link: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/[Learn more about SnapMirror active sync^].
+link:link: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html[Plan your SnapMirror active sync deployment].
+
+
+// 2025 Jul 24, ONTAPDOC-2707
