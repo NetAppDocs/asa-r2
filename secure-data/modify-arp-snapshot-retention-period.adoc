@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: secure-data/modify-arp-snapshot-retention-period.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Modify ARP/AI snapshot retention periods on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, it automatically creates an ARP snapshot to protect the storage unit's data. Depending upon your storage capacity and the business requirements for your data, you might want to increase or decrease the default ARP snapshot retention period. For example, you might want to increase the retention period for business critical applications so that, if needed, you have longer retention periods for data recovery, or you might want to decrease the retention period for non-critical applications to save storage space.
+
+The default retention period for the ARP snapshot varies depending on the action you take in response to the abnormal activity. 
+
+[cols="2,2", options="header"]
+|===
+| If you take this action... | ARP snapshots are retained by default for...
+| Mark as false positive | 12 hours
+| Mark as potential ransomware attack | 7 days
+| Do not take immediate action | 10 days
+|===
+
+The default retention periods can be modified using the ONTAP command line interface (CLI). See https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-automatic-snapshot-options-task.html[Modify options for ONTAP automatic snapshots] for steps to change the default retention period.
+
+// 2025 July 24, ONTAPDOC-2701
+// 2024 Sept 24, ONTAPDOC 1928

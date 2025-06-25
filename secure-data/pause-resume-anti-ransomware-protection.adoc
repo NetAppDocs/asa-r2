@@ -28,7 +28,7 @@ ARP/AI analysis is paused for the selected storage units, and no suspicious acti
 
 == Resume ARP/AI
 
-If you pause ARP/AI during an unusual workload, once your workload is complete, you should resume it to protect your data against ransomware attacks.
+If you pause ARP/AI during an unusual workload, after your workload is complete, you should resume it to protect your data against ransomware attacks.
 
 .Steps
 

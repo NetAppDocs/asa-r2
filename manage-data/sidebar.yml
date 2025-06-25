@@ -44,11 +44,13 @@ entries:
     - title: Create tamper-proof snapshots
       url: "/secure-data/ransomware-protection.html"
     - title: Enable ARP/AI
-      url: "/secure-data/enable-anti-ransomware-protection.html" 
-    - title: Pause or resume ARP/AI 
-      url: "/secure-data/pause-resume-anti-ransomware-protection.html"
+      url: "/secure-data/enable-anti-ransomware-protection.html"
+    - title: Modify ARP/AI snapshot retention periods 
+      url: "/secure-data/modify-arp-snapshot-retention-period.html"   
     - title: Respond to ARP/AI alerts
-      url: "/secure-data/respond-anti-ransomware-protection-alerts.html"          
+      url: "/secure-data/respond-anti-ransomware-protection-alerts.html"   
+    - title: Pause or resume ARP/AI 
+      url: "/secure-data/pause-resume-anti-ransomware-protection.html"             
   - title: Secure NVMe connections
     url: "/secure-data/nvme-tcp-connections.html" 
   - title: Secure IP connections
