@@ -10,7 +10,7 @@ summary: "If you are planning an unusual workload event, you can temporarily sus
 
 [.lead]
 
-Beginning with ONTAP 9.17.1, you can use Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) to protect the data on your ASA r2 system. If you are planning an unusual workload event, you can temporarily suspend ARP/AI analysis to prevent false positive detections of ransomware attacks. Once your workload is complete, you can resume ARP/AI analysis.
+Beginning with ONTAP 9.17.1, you can use Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) to protect the data on your ASA r2 system. If you are planning an unusual workload event, you can temporarily suspend ARP/AI analysis to prevent false positive detections of ransomware attacks. After your workload event is complete, you can resume ARP/AI analysis.
 
 == Pause ARP/AI
 

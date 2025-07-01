@@ -19,7 +19,7 @@ No ransomware detection or prevention system can completely guarantee safety fro
 
 .About this task
 
-ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview[ONTAP ONE license].
+ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview[ONTAP One license].
 
 After you have enabled ARP/AI, you should link:../administer/update-firmware.html#enable-automatic-updates[enable automatic updates for your security files] to automatically receive new security updates.
 
