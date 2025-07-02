@@ -16,23 +16,56 @@ Because of this simplified approach to storage management, `storage aggregate` c
 
 The following commands and command sets are not supported on ASA on r2:
 
-// Start snippet: collapsible block (open on page load)
 .Unsupported `lun` commands
 [%collapsible%closed]
 ====
+
 * `lun copy`
 * `lun geometry`
 * `lun maxsize`
 * `lun move`
 * `lun move-in-volume`
 +
-This command is replaced with lun rename/vserver nvme namespace rename.
+[NOTE]
+The `lun move-in-volume` command is replaced with `lun rename` and the `vserver nvme namespace rename` commands.
 * `lun transition`
+====
+
+.Unsupported `storage` commands
+[%collapsible%closed]
+====
+
+* `storage failover show-takeover`
+* `storage failover show-giveback`
+* `storage aggregate relocation`
+* `storage disk assign`
+* `storage disk partition`
+* `storage disk reassign`
+====
+
+
+.Unsupported `volume` command sets
+[%collapsible%closed]
+====
+
+* `volume activity-tracking`
+* `volume analytics`
+* `volume conversion`
+* `volume file`
+* `volume flexcache`
+* `volume flexgroup`
+* `volume inode-upgrade`
+* `volume object-store`
+* `volume qtree`
+* `volume quota`
+* `volume reallocation`
+* `volume rebalance`
+* `volume recovery-queue`
+* `volume schedule-style`
 
 ====
-// End snippet
 
-// Start snippet: collapsible block (open on page load)
+
 .Unsupported `volume` commands and parameters
 [%collapsible%closed]
 ====
@@ -79,9 +112,7 @@ This command is not available when used in conjunction with the following parame
 * `volume unmount`
 
 ====
-// End snippet
 
-// Start snippet: collapsible block (open on page load)
 .Unsupported `volume clone` commands
 [%collapsible%closed]
 ====
@@ -90,9 +121,7 @@ This command is not available when used in conjunction with the following parame
 * `volume clone split`
 
 ====
-// End snippet
 
-// Start snippet: collapsible block (open on page load)
 .Unsupported `volume snaplock` commands
 [%collapsible%closed]
 ====
@@ -100,10 +129,7 @@ This command is not available when used in conjunction with the following parame
 * `volume snaplock modify`
 
 ====
-// End snippet
 
-
-// Start snippet: collapsible block (open on page load)
 .Unsupported `volume snapshot` commands
 [%collapsible%closed]
 ====
@@ -112,44 +138,6 @@ This command is not available when used in conjunction with the following parame
 * `volume snapshot autodelete modify`
 * `volume snapshot policy modify`
 ====
-// End snippet
-
-// Start snippet: collapsible block (open on page load)
-.Unsupported `volume` command sets
-[%collapsible%closed]
-====
-
-* `volume activity-tracking`
-* `volume analytics`
-* `volume conversion`
-* `volume file`
-* `volume flexcache`
-* `volume flexgroup`
-* `volume inode-upgrade`
-* `volume object-store`
-* `volume qtree`
-* `volume quota`
-* `volume reallocation`
-* `volume rebalance`
-* `volume recovery-queue`
-* `volume schedule-style`
-
-====
-// End snippet
-
-// Start snippet: collapsible block (open on page load)
-.Unsupported `storage` commands
-[%collapsible%closed]
-====
-
-* `storage failover show-takeover`
-* `storage failover show-giveback`
-* `storage aggregate relocation`
-* `storage disk assign`
-* `storage disk partition`
-* `storage disk reassign`
-====
-// End snippet
 
 .For more information
 
@@ -253,6 +241,7 @@ Cluster time-service ntp show
 .What's next?
 You are ready to link:../install-setup/set-up-data-access.html[set up data access] from your SAN clients to your system.
 
+// 2025 July 2, Git Issue 59
 // 2025 June 26, Git Issue 56
 // 2025 June 26, Git Issue 55
 // 2025 June 04, ONTAPDOC-2994
