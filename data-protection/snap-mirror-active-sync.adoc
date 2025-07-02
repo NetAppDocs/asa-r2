@@ -9,7 +9,6 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 :imagesdir: ../media/
 
 [.lead]
-
 Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster.
 
 SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 

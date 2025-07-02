@@ -9,7 +9,6 @@ summary: "To prepare to configure SnapMirror active sync on your ASA r2 system y
 :imagesdir: ../media/
 
 [.lead]
-
 To prepare to configure SnapMirror active sync on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration.
 
 .Steps

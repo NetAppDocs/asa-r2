@@ -9,7 +9,6 @@ summary: "To install ONTAP Mediator on your ASA r2 system, you should follow the
 :imagesdir: ../media/
 
 [.lead]
-
 To install ONTAP Mediator on your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator on all other ONTAP systems. 
 
 This procedure includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package and performing post-installation tasks.

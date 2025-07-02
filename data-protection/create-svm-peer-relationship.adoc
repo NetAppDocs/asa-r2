@@ -9,6 +9,7 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 :imagesdir: ../media/
 
 [.lead]
+Insert lead
 
 .Steps
 
