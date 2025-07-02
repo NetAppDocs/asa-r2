@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: /data-protection/configure-ontap-mediator.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Configure ONTAP Mediator using self-signed certificates on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+.Steps
+
+. In System Manager, select *Protection >Overview*.
+. In the right pane, next to *Mediators* select image:icon_kabob.gif[three vertical blue dots]; then select *Add a mediator*.
+. Select the *Mediator type*:
+. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
+. Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
+. Copy the content of the `intermediate.crt` file and paste it into the *Certificate* field or select, *Import* to navigate to the `intermediate.crt` file and import the certificate information.
+. Select *Add*.
+
+.Result
+
+ONTAP Mediator is added to the ONTAP cluster.
+
+// 2025 Jul 24, ONTAPDOC-2707

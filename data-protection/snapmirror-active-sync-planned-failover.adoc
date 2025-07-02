@@ -1,0 +1,33 @@
+---
+sidebar: sidebar
+permalink: /data-protection/snapmirror-active-sync-planned-failover.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Perform a planned failover of ASA r2 clusters in a SnapMirror active sync relationship
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
+
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+
+.Before you begin
+
+* The SnapMirror active sync relationship must be in sync.
+* You cannot initiate a planned failover when a nondisruptive operation, such as a storage unit move, is in process. 
+* The ONTAP Mediator must be configured, connected, and in quorum.
+
+.Steps
+
+. Select *Protection>Replication*.
+. Select the SnapMirror active sync relationship you want to failover.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover*.
+
+.What’s next
+
+Use the `snapmirror failover show`` command in the ONTAP command line interface (CLI) to monitor the status of the failover.
+
+// 2025 Jul 24, ONTAPDOC-2707

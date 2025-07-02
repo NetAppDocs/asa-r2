@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: manage-data/create-host-groups.html
+keywords: delete lun, delete namespace, delete storage unit, asa r2
+summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
+---
+= Create host groups on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+On an ASA r2 system, a _host group_ is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts.  A host can only see the storage units that are mapped to the host groups to which it belongs.  When a host group is mapped to a storage unit, the hosts that are members of the group, are then able to mount (create directories and file structures on) the storage unit.
+
+Host groups are automatically or manually created when you create your storage units.  You can optionally use the following steps to create host groups before or after storage unit creation.
+
+.Steps
+
+. From System Manager, select *Host*.
+. Select the hosts you want to add to the host group.
++
+After you select the first host, the option to add to a host group appears above the list of hosts.
+. Select *Add to host group*.
+. Search for and select the host group to which you want to add the host.
+
+
+.What's next?
+
+You have created a host group and you can now link:provision-san-storage.html#map-the-storage-unit-to-a-host[map it to a storage unit].

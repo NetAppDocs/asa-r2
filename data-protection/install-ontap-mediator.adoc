@@ -1,0 +1,20 @@
+---
+sidebar: sidebar
+permalink: /data-protection/install-ontap-mediator.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Install ONTAP Mediator on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+The installation procedure for ONTAP Mediator on ASA r2 systems is the same as all other ONTAP systems. 
+
+To install ONTAP Mediator follow this workflow.
+
+.What's next
+link:data-protection/configure-ontap-mediator.html[Configure ONTAP Mediator using self-signed certificates on ASA r2 systems].
+
+// 2025 Jul 24, ONTAPDOC-2707

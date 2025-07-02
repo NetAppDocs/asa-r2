@@ -8,7 +8,13 @@ entries:
   - title: Provision storage
     url: "/manage-data/provision-san-storage.html"
   - title: Clone data
-    url: "/manage-data/data-cloning.html"  
+    url: "/manage-data/data-cloning.html" 
+  - title: Manage host groups
+    entries:
+    - title: Create host groups
+      url: "/manage-data/create-host-groups.html" 
+    - title: Delete host groups
+      url: "/manage-data/delete-host-groups.html"     
   - title: Manage storage units
     entries:
     - title: Modify storage units
@@ -25,8 +31,24 @@ entries:
      url: "/data-protection/create-snapshots.html"
    - title: Set up snapshot replication
      url: "/data-protection/snapshot-replication.html" 
-   - title: Enable business continuity with Snap Mirror active sync
-     url: "/data-protection/snap-mirror-active-sync.html"   
+   - title: Set up SnapMirror active sync
+     entries:
+     - title: Workflow 
+       url: "/data-protection/snapmirror-active-sync.html" 
+     - title: Prepare to configure SnapMirror active sync
+       url: "/data-protection/snapmirror-active-sync-prepare.html"
+     - title: Install ONTAP Mediator
+       url: "/data-protection/install-ontap-mediator.html"
+     - title: Confirm your cluster configuration
+       url: "/data-protection/snap-mirror-active-sync-confirm-cluster-configuration.html"  
+     - title: Configure ONTAP Mediator
+       url: "/data-protection/configure-ontap-mediator.html"  
+     - title: Configure SnapMirror active sync
+       url: "/data-protection/configure-snapmirror-active-sync.html"    
+   - title: Perform a planned failover with SnapMirror active sync
+     url: "/data-protection/snapmirror-active-sync-planned-failover.html"
+   - title: Reestablish SnapMirror active sync after an unplanned failover
+      url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  
    - title: Restore data

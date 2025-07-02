@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar
 permalink: /data-protection/snap-mirror-active-sync.html
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+keywords: asa r2, data protection, business continuity, snapmirror active sync, zero rpo, zero rto, disaster recovery, symmetric active/active, asymmetric active/active, workflow
+summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
 ---
-= Enable business continuity on ASA r2 systems with SnapMirror active sync 
+= Enable business continuity on ASA r2 systems with SnapMirror active sync workflow
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-You can use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster.
+Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster.
 
 SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
 
@@ -18,43 +18,30 @@ On ASA r2 systems, SnapMirror active sync supports symmetric active/active and a
 
 Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric and asymmetric active/active configurations].
 
-Support for SnapMirror active sync on ASA r2 systems varies based upon ONTAP version and host protocol.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync
 
-[cols="2,2" options="header"]
-|===
-| Beginning with ONTAP... | SnapMirror active sync supports...
+[role="quick-margin-para"]
+To link:snap-mirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration.
 
-| 9.16.0
-a|
-* iSCSI
-* FF
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Confirm your cluster configuration
 
-| 9.17.1
-a|
-* iSCSI
-* FC    
-* NVMe/FC
-* NVMe/TCP
-|===
+[role="quick-margin-para"]
+Before you configure SnapMirror active sync, you should link:snap-mirror-active-sync-confirm-cluster-configuration.html[confirm that your ASA r2 clusters are in the proper peering relationships and meet other configuration requirements].
 
-== NVMe protocol limitations with SnapMirror active snyc on ASA r2 systems
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator
 
-For ASA r2 systems, the NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active snyc only on 2-node clusters and on ESXi hosts only.  Clusters larger than 2 nodes and other hosts types are not supported. 
+[role="quick-margin-para"]
+link:install-ontap-mediator.html[Install ONTAP Mediator] to enable automatic failover of your .
 
-All the NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:link: data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
+[role="quick-margin-para"]
 
-AFD mode is supported for setting up the SnapMirror active sync relationship with NVMe protocols on your ASA r2 system.  AD mode is not supported.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP Mediator using self-signed certificates
+link:configure-ontap-mediator.html[Configure ONTAP Mediator using self-signed certificates] to enable automatic failover and failback of your SnapMirror active sync relationships.
 
-SnapMirror active sync with NVMe does not support the following by default:
+[role="quick-margin-para"]
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync 
 
-* Removing a storage unit from a consistenty group
-* Consistency group geometry change
-* NS copy offload
-
-.What’s next?
-link:link: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/[Learn more about SnapMirror active sync^].
-link:link: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html[Plan your SnapMirror active sync deployment].
-
+[role="quick-margin-para"]
 
 // 2025 Jul 24, ONTAPDOC-2707

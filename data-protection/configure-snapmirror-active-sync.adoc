@@ -1,0 +1,34 @@
+---
+sidebar: sidebar
+permalink: /data-protection/configure-snapmirror-active-sync.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Configure SnapMirror active sync on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
+
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+
+.Before you begin
+Create a consistency group on the primary site (data-protection/create-snapshots.html#step-1-optionally-create-a-consistency-group) with new storage units.
+If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
+
+. In System Manager, select *Protection>Consistency groups*.
+. Hover over the name of the consistency group you want to protect with SnapMirror active sync.
+. Select image:icon_kabob.gif[three vertical blue dots];then select *Protect*.
+. Under *Remote protection*, select *Replicate to a remote cluster*.
+. Select the cluster peer or select to *Add a new one*.
+. Select the storage VM.
+. Select the replication policy.
++
+For symmetric active/active protection, select *AutomatedFailOverDuplex* for the replication policy.  For asymmetric protection, select *Asynchronous* for the replication policy.
+. If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*; then input the name of the new destination consistency group you create before beginning this procedure.
+. Select *Save*.
+
+
+// 2025 Jul 24, ONTAPDOC-2707

@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: manage-data/delete-host-groups.html
+keywords: delete lun, delete namespace, delete storage unit, asa r2
+summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
+---
+= Delete a host group on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+On an ASA r2 system, a host group is the mechanism used to give hosts access to storage units. A host group refers to an igroup for SCSI hosts or to an NVMe subsystem for NVMe hosts. A host can only see the storage units that are mapped to the host groups to which it belongs. You might want to delete a host group if you no longer want the hosts in the group to have access to the storage units that are mapped to the group.
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Under *Host mapping* select the host group you want to delete.
+. Select *Mapped storage*. 
+. Select *More*; then select *Delete*.
+. Select to verify that you want to continue; then select *Delete*.
+
+.What's next?
+
+The host group is deleted. The hosts that were in the group no longer have access to the storage units that were mapped to the host group.
+
+// 2025 Jul 24, ONTAPDOC-2707
+// ONTAPDOC 1922, 2024 Sept 24
