@@ -37,12 +37,12 @@ entries:
        url: "/data-protection/snapmirror-active-sync.html" 
      - title: Prepare to configure SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-prepare.html"
+     - title: Confirm your cluster configuration
+       url: "/data-protection/snap-mirror-active-sync-confirm-cluster-configuration.html"         
      - title: Install ONTAP Mediator
        url: "/data-protection/install-ontap-mediator.html"
-     - title: Confirm your cluster configuration
-       url: "/data-protection/snap-mirror-active-sync-confirm-cluster-configuration.html"  
-     - title: Configure ONTAP Mediator
-       url: "/data-protection/configure-ontap-mediator.html"  
+     - title: Initialize ONTAP Mediator
+       url: "/data-protection/initialize-ontap-mediator.html"  
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
    - title: Perform a planned failover with SnapMirror active sync

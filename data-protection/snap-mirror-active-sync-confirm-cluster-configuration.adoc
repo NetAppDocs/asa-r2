@@ -34,4 +34,8 @@ link:../manage-data/create-storage-unit.html#create-a-storage-unit[Create a stor
 
 . Rescan the application host to discover any new storage units.
 
+.What's next?
+After you have confirmed your cluster configuration, you are ready to link:install-ontap-mediator.html[install ONTAP Mediator].
+
+
 // 2025 Jul 24, ONTAPDOC-2707

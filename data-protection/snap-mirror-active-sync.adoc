@@ -31,17 +31,15 @@ Before you configure SnapMirror active sync, you should link:snap-mirror-active-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator
 
 [role="quick-margin-para"]
-link:install-ontap-mediator.html[Install ONTAP Mediator] to enable automatic failover of your .
+link:install-ontap-mediator.html[Install ONTAP Mediator].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator using self-signed certificates
 
 [role="quick-margin-para"]
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP Mediator using self-signed certificates
-link:configure-ontap-mediator.html[Configure ONTAP Mediator using self-signed certificates] to enable automatic failover and failback of your SnapMirror active sync relationships.
-
-[role="quick-margin-para"]
+After installing ONTAP Mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync 
-
 [role="quick-margin-para"]
+link:configure-snapmirror-active-sync.html[Configure SnapMirro active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707

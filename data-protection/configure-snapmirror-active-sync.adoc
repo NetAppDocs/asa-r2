@@ -10,13 +10,14 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 
 [.lead]
 
-SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
+Configure SnapMirror active sync to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
 .Before you begin
-Create a consistency group on the primary site (data-protection/create-snapshots.html#step-1-optionally-create-a-consistency-group) with new storage units.
-If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
+link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
+
+.Steps
 
 . In System Manager, select *Protection>Consistency groups*.
 . Hover over the name of the consistency group you want to protect with SnapMirror active sync.
@@ -30,5 +31,7 @@ For symmetric active/active protection, select *AutomatedFailOverDuplex* for the
 . If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*; then input the name of the new destination consistency group you create before beginning this procedure.
 . Select *Save*.
 
+.Result
+SnapMirror active sync is configured to protect your data so that you can continue operations with zero recovery point objective (RPO) and zero recovery time objective (RTO) in the event of a disaster.
 
 // 2025 Jul 24, ONTAPDOC-2707

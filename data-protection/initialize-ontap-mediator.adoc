@@ -1,14 +1,15 @@
 ---
 sidebar: sidebar
-permalink: /data-protection/configure-ontap-mediator.html
+permalink: /data-protection/initialize-ontap-mediator.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
 summary: "View warnings of potential ransomware attacks and take action in System Manager."
 ---
-= Configure ONTAP Mediator using self-signed certificates on ASA r2 systems
+= Initialize ONTAP Mediator using self-signed certificates on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+After installing ONTAP Mediator, you must initialize it before you can begin using it with SnapMirror active sync for cluster monitoring.
 
 .Steps
 
@@ -20,8 +21,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 . Copy the content of the `intermediate.crt` file and paste it into the *Certificate* field or select, *Import* to navigate to the `intermediate.crt` file and import the certificate information.
 . Select *Add*.
 
-.Result
-
-ONTAP Mediator is added to the ONTAP cluster.
+.What's next?
+After you have initialized ONTAP Mediator, you can link:data-protection/configure-
 
 // 2025 Jul 24, ONTAPDOC-2707

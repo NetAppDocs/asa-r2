@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: /data-protection/snap-mirror-active-sync-prepare.html
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+keywords: asa r2, data protection, business continuity, snapmirror active sync, protocol support, object limits, NVMe protocol limitations, prerequisites, interoperability, limits
+summary: "To prepare to configure SnapMirror active sync on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration."
 ---
 = Prepare to configure SnapMirror active sync on ASA r2 systems
 :icons: font
@@ -52,5 +52,5 @@ SnapMirror active sync with NVMe does not support the following:
 
 .What’s next?
 
-After you have completed the preparation necessary to enable SnapMirror active sync, you should confirm your cluster configuration.
+After you have completed the preparation necessary to enable SnapMirror active sync, you should link:snap-mirror-active-sync-confirm-cluster-configuration.html[confirm your cluster configuration].
 // 2025 Jul 24, ONTAPDOC-2707
