@@ -27,7 +27,7 @@ The following commands and command sets are not supported on ASA on r2:
 * `lun move-in-volume`
 +
 [NOTE]
-The `lun move-in-volume` command is replaced with `lun rename` and the `vserver nvme namespace rename` commands.
+The `lun move-in-volume` command is replaced with the `lun rename` and the `vserver nvme namespace rename` commands.
 * `lun transition`
 ====
 
@@ -75,7 +75,7 @@ The `lun move-in-volume` command is replaced with `lun rename` and the `vserver 
 * `volume expand`
 * `volume modify`
 +
-This command is not available when used in conjunction with the following parameters: 
+The `volume modify` command is not available when used in conjunction with the following parameters: 
 +
 ** `-anti-ransomware-state`
 ** `-autosize`
