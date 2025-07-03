@@ -49,7 +49,7 @@ entries:
      entries:
      - title: Perform a planned failover with SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-planned-failover.html"
-     - title: Re-establish SnapMirror active sync after an unplanned failover
+     - title: Reestablish SnapMirror active sync after an unplanned failover
        url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  

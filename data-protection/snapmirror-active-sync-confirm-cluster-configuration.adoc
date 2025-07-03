@@ -9,7 +9,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
-SnapMirror active sync uses peered clusters to protect your data in the event of a failover. Before you configure SnapMirror active sync, you should confirm that your ASA r2 clusters are in the proper peering relationships and meet other configuration requirements.
+SnapMirror active sync uses peered clusters to protect your data in the event of a failover. Before you configure SnapMirror active sync, you should confirm that your ASA r2 clusters are in proper peering relationships and meet other configuration requirements.
 
 .Steps
 

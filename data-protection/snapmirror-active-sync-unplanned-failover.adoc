@@ -9,7 +9,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
-An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The ONTAP Mediator detects when a failover occurs and, and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
+An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The ONTAP Mediator detects when a failover occurs and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
 
 .Before you begin
 

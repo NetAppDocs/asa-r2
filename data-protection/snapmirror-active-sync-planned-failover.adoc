@@ -27,6 +27,6 @@ On ASA r2 systems, SnapMirror active sync supports symmetric active/active. In a
 
 .What’s next
 
-Use the `snapmirror failover show`` command in the ONTAP command line interface (CLI) to monitor the status of the failover.
+Use the `snapmirror failover show` command in the ONTAP command line interface (CLI) to monitor the status of the failover.
 
 // 2025 Jul 24, ONTAPDOC-2707

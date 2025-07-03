@@ -16,7 +16,7 @@ To prepare to configure SnapMirror active sync on your ASA r2 system you should 
 . Review SnapMirror active sync link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html[prerequisites^]. 
 . link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html[Confirm that your host operating systems are supported^] for SnapMirror active sync. 
 . Review the link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html[object limits] that might impact your configuration.
-. Veirfy host protocol support for SnapMirror active sync on your ASA r2 system.
+. Verify host protocol support for SnapMirror active sync on your ASA r2 system.
 +
 Support for SnapMirror active sync on ASA r2 systems varies based upon ONTAP version and host protocol.
 +
@@ -39,7 +39,7 @@ a|
 
 == NVMe protocol limitations with SnapMirror active sync on ASA r2 systems
 
-Before you configure SnapMirror active sync on as ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  For ASA r2 systems, the NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync only on 2-node clusters and on ESXi hosts only.  Clusters larger than 2 nodes and other hosts types are not supported. 
+Before you configure SnapMirror active sync on as ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  For ASA r2 systems, the NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync only on 2-node clusters and on ESXi hosts only.  Clusters larger than 2 nodes and other host types are not supported. 
 
 All the NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:link: data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
 
