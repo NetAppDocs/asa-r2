@@ -22,7 +22,7 @@ link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create 
 
 . Confirm that a peer relationship exists between the storage virtual machines (VMs) on each cluster. 
 +
-link:data-protection/create-svm-peer-relationship.html[Create a storage VM peering relationship].
+link:../administer/manage-client-vm-access.html#create-a-storage-vm[Create a storage VM peering relationship].
 
 . Confirm that at least one LIF is created on each node in the cluster.
 +
@@ -30,7 +30,7 @@ link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[C
 
 . Confirm that the necessary storage units are created and mapped to host groups.
 +
-link:../manage-data/create-storage-unit.html#create-a-storage-unit[Create a storage unit] and link:../manage-data/map-storage-units.html#map-a-storage-unit-to-a-host-group[map the storage unit to a host group].
+link:../manage-data/provision-san-storage.html#create-storage-units[Create a storage unit] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the storage unit to a host group].
 
 . Rescan the application host to discover any new storage units.
 

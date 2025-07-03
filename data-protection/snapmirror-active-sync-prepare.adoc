@@ -51,5 +51,5 @@ SnapMirror active sync with NVMe does not support the following:
 
 .What’s next?
 
-After you have completed the preparation necessary to enable SnapMirror active sync, you should link:snap-mirror-active-sync-confirm-cluster-configuration.html[confirm your cluster configuration].
+After you have completed the preparation necessary to enable SnapMirror active sync, you should link:snapmirror-active-sync-confirm-cluster-configuration.html[confirm your cluster configuration].
 // 2025 Jul 24, ONTAPDOC-2707

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: data-protection/create-svm-peer-relationship.html
+permalink: /data-protection/create-svm-peer-relationship.html
 keywords: restore data, asa r2, data restoration
 summary: If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
 ---

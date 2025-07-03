@@ -45,10 +45,12 @@ entries:
        url: "/data-protection/initialize-ontap-mediator.html"  
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
-   - title: Perform a planned failover with SnapMirror active sync
-     url: "/data-protection/snapmirror-active-sync-planned-failover.html"
-   - title: Re-establish SnapMirror active sync after an unplanned failover
-     url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
+   - title: Manage SnapMirror active sync 
+     entries:
+     - title: Perform a planned failover with SnapMirror active sync
+       url: "/data-protection/snapmirror-active-sync-planned-failover.html"
+     - title: Re-establish SnapMirror active sync after an unplanned failover
+       url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  
    - title: Restore data

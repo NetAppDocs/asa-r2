@@ -30,7 +30,7 @@ Before you configure SnapMirror active sync, you should link:snap-mirror-active-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator
 
 [role="quick-margin-para"]
-link:install-ontap-mediator.html[Install ONTAP Mediator].
+link:install-ontap-mediator.html[Installing ONTAP Mediator] includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package and performing post-installation tasks.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator using self-signed certificates
 
@@ -39,6 +39,6 @@ After installing ONTAP Mediator, you must link:initialize-ontap-mediator.html[in
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync 
 [role="quick-margin-para"]
-link:configure-snapmirror-active-sync.html[Configure SnapMirro active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707

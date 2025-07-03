@@ -22,6 +22,6 @@ After installing ONTAP Mediator, you must initialize it before you can begin usi
 . Select *Add*.
 
 .What's next?
-After you have initialized ONTAP Mediator, you can link:data-protection/configure-
+After you have initialized ONTAP Mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707
