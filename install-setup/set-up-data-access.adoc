@@ -26,7 +26,7 @@ If you need to migrate your VM workload from an ASA storage system to an ASA r2 
 
 Beginning with ONTAP 9.17.1, you can use Foreign LUN Import (FLI) to migrate data from a LUN on a third-party storage system to an ASA r2 system. Using FLI for your data migration can help you mitigate the risk of data loss and downtime during the migration process.
 
-FLI supports both online and offline migrations. In an online migration, the client system stays online while data is copied from the third-party storage system to the ONTAP storage system. Online migrations are supported by Windows, Linux, and ESXi host operating systems.  In an offline migration, the client system is taken offline and then the LUN data is copied from the third-party storage system to the ONTAP storage system; then the client system is brought back online.
+FLI supports both online and offline migrations. In an online migration, the client system stays online while data is copied from the third-party storage system to the ONTAP storage system. Online migrations are supported by Windows, Linux, and ESXi host operating systems.  In an offline migration, the client system is taken offline, the LUN data is copied from the third-party storage system to the ONTAP storage system, and then the client system is brought back online.
 
 * Learn how to perform an link:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_offline_workflow.html[FLI offline migration^].
 * Learn how to perform an link:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_online_workflow.html[FLI online migrations^].
