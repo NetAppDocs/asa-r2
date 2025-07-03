@@ -11,7 +11,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 [.lead]
 Configure SnapMirror active sync to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
-On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
 .Before you begin
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
@@ -24,9 +24,7 @@ link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a
 . Under *Remote protection*, select *Replicate to a remote cluster*.
 . Select the cluster peer or select to *Add a new one*.
 . Select the storage VM.
-. Select the replication policy.
-+
-For symmetric active/active protection, select *AutomatedFailOverDuplex* for the replication policy.  For asymmetric protection, select *Asynchronous* for the replication policy.
+. For the replication policy, select *AutomatedFailOverDuplex*.  
 . If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*; then input the name of the new destination consistency group you create before beginning this procedure.
 . Select *Save*.
 

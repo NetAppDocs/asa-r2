@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: /data-protection/snapmirror-active-sync.html
-keywords: asa r2, data protection, business continuity, snapmirror active sync, zero rpo, zero rto, disaster recovery, symmetric active/active, asymmetric active/active, workflow
+keywords: asa r2, data protection, business continuity, snapmirror active sync, zero rpo, zero rto, disaster recovery, symmetric active/active, workflow
 summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
 ---
 = SnapMirror active sync setup workflow
@@ -13,9 +13,11 @@ Use SnapMirror active sync, to protect host applications that require a zero rec
 
 SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
 
-On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
-Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric and asymmetric active/active configurations].
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric active/active configurations].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync
 

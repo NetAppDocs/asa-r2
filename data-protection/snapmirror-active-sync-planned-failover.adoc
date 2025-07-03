@@ -11,7 +11,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 [.lead]
 SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
 
-On ASA r2 systems, SnapMirror active sync supports symmetric active/active and asymmetric active/active configurations.	In an asymmetric configuration, data on the secondary site is proxied to a storage unit. In a symmetric active/active configuration, both sites can access local storage for active I/O.
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active. In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
 .Before you begin
 
