@@ -9,9 +9,7 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 :imagesdir: ../media/
 
 [.lead]
-Use SnapMirror active sync, to protect host applications with a near a zero recovery point objective (RPO) and a near zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster.
-
-SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. 
+SnapMirror active sync (also referred to as SnapMirror Business Continuity [SM-BC]), enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. There is no manual intervention or custom scripting required to trigger a failover with SnapMirror active sync.
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
