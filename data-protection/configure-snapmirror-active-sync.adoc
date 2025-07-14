@@ -13,6 +13,9 @@ Configure SnapMirror active sync to create a copy of your data at a secondary si
 
 On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
+[NOTE]
+If you are using the iSCSI or FC protocol, you can optionally link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html[use ONTAP Tools for VM ware to configure SnapMirror active sync^]. 
+
 .Before you begin
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
 

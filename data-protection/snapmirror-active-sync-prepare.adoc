@@ -27,7 +27,7 @@ Support for SnapMirror active sync on ASA r2 systems varies based upon ONTAP ver
 | 9.16.0
 a|
 * iSCSI
-* FF
+* FC
 
 | 9.17.1
 a|
@@ -39,12 +39,25 @@ a|
 
 == NVMe protocol limitations with SnapMirror active sync on ASA r2 systems
 
-Before you configure SnapMirror active sync on as ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  For ASA r2 systems, the NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync only on 2-node clusters and on ESXi hosts only.  Clusters larger than 2 nodes and other host types are not supported. 
+Before you configure SnapMirror active sync on as ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  
 
 All the NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:link: data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
 
+The NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync as follows:
+
+* Only on 2-node clusters
+* Only on ESXi hosts
+* Symmetric active/active configurations
++
+Asymmetric active/active configurations are not supported with NVMe hosts. 
+
 SnapMirror active sync with NVMe does not support the following:
 
+* Subsystems mapped to more than one consistency group
++
+A consistency group can be mapped with multiple subsystems, but each subsystem can be mapped to only one consistency group.
+* Expansion of consistency groups in a SnapMirror active sync relationship
+* NVMe storage units that are not in a SnapMirror active sync relationship cannot be mapped to a replicated subsystems.
 * Removing a storage unit from a consistency group
 * Consistency group geometry change
 * NS copy offload
