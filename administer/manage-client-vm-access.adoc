@@ -145,6 +145,7 @@ set -privilege advanced
 [source,cli]
 ----
 network interface service-policy create -vserver <SVM_name> -policy <service_policy_name> -services core-data,core-iscsi
+----
 
 . Create your iSCSI LIFs:
 +
@@ -162,12 +163,13 @@ network interface create -vserver svm1 -lif iscsi-lif-02a -service-policy custom
 network interface create -vserver svm1 -lif iscsi-lif-02b -service-policy custom-data-iscsi -home-node -home-port e4b- -address <node02-iscsi-b–ip> -netmask -failover-policy sfo-partner-only -status-admin up
 ----
 
-Enable automatic iSCSI LIF failover:
+. Enable automatic iSCSI LIF failover:
 +
 [source,cli]
 ----
 network interface modify -vserver <SVM_name> -lif <iscsi_lif> -failover-policy sfo-partner-only -auto-revert true
 ----
+
 
 == Modify a LIF (network interfaces)
 
