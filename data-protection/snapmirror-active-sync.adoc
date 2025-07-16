@@ -17,27 +17,27 @@ On ASA r2 systems, SnapMirror active sync supports symmetric active/active confi
 
 Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric active/active configurations^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync.
 
 [role="quick-margin-para"]
 To link:snap-mirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Confirm your cluster configuration
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Confirm your cluster configuration.
 
 [role="quick-margin-para"]
 Before you configure SnapMirror active sync, you should link:snap-mirror-active-sync-confirm-cluster-configuration.html[confirm that your ASA r2 clusters are in the proper peering relationships and meet other configuration requirements].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator or prepare to configure ONTAP Cloud Mediator
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator.
 
 [role="quick-margin-para"]
-You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor to monitor the health of your cluster and enable business continuity.  ONTAP Mediator must be installed and ONTAP Cloud Mediator must be configured.  link:install-ontap-mediator.html[Install ONTAP Mediator or configure ONTAP Cloud Mediator] . 
+You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor the health of your cluster and enable business continuity.  If you are using ONTAP Mediator, you must link:install-ontap-mediator.html[install it].  If you are using ONTAP Cloud Mediator, you can skip this step.  
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator using self-signed certificates
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator using self-signed certificates.
 
 [role="quick-margin-para"]
-After installing ONTAP Mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
+After installing or configuring Mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync. 
 [role="quick-margin-para"]
 link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 

@@ -4,7 +4,7 @@ permalink: /data-protection/create-svm-peer-relationship.html
 keywords: restore data, asa r2, data restoration
 summary: If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
 ---
-= Create a storage VM peer relationship on ASA r2 storage systems
+= Create an intercluster storage VM peer relationship on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 

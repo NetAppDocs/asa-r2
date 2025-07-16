@@ -22,7 +22,7 @@ link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create 
 
 . Confirm that a peer relationship exists between the storage virtual machines (VMs) on each cluster. 
 +
-link:../administer/manage-client-vm-access.html#create-a-storage-vm[Create a storage VM peering relationship].
+link:create-svm-peer-relationship.html[Create an intercluster storage VM peer relationship^].
 
 . Confirm that at least one LIF is created on each node in the cluster.
 +

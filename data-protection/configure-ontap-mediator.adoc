@@ -11,6 +11,10 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 [.lead]
 You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin using SnapMirror active sync for cluster monitoring.  The ONTAP Mediator provides a persistent and fenced store for high availability (HA) metadata used by the ONTAP clusters in a SnapMirror active sync relationship. Additionally, ONTAP Mediator provides a synchronous node health query functionality to aid in quorum determination and serves as a ping proxy for controller liveliness detection.
 
+.Before you begin
+
+* If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/cloud-mediator-requirements-concept.html[prerequisites^].
+
 .Steps
 
 . In System Manager, select *Protection >Overview*.

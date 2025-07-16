@@ -9,16 +9,13 @@ summary: "To install ONTAP Mediator on your ASA r2 system, you should follow the
 :imagesdir: ../media/
 
 [.lead]
-To install ONTAP Mediator on your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator on all other ONTAP systems. If you are using ONTAP Cloud Mediator, you should follow the procedure to configure ONTAP Cloud Mediator.
+To install ONTAP Mediator on your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator on all other ONTAP systems. 
 
-* To install ONTAP Mediator, follow link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html[this workflow^] 
-+
-This procedure includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package and performing post-installation tasks.
+Installing ONTAP Mediator includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package and performing post-installation tasks.
 
-* To configure ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/cloud-mediator-requirements-concept.html[prerequisites].
-
+To install ONTAP Mediator, follow link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html[this workflow^] 
 
 .What's next
-After ONTAP Mediator is installed or prerequisites are met for ONTAP Cloud Mediator, you should link:initialize-ontap-mediator.html[initialize Mediator using self-signed certificates].
+After ONTAP Mediator is installed you should link:initialize-ontap-mediator.html[initialize ONTAP Mediator using self-signed certificates].
 
 // 2025 Jul 24, ONTAPDOC-2707
