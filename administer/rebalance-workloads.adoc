@@ -1,0 +1,71 @@
+---
+sidebar: sidebar
+permalink: administer/rebalance-workloads.html
+keywords: rename, node, renaming, asa r2
+summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
+---
+= Rebalance workloads between nodes on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between the nodes in an HA pair for optimal performance. For example, if utilization on one node increases to 70% while utilization on its HA partner is only 30%, ONTAP automatically shifts the workloads so that utilization of each node is more closely matched. Because the nodes of the HA pair share the same storage availability zone, workload rebalancing is a copy-free operation with no impact on performance. 
+
+== Modify the automatic workload rebalancing setting
+
+Automatic workload rebalancing is enabled by default 14 days after upgrading to ONTAP 9.17.1 or installing a new ONTAP 9.17.1 ASA r2 cluster. You can change the default setting to enable or disable automatic workload rebalancing, or to set it to an advisory state to flag workloads that are imbalanced without automatically moving them.
+
+.Step
+
+. Verify the rebalancing mode currently set on your nodes:
++
+[source, cli]
+----
+placement rebalance config show -fields mode
+----
+
+. Modify the automatic workload rebalancing setting:
++
+[source, cli]
+----
+placement rebalance config modify -mode <disabled|advisory|automated>
+----
+
+. Verify that the rebalancing mode is modified:
++
+[source, cli]
+----
+placement rebalance config show -fields mode
+----
+
+== Rebalance workloads manually
+
+If you have disabled automatic workload rebalancing, you can still rebalance workloads manually. This is useful if you want to rebalance workloads after a period of manual adjustments or if you have set the rebalancing mode to *advisory* and want to take action based on the workload flags.
+
+.Steps
+
+. Verify the rebalancing mode currently set on your nodes:
++
+[source, cli]
+----
+placement rebalance config show -fields mode
+----
+
+. If the rebalancing mode is not set to *advisory*, then set it to *advisory*:
++
+[source, cli]
+----
+placement rebalance config modify -mode advisory
+----
+
+. Rebalance workloads manually:
++   
+[source, cli]
+----
+balanced-placement rebalance execute
+----    
+
+.What's next?
+
+If you want to set the rebalancing mode to *automated* or *disabled* after you have manually rebalanced workloads, you can do so by using the `placement rebalance config modify` command.
+

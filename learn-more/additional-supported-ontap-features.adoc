@@ -15,17 +15,17 @@ Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tas
 For more information about common features and functions, see the following ONTAP documentation.
 
 == ONTAP administration
-* link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in ONTAP System Manager^]
-* link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Combine physical ports to create interface groups]
-* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF) provisioning]
+* link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in ONTAP System Manager^].
+* link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Combine physical ports to create interface groups^].
+* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF) provisioning^].
 
 == Data security
-* link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Learn about OAuth 2.0 authentication]
-* link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html[Learn about client authentication and authorization]
-* link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication]]
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Manage ONTAP administrator access]
+* link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Learn about OAuth 2.0 authentication^].
+* link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html[Learn about client authentication and authorization^].
+* link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
+* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Manage ONTAP administrator access^].
 
 == Data protection
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Configue clustered external key servers in ONTAP]
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management (HW-based)]
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)]
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Configue clustered external key servers in ONTAP^].
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management (HW-based)^].
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
