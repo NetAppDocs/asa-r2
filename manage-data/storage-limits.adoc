@@ -22,6 +22,9 @@ ASA r2 systems support the following:
 | Max storage unit size
 | 128 TB
 
+| Max storage availability zone size
+| 2 PB
+
 // table end
 |===
 
