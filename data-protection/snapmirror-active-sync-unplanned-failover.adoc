@@ -9,7 +9,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
-An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The ONTAP Mediator detects when a failover occurs and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
+An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The mediator detects when a failover occurs and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
 
 .Before you begin
 
@@ -19,13 +19,13 @@ An automatic unplanned failover (AUFO) operation occurs when the primary cluster
 
 .Steps
 
-. Select *Protection>Replication*.
+. Select *Protection > Replication*.
 . Select the SnapMirror active sync relationship you need to reestablish.
 . Wait for the relationship status to display *InSync*.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover* to resume operations on the original primary cluster.
 
 .What’s next
 
-To prevent loss of I/O paths to your hosts, after resuming operations on the primary cluster, rescan the host paths.
+To prevent loss of I/O paths to your hosts, you need to rescan the host paths after resuming operations on the primary cluster.
 
 // 2025 Jul 24, ONTAPDOC-2707

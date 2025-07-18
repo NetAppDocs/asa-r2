@@ -13,7 +13,7 @@ To prepare to configure SnapMirror active sync on your ASA r2 system you should 
 
 .Steps
 
-. Review SnapMirror active sync link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html[prerequisites^]. 
+. Review the SnapMirror active sync link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html[prerequisites^]. 
 . link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html[Confirm that your host operating systems are supported^] for SnapMirror active sync. 
 . Review the link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html[object limits] that might impact your configuration.
 . Verify host protocol support for SnapMirror active sync on your ASA r2 system.
@@ -24,30 +24,30 @@ Support for SnapMirror active sync on ASA r2 systems varies based upon ONTAP ver
 |===
 | Beginning with ONTAP... | SnapMirror active sync supports...
 
-| 9.16.0
-a|
-* iSCSI
-* FC
-
 | 9.17.1
 a|
 * iSCSI
 * FC    
 * NVMe/FC
 * NVMe/TCP
+
+| 9.16.0
+a|
+* iSCSI
+* FC
 |===
 
 == NVMe protocol limitations with SnapMirror active sync on ASA r2 systems
 
 Before you configure SnapMirror active sync on an ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  
 
-All the NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
+All NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
 
 The NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync as follows:
 
 * Only on 2-node clusters
 * Only on ESXi hosts
-* Only with Symmetric active/active configurations
+* Only with symmetric active/active configurations
 +
 Asymmetric active/active configurations are not supported with NVMe hosts. 
 
@@ -57,10 +57,10 @@ SnapMirror active sync with NVMe does not support the following:
 +
 A consistency group can be mapped with multiple subsystems, but each subsystem can be mapped to only one consistency group.
 * Expansion of consistency groups in a SnapMirror active sync relationship
-* Mapping NVMe storage units that are not in a SnapMirror active sync relationship to a replicated subsystems
+* Mapping NVMe storage units that are not in a SnapMirror active sync relationship to replicated subsystems
 * Removing a storage unit from a consistency group
 * Consistency group geometry change
-* NS copy offload
+* link:https://docs.netapp.com/us-en/ontap/san-admin/microsoft-offloaded-data-transfer-odx-concept.html[Microsoft Offloaded Data Transfer (ODX)]
 
 .What’s next?
 

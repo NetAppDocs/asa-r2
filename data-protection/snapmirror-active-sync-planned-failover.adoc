@@ -9,18 +9,18 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
-SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently failover in the event of a disaster. You might need to perform a planned failover of your SnapMirror active sync relationship to test the failover process or to perform maintenance on the primary site.
+SnapMirror active sync offers continuous availability for business-critical applications by creating a copy of your data at a secondary site and enabling your host applications to automatically and transparently fail over in the event of a disaster. You might need to perform a planned failover of your SnapMirror active sync relationship to test the failover process or to perform maintenance on the primary site.
 
 .Before you begin
 
 * The SnapMirror active sync relationship must be in sync.
 * You cannot initiate a planned failover when a nondisruptive operation, such as a storage unit move, is in process. 
-* The ONTAP Mediator must be configured, connected, and in quorum.
+* ONTAP Mediator or ONTAP Cloud Mediator must be configured, connected, and in quorum.
 
 .Steps
 
-. Select *Protection>Replication*.
-. Select the SnapMirror active sync relationship you want to failover.
+. Select *Protection > Replication*.
+. Select the SnapMirror active sync relationship you want to fail over.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover*.
 
 .What’s next

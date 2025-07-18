@@ -9,7 +9,9 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 :imagesdir: ../media/
 
 [.lead]
-SnapMirror active sync (also referred to as SnapMirror Business Continuity [SM-BC]), enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. There is no manual intervention or custom scripting required to trigger a failover with SnapMirror active sync.
+ONTAP SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. There is no manual intervention or custom scripting required to trigger a failover with SnapMirror active sync.
+
+While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
@@ -20,7 +22,7 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync.
 
 [role="quick-margin-para"]
-To link:snap-mirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration.
+To link:snap-mirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your host operating systems, and be aware of object limits that might impact specific configuration.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Confirm your cluster configuration.
 
@@ -30,15 +32,15 @@ Before you configure SnapMirror active sync, you should link:snap-mirror-active-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator.
 
 [role="quick-margin-para"]
-You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor the health of your cluster and enable business continuity.  If you are using ONTAP Mediator, you must link:install-ontap-mediator.html[install it].  If you are using ONTAP Cloud Mediator, you can skip this step.  
+You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor the health of your cluster and enable business continuity.  If you are using ONTAP Mediator, you must link:install-ontap-mediator.html[install it] on your host.  If you are using ONTAP Cloud Mediator, you can skip this step.  
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator using self-signed certificates.
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator or ONTAP Cloud Mediator using self-signed certificates.
 
 [role="quick-margin-para"]
-After installing or configuring Mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
+After installing or configuring the mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync. 
 [role="quick-margin-para"]
-link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently fail over in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707

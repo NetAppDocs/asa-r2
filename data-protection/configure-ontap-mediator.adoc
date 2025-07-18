@@ -9,7 +9,7 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
-You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin using SnapMirror active sync for cluster monitoring.  The ONTAP Mediator provides a persistent and fenced store for high availability (HA) metadata used by the ONTAP clusters in a SnapMirror active sync relationship. Additionally, ONTAP Mediator provides a synchronous node health query functionality to aid in quorum determination and serves as a ping proxy for controller liveliness detection.
+You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin using SnapMirror active sync for cluster monitoring.  ONTAP Mediator and ONTAP Cloud Mediator both provide a persistent and fenced store for high availability (HA) metadata used by the ONTAP clusters in a SnapMirror active sync relationship. Additionally, both mediators provide a synchronous node health query functionality to aid in quorum determination and serves as a ping proxy for controller liveliness detection.
 
 .Before you begin
 
@@ -17,15 +17,15 @@ You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin u
 
 .Steps
 
-. In System Manager, select *Protection >Overview*.
+. In System Manager, select *Protection > Overview*.
 . In the right pane, next to *Mediators* select image:icon_kabob.gif[three vertical blue dots]; then select *Add a mediator*.
-. Select the *Mediator type*:
+. Select the *Mediator type*.
 . For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
 . Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
-. Copy the content of the `intermediate.crt` file and paste it into the *Certificate* field or select, *Import* to navigate to the `intermediate.crt` file and import the certificate information.
+. Copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
 . Select *Add*.
 
 .What's next?
-After you have initialized Mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+After you have initialized the mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707

@@ -9,9 +9,11 @@ summary: "To install ONTAP Mediator on your ASA r2 system, you should follow the
 :imagesdir: ../media/
 
 [.lead]
-To install ONTAP Mediator on your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator on all other ONTAP systems. 
+To install ONTAP Mediator for your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator for all other ONTAP systems. 
 
-Installing ONTAP Mediator includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package and performing post-installation tasks.
+Installing ONTAP Mediator includes preparing for installation, enabling access to repositories, downloading the ONTAP Mediator package, verifying the code signature, installing the package on the host and performing post-installation tasks.
+
+https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html
 
 To install ONTAP Mediator, follow link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html[this workflow^] 
 

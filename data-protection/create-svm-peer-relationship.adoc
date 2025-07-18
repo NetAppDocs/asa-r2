@@ -9,19 +9,19 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 :imagesdir: ../media/
 
 [.lead]
-A peer relationship defines network connections that enable clusters and SVMs to exchange data securely. Create peer relationships between storage virtual machines (VMs) on different clusters to enable data protection and disaster recovery using SnapMirror.  
+A peer relationship defines network connections that enable clusters and storage virtual machine (VM) to exchange data securely. Create peer relationships between storage VMs on different clusters to enable data protection and disaster recovery using SnapMirror.  
 
 link:https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html[Learn more about peer relationships^].
 
 .Before you begin
 
-You must have a cluster peer relationship established between the local and remote clusters before you can create a storage VM peer relationship.  link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create a cluster peer relationship] if you have not already done so.
+You must have established a cluster peer relationship between the local and remote clusters before you can create a storage VM peer relationship.  link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create a cluster peer relationship] if you have not already done so.
 
 .Steps
 
-. In System Manager, select *Protection>Overview*.
+. In System Manager, select *Protection > Overview*.
 . Under *Storage VM peers* select *Add a storage VM peer*.
-. Select the storage VM on the local cluster; the select the storage VM on the remote cluster.
+. Select the storage VM on the local cluster; then select the storage VM on the remote cluster.
 . Select *Add a storage VM peer*.
 
 // 2025 Jul 24, ONTAPDOC-2707
