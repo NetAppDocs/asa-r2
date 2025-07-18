@@ -11,7 +11,7 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 [.lead]
 ONTAP SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. There is no manual intervention or custom scripting required to trigger a failover with SnapMirror active sync.
 
-While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same
+While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same.
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
