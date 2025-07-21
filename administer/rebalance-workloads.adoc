@@ -66,9 +66,9 @@ placement rebalance config show -fields mode
 ----
 
 
-== Rebalance workloads manually
+== Manually trigger workload rebalance
 
-If you have disabled automatic workload rebalancing, you can still rebalance workloads manually. This is useful if you want to rebalance workloads after a period of manual adjustments or if you have set the rebalancing mode to *advisory* and want to take action based on the workload flags.
+If you have disabled automatic workload rebalancing, you can still manually trigger a workload rebalance. This is useful if you want to rebalance workloads after a period of manual adjustments or if you have set the rebalancing mode to *advisory* and want to take action based on the workload flags.
 
 .Steps
 
