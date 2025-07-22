@@ -140,18 +140,25 @@ You must use the ONTAP command line interface (CLI) to enable automatic iSCSI LI
 set -privilege advanced 
 ----
 
-. Create an iSCSI only service policy with core-data and core-iscsi service:
+. Create a custome iSCSI-only LIF service policy:
 +
 [source,cli]
 ----
-network interface service-policy create -vserver <SVM_name> -policy <service_policy_name> -services core-data,core-iscsi
+network interface service-policy create -vserver <SVM_name> -policy <service_policy_name> -services data-core,data-iscsi
 ----
 
-. Create your iSCSI LIFs:
+. Verify that the service policy was created:
 +
 [source,cli]
 ----
-network interface create -vserver <SVM_name> -lif <iscsi_lif> -service-policy <service_policy_name> -home-node -home-port <port_name> -address <ip_address> -netmask -failover-policy sfo-partner-only -status-admin up
+network interface service-policy show -policy <service_policy_name>
+----
+
+. Create iSCSI-only LIFs with automatic LIF failover:
++
+[source,cli]
+----
+network interface create -vserver <SVM_name> -lif <iscsi_lif_name> -service-policy <service_policy_name> -home-node <home_node> -home-port <port_name> -address <ip_address> -netmask <netmask> -failover-policy sfo-partner-only -status-admin up
 ----
 +
 It is recommended that you create two iSCSI LIFs on each node, one for fabric A and the other for fabric B.  This provides redundancy and load balancing for your iSCSI traffic.  In the following example, a total four iSCSI LIFs are created, two on each node, one for each fabric. 
@@ -163,11 +170,11 @@ network interface create -vserver svm1 -lif iscsi-lif-02a -service-policy custom
 network interface create -vserver svm1 -lif iscsi-lif-02b -service-policy custom-data-iscsi -home-node -home-port e4b- -address <node02-iscsi-b–ip> -netmask -failover-policy sfo-partner-only -status-admin up
 ----
 
-. Enable automatic iSCSI LIF failover:
+. Verify that the iSCSI LIFs were created:
 +
 [source,cli]
 ----
-network interface modify -vserver <SVM_name> -lif <iscsi_lif> -failover-policy sfo-partner-only -auto-revert true
+network interface show -lif iscsi*
 ----
 
 
@@ -191,6 +198,7 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
+// 2025 July 24, GitIssue 49
 // 2025 May 16, GitIssue 49
 // 2025 Apr 22, ONTAPDOC 2970
 // 2024 Sept 24, ONTAPDOC 1930
