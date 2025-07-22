@@ -41,7 +41,7 @@ a|
 
 Before you configure SnapMirror active sync on an ASA r2 system with NVMe hosts, you should be aware of certain NVMe protocol limitations.  
 
-All NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. If the storage units in the NVMe subsystem are not all members of the same consistency group, you cannot link:data-protection/manage-consistency-groups.html#add-storage-units-to-a-consistency-group[expand the consistency group]. 
+All NVMe storage units in the NVMe subsystem must be members of the same consistency group and must all be part of the same SnapMirror active sync relationship. 
 
 The NVMe/FC and NVMe/TCP protocols are supported with SnapMirror active sync as follows:
 

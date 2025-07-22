@@ -19,6 +19,8 @@ If you are using the iSCSI or FC protocol and use ONTAP tools for VMware Sphere,
 .Before you begin
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
 
+Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/#key-concepts[non-uniform] symmetric active/active configurations.
+
 .Steps
 
 . In System Manager, select *Protection > Consistency groups*.

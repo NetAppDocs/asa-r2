@@ -29,6 +29,8 @@ entries:
   entries:
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
+   - title: Create an SVM peer relationship
+     url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication
      url: "/data-protection/snapshot-replication.html"       
    - title: Set up SnapMirror active sync
@@ -46,9 +48,7 @@ entries:
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
    - title: Manage SnapMirror active sync 
-     entries:
-     - title: Create an SVM peer relationship
-       url: "/data-protection/create-svm-peer-relationship.html"       
+     entries:   
      - title: Perform a planned failover with SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-planned-failover.html"
      - title: Reestablish SnapMirror active sync after an unplanned failover
