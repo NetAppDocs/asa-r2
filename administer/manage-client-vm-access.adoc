@@ -109,8 +109,6 @@ If you want to enable automatic iSCSI LIF failover, you must create an IP LIF fo
 . Select *Network interfaces*; then select image:icon_add_blue_bg.png[blue rectangle with a plus sign followed by the word add in white letters].
 
 . Select the interface type and protocol; then select the storage VM.
-+
-To enable iSCSI LIF failover, select only the IP protocol.
 
 . Enter a name for the LIF or accept the default name.
 
@@ -123,7 +121,7 @@ To enable iSCSI LIF failover, select only the IP protocol.
 You have created a LIF for data access.
 
 .What's next?
-If you have created a IP LIF for iSCSI, you can use the ONTAP command line interface (CLI) to enable automatic iSCSI LIF failover.  
+You can use the ONTAP command line interface (CLI) to create an iSCSI-only LIF with automatic failover.  
 
 === Create a custom iSCSI-only LIF service policy
 
