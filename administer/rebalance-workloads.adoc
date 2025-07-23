@@ -86,7 +86,7 @@ placement rebalance config show -fields mode
 placement rebalance config modify -mode advisory
 ----
 
-. Rebalance workloads manually:
+. Manually trigger a workload rebalance:
 +
 [source, cli]
 ----
@@ -102,5 +102,5 @@ placement rebalance config show-evaluation
 
 .What's next?
 
-If you want to set the rebalancing mode to *automated* or *disabled* after you have manually rebalanced workloads, you can do so by using the `placement rebalance config modify` command.
+If you want to set the rebalancing mode to *automated* or *disabled*, you can do so by using the `placement rebalance config modify` command.
 
