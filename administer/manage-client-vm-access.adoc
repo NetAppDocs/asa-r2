@@ -180,8 +180,6 @@ network interface create -vserver <SVM_name> -lif <iscsi_lif_name> -service-poli
 +
 * It is recommended that you create two iSCSI LIFs on each node, one for fabric A and the other for fabric B.  This provides redundancy and load balancing for your iSCSI traffic.  In the following example, a total four iSCSI LIFs are created, two on each node, one for each fabric. 
 +
-In the following example four iSCSI LIFs are created, two on each node and one for each fabric. 
-+
 ----
 network interface create -vserver svm1 -lif iscsi-lif-01a -service-policy custom-data-iscsi -home-node node1 -home-port e2b -address <node01-iscsi-a–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
 
