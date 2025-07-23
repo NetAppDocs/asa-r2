@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: /data-protection/snapmirror-active-sync-prepare.html
+permalink: data-protection/snapmirror-active-sync-prepare.html
 keywords: asa r2, data protection, business continuity, snapmirror active sync, protocol support, object limits, NVMe protocol limitations, prerequisites, interoperability, limits
 summary: "To prepare to configure SnapMirror active sync on your ASA r2 system you should review the configuration prerequisites, confirm support for your hosts operating systems, and be aware of object limits that might impact specific configuration."
 ---

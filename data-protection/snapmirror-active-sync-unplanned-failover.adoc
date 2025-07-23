@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: /data-protection/snapmirror-active-sync-unplanned-failover.html
+permalink: data-protection/snapmirror-active-sync-unplanned-failover.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
 summary: "View warnings of potential ransomware attacks and take action in System Manager."
 ---

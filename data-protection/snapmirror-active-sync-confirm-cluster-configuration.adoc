@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: /data-protection/snapmirror-active-sync-confirm-cluster-configuration.html
+permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.html
 keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
 summary: "View warnings of potential ransomware attacks and take action in System Manager."
 ---
