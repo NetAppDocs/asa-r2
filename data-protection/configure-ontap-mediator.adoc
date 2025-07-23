@@ -13,7 +13,7 @@ You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin u
 
 .Before you begin
 
-* If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/cloud-mediator-requirements-concept.html[prerequisites^].
+* If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html[prerequisites^].
 
 .Steps
 

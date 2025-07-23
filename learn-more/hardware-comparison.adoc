@@ -52,7 +52,7 @@ When a storage unit (based on either a LUN or an NVMe namespace) is created, ONT
 Beginning with ONTAP 9.16.1, if a storage unit increases or decreases in a way that creates an imbalance in storage utilization across the storage availability zone, ONTAP automatically moves storage units as needed to rebalance utilization and optimize performance.
 * Automatic workload rebalancing
 +
-Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between the nodes in an ASA r2 system HA pair for optimal performance.  For example, if utilization on one node increases to 70% while utilization on its HA partner is only 30%, ONTAP automatically shifts the workloads so that utilization of each node is more closely matched.  Because the nodes of the HA pair share the same storage availability zone, workload rebalancing is a copy-free operation with no impact on performance. Automatic workload rebalancing is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You can link:administer/rebalance-workloads.html[change the default setting] to enable or disable automatic workload rebalancing, or to set it in an advisory state to flag workloads that are imbalanced without automatically moving them.
+Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between the nodes in an ASA r2 system HA pair for optimal performance.  For example, if utilization on one node increases to 70% while utilization on its HA partner is only 30%, ONTAP automatically shifts the workloads so that utilization of each node is more closely matched.  Because the nodes of the HA pair share the same storage availability zone, workload rebalancing is a copy-free operation with no impact on performance. Automatic workload rebalancing is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You can link:../administer/rebalance-workloads.html[change the default setting] to enable or disable automatic workload rebalancing, or to set it in an advisory state to flag workloads that are imbalanced without automatically moving them.
 
 == Summary of ASA r2 system differences
 
@@ -93,7 +93,7 @@ a| *Storage layer support*
 // table end
 |===
 
-Because of this automated and simplified approach to storage management, certain System Manager options, ONTAP commands, and REST API endpoints are not available or have limited usage on an ASA r2 system.  For example, because volume creation and management is automated for ASA r2 systems, the *Volumes* menu does not appear in System Manager and the `volume create` command is not supported.  link:learn-more/cli-support.html[Learn more about unsupported ASA r2 commands].  
+Because of this automated and simplified approach to storage management, certain System Manager options, ONTAP commands, and REST API endpoints are not available or have limited usage on an ASA r2 system.  For example, because volume creation and management is automated for ASA r2 systems, the *Volumes* menu does not appear in System Manager and the `volume create` command is not supported.  link:cli-support.html[Learn more about unsupported ASA r2 commands].  
 
 The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
 

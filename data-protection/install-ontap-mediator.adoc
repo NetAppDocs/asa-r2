@@ -18,6 +18,6 @@ https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html
 To install ONTAP Mediator, follow link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html[this workflow^] 
 
 .What's next
-After ONTAP Mediator is installed you should link:initialize-ontap-mediator.html[initialize ONTAP Mediator using self-signed certificates].
+After ONTAP Mediator is installed you should link:configure-ontap-mediator.html[configure ONTAP Mediator using self-signed certificates].
 
 // 2025 Jul 24, ONTAPDOC-2707

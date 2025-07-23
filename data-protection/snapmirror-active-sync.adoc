@@ -22,12 +22,12 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Prepare to configure SnapMirror active sync.
 
 [role="quick-margin-para"]
-To link:snap-mirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your host operating systems, and be aware of object limits that might impact specific configuration.
+To link:snapmirror-active-sync-prepare.html[prepare to configure SnapMirror active sync] on your ASA r2 system you should review the configuration prerequisites, confirm support for your host operating systems, and be aware of object limits that might impact specific configuration.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Confirm your cluster configuration.
 
 [role="quick-margin-para"]
-Before you configure SnapMirror active sync, you should link:snap-mirror-active-sync-confirm-cluster-configuration.html[confirm that your ASA r2 clusters are in the proper peering relationships and meet other configuration requirements].
+Before you configure SnapMirror active sync, you should link:snapmirror-active-sync-confirm-cluster-configuration.html[confirm that your ASA r2 clusters are in the proper peering relationships and meet other configuration requirements].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Install ONTAP Mediator.
 
@@ -37,7 +37,7 @@ You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor the health of your
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Initialize ONTAP Mediator or ONTAP Cloud Mediator using self-signed certificates.
 
 [role="quick-margin-para"]
-After installing or configuring the mediator, you must link:initialize-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
+After installing or configuring the mediator, you must link:configure-ontap-mediator.html[initialize it] before you can begin using it with SnapMirror active sync for cluster monitoring.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync. 
 [role="quick-margin-para"]
