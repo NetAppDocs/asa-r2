@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: /data-protection/install-ontap-mediator.html
+permalink: data-protection/install-ontap-mediator.html
 keywords: asa r2, data protection, business continuity, install, ONTAP Mediator, installation
 summary: "To install ONTAP Mediator on your ASA r2 system, you should follow the same procedure used to install ONTAP Mediator on all other ONTAP systems."
 ---
