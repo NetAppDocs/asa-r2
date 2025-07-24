@@ -1,0 +1,31 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapmirror-active-sync-unplanned-failover.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "Learn how to reestablish SnapMirror active sync relationships after an unplanned failover of your ASA r2 clusters."
+---
+= Reestablish the SnapMirror active sync relationship after an unplanned failover of your ASA r2 clusters
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The mediator detects when a failover occurs and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
+
+.Before you begin
+
+* The SnapMirror active sync relationship must be in sync.
+* You cannot initiate a planned failover when a nondisruptive operation, such as a storage unit move, is in process. 
+* The ONTAP Mediator must be configured, connected, and in quorum.
+
+.Steps
+
+. Select *Protection > Replication*.
+. Select the SnapMirror active sync relationship you need to reestablish.
+. Wait for the relationship status to display *InSync*.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover* to resume operations on the original primary cluster.
+
+.What’s next
+
+To prevent loss of I/O paths to your hosts, you need to rescan the host paths after resuming operations on the primary cluster.
+
+// 2025 Jul 24, ONTAPDOC-2707

@@ -8,7 +8,13 @@ entries:
   - title: Provision storage
     url: "/manage-data/provision-san-storage.html"
   - title: Clone data
-    url: "/manage-data/data-cloning.html"  
+    url: "/manage-data/data-cloning.html" 
+  - title: Manage host groups
+    entries:
+    - title: Create host groups
+      url: "/manage-data/create-host-groups.html" 
+    - title: Delete host groups
+      url: "/manage-data/delete-host-groups.html"     
   - title: Manage storage units
     entries:
     - title: Modify storage units
@@ -23,8 +29,30 @@ entries:
   entries:
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
+   - title: Create an SVM peer relationship
+     url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication
-     url: "/data-protection/snapshot-replication.html"  
+     url: "/data-protection/snapshot-replication.html"       
+   - title: Set up SnapMirror active sync
+     entries:
+     - title: Workflow 
+       url: "/data-protection/snapmirror-active-sync.html" 
+     - title: Prepare to configure SnapMirror active sync
+       url: "/data-protection/snapmirror-active-sync-prepare.html"
+     - title: Confirm your cluster configuration
+       url: "/data-protection/snapmirror-active-sync-confirm-cluster-configuration.html"         
+     - title: Install ONTAP Mediator
+       url: "/data-protection/install-ontap-mediator.html"
+     - title: Configure ONTAP Mediator
+       url: "/data-protection/configure-ontap-mediator.html"  
+     - title: Configure SnapMirror active sync
+       url: "/data-protection/configure-snapmirror-active-sync.html"    
+   - title: Manage SnapMirror active sync 
+     entries:   
+     - title: Perform a planned failover with SnapMirror active sync
+       url: "/data-protection/snapmirror-active-sync-planned-failover.html"
+     - title: Reestablish SnapMirror active sync after an unplanned failover
+       url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
    - title: Protect Kubernetes
      url: "/data-protection/protect-kubernetes.html"  
    - title: Restore data
@@ -40,7 +68,17 @@ entries:
   - title: Migrate data encryption keys between key managers
     url: "/secure-data/migrate-encryption-keys-between-key-managers.html"  
   - title: Protect against ransomware attacks
-    url: "/secure-data/ransomware-protection.html" 
+    entries:
+    - title: Create tamper-proof snapshots
+      url: "/secure-data/ransomware-protection.html"
+    - title: Enable ARP/AI
+      url: "/secure-data/enable-anti-ransomware-protection.html"
+    - title: Modify ARP/AI snapshot retention periods 
+      url: "/secure-data/modify-arp-snapshot-retention-period.html"   
+    - title: Respond to ARP/AI alerts
+      url: "/secure-data/respond-anti-ransomware-protection-alerts.html"   
+    - title: Pause or resume ARP/AI 
+      url: "/secure-data/pause-resume-anti-ransomware-protection.html"             
   - title: Secure NVMe connections
     url: "/secure-data/nvme-tcp-connections.html" 
   - title: Secure IP connections

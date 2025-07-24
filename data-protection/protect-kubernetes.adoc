@@ -9,14 +9,15 @@ summary: Use Astra Control to migrate applications and data from one Kubernetes 
 :imagesdir: ../media/
 
 [.lead]
-Use Astra Control Center to protect your Kubernetes applications.  Astra Control Center allows you to migrate applications and data from one Kubernetes cluster to another, replicate applications to a remote system using NetApp SnapMirror technology, and clone applications from staging to production.
+Use Trident protect to protect your Kubernetes applications.  Trident protect allows you to migrate applications and data from one Kubernetes cluster to another, replicate applications to a remote system using NetApp SnapMirror technology, and clone applications from staging to production.
 
 [NOTE]
-SnapMirror (Asynchronous and Synchronous) is supported from ASA r2 systems to ASA r2 systems only. SnapMirror is not supported from ASA r2 systems to AFF or FAS systems.
+SnapMirror (asynchronous and synchronous) is supported from ASA r2 systems to ASA r2 systems only. SnapMirror is not supported from ASA r2 systems to AFF or FAS systems.
 
 .For more information
 
-link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html[Learn more about protecting Kubernetes applications using Astra Control^].
+link:https://docs.netapp.com/us-en/trident/trident-protect/learn-about-trident-protect.html[Learn more about protecting Kubernetes applications using Trident protect^].
 
+// 2025 July 24, ONTAPDOC-3079
 // 2024 Dec 09, ONTAPDOC 2546
 // 2024 Sept 24, ONTAPDOC 1927

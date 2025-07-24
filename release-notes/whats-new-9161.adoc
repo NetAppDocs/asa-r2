@@ -71,7 +71,7 @@ When you switch from the ONTAP onboard key manager to an external key manager at
 | Update
 | Description
 
-| Support for automatic rebalancing of storage units
+| link:../learn-more/hardware-comparison.html[Support for automatic rebalancing of storage units]
 | ONTAP will automatically rebalance storage units across your storage availability zones for optimal performance and capacity utilization.
 
 | NVMe space deallocation enabled by default

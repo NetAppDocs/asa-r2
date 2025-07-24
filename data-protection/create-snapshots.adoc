@@ -10,7 +10,6 @@ searchtitle: "Create snapshots to back up your data using ONTAP System Manager |
 :imagesdir: ../media/
 
 [.lead]
-
 To back up data on your ASA r2 system, you need to create a snapshot. You can use ONTAP System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
