@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: data-protection/snapmirror-active-sync.html
-keywords: asa r2, data protection, business continuity, snapmirror active sync, zero rpo, zero rto, disaster recovery, symmetric active/active, workflow
+keywords: asa r2, data protection, business continuity, setup, set up, snapmirror active sync, disaster recovery, workflow
 summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
 ---
 = SnapMirror active sync setup workflow

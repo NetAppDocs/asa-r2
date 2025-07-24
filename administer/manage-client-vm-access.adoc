@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: administer/manage-client-vm-access.html
-keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface
+keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface, iscsi lif failover, 
 summary: "Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration, and routing."
 searchtitle: "Manage client access to storage using ONTAP System Manager | ASA r2"
 ---

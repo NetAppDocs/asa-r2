@@ -23,7 +23,7 @@ Before you can protect your data by replicating it to a remote cluster, you need
 
 .Before you begin
 
-The prerequisites for cluster peering are the same for ASA r2 systems as for other ONTAP systems.  link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html[Review the prerequisites for cluster peering].
+The prerequisites for cluster peering are the same for ASA r2 systems as for other ONTAP systems.  link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html[Review the prerequisites for cluster peering^].
 
 .Steps
 
