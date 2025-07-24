@@ -1,0 +1,59 @@
+---
+sidebar: sidebar
+permalink: release-notes/whats-new-9171.html
+keywords: what's new, release notes, 9.17.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20
+summary:  "Learn about the new capabilities available in ONTAP 9.17.1 for ASA r2 systems."
+---
+= What's new in ONTAP 9.17.1 for ASA r2 systems
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Learn about the new capabilities available in ONTAP 9.17.1 for ASA r2 systems.
+
+== SAN data migration
+
+[cols="2,4" options="header"]
+|===
+| Update
+| Description
+
+| link:../install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system[Support for data migration from a third-party storage system]
+| SAN data migration using Foreign LUN Import (FLI) is supported for ASA r2 systems.  FLI allows you to migrate data from a LUN on a third-party storage system to an ASA r2 system.  
+|===
+
+
+== Data protection
+[cols="2,4" options="header"]
+|===
+| Update
+| Description
+
+| link:../secure-data/enable-anti-ransomware-protection.html[Support for Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI)]
+| ARP/AI can be enabled on ASA r2 storage units. ARP/AI offers additional data protection by detecting and reporting potential ransomware attacks with no learning period.
+
+|link:../data-protection/snapmirror-active-sync.html[SnapMirror Active Sync]
+| SnapMirror Active Sync adds support for VMware workloads with NVMe/TCP and NVMe/FC host access for two-node ONTAP clusters.  VMware workload support for NVMe/TCP is contingent on the resolution of VMware Bug ID: TR1049746
+|===
+
+== Storage efficiency
+[cols="2,4" options="header"]
+|===
+| Update
+| Description
+
+| link:../learn-more/hardware-comparison.html[Support for automatic workload balancing]
+| Workloads are automatically balanced between the nodes of an HA pair to optimize performance and resource utilization. 
+|===
+
+
+// 2025 July 24, ONTAPDOC-2697, ONTAPDOC-2701, ONTAPDOC-2708, ONTAPDOC-2694
+// 2025 June 04, ONTAPDOC-2994
+// 2025 Feb 28, ONTAPDOC 2260
+// 2025 Jan 31, ONTAPPM-103027
+// 2025 Jan 24, ONTAPDOC 2259
+// 2024 Sept 16, Git Issue 2
+// 2024 Sept 23, ONTAPDOC 1921

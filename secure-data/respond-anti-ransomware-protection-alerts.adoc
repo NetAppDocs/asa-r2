@@ -1,0 +1,42 @@
+---
+sidebar: sidebar
+permalink: secure-data/respond-anti-ransomware-protection-alerts.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Respond to autonomous ransomware protection with AI alerts on ASA r2 storage systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, a warning is generated on the System Manager dashboard. You should view the warning, verify the activity and, if necessary, take action to stop any potential threat to your data.
+
+If an ARP/AI warning message is displayed, before you take action, you should use the appropriate application integrity checker to verify the integrity of the data on the storage unit.  Verifying the storage unit's data integrity helps you determine if the activity is acceptable or if it is a potential ransomware attack. 
+
+[cols="2,2", options="header"]
+|===
+| If the abnormal activity is ... | Then do this...
+| Acceptable | Mark the activity as a false positive.
+| A potential ransomware attack | Mark the activity as a potential ransomware attack.
+| Indeterminate | Do not take immediate action. 
+
+Monitor the storage unit to for up to 7 days. If the storage unit continues to operate normally, mark the activity as a false positive. If the storage unit continues to exhibit abnormal activity, mark the activity as a potential ransomware attack.
+|=== 
+
+.Steps
+
+. In System Manager, select *Dashboard*.
++
+If ARP has detected abnormal activity on one or more storage units, a message appears under *Warnings*.
+. Select the warning message.
+. Under *Events overview*, select the *Warnings* message that indicates the number of storage units with abnormal activity.
+. Under *Storage units with abnormal activity*, select the storage unit.
+. Select *Security*.
++
+If there is abnormal activity on the storage unit, a message is displayed under *Anti-ransomware*.
+. Select *Choose an action*.
+. Select *Mark as false positive* or select *Mark as potential ransomware attack*. 
+
+// 2025 July 24, ONTAPDOC-2701
+// 2024 Sept 24, ONTAPDOC 1928

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.html
+keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
+summary: "View warnings of potential ransomware attacks and take action in System Manager."
+---
+= Confirm your ASA r2 cluster configuration before configuring SnapMirror active sync
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+SnapMirror active sync relies on peered clusters to protect your data in the event of a failover. Before you configure SnapMirror active sync, you should confirm that your ASA r2 clusters are in a supported peering relationship and meet other configuration requirements.
+
+.Steps
+
+. Confirm that a cluster peering relationship exists between the clusters.
++
+[NOTE]
+The default IPspace is required by SnapMirror active sync for cluster peer relationships.  A custom IPspace isn’t supported.
++
+link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create a cluster peer relationship].
+
+. Confirm that a peer relationship exists between the storage virtual machines (VMs) on each cluster. 
++
+link:create-svm-peer-relationship.html[Create an intercluster storage VM peer relationship^].
+
+. Confirm that at least one LIF is created on each node in the cluster.
++
+link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[Create a LIF]
+
+. Confirm that the necessary storage units are created and mapped to host groups.
++
+link:../manage-data/provision-san-storage.html#create-storage-units[Create a storage unit] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the storage unit to a host group].
+
+. Rescan the application host to discover any new storage units.
+
+.What's next?
+After you have confirmed your cluster configuration, you are ready to link:install-ontap-mediator.html[install ONTAP Mediator].
+
+
+// 2025 Jul 24, ONTAPDOC-2707

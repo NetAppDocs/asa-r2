@@ -9,7 +9,6 @@ summary: If data in a consistency group is corrupted or lost, you can restore th
 :imagesdir: ../media/
 
 [.lead]
-
 Data in a consistency group or storage unit that is protected by snapshots can be restored if it is lost or corrupted.
 
 == Restore a consistency group

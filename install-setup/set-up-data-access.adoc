@@ -22,6 +22,15 @@ See the ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/onta
 
 If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion[VMware vSphere vMotion^] to perform a live, non-disruptive migration of your data.
 
+== Migrate data from a third-party storage system
+
+Beginning with ONTAP 9.17.1, you can use Foreign LUN Import (FLI) to migrate data from a LUN on a third-party storage system to an ASA r2 system. Using FLI for your data migration can help you mitigate the risk of data loss and downtime during the migration process.
+
+FLI supports both online and offline migrations. In an online migration, the client system stays online while data is copied from the third-party storage system to the ONTAP storage system. Online migrations are supported by Windows, Linux, and ESXi host operating systems.  In an offline migration, the client system is taken offline, the LUN data is copied from the third-party storage system to the ONTAP storage system, and then the client system is brought back online.
+
+* Learn how to perform an link:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_offline_workflow.html[FLI offline migration^].
+* Learn how to perform an link:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_online_workflow.html[FLI online migrations^].
+
 == Configure your ASA r2 system as a storage provider in your VMware environment
 
 You can use ONTAP tools for VMware to easily enable your ASA r2 system as a storage provider in your VMware environment.
@@ -41,4 +50,5 @@ Learn how to link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/de
 
 You are ready to link:../manage-data/provision-san-storage.html[provision storage] to enable your SAN hosts to read and write data to storage units.
 
+// 2025 July 24, ONTAPDOC-2696
 // 2024 Sept 23, ONTAPDOC 1925

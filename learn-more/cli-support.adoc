@@ -10,9 +10,9 @@ summary: "Certain ONTAP commands are  not supported on ASA r2 systems (ASA A1K, 
 
 [.lead]
 
-Instead of traditional aggregates, which own a specific set of the disks available in a storage system, ASA r2 systems use a _storage availability zone_.  A storage availability zone is a common pool of storage that has access to all available disks in the storage system.  The storage availability zone is visible to both nodes in an ASA r2 HA pair.   When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume containing a storage virtual machine (VM) in the storage availability zone to house the storage unit.
+Instead of aggregates, the storage layer in ASA r2 systems use storage availability zones. A storage availability zone is a common pool of storage available to a single HA pair. Both nodes in the HA pair have access to all available disks in their shared storage availability zone. When a storage unit (LUN or NVMe namespace) is created, ONTAP automatically creates a volume in the appropriate storage availability zone to house the storage unit.
 
-Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun` and `volume` commands and parameters is also limited.  
+Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun`, `storage` and `volume` commands and parameters is also limited.  
 
 The following commands and command sets are not supported on ASA on r2:
 
@@ -241,9 +241,7 @@ Cluster time-service ntp show
 .What's next?
 You are ready to link:../install-setup/set-up-data-access.html[set up data access] from your SAN clients to your system.
 
-// 2025 July 2, Git Issue 59
-// 2025 June 26, Git Issue 56
-// 2025 June 26, Git Issue 55
+// 2025 July 24, ONTAPDOC-2693
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Jan 25, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1933
