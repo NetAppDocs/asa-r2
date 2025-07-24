@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: manage-data/create-host-groups.html
-keywords: delete lun, delete namespace, delete storage unit, asa r2
-summary: "Delete storage units to lower the amount of physical storage you need or to free space needed for other host applications."
+keywords: create host group, map storage units, host access, asa r2
+summary: "Create host groups to provide hosts access to storage units and manage storage mappings effectively."
 ---
 = Create host groups on your ASA r2 system
 :icons: font
