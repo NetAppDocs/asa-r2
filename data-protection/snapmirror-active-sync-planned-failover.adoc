@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: data-protection/snapmirror-active-sync-planned-failover.html
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+keywords: snapmirror active sync, planned failover, disaster recovery, business continuity, data replication, ONTAP, secondary site, continuous availability
+summary: "Learn how to perform a planned failover of SnapMirror active sync relationships to ensure business continuity and disaster recovery."
 ---
 = Perform a planned failover of ASA r2 clusters in a SnapMirror active sync relationship
 :icons: font
