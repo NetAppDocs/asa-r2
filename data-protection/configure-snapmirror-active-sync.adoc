@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: data-protection/configure-snapmirror-active-sync.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+summary: "Learn how to configure SnapMirror active sync to ensure business continuity by creating a secondary data copy and enabling automatic failover in case of a disaster."
 ---
 = Configure SnapMirror active sync on ASA r2 systems
 :icons: font
