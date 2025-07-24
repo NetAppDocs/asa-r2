@@ -15,7 +15,7 @@ While the System Manager procedures for configuring SnapMirror active sync are d
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
-On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations. In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
 Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric active/active configurations^].
 
