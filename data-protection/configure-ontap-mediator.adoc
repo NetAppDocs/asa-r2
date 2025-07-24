@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: data-protection/configure-ontap-mediator.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+summary: "Learn how to configure the ONTAP Mediator with self-signed certificates for ASA r2 systems."
 ---
 = Configure Mediator using self-signed certificates on ASA r2 systems
 :icons: font
