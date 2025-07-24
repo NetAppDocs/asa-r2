@@ -16,11 +16,19 @@ ASA r2 systems support the following:
 [cols="1h, 1"]
 |===
 
-| Max nodes per cluster
+| Maximum number of nodes per cluster
 | 12
 
-| Max storage unit size
+| Maximum number of storage units per cluster
+| 30,000
+
+| Maximum storage unit size
 | 128 TB
+
+| Maximum storage availability zone size
+| 2 PB
+
+
 
 // table end
 |===
@@ -29,6 +37,7 @@ ASA r2 systems support the following:
 
 For a complete list of the most current ASA r2 storage limits, see link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 
+// 2025 July 23, ONTAPDOC-3076
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260, ONTAPDOC 2261
 // ONTAPDOC 1922, 2024 Sept 24

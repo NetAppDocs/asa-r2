@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: data-protection/configure-snapmirror-active-sync.html
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+summary: "Learn how to configure SnapMirror active sync to ensure business continuity by creating a secondary data copy and enabling automatic failover in case of a disaster."
+---
+= Configure SnapMirror active sync on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Configure SnapMirror active sync to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
+
+[NOTE]
+If you are using the iSCSI or FC protocol and use ONTAP tools for VMware Sphere, you can optionally link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html[use ONTAP Tools for VM ware to configure SnapMirror active sync^]. 
+
+.Before you begin
+link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
+
+Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/#key-concepts[non-uniform] symmetric active/active configurations.
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the name of the consistency group you want to protect with SnapMirror active sync.
+. Select image:icon_kabob.gif[three vertical blue dots]and then select *Protect*.
+. Under *Remote protection*, select *Replicate to a remote cluster*.
+. Select an existing cluster peer or choose to *Add a new one*.
+. Select the storage VM.
+. For the replication policy, select *AutomatedFailOverDuplex*.  
+. If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*; then input the name of the new destination consistency group you create before beginning this procedure.
+. Select *Save*.
+
+.Result
+SnapMirror active sync is configured to protect your data so that you can continue operations with zero recovery point objective (RPO) and zero recovery time objective (RTO) in the event of a disaster.
+
+// 2025 Jul 24, ONTAPDOC-2707
