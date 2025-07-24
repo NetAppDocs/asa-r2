@@ -23,7 +23,9 @@ indexpage:
         - title: Create snapshots
           url: /data-protection/create-snapshots.html         
         - title: Set up snapshot replication
-          url: /data-protection/snapshot-replication.html  
+          url: /data-protection/snapshot-replication.html 
+        - title: Set up SnapMirror active sync
+          url: /data-protection/snapmirror-active-sync.html   
         - title: Encrypt data at rest
           url: /secure-data/encrypt-data-at-rest.html                                              
     - title: More ASA r2 resources

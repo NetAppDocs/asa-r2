@@ -43,7 +43,7 @@ entries:
        url: "/data-protection/snapmirror-active-sync-confirm-cluster-configuration.html"         
      - title: Install ONTAP Mediator
        url: "/data-protection/install-ontap-mediator.html"
-     - title: Configure ONTAP Mediator
+     - title: Configure ONTAP Mediator or ONTAP Cloud Mediator
        url: "/data-protection/configure-ontap-mediator.html"  
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
