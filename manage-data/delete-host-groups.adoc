@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: manage-data/delete-host-groups.html
-keywords: delete lun, delete namespace, delete storage unit, asa r2
+keywords: delete host groups, remove host groups, igroup, nvme subsystem, asa r2
 summary: "Delete host groups to remove host access to storage units on your ASA r2 system."
 ---
 = Delete a host group on your ASA r2 system
