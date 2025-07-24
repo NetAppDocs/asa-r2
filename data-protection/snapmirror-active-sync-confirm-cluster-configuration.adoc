@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.html
 keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
-summary: "View warnings of potential ransomware attacks and take action in System Manager."
+summary: "Before you configure SnapMirror active sync, you should confirm that your ASA r2 clusters are in a supported peering relationship and meet other configuration requirements."
 ---
 = Confirm your ASA r2 cluster configuration before configuring SnapMirror active sync
 :icons: font
@@ -22,7 +22,7 @@ link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create 
 
 . Confirm that a peer relationship exists between the storage virtual machines (VMs) on each cluster. 
 +
-link:create-svm-peer-relationship.html[Create an intercluster storage VM peer relationship^].
+link:create-svm-peer-relationship.html[Create an intercluster storage VM peer relationship].
 
 . Confirm that at least one LIF is created on each node in the cluster.
 +
