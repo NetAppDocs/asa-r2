@@ -47,4 +47,10 @@ indexpage:
     - title: Other ONTAP resources
       links:
         - title: Documentation for other ONTAP systems 
-          url: https://docs.netapp.com/us-en/ontap-family/  
+          url: https://docs.netapp.com/us-en/ontap-family/
+        - title: Learn about the advantages of using ONTAP for vSphere
+          url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html
+        - title: VMware Live Site Recovery with ONTAP 
+          url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html
+        - title: Learn about continuous availability solutions for vSphere environments 
+          url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html        
