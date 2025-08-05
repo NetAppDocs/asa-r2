@@ -38,7 +38,13 @@ indexpage:
           url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf
         - title: RestfulAPI transition guide from ASA/AFF to ASA r2
           url: https://www.netapp.com/media/136585-tr-5008-restfulapi-transition-guide-asa-r2.pdf
+        - title: SnapCenter operations for ASA r2 systems
+          url: https://docs.netapp.com/us-en/snapcenter/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html        
+        - title: Oracle database performance on NetApp ASA 
+          url: https://www.netapp.com/pdf.html?item=/media/138087-tr-5015-oracle-perf-on-asa.pdf
+        - title: SAP HANA on NetApp ASA systems with FCP 
+          url: https://docs.netapp.com/us-en/netapp-solutions-sap/bp/hana-asa-fc-introduction.html  
     - title: Other ONTAP resources
       links:
         - title: Documentation for other ONTAP systems 
-          url: https://docs.netapp.com/us-en/ontap-family/        
+          url: https://docs.netapp.com/us-en/ontap-family/  
