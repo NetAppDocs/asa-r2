@@ -32,7 +32,7 @@ indexpage:
       links:
         - title: ASA datasheet 
           url: https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf
-        - title: Best practices of NetApp ASA 
+        - title: Best practices for NetApp ASA systems
           url: https://www.netapp.com/pdf.html?item=/media/137426-tr-5009-best-practices-for-netapp-asa.pdf 
         - title: FlexPod on NetApp ASA  
           url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf
