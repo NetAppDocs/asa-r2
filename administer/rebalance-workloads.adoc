@@ -13,7 +13,10 @@ Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between th
 
 == Modify the default evaluation period for automatic workload rebalancing
 
-Automatic workload rebalancing is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You can  use the ONTAP command line interface (CLI) to increase or decrease the default evaluation period to suit your operational needs.
+Automatic workload rebalancing is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You can  use the ONTAP command line interface (CLI) to increase or decrease the default evaluation period to suit your operational needs.  
+
+[NOTE]
+You cannot revert from ONTAP 9.17.1 on your ASA r2 system after automatic workload rebalancing has been enabled.
 
 .Steps
 
@@ -104,3 +107,4 @@ placement rebalance config show-evaluation
 
 If you want to set the rebalancing mode to *automated* or *disabled*, you can do so by using the `placement rebalance config modify` command.
 
+// 2025 Aug 13, ONTAPDOC-3180
