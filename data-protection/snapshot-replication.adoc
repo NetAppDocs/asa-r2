@@ -153,8 +153,6 @@ The _source_ consistency group refers to the consistency group on your local clu
 a| 
 . Select *Local sources*, then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Search for and select the source consistency group.
-+
-The _source_ consistency group refers to the consistency group on your local cluster that you want to replicate.
 . Under *Replication destination*, select the cluster to replicate to; then select the storage VM.
 
 // table end
