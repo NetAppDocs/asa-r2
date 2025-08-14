@@ -32,7 +32,11 @@ entries:
    - title: Create an SVM peer relationship
      url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication
-     url: "/data-protection/snapshot-replication.html"       
+     entries:
+     - title: Replicate snapshots to a remote cluster
+       url: "/data-protection/snapshot-replication.html" 
+     - title: Learn about pre-defined protection policies
+       url: "/data-protection/pre-defined-protection-policies.html"        
    - title: Set up SnapMirror active sync
      entries:
      - title: Workflow 
