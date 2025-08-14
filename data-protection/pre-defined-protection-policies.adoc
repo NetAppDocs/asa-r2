@@ -1,0 +1,73 @@
+---
+sidebar: sidebar
+permalink: data-protection/pre-defined-protection-policies.html
+keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication, policy, pre-defined, default, custom, policies
+summary: "The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships."
+searchtitle: "Replicate snapshots to a remote cluster using ONTAP System Manager| ASA r2"
+---
+= Learn about pre-defined ONTAP data protection policies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  
+
+If the pre-defined policies do not meet your needs, you can link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy[create a custom replication policy].
+
+ASA r2 systems support the following pre-defined protection policies.
+
+[cols="3,4,1"]
+|===
+h| Policy h| Description h| Policy type 
+
+| Asynchronous
+| A unified SnapMirror asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots with an hourly transfer schedule.
+| Asynchronous
+
+| AutomatedFailOverDuplex
+| Policy for SnapMirror synchronous with zero RTO guarantee and bi-directional sync replication.
+| Synchronous
+
+| CloudBackupDefault
+| Vault policy with daily rule.
+| Asynchronous
+
+| DailyBackup
+| Vault policy with a daily rule and a daily transfer schedule.
+| Asynchronous
+
+| DPDefault
+| SnapMirror asynchronous policy for mirroring all snapshots and the latest active file system.
+| Asynchronous
+
+| MirrorAllSnapshots
+| SnapMirror asynchronous policy for mirroring all snapshots and the latest active file system.
+| Asynchronous
+
+| MirrorAllSnapshotsDiscardNetwork
+| SnapMirror asynchronous policy for mirroring all snapshots and the latest active file system excluding the network configurations.
+| Asynchronous
+
+| MirrorAndVault
+| A unified SnapMirror asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
+| Asynchronous
+
+| MirrorAndVaultDiscardNetwork
+| A unified SnapMirror asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots excluding the network configurations.
+| Asynchronous
+
+| MirrorLatest
+| SnapMirror asynchronous policy for mirroring the latest active file system.
+| Asynchronous
+
+| Unified7year
+| Unified SnapMirror policy with 7-year retention.
+| Asynchronous
+
+| XDPDefault
+| Vault policy with daily and weekly rules.
+| Asynchronous
+
+|===
+
+// 2025 Sept 04, ONTAPDOC 2893

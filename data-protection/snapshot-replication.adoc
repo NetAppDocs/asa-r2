@@ -38,9 +38,11 @@ The prerequisites for cluster peering are the same for ASA r2 systems as for oth
 
 You have peered for local ASA r2 cluster with a remote cluster.  You can now create a replication relationship.
 
-== Step 2: Optionally, create a replication policy
+== Step 2: Optionally, create a custom replication policy
 
-The snapshot replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  
+The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  If the pre-defined policies do not meet your needs, you can create a custom replication policy.
+
+Learn about the link:pre-defined-protection-policies.html[pre-defined ONTAP data protection policies].
 
 .Steps
 
@@ -186,5 +188,6 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
+// 2025 Sept 04, ONTAPDOC 2893
 // 2024 Oct 11, Git Issue 12
 // 2024 Sept 24, ONTAPDOC 1927
