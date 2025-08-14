@@ -17,6 +17,10 @@ Snapshot replication for an ASA r2 storage system is only supported to and from 
 
 To set up Snapshot replication, you need to establish a replication relationship between your ASA r2 system and the remote location. The replication relationship is governed by a replication policy.  A default policy to replicate all snapshots is created during cluster set up.  You can use the default policy or optionally, create a new policy.
 
+Beginning in ONTAP 9.17.1 child consistency groups do not have to share the same replication policy as the parent consistency group. You can apply different replication policies to each child consistency group.  This allows you to replicate child consistency groups at different intervals.
+
+link:manage-consistency-groups.html[Learn more about hierarchical consistency groups].
+
 == Step 1: Create a cluster peer relationship
 
 Before you can protect your data by replicating it to a remote cluster, you need to create a cluster peer relationship between the local and remote cluster.
@@ -189,6 +193,7 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
+// 2025 Sept 04, ONTAPDOC 2732
 // 2025 Sept 04, ONTAPDOC 2893
 // 2024 Oct 11, Git Issue 12
 // 2024 Sept 24, ONTAPDOC 1927
