@@ -93,7 +93,10 @@ For protection against ransomware attacks, when you set up your replication rela
 
 .Before you begin
 
-If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
+* link:pre-defined-protection-policies.html[Learn about replication policies].
++
+When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy.
+* If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
 
 Create a replication relationship with or without locked destination snapshots.
 
