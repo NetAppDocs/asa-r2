@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: data-protection/configure-ontap-mediator.html
+permalink: data-protection/reinitialize-ontap-mediator-ca-certificate.html
 keywords: asa r2, data protection, protect data, configure mediator, ontap mediator, cloud mediator, self-signed, ca, certificates
 summary: "Learn how to configure the ONTAP Mediator or ONTAP Cloud Mediator with self-signed certificates for ASA r2 systems."
 ---
-= Configure ONTAP Mediator or ONTAP Cloud Mediatior using self-signed certificates on ASA r2 systems
+= Reinitialize ONTAP Mediator or ONTAP Cloud Mediatior to use a third-party certificate on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
@@ -18,14 +18,17 @@ You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin u
 .Steps
 
 . In System Manager, select *Protection > Overview*.
+. In the right pane, under *Mediators* select image:icon_kabob.gif[three vertical blue dots]; then select *Remove mediator*.
+. Select *Cluster > Settings*.
+. Under *Security*, select *Certificates*.
+. Select the certificate that you want to remove.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Select *Protection > Overview*.
 . In the right pane under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.
 . For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
 . Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
-. Add the certificate information
-+
-* If you are using a self signed certificate, copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
-* If you are using a third-party certificate, enter the certificate information.
+. Enter the third-party certificate information.
 . Select *Add*.
 
 .What's next?

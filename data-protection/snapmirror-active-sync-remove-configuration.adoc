@@ -11,10 +11,13 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 [.lead]
 If you no longer require near zero RPO and RTO for your business-critical applications, you can remove the SnapMirror active sync configuration from your ASA r2 system.
 
-Deleting the relationship is not allowed in the failed-over state when the relationship is not reversed.
+.Steps
 
-.Before you begin
+. In System Manager, select *Protection > Replication.
+. Select *Local destinations*.
+. Next to the SnapMirror active sync relationship you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Select *Release the source consistency group base snapshots*.
+. Select *Delete*.
 
-* All storage units in the destination cluster must be unmapped.
-+
-After the LUNs are unmapped and the host is rescanned, the SCSI target notifies the hosts that the LUN inventory has changed. The existing LUNs on the zero RTO secondary volumes change to reflect a new identity after the zero RTO relationship is deleted. Hosts discover the secondary volume LUNs as new LUNs that have no relationship to the source volume LUNs.
+.Result
+The SnapMirror active sync relationship is removed and the source consistency group base snapshots are released.  The storage units in the consistency group are no longer protected by SnapMirror active sync.

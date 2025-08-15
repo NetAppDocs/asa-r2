@@ -52,11 +52,18 @@ entries:
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
    - title: Manage SnapMirror active sync 
-     entries:   
+     entries:
+     - title: Reinitialize ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate
+       url: "/data-protection/reinitialize-ontap-mediator-ca-certificate.html"         
      - title: Perform a planned failover with SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-planned-failover.html"
      - title: Reestablish SnapMirror active sync after an unplanned failover
        url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"  
+     - title: Remove a SnapMirror active sync configuration
+       url: "/data-protection/snapmirror-active-sync-remove-configuration.html"  
+     - title: Remove ONTAP Mediator or ONTAP Cloud Mediator
+       url: "/data-protection/snapmirror-active-sync-remove-mediator.html" 
+  
    - title: Restore data
      url: "/data-protection/restore-data.html"
    - title: Manage consistency groups
