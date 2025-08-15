@@ -58,7 +58,7 @@ then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direct
 // table end
 |===
 
-. Select *Edit*.
+. Select *Save*.
 
 .What's next
 Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
@@ -150,7 +150,7 @@ Storage units cannot be directly associated with a parent consistency group.  If
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the consistency group you want convert into a parent consistency group.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Promote to parent consistency group*.
-. Enter a name for the parent consistency group or accept the default name; then select the consistency group component type.
+. Enter a name for the new child consistency group or accept the default name; then select the consistency group component type.
 . Select *Promote*.
 
 .What's next?
