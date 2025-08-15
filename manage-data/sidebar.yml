@@ -60,7 +60,17 @@ entries:
    - title: Restore data
      url: "/data-protection/restore-data.html"
    - title: Manage consistency groups
-     url: "/data-protection/manage-consistency-groups.html"  
+     entries:
+     - title: Learn about consistency groups
+       url: "/data-protection/manage-consistency-groups.html"
+     - title: Use snapshots to protect consistency groups
+       url: "data-protection/manage-consistency-groups-add-remove-snapshots.html"  
+     - title: Add or remove storage units to consistency groups
+       url: "/data-protection/manage-consistency-groups-add-remove-storage-units.html"
+     - title: Manage hierarchical consistency groups
+       url: "/data-protection/manage-hierarchical-consistency-groups.html" 
+     - title: Delete consistency groups
+       url: "/data-protection/manage-consistency-groups-delete.html"     
    - title: Manage protection policies and schedules
      url: "/data-protection/policies-schedules.html"      
 - title: Secure your data

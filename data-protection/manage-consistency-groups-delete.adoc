@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: data-protection/manage-consistency-groups-delete.html
+keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
+summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
+---
+= Delete consistency groups on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  After a consistency group is deleted, the storage units previously in the group remain active on the cluster. If the consistency group was in a replication relationship, the replicated copies remain on the remote cluster.
+
+.Before you begin
+If you are running ONTAP 9.16.1, and the consistency group you want to delete is in a replication relationship, you must break the relationship before you delete the consistency group. 
+
+.Steps
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the consistency group you want to delete.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Accept the warning, then select *Delete*.
+
+.What's next?
+After you delete a consistency group, the storage units previously in the consistency group are no longer protected by snapshots.  Consider adding these storage units to another consistency group to protect them against data loss.
+
+// 2024 Sept 24, ONTAPDOC 1927
