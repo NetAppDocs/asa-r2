@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: data-protection/manage-hierarchical-consistency-groups.adoc
+permalink: data-protection/manage-hierarchical-consistency-groups.html
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
 summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
 ---

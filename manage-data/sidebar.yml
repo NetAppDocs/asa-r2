@@ -63,7 +63,6 @@ entries:
        url: "/data-protection/snapmirror-active-sync-remove-configuration.html"  
      - title: Remove ONTAP Mediator or ONTAP Cloud Mediator
        url: "/data-protection/snapmirror-active-sync-remove-mediator.html" 
-  
    - title: Restore data
      url: "/data-protection/restore-data.html"
    - title: Manage consistency groups
@@ -71,7 +70,7 @@ entries:
      - title: Learn about consistency groups
        url: "/data-protection/manage-consistency-groups.html"
      - title: Use snapshots to protect consistency groups
-       url: "data-protection/manage-consistency-groups-add-remove-snapshots.html"  
+       url: "/data-protection/manage-consistency-groups-add-remove-snapshots.html"  
      - title: Add or remove storage units to consistency groups
        url: "/data-protection/manage-consistency-groups-add-remove-storage-units.html"
      - title: Manage hierarchical consistency groups

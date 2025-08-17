@@ -13,7 +13,7 @@ If you no longer require near zero RPO and RTO for your business-critical applic
 
 .Steps
 
-. In System Manager, select *Protection > Replication.
+. In System Manager, select *Protection > Replication*.
 . Select *Local destinations*.
 . Next to the SnapMirror active sync relationship you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Select *Release the source consistency group base snapshots*.
