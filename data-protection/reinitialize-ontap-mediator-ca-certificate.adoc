@@ -9,11 +9,7 @@ summary: "Learn how to configure the ONTAP Mediator or ONTAP Cloud Mediator with
 :imagesdir: ../media/
 
 [.lead]
-You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin using SnapMirror active sync for cluster monitoring.  ONTAP Mediator and ONTAP Cloud Mediator both provide a persistent and fenced store for high availability (HA) metadata used by the ONTAP clusters in a SnapMirror active sync relationship. Additionally, both mediators provide a synchronous node health query functionality to aid in quorum determination and serves as a ping proxy for controller liveliness detection.
-
-.Before you begin
-
-* If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html[prerequisites^].
+If you initialized ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reinitialize the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons.  
 
 .Steps
 
@@ -31,7 +27,5 @@ You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin u
 . Enter the third-party certificate information.
 . Select *Add*.
 
-.What's next?
-After you have initialized the mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
 
 // 2025 Jul 24, ONTAPDOC-2707
