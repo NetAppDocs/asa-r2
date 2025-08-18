@@ -4,24 +4,42 @@ permalink: data-protection/reinitialize-ontap-mediator-ca-certificate.html
 keywords: asa r2, data protection, protect data, configure mediator, ontap mediator, cloud mediator, self-signed, ca, certificates
 summary: "Learn how to configure the ONTAP Mediator or ONTAP Cloud Mediator with self-signed certificates for ASA r2 systems."
 ---
-= Reinitialize ONTAP Mediator or ONTAP Cloud Mediatior to use a third-party certificate on ASA r2 systems
+= Reconfigure ONTAP Mediator or ONTAP Cloud Mediatior to use a third-party certificate on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you initialized ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reinitialize the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons.  
+If you configure ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reconfigure the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons.  
+
+== Step 1: Remove the mediator configuration
+
+To reconfigure the mediator, you must first remove its current configuration from the cluster.
+
+.Steps 
+
+. In System Manager, select *Protection > Overview*.
+. In the right pane, under *Mediators* select image:icon_kabob.gif[three vertical blue dots] next to the cluster peer with the mediator configuration that you want to remove; then select *Remove*.
++
+If you have multiple mediators installed, and you want to remove all configurations, select image:icon_kabob.gif[three vertical blue dots] next to *Mediators*; then select *Remove*.
+. Select *Remove* to confirm that you want to remove the mediator configuration.
+
+== Step 2:  Remove the self-signed certificate
+
+After the mediator configuration is removed, you should remove the associated self-signed certificate from the cluster.
 
 .Steps
 
-. In System Manager, select *Protection > Overview*.
-. In the right pane, under *Mediators* select image:icon_kabob.gif[three vertical blue dots] next to the cluster peer with the mediator that you want to remove; then select *Remove*.
-+
-If you have multiple mediators installed, and you want to remove them all, select image:icon_kabob.gif[three vertical blue dots] next to *Mediators*; then select *Remove*.
-. Select *Remove* to confirm that you want to remove the mediator.
-. Select *Cluster > Settings*.
+.Select *Cluster > Settings*.
 . Under *Security*, select *Certificates*.
 . Select the certificate that you want to remove.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+
+== Step 3: Add the third-party certificate
+
+After you have removed the associated self-signed certificate, you can reconfigure the mediator with the third-party certificate.
+
+.Steps
+
 . Select *Protection > Overview*.
 . In the right pane under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.

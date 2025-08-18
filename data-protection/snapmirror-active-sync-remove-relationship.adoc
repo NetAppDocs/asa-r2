@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
-permalink: data-protection/snapmirror-active-sync-remove-configuration.html
+permalink: data-protection/snapmirror-active-sync-remove-relationship.html
 keywords: asa r2, data protection, business continuity, remove, delete, snapmirror active sync, disaster recovery
 summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
 ---
-= Remove a SnapMirror active sync configuration
+= Remove a SnapMirror active sync relationship on your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you no longer require near zero RPO and RTO for your business-critical applications, you can remove the SnapMirror active sync configuration from your ASA r2 system.
+If you no longer require near zero RPO and RTO for your business-critical applications, you can remove the associated SnapMirror active sync relationship from your ASA r2 system.
 
 .Steps
 
