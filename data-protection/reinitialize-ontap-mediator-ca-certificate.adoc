@@ -14,7 +14,10 @@ If you initialized ONTAP Mediator or ONTAP Cloud Mediator with a self-signed cer
 .Steps
 
 . In System Manager, select *Protection > Overview*.
-. In the right pane, under *Mediators* select image:icon_kabob.gif[three vertical blue dots]; then select *Remove mediator*.
+. In the right pane, under *Mediators* select image:icon_kabob.gif[three vertical blue dots] next to the cluster peer with the mediator that you want to remove; then select *Remove*.
++
+If you have multiple mediators installed, and you want to remove them all, select image:icon_kabob.gif[three vertical blue dots] next to *Mediators*; then select *Remove*.
+. Select *Remove* to confirm that you want to remove the mediator.
 . Select *Cluster > Settings*.
 . Under *Security*, select *Certificates*.
 . Select the certificate that you want to remove.
@@ -24,8 +27,7 @@ If you initialized ONTAP Mediator or ONTAP Cloud Mediator with a self-signed cer
 . Select the *Mediator type*.
 . For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
 . Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
-. Enter the third-party certificate information.
+. Under *Certificate*, enter the third-party certificate information.
 . Select *Add*.
-
 
 // 2025 Jul 24, ONTAPDOC-2707
