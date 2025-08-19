@@ -10,7 +10,7 @@ searchtitle: "Replicate snapshots to a remote cluster using ONTAP System Manager
 :imagesdir: ../media/
 
 [.lead]
-The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  
+The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP includes various pre-defined data protection policies that you can use for your replication relationships.  
 
 If the pre-defined policies do not meet your needs, you can link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy[create a custom replication policy].
 
