@@ -9,15 +9,21 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 :imagesdir: ../media/
 
 [.lead]
-If you no longer require near zero RPO and RTO for your business-critical applications, you can remove the associated SnapMirror active sync relationship from your ASA r2 system.
+If you no longer require near zero RPO and RTO for a business application, you can remove the associated SnapMirror active sync relationship.
 
 .Steps
 
 . In System Manager, select *Protection > Replication*.
 . Select *Local destinations*.
-. Next to the SnapMirror active sync relationship you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Next to the SnapMirror active sync relationship that you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Select *Release the source consistency group base snapshots*.
 . Select *Delete*.
 
 .Result
 The SnapMirror active sync relationship is removed and the source consistency group base snapshots are released.  The storage units in the consistency group are no longer protected by SnapMirror active sync.
+
+.What's next?
+link:snapshot-replication.html[Set up snapshot replication] to copy the consistency group to a geographically remote location for backup and disaster recovery.
+
+
+// 2024 Sept 24, ONTAPDOC-3156
