@@ -19,7 +19,7 @@ To set up Snapshot replication, you need to establish a replication relationship
 
 Beginning with ONTAP 9.17.1, you can apply replication policies directly to child consistency groups.  In ONTAP 9.16.1, replication is supported only at the parent level, meaning all child consistency groups share the replication policy applied to the parent.
 
-link:manage-consistency-groups.html[Learn more about hierarchical consistency groups].
+link:manage-hierarchical-consistency-groups.html[Learn more about hierarchical (parent/child) consistency groups].
 
 == Step 1: Create a cluster peer relationship
 
@@ -46,7 +46,7 @@ You have peered for local ASA r2 cluster with a remote cluster.  You can now cre
 
 The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  If the pre-defined policies do not meet your needs, you can create a custom replication policy.
 
-Learn about the link:pre-defined-protection-policies.html[pre-defined ONTAP data protection policies].
+Learn about link:pre-defined-protection-policies.html[pre-defined ONTAP data protection policies].
 
 .Steps
 

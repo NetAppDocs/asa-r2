@@ -16,11 +16,11 @@ Hierarchical consistency groups allow you to apply individual snapshot policies 
 
 == Promote an existing consistency group into a parent consistency group
 
-If you convert an existing consistency group to a parent, a new child consistency group is created and the storage units belonging to the converted consistency group are moved to the new child consistency group.  Storage units cannot be directly associated with a parent consistency group.  
+If you promote an existing consistency group to a parent, a new child consistency group is created and the storage units belonging to the promoted consistency group are moved to the new child consistency group.  Storage units cannot be directly associated with a parent consistency group.  
 
 .Before you begin
 
-If you are running ONTAP 9.16.1 and the consistency group you want to promote is in a SnapMirror active sync relationship, you mustlink:snapmirror-active-sync-remove-relationship.html[remove the SnapMirror active sync relationship] before the consistency group can be promoted.
+If you are running ONTAP 9.16.1 and the consistency group you want to promote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-remove-relationship.html[remove the SnapMirror active sync relationship] before the consistency group can be promoted.
 
 .Steps
 
@@ -31,11 +31,11 @@ If you are running ONTAP 9.16.1 and the consistency group you want to promote is
 . Select *Promote*.
 
 .What's next?
-You can create additional child consistency groups under the parent consistency group.  You can also link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy the parent consistency group to a geographically remote location for backup and disaster recovery.
+You can create additional child consistency groups under the parent consistency group.  You can also link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy the parent and child consistency groups to a geographically remote location for backup and disaster recovery.
 
 == Demote a parent consistency group to a single consistency group
 
-When you _demote_ a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the parent is then managed as a single consistency group.
+When you demote a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the parent is then managed as a single consistency group.
 
 .Before you begin
 
@@ -102,7 +102,7 @@ If you select to create a new parent consistency group, enter a name for the par
 // end tabbed area
 
 .What's next
-After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up a replication policy] on the parent consistency group to replicate the snapshots of all the child consistency groups to a remote cluster as a single unit.
+After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up replication policies] on the parent and child consistency groups to replicate the consistency groups to a remote location.
 
 == Detach a child consistency group from a parent consistency group
 
@@ -123,6 +123,7 @@ If you are running ONTAP 9.16.1 and the consistency group you want to detach is 
 
 .What's next?
 
-link:snapshot-replication.html[Set up a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster as a single consistency group.
+link:snapshot-replication.html[Set up a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster.
 
+// 2025 Sep 04, ONTAPDOC-2732
 // 2024 Sept 24, ONTAPDOC 1927
