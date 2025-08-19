@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: data-protection/manage-consistency-groups-delete.html
 keywords: consistency groups, snapshots, data protection, protect data, add, break, delete, storage units, lun, namespace, increase capacity
-summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
+summary: If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.   
 ---
 = Delete consistency groups on your ASA r2 system
 :icons: font

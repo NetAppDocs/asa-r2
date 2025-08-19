@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: data-protection/manage-consistency-groups-add-remove-storage-units.html
-keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
-summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
+keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity, shrink
+summary: Increase or decrease the size of a consistency group by modifying the number of storage units in the consistency group. 
 ---
 = Modify the size of consistency groups on your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Expand or decrease the amount of storage managed by a consistency group by modifying the number of storage units in the consistency group. 
+Increase or decrease the size of a consistency group by modifying the number of storage units in the consistency group. 
 
 .Before you begin
 If you are running ONTAP 9.16.1 and the consistency group you want to modify is in an SnapMirror active sync relationship, you must link:snapmirror-active-sync-break-relationship.html[break the SnapMirror active sync relationship] before you can modify the consistency group.
