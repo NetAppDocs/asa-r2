@@ -12,7 +12,7 @@ summary: Use consistency groups to perform various actions to multiple storage u
 Expand or decrease the amount of storage managed by a consistency group by modifying the number of storage units in the consistency group. 
 
 .Before you begin
-If you are running ONTAP 9.16.1 and the consistency group you want to modify is in an SnapMirror active sync relationship, you must link:snapmirror-active-sync-remove-relationship.html[remove the SnapMirror active sync relationship] before you can modify the consistency group.
+If you are running ONTAP 9.16.1 and the consistency group you want to modify is in an SnapMirror active sync relationship, you must link:snapmirror-active-sync-break-relationship.html[break the SnapMirror active sync relationship] before you can modify the consistency group.
 
 == Add storage units to a consistency group
 

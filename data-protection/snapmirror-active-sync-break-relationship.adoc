@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapmirror-active-sync-break-relationship.html
+keywords: asa r2, data protection, business continuity, remove, delete, snapmirror active sync, disaster recovery
+summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
+---
+= Break a SnapMirror active sync relationship on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In certain situations, you might need to break a SnapMirror active sync relationship.  For example, if are running ONTAP 9.16.1 and you want to modify the size of a consistency group that is in a SnapMirror active sync relationship, you must break the relationship before you can modify the consistency group's size.
+
+.Steps
+
+. In System Manager, select *Protection > Replication*.
+. Select *Local destinations*.
+. Next to the SnapMirror active sync relationship that you want to break, select image:icon_kabob.gif[three vertical blue dots]; then select *Break*.
+. Select *Break*.
+
+.Result
+The SnapMirror active sync relationship between the primary and secondary consistency group is broken. 
+
+// 2024 Sept 24, ONTAPDOC-3156
