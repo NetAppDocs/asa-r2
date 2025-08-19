@@ -13,6 +13,9 @@ ONTAP SnapMirror active sync data protection enables business services to contin
 
 While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same.
 
+[NOTE]
+For ASA r2 systems, SnapMirror active sync is supported on 2-node cluster configurations only.  
+
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
 link:https://www.netapp.com/pdf.html?item=/media/138366-sb-3457-san-disaster-recovery-netapp-asa.pdf[Learn more about disaster recovery with SnapMirror active sync on your ASA r2 system^]
@@ -45,4 +48,5 @@ You must link:configure-ontap-mediator.html[configure ONTAP mediator or ONTAP cl
 [role="quick-margin-para"]
 link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently fail over in the event of a disaster. 
 
+// 2025 Sep 04, ONTAPDOC-2729
 // 2025 Jul 24, ONTAPDOC-2707
