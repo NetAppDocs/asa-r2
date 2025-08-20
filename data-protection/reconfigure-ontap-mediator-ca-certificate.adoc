@@ -4,7 +4,7 @@ permalink: data-protection/reconfigure-ontap-mediator-ca-certificate.html
 keywords: asa r2, data protection, protect data, configure mediator, reconfigure, reinitialize, ontap mediator, cloud mediator, self-signed, ca, certificates
 summary: "Learn how to reconfigure the ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate for ASA r2 systems."
 ---
-= Reconfigure ONTAP Mediator or ONTAP Cloud Mediatior to use a third-party certificate on ASA r2 systems
+= Reconfigure ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
@@ -34,7 +34,7 @@ After the mediator configuration is removed, you should remove the associated se
 . Select the certificate that you want to remove.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 
-== Step 3: Add the third-party certificate
+== Step 3: Reinstall the mediator with a third-party certificate
 
 After you have removed the associated self-signed certificate, you can reconfigure the mediator with the third-party certificate.
 
@@ -43,8 +43,8 @@ After you have removed the associated self-signed certificate, you can reconfigu
 . Select *Protection > Overview*.
 . In the right pane, under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.
-. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
-. Select a cluster peer from the list of eligible cluster peers, or select *Add a cluster peer* to add a new one.
+. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name, and mediator password.
+. Select a cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
 . Under *Certificate*, enter the third-party certificate information.
 . Select *Add*.
 

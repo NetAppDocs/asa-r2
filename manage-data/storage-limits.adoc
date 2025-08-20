@@ -20,9 +20,21 @@ ASA r2 systems support the following storage limits:
 | Per HA pair
 | Per cluster
 
+| Consistency group
+| 256
+| 256
+
+| Enterprise applications
+| 100
+| 350
+
 | Nodes
 | 2
 | 12
+
+| Replication groups
+| 50
+| 50
 
 | Storage availability zone size
 | 2PB
@@ -44,14 +56,6 @@ ASA r2 systems support the following storage limits:
 | 800
 | 1200
 
-| Replication groups
-| 50
-| 50
-
-| Enterprise applications
-| 100
-| 350
-
 // table end
 |===
 
@@ -66,13 +70,14 @@ The following limits apply to storage units and consistency groups in a SnapMirr
 | Per HA pair   
 | Per cluster
 
+| Consistency groups
+| 250
+| 750
+
 | Storage units
 | 4,000
 | 6,000
 
-| Consistency groups
-| 250
-| 750
 
 |===
 
@@ -87,13 +92,13 @@ The following limits apply to storage units and consistency groups in a SnapMirr
 | Per HA pair
 | Per cluster
 
-| Storage units
-| 400
-| 800
-
 | Consistency groups
 | 50
-| 100
+| 50
+
+| Storage units
+| 400
+| 400
 
 |===
 

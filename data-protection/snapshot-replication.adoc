@@ -13,7 +13,7 @@ searchtitle: "Replicate snapshots to a remote cluster using ONTAP System Manager
 Snapshot replication is a process in which consistency groups on your ASA r2 system are copied to a geographically remote location. After the initial replication, changes to consistency groups are copied to the remote location based upon a replication policy. Replicated consistency groups can be used for disaster recovery or data migration.
 
 [NOTE]
-Snapshot replication for an ASA r2 storage system is only supported to and from another ASA r2 storage system.  You cannot replicate snapshots from an ASA r2 system to a current ASA, AFF or FAS system or from a current ASA, AFF or FAS system to an ASA r2 system.  
+Snapshot replication for an ASA r2 storage system is only supported to and from another ASA r2 storage system.  You cannot replicate snapshots from an ASA r2 system to an ASA, AFF or FAS system or from an ASA, AFF or FAS system to an ASA r2 system.  
 
 To set up Snapshot replication, you need to establish a replication relationship between your ASA r2 system and the remote location. The replication relationship is governed by a replication policy.  A default policy to replicate all snapshots is created during cluster set up.  You can use the default policy or optionally, create a new policy.
 
