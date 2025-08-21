@@ -59,7 +59,7 @@ entries:
        url: "/data-protection/snapmirror-active-sync-planned-failover.html"
      - title: Reestablish SnapMirror active sync after an unplanned failover
        url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"  
-     - title: Remove a SnapMirror active sync relationship
+     - title: Delete a SnapMirror active sync relationship
        url: "/data-protection/snapmirror-active-sync-delete-relationship.html"  
      - title: Remove ONTAP Mediator or ONTAP Cloud Mediator
        url: "/data-protection/snapmirror-active-sync-remove-mediator.html" 
