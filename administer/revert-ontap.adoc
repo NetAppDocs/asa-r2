@@ -32,7 +32,7 @@ link:administer/rebalance-workloads.html[Automatic workload rebalancing] is enab
 | Before you revert you should...
 
 | Hierarchical consistency groups in a SnapMirror active sync relationship  
-| link:../data-protection/snapmirror-active-sync-break-relationship.html[Break the SnapMirror active sync relationship]
+| link:../data-protection/snapmirror-active-sync-delete-relationship.html[Delete the SnapMirror active sync relationship]
 
 | Active import relationships
 | Delete the active import relationships    

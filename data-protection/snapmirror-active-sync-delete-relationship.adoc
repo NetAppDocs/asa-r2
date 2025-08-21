@@ -1,20 +1,20 @@
 ---
 sidebar: sidebar
-permalink: data-protection/snapmirror-active-sync-remove-relationship.html
-keywords: asa r2, data protection, business continuity, remove, delete, snapmirror active sync, disaster recovery
+permalink: data-protection/snapmirror-active-sync-delete-relationship.html
+keywords: asa r2, data protection, business continuity, delete, snapmirror active sync, disaster recovery
 summary: "Use SnapMirror active sync, to protect host applications that require a zero recovery point objective (RPO) and a zero recovery time objective (RTO) from outages due to an unexpected disruption or site disaster."
 ---
-= Remove a SnapMirror active sync relationship on your ASA r2 system
+= Delete a SnapMirror active sync relationship on your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you no longer require near zero RPO and RTO for a business application, you can remove the associated SnapMirror active sync relationship.
+If you no longer require near zero RPO and RTO for a business application, you remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship.
 
 .Steps
 
 . In System Manager, select *Protection > Replication*.
-. Select *Local destinations*.
+. Select *Local destinations* or *Local sources*.
 . Next to the SnapMirror active sync relationship that you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 . Select *Release the source consistency group base snapshots*.
 . Select *Delete*.

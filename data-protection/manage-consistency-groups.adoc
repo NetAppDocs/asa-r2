@@ -15,7 +15,7 @@ For example, suppose you have a database consisting of 10 storage units in a con
 
 == Consistency groups in SnapMirror active sync relationships
 
-Beginning with ONTAP 9.17.1, you can make the following geometry changes to consistency groups in a SnapMirror active sync relationship without removing the  relationship.  When a geometry change occurs on the primary consistency group, the change is replicated to the secondary consistency group.
+Beginning with ONTAP 9.17.1, you can make the following geometry changes to consistency groups in a SnapMirror active sync relationship without deleting the  relationship.  When a geometry change occurs on the primary consistency group, the change is replicated to the secondary consistency group.
 
 * link:manage-consistency-groups-add-remove-storage-units.html[Modify the size of a storage unit] by adding or removing storage units.
 * link:manage-hierarchical-consistency-groups.html#promote-an-existing-consistency-group-into-a-parent-consistency-group[Promote a single consistency group] to a parent consistency group.
@@ -23,7 +23,7 @@ Beginning with ONTAP 9.17.1, you can make the following geometry changes to cons
 * link:manage-hierarchical-consistency-groups.html#detach-a-child-consistency-group-from-a-parent-consistency-group[Detach a child consistency group] from a parent consistency group.
 * link:manage-hierarchical-consistency-groups.html#create-a-child-consistency-group[Create a child consistency group] using an existing consistency group.
 
-In ONTAP 9.16.1, you must link:snapmirror-active-sync-break-relationship.html[break the SnapMirror active sync relationship]before making geometry changes to the consistency group.
+In ONTAP 9.16.1, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before making geometry changes to the consistency group.
 
 // 2025 Sep 04, ONTAPDOC-2732
 // 2024 Sept 24, ONTAPDOC 1927
