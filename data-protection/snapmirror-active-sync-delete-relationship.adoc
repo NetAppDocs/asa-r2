@@ -11,6 +11,9 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 [.lead]
 If you no longer require near zero RPO and RTO for a business application, you remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship.
 
+.Before you begin
+If the host group from the source cluster is replicated to the destination cluster and destination consistency groups are mapped to the replicated host group, you must terminate host replication on the source cluster before you can delete the SnapMirror active sync relationship. 
+
 .Steps
 
 . In System Manager, select *Protection > Replication*.

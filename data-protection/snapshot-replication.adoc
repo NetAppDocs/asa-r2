@@ -17,7 +17,7 @@ Snapshot replication for an ASA r2 storage system is only supported to and from 
 
 To set up Snapshot replication, you need to establish a replication relationship between your ASA r2 system and the remote location. The replication relationship is governed by a replication policy.  A default policy to replicate all snapshots is created during cluster set up.  You can use the default policy or optionally, create a new policy.
 
-Beginning with ONTAP 9.17.1, you can apply replication policies directly to child consistency groups.  In ONTAP 9.16.1, replication is supported only at the parent level, meaning all child consistency groups share the replication policy applied to the parent.
+Beginning with ONTAP 9.17.1, you can apply asynchronous replication policies directly to child consistency groups.  In ONTAP 9.16.1, replication is supported only at the parent level, meaning all child consistency groups share the replication policy applied to the parent.
 
 link:manage-hierarchical-consistency-groups.html[Learn more about hierarchical (parent/child) consistency groups].
 
