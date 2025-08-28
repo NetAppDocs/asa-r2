@@ -25,7 +25,7 @@ h| Policy h| Description h| Policy type
 
 | AutomatedFailOverDuplex
 | Policy for SnapMirror synchronous with zero RTO guarantee and bi-directional sync replication.
-| Synchronous
+| SnapMirror active sync
 
 | CloudBackupDefault
 | Vault policy with daily rule.
