@@ -13,7 +13,7 @@ ONTAP SnapMirror active sync data protection enables business services to contin
 
 While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same.
 
-link:learn-more/hardware-comparison.html#personality-differences[Learn more about ONTAP personalities].
+link:../learn-more/hardware-comparison.html#personality-differences[Learn more about ONTAP personalities].
 
 [NOTE]
 For ASA r2 systems, SnapMirror active sync is supported on two-node cluster configurations only.  
