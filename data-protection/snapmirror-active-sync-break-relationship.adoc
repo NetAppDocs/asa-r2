@@ -14,8 +14,8 @@ In certain situations, you might need to break an asynchronous replication relat
 .Steps
 
 . In System Manager, select *Protection > Replication*.
-. Select *Local destinations*.
-. Next to the SnapMirror active sync relationship that you want to break, select image:icon_kabob.gif[three vertical blue dots]; then select *Break*.
+. Select *Local destinations* or *Local sources*.
+. Next to the relationship that you want to break, select image:icon_kabob.gif[three vertical blue dots]; then select *Break*.
 . Select *Break*.
 
 .Result

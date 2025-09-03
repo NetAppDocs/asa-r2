@@ -9,7 +9,7 @@ summary: "If you no longer require near zero RPO and RTO for a business applicat
 :imagesdir: ../media/
 
 [.lead]
-If you no longer require near zero RPO and RTO for a business application, you remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship.
+If you no longer require near zero RPO and RTO for a business application, you should remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship. If you are running ONTAP 9.16.1 on an ASA r2 system, you might also need to delete the SnapMirror active sync relationship before you can make certain geometry changes to consistency groups in a SnapMirror active sync relationship.
 
 == Step 1: Terminate host replication
 
