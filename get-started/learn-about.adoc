@@ -32,7 +32,7 @@ ASA r2 systems introduce the use of storage units with consistency groups:
 * A _storage unit_ makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. 
 * _A consistency group_ is a collection of storage units that are managed as a single unit.  
 
-ASA r2 systems use storage units and consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
+ASA r2 systems use storage units with consistency groups to simplify storage management and data protection.  For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database. Instead of backing up each storage unit individually, you can protect the entire database by backing up the consistency group.
 
 To help secure your data against malicious attacks such as theft or ransomware, ASA r2 systems support an on-board key manager, dual-layer encryption, multi-factor authentication and multi-admin verification.  Tamper-proof snapshots are also supported on secondary ASA r2 systems.
 
@@ -44,6 +44,8 @@ ASA r2 systems do not support cluster mixing with ASA, AFF, or FAS systems.
 * Learn more about link:../learn-more/hardware-comparison.html[the ASA r2 systems in comparison to the ASA systems].
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
+
+// 2025 Aug, 19, ONTAPDOC-2494
 // 2025 June 20, ONTAPDOC-3087
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
