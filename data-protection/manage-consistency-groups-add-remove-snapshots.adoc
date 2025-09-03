@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: data-protection/manage-consistency-groups-add-remove-snapshots.html
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
-summary: Create snapshots of the consistency groups in your ASA r2 storage system to protect the data in the storage units that are part of the consistency group. 
+summary: Create snapshots of the consistency groups to protect the data in the storage units that are part of the consistency group. If you no longer need to protect the data in any of the storage units in the consistency group, you can remove snapshot protection.
 ---
 = Protect consistency groups on your ASA r2 system with snapshots
 :icons: font
