@@ -13,7 +13,7 @@ A consistency group is a collection of storage units that are managed as a singl
 
 For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. Backing up the storage units as a consistency group instead of individually also provides a consistent backup of all the units, while backing up units individually could potentially create inconsistencies.
 
-== Consistency groups in SnapMirror active sync relationships
+== Consistency groups in replication relationships
 
 Beginning with ONTAP 9.17.1, you can make the following geometry changes to consistency groups in an asynchronous replication relationship or in a SnapMirror active sync relationship without deleting the relationship.  When a geometry change occurs on the primary consistency group, the change is replicated to the secondary consistency group.
 
@@ -23,7 +23,7 @@ Beginning with ONTAP 9.17.1, you can make the following geometry changes to cons
 * link:manage-hierarchical-consistency-groups.html#detach-a-child-consistency-group-from-a-parent-consistency-group[Detach a child consistency group] from a parent consistency group.
 * link:manage-hierarchical-consistency-groups.html#create-a-child-consistency-group[Create a child consistency group] using an existing consistency group.
 
-In ONTAP 9.16.1, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before making geometry changes to the consistency group.
+In ONTAP 9.16.1, you must link:data-protection/snapmirror-active-sync-break-relationship.html[break the asynchronous replication relationship] and link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before making geometry changes to the consistency group.
 
 // 2025 Sep 04, ONTAPDOC-2732
 // 2024 Sept 24, ONTAPDOC 1927

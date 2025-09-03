@@ -20,7 +20,7 @@ If you promote an existing consistency group to a parent, a new child consistenc
 
 .Before you begin
 
-If you are running ONTAP 9.16.1 and the consistency group you want to promote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be promoted. Deleting this relationship before modifying a consistency group is not required in ONTAP 9.17.1 and later releases.
+If you are running ONTAP 9.16.1 and the consistency group you want to promote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be promoted. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:data-protection/snapmirror-active-sync-break-relationship.html[break the relationship] before you can promote the consistency group. Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before promoting a consistency group is not required in ONTAP 9.17.1 and later releases.
 
 .Steps
 
@@ -39,7 +39,9 @@ When you demote a parent consistency group to a single consistency group, the st
 
 .Before you begin
 
-If you are running ONTAP 9.16.1 and the consistency group you want to demote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be demoted. Deleting this relationship before modifying a consistency group is not required in ONTAP 9.17.1 and later releases.
+If you are running ONTAP 9.16.1 and the consistency group you want to demote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be demoted. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:data-protection/snapmirror-active-sync-break-relationship.html[break the relationship] before you can demote the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
+
+
 
 .Steps 
 
@@ -110,7 +112,7 @@ When you detach a child consistency group from a parent consistency group, the c
 
 .Before you begin
 
-If you are running ONTAP 9.16.1 and the consistency group you want to detach is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be detached. Deleting this relationship before modifying a consistency group is not required in ONTAP 9.17.1 and later releases.
+If you are running ONTAP 9.16.1 and the consistency group you want to detach is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be detached. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:data-protection/snapmirror-active-sync-break-relationship.html[break the relationship] before you can detach the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
 
 .Steps
 

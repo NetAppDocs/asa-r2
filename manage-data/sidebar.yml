@@ -37,6 +37,8 @@ entries:
        url: "/data-protection/snapshot-replication.html" 
      - title: Learn about pre-defined protection policies
        url: "/data-protection/pre-defined-protection-policies.html"        
+   - title: Break a replication relationship
+     url: "/data-protection/snapmirror-active-sync-break-relationship.html"
    - title: Set up SnapMirror active sync
      entries:
      - title: Workflow 
