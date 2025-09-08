@@ -1,0 +1,126 @@
+---
+sidebar: sidebar
+permalink: data-protection/manage-hierarchical-consistency-groups.html
+keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
+summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit. In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. 
+---
+= Manage hierarchical consistency groups on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning with ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. You can apply individual snapshot policies to each child consistency group and replicate the snapshots of all the child consistency groups to a remote cluster as a single unit by replicating the parent. This simplifies data protection and management for complex data structures.   
+
+== Promote an existing consistency group into a parent consistency group
+
+If you promote an existing consistency group to a parent, a new child consistency group is created and the storage units belonging to the promoted consistency group are moved to the new child consistency group.  Storage units cannot be directly associated with a parent consistency group.  
+
+.Before you begin
+
+If you are running ONTAP 9.16.1 and the consistency group you want to promote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be promoted. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can promote the consistency group. Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before promoting a consistency group is not required in ONTAP 9.17.1 and later releases.
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the consistency group you want convert into a parent consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Promote to parent consistency group*.
+. Enter a name for the new child consistency group or accept the default name; then select the consistency group component type.
+. Select *Promote*.
+
+.What's next?
+You can create additional child consistency groups under the parent consistency group.  You can also link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy the parent and child consistency groups to a geographically remote location for backup and disaster recovery.
+
+== Demote a parent consistency group to a single consistency group
+
+When you demote a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the parent is then managed as a single consistency group.
+
+.Before you begin
+
+If you are running ONTAP 9.16.1 and the consistency group you want to demote is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be demoted. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can demote the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
+
+.Steps 
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the parent consistency group you want to demote.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Demote to a single consistency group*.
+. Select *Demote*
+
+.What's next?
+
+link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[Add a snapshot policy] to the demoted consistency group to protect the storage units that were previously managed by the child consistency groups.
+
+== Create a child consistency group
+
+Creating child consistency groups allows you to apply individual snapshot policies to each child. Beginning with ONTAP 9.17.1, you can also apply individual replication policies directly to each child.  In ONTAP 9.16.1, replication policies can be applied only at the parent level. 
+
+You can create a child consistency group from a new or existing consistency group.  
+
+// start tabbed area
+
+[role="tabbed-block"]
+====
+
+.From a new consistency group
+--
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Hover over the parent consistency group you want to add a child consistency group to.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Add a new child consistency group*.
+. Enter a name for the child consistency group or accept the default name; then select the consistency group component type.    
+. Select to add existing storage units to the child consistency group or to create new storage units.
++
+If you create new storage units, enter the number of units you want to create and the capacity per unit; then enter the host information.
++
+If you create more than one storage unit, each unit is created with the same capacity and the same host operating system. To assign a different capacity to each unit, select *Add a different capacity*.
+. Select *Add*.
+--
+
+.From an existing consistency group
+--
+
+.Before you begin
+If the consistency group you would like to use is already the child of another consistency group, you must link:manage-hierarchical-consistency-groups.html#detach-a-child-consistency-group-from-a-parent-consistency-group[detach it from the existing parent consistency group] before you can move it to a new parent consistency group.
+
+.Steps
+. In System Manager, select *Protection > Consistency groups*.
+. Select the existing consistency group that you would like to make a child consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Move under different consistency group*.
+
+. Enter a new name for the child consistency group or accept the default name; then select the consistency group component type.
+. Select the existing consistency group that you would like to make the parent consistency group or select to create a new parent consistency group.
++
+If you select to create a new parent consistency group, enter a name for the parent consistency group or accept the default name; then select the consistency application component type.
+. Select *Move*.
+--
+====
+
+// end tabbed area
+
+.What's next
+After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up replication policies] on the parent and child consistency groups to replicate the consistency groups to a remote location.
+
+== Detach a child consistency group from a parent consistency group
+
+When you detach a child consistency group from a parent consistency group, the child consistency group is removed from the parent consistency group and is managed as a single consistency group. The replication policy applied to the parent is no longer applied to the detached child consistency group.
+
+.Before you begin
+
+If you are running ONTAP 9.16.1 and the consistency group you want to detach is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before the consistency group can be detached. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can detach the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*.
+. Select the parent consistency group.
+. Select over the child consistency group you want to detach.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Detach from parent*.
+. Enter a new name for the consistency group you are detaching or accept the default name; then select the consistency group application type.
+. Select *Detach*.
+
+.What's next?
+
+link:snapshot-replication.html[Set up a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster.
+
+// 2025 Sep 04, ONTAPDOC-2732
+// 2024 Sept 24, ONTAPDOC 1927
