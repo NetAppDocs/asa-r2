@@ -32,7 +32,13 @@ entries:
    - title: Create an SVM peer relationship
      url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication
-     url: "/data-protection/snapshot-replication.html"       
+     entries:
+     - title: Replicate snapshots to a remote cluster
+       url: "/data-protection/snapshot-replication.html" 
+     - title: Learn about pre-defined protection policies
+       url: "/data-protection/pre-defined-protection-policies.html"        
+     - title: Break a replication relationship
+       url: "/data-protection/snapmirror-active-sync-break-relationship.html"
    - title: Set up SnapMirror active sync
      entries:
      - title: Workflow 
@@ -48,15 +54,31 @@ entries:
      - title: Configure SnapMirror active sync
        url: "/data-protection/configure-snapmirror-active-sync.html"    
    - title: Manage SnapMirror active sync 
-     entries:   
+     entries:
+     - title: Reconfigure ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate
+       url: "/data-protection/reconfigure-ontap-mediator-ca-certificate.html"         
      - title: Perform a planned failover with SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-planned-failover.html"
      - title: Reestablish SnapMirror active sync after an unplanned failover
        url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"  
+     - title: Delete a SnapMirror active sync relationship
+       url: "/data-protection/snapmirror-active-sync-delete-relationship.html"  
+     - title: Remove ONTAP Mediator or ONTAP Cloud Mediator
+       url: "/data-protection/snapmirror-active-sync-remove-mediator.html" 
    - title: Restore data
      url: "/data-protection/restore-data.html"
    - title: Manage consistency groups
-     url: "/data-protection/manage-consistency-groups.html"  
+     entries:
+     - title: Learn about consistency groups
+       url: "/data-protection/manage-consistency-groups.html"
+     - title: Use snapshots to protect consistency groups
+       url: "/data-protection/manage-consistency-groups-add-remove-snapshots.html"  
+     - title: Add or remove storage units to consistency groups
+       url: "/data-protection/manage-consistency-groups-add-remove-storage-units.html"
+     - title: Delete consistency groups
+       url: "/data-protection/manage-consistency-groups-delete.html"           
+     - title: Manage hierarchical consistency groups
+       url: "/data-protection/manage-hierarchical-consistency-groups.html" 
    - title: Manage protection policies and schedules
      url: "/data-protection/policies-schedules.html"      
 - title: Secure your data

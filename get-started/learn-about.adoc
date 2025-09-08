@@ -36,7 +36,7 @@ ASA r2 systems use storage units with consistency groups to simplify storage man
 
 To help secure your data against malicious attacks such as theft or ransomware, ASA r2 systems support an on-board key manager, dual-layer encryption, multi-factor authentication and multi-admin verification.  Tamper-proof snapshots are also supported on secondary ASA r2 systems.
 
-ASA r2 systems do not support cluster mixing with current ASA, AFF, or FAS systems.
+ASA r2 systems do not support cluster mixing with ASA, AFF, or FAS systems.
 
 .For more information
 

@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapmirror-active-sync-delete-relationship.html
+keywords: asa r2, data protection, business continuity, delete, snapmirror active sync, disaster recovery
+summary: "If you no longer require near zero RPO and RTO for a business application, you remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship."
+---
+= Delete a SnapMirror active sync relationship on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you no longer require near zero RPO and RTO for a business application, you should remove SnapMirror active sync protection by deleting the associated SnapMirror active sync relationship. If you are running ONTAP 9.16.1 on an ASA r2 system, you might also need to delete the SnapMirror active sync relationship before you can make certain geometry changes to consistency groups in a SnapMirror active sync relationship.
+
+== Step 1: Terminate host replication
+
+If the host group from the source cluster is replicated to the destination cluster and destination consistency groups are mapped to the replicated host group, you must terminate host replication on the source cluster before you can delete the SnapMirror active sync relationship. 
+
+.Steps
+
+. In System Manager, select *Host*.
+. Next to a host containing the host group you want to stop replicating, selet image:icon_kabob.gif[three vertical blue dots], and then select *Edit*.
+. Deselect *Replicate host configuration*, and then select *Update*.
+
+== Step 2: Delete the SnapMirror active sync relationship
+
+To remove SnapMirror active sync protection from a consistency group, you must delete the SnapMirror active sync relationship. 
+
+.Steps
+
+. In System Manager, select *Protection > Replication*.
+. Select *Local destinations* or *Local sources*.
+. Next to the SnapMirror active sync relationship that you want to remove, select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+. Select *Release the source consistency group base snapshots*.
+. Select *Delete*.
+
+.Result
+The SnapMirror active sync relationship is removed and the source consistency group base snapshots are released.  The storage units in the consistency group are no longer protected by SnapMirror active sync.
+
+.What's next?
+link:snapshot-replication.html[Set up snapshot replication] to copy the consistency group to a geographically remote location for backup and disaster recovery.
+
+
+// 2024 Sept 24, ONTAPDOC-3156

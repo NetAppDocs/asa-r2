@@ -4,254 +4,31 @@ permalink: data-protection/manage-consistency-groups.html
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
 summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit.  
 ---
-= Manage ONTAP consistency groups on ASA r2 storage systems
+= Learn about ONTAP consistency groups on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups for simplified storage management. For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. Backing up the storage units as a consistency group instead of individually also provides a consistent backup of all the units, while backing up units individually could potentially create inconsistencies.
+A consistency group is a collection of storage units that are managed as a single unit. Use consistency groups for simplified storage management. 
 
-Beginning in ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group.   
+For example, suppose you have a database consisting of 10 storage units in a consistency group, and you need to back up the entire database.  Instead of backing up each storage unit, you can back up the entire database by simply adding snapshot data protection to the consistency group. Backing up the storage units as a consistency group instead of individually also provides a consistent backup of all the units, while backing up units individually could potentially create inconsistencies.
+
+Beginning with ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group.   
 
 Hierarchical consistency groups allow you to apply individual snapshot policies to each child consistency group and to replicate the snapshots of all the  child consistency groups to a remote cluster as a single unit by replicating the parent.  This simplifies data protection and management for complex data structures.  For example, suppose you create a parent consistency group called `SVM1_app` which contains two child consistency groups: `SVM1app_data` for application data and `SVM1app_logs` for application logs.  Snapshots of `SVM1app_data` are taken every 15 minutes and snapshots of `SVM1app_logs` are taken every hour.  The parent consistency group, `SVM1_app,` has a SnapMirror policy that replicates the snapshots of both `SVM1app_data` and `SVM1app_logs` to a remote cluster every 24 hours.  The parent consistency group `SVM1_app` is managed as a single unit and the child consistency groups are managed as separate units.
 
-== Add snapshot data protection to a consistency group
 
-When you add snapshot data protection to a consistency group, local snapshots of the consistency group are taken at regular intervals based on a pre-defined schedule. 
+== Consistency groups in replication relationships
 
-You can use snapshots to link:restore-data.html[restore data] that is lost or corrupted.  
+Beginning with ONTAP 9.17.1, you can make the following geometry changes to consistency groups in an asynchronous replication relationship or in a SnapMirror active sync relationship without breaking or deleting the relationship.  When a geometry change occurs on the primary consistency group, the change is replicated to the secondary consistency group.
 
-.Steps
+* link:manage-consistency-groups-add-remove-storage-units.html[Modify the size of a storage unit] by adding or removing storage units.
+* link:manage-hierarchical-consistency-groups.html#promote-an-existing-consistency-group-into-a-parent-consistency-group[Promote a single consistency group] to a parent consistency group.
+* link:manage-hierarchical-consistency-groups.html#demote-a-parent-consistency-group-to-a-single-consistency-group[Demote a parent consistency group] to a single consistency group.
+* link:manage-hierarchical-consistency-groups.html#detach-a-child-consistency-group-from-a-parent-consistency-group[Detach a child consistency group] from a parent consistency group.
+* link:manage-hierarchical-consistency-groups.html#create-a-child-consistency-group[Create a child consistency group] using an existing consistency group.
 
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want to protect.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*.
-. Under *Local protection*, select *Schedule snapshots*.
-. Select a snapshot policy.
-+
-Accept the default snapshot policy, select an existing policy, or create a new policy.
-+
-[cols="2,6a" options="header"]
-|===
-// header row
-| Option
-| Steps
+In ONTAP 9.16.1, you must link:snapmirror-active-sync-break-relationship.html[break the asynchronous replication relationship] and link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before making geometry changes to the consistency group.
 
-| Select an existing snapshot policy
-a| Select image:icon_dropdown_arrow.gif[downward pointing blue arrow] next to the default policy; then select the existing policy that you want to use.
-
-| Create a new snapshot policy
-a|
-.. Select image:icon_add.gif[blue plus sign followed by the word add]; then enter the new policy name.
-.. Select the policy scope.
-.. Under *Schedules* select image:icon_add.gif[blue plus sign followed by the word add].
-.. Select the name that appears under *Schedule name*; 
-+
-then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direction].
-.. Select the policy schedule.
-.. Under *Maximum snapshots*, enter the maximum number of snapshots that you want to retain of the consistency group.
-.. Optionally, under *SnapMirror label* enter a SnapMirror label.
-.. Select *Save*.
-
-// table end
-|===
-
-. Select *Edit*.
-
-.What's next
-Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
-
-
-== Remove snapshot data protection from a consistency group
-
-When you remove snapshot data protection from a consistency group, snapshots are disabled for all the storage units in the consistency group. 
-
-.Steps
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want to stop protecting.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Edit*.
-. Under *Local protection*, deselect Schedule snapshots.
-. Select *Edit*.
-
-.Result
-
-Snapshots will not be taken for any of the storage units in the consistency group.
-
-== Add storage units to a consistency group
-
-Expand the amount of storage managed by a consistency group by adding storage units to the consistency group.
-
-You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
-
-// start tabbed area
-
-[role="tabbed-block"]
-====
-
-.Add existing storage units
---
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want to expand.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Expand*.
-. Select *Using existing storage units*.
-. Select the storage units to add to the consistency group; then select *Expand*.
---
-
-.Add new storage units
---
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want to expand.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Expand*.
-. Select *Using new storage units*.
-. Enter the number of units you want to create and the capacity per unit.
-+
-If you create more that one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *Add a different capacity* to assign a different capacity to each unit.
-. Select *Expand*.
-
-.What’s next
-
-After you create a new storage unit, you should link:../manage-data/provision-san-storage.html#add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a hosts allows the storage unit to begin serving data to the host it is mapped to.
---
-
-====
-
-// end tabbed area
-
-.What's next?
-Existing snapshots of the consistency group won't include your newly added storage units.  You should link:create-snapshots.html#step-2-create-a-snapshot[create an immediate snapshot] of your consistency group to protect your newly added storage units until the next scheduled snapshot is automatically created.
-
-== Remove a storage unit from a consistency group
-You should remove a storage unit from a consistency group if you want to delete the storage unit, if you want manage it as part of a different consistency group, or if you no longer need to protect the data it contains. Removing a storage unit from a consistency group breaks the relationship between the storage unit and the consistency group, but does not delete the storage unit.  
-
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Double-click the consistency group from which you want to remove a storage unit.
-. In the *Overview* section, under *Storage units*, select the storage unit you want to remove; then select *Remove from consistency group*.
-
-.Result
-The storage unit is no longer a member of the consistency group.
-
-.What's next
-If you need to continue data protection for the storage unit, add the storage unit to another consistency group.
-
-== Convert an existing consistency group into a parent consistency group
-
-Storage units cannot be directly associated with a parent consistency group.  If you convert an existing consistency group to a parent, a new child consistency group is created and the storage units belonging to the converted consistency group are moved to the new child consistency group.  
-
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want convert into a parent consistency group.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Promote to parent consistency group*.
-. Enter a name for the parent consistency group or accept the default name; then select the consistency group component type.
-. Select *Promote*.
-
-.What's next?
-You can create additional child consistency groups under the parent consistency group.  You can also link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy the parent consistency group to a geographically remote location for backup and disaster recovery.
-
-== Create a child consistency group
-
-Creating child consistency groups allows you to apply individual snapshot policies to each child while applying a replication policy to all the child consistency groups at the parent level. 
-
-You can create a child consistency group from a new or existing consistency group.  
-
-// start tabbed area
-
-[role="tabbed-block"]
-====
-
-.From a new consistency group
---
-
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the parent consistency group you want to add a child consistency group to.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Add a new child consistency group*.
-. Enter a name for the child consistency group or accept the default name; then select the consistency group component type.    
-. Select to add existing storage units to the child consistency group or to create new storage units.
-+
-If you create new storage units, enter the number of units you want to create and the capacity per unit; then enter the host information.
-+
-If you create more than one storage unit, each unit is created with the same capacity and the same host operating system. To assign a different capacity to each unit, select *Add a different capacity*.
-. Select *Add*.
---
-
-.From an existing consistency group
---
-.Steps
-. In System Manager, select *Protection > Consistency groups*.
-. Select the existing consistency group that you would like to make a child consistency group.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Move under different consistency group*.
-+
-If the consistency group you would like to use as already the child of another consistency group, you must detach it from the existing parent consistency group before you can move it to a new parent consistency group.
-. Enter a new name for the child consistency group or accept the default name; then select the consistency group component type.
-. Select the existing consistency group that you would like to make the parent consistency group or select to create a new parent consistency group.
-+
-If you select to create a new parent consistency group, enter a name for the parent consistency group or accept the default name; then select the consistency application component type.
-. Select *Move*.
---
-====
-
-// end tabbed area
-
-.What's next
-After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up a replication policy] on the parent consistency group to replicate the snapshots of all the child consistency groups to a remote cluster as a single unit.
-
-
-== Demote a parent consistency group to a single consistency group
-
-When you _demote_ a parent consistency group to a single consistency group, the storage units of the associated child consistency groups are added to the parent consistency group.  The child consistency groups are deleted and the parent is then managed as a single consistency group.
-
-.Steps 
-
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the parent consistency group you want to demote.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Demote to a single consistency group*.
-. Select *Demote*
-
-.What's next?
-
-link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[Add a snapshot policy] to the demoted consistency group to protect the storage units that were previously managed by the child consistency groups.
-
-== Detach a child consistency group from a parent consistency group
-
-When you detach a child consistency group from a parent consistency group, the child consistency group is removed from the parent consistency group and is managed as a single consistency group. The replication policy applied to the parent are no longer applied to the detached child consistency group.
-
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Select the parent consistency group.
-. Select over the child consistency group you want to detach.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Detach from parent*.
-. Enter a new name for the consistency group you are detaching or accept the default name; then select the consistency group application type.
-. Select *Detach*.
-
-.What's next?
-
-link:snapshot-replication.html[Set up a replication policy] to replicate the snapshots of the detached child consistency group to a remote cluster as a single consistency group.
-
-== Delete a consistency group
-
-If you no longer need to manage the members of a consistency group as a single unit, you can delete the consistency group.  After a consistency group is deleted, the storage units previously in the group remain active on the cluster.
-
-.Before you begin
-If the consistency group you want to delete is in a replication relationship, you must break the relationship before you delete the consistency group. After you delete a replication consistency group, the storage units that were in the consistency group remain active on the cluster and their replicated copies remain on the remote cluster.
-
-
-.Steps
-. In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want to delete.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
-. Accept the warning, then select *Delete*.
-
-.What's next?
-
-After you delete a consistency group, the storage units previously in the consistency group are no longer protected by snapshots.  Consider adding these storage units to another consistency group to protect them against data loss.
-
+// 2025 Sep 04, ONTAPDOC-2732
 // 2024 Sept 24, ONTAPDOC 1927

@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: data-protection/configure-ontap-mediator.html
 keywords: asa r2, data protection, protect data, configure mediator, ontap mediator, cloud mediator, self-signed, ca, certificates
-summary: "Learn how to configure the ONTAP Mediator or ONTAP Cloud Mediator with self-signed certificates for ASA r2 systems."
+summary: "Learn how to configure the ONTAP Mediator or ONTAP Cloud Mediator with self-signed or third-party certificates for ASA r2 systems."
 ---
-= Configure ONTAP Mediator or ONTAP Cloud Mediatior using self-signed certificates on ASA r2 systems
+= Configure ONTAP Mediator or ONTAP Cloud Mediatior on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
@@ -13,16 +13,19 @@ You must configure ONTAP Mediator or ONTAP Cloud Mediator before you can begin u
 
 .Before you begin
 
-* If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html[prerequisites^].
+If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the necessary link:https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/concept_mediator_requirements.html[prerequisites^].
 
 .Steps
 
 . In System Manager, select *Protection > Overview*.
-. In the right pane, next to *Mediators* select image:icon_kabob.gif[three vertical blue dots]; then select *Add a mediator*.
+. In the right pane under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.
 . For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
 . Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
-. Copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
+. Add the certificate information
++
+* If you are using a self signed certificate, copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
+*  If you are using a third-party certificate, enter the certificate information into the *Certificate* field.
 . Select *Add*.
 
 .What's next?

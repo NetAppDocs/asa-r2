@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: data-protection/reconfigure-ontap-mediator-ca-certificate.html
+keywords: asa r2, data protection, protect data, configure mediator, reconfigure, reinitialize, ontap mediator, cloud mediator, self-signed, ca, certificates
+summary: "If you configure ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reconfigure the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons."
+---
+= Reconfigure ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you configure ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reconfigure the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons.  
+
+== Step 1: Remove the mediator configuration
+
+To reconfigure the mediator, you must first remove its current configuration from the cluster.
+
+.Steps 
+
+. In System Manager, select *Protection > Overview*.
+. In the right pane, under *Mediators*, select image:icon_kabob.gif[three vertical blue dots] next to the cluster peer with the mediator configuration that you want to remove; then select *Remove*.
++
+If you have multiple mediators installed, and you want to remove all configurations, select image:icon_kabob.gif[three vertical blue dots] next to *Mediators*; then select *Remove*.
+. Select *Remove* to confirm that you want to remove the mediator configuration.
+
+== Step 2:  Remove the self-signed certificate
+
+After the mediator configuration is removed, you should remove the associated self-signed certificate from the cluster.
+
+.Steps
+
+. Select *Cluster > Settings*.
+. Under *Security*, select *Certificates*.
+. Select the certificate that you want to remove.
+. Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
+
+== Step 3: Reinstall the mediator with a third-party certificate
+
+After you have removed the associated self-signed certificate, you can reconfigure the mediator with the third-party certificate.
+
+.Steps
+
+. Select *Protection > Overview*.
+. In the right pane, under *Mediators*, select *Add a mediator*.
+. Select the *Mediator type*.
+. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name, and mediator password.
+. Select a cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
+. Under *Certificate*, enter the third-party certificate information.
+. Select *Add*.
+
+.Result
+
+The ONTAP Mediator or ONTAP Cloud Mediator is reconfigured to use the third-party certificate.  You can now use the mediator to manage SnapMirror active sync relationships.
+
+// 2025 Sept 04, ONTAPDOC-3134
+// 2025 Jul 24, ONTAPDOC-2707

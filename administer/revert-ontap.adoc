@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: administer/revert-ontap.html
 keywords: update, revert, ontap, asa r2 
-summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use System Manager to disable automatic updates and view updates before they are installed."
+summary: "ONTAP software reverts for ASA r2 systems follow the same process as reverts for other ONTAP systems. Reverting an ONTAP cluster is disruptive."
 ---
 = Revert ONTAP on ASA r2 storage systems
 :icons: font
@@ -24,7 +24,7 @@ Certain ASA r2 cluster configurations require you to take specific actions befor
 If you are reverting from ONTAP 9.17.1 on an ASA r2 system, you should perform the following actions before you begin the revert:
 
 [NOTE]
-link:../administer/rebalance-workloads.html[Automatic workload rebalancing] is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You cannot revert from ONTAP 9.17.1 on your ASA r2 system after automatic workload rebalancing has been enabled.   
+link:rebalance-workloads.html[Automatic workload rebalancing] is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You cannot revert from ONTAP 9.17.1 on your ASA r2 system after automatic workload rebalancing has been enabled.   
 
 [cols="2", options="header"]
 |===
@@ -32,7 +32,7 @@ link:../administer/rebalance-workloads.html[Automatic workload rebalancing] is e
 | Before you revert you should...
 
 | Hierarchical consistency groups in a SnapMirror active sync relationship  
-| Remove the SnapMirror active sync relationship
+| link:../data-protection/snapmirror-active-sync-delete-relationship.html[Delete the SnapMirror active sync relationship]
 
 | Active import relationships
 | Delete the active import relationships    

@@ -1,0 +1,24 @@
+---
+sidebar: sidebar
+permalink: data-protection/snapmirror-active-sync-break-relationship.html
+keywords: asa r2, data protection, business continuity, remove, delete, break, relationship, snapmirror active sync, disaster recovery
+summary: "In certain situations, you might need to break an asynchronous replication relationship."
+---
+= Break an asynchronous replication relationship on your ASA r2 system
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In certain situations, you might need to break an asynchronous replication relationship.  For example, if are running ONTAP 9.16.1 and you want to increase the size of a consistency group that is in an asynchronous replication relationship, you must break the relationship before you can modify the consistency group's size.
+
+.Steps
+
+. In System Manager, select *Protection > Replication*.
+. Select *Local destinations* or *Local sources*.
+. Next to the relationship that you want to break, select image:icon_kabob.gif[three vertical blue dots]; then select *Break*.
+. Select *Break*.
+
+.Result
+The asynchronous relationship between the primary and secondary consistency group is broken. 
+
+// 2024 Sept 24, ONTAPDOC-3156
