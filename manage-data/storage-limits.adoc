@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-data/storage-limits.html
 keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20,asa c30
-summary: "ASA r2 configurations support a maximum of 2 nodes per cluster running the FC, iSCSI, NVMe/FC or NVMe/TCP protocols."
+summary: "For optimal performance, configuration and support, you should be aware of your ASA r2 storage limits."
 ---
 = ASA r2 storage limits
 :icons: font
@@ -11,32 +11,100 @@ summary: "ASA r2 configurations support a maximum of 2 nodes per cluster running
 [.lead]
 For optimal performance, configuration and support, you should be aware of your ASA r2 storage limits.
 
-ASA r2 systems support the following:
+ASA r2 systems support the following storage limits:
 
-[cols="1h, 1"]
+[cols="3", options="header"]
 |===
 
-| Maximum number of nodes per cluster
+| Limit maximum 
+| Per HA pair
+| Per cluster
+
+| Consistency group
+| 256
+| 256
+
+| Enterprise applications
+| 100
+| 350
+
+| Nodes
+| 2
 | 12
 
-| Maximum number of storage units per cluster
-| 30,000
+| Replication groups
+| 50
+| 50
 
-| Maximum storage unit size
-| 128 TB
-
-| Maximum storage availability zone size
+| Storage availability zone size
+| 2PB
 | 2 PB
 
+| Storage units
+| 10,000
+| 30,000
 
+| Storage unit size
+| 128 TB
+| 128 TB
+
+| Storage units per consistency group
+| 80
+| 80
+
+| Virtual machines
+| 800
+| 1200
 
 // table end
 |===
+
+== Limits for SnapMirror asynchronous relationships
+
+The following limits apply to storage units and consistency groups in a SnapMirror asynchronous replication relationship.
+
+[cols="3", options="header"]
+|===
+
+| Limit maximum
+| Per HA pair   
+| Per cluster
+
+| Consistency groups
+| 250
+| 750
+
+| Storage units
+| 4,000
+| 6,000
+
+
+|===
+
+== Limits for SnapMirror active sync relationship
+
+The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on 2-node clusters only.
+
+[cols="3", options="header"]
+|===
+
+| Limit maximum
+| Per HA pair
+
+| Consistency groups
+| 50
+
+| Storage units
+| 400
+
+|===
+
 
 .For more information
 
 For a complete list of the most current ASA r2 storage limits, see link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 
+// 2025 Sept 04, ONTAPDOC-2729, ONTAPDOC-3136
 // 2025 July 23, ONTAPDOC-3076
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260, ONTAPDOC 2261

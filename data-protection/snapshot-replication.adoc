@@ -13,9 +13,13 @@ searchtitle: "Replicate snapshots to a remote cluster using ONTAP System Manager
 Snapshot replication is a process in which consistency groups on your ASA r2 system are copied to a geographically remote location. After the initial replication, changes to consistency groups are copied to the remote location based upon a replication policy. Replicated consistency groups can be used for disaster recovery or data migration.
 
 [NOTE]
-Snapshot replication for an ASA r2 storage system is only supported to and from another ASA r2 storage system.  You cannot replicate snapshots from an ASA r2 system to a current ASA, AFF or FAS system or from a current ASA, AFF or FAS system to an ASA r2 system.  
+Snapshot replication for an ASA r2 storage system is only supported to and from another ASA r2 storage system.  You cannot replicate snapshots from an ASA r2 system to an ASA, AFF or FAS system or from an ASA, AFF or FAS system to an ASA r2 system.  
 
 To set up Snapshot replication, you need to establish a replication relationship between your ASA r2 system and the remote location. The replication relationship is governed by a replication policy.  A default policy to replicate all snapshots is created during cluster set up.  You can use the default policy or optionally, create a new policy.
+
+Beginning with ONTAP 9.17.1, you can apply asynchronous replication policies to consistency groups in a hierarchical relationship.  Asynchronous replication is not supported for consistency groups in hierarchical relationships in ONTAP 9.16.1.
+
+link:manage-hierarchical-consistency-groups.html[Learn more about hierarchical (parent/child) consistency groups].
 
 == Step 1: Create a cluster peer relationship
 
@@ -38,9 +42,11 @@ The prerequisites for cluster peering are the same for ASA r2 systems as for oth
 
 You have peered for local ASA r2 cluster with a remote cluster.  You can now create a replication relationship.
 
-== Step 2: Optionally, create a replication policy
+== Step 2: Optionally, create a custom replication policy
 
-The snapshot replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  
+The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  If the pre-defined policies do not meet your needs, you can create a custom replication policy.
+
+Learn about link:pre-defined-protection-policies.html[pre-defined ONTAP data protection policies].
 
 .Steps
 
@@ -91,7 +97,10 @@ For protection against ransomware attacks, when you set up your replication rela
 
 .Before you begin
 
-If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
+* link:pre-defined-protection-policies.html[Learn about replication policies].
++
+When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy.
+* If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
 
 Create a replication relationship with or without locked destination snapshots.
 
@@ -148,8 +157,6 @@ The _source_ consistency group refers to the consistency group on your local clu
 a| 
 . Select *Local sources*, then select image:icon_replicate_blue_bg.png[rectangle with blue background and the word replicate in white letters] .
 . Search for and select the source consistency group.
-+
-The _source_ consistency group refers to the consistency group on your local cluster that you want to replicate.
 . Under *Replication destination*, select the cluster to replicate to; then select the storage VM.
 
 // table end
@@ -186,5 +193,7 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
+// 2025 Sept 04, ONTAPDOC 2732
+// 2025 Sept 04, ONTAPDOC 2893
 // 2024 Oct 11, Git Issue 12
 // 2024 Sept 24, ONTAPDOC 1927
