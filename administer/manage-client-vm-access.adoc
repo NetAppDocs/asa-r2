@@ -204,6 +204,10 @@ network interface show -lif iscsi*
 
 LIFs can be disabled or renamed as needed.  You can also change the LIF IP address and subnet mask.
 
+.About this task
+
+ONTAP utilizes Network Time Protocol (NTP) to synchronize time across the cluster. After changing LIF IP addresses, you may need to update the NTP configuration to prevent synchronization failures. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629[NTP synchronization fails after LIF IP change].
+
 .Steps
 
 . Select *Network > Overview*; then select *Network interfaces*.
@@ -220,6 +224,7 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 Your LIF has been modified.
 
+// 2025 Sept 11, ONTAPDOC-3300
 // 2025 July 24, GitIssue 49
 // 2025 May 16, GitIssue 49
 // 2025 Apr 22, ONTAPDOC 2970
