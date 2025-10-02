@@ -23,7 +23,7 @@ The following ASA platforms are classified as ASA r2 systems:
 * ASA A20
 * ASA C30
 
-ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC, NVMe/FC and NVMe/TCP protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized.  The iSCSI and NVMe/TCP protocols support direct paths between the hosts and storage. 
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  The iSCSI, FC, NVMe/FC and NVMe/TCP protocols support symmetric active-active architecture for multipathing so that all paths between the hosts and storage are active/optimized. The iSCSI and NVMe/TCP protocols support direct attach between the hosts and storage. For Fibre Channel and NVMe/FC protocols direct attach is not supported.
 
 On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  
 
@@ -45,6 +45,7 @@ ASA r2 systems do not support cluster mixing with ASA, AFF, or FAS systems.
 * Learn more about the link:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf[NetApp ASA].
 
 
+// 2025 Oct 02, GitIssue 75
 // 2025 Aug, 19, ONTAPDOC-2494
 // 2025 June 20, ONTAPDOC-3087
 // 2025 June 04, ONTAPDOC-2994
