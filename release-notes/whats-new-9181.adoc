@@ -44,9 +44,9 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| 
-| 
+| Support for modification of snapshot reserve and automatic snapshot deletion
+| You can modify snapshot reserve and enable automatic snapshot deletion to limit the among of space used for snapshots in your ASA r2 storage units.
 |===
 
 
-// 2025 Nov 06, ONTAPDOC-3359
+// 2025 Nov 06, ONTAPDOC-3359, ONTAPDOC-3266
