@@ -16,7 +16,7 @@ While the System Manager procedures for configuring SnapMirror active sync are d
 link:../learn-more/hardware-comparison.html#personality-differences[Learn more about ONTAP personalities].
 
 [NOTE]
-For ASA r2 systems, SnapMirror active sync is supported on two-node cluster configurations only.  
+Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on four-node configurations.  In ONTAP 9.17.1, SnapMirror active sync is supported on two-node configurations only.
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 
@@ -50,5 +50,6 @@ You must link:configure-ontap-mediator.html[configure ONTAP mediator or ONTAP cl
 [role="quick-margin-para"]
 link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently fail over in the event of a disaster. 
 
+// 2025 Nov 06, ONTAPDOC-3358
 // 2025 Sep 04, ONTAPDOC-2729
 // 2025 Jul 24, ONTAPDOC-2707
