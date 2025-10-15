@@ -14,11 +14,15 @@ When you provision storage, you enable your SAN hosts to read from and write dat
 
 == Create storage units
 
-On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128TB.  
+On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128 TB.  
 
 See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
 
 Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the storage units are created.
+
+Beginning with ONTAP 9.18.1, you can modify the snapshot reserve and enable automatic snapshot deletion when you create a storage unit.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.
+
+link:../data-protection/snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 systems].
 
 .Steps
 
@@ -46,6 +50,7 @@ If there is no pre-existing host group for hosts running on the operating system
 | Option
 | Steps 
 
+// New row 
 a| Change the default Quality of Service (QoS) policy
 
 If the default QoS policy has not previously been set on the storage virtual machine (VM) on which the storage unit is being created, this option is not available.
@@ -53,12 +58,13 @@ a|
 .. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
 .. Select an existing QoS policy.
 
+// New row
 a| Create a new QoS policy
 a|
 .. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
 .. Select *Define new policy*.
 .. Enter a name for the new QoS policy.
-.. Set a Qos limit, a QoS guarantee, or both.
+.. Set a QoS limit, a QoS guarantee, or both.
 ... Optionally, under *Limit*, enter a maximum throughput limit, a maximum IOPS limit, or both.
 +
 Setting a maximum throughput and IOPS for a storage unit restricts its impact on system resources so that it does not degrade the performance of critical workloads.
@@ -68,6 +74,7 @@ Setting a minimum throughput and IOPS for a storage unit guarantees that it meet
 
 .. Select *Add*.
 
+// New row
 a| Change the default performance service level. 
 
 a| .. Under *Storage and optimization*, next to the *Performance service level*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
@@ -75,6 +82,13 @@ a| .. Under *Storage and optimization*, next to the *Performance service level*,
 +
 ASA r2 systems offer two performance levels.  The default performance level is *Extreme*, which is the highest available level.  You can lower the level to *Performance*.
 
+// New row
+a| Modify the default snapshot reserve and enable automatic snapshot deletion.
+a|
+.. Under *Snapshot reserve %*, enter the numeric value for the percentage of the storage unit space you want to allocate to snapshots.
+.. Select *Automatically delete older snapshots*.
+
+// New row
 a| Add a new SCSI host
 a|
 .. Under *Host information*, select *SCSI* for the connection protocol.
@@ -85,6 +99,7 @@ a|
 +
 An example of a valid FC WWPN is "01:02:03:04:0a:0b:0c:0d". Examples of valid iSCSI initiator names are "iqn.1995-08.com.example:string" and "eui.0123456789abcdef".
 
+// New row
 a| Create a new SCSI host group
 
 a| 
@@ -93,7 +108,7 @@ a|
 .. Under *Host Mapping*, select *New host group*. 
 .. Enter a name for the host group; then select the hosts to add to the group.
 
-
+// New row
 a| Add a new NVMe subsystem
 a|
 .. Under *Host information*, select *NVMe* for the connection protocol.
@@ -233,4 +248,5 @@ You have completed the provisioning process and are ready to begin serving data.
 
 For more details about host-side configuration, see the link:https://docs.netapp.com/us-en/ontap-sanhost/[ONTAP SAN host documentation^] for your specific host.
 
+// 2025 Nov 06, ONTAPDOC-3342
 // ONTAPDOC 1922, 2024 Sept 24
