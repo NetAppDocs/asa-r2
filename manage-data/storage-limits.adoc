@@ -90,7 +90,7 @@ The following limits apply to storage units and consistency groups in a SnapMirr
 
 == Limits for SnapMirror active sync relationship
 
-The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on 2-node clusters only. Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on 4-node clusters.
+The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on two-node clusters only. Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on four-node clusters.
 
 For a complete list of the most current ASA r2 storage limits, link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 

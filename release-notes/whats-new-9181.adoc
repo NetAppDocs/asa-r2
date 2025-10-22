@@ -21,8 +21,8 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| 
-|  
+| Support for SVM migration
+| You can non-disruptively migrate a storage virtual machine (SVM) from an ASA cluster to an ASA r2 cluster.
 |===
 
 
