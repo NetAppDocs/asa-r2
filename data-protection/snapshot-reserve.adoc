@@ -15,7 +15,7 @@ Snapshot reserve is set as a percentage of the total storage unit size.  For exa
 
 By default, snapshot reserve is set to 0% and snapshot auto-delete is not enabled. 
 
-Beginning with ONTAP 9.18.1, you can modify the default snapshot reserve during or after the creation of storage units and during the creation of consistency groups. You can also modify the default snapshot reserve on existing storage virtual machines (SVMs).  In ONTAP 9.17.1 and earlier, you cannot modify these settings.
+Beginning with ONTAP 9.18.1, you can modify the default snapshot reserve during or after the creation of storage units and during the creation of consistency groups. You can also modify the default snapshot reserve on existing storage virtual machines (VMs).  In ONTAP 9.17.1 and earlier, you cannot modify these settings.
 
 Snapshot reserve is set to the same percentage for all storage units in a consistency group at the time the consistency group is created. Snapshot reserve must be individually set to any storage units added later.
 

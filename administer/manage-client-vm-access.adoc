@@ -161,7 +161,7 @@ set -privilege admin
 
 === Create iSCSI-only LIFs with automatic LIF failover 
 
-If there are iSCSI LIFs on the SVM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled for automatic LIF failover either. If automatic LIF failover is not enabled and there is a failover event your iSCSI LIFs will not migrate. 
+If there are iSCSI LIFs on the storage VM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled for automatic LIF failover either. If automatic LIF failover is not enabled and there is a failover event your iSCSI LIFs will not migrate. 
 
 .Before you begin
 

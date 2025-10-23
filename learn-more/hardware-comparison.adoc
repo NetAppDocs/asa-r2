@@ -100,7 +100,7 @@ Because of this automated and simplified approach to storage management, certain
 The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
 
 .Default SVM creation with protocol services
-New clusters automatically contain a default data SVM with the SAN protocols enabled. IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
+New clusters automatically contain a default data storage virutal machine (VM) with the SAN protocols enabled. IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
 
 .Automatic volume creation
 Creating a storage unit (LUN or namespace) automatically creates a volume from the storage availability zone. This results in a simplified and common namespace. Deleting a storage unit automatically deletes the associated volume.
