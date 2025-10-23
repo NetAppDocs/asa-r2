@@ -12,9 +12,10 @@ summary: The snapshot reserve is the amount of space in the storage unit reserve
 The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents snapshots from consuming more space in your storage unit intended for user data.
 
 Snapshot reserve is set as a percentage of the total storage unit size.  For example, if the storage unit is 50 GB and you set the snapshot reserve to 10%, the amount of space reserved for snapshots is 5 GB.  When the amount of space used by snapshots grows to 5 GB, older snapshots are automatically deleted to make room for new snapshots.  If the storage unit size increases to 100 GB, then the snapshot reserve increases to 10 GB. 
+
 By default, snapshot reserve is set to 0% and snapshot auto-delete is not enabled. 
 
-Beginning with ONTAP 9.18.1, you can link:data-protection/snapshot-reserve-modify.html[modify the default snapshot reserve] during or after the creation of storage units and consistency groups. You can also modify the default snapshot reserve on existing storage virtual machines (SVMs).  In ONTAP 9.17.1 and earlier, you cannot modify these settings.
+Beginning with ONTAP 9.18.1, you can modify the default snapshot reserve during or after the creation of storage units and during the creation of consistency groups. You can also modify the default snapshot reserve on existing storage virtual machines (SVMs).  In ONTAP 9.17.1 and earlier, you cannot modify these settings.
 
 Snapshot reserve is set to the same percentage for all storage units in a consistency group at the time the consistency group is created. Snapshot reserve must be individually set to any storage units added later.
 

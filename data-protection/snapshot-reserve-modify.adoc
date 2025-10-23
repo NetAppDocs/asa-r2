@@ -11,12 +11,12 @@ summary: The snapshot reserve is the amount of space in the storage unit reserve
 [.lead]
 The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  By default, snapshot reserve is set to 0%. Beginning with ONTAP 9.18.1, you can modify the storage unit’s default snapshot reserve and enable automatic snapshot deletion. By default, automatic deletion of snapshots is not enabled.  When a snapshot reserve value is set and automatic snapshot deletion is enabled, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents snapshots from consuming more space than desired in your storage unit.
 
-You can set a snapshot reserve level and enable automatic snapshot deletion either on individual storage units or on the storage virtual machine (SVM) containing the storage units.  
+You can set a snapshot reserve level and enable automatic snapshot deletion either on individual storage units or on the storage virtual machine (VM) containing the storage units.  
 
-link:data-protection/snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
+link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
 == Modify snapshot reserve on storage units
-If you need storage units within an SVM to have different snapshot reserve values, you can set the snapshot reserve individually on each storage unit. If you want all the storage units within an SVM to have the same snapshot reserver, you can modify the snapshot reserve on the SVM.
+If you need storage units within an storage VM to have different snapshot reserve values, you can set the snapshot reserve individually on each storage unit. If you want all the storage units within an storage VM to have the same snapshot reserver, you can modify the snapshot reserve on the storage VM.
 
 .Steps
 
@@ -32,7 +32,7 @@ If you need storage units within an SVM to have different snapshot reserve value
 The snapshot reserve is set to the percentage you specified.  If the amount of space consumed by snapshots reaches the reserve, older snapshots are automatically deleted.
 
 == Modify snapshot reserve on a storage VM
-If you want all the storage units within an SVM to have the same snapshot reserve, you can apply the desired snapshot reserve percentage to the SVM instead to each individual storage unit.  When snapshot reserve is applied to the SVM, it is applied to all newly created storage units within the SVM.  It is not applied to storage units created before you modified the setting.
+If you want all the storage units within an storage VM to have the same snapshot reserve, you can apply the desired snapshot reserve percentage to the storage VM instead to each individual storage unit.  When snapshot reserve is applied to the storage VM, it is applied to all newly created storage units within the storage VM.  It is not applied to storage units created before you modified the setting.
  
 .Steps
 1.	In System Manager, select *Cluster > Storage VMs*; then select *Settings*.
@@ -44,3 +44,5 @@ If you want all the storage units within an SVM to have the same snapshot reserv
 .Result
 
 The snapshot reserve for newly created storage units is set to the percentage you specified.  If the amount of space consumed by snapshots in those storage units reaches the reserve, older snapshots are automatically deleted.
+
+// 2025 Nov 06, ONTAPDOC-3342

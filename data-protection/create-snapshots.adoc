@@ -18,7 +18,13 @@ A consistency group is a collection of storage units that are managed as a singl
 
 Create a consistency group using new storage units or create a consistency group using existing storage units.
 
-When you create a consistency group using new storage units, you can assign a different capacity to each storage unit, change the default performance service level, and create up to five child consistency groups. When you create a consistency group using existing storage units, you can add storage units that are already in use.
+Beginning with ONTAP 9.18.1, when you create a consistency group using new storage units, you can set the snapshot reserve percentage and enable automatic snapshot deletion on the newly created storage units.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve. If snapshot reserve and automatic snapshot deletion is enabled on a parent consistency group, it is enabled on all existing  child consistency groups. If new child consistency groups are added they do not inherit the snapshot reserve and snapshot deletion settings of the parent.
+
+link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
+
+Beginning with ONTAP 9.16.1, you when you create consistency groups using new storage units, you can configure up to five child consistency group.
+link:manage-hierarchical-consistency-groups.html[Learn more about child consistency groups on ASA r2 systems].
+
 
 [role="tabbed-block"]
 ====
@@ -47,6 +53,13 @@ a| Select *Add a different capacity*.
 
 a| Change the default performance service level
 a| Under *Performance service level*, select a different service level.
+
+ASA r2 systems offer two performance levels. The default performance level is *Extreme*, which is the highest available level. You can lower the performance level to *Performance*.
+
+a| Modify the default snapshot reserve and enable automatic snapshot deletion
+a|
+.. Under *Snapshot reserve %*, enter the numeric value for the percentage of the storage unit’s space that you want allocated to snapshots.
+.. Select *Automatically delete older snapshots*.
 
 a| Create a child consistency group
 a| Select *Add child consistency group*.
@@ -202,4 +215,5 @@ The initial data transfer for replication starts immediately by default.
 
 Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
+// 2025 Nov 06, ONTAPDOC-3342
 // 2024 Sept 24, ONTAPDOC 1927

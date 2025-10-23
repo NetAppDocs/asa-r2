@@ -13,9 +13,28 @@ Increase or decrease the size of a consistency group by modifying the number of 
 
 == Add storage units to a consistency group
 
-Expand the amount of storage managed by a consistency group by adding storage units to the consistency group.
+Expand the amount of storage managed by a consistency group by adding storage units to the consistency group. You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
 
-You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
+Beginning with ONTAP 9.18.1, you can set snapshot reserve and automatic snapshot deletion to limit the amount of space used by snapshots in your storage units.  When you add a storage unit to an existing consistency group, snapshot reserve and automatic snapshot deletion are set as follows:
+
+[cols="3", options="header"]
+|===
+| If you add...
+| The snapshot reserve percentage is set to...
+| Automatic snapshot deletion is...
+
+| New storage units
+| 0
+| Disabled  
+
+| Existing storage units
+| Unchanged
+| Unchanged
+|===
+
+The default settings for new storage units can be modified when the storage units are created.  You can also link:snapshot-reserve-modify.html[modify existing storage units] to update their current settings. 
+
+link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
 .Before you begin
 If you are running ONTAP 9.16.1 and the consistency group you want to expand is in an SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before you can add storage units. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can expand the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
@@ -46,7 +65,7 @@ If you are running ONTAP 9.16.1 and the consistency group you want to expand is 
 . Select *Using new storage units*.
 . Enter the number of units you want to create and the capacity per unit.
 +
-If you create more that one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *Add a different capacity* to assign a different capacity to each unit.
+If you create more than one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *Add a different capacity* to assign a different capacity to each unit.
 . Select *Expand*.
 
 .What’s next
@@ -75,4 +94,5 @@ The storage unit is no longer a member of the consistency group.
 .What's next
 If you need to continue data protection for the storage unit, add the storage unit to another consistency group.
 
+// 2025 Nov 06, ONTAPDOC-3342
 // 2024 Sept 24, ONTAPDOC 1927
