@@ -14,28 +14,34 @@ Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tas
 
 For more information about common features and functions, see the following ONTAP documentation.
 
-== ONTAP administration
+== SAN Protocols
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP). 
 
-=== Link Aggregation Groups (LAGs)
-
-An interface group, also known as a Link Aggregation Group (LAG), is created by combining two or more physical ports on the same node into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.
-
-link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Learn about Link Aggregation Groups^].
-
-=== NVMe over Fabrics (NVMe-oF) provisioning
-
-You can use the non-volatile memory express (NVMe) protocol to provide storage on your ASA r2 system. The NVMe protocol is optimized for performance with solid state storage.
-
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html[Learn more about iSCSI^]
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-provisioning-fc-concept.html[Learn more about Fibre Channel (FC)^]
 * link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF)^].
+** *NVMe copy offload*: Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
++
+link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
 
-=== System Manager search
+== Data protection
 
-You can search for various actions, objects,and information topics in System Manager. You can also search table data for specific entries.
+Learn more about common data protection features supported on ASA r2 systems.
 
-link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
+=== Clustered external key servers
+You can configure connectivity to clustered external key management servers on an SVM. With clustered key servers, you can designate primary and secondary key servers on a SVM. When registering keys, ONTAP will first attempt to access a primary key server before sequentially attempting to access secondary servers until the operation completes successfully, preventing duplication of keys.
+
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Learn to configure clustered external key servers^].
+
+=== External key management for encryption at rest
+You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data.
+
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management^].
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
 
 == Data security
 
+Learn more about common data security features supported on ASA r2 systems.
 
 === Administrator access management
 The role assigned to an administrator determines which functions the administrator can perform. Predefined roles for cluster administrators and storage VM administrators are provided by System Manager. You assign the role when you create the administrator’s account, or you can assign a different role later.
@@ -60,24 +66,25 @@ You can configure and enable Security Assertion Markup Language (SAML) authentic
 link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
 
 
-== Data protection
-
-=== Clustered external key servers
-you can configure connectivity to clustered external key management servers on an SVM. With clustered key servers, you can designate primary and secondary key servers on a SVM. When registering keys, ONTAP will first attempt to access a primary key server before sequentially attempting to access secondary servers until the operation completes successfully, preventing duplication of keys.
-
-link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Learn to configure clustered external key servers^].
-
-=== External key management for encryption at rest
-You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data.
-
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management^].
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
-
 == Networking
 
+Learn more about common networking features supported on ASA r2 systems.
+
 === FIPS compliance 
-ONTAP is compliant in the Federal Information Processing Standards (FIPS) 140-2 for all SSL connections. You can turn on and off SSL FIPS mode, set SSL protocols globally, and turn off any weak ciphers such as RC4 within ONTAP.
+ONTAP is compliant in the Federal Information Processing Standards (FIPS) 140-2 for all SSL connections. You can turn SSL FIPS mode on and off, set SSL protocols globally, and turn off any weak ciphers such as RC4 within ONTAP.
+
+Beginning with ONTAP 9.18.1 postquantum computing cryptographic algorithms are supported for SSL. These algorithms provide additional protection against potential future quantum computing attacks, and are available when SSL FIPS mode is disabled.
 
 * link:https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_fips.html[Learn to configure FIPS for all SSL connections^]. 
 
+=== Link Aggregation Groups (LAGs)
 
+An interface group, also known as a Link Aggregation Group (LAG), is created by combining two or more physical ports on the same node into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.
+
+link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Learn about Link Aggregation Groups^].
+
+== System Manager
+
+You can search for various actions, objects,and information topics in System Manager. You can also search table data for specific entries.
+
+link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].

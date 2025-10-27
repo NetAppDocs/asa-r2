@@ -10,7 +10,7 @@ searchtitle: "Create snapshots to back up your data using ONTAP System Manager |
 :imagesdir: ../media/
 
 [.lead]
-To back up data on your ASA r2 system, you need to create a snapshot. You can use ONTAP System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
+Create a snapshot to back up data on your ASA r2 system. Use ONTAP System Manager to create a manual snapshot of a single storage unit, or to create a consistency group and schedule automatic snapshots of multiple storage units at the same time.  
 
 == Step 1: Optionally, create a consistency group
 
@@ -18,7 +18,7 @@ A consistency group is a collection of storage units that are managed as a singl
 
 Create a consistency group using new storage units or create a consistency group using existing storage units.
 
-Beginning with ONTAP 9.18.1, when you create a consistency group using new storage units, you can set the snapshot reserve percentage and enable automatic snapshot deletion on the newly created storage units.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve. If snapshot reserve and automatic snapshot deletion is enabled on a parent consistency group, it is enabled on all existing  child consistency groups. If new child consistency groups are added they do not inherit the snapshot reserve and snapshot deletion settings of the parent.
+Beginning with ONTAP 9.18.1,you can set the snapshot reserve percentage and enable automatic snapshot deletion when creating a consistency group with new storage units.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve. If snapshot reserve and automatic snapshot deletion is enabled on a parent consistency group, it is enabled on all existing  child consistency groups. If new child consistency groups are added they do not inherit the snapshot reserve and snapshot deletion settings of the parent.
 
 link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
@@ -70,7 +70,7 @@ a| Select *Add child consistency group*.
 
 .What's next?
 
-You have created a consistency group containing the storage units you want to protect.  You are now ready to create a snapshot.
+You have created a consistency group containing the storage units you want to protect.  Now you can create a snapshot.
 --
 
 .Use existing storage units
@@ -84,7 +84,7 @@ You have created a consistency group containing the storage units you want to pr
 
 .What's next?
 
-You have created a consistency group containing the storage units you want to protect.  You are now ready to create a snapshot.
+You have created a consistency group containing the storage units you want to protect.  Now you can create a snapshot.
 
 --
 
@@ -105,7 +105,7 @@ You can create an on-demand snapshot of a single storage unit or of a consistenc
 
 * On-demand snapshots
 +
-An on-demand snapshot of a storage unit can be created at any time. The storage unit does not need to be a member of a consistency group to be protected by an on-demand snapshot.  If you create an on-demand snapshot of a storage unit that is a member of a consistency group, the other storage units in the consistency group are not included in the on-demand snapshot.    If you create an on-demand snapshot of a consistency group, all the storage units in the consistency group are included in the snapshot.
+You can create an on-demand snapshot of a storage unit at any time. The storage unit does not need to be a member of a consistency group to be protected by an on-demand snapshot.  If you create an on-demand snapshot of a storage unit that is a member of a consistency group, the other storage units in the consistency group are not included in the on-demand snapshot.    If you create an on-demand snapshot of a consistency group, all the storage units in the consistency group are included in the snapshot.
 
 * Automated snapshots
 +

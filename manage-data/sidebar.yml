@@ -27,14 +27,20 @@ entries:
     entries: 
     - title: Migrate an SVM from an ASA cluster
       url: "/manage-data/migrate-svm.html"
-    - title: Perform manual post ASA SVM migration cutover and cleanup
-      url: "/manage-data/manual-post-svm-migrate-cutover-cleanup.html"
+    - title: Cutover clients and clean up source SVM
+      url: "/manage-data/svm-post-migrate-cutover-cleanup.html"
   - title: Storage limits
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data
   entries:
    - title: Create snapshots
      url: "/data-protection/create-snapshots.html"
+   - title: Manage snapshot reserve
+     entries:  
+     - title: Learn about snapshot reserve
+       url: "/data-protection/snapshot-reserve.html"  
+     - title: Modify snapshot reserve
+       url: "/data-protection/snapshot-reserve-modify.html"  
    - title: Create an SVM peer relationship
      url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication

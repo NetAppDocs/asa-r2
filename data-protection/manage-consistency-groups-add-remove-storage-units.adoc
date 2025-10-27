@@ -13,9 +13,9 @@ Increase or decrease the size of a consistency group by modifying the number of 
 
 == Add storage units to a consistency group
 
-Expand the amount of storage managed by a consistency group by adding storage units to the consistency group. You can add existing storage units to your consistency group or you can create new storage units to add to the consistency group.
+Expand the amount of storage managed by a consistency group by adding new or existing storage units to the consistency group. 
 
-Beginning with ONTAP 9.18.1, you can set snapshot reserve and automatic snapshot deletion to limit the amount of space used by snapshots in your storage units.  When you add a storage unit to an existing consistency group, snapshot reserve and automatic snapshot deletion are set as follows:
+Beginning with ONTAP 9.18.1, you can set snapshot reserve and automatic snapshot deletion to limit the amount of space used by snapshots in your storage units.  When you add a storage unit to an existing consistency group, snapshot reserve and automatic snapshot deletion are set as follows by default.
 
 [cols="3", options="header"]
 |===
@@ -32,7 +32,7 @@ Beginning with ONTAP 9.18.1, you can set snapshot reserve and automatic snapshot
 | Unchanged
 |===
 
-The default settings for new storage units can be modified when the storage units are created.  You can also link:snapshot-reserve-modify.html[modify existing storage units] to update their current settings. 
+You can modify the default settings for new storage units when you create the storage units.  You can also link:snapshot-reserve-modify.html[modify existing storage units] to update their current settings. 
 
 link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
@@ -80,7 +80,7 @@ Existing snapshots of the consistency group won't include your newly added stora
 
 == Remove a storage unit from a consistency group
 
-You should remove a storage unit from a consistency group if you want to delete the storage unit, if you want manage it as part of a different consistency group, or if you no longer need to protect the data it contains. Removing a storage unit from a consistency group breaks the relationship between the storage unit and the consistency group, but does not delete the storage unit.  
+Remove a storage unit from a consistency group to delete it, manage it as part of a different consistency group, or stop protecting its data. Removing a storage unit from a consistency group breaks the relationship between the storage unit and the consistency group, but does not delete the storage unit.  
 
 .Steps
 

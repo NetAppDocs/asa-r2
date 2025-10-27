@@ -93,7 +93,7 @@ You are ready to prepare your ASA storage VM for migration.
 
 == Step 2: Prepare for SVM migration from an ASA to an ASA r2 cluster
 
-Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and perform any required remediation. You cannot perform the migration until the pre-check is passed successfully.
+Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check is passed successfully.
 
 .Step
 
@@ -104,7 +104,7 @@ Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA 
 vserver migrate start -vserver <SVM> -source-cluster <asa_cluster> -check-only true
 ----
 +
-If any remediation is necessary to prepare your ASA cluster for migration, the issue and the corrective action is displayed.   Perform remediation and then repeat the pre-check until it completes successfully.
+If you need to fix any issues to prepare your ASA cluster for migration, the issue and the corrective action is displayed.   Fix the issue and repeat the pre-check until it completes successfully.
 
 .Result
 
@@ -117,11 +117,12 @@ You are ready to migrate your storage VM from your ASA cluster and ASA r2 cluste
 == Step 3: Migrate an ASA SVM to an ASA r2 cluster
 
 After you have prepared your ASA cluster and created the necessary cluster peer relationship with the ASA r2 cluster, you can begin the storage VM migration.
+
 When performing a storage VM migration, it is a best practice to leave 30% CPU headroom on both the ASA cluster and the ASA r2 cluster to enable the CPU workload to execute.
 
 .About this task
 
-After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the removal manually.
+After the storage VM migration, clients are automatically cutover to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the removal manually.
 
 .Before you begin
 
@@ -161,6 +162,6 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 .What’s next?
 
-If you disabled automatic cutover and automatic storage VM removal, you should manually perform the cutover of your ASA clients to your ASA r2 cluster and manually remove the storage VM from the ASA cluster.
+If you disabled automatic cutover and automatic storage VM removal, manually cutover your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster.
 
 // 2025 Nov 06, ONTAPDOC-3345

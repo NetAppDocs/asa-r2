@@ -1,18 +1,18 @@
 ---
 sidebar: sidebar
-permalink: manage-data/manual-post-svm-migrate-cutover-cleanup.html
+permalink: manage-data/svm-post-migrate-cutover-cleanup.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine, manual cutover, manual cleanup, remove source svm
 summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
 ---
-= Perform manual post ASA SVM migration cutover and cleanup
+= Cutover clients and clean up source SVM after ASA r2 migration.
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-After a storage virtual machine (VM) is migrated from an ASA cluster to an ASA r2 cluster, by default, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. If you chose to disable automatic cutover and removal of the ASA storage VM during the migration, you need to perform these steps manual after the migration is complete.
+After a storage virtual machine (VM) is migrated from an ASA cluster to an ASA r2 cluster, by default, clients are automatically cutover to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. If you chose to disable automatic cutover and removal of the ASA storage VM during the migration, you need to perform these steps manual after the migration is complete.
 
-== Manually cut over clients to an ASA r2 system after an SVM migration
-If you choose to disable automatic client cutover during the migration of a storage VM from an ASA cluster to an ASA r2 cluster, you need to perform the cutover manually so that the storage VM on your ASA r2 cluster can begin serving data to your clients.
+== Manually cutover clients to an ASA r2 system after an SVM migration
+If you disable automatic client cutover during the migration of a storage VM from an ASA cluster to an ASA r2 cluster, after the migration is successfully complete, perform the cutover manually so the ASA r2 storage VM can serve data to clients.
 
 .Steps
 
@@ -38,7 +38,7 @@ Data is being served to your clients from the storage VM on your ASA r2 cluster.
 You are now ready to remove the storage VM from the ASA cluster.
 
 == Manually remove an ASA SVM after migration to an ASA r2 cluster
-If you choose to disable automatic source cleanup during the migration of a storage VM from an ASA cluster to an ASA r2 cluster, after the migration is successfully complete, you should manually remove the SVM from the ASA cluster to free the storage space.
+If you disable automatic source cleanup during the migration of a storage VM from an ASA cluster to an ASA r2 cluster, after the migration is successfully complete, remove the SVM from the ASA cluster to free the storage space.
 
 .Before you begin
 

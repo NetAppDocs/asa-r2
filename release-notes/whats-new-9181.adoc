@@ -23,7 +23,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | link:../secure-data/iscsi-nvme-tcp-connections.html[IPsec hardware offload IPv6 support]
 | IPsec hardware offload support is extended to IPv6.
 
-| link:../learn-more/additional-supported-ontap-features.html[OpenSSL PQC algorithms]  
+| link:../learn-more/additional-supported-ontap-features.html#fips-compliance[OpenSSL PQC algorithms]  
 | ONTAP supports postquantum computing cryptographic algorithms for SSL. These algorithms provide additional protection against potential future quantum computing attacks, and are available when SSL FIPS mode is disabled.
 |===
 
@@ -34,7 +34,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| Support for SVM migration from ASA clusters
+| link:../manage-data/migrate-svm.html[Support for SVM migration from ASA clusters]
 | You can non-disruptively migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster. This enables block workloads to move to ASA r2 platforms while preserving data integrity and ensuring no application impact. The migration process is designed to maintain existing host mappings and LUN configurations, reducing operational effort and risk during migration.
 |===
 
@@ -45,7 +45,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| SnapMirror active sync
+| link:data-protection/snapmirror-active-sync.html[Increased support for SnapMirror active sync configurations]
 | SnapMirror active sync is supported on 4-node clusters.
 |===
 
@@ -56,7 +56,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| Support for NVMe copy offload
+| link:../learn-more/additional-supported-ontap-features.html#san-protocols[Support for NVMe copy offload].
 | NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
 
 | Support for modification of snapshot reserve and automatic snapshot deletion

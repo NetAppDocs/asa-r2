@@ -9,14 +9,12 @@ summary: The snapshot reserve is the amount of space in the storage unit reserve
 :imagesdir: ../media/
 
 [.lead]
-The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  By default, snapshot reserve is set to 0%. Beginning with ONTAP 9.18.1, you can modify the storage unit’s default snapshot reserve and enable automatic snapshot deletion. By default, automatic deletion of snapshots is not enabled.  When a snapshot reserve value is set and automatic snapshot deletion is enabled, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents snapshots from consuming more space than desired in your storage unit.
-
-You can set a snapshot reserve level and enable automatic snapshot deletion either on individual storage units or on the storage virtual machine (VM) containing the storage units.  
+The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  By default, snapshot reserve is set to 0%. Beginning with ONTAP 9.18.1, you can modify the storage unit’s default snapshot reserve and enable automatic snapshot deletion. Automatic deletion of snapshots is disabled by default.  When a snapshot reserve value is set and automatic snapshot deletion is enabled, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents snapshots from consuming space in your storage unit intended for user data.
 
 link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
 == Modify snapshot reserve on storage units
-If you need storage units within an storage VM to have different snapshot reserve values, you can set the snapshot reserve individually on each storage unit. If you want all the storage units within an storage VM to have the same snapshot reserver, you can modify the snapshot reserve on the storage VM.
+To set different snapshot reserve values, configure each storage unit individually. To use the same value for all storage units, modify the snapshot reserve on the storage VM.
 
 .Steps
 
@@ -32,14 +30,14 @@ If you need storage units within an storage VM to have different snapshot reserv
 The snapshot reserve is set to the percentage you specified.  If the amount of space consumed by snapshots reaches the reserve, older snapshots are automatically deleted.
 
 == Modify snapshot reserve on a storage VM
-If you want all the storage units within an storage VM to have the same snapshot reserve, you can apply the desired snapshot reserve percentage to the storage VM instead to each individual storage unit.  When snapshot reserve is applied to the storage VM, it is applied to all newly created storage units within the storage VM.  It is not applied to storage units created before you modified the setting.
+To set the same snapshot reserve for all storage units in a storage VM, apply the desired percentage to the storage VM. .  When snapshot reserve is applied to the storage VM, it is applied to all newly created storage units within the storage VM.  It is not applied to storage units created before you modified the setting.
  
 .Steps
-1.	In System Manager, select *Cluster > Storage VMs*; then select *Settings*.
-2.	Under *Policies*, next to *Snapshots*, select image:icon_kabob.gif[three vertical dots] ; then select *Set/edit snapshot reserve default*.
-3.	Under *Snapshot reserve %*, enter the numeric value for the percentage of the storage unit’s space that you want allocated to snapshots.
-4.	Verify that *Automatically delete older snapshots* is selected.
-5.	Select *Save*.
+. In System Manager, select *Cluster > Storage VMs*; then select *Settings*.
+. Under *Policies*, next to *Snapshots*, select image:icon_kabob.gif[three vertical dots] ; then select *Set/edit snapshot reserve default*.
+. Under *Snapshot reserve %*, enter the numeric value for the percentage of the storage unit’s space that you want allocated to snapshots.
+. Verify that *Automatically delete older snapshots* is selected.
+. Select *Save*.
 
 .Result
 
