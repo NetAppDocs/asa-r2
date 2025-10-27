@@ -136,6 +136,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[Cable cluster 
 --
 Create the ONTAP cluster connections. For switchless clusters, connect the controllers to each other. For switched clusters, connect the controllers to the cluster network switches.
 
+[NOTE]
+====
+The cluster/HA cabling examples show common configurations. 
+
+If you do not see your configuration here, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to cable your storage system.
+====
+
 *Switchless cluster cabling*
 
 Connect the controllers to each other to create the ONTAP cluster connections.
@@ -292,6 +299,13 @@ image::../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg[a20 switche
 .C30
 --
 Create the ONTAP cluster connections. For switchless clusters, connect the controllers to each other. For switched clusters, connect the controllers to the cluster network switches.
+
+[NOTE]
+====
+The cluster/HA cabling examples show common configurations. 
+
+If you do not see your configuration here, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to cable your storage system.
+====
 
 *Switchless cluster cabling*
 
@@ -474,6 +488,13 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cable to 100Gb Etherne
 --
 Connect the Ethernet module ports or the Fibre Channel (FC) module ports to your host network.
 
+[NOTE]
+====
+The host network cabling examples show common configurations. 
+
+If you do not see your configuration here, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to cable your storage system.
+====
+
 *Ethernet host cabling*
 
 .ASA A30 and ASA A50 with two 2-port 40/100 GbE I/O modules
@@ -531,6 +552,13 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cable to 
 .C30
 --
 Connect the Ethernet module ports or the Fibre Channel (FC) module ports to your host network.
+
+[NOTE]
+====
+The host network cabling examples show common configurations. 
+
+If you do not see your configuration here, go to link:https://hwu.netapp.com[NetApp Hardware Universe^] for comprehensive configuration and slot priority information to cable your storage system.
+====
 
 *Ethernet host cabling*
 
