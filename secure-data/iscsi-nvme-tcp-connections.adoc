@@ -40,9 +40,7 @@ a|
 
 
 .What's next? 
-
-link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html[Configure IP security for the ONTAP network]
-
+IPsec is configured on your ASA r2 system the same way as on other ONTAP systems. For more information, see link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html[Prepare to configure IP security for the ONTAP network^].
 
 // 2025 Nov 6, ONTAPDOC-3255
 // 2025 Apr 30, ONTAPDOC 2785

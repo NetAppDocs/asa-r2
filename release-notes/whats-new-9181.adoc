@@ -14,6 +14,19 @@ summary:  "Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2
 [.lead]
 Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 
+== Networking
+[cols="2,4" options="header"]
+|===
+| Update    
+| Description
+
+| link:../secure-data/iscsi-nvme-tcp-connections.html[IPsec hardware offload IPv6 support]
+| IPsec hardware offload support is extended to IPv6.
+
+| link:../learn-more/additional-supported-ontap-features.html[OpenSSL PQC algorithms]  
+| ONTAP supports postquantum computing cryptographic algorithms for SSL. These algorithms provide additional protection against potential future quantum computing attacks, and are available when SSL FIPS mode is disabled.
+|===
+
 == SAN data migration
 
 [cols="2,4" options="header"]
@@ -21,8 +34,8 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Update
 | Description
 
-| Support for SVM migration
-| You can non-disruptively migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster.
+| Support for SVM migration from ASA clusters
+| You can non-disruptively migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster. This enables block workloads to move to ASA r2 platforms while preserving data integrity and ensuring no application impact. The migration process is designed to maintain existing host mappings and LUN configurations, reducing operational effort and risk during migration.
 |===
 
 
@@ -37,16 +50,18 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 |===
 
 
-
 == Storage efficiency
 [cols="2,4" options="header"]
 |===
 | Update
 | Description
 
+| Support for NVMe copy offload
+| NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
+
 | Support for modification of snapshot reserve and automatic snapshot deletion
-| You can modify snapshot reserve and enable automatic snapshot deletion to limit the among of space used for snapshots in your ASA r2 storage units.
+| You can modify snapshot reserve and enable automatic snapshot deletion to limit the among of space used for snapshots in your ASA r2 storage units. When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents application disruptions by not allowing snapshots to consume space in your storage unit intended for user data
 |===
 
 
-// 2025 Nov 06, ONTAPDOC-3359, ONTAPDOC-3266
+// 2025 Nov 06, ONTAPDOC-3359, ONTAPDOC-3266, ONTAPDOC-3269, ONTAPDOC-3254

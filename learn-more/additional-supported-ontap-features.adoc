@@ -15,17 +15,69 @@ Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tas
 For more information about common features and functions, see the following ONTAP documentation.
 
 == ONTAP administration
-* link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in ONTAP System Manager^].
-* link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Combine physical ports to create interface groups^].
-* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF) provisioning^].
+
+=== Link Aggregation Groups (LAGs)
+
+An interface group, also known as a Link Aggregation Group (LAG), is created by combining two or more physical ports on the same node into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.
+
+link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Learn about Link Aggregation Groups^].
+
+=== NVMe over Fabrics (NVMe-oF) provisioning
+
+You can use the non-volatile memory express (NVMe) protocol to provide storage on your ASA r2 system. The NVMe protocol is optimized for performance with solid state storage.
+
+* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF)^].
+
+=== System Manager search
+
+You can search for various actions, objects,and information topics in System Manager. You can also search table data for specific entries.
+
+link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
 
 == Data security
-* link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Learn about OAuth 2.0 authentication^].
-* link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html[Learn about client authentication and authorization^].
-* link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Manage ONTAP administrator access^].
+
+
+=== Administrator access management
+The role assigned to an administrator determines which functions the administrator can perform. Predefined roles for cluster administrators and storage VM administrators are provided by System Manager. You assign the role when you create the administrator’s account, or you can assign a different role later.
+
+* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
+
+=== Client authentication and authorization
+
+ONTAP uses standard methods to secure client and administrator access to storage and to protect against viruses. Advanced technologies are available for encryption of data at rest and for WORM storage. ONTAP authenticates a client machine and user by verifying their identities with a trusted source. ONTAP authorizes a user to access a file or directory by comparing the user's credentials with the permissions configured on the file or directory.
+
+link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html[Learn about client authentication and authorization^].
+
+=== OAuth 2.0 authentication
+You can use the Open Authorization (OAuth 2.0) framework to control access to your ONTAP clusters. OAuth 2.0 restricts and controls access to protected resources using signed access tokens. 
+
+link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Learn about OAuth 2.0 authentication^].
+
+=== SAML authentication and administrator access
+
+You can configure and enable Security Assertion Markup Language (SAML) authentication for web services.  SAML authenticates users by an external Identity Provider (IdP) instead of the directory service providers such as Active Directory and LDAP. 
+
+link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
+
 
 == Data protection
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Configue clustered external key servers in ONTAP^].
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management (HW-based)^].
+
+=== Clustered external key servers
+you can configure connectivity to clustered external key management servers on an SVM. With clustered key servers, you can designate primary and secondary key servers on a SVM. When registering keys, ONTAP will first attempt to access a primary key server before sequentially attempting to access secondary servers until the operation completes successfully, preventing duplication of keys.
+
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Learn to configure clustered external key servers^].
+
+=== External key management for encryption at rest
+You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data.
+
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management^].
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
+
+== Networking
+
+=== FIPS compliance 
+ONTAP is compliant in the Federal Information Processing Standards (FIPS) 140-2 for all SSL connections. You can turn on and off SSL FIPS mode, set SSL protocols globally, and turn off any weak ciphers such as RC4 within ONTAP.
+
+* link:https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_fips.html[Learn to configure FIPS for all SSL connections^]. 
+
+
