@@ -4,7 +4,7 @@ permalink: manage-data/migrate-svm.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
 summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
 ---
-= Migrate an storage VM from an ASA cluster to an ASA r2 cluster
+= Migrate a storage VM from an ASA cluster to an ASA r2 cluster
 :icons: font
 :imagesdir: ../media/
 
