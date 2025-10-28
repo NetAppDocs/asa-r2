@@ -14,16 +14,6 @@ Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tas
 
 For more information about common features and functions, see the following ONTAP documentation.
 
-== SAN Protocols
-ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP). 
-
-* link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html[Learn more about iSCSI^]
-* link:https://docs.netapp.com/us-en/ontap/san-admin/san-provisioning-fc-concept.html[Learn more about Fibre Channel (FC)^]
-* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about NVMe over Fabrics (NVMe-oF)^].
-** *NVMe copy offload*: Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
-+
-link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
-
 == Data protection
 
 Learn more about common data protection features supported on ASA r2 systems.
@@ -82,6 +72,18 @@ Beginning with ONTAP 9.18.1 postquantum computing cryptographic algorithms are s
 An interface group, also known as a Link Aggregation Group (LAG), is created by combining two or more physical ports on the same node into a single logical port. The logical port provides increased resiliency, increased availability, and load sharing.
 
 link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Learn about Link Aggregation Groups^].
+
+== SAN Protocols
+ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP). 
+
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html[Learn more about the iSCSI protocol^].
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-provisioning-fc-concept.html[Learn more about the Fibre Channel (FC) protocol^].
+* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about the NVMe protocol ^].
+** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
++
+Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
++
+
 
 == System Manager
 
