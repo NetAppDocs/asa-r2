@@ -9,7 +9,7 @@ summary: "Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads 
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between the nodes in an ASA r2 system HA pair for optimal performance. For example, if utilization on one node increases to 70% while utilization on its HA partner is only 30%, ONTAP automatically shifts the workloads so that utilization of each node is more closely matched. Because the nodes of the HA pair share the same storage availability zone, workload rebalancing is a copy-free operation with no impact on performance. 
+Beginning with ONTAP 9.17.1, ONTAP automatically rebalances workloads between the nodes in an ASA r2 system HA pair for optimal performance. For example, if space utilization on one node increases to 70% while utilization on its HA partner is only 30%, ONTAP automatically shifts the workloads so that space utilization of each node is more closely matched. Because the nodes of the HA pair share the same storage availability zone, workload rebalancing is a copy-free operation with no impact on performance. 
 
 == Modify the default evaluation period for automatic workload rebalancing
 
@@ -107,4 +107,5 @@ placement rebalance config show-evaluation
 
 If you want to set the rebalancing mode to *automated* or *disabled*, you can do so by using the `placement rebalance config modify` command.
 
+// 2025 Oct 28, ONTAPDOC-3450
 // 2025 Aug 13, ONTAPDOC-3180
