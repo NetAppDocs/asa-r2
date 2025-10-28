@@ -52,7 +52,7 @@ a| ONTAP 9.16.1 and later
 
 |===
 
-See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information about the supported platforms and cards.
+See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information about the supported systems and cards.
 
 .What's next? 
 IPsec is configured on your ASA r2 system the same way as on other ONTAP systems. For more information, see link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html[Prepare to configure IP security for the ONTAP network^].

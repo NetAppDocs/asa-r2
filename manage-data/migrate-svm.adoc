@@ -4,20 +4,18 @@ permalink: manage-data/migrate-svm.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
 summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
 ---
-= Migrate an SVM from an ASA cluster to an ASA r2 cluster
+= Migrate an storage VM from an ASA cluster to an ASA r2 cluster
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster. Migrating from an ASA cluster to an ASA r2 cluster allows you to adopt the simplified and streamlined architecture of ASA r2 systems for SAN-only environments.
+Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual machine (VM) from any ASA cluster to any ASA r2 cluster. Migrating from an ASA cluster to an ASA r2 cluster allows you to adopt the simplified and streamlined architecture of ASA r2 systems for SAN-only environments.
 
-You can migrate a storage VM to an ASA r2 cluster from an ASA cluster only.  Migration from any other type of ONTAP platform is not supported.
-
-SVM migration is supported as follows:
+Storage VM migration between ASA and ASA r2 storage systems is supported as follows:
 
 [cols="2", options="header"]
 |===
-| From any of the following ASA platforms: | To any of the following ASA r2 platforms:
+| From any of the following ASA systems: | To any of the following ASA r2 systems:
 a|
 * ASA C800
 * ASA C400
@@ -41,27 +39,56 @@ a|
 * ASA A50
 * ASA A30
 * ASA A20
-
 |===
 
 [NOTE]
-For the most current list of ASA and ASA r2 platforms, see link:https://hwu.netapp.com/[NetApp Hardware Universe^]. ASA r2 platforms are listed in NetApp Hardware Universe as "ASA A-Series/C-Series (New)".
+For the most current list of ASA and ASA r2 systems, see link:https://hwu.netapp.com/[NetApp Hardware Universe^]. ASA r2 systems are listed in NetApp Hardware Universe as "ASA A-Series/C-Series (New)".
+
+You can migrate a storage VM to an ASA r2 cluster from an ASA cluster only.  Migration from any other type of ONTAP system is not supported.
 
 .Before you begin
 
-* All nodes in the ASA r2 cluster must be running the same version of ONTAP 9.18.1 or later.
-* All nodes in the ASA cluster must be running the same version of ONTAP 9.18.1 or later.
-* In the ASA storage VM to be migrated:
-** No vVols should be present
-** No NVMe subsystems or namespaces should be present.
-+
-Use the `vserver nvme namespace show` to command verify if there are any NVMe namespaces present.
-** Each volume should contain a single LUN.
-+ 
-Use the `lun show` command to verify the number of LUNs present in each volume.
+All nodes in the ASA r2 cluster and the ASA cluster must be running ONTAP 9.18.1 or later. The ONTAP 9.18.1 patch versions on the cluster nodes can vary.
 
-== Step 1: Create a cluster peer relationship between your ASA and ASA r2 cluster
-Before you can migrate a storage VM from an ASA cluster to an ASA r2 cluster, you need to create a peer relationship.  A peer relationship defines network connections that enable clusters and storage VMs to exchange data securely.
+== Step 1: Verify the status of the ASA storage VM
+
+Before you migrate a storage VM from an ASA system, there should be no NVMe namespaces or vVols present and each volume in the storage VM should contain only one LUN. Migration of NVMe namespaces and vVols is not supported.  The architecture of ASA r2 systems requires that volumes contain a single LUN.
+
+.Steps
+
+. Verify that no NVMe namespaces are present in the storage VM:
++
+[source,cli]
+----
+vserver nvme namespace show -vserver <storage_VM>
+----
++
+If entries are displayed, the NVMe objects must link:https://docs.netapp.com/us-en/ontap/nvme/convert-namespace-to-lun-task.html[converted^] or removed.  See the `vserver nvme namespace delete` and the `vserver nvme subsystem delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+
+. Verify that there are no vVols present in the storage VM:
++
+[source,cli]
+----
+lun show -verser <storage_VM> -class protocol-endpoint,vvol
+----
++
+If vVols are present, they should be copied to another storage VM and then deleted from the storage VM to be migrated.  See the `lun copy` and `lun delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+
+. Verify that each volume in the storage VM contains a single LUN:
++
+[source,cli]
+----
+lun show -verser <storage_VM>
+----
++
+If a volume contains more than one LUN, use the `volume create` and `lun move` commands to create a 1:1 volume to LUN ratio.  See the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+
+.What’s next?
+You are ready to create a cluster peer relationship between your ASA and ASA r2 clusters.
+
+
+== Step 2: Create a cluster peer relationship between your ASA and ASA r2 clusters
+Before you can migrate a storage VM from an ASA cluster to an ASA r2 cluster, you need to create a peer relationship.  A peer relationship defines network connections that enable ONTAP clusters and storage VMs to exchange data securely.
 
 .Before you begin
 
@@ -80,7 +107,7 @@ You must have created intercluster LIFs on every node in the clusters being peer
 cluster peer create -peer-addrs <ASA_cluster_LIF_IPs> -generate-passphrase
 ----
 +
-The following example creates a cluster peer relationship between cluster 1 and cluster 2 and creates a system generate passphrase:
+The following example creates a cluster peer relationship between cluster 1 and cluster 2 and creates a system-generated passphrase:
 +
 ----
 cluster1::> cluster peer create -peer-addrs 10.98.191.193 -generate-passphrase
@@ -129,7 +156,7 @@ The ASA and ASA r2 clusters are peered and storage VM data can be securely trans
 
 You are ready to prepare your ASA storage VM for migration.
 
-== Step 2: Prepare for SVM migration from an ASA to an ASA r2 cluster
+== Step 3: Prepare for storage VM migration from an ASA to an ASA r2 cluster
 
 Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check is passed successfully.
 
@@ -139,7 +166,7 @@ Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA 
 +
 [source,cli]
 ----
-vserver migrate start -vserver <SVM> -source-cluster <asa_cluster> -check-only true
+vserver migrate start -vserver <storage_VM> -source-cluster <asa_cluster> -check-only true
 ----
 +
 If you need to fix any issues to prepare your ASA cluster for migration, the issue and the corrective action is displayed.   Fix the issue and repeat the pre-check until it completes successfully.
@@ -152,7 +179,7 @@ Your ASA cluster is ready to migrate a storage VM to your ASA r2 cluster.
 
 You are ready to migrate your storage VM from your ASA cluster and ASA r2 cluster.
 
-== Step 3: Migrate an ASA SVM to an ASA r2 cluster
+== Step 4: Migrate an ASA storage VM to an ASA r2 cluster
 
 After you have prepared your ASA cluster and created the necessary cluster peer relationship with the ASA r2 cluster, you can begin the storage VM migration.
 
@@ -166,7 +193,7 @@ After the storage VM migration, clients are automatically cutover to the ASA r2 
 
 * The ASA r2 cluster must have enough free space to hold the migrated storage VM.
 * If the ASA storage VM contains encrypted volumes, the onboard key manager or the external key manager on the ASA r2 system must be configured at the cluster level.
-* The following operations cannot be running on ASA cluster:
+* The following operations cannot be running on the source ASA cluster:
 ** Failover operations
 ** WAFLIRON
 ** Fingerprint
@@ -178,7 +205,7 @@ After the storage VM migration, clients are automatically cutover to the ASA r2 
 +
 [source,cli]
 ----
-vserver migrate start -vserver <SVM_name> -source-cluster <ASA_cluster>
+vserver migrate start -vserver <storage_VM_name> -source-cluster <ASA_cluster>
 ----
 + 
 To disable automatic cutover, use the `-auto-cutover false` parameter. To disable the automatic removal of the ASA storage VM, use the `-auto-source-cleanup false` parameter.
@@ -187,19 +214,19 @@ To disable automatic cutover, use the `-auto-cutover false` parameter. To disabl
 +
 [source,cli]
 ----
-vserver migrate show -vserver <SVM_name>
+vserver migrate show -vserver <storage_VM_name>
 ----
 +
 When the migration is complete, the *status* displays as *migration-complete*.
 
 [NOTE]
-If you need to pause or cancel the migration before automatic cutover begins, use the `vserver migrate pause` and the `vserver migrate abort` commands to do so. You must pause the migration before cancelling it.  You cannot cancel the migration after cutover starts.
+If you need to pause or cancel the migration before automatic cutover begins, use the `vserver migrate pause` and the `vserver migrate abort` commands. You must pause the migration before cancelling it.  You cannot cancel the migration after cutover starts.
 
 .Result
-The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The storage VM’s name and UUID, the data LIF name, IP address, and object names, such as the volume name, remain unchanged. The UUID of the objects in the storage VM are updated.
+The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The storage VM’s name and UUID, the data LIF name, IP address, and object names, such as the volume name, remain unchanged. The UUID of the migrated objects in the storage VM are updated.
 
 .What’s next?
 
-If you disabled automatic cutover and automatic storage VM removal, manually cutover your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster.
+If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cutover your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
 
 // 2025 Nov 06, ONTAPDOC-3345

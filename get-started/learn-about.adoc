@@ -13,7 +13,7 @@ searchtitle: "Learn about ASA A1K, A90, A70, A50, A30 A20 and C30 systems"
 
 The NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers.
 
-The following ASA platforms are classified as ASA r2 systems:
+The following are classified as ASA r2 systems:
 
 * ASA A1K
 * ASA A90

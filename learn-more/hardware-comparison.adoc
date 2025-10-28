@@ -10,9 +10,9 @@ searchtitle: "Compare ASA r2 systems to other ONTAP systems"
 :imagesdir: ../media/
 
 [.lead]
-ASA r2 systems offer a hardware and software solution for SAN-only environments built on all flash platforms. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its ONTAP personality, storage layer and supported protocols.
+ASA r2 systems offer a hardware and software solution for SAN-only environments built on all flash solutions. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its ONTAP personality, storage layer and supported protocols.
 
-The following ASA platforms are classified as ASA r2 systems:
+The following are classified as ASA r2 systems:
 
 * ASA A1K
 * ASA A90
@@ -99,7 +99,7 @@ Because of this automated and simplified approach to storage management, certain
 
 The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
 
-.Default SVM creation with protocol services
+.Default storage VM creation with protocol services
 New clusters automatically contain a default data storage virutal machine (VM) with the SAN protocols enabled. IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
 
 .Automatic volume creation

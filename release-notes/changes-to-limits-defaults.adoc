@@ -23,7 +23,7 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | Limit change
 | Changed in release...
 
-| SVMs per cluster
+| Storage VMs per cluster
 | The maximum number of supported storage virtual machines (VMs) per HA pair is increased from 32 to 256.
 | ONTAP 9.18.1
 
