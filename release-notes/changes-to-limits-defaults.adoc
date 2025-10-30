@@ -28,7 +28,8 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | ONTAP 9.18.1
 
 | SnapMirror activ sync
-| Suppport for SnapMirror active sync is increased from two-node clusters to four-node clusters..
+| Suppport for SnapMirror active sync is increased from two-node clusters to four-node clusters.
+| ONTAP 9.18.1
 
 | Nodes per cluster
 a| The maximum number of nodes per cluster is increased from 2 to 12.
