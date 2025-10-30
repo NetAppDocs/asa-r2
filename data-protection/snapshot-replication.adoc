@@ -56,35 +56,18 @@ Learn about link:pre-defined-protection-policies.html[pre-defined ONTAP data pro
 . Select the *Policy scope*.
 +
 If you want to apply the replication policy to the entire cluster, select *Cluster*.   If you want the replication policy applied only to the storage units in a specific storage VM, select *Storage VM*.
-. Select the *Policy type*.
+. For the *Policy type*, select *Asynchronous*.
 +
-[cols="2,6a" options="header"]
-|===
-// header row
-| Option
-| Steps
-
-| Copy data to the remote site after it is written to the source.
-a| 
-.. Select *Asynchronous*.
-.. Under *Transfer snapshots from source*, accept the default transfer schedule or select a different one.  
-.. Select to transfer all snapshots or to create rules to determine which snapshots to transfer.
-.. Optionally, enable network compression.
-
-| Write data to the source and remote sites simultaneously.  
-a|
-.. Select *Synchronous*.
-
-
-// table end
-|===
-
+[NOTE]
+With the asynchronous policy, data is copied to the remote site after it is written to the source. Synchronous replication is not supported for ASA r2 systems.
+. Under *Transfer snapshots from source*, accept the default transfer schedule or select a different one.  
+. Select to transfer all snapshots or to create rules to determine which snapshots to transfer.
+. Optionally, enable network compression.
 . Select *Save*.
 
 .What's next?
 
 You have created a replication policy and are now ready to create a replication relationship between your ASA r2 system and your remote location.
-
 
 .For more information
 Learn more about link:../administer/manage-client-vm-access.html[storage VMs for client access].
@@ -193,6 +176,7 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
+// 2025 Oct 30, ONTAPDOC 2893
 // 2025 Sept 04, ONTAPDOC 2732
 // 2025 Sept 04, ONTAPDOC 2893
 // 2024 Oct 11, Git Issue 12
