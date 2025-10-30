@@ -63,7 +63,7 @@ Before you migrate a storage VM from an ASA system, there should be no NVMe name
 vserver nvme namespace show -vserver <storage_VM>
 ----
 +
-If entries are displayed, the NVMe objects must link:https://docs.netapp.com/us-en/ontap/nvme/convert-namespace-to-lun-task.html[converted^] or removed.  See the `vserver nvme namespace delete` and the `vserver nvme subsystem delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+If entries are displayed, the NVMe objects must be link:https://docs.netapp.com/us-en/ontap/nvme/convert-namespace-to-lun-task.html[converted^] to LUNs or removed.  See the `vserver nvme namespace delete` and the `vserver nvme subsystem delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
 
 . Verify that there are no vVols present in the storage VM:
 +
@@ -72,7 +72,7 @@ If entries are displayed, the NVMe objects must link:https://docs.netapp.com/us-
 lun show -verser <storage_VM> -class protocol-endpoint,vvol
 ----
 +
-If vVols are present, they should be copied to another storage VM and then deleted from the storage VM to be migrated.  See the `lun copy` and `lun delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+If any vVols are present, they should be copied to another storage VM and then deleted from the storage VM to be migrated.  See the `lun copy` and `lun delete` commands in the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
 
 . Verify that each volume in the storage VM contains a single LUN:
 +
@@ -81,7 +81,7 @@ If vVols are present, they should be copied to another storage VM and then delet
 lun show -verser <storage_VM>
 ----
 +
-If a volume contains more than one LUN, use the `volume create` and `lun move` commands to create a 1:1 volume to LUN ratio.  See the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
+If a volume contains more than one LUN, use the `volume create` and `lun move` commands to create a 1:1 volume-to-LUN ratio.  See the link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html[ONTAP command reference^] for more information.
 
 .What’s next?
 You are ready to create a cluster peer relationship between your ASA and ASA r2 clusters.
@@ -158,7 +158,7 @@ You are ready to prepare your ASA storage VM for migration.
 
 == Step 3: Prepare for storage VM migration from an ASA to an ASA r2 cluster
 
-Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check is passed successfully.
+Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check passes successfully.
 
 .Step
 
@@ -177,7 +177,7 @@ Your ASA cluster is ready to migrate a storage VM to your ASA r2 cluster.
 
 .What’s next?
 
-You are ready to migrate your storage VM from your ASA cluster and ASA r2 cluster.
+You are ready to migrate your storage VM from your ASA cluster to an ASA r2 cluster.
 
 == Step 4: Migrate an ASA storage VM to an ASA r2 cluster
 
@@ -187,7 +187,7 @@ When performing a storage VM migration, it is a best practice to leave 30% CPU h
 
 .About this task
 
-After the storage VM migration, clients are automatically cutover to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the removal manually.
+After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the removal manually.
 
 .Before you begin
 
@@ -227,6 +227,6 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 .What’s next?
 
-If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cutover your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
+If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cut over your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
 
 // 2025 Nov 06, ONTAPDOC-3345

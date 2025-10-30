@@ -21,7 +21,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Description
 
 | link:../data-protection/snapmirror-active-sync.html[Increased support for SnapMirror active sync configurations]
-| SnapMirror active sync is supported on four-node clusters.
+| Suppport for SnapMirror active sync is increased from two-node clusters to four-node clusters.
 |===
 
 == Networking

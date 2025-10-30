@@ -27,6 +27,9 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | The maximum number of supported storage virtual machines (VMs) per HA pair is increased from 32 to 256.
 | ONTAP 9.18.1
 
+| SnapMirror activ sync
+| Suppport for SnapMirror active sync is increased from two-node clusters to four-node clusters..
+
 | Nodes per cluster
 a| The maximum number of nodes per cluster is increased from 2 to 12.
 [NOTE] 

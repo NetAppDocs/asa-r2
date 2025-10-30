@@ -4,14 +4,14 @@ permalink: manage-data/svm-post-migrate-cutover-cleanup.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine, manual cutover, manual cleanup, remove source svm
 summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
 ---
-= Cutover clients and clean up source storage VM after migration to an ASA r2 system.
+= Cutover clients and clean up source storage VM after migration to an ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-After a storage virtual machine (VM) is migrated from an ASA cluster to an ASA r2 cluster, by default, clients are automatically cutover to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. If you chose to disable automatic cutover and removal of the ASA storage VM during the migration, you need to perform these steps manually after the migration is complete.
+After a storage virtual machine (VM) is migrated from an ASA cluster to an ASA r2 cluster, by default, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. If you chose to disable automatic cutover and removal of the ASA storage VM during the migration, you need to perform these steps manually after the migration is complete.
 
-== Manually cutover clients to an ASA r2 system after an storage VM migration
+== Manually cut over clients to an ASA r2 system after a storage VM migration
 If you disable automatic client cutover during the migration of a storage VM from an ASA cluster to an ASA r2 cluster, after the migration is successfully complete, perform the cutover manually so the ASA r2 storage VM can serve data to clients.
 
 .Steps
@@ -46,7 +46,7 @@ Your clients should be serving data from the ASA r2 cluster.
 
 .Steps
 
-. From the ASA cluster, verify that the status of the ASA storage_VM is *Ready for source cleanup*:
+. From the ASA cluster, verify that the status of the ASA storage VM is *Ready for source cleanup*:
 +
 [source,cli]
 ----
