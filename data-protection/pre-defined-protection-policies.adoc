@@ -13,6 +13,9 @@ The replication policy defines when updates performed on the ASA r2 cluster are 
 
 If the pre-defined policies do not meet your needs, you can link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy[create a custom replication policy].
 
+[NOTE]
+ASA r2 systems do not support synchronous replication.
+
 ASA r2 systems support the following pre-defined protection policies.
 
 [cols="3,4,1"]
@@ -69,4 +72,5 @@ h| Policy h| Description h| Policy type
 
 |===
 
+// 2025 Oct 30, ONTAPDOC 2893
 // 2025 Sept 04, ONTAPDOC 2893
