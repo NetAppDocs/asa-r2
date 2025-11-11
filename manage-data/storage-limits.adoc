@@ -58,6 +58,9 @@ ASA r2 systems support the following storage limits:
 a| 
 * 256 (ONTAP 9.18.1 and later)
 * 32 (ONTAP 9.17.1 and earlier)
+a|
+* 256 (ONTAP 9.18.1 and later)
+* 32 (ONTAP 9.17.1 and earlier)
 
 | Virtual machines
 | 800

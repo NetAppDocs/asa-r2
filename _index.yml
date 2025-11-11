@@ -10,6 +10,7 @@ indexpage:
           url: /get-started/learn-about.html
         - title: Quick start
           url: /get-started/quick-start.html
+
     - title: Manage data
       links: 
         - title: Provision SAN storage
@@ -17,7 +18,9 @@ indexpage:
         - title: Clone data
           url: /manage-data/data-cloning.html
         - title: Modify storage units
-          url: /manage-data/modify-storage-units.html            
+          url: /manage-data/modify-storage-units.html
+        - title: Migrate storage VMs
+          url: /manage-data/migrate-svm.html              
     - title: Protect and secure data
       links: 
         - title: Create snapshots
@@ -27,7 +30,9 @@ indexpage:
         - title: Set up SnapMirror active sync
           url: /data-protection/snapmirror-active-sync.html   
         - title: Encrypt data at rest
-          url: /secure-data/encrypt-data-at-rest.html                                              
+          url: /secure-data/encrypt-data-at-rest.html 
+        - title: Enable ARP/AI 
+          url: /secure-data/enable-anti-ransomware-protection.html                                            
     - title: More ASA r2 resources
       links:
         - title: ASA datasheet 

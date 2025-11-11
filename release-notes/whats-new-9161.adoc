@@ -74,7 +74,7 @@ When you switch from the ONTAP onboard key manager to an external key manager at
 | link:../learn-more/hardware-comparison.html[Support for automatic rebalancing of storage units]
 | ONTAP will automatically rebalance storage units across your storage availability zones for optimal performance and capacity utilization.
 
-| NVMe space deallocation enabled by default
+| link:../learn-more/additional-supported-ontap-features.html#san-protocols[NVMe space deallocation enabled by default]
 a| Space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space. 
 
 This greatly improves overall storage efficiency, especially with file systems that have data high turnover.

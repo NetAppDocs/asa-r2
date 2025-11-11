@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: learn-more/additional-supported-ontap-features.html
-keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, comand line interface 
+keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, command line interface, clustered external key servers, external key management, encryption at rest, administrator access management, client authentication, oauth 2.0, saml authentication, fips compliance, link aggregation groups, iscsi, fibre channel, fc, nvme, nvme unmap, hole punch, deallocation, system manager 
 summary: "Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tasks and System Manager functions are performed the same way on ASA r2 systems as on other ONTAP systems."
 ---
 = Common ONTAP features supported on ASA r2 systems
@@ -82,8 +82,10 @@ ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
 +
 Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
-+
 
+** link:https://docs.netapp.com/us-en/ontap/san-admin/enable-space-allocation.html[Learn more about space allocation (unmap) for NVMe^].
++
+Beginning with ONTAP 9.16.1, space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space.
 
 == System Manager
 

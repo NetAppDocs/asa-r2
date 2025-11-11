@@ -96,7 +96,7 @@ You must have created intercluster LIFs on every node in the clusters being peer
 
 * link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html[Configure intercluster LIFs on shared data ports^]
 * link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-dedicated-ports-task.html[Configure intercluster LIFs on dedicated data ports^]
-* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-ports-own-networks-task.html[Configure intercluster LIFs in custom IPspaces]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-ports-own-networks-task.html[Configure intercluster LIFs in custom IPspaces^]
 
 .Steps
 
@@ -171,10 +171,6 @@ vserver migrate start -vserver <storage_VM> -source-cluster <asa_cluster> -check
 +
 If you need to fix any issues to prepare your ASA cluster for migration, the issue and the corrective action is displayed.   Fix the issue and repeat the pre-check until it completes successfully.
 
-.Result
-
-Your ASA cluster is ready to migrate a storage VM to your ASA r2 cluster.
-
 .What’s next?
 
 You are ready to migrate your storage VM from your ASA cluster to an ASA r2 cluster.
@@ -187,7 +183,7 @@ When performing a storage VM migration, it is a best practice to leave 30% CPU h
 
 .About this task
 
-After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the removal manually.
+After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the storage VM removal manually.
 
 .Before you begin
 
