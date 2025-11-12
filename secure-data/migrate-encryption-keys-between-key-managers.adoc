@@ -22,10 +22,10 @@ You can manage your data encryption keys using either the ONTAP onboard key mana
 | Cluster level only
 a| Either the onboard key manager or an external key manager
 
-| SVM level only
+| Storage VM level only
 | An external key manager only
 
-a| Both the cluster and SVM level
+a| Both the cluster and storage VM level
 a| 
 One of the following key manager combinations:
 
@@ -33,13 +33,13 @@ One of the following key manager combinations:
 +
 Cluster level: Onboard key manager
 +
-SVM level: External key manager
+Storage VM level: External key manager
 
 * Option 2
 +
 Cluster level: External key manager 
 +
-SVM level: External key manager
+Storage VM level: External key manager
 
 // table end
 |===
@@ -75,14 +75,14 @@ security key-manager external create-config
 +
 [source, cli]
 ----
-security key-manager keystore enable -vserver <svm_name> -type KMIP
+security key-manager keystore enable -vserver <storage_vm_name> -type KMIP
 ----
 
 . Delete the onboard key manager configuration:
 +
 [source, cli]
 ----
-security key-manager keystore delete-config -vserver <svm_name> -type OKM
+security key-manager keystore delete-config -vserver <storage_vm_name> -type OKM
 ----
 
 . Set the privilege level to admin:
@@ -116,14 +116,14 @@ security key-manager onboard create-config
 +
 [source, cli]
 ----
-security key-manager keystore enable -vserver <svm_name> -type OKM
+security key-manager keystore enable -vserver <storage_vm_name> -type OKM
 ----
 
 . Delete the external key manger configuration
 +
 [source, cli]
 ----
-security key-manager keystore delete-config -vserver <svm_name> -type KMIP
+security key-manager keystore delete-config -vserver <storage_vm_name> -type KMIP
 ----
 
 . Set the privilege level to admin:
@@ -158,7 +158,7 @@ set -privilege advanced
 +
 [source, cli]
 ----
-security key-manager key migrate -from-vserver <svm_name> -to-vserver <svm_name>
+security key-manager key migrate -from-vserver <storage_vm_name> -to-vserver <storage_vm_name>
 ----
 
 . Set the privilege level to admin:

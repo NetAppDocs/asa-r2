@@ -58,6 +58,9 @@ ASA r2 systems support the following storage limits:
 a| 
 * 256 (ONTAP 9.18.1 and later)
 * 32 (ONTAP 9.17.1 and earlier)
+a|
+* 256 (ONTAP 9.18.1 and later)
+* 32 (ONTAP 9.17.1 and earlier)
 
 | Virtual machines
 | 800
@@ -90,11 +93,11 @@ The following limits apply to storage units and consistency groups in a SnapMirr
 
 == Limits for SnapMirror active sync relationship
 
-The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on 2-node clusters only. Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on 4-node clusters.
+The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on two-node clusters only. Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on four-node clusters.
 
 For a complete list of the most current ASA r2 storage limits, link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 
-[cols="3", options="header"]
+[cols="2", options="header"]
 |===
 
 | Limit maximum
