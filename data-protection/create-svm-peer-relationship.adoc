@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: data-protection/create-svm-peer-relationship.html
-keywords: create, svm peer relationship, asa r2, data protection
+keywords: create, svm peer relationship, storage vm, asa r2, data protection
 summary: Create peer relationships between storage VMs on different clusters to enable data protection and disaster recovery using SnapMirror.  
 ---
 = Create an intercluster storage VM peer relationship on ASA r2 storage systems
