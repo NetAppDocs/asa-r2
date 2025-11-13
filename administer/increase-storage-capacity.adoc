@@ -13,13 +13,13 @@ Add drives to a node or shelf to increase the storage capacity of your ASA r2 sy
 
 == Use NetApp Hardware Universe to prepare for installation of a new drive
 
-Before you install a new drive to a node or shelf, use the NetApp Hardware Universe to confirm that the drive you want to add is supported by your ASA r2 platform and to identify the correct slot for the new drive.  The correct slots for adding drives vary depending on the platform model and ONTAP version.  In some cases, you need to add drives to specific slots in sequence.
+Before you install a new drive to a node or shelf, use the NetApp Hardware Universe to confirm that the drive you want to add is supported by your ASA r2 system and to identify the correct slot for the new drive.  The correct slots for adding drives vary depending on the system model and ONTAP version.  In some cases, you need to add drives to specific slots in sequence.
 
 .Steps
 
 . Go the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 . Under *Products*, select your hardware configurations.
-. Select your ASA r2 platform.
+. Select your ASA r2 system.
 . Select your ONTAP version; then select *Show Results*.
 . Beneath the graphic, select *Click here to see alternative views*; then choose the view that matches your configuration.
 . Use the view of your configuration to confirm that your new drive is supported and the correct slot for installation.
@@ -37,7 +37,7 @@ You should repeat the steps in this procedure for each drive.
 .Steps
 
 . Properly ground yourself.
-. Gently remove the bezel from the front of the platform.
+. Gently remove the bezel from the front of the system.
 . Insert the new drive into the correct slot.
 .. With the cam handle in the open position, use both hands to insert the new drive.
 .. Push until the drive stops.

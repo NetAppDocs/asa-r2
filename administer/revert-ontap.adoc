@@ -32,13 +32,15 @@ link:rebalance-workloads.html[Automatic workload rebalancing] is enabled by defa
 | Before you revert you should...
 
 | Hierarchical consistency groups in a SnapMirror active sync relationship  
-| link:../data-protection/snapmirror-active-sync-delete-relationship.html[Delete the SnapMirror active sync relationship]
+| link:../data-protection/snapmirror-active-sync-delete-relationship.html[Delete the SnapMirror active sync relationship].
 
 | Active import relationships
-| Delete the active import relationships    
+| Delete the active import relationships. 
+
+link:../install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system[Learn about import relationships]. 
 
 | Anti-ransomware protection enabled
-| Disable anti-ransomware protection
+| link:../secure-data/pause-resume-anti-ransomware-protection.html[Pause anti-ransomware protection].
 |===
 
 // 2025 Aug 13, ONTAPDOC-3180
