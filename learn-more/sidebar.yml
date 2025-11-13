@@ -11,5 +11,5 @@ entries:
     url: "/learn-more/cli-support.html"
   - title: REST API support
     url: "/learn-more/rest-api-support.html"
-  - title: Support for common ONTAP features
-    url: "/learn-more/additional-supported-ontap-features.html"  
+- title: Support for common ONTAP features
+  url: "/learn-more/additional-supported-ontap-features.html"  

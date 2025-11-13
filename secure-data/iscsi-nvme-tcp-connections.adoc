@@ -13,35 +13,51 @@ If you are using the IP protocol on your ASA r2 system, you can configure IP sec
 
 For ASA r2 systems, IPsec is available for iSCSI and NVMe/TCP hosts.
 
-On certain ASA r2 systems, several of the cryptographic operations, such as encryption and integrity checks, can be offloaded to a supported network interface controller (NIC) card. The throughput for operations offloaded to the NIC card is approximately 5% or less.  This can significantly improve the performance and throughput of the network traffic protected by IPsec.
+On certain ASA r2 systems, several of the cryptographic operations, such as encryption and integrity checks, can be offloaded to a supported network interface controller (NIC) card. The throughput for operations offloaded to the NIC card is approximately 5% or less.  This can significantly improve the performance and throughput of the network traffic protected by IPsec. 
 
-The following NIC cards are supported for hardware offload on the following ASA r2 systems:
+Beginning with ONTAP 9.18.1, IPsec hardware offload supported is extended to IPv6 traffic.
 
-[cols="2", options="header"]
+The following NIC cards are supported for hardware offload on the following ASA r2 systems and ONTAP versions:
+
+[cols="3", options="header"]
 |===
 
-| Supported NIC card | ASA r2 systems
+| Supported NIC card | ASA r2 systems | ONTAP Version
 
-a| X50131A - (2p, 40G/100G/200G/400G Ethernet Controller)
-
+a| X50135A (2p, 40G/100G Ethernet Controller)
 a|
 * ASA A1K
 * ASA A90
 * ASA A70
+a| ONTAP 9.17.1 and later
 
-a|X60132A - (4p, 10G/25G Ethernet Controller)
-
+a|X60135A (2p, 40G/100G Ethernet Controller)
 a|
 * ASA A50
 * ASA A30
 * ASA A20
+a| ONTAP 9.17.1 and later
+
+a| X50131A - (2p, 40G/100G/200G/400G Ethernet Controller)
+a|
+* ASA A1K
+* ASA A90
+* ASA A70
+a| ONTAP 9.16.1 and later
+
+a|X60132A - (4p, 10G/25G Ethernet Controller)
+a|
+* ASA A50
+* ASA A30
+* ASA A20
+a| ONTAP 9.16.1 and later
 
 |===
 
+See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information about the supported systems and cards.
 
 .What's next? 
+IPsec is configured on your ASA r2 system the same way as on other ONTAP systems. For more information, see link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html[Prepare to configure IP security for the ONTAP network^].
 
-link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html[Configure IP security for the ONTAP network]
-
-
+// 2025 Nov 6, ONTAPDOC-3255
 // 2025 Apr 30, ONTAPDOC 2785
