@@ -100,12 +100,13 @@ balanced-placement rebalance execute
 +
 [source, cli]
 ----
-placement rebalance config show-evaluation
+placement rebalance show-evaluation
 ----
 
 .What's next?
 
 If you want to set the rebalancing mode to *automated* or *disabled*, you can do so by using the `placement rebalance config modify` command.
 
+// 2025 Nov 17, Git Issue 89
 // 2025 Oct 28, ONTAPDOC-3450
 // 2025 Aug 13, ONTAPDOC-3180
