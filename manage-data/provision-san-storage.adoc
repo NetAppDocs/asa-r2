@@ -35,8 +35,11 @@ Storage units are thin provisioned by default. Thin provisioning allows the stor
 . Enter the number of units you want to create.
 +
 If you create more than one storage unit, each unit is created with the same capacity, host operating system, and host mapping. 
++
+BEST PRACTICE: Create an even number of storage units to optimize workload balancing across the storage availability zone.
 
 . Enter the storage unit capacity; then select the host operating system.
++
 CAUTION: If you are creating more than one storage unit, each unit is created with the same capacity. Multiply the number of storage units you are creating by the desired capacity to ensure you have enough usable space.  If you don't have enough free space and you chose to over provision, monitor utilization closely to avoid running out of space and losing data.
 
 . Accept the auto-selected *host mapping* or select a different host group for the storage unit to be mapped to.
