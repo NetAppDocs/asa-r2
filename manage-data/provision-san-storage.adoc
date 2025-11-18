@@ -24,7 +24,7 @@ Beginning with ONTAP 9.18.1, you can modify the snapshot reserve and enable auto
 
 link:../data-protection/snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 systems].
 
-Storage units are thin provisioned by default. Thin provisioning allows the storage unit to grow up to the size allocated but doesn't reserve the space in advance. Space is allocated dynamically from available free space as needed. This allows you to create greater storage efficiency by _over provisioning_ your available space.  For example, suppose you have 1TB of free space and you need to create four 1TB storage units. Instead of immediately adding 3TB of additional storage capacity to your system, you can create the storage units, monitor space utilization, and increase your actual storage capacity as the the storage units use space. Learn more about link:https://docs.netapp.com/us-en/ontap/concepts/thin-provisioning-concept.html[thin provisioning^].
+Storage units are thin provisioned by default. Thin provisioning allows the storage unit to grow up to the size allocated but doesn't reserve the space in advance. Space is allocated dynamically from available free space as needed. This allows you to realize greater storage efficiency by _over provisioning_ your available space.  For example, suppose you have 1 TB of free space and you need to create four 1 TB storage units. Instead of immediately adding 3 TB of additional storage capacity to your system, you can create the storage units, monitor space utilization, and increase your storage capacity as the the storage units consume actual space. Learn more about link:https://docs.netapp.com/us-en/ontap/concepts/thin-provisioning-concept.html[thin provisioning^].
 
 .Steps
 
