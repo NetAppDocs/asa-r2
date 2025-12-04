@@ -29,6 +29,7 @@ ASA r2 storage units are thin provisioned by default. When migrating your VM wor
 * Learn more about link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html[the advantanges of using ONTAP for vSphere^].
 * Learn about link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html[VMware Live Site Recovery with ONTAP^].
 * Learn about link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html#continuous-availability-solutions-for-vsphere-environments[continuous availability solutions for vSphere environments^].
+* Learn more about link:https://kb.netapp.com/on-prem/ontap/da/SAN/SAN-KBs/How_to_setup_Broadcom_VMware_ESXi_iSCSI_MPIO_with_ONTAP_SAN_ASA[how to set up Broadcom VMware ESXi iSCSI MPIO with ONTAP SAN ASA storage systems^].
 
 == Migrate data from a third-party storage system
 
