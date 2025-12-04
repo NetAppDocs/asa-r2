@@ -22,6 +22,8 @@ See the ONTAP SAN host documentation for link:https://docs.netapp.com/us-en/onta
 
 If you need to migrate your VM workload from an ASA storage system to an ASA r2 storage system, NetApp recommends that you use link:https://www.vmware.com/products/cloud-infrastructure/vsphere-foundation[VMware vSphere vMotion^] to perform a live, non-disruptive migration of your data.
 
+ASA r2 storage units are thin provisioned by default. When migrating your VM workload, virtual disks (VMDKs) should also be thin provisioned.
+
 .Related information
 
 * Learn more about link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html[the advantanges of using ONTAP for vSphere^].
@@ -56,5 +58,6 @@ Learn how to link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/de
 
 You are ready to link:../manage-data/provision-san-storage.html[provision storage] to enable your SAN hosts to read and write data to storage units.
 
+// 2025 Dec 04, Git Issue 86
 // 2025 July 24, ONTAPDOC-2696
 // 2024 Sept 23, ONTAPDOC 1925
