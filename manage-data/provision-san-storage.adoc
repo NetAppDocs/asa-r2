@@ -36,7 +36,7 @@ Storage units are thin provisioned by default. Thin provisioning allows the stor
 +
 If you create more than one storage unit, each unit is created with the same capacity, host operating system, and host mapping. 
 +
-BEST PRACTICE: Create an even number of storage units to optimize workload balancing across the storage availability zone.
+To optimize workload balancing across the storage availability zone, create an even number of storage units.
 
 . Enter the storage unit capacity; then select the host operating system.
 +
@@ -129,7 +129,7 @@ In-band authentication allows secure bidirectional and unidirectional authentica
 TLS encrypts all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
 .. Select *Add initiator* to add more initiators.
 +
-Formatted the host NQN as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
+Format the host NQN as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
 
 // table end
 |===
