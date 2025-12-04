@@ -14,15 +14,17 @@ When you provision storage, you enable your SAN hosts to read from and write dat
 
 == Create storage units
 
-On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. An ASA r2 storage unit has a maximum capacity of 128 TB.  
+On an ASA r2 system, a storage unit makes storage space available to your SAN hosts for data operations. A storage unit refers to a LUN for SCSI hosts or an NVMe namespace for NVMe hosts. If your cluster is configured to support SCSI hosts, you are prompted to create a LUN. If your cluster is configured to support NVMe hosts, you are prompted to create an NVMe namespace. 
 
-See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
+An ASA r2 storage unit has a maximum capacity of 128 TB. See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for the most current storage limits for ASA r2 systems.
 
-Host initiators are added and mapped to the storage unit as part of the storage unit creation process.  You can also link:provision-san-storage.html#add-host-initiators[add host initiators] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] them to your storage units after the storage units are created.
+You add and map host initiators to the storage unit as part of the storage unit creation process. You can also link:provision-san-storage.html#add-host-initiators[add] and link:provision-san-storage.html#map-the-storage-unit-to-a-host[map] host initiators after you create the storage units.
 
-Beginning with ONTAP 9.18.1, you can modify the snapshot reserve and enable automatic snapshot deletion when you create a storage unit.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.
+Beginning with ONTAP 9.18.1, you can modify the snapshot reserve and enable automatic snapshot deletion when you create a storage unit. The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots. When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.
 
 link:../data-protection/snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 systems].
+
+Storage units are thin provisioned by default. Thin provisioning allows the storage unit to grow up to the size allocated but doesn't reserve the space in advance. Space is allocated dynamically from available free space as needed. This allows you to realize greater storage efficiency by _over provisioning_ your available space.  For example, suppose you have 1 TB of free space and you need to create four 1 TB storage units. Instead of immediately adding 3 TB of additional storage capacity to your system, you can create the storage units, monitor space utilization, and increase your storage capacity as the the storage units consume actual space. Learn more about link:https://docs.netapp.com/us-en/ontap/concepts/thin-provisioning-concept.html[thin provisioning^].
 
 .Steps
 
@@ -33,14 +35,18 @@ link:../data-protection/snapshot-reserve.html[Learn more about snapshot reserve 
 . Enter the number of units you want to create.
 +
 If you create more than one storage unit, each unit is created with the same capacity, host operating system, and host mapping. 
++
+To optimize workload balancing across the storage availability zone, create an even number of storage units.
 
 . Enter the storage unit capacity; then select the host operating system.
++
+CAUTION: If you are creating more than one storage unit, each unit is created with the same capacity. Multiply the number of storage units you are creating by the desired capacity to ensure you have enough usable space.  If you don't have enough free space and you chose to over provision, monitor utilization closely to avoid running out of space and losing data.
 
 . Accept the auto-selected *host mapping* or select a different host group for the storage unit to be mapped to.
 +
 *Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-selected for your host mapping.  You can accept the host group that is auto-selected or you can select a different host group.  
 +
-If there is no pre-existing host group for hosts running on the operating system you specified, ONTAP automatically creates a new host group.
+If there is no pre-existing host group for hosts running on the operating system you specified, ONTAP creates a new host group automatically .
 
 . If you want to do any of the following, select *More Options* and complete the required steps.
 +
@@ -123,7 +129,7 @@ In-band authentication allows secure bidirectional and unidirectional authentica
 TLS encrypts all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
 .. Select *Add initiator* to add more initiators.
 +
-The host NQN should be formatted as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
+Format the host NQN as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
 
 // table end
 |===
@@ -214,7 +220,7 @@ Your NVMe hosts are added to your ASA r2 system and you are ready to map your ho
 
 == Map the storage unit to a host
 
-After you have created your ASA r2 storage units and added host initiators, you need to map your hosts to your storage units to begin serving data. Storage units are mapped to hosts as part of the storage unit creation process.  You can also map existing storage units to new or existing hosts at any time.
+After creating ASA r2 storage units and adding host initiators, map hosts to storage units to begin serving data. Storage units are mapped to hosts as part of the storage unit creation process.  You can also map existing storage units to new or existing hosts at any time.
 
 .Steps
 
