@@ -103,6 +103,8 @@ entries:
     entries:
     - title: Create tamper-proof snapshots
       url: "/secure-data/ransomware-protection.html"
+    - title: Disable default autonomous ransomware protection
+      url: "/secure-data/disable-default-anti-ransomware-protection.html"
     - title: Enable ARP/AI
       url: "/secure-data/enable-anti-ransomware-protection.html"
     - title: Modify ARP/AI snapshot retention periods 
