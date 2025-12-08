@@ -15,7 +15,9 @@ If you have an Autonomous Ransomware Protection (ARP) license installed on your 
 
 You can disable the default enablement during or after the initial 12-hour period.
 
+[role="tabbed-block"]
 ====
+
 .System Manager
 --
 . Select *Cluster>Settings*.
@@ -28,6 +30,7 @@ A message indicating the hours remaining before ARP is automatically enabled is 
 .. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit].
 ..select the checkbox and these select *Save*
 --
+
 .Cli
 --
 . Check the default enablement status:
@@ -44,6 +47,7 @@ security anti-ransomware auto-enable show
 security anti-ransomware auto-enable modify -default-existing-volume-state false -default-new-volume-state false
 ----
 --
+
 ====
 
 
