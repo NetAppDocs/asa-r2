@@ -23,12 +23,11 @@ You can disable the default enablement during or after the initial 12-hour perio
 . Select *Cluster>Settings*.
 . Disable ARP:
 * Disable during the 12-hour grace period:
-.. Under *Anti-ransomware* select, *Don't enable*.
-+
-A message indicating the hours remaining before ARP is automatically enabled is displayed.
+.. Under *Anti-ransomware* select, *Don't enable* and then select *Disable*.
+
 * To disable after the 12-hour grace period, 
-.. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit].
-..select the checkbox and these select *Save*
+.. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit] and then deselect *Enable*.
+.. Select *Save*
 --
 
 .Cli
