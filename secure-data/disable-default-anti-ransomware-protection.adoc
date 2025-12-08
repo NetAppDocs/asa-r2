@@ -9,7 +9,7 @@ summary: "If you have an Autonomous Ransomware Protection (ARP) license installe
 :imagesdir: ../media/
 
 [.lead]
-If you have an Autonomous Ransomware Protection (ARP) license installed on your ASA r2 cluster, ARP is enabled by default on all existing and newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster.  
+When you initialize a new 9.18.1 ASA r2 cluster or upgrade your cluster to 9.18.1, ARP/AI is automatically enabled by default on all new and existing storage units after a 12-hour grace period. If you do not disable ARP/AI during the grace period, it is enabled cluster wide when the grace period ends. 
 
 .Steps
 
