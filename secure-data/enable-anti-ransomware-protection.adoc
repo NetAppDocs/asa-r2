@@ -20,9 +20,19 @@ No ransomware detection or prevention system can completely guarantee safety fro
 
 * ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview[ONTAP One license].
 
+* ARP/AI is not supported on storage units protected by SnapMirror synchronous or SnapLock.
+
 * Beginning with ONTAP 9.18.1, ARP/AI is enabled by default on all existing and newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster.  You need to enable ARP/AI only if you disabled the default enablement.
 
 * After you have enabled ARP/AI, you should link:../administer/update-firmware.html#enable-automatic-updates[enable automatic updates for your security files] to automatically receive new security updates.
+
+== Enable ARP/AI on all storage units in the cluster
+You can enable ARP/AI on all storage units created in the cluster by default. 
+
+.Steps
+. In System Manager, select *Cluster > Settings*.
+. Next to *Anti-ransomware*, select image:icon_kabob.gif[Edit anti-ransomware settings] and then select *Enable on all existing storage units*.
+. Select *Enable*.
 
 == Enable ARP/AI on all storage units in an storage VM
 You can enable ARP/AI on all storage units created in a storage virtual machine (VM) by default. This means that any new storage units created in the storage VM will have ARP/AI enabled automatically. You can also apply ARP/AI to existing storage units in the storage VM.
@@ -57,6 +67,6 @@ If you do not want ARP/AI enabled on all the storage units in an storage VM, you
 The storage units you selected are protected against ransomware attacks, and suspicious activity is reported to you in System Manager.
 
 
-// 2025 Dec 15, ONTAPDOC 3235
+// 2025 Jan 15, ONTAPDOC 3235
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928

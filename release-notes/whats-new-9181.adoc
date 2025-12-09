@@ -71,5 +71,5 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | You can modify snapshot reserve and enable automatic snapshot deletion to limit the amount of space used for snapshots in your ASA r2 storage units. When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.  This prevents application disruptions by not allowing snapshots to consume space in your storage unit intended for user data.
 |===
 
-// 2025 Dec 15, ONTAPDOC 3236
+// 2025 Jan 15, ONTAPDOC 3236
 // 2025 Nov 06, ONTAPDOC-3359, ONTAPDOC-3266, ONTAPDOC-3269, ONTAPDOC-3254

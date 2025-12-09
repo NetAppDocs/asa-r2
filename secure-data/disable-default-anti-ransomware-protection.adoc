@@ -26,7 +26,7 @@ You can disable the default enablement during or after the initial 12-hour perio
 .. Under *Anti-ransomware* select, *Don't enable* and then select *Disable*.
 
 * To disable after the 12-hour grace period, 
-.. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit] and then deselect *Enable*.
+.. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit] and then deselect *Enable for new storage units*.
 .. Select *Save*
 --
 
@@ -50,4 +50,4 @@ security anti-ransomware auto-enable modify -default-existing-volume-state false
 ====
 
 
-// 2025 Dec 15, ONTAPDOC 3235
+// 2025 Jan 15, ONTAPDOC 3235
