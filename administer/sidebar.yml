@@ -33,8 +33,6 @@ entries:
     url: "/administer/reboot-take-over-give-back-nodes.html" 
   - title: Rename nodes
     url: "/administer/rename-nodes.html"  
-  - title: Rebalance workloads between nodes   
-    url: "/administer/rebalance-workloads.html"
 - title: Manage user accounts and roles
   url: "/administer/user-accounts-roles.html" 
 - title: Manage security certificates
