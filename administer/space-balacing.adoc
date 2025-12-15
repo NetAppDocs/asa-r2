@@ -9,7 +9,8 @@ summary: "You might need to rename a node to align with the naming conventions o
 :imagesdir: ../media/
 
 [.lead]
-Features supported for balancing capacity utilization across storage availability zones is based on your version of ONTAP.
+
+For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly created storage units in the best storage availability zone for optimal performance and balanced storage  utilization.  Depending upon your ONTAP version, existing storage units are automatically moved across storage availability zones to maintain balanced space utilization using either _dynamic space balancing_ or _copy-based workload rebalancing_.
 
 [cols=2, options="header"]
 |===
