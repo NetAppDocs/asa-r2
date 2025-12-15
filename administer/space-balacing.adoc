@@ -22,9 +22,9 @@ For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly
 |===
 
 .Dynamic space balancing
-With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units across storage availability zones to maintain balanced space utilization.  An EMS _warning_ is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS _alert_ is automatically issued if it reaches 90%.  
+With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units across storage availability zones to maintain balanced space utilization.  An EMS warning is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS alert is automatically issued if it reaches 90%.  
 
-Dynamic space balancing is enabled by default 14 days after upgrading to installing ONTAP 9.17.1 or later. If you need to modify the default 14-day enablement period, contact NetApp Support. You cannot revert from ONTAP 9.17.1 after dynamic space balancing is enabled. 
+Dynamic space balancing is enabled by default 14 days after upgrading to or installing ONTAP 9.17.1 or later. If you need to modify the default 14-day enablement period, contact NetApp Support. You cannot revert from ONTAP 9.17.1 after dynamic space balancing is enabled. 
 
 Dynamic space balancing operates in either _normal mode_ or _low space mode_ based on the overall average of free space in all nodes in the cluster (global average).
 
