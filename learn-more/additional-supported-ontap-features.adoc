@@ -19,7 +19,7 @@ For more information about common features and functions, see the following ONTA
 Learn more about common data protection features supported on ASA r2 systems.
 
 === Clustered external key servers
-You can configure connectivity to clustered external key management servers on an storage VM. With clustered key servers, you can designate primary and secondary key servers on a storage VM. When registering keys, ONTAP will first attempt to access a primary key server before sequentially attempting to access secondary servers until the operation completes successfully, preventing duplication of keys.
+You can configure connectivity to clustered external key management servers on a storage VM. With clustered key servers, you can designate primary and secondary key servers on a storage VM. When registering keys, ONTAP will first attempt to access a primary key server before sequentially attempting to access secondary servers until the operation completes successfully, preventing duplication of keys.
 
 link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html[Learn to configure clustered external key servers^].
 

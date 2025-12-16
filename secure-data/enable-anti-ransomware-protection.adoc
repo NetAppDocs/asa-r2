@@ -22,7 +22,7 @@ ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/O
 
 After you have enabled ARP/AI, you should link:../administer/update-firmware.html#enable-automatic-updates[enable automatic updates for your security files] to automatically receive new security updates.
 
-== Enable ARP/AI on all storage units in an storage VM
+== Enable ARP/AI on all storage units in a storage VM
 You can enable ARP/AI on all storage units created in a storage virtual machine (VM) by default. This means that any new storage units created in the storage VM will have ARP/AI enabled automatically. You can also apply ARP/AI to existing storage units in the storage VM.
 
 .Steps
@@ -40,9 +40,9 @@ This enables ARP/AI on all future storage units created on the selected storage 
 
 All new storage units you create on the storage VM are protected against ransomware attacks by default, and suspicious activity is reported to you in System Manager.
 
-== Enable ARP/AI on specific storage units in an storage VM
+== Enable ARP/AI on specific storage units in a storage VM
 
-If you do not want ARP/AI enabled on all the storage units in an storage VM, you can select the specific units you want enabled. 
+If you do not want ARP/AI enabled on all the storage units in a storage VM, you can select the specific units you want enabled. 
 
 .Steps
 

@@ -41,7 +41,7 @@ entries:
        url: "/data-protection/snapshot-reserve.html"  
      - title: Modify snapshot reserve
        url: "/data-protection/snapshot-reserve-modify.html"  
-   - title: Create an storage VM peer relationship
+   - title: Create a storage VM peer relationship
      url: "/data-protection/create-svm-peer-relationship.html"         
    - title: Set up snapshot replication
      entries:
