@@ -10,7 +10,7 @@ summary: "You might need to rename a node to align with the naming conventions o
 
 [.lead]
 
-For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly created storage units in the best storage availability zone for optimal performance and balanced storage  utilization.  Depending upon your ONTAP version, existing storage units are automatically moved across storage availability zones to maintain balanced space utilization using either _dynamic space balancing_ or _copy-based workload rebalancing_.
+For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly created storage units in the best storage availability zone for optimal performance and balanced storage  utilization.  If you are running ONTAP 9.17.1 or later, space used by existing storage units is balanced using _dynamic space balancing_.  If you are running ONTAP 9.16.1, space used by existing storage units is balanced using _copy-based workload rebalancing_.
 
 [cols=2, options="header"]
 |===
