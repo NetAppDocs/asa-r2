@@ -15,7 +15,7 @@ When you encrypt data at rest, it can’t be read if a storage medium is repurpo
 NetApp Storage Encryption (NSE) supports hardware encryption using self-encrypting drives (SEDs).  SEDs encrypt data as it is written. Each SED contains a unique encryption key.  Encrypted data stored on the SED can’t be read without the SED's encryption key. Nodes attempting to read from an SED must be authenticated to access the SED's encryption key.  Nodes are authenticated by obtaining an authentication key from a key manager, then presenting the authentication key to the SED.  If the authentication key is valid, the SED will give the node its encryption key to access the data it contains.  
 
 [NOTE]
-In ASA r2 systems, SEDs are supported only for NVMe protocols.  
+In ASA r2 systems, SEDs are supported only for NVMe based SSD's.  
 
 Use the ASA r2 onboard key manager or an external key manager to serve authentication keys to your nodes.
 
@@ -54,6 +54,7 @@ a|
 
 Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network] between your NVMe/TCP host and your ASA r2 system.
 
+// 2025 Dec 09, ONTAPDOC 3547
 // 2025, Aug 12, ONTAPDOC 3051
 // 2024 Nov 07, ONTAPDOC 2256
 // 2024 Sept 24, ONTAPDOC 1928

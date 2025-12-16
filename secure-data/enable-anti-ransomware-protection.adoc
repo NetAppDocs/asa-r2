@@ -11,10 +11,10 @@ summary: "Enable ARP/AI to detects potential ransomware threats, automatically t
 [.lead]
 Beginning with ONTAP 9.17.1, you can use Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) to protect the data on your ASA r2 system. ARP/AI quickly detects potential ransomware threats, automatically creates an ARP snapshot to protect your data, and displays a warning message in System Manager to alert you of suspicious activity.
 
-ARP improves cyber resiliency by adopting a machine-learning model for anti-ransomware analytics that detects constantly evolving forms of ransomware with 98% accuracy for SAN environments. ARP's machine-learning model is pre-trained on a large dataset of files both before and after a simulated ransomware attack. This resource-intensive training is done outside ONTAP, and the pre-trained model that results from this training is included on-box with ONTAP. This model is not accessible or modifiable through the CLI or API.  Consequently, ARP/AI is active immediately after enablement; there is no link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html#learning-and-active-modes[learning period^].
+ARP improves cyber resiliency by adopting a machine-learning model for anti-ransomware analytics that detects constantly evolving forms of ransomware with 98% accuracy for SAN environments. ARP's machine-learning model is pre-trained on a large dataset of files both before and after a simulated ransomware attack. This resource-intensive training is done outside ONTAP, and the pre-trained model that results from this training is included on-box with ONTAP. This model is not accessible or modifiable.  ARP/AI is active immediately after enablement; there is no link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html#learning-and-active-modes[learning period^].
 
 [NOTE]
-No ransomware detection or prevention system can completely guarantee safety from a ransomware attack. Although it's possible an attack might go undetected, ARP/AI acts as an important additional layer of defense if anti-virus software fails to detect an intrusion.
+No ransomware detection or prevention system can completely guarantee safety from a ransomware attack. Although an attack might go undetected, ARP/AI acts as an important additional layer of defense if anti-virus software fails to detect an intrusion.
 
 .About this task
 
@@ -56,7 +56,7 @@ This enables ARP/AI on all future storage units created on the selected storage 
 
 All new storage units you create on the storage VM are protected against ransomware attacks by default, and suspicious activity is reported to you in System Manager.
 
-== Enable ARP/AI on specific storage units in an storage VM
+== Enable ARP/AI on specific storage units in a storage VM
 
 If you are running ONTAP 9.17.1, and you do not want ARP/AI enabled on all the storage units in an storage VM, you can select the specific units you want enabled. 
 
