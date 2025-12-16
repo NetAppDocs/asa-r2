@@ -27,7 +27,9 @@ No ransomware detection or prevention system can completely guarantee safety fro
 * After you have enabled ARP/AI, you should link:../administer/update-firmware.html#enable-automatic-updates[enable automatic updates for your security files] to automatically receive new security updates.
 
 == Enable ARP/AI on all storage units in the cluster
-If you are running ONTAP 9.17.1, you can enable ARP/AI on all storage units created in the cluster by default. In ONTAP 9.18.1 and later, ARP/AI is enabled by default on all new and existing clusters. You need to enable it only if you disabled the default enablement.
+If you are running ONTAP 9.17.1, you can enable ARP/AI on all storage units created in the cluster by default.
+
+ In ONTAP 9.18.1 and later, ARP/AI is enabled by default on all new and existing storage units. You need to enable it only if you disabled the default enablement.
 
 .Steps
 . In System Manager, select *Cluster > Settings*.
@@ -35,7 +37,9 @@ If you are running ONTAP 9.17.1, you can enable ARP/AI on all storage units crea
 . Select *Enable*.
 
 == Enable ARP/AI on all storage units in an storage VM
-You can enable ARP/AI on all storage units created in a storage virtual machine (VM) by default. This means that any new storage units created in the storage VM will have ARP/AI enabled automatically. You can also apply ARP/AI to existing storage units in the storage VM.
+If you are running ONTAP 9.17.1, you can enable ARP/AI on all storage units created in a storage virtual machine (VM) by default. This means that any new storage units created in the storage VM will have ARP/AI enabled automatically. You can also apply ARP/AI to existing storage units in the storage VM.
+
+In ONTAP 9.18.1 and later, ARP/AI is enabled by default on all new and existing storage units. You need to enable it only if you disabled the default enablement.
 
 .Steps
 
@@ -54,7 +58,9 @@ All new storage units you create on the storage VM are protected against ransomw
 
 == Enable ARP/AI on specific storage units in an storage VM
 
-If you do not want ARP/AI enabled on all the storage units in an storage VM, you can select the specific units you want enabled. 
+If you are running ONTAP 9.17.1, and you do not want ARP/AI enabled on all the storage units in an storage VM, you can select the specific units you want enabled. 
+
+In ONTAP 9.18.1 and later, ARP/AI is enabled by default on all new and existing clusters. You need to enable it only if you disabled the default enablement.
 
 .Steps
 
