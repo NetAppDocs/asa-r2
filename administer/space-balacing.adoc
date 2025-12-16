@@ -22,7 +22,7 @@ For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly
 |===
 
 .Dynamic space balancing
-With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units across storage availability zones to maintain balanced space utilization.  An EMS warning is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS alert is automatically issued if it reaches 90%.  
+With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units within storage availability zones to maintain balanced space utilization.  An EMS warning is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS alert is automatically issued if it reaches 90%.  
 
 Dynamic space balancing is enabled by default 14 days after upgrading to or installing ONTAP 9.17.1 or later. If you need to modify the default 14-day enablement period, contact NetApp Support. You cannot revert from ONTAP 9.17.1 after dynamic space balancing is enabled. 
 
@@ -49,7 +49,7 @@ With _balanced placement_, newly created storage units are automatically placed 
 
 .Copy-based workload rebalancing
 
-With _copy-based workload rebalancing_, if an imbalance in storage utilization occurs across the storage availability zones, ONTAP automatically copies the storage unit creating the imbalance to a storage availability zone with greater free space. If there is not enough free space in the destination storage availability zone, ONTAP does not perform any balancing action. Copy-based workload rebalancing is enabled by default in ONTAP 9.16.1 only. In ONTAP 9.17.1 and later, it is replaced with dynamic space balancing.
+With _copy-based workload rebalancing_, if an imbalance in storage utilization occurs within the storage availability zones, ONTAP automatically copies the storage unit creating the imbalance to a storage availability zone with greater free space. If there is not enough free space in the destination storage availability zone, ONTAP does not perform any balancing action. Copy-based workload rebalancing is enabled by default in ONTAP 9.16.1 only. In ONTAP 9.17.1 and later, it is replaced with dynamic space balancing.
 
 If you need to modify the default settings for copy-based workload rebalancing, contact NetApp Support.
 
