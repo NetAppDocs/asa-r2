@@ -36,7 +36,7 @@ Dynamic space balancing operates in either _normal mode_ or _low space mode_ bas
 In normal mode, ONTAP checks every three minutes to determine if dynamic space balancing is needed. Dynamic space balancing operates in normal mode when the following conditions are true:  
 +
 ** The global average for free space is 10% or more.
-** At least one node in the cluster has more free space thaN the global average.
+** At least one node in the cluster has more free space than the global average.
 ** At least one node in the cluster has 20% less free space than the global average.
 
 * *Low space mode*
@@ -44,7 +44,7 @@ In normal mode, ONTAP checks every three minutes to determine if dynamic space b
 In low space mode, ONTAP checks every minute to determine if dynamic space balancing is needed. Dynamic space balancing operates in low space mode when the following conditions are true:
 +
 ** The global average for free space is less than 10%.
-** At least one node in the cluster has more free space thaN the global average.        
+** At least one node in the cluster has more free space than the global average.        
 ** At least one node in the cluster has less free space than the global average.
 
 .Copy-based workload rebalancing
