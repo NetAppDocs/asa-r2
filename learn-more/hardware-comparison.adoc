@@ -47,7 +47,8 @@ The storage layer for FAS, AFF, and ASA systems use aggregates as the base unit 
 
 Instead of aggregates, the storage layer in ASA r2 systems uses storage availability zones. A storage availability zone is a common pool of storage available to both nodes of a single HA pair. Both nodes in the HA pair have access to all available disks in their shared storage availability zone.  For example, in a 2-node ASA r2 system ONTAP cluster, there is one storage availability zone, accessible by both nodes in the cluster.  In a 4-node ASA r2 system ONTAP cluster, there are two storage availability zones.  Each HA pair in the cluster has access to one of the storage availability zones. 
 
-When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume in the appropriate storage availability zone to house the storage unit. The newly created volume is automatically placed within the storage availability zone for optimal performance and balanced capacity utilization. 
+When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume in the appropriate storage availability zone to house the storage unit. The newly created volume is automatically placed within the storage availability zone for optimal performance and balanced capacity utilization. Capacity utilization is balanced across the storage availability zone based on your version of ONTAP. link:administer/space-balancing.html[Learn about capacity balancing in an ASA r2 cluster^].
+
 == Summary of ASA r2 system differences
 
 ASA r2 systems differ from FAS, AFF, and ASA systems in the following ways:
