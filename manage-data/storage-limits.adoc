@@ -54,6 +54,10 @@ ASA r2 systems support the following storage limits:
 | 256
 | 256
 
+| Child consistency groups per parent consistency group
+| 64
+| 64
+
 | Storage virtual machines
 a| 
 * 256 (ONTAP 9.18.1 and later)
@@ -111,7 +115,7 @@ For a complete list of the most current ASA r2 storage limits, link:https://hwu.
 
 |===
 
-
+// 2025 Dec 16, ONTAPDOC-3400
 // 2025 Nov 06, ONTAPDOC-3264, ONTAPDOC-3358
 // 2025 Oct 10, ONTAPDOC-3400
 // 2025 Sept 04, ONTAPDOC-2729, ONTAPDOC-3136
