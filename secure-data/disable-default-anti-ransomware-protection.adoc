@@ -9,7 +9,9 @@ summary: "If you have an Autonomous Ransomware Protection (ARP) license installe
 :imagesdir: ../media/
 
 [.lead]
-When you initialize a new ONTAP 9.18.1 ASA r2 cluster or upgrade your cluster to ONTAP 9.18.1, ARP/AI is automatically enabled by default on all new and existing storage units after a 12-hour grace period. If you don't disable ARP/AI during the grace period, it is enabled cluster-wide when the grace period ends. 
+When you initialize a new ONTAP 9.18.1 ASA r2 cluster or upgrade your cluster to ONTAP 9.18.1, ARP/AI is automatically enabled by default on all new storage units after a 12-hour grace period. If you don't disable ARP/AI during the grace period, it is enabled cluster-wide for new storage units when the grace period ends. 
+
+Storage units created in ONTAP 9.17.1 must be link:enable-anti-ransomware-protection.html[manually enabled] for ARP/AI.
 
 .Steps
 
