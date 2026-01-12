@@ -20,7 +20,7 @@ No ransomware detection or prevention system can completely guarantee safety fro
 
 * ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview[ONTAP One license].
 
-* ARP/AI is not supported on storage units protected by SnapMirror synchronous or SnapLock.
+* ARP/AI is not supported on storage units protected by SnapMirror active sync, SnapMirror synchronous or SnapLock.
 
 * Beginning with ONTAP 9.18.1, ARP/AI is enabled by default on all newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster.  
 

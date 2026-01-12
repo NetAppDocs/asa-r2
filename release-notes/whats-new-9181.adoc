@@ -55,7 +55,7 @@ Learn about the new capabilities available in ONTAP 9.18.1 for ASA r2 systems.
 | Description
 
 | link:../secure-data/disable-default-anti-ransomware-protection.html[Support for automatic ARP/AI enablement]
-| When you initialize a new 9.18.1 ASA r2 cluster or upgrade your cluster to 9.18.1, ARP/AI is automatically enabled by default on all new and existing storage units after a 12-hour grace period. If you do not disable ARP/AI during the grace period, it is enabled cluster wide when the grace period ends. 
+| When you initialize a new 9.18.1 ASA r2 cluster or upgrade your cluster to 9.18.1, ARP/AI is automatically enabled by default on all newly created storage units after a 12-hour grace period. If you do not disable ARP/AI during the grace period, it is enabled cluster wide for newly created storage units when the grace period ends. 
 |===
 
 == Storage efficiency
