@@ -51,7 +51,7 @@ Learn about the new capabilities available in ONTAP 9.17.1 for ASA r2 systems.
 | Update
 | Description
 
-| link:../learn-more/hardware-comparison.html[Support for automatic workload balancing]
+| link:../administer/space-balancing.html[Support for automatic workload balancing]
 | Workloads are automatically balanced between the nodes of an HA pair to optimize performance and resource utilization. 
 |===
 
