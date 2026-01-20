@@ -14,6 +14,8 @@ ONTAP System Manager guides you through a quick and easy workflow to set up an O
 
 During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
 
+In certain cases, you might need to link:../learn-more/cli-support.html#set-up-an-ontap-asa-r2-cluster-using-the-cli[use the ONTAP command line interface (CLI) to set up your cluster]. You should use the CLI, for example, if your security protocols do not allow you to connect a laptop to your management switches, or if you are using a non-windows operating system.  
+
 .Before you begin
 
 Gather the following information:
@@ -98,6 +100,7 @@ ActiveIQ Config Advisor is a tool for NetApp systems that checks for common conf
 .What's next?
 You are ready to link:set-up-data-access.html[set up data access] from your SAN clients to your ASA r2 system.
 
+// 2026 Jan 20, GitIssue 99
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2024 Sept 23, ONTAPDOC 1922
