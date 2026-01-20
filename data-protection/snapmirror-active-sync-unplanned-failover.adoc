@@ -16,6 +16,7 @@ An automatic unplanned failover (AUFO) operation occurs when the primary cluster
 * The SnapMirror active sync relationship must be in sync.
 * You cannot initiate a planned failover when a nondisruptive operation, such as a storage unit move, is in process. 
 * The ONTAP Mediator must be configured, connected, and in quorum.
+* To recover lost I/O paths or update I/O path states on your hosts, you need to perform a storage/adapter rescan on the hosts after the primary storage cluster resumes operation.
 
 .Steps
 
@@ -24,8 +25,5 @@ An automatic unplanned failover (AUFO) operation occurs when the primary cluster
 . Wait for the relationship status to display *InSync*.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover* to resume operations on the original primary cluster.
 
-.What’s next
-
-To prevent loss of I/O paths to your hosts, you need to rescan the host paths after resuming operations on the primary cluster.
-
+// 2026 Jan 20, GitIssue 94
 // 2025 Jul 24, ONTAPDOC-2707
