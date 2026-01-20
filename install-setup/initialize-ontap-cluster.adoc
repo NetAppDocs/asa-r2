@@ -14,7 +14,7 @@ ONTAP System Manager guides you through a quick and easy workflow to set up an O
 
 During cluster setup, your default data storage virtual machine (VM) is created. Optionally, you can enable the Domain Name System (DNS) to resolve host names, set your cluster to use the Network Time Protocol (NTP) for time synchronization and enable encryption of data at rest.
 
-In some cases, you might need to link:learn-more/cli-support.html#set-up-an-ontap-asa-r2-cluster-using-the-cli[set up your cluster using the ONTAP command line interface (CLI)] if, for example, your security protocols do not allow you to connect a laptop to your management switches, or if you are using a non-windows operating system.  
+In certain cases, you might need to link:../learn-more/cli-support.html#set-up-an-ontap-asa-r2-cluster-using-the-cli[use the ONTAP command line interface (CLI) to set up your cluster]. You should use the CLI, for example, if your security protocols do not allow you to connect a laptop to your management switches, or if you are using a non-windows operating system.  
 
 .Before you begin
 
