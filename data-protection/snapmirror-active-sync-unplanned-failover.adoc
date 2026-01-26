@@ -9,7 +9,9 @@ summary: "Learn how to reestablish SnapMirror active sync relationships after an
 :imagesdir: ../media/
 
 [.lead]
-An automatic unplanned failover (AUFO) operation occurs when the primary cluster is down or isolated. The mediator detects when a failover occurs and executes an automatic unplanned failover to the secondary cluster. The secondary cluster is converted to the primary and begins serving clients. 
+On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration both sites can access local storage for active I/O. If the source cluster fails or is isolated, the mediator triggers an automatic unplanned failover (AUFO) and serves all I/O from the destination cluster until the source cluster recovers.
+
+If you experience an AUFO of your SnapMirror active sync relationship, you should reestablish the relationship and resume operations on the original source cluster after it comes back online.
 
 .Before you begin
 
@@ -25,5 +27,7 @@ An automatic unplanned failover (AUFO) operation occurs when the primary cluster
 . Wait for the relationship status to display *InSync*.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover* to resume operations on the original primary cluster.
 
+
+// 2026 Jan 23, GitIssue 93
 // 2026 Jan 20, GitIssue 94
 // 2025 Jul 24, ONTAPDOC-2707
