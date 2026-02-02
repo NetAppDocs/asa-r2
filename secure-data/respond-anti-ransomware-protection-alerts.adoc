@@ -38,5 +38,9 @@ If there is abnormal activity on the storage unit, a message is displayed under 
 . Select *Choose an action*.
 . Select *Mark as false positive* or select *Mark as potential ransomware attack*. 
 
+.What's next?
+
+If you know of surges in your storage unit activity, either one-time surges or a surge that is characteristic of a new normal, you should report them as safe. Manually reporting these surges as safe helps to improve the accuracy of ARP's threat assessments.  Learn  how to link:https://docs.netapp.com/us-en/ontap/anti-ransomware/manage-parameters-task.html#report-known-surges[report known ARP/AI surges^]. 
+
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928
