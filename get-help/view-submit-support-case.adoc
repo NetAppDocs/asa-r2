@@ -12,7 +12,7 @@ summary:
 
 If you have an issue that requires assistance, you can use ONTAP System Manager to submit a case to technical support.  You can also use ONTAP System Manager to view cases that are closed or in progress.
 
-You must be link:https://activeiq-link.netapp.com/[registered with Active IQ] to view support cases for your ASA r2 system.
+You must be link:https://docs.netapp.com/us-en/active-iq/task_login_activeiq.html[registered with Active IQ^] to view support cases for your ASA r2 system.
 
 .Steps
 
