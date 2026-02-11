@@ -30,7 +30,7 @@ Recommended updates are automatically downloaded and installed on your ASA r2 sy
 
 == Disable automatic updates
 
-Disable automatic updates if you want the flexibility to view recommended updates before they are installed.  If you disable automatic updates, you need to perform firmware and system file updates manually. 
+Disable automatic updates only if you want to manage updates entirely yourself. With automatic updates turned off, the system will not notify, download, or install updates. You are responsible for monitoring, downloading, scheduling, and installing all updates manually.
 
 .Steps
 

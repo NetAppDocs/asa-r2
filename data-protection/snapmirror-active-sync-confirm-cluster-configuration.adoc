@@ -26,7 +26,7 @@ link:create-svm-peer-relationship.html[Create an intercluster storage VM peer re
 
 . Confirm that at least one LIF is created on each node in the cluster.
 +
-link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[Create a LIF]
+link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[Create a LIF].
 
 . Confirm that the necessary storage units are created and mapped to host groups.
 +
