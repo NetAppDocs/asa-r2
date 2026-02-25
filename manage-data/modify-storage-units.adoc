@@ -9,7 +9,7 @@ summary: "Respond to changes in your storage system performance and data by edit
 :imagesdir: ../media/
 
 [.lead]
-To optimize performance on your ASA r2 system, you might need to modify your storage units to increase their capacity, update QoS policies or to change the hosts that are mapped to the units. For example, if a new, critical application workload is added to an existing storage unit, you might need to change the Quality of Service (QoS) policy applied to the storage unit to support the performance level needed for the new application.
+To optimize performance on your ASA r2 system, you might need to modify your storage units to increase their capacity, update QoS policies or change the hosts that are mapped to the units. For example, if a new, critical application workload is added to an existing storage unit, you might need to change the Quality of Service (QoS) policy applied to the storage unit to support the performance level needed for the new application.
 
 .Increase capacity
 Increase the size of a storage unit before it reaches full capacity to prevent a loss of data access that can occur if the storage unit runs out of writeable space.  The capacity of a storage unit can be increased to 128 TB which is the maximum size allowed by ONTAP.
