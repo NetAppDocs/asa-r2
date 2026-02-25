@@ -24,7 +24,7 @@ Beginning with ONTAP 9.18.1, you can modify the snapshot reserve and enable auto
 
 link:../data-protection/snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 systems].
 
-Storage units are thin provisioned by default. Thin provisioning allows the storage unit to grow up to the size allocated but doesn't reserve the space in advance. Space is allocated dynamically from available free space as needed. This allows you to realize greater storage efficiency by _over provisioning_ your available space.  For example, suppose you have 1 TB of free space and you need to create four 1 TB storage units. Instead of immediately adding 3 TB of additional storage capacity to your system, you can create the storage units, monitor space utilization, and increase your storage capacity as the the storage units consume actual space. Learn more about link:https://docs.netapp.com/us-en/ontap/concepts/thin-provisioning-concept.html[thin provisioning^].
+Storage units are thin provisioned by default. Thin provisioning allows the storage unit to grow up to the size allocated but doesn't reserve the space in advance. Space is allocated dynamically from available free space as needed. This allows you to realize greater storage efficiency by _over provisioning_ your available space.  For example, suppose you have 1 TB of free space and you need to create four 1 TB storage units. Instead of immediately adding 3 TB of additional storage capacity to your system, you can create the storage units, monitor space utilization, and increase your storage capacity as the storage units consume actual space. Learn more about link:https://docs.netapp.com/us-en/ontap/concepts/thin-provisioning-concept.html[thin provisioning^].
 
 .Steps
 
@@ -40,13 +40,13 @@ To optimize workload balancing across the storage availability zone, create an e
 
 . Enter the storage unit capacity; then select the host operating system.
 +
-CAUTION: If you are creating more than one storage unit, each unit is created with the same capacity. Multiply the number of storage units you are creating by the desired capacity to ensure you have enough usable space.  If you don't have enough free space and you chose to over provision, monitor utilization closely to avoid running out of space and losing data.
+CAUTION: If you are creating more than one storage unit, each unit is created with the same capacity. Multiply the number of storage units you are creating by the desired capacity to ensure you have enough usable space.  If you don't have enough free space and you choose to over provision, monitor utilization closely to avoid running out of space and losing data.
 
 . Accept the auto-selected *host mapping* or select a different host group for the storage unit to be mapped to.
 +
 *Host mapping* refers to the host group that the new storage unit will be mapped to. If there is a pre-existing host group for the type of host you selected for your new storage unit, the pre-existing host group is auto-selected for your host mapping.  You can accept the host group that is auto-selected or you can select a different host group.  
 +
-If there is no pre-existing host group for hosts running on the operating system you specified, ONTAP creates a new host group automatically .
+If there is no pre-existing host group for hosts running on the operating system you specified, ONTAP creates a new host group automatically.
 
 . If you want to do any of the following, select *More Options* and complete the required steps.
 +
