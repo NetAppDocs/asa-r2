@@ -746,7 +746,7 @@ Connect each controller to the NSM modules on both NS224 shelves. The graphics s
 
 .. Connect port e10a to shelf 2 NSM A port e0a.
 
-.. Connect port e10b to shelf 1 NSM A port e0b.
+.. Connect port e10b to shelf 1 NSM B port e0b.
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg[Controller-to-shelf connections for controller A]
 +
@@ -911,5 +911,6 @@ image:../media/drw_isi_g_1_ns224_controller_b_cabling_ieops-1946.svg[Controller 
 .What's next?
 After you've connected the storage controllers to your network and then connected the controllers to your storage shelves, you link:power-on-hardware.html[power on the ASA r2 storage system].
 
+// 2025 Mar 17, AFFFASDOC-468
 // 2025 June 04, ONTAPDOC-2994
 // 2024 Sept 23, ONTAPDOC 1922
