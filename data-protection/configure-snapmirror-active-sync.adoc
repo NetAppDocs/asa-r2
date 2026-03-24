@@ -17,7 +17,7 @@ On ASA r2 systems, SnapMirror active sync supports symmetric active/active confi
 If you are using the iSCSI or FC protocol and use ONTAP tools for VMware Sphere, you can optionally link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html[use ONTAP Tools for VM ware to configure SnapMirror active sync^]. 
 
 [NOTE]
-Beginning with ONTAP 9.19.1 RC, ARP/AI supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on active primary storage units and creates primary-only ARP snapshots. To enable ARP/AI, see link:../secure-data/enable-anti-ransomware-protection.html[Enable autonomous ransomware protection with AI].
+Beginning with ONTAP 9.19.1 RC, ARP/AI supports primary read-write volumes in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on active primary volumes, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for SAN storage units hosted on those volumes. To enable ARP/AI, see link:../secure-data/enable-anti-ransomware-protection.html[Enable autonomous ransomware protection with AI].
 
 .Before you begin
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group[Create a consistency group] on the primary site with new storage units.  If you want to create a non-uniform symmetric active/active configuration, also create a consistency group on the secondary site with new storage units.
