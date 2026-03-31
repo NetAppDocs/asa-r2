@@ -50,7 +50,7 @@ link:configure-snapmirror-active-sync.html[Configure SnapMirror active sync] to 
 
 * link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[Learn more about SnapMirror active sync^].
 * link:../learn-more/hardware-comparison.html#personality-differences[Learn more about ONTAP personalities].
-*
+
 // 2025 Nov 06, ONTAPDOC-3358
 // 2025 Sep 04, ONTAPDOC-2729
 // 2025 Jul 24, ONTAPDOC-2707
