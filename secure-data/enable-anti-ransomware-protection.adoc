@@ -4,7 +4,7 @@ permalink: secure-data/enable-anti-ransomware-protection.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, enable
 summary: "Enable ARP/AI to detects potential ransomware threats, automatically take action to protect your data, and display a warning message in System Manager to alert you of suspicious activity."
 ---
-= Enable autonomous ransomware protection with AI on your ASA r2 storage systems
+= Enable Autonomous Ransomware Protection with AI on your ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
