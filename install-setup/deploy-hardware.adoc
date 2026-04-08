@@ -20,6 +20,8 @@ After you prepare to install your ASA r2 storage system, install the hardware fo
 
 * Understand that the airflow through the storage system enters from the front where the bezel or end caps are installed and exhausts out the rear where the ports are located.
 
+CAUTION: Always wear a grounded wrist strap connected to a verified ground point during installation and maintenance procedures. Failure to follow proper ESD precautions can cause permanent damage to controller nodes, storage shelves, and network switches.
+
 .Steps
 
 . Install the rail kits for your storage system and storage shelves, as needed, using the instructions included with the kits.
