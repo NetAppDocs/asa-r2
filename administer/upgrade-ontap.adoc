@@ -21,7 +21,7 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[ONT
 
 You don't have to be in the process of upgrading your ONTAP software to execute the ONTAP automated upgrade pre-checks. Executing the pre-upgrade checks independently of the ONTAP automated upgrade process allows you to see which checks are performed against your cluster and gives you a list of any errors or warnings that should be corrected before you begin the actual upgrade. Beginning with ONTAP 9.19.1, errors and warning are displayed separately to help you easily identify issues that must be resolved before you upgrade.  
 
-Learn how to link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html[run ONTAP automated pre-upgrade checks^].
+Learn how to link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html[execute ONTAP automated pre-upgrade checks^].
 
 
 // 2026, May 07, ONTAPDOC 3600
