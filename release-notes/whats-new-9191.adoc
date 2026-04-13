@@ -30,9 +30,9 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 | Update
 | Description
 
-| Enhanced reporting for automated pre-upgrade checks
+| link:../administer/upgrade-ontap.html[Enhanced reporting for automated pre-upgrade checks]
 | When executing automated pre-upgrade checks, errors and warning are displayed separately to help you easily identify issues that must be resolved before you upgrade.
 |===
 
-// 2026, May 07, ONTAPDOC 3601
+// 2026, May 07, ONTAPDOC-3601
 // 2026 Mar 24, ONTAPDOC-TBD
