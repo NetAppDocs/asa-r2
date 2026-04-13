@@ -22,6 +22,10 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 
 | link:../secure-data/enable-anti-ransomware-protection.html[Support for ARP/AI with SnapMirror active sync relationships]
 | Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units. 
+
+| link:../[Support for TLS hardware offload]
+| You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
+
 |===
 
 == Upgrade
@@ -34,5 +38,5 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 | When executing automated pre-upgrade checks, errors and warning are displayed separately to help you easily identify issues that must be resolved before you upgrade.
 |===
 
-// 2026, May 07, ONTAPDOC-3601
+// 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499
 // 2026 Mar 24, ONTAPDOC-TBD

@@ -55,6 +55,10 @@ You can configure and enable Security Assertion Markup Language (SAML) authentic
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
 
+=== TLS hardware offload
+You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
+
+link: https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html[Learn to configure TLS hardware offload^].
 
 == Networking
 
