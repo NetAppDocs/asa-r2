@@ -28,6 +28,17 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 
 |===
 
+== Storage efficiency
+[cols="2,4" options="header"]
+|===
+| Update
+| Description
+
+| link:../learn-more/additional-supported-ontap-features.html[Support for global deduplication]
+| Global deduplication extends the existing ONTAP deduplication space savings to the entire Storage Availability Zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, it can significantly improve storage efficiency and reduce total cost of ownership. Global deduplication is enabled by default and operates transparently without the need for administrative configuration. 
+
+|===
+
 == Storage resource management
 [cols="2,4" options="header"]
 |===
@@ -48,5 +59,5 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 | When executing automated pre-upgrade checks, errors and warning are displayed separately to help you easily identify issues that must be resolved before you upgrade.
 |===
 
-// 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499, ONTAPDOC 3678
+// 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499, ONTAPDOC 3678, ONTAPDOC-3884
 // 2026 Mar 24, ONTAPDOC-TBD

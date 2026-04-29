@@ -89,6 +89,7 @@ link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-
 
 
 == SAN Protocols
+
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP). 
 
 * link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html[Learn more about the iSCSI protocol^].
@@ -102,10 +103,21 @@ Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload e
 +
 Beginning with ONTAP 9.16.1, space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space.
 
+== Storage efficiency
+Storage efficiency is the measure of how effectively a storage system uses available space by optimizing storage resources, minimizing wasted space, and reducing written data's physical footprint. 
+
+ONTAP provides various storage efficiency technologies that can help you optimize storage usage and reduce costs.
+
+link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.html[Learn more about ONTAP storage efficiency technologies].
+
+=== Global deduplication
+
+Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire Storage Availability Zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, storage efficiency can be significantly improved and total cost of ownership reduced. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
+
 == System Manager
 
 You can search for various actions, objects,and information topics in System Manager. You can also search table data for specific entries.
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
 
-// 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677
+// 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677, ONTAPDOC-3883
