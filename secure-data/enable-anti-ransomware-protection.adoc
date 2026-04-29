@@ -22,9 +22,9 @@ No ransomware detection or prevention system can completely guarantee safety fro
 
 * Beginning with ONTAP 9.19.1 RC, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units.
 
-* ARP/AI is not supported on storage units protected by SnapLock.
-
 * Beginning with ONTAP 9.18.1, ARP/AI is enabled by default on all newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster.  
+
+* ARP/AI is not supported on storage units protected by SnapLock.
 
 * After you have enabled ARP/AI, you should link:../administer/update-firmware.html#enable-automatic-updates[enable automatic updates for your security files] to automatically receive new security updates.
 

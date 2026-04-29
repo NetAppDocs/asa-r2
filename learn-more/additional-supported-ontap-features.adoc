@@ -58,7 +58,7 @@ link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authenticat
 === TLS hardware offload
 You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
 
-link: https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html[Learn to configure TLS hardware offload^].
+link:https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html[Learn to configure TLS hardware offload^].
 
 == Networking
 
@@ -83,11 +83,9 @@ Learn more about common performance features supported on ASA r2 systems.
 
 === Modify default settings that control automatic QoS throughput ceiling increases
 
-A QoS maximum or throughput ceiling limits throughput for a workload to a maximum number of IOPS or MBs per second, or IOPS and MBs per second. Set a throughput ceiling on a workload to limit its impact on system resources and prevent it from negatively affecting more critical workloads. 
+Adaptive and non-adaptive QoS policy groups are automatically enabled to temporarily increase a workload’s throughput ceiling by 50% for a duration of 1 second to respond to short-term demands for higher performance by default. Beginning with ONTAP 9.19.1, you can modify these default settings.  In ONTAP 9.18.1 and earlier these settings cannot be changed.
 
-You can modify the default settings that control how QoS policy groups automatically increase the QoS throughput ceiling in response to short-term needs for higher performance. These settings cannot be modified in ONTAP 9.18.1 and earlier. Adaptive and non-adaptive QoS policy groups are automatically enabled to temporarily increase a workload’s throughput ceiling by 50% for a duration of 1 second to respond to short-term demands for higher performance by default. Beginning with ONTAP 9.19.1, you can modify these default settings.  In ONTAP 9.18.1 and earlier these settings cannot be changed.
-
-Learn more about link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html[QoS throughput ceilings^].
+link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html[Learn more about QoS throughput ceilings^].
 
 
 == SAN Protocols
