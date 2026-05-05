@@ -37,8 +37,10 @@ Cable the controllers to create the ONTAP cluster connections. For switchless cl
 
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
 
-=== Switchless cluster cabling
-
+[role="tabbed-block"]
+=====
+.Switchless cluster cabling
+--
 Use this cabling option when the two controllers are directly connected to each other without using cluster network switches.
 
 Use the Cluster/HA interconnect cable to connect ports e1a to e1a and ports e7a to e7a.
@@ -53,9 +55,10 @@ Use the Cluster/HA interconnect cable to connect ports e1a to e1a and ports e7a 
 image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[Cluster HA cable,width=100px]
 +
 image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[Two-node switchless cluster cabling diagram,width=500px]
+--
 
-=== Switched cluster cabling
-
+.Switched cluster cabling
+--
 Use this cabling option when the controllers connect to cluster network switches instead of being directly connected to each other.
 
 Use the 100 GbE cable to connect ports e1a and e7a to the cluster network switches.
@@ -72,6 +75,8 @@ NOTE: Switched cluster configurations are supported in ONTAP 9.16.1 and later.
 image::../media/oie_cable100_gbe_qsfp28.png[100 GbE cable,width=100px]
 +
 image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[Cable cluster connections to cluster network,width=500px]
+--
+=====
 
 
 == Step 2: Cable the host network connections
@@ -80,8 +85,10 @@ Connect the Ethernet module ports to your host network.
 
 The following are some typical host network cabling examples. See link:https://hwu.netapp.com[NetApp Hardware Universe^] for your specific system configuration.
 
-=== 100 GbE host network
-
+[role="tabbed-block"]
+=====
+.100 GbE host network
+--
 Connect ports e9a and e9b to your 100 GbE Ethernet data network switch.
 
 NOTE: For maximum system performance for cluster and HA traffic, do not use ports e1b and e7b for host network connections. Use a separate host card to maximize performance.
@@ -96,9 +103,10 @@ NOTE: For maximum system performance for cluster and HA traffic, do not use port
 image::../media/oie_cable_sfp_gbe_copper.svg[100 GbE Ethernet cable,width=100px]
 +
 image::../media/drw_a1k_network_cabling1_ieops-1649.svg[Cable to 100 GbE Ethernet network,width=500px]
+--
 
-=== 10/25 GbE host network
-
+.10/25 GbE host network
+--
 Connect ports on your 10/25 GbE I/O module to your host network switches.
 
 .Steps
@@ -110,6 +118,8 @@ Connect ports on your 10/25 GbE I/O module to your host network switches.
 image::../media/oie_cable_sfp_gbe_copper.svg[10/25 GbE Ethernet cable,width=100px]
 +
 image::../media/drw_a1k_network_cabling2_ieops-1650.svg[Cable to 10/25 GbE Ethernet network,width=500px]
+--
+=====
 
 
 == Step 3: Cable the management network connections
@@ -143,8 +153,10 @@ The following cabling examples show NSM100 modules in the NS224 shelves when ref
 
 For the maximum number of shelves supported for your storage system and for all of your cabling options, such as optical and switch-attached, see link:https://hwu.netapp.com[NetApp Hardware Universe^].
 
-=== One NS224 storage shelf
-
+[role="tabbed-block"]
+=====
+.One NS224 storage shelf
+--
 Use this cabling option when you have a single NS224 shelf.
 
 Connect each controller to the NSM modules on the NS224 shelf. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
@@ -162,9 +174,10 @@ image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg[Controller A e11a and e11
 .. Connect port e11b to NSM A port e0b.
 +
 image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg[Connect controller B ports e11a and e11b to a single NS224 shelf]
+--
 
-=== Two NS224 storage shelves
-
+.Two NS224 storage shelves
+--
 Use this cabling option when you have two NS224 shelves.
 
 Connect each controller to the NSM modules on both NS224 shelves. The graphics show cabling from each of the controllers: Controller A cabling is shown in blue and Controller B cabling is shown in yellow.
@@ -186,6 +199,8 @@ image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg[Controller-to-shelf conne
 .. Connect port e10b to shelf 1 NSM A port e0b.
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg[Controller-to-shelf connections for controller B]
+--
+=====
 
 
 .What's next?

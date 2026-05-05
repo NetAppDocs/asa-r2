@@ -33,12 +33,13 @@ Cable the controllers to create the ONTAP cluster connections. For switchless cl
 
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports.
 
-=== Switchless cluster cabling
-
+[role="tabbed-block"]
+=====
+.Switchless cluster cabling
+--
 Use this cabling option when the two controllers are directly connected to each other without using cluster network switches.
 
-==== ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
-
+.ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
 Cable the cluster/HA interconnect ports on the I/O modules in slots 2 and 4.
 
 .Steps
@@ -58,8 +59,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 100 GbE cable,width=100px
 +
 image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[Switchless cluster cabling diagram using two 100 GbE I/O modules]
 
-==== ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
-
+.ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4.
 
 .Steps
@@ -77,8 +77,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 100 GbE cable,width=100px
 +
 image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[Switchless cluster cabling diagram using one 100 GbE I/O module]
 
-==== ASA A20 with one 2-port 10/25 GbE I/O module
-
+.ASA A20 with one 2-port 10/25 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4.
 
 .Steps
@@ -95,13 +94,13 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 image:../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector,width=100px]
 +
 image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[ASA A20 switchless cluster cabling diagram using one 25 GbE I/O module]
+--
 
-=== Switched cluster cabling
-
+.Switched cluster cabling
+--
 Use this cabling option when the controllers connect to cluster network switches instead of being directly connected to each other.
 
-==== ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
-
+.ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
 Cable the cluster/HA interconnect ports on the I/O modules in slots 2 and 4 to the cluster network switches.
 
 .Steps
@@ -123,8 +122,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 40/100 GbE cable,width=10
 +
 image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[Switched cluster cabling diagram using two 100 GbE I/O modules]
 
-==== ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
-
+.ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4 to the cluster network switches.
 
 .Steps
@@ -144,8 +142,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[Cluster HA 40/100 GbE cable,width=10
 +
 image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[Cable cluster connections to cluster network,width=500px]
 
-==== ASA A20 with one 2-port 10/25 GbE I/O module
-
+.ASA A20 with one 2-port 10/25 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4 to the cluster network switches.
 
 .Steps
@@ -164,18 +161,21 @@ NOTE: The cluster interconnect traffic and the HA traffic share the same physica
 image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector,width=100px]
 +
 image::../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg[ASA A20 switched cluster cabling diagram using one 25 GbE I/O module]
+--
+=====
 
 
 == Step 2: Cable the host network connections
 
 Connect the Ethernet module ports or the Fibre Channel (FC) module ports to your host network.
 
-=== Ethernet host cabling
-
+[role="tabbed-block"]
+=====
+.Ethernet host cabling
+--
 Connect the controllers to your Ethernet host network using the appropriate ports based on your I/O module configuration.
 
-==== ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
-
+.ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
 Use ports e2b and e4b on each controller to connect to the Ethernet host network switches.
 
 On each controller, connect ports e2b and e4b to the Ethernet host network switches.
@@ -188,8 +188,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[40/100 GbE cable,width=100px]
 
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[Cable to 40/100 GbE Ethernet host network switches]
 
-==== ASA A20, A30, or A50 with one 4-port 10/25 GbE I/O module
-
+.ASA A20, A30, or A50 with one 4-port 10/25 GbE I/O module
 Use all four ports on the I/O module in slot 2 to connect to the Ethernet host network switches.
 
 On each controller, connect ports e2a, e2b, e2c, and e2d to the Ethernet host network switches.
@@ -199,13 +198,13 @@ On each controller, connect ports e2a, e2b, e2c, and e2d to the Ethernet host ne
 image:../media/oie_cable_sfp_gbe_copper.png[GbE SFP copper connector,width=100px]
 
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[Cable to 10/25 GbE Ethernet host network switches]
+--
 
-=== FC host cabling
-
+.FC host cabling
+--
 Connect the controllers to your Fibre Channel host network using the FC I/O module in your system.
 
-==== ASA A20, A30, or A50 with one 4-port 64 Gb/s FC I/O module
-
+.ASA A20, A30, or A50 with one 4-port 64 Gb/s FC I/O module
 Use all four ports on the FC I/O module in slot 2 to connect to the FC host network switches.
 
 On each controller, connect ports 2a, 2b, 2c, and 2d to the FC host network switches.
@@ -215,6 +214,8 @@ On each controller, connect ports 2a, 2b, 2c, and 2d to the FC host network swit
 image:../media/oie_cable_sfp_gbe_copper.png[64 Gb/s FC cable,width=100px]
 
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[Cable to 64 Gb/s FC host network switches]
+--
+=====
 
 
 == Step 3: Cable the management network connections
