@@ -1,5 +1,0 @@
----
-permalink: install-setup/cable-hardware.html
-redirect: install-setup/cable-hardware-index.html
----
-

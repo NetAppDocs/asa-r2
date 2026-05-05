@@ -16,8 +16,9 @@ entries:
   - title: Install hardware
     url: "/install-setup/deploy-hardware.html"  
   - title: Cable hardware
-    url: "/install-setup/cable-hardware-index.html"
     entries:
+    - title: Cable overview
+      url: "/install-setup/cable-hardware.html"
     - title: Cable ASA A1K
       url: "/install-setup/cable-hardware-a1k.html"
     - title: Cable ASA A70 and A90
