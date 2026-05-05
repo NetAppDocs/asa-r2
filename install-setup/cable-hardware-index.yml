@@ -1,0 +1,50 @@
+indexpage:
+  title: Cable the hardware for your ASA r2 storage system
+  lead: Connect your ASA r2 storage system to the network and storage shelves to enable cluster communication, management access, and SAN host connectivity.
+  summary: Connect your ASA r2 storage system to the network and storage shelves to enable cluster communication, management access, and SAN host connectivity.
+  keywords: asa r2, cable controllers, network cables, storage shelves, aff a1k, asa a70, asa a90, asa a30, asa a20, asa a50, asa c30
+  tiles:
+    - title: ASA A1K
+      links:
+        - title: Cable cluster/HA connections
+          url: /install-setup/cable-hardware-a1k.html#step-1-cable-the-clusterha-connections
+        - title: Cable host network connections
+          url: /install-setup/cable-hardware-a1k.html#step-2-cable-the-host-network-connections
+        - title: Cable management network connections
+          url: /install-setup/cable-hardware-a1k.html#step-3-cable-the-management-network-connections
+        - title: Cable shelf connections
+          url: /install-setup/cable-hardware-a1k.html#step-4-cable-the-shelf-connections
+    - title: ASA A70 and ASA A90
+      links:
+        - title: Cable cluster/HA connections
+          url: /install-setup/cable-hardware-a70-90.html#step-1-cable-the-clusterha-connections
+        - title: Cable host network connections
+          url: /install-setup/cable-hardware-a70-90.html#step-2-cable-the-host-network-connections
+        - title: Cable management network connections
+          url: /install-setup/cable-hardware-a70-90.html#step-3-cable-the-management-network-connections
+        - title: Cable shelf connections
+          url: /install-setup/cable-hardware-a70-90.html#step-4-cable-the-shelf-connections
+    - title: ASA A20, ASA A30, and ASA A50
+      links:
+        - title: Cable cluster/HA connections
+          url: /install-setup/cable-hardware-a20-30-50.html#step-1-cable-the-clusterha-connections
+        - title: Cable host network connections
+          url: /install-setup/cable-hardware-a20-30-50.html#step-2-cable-the-host-network-connections
+        - title: Cable management network connections
+          url: /install-setup/cable-hardware-a20-30-50.html#step-3-cable-the-management-network-connections
+        - title: Cable shelf connections
+          url: /install-setup/cable-hardware-a20-30-50.html#step-4-cable-the-shelf-connections
+    - title: ASA C30
+      links:
+        - title: Cable cluster/HA connections
+          url: /install-setup/cable-hardware-c30.html#step-1-cable-the-clusterha-connections
+        - title: Cable host network connections
+          url: /install-setup/cable-hardware-c30.html#step-2-cable-the-host-network-connections
+        - title: Cable management network connections
+          url: /install-setup/cable-hardware-c30.html#step-3-cable-the-management-network-connections
+        - title: Cable shelf connections
+          url: /install-setup/cable-hardware-c30.html#step-4-cable-the-shelf-connections
+    - title: Additional resources
+      links:
+        - title: NetApp Hardware Universe
+          url: https://hwu.netapp.com

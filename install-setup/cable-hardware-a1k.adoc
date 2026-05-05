@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: install-setup/cable-hardware-a1k.html
 keywords: asa r2, asa a1k, cable controllers, cabling, cluster cabling, management cabling, host network cabling, shelf cabling
-summary: Learn how to cable the ASA A1K storage system controllers to your network and to the shelves. 
+summary: Connect the ASA A1K storage system to your network and storage shelves to enable cluster communication, management access, and SAN host connectivity.
 ---
 = Cable the hardware for the ASA A1K storage system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-After you install the rack hardware for your ASA A1K storage system, install the network cables for the controllers and connect the cables between the controllers and storage shelves.
+Connect the ASA A1K storage system to your network and storage shelves to enable cluster communication, management access, and SAN host connectivity. This procedure includes cabling for cluster/HA interconnect, management network, host network, and storage shelf connections.
 
 .Before you begin
 
