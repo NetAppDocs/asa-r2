@@ -39,7 +39,7 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 |===
 | Update
 | Description
-| link:../learn-more/additional-supported-ontap-features.html[Support for direct-attachment FC configurations]
+| link:../learn-more/additional-supported-ontap-features.html#san-direct-attachment[Support for direct-attachment FC configurations]
 | An FC switch is not required to establish connections between FC and FC-NVMe hosts and ONTAP storage.  Hosts can be directly connected to FC adapter ports on ASA r2 systems.  Direct-attachment capability can be especially valuable in remote sites and hybrid environments where simplicity is key. 
 |===
 
