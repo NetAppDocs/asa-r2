@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: secure-data/respond-anti-ransomware-protection-alerts.html
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, ai, alerts, respond, warnings, security
 summary: "View warnings of potential ransomware attacks and take action in System Manager."
 ---
 = Respond to Autonomous Ransomware Protection with AI alerts on ASA r2 storage systems
