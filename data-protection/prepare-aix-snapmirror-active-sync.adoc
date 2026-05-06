@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: data-protection/prepare-aix-snapmirror-active-sync.htnl
+permalink: data-protection/prepare-aix-snapmirror-active-sync.html
 keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active active
 summary: "Learn how to configure SnapMirror active sync to ensure business continuity by creating a secondary data copy and enabling automatic failover in case of a disaster."
 ---
