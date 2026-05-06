@@ -62,14 +62,11 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg
 .ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4.
 
-.Steps
-
-. Connect the Cluster/HA interconnect connections: 
-+
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 40/100 GbE.
-+
-.. Connect controller A port e4a to controller B port e4a.
-.. Connect controller A port e4b to controller B port e4b.
+
+.Steps
+. Connect controller A port e4a to controller B port e4a.
+. Connect controller A port e4b to controller B port e4b.
 +
 *100 GbE Cluster/HA interconnect cables*
 +
@@ -80,14 +77,12 @@ image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg
 .ASA A20 with one 2-port 10/25 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4.
 
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 10/25 GbE.
+
 .Steps
 
-. Connect the Cluster/HA interconnect connections: 
-+
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 10/25 GbE.
-+
-.. Connect controller A port e4a to controller B port e4a.
-.. Connect controller A port e4b to controller B port e4b.
+. Connect controller A port e4a to controller B port e4a.
+. Connect controller A port e4b to controller B port e4b.
 +
 *25 GbE Cluster/HA interconnect cables*
 +
@@ -103,16 +98,13 @@ Use this cabling option when the controllers connect to cluster network switches
 .ASA A30 or ASA A50 with two 2-port 40/100 GbE I/O modules
 Cable the cluster/HA interconnect ports on the I/O modules in slots 2 and 4 to the cluster network switches.
 
-.Steps
-
-. Cable the Cluster/HA interconnect connections: 
-+
 NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O modules in slots 2 and 4). The ports are 40/100 GbE.
-+
-.. Connect controller A port e4a to cluster network switch A.
-.. Connect controller A port e2a to cluster network switch B.
-.. Connect controller B port e4a to cluster network switch A.
-.. Connect controller B port e2a to cluster network switch B.
+
+.Steps
+. Connect controller A port e4a to cluster network switch A.
+. Connect controller A port e2a to cluster network switch B.
+. Connect controller B port e4a to cluster network switch A.
+. Connect controller B port e2a to cluster network switch B.
 +
 NOTE: I/O module ports e2b and e4b are unused and available for host network connectivity.
 +
@@ -125,16 +117,14 @@ image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[S
 .ASA A30 or ASA A50 with one 2-port 40/100 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4 to the cluster network switches.
 
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 40/100 GbE.
+
 .Steps
 
-. Cable the controllers to the cluster network switches:
-+
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 40/100 GbE.
-+
-.. Connect controller A port e4a to cluster network switch A. 
-.. Connect controller A port e4b to cluster network switch B.
-.. Connect controller B port e4a to cluster network switch A. 
-.. Connect controller B port e4b to cluster network switch B.
+. Connect controller A port e4a to cluster network switch A. 
+. Connect controller A port e4b to cluster network switch B.
+. Connect controller B port e4a to cluster network switch A. 
+. Connect controller B port e4b to cluster network switch B.
 +
 *40/100 GbE Cluster/HA interconnect cables*
 +
@@ -145,16 +135,14 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[C
 .ASA A20 with one 2-port 10/25 GbE I/O module
 Cable the cluster/HA interconnect ports on the I/O module in slot 4 to the cluster network switches.
 
+NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 10/25 GbE.
+
 .Steps
 
-. Cable the controllers to the cluster network switches:
-+
-NOTE: The cluster interconnect traffic and the HA traffic share the same physical ports (on the I/O module in slot 4). The ports are 10/25 GbE.
-+
-.. Connect controller A port e4a to cluster network switch A. 
-.. Connect controller A port e4b to cluster network switch B.
-.. Connect controller B port e4a to cluster network switch A. 
-.. Connect controller B port e4b to cluster network switch B.
+. Connect controller A port e4a to cluster network switch A. 
+. Connect controller A port e4b to cluster network switch B.
+. Connect controller B port e4a to cluster network switch A. 
+. Connect controller B port e4b to cluster network switch B.
 +
 *10/25 GbE Cluster/HA interconnect cables*
 +

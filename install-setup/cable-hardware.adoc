@@ -11,27 +11,32 @@ summary: Cable your ASA r2 storage system to enable cluster communication, host 
 [.lead]
 Cable your ASA r2 storage system to enable cluster communication, host network access, management connectivity, and storage shelf connections. 
 
-== Cable your system
+== Overview of hardware cabling
 
-Cabling differs by platform because each ASA r2 model has unique slot locations, port assignments, and I/O module configurations. Select the procedure for your storage system:
+Cabling differs by platform model because each ASA r2 model has unique slot locations, port assignments, and I/O module configurations. Select the procedure for your storage system:
 
 * link:cable-hardware-a1k.html[Cable ASA A1K]
 * link:cable-hardware-a70-90.html[Cable ASA A70 and A90]
 * link:cable-hardware-a20-30-50.html[Cable ASA A20, A30, and A50]
 * link:cable-hardware-c30.html[Cable ASA C30]
 
+You'll cable four types of connections during hardware cabling:
 
-== What you'll cable
+* *Cluster/HA connections*
++
+Connect the two controllers to each other (switchless cluster) or to cluster network switches (switched cluster). These connections enable cluster communication and high-availability failover between controller pairs. Cluster interconnect traffic and HA traffic share the same physical ports.
 
-You'll cable four types of connections during hardware setup:
+* *Host network connections*
++
+Connect the controllers to SAN hosts using Ethernet (iSCSI, NVMe/TCP) or Fibre Channel (FC, NVMe/FC) based on your host configuration. These connections provide data access for your storage workloads.
 
-* *Cluster/HA connections* - Connect the two controllers to each other (switchless cluster) or to cluster network switches (switched cluster). These connections enable cluster communication and high-availability failover between controller pairs. Cluster interconnect traffic and HA traffic share the same physical ports.
+* *Management network connections*
++
+Connect the controllers to your management network for system administration access through ONTAP System Manager and CLI.
 
-* *Host network connections* - Connect the controllers to SAN hosts using Ethernet (iSCSI, NVMe/TCP) or Fibre Channel (FC, NVMe/FC) based on your host configuration. These connections provide data access for your storage workloads.
-
-* *Management network connections* - Connect the controllers to your management network for system administration access through ONTAP System Manager and CLI.
-
-* *Storage shelf connections* - Connect the controllers to NS224 storage shelves to provide storage capacity for your system.
+* *Storage shelf connections*
++
+Connect the controllers to NS224 storage shelves to provide storage capacity for your system.
 
 == Additional resources
 

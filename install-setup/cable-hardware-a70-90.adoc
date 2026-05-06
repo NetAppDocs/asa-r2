@@ -107,16 +107,12 @@ image::../media/drw_70-90_network_cabling1_ieops-1654.svg[Cable to 100 GbE Ether
 
 .10/25 GbE host network
 --
-Connect ports on your 10/25 GbE I/O module to your host network switches.
+Connect the 10/25 GbE I/O module ports on each controller to the host network switches.
 
-.Steps
-
-. Connect the 10/25 GbE I/O module ports on each controller to the host network switches.
-+
 *10/25 GbE cable*
-+
+
 image::../media/oie_cable_sfp_gbe_copper.svg[10/25 GbE cable,width=100px]
-+
+
 image::../media/drw_70-90_network_cabling2_ieops-1655.svg[Cable to 10/25 GbE Ethernet network,width=500px]
 --
 =====
