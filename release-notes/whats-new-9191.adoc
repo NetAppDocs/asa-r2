@@ -21,6 +21,7 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 | Description
 | link:../data-protection/prepare-aix-snapmirror-active-sync.html[AIX host support for SnapMirror active sync]
 | Transparent Application Failover for AIX is supported with SnapMirror active sync in symmetric active/active configurations.
+|===
 
 == SAN data migration
 
