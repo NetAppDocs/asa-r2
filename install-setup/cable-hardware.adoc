@@ -13,7 +13,7 @@ Cable your ASA r2 storage system to enable cluster communication, host network a
 
 == Overview of hardware cabling
 
-Cabling differs by platform model because each ASA r2 model has unique slot locations, port assignments, and I/O module configurations. Select the procedure for your storage system:
+Cabling differs by platform model because each ASA r2 model has unique slot locations, port assignments, and I/O module configurations. Select the procedure for your ASA r2 model:
 
 * link:cable-hardware-a1k.html[Cable ASA A1K]
 * link:cable-hardware-a70-90.html[Cable ASA A70 and A90]

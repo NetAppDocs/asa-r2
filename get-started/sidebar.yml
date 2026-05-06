@@ -17,7 +17,7 @@ entries:
     url: "/install-setup/deploy-hardware.html"  
   - title: Cable hardware
     entries:
-    - title: Cable overview
+    - title: Cabling overview
       url: "/install-setup/cable-hardware.html"
     - title: Cable ASA A1K
       url: "/install-setup/cable-hardware-a1k.html"
