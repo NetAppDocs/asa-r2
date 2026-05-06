@@ -1,0 +1,31 @@
+---
+sidebar: sidebar
+permalink: data-protection/prepare-aix-snapmirror-active-sync.htnl
+keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active active
+summary: "Learn how to configure SnapMirror active sync to ensure business continuity by creating a secondary data copy and enabling automatic failover in case of a disaster."
+---
+= Prepare AIX hosts for SnapMirror active sync protection on ASA r2 systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning with ONTAP 9.19.1, Transparent Application Failover for AIX is supported with SnapMirror active sync in symmetric active/active configurations.   SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. 
+
+Before you can enable SnapMirror active sync for your AIX hosts running ONTAP 9.19.1 or later, the host access mode must be set to local.  Selecting the access mode is not required for other host types.  Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html[interoperability for SnapMirror active sync^]. 
+
+.Before you begin
+
+You must be running ONTAP 9.19.1 or later.  If you are running ONTAP 9.18.1 or earlier a Feature Policy Variance Request (FPVR) is required for AIX host support for SnapMirror active sync.
+
+.Steps
+
+. In System Manager, select *Storage*.
+. Hover over the name of the AIX storage unit you want to prepare for SnapMirror active sync protection.
+. Select image:icon_kabob.gif[menu selection icon]  and then select *Edit*.
+. Under *Host information*, select *local* for the *Access mode*, and then select *Edit*.
+
+.What's next?
+The storage unit for the AIX host is ready for SnapMirror active sync protection.
+
+
+// 2026 May 07, ONTAPDOC-3652
