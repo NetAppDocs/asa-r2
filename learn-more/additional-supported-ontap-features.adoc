@@ -87,6 +87,14 @@ Adaptive and non-adaptive QoS policy groups are automatically enabled to tempora
 
 link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html[Learn more about QoS throughput ceilings^].
 
+== SAN configuration
+A storage area network (SAN) consists of a storage solution connected to hosts over a SAN transport protocol such as iSCSI or FC. You can configure your SAN so that your storage solution attaches to your hosts through one or more switches. If you are using iSCSI, you can also configure your SAN so that your storage solution attaches directly to your host without using a switch.
+
+=== SAN direct attachment
+
+Beginning with ONTAP 9.19.1, an FC switch is not required to establish connections between FC and FC-NVMe hosts and ONTAP storage.  Hosts can be directly connected to FC adapter ports on ASA r2 systems.  Direct-attachment capability can be especially valuable in remote sites and hybrid environments where simplicity is key. 
+
+* link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html#direct-attach-fc-and-fc-nvme-configurations[Learn more about SAN direct attachment^].
 
 == SAN Protocols
 
