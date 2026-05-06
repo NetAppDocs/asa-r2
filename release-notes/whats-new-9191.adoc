@@ -74,7 +74,7 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 | Update
 | Description
 
-| link:monitor/monitor-storage.html#monitor-storage-availability-zone-utilization[Support for storage availability zone capacity alert in System Manager]
+| link:../monitor/monitor-storage.html#monitor-storage-availability-zone-utilization[Support for storage availability zone capacity alert in System Manager]
 | An alert is displayed in System Manager if a storage availability zone in your ASA r2 system nears capacity.
 
 | link:../learn-more/additional-supported-ontap-features.html#modify-default-settings-that-control-automatic-qos-throughput-ceiling-increases[Support for modifying default settings that control automatic QoS throughput ceiling increases]
