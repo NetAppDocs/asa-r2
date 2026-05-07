@@ -39,7 +39,7 @@ FLI supports both online and offline migrations. In an online migration, the cli
 
 Beginning with ONTAP 9.19.1, FLI supports the iSCSI protocol for backend connectivity.
 
-* Learn more about link: https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html[ONTAP FLI migrations^].
+* Learn more about link:https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html[ONTAP FLI migrations^].
 
 == Configure your ASA r2 system as a storage provider in your VMware environment
 
