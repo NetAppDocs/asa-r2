@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: secure-data/modify-arp-snapshot-retention-period.html
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, ai, alerts, respond, warnings, security
 summary: "Learn how to modify ARP snapshot retention periods to suit your storage and business requirements."
 ---
 = Modify ARP/AI snapshot retention periods on ASA r2 storage systems
