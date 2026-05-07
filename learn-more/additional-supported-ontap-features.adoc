@@ -55,6 +55,10 @@ You can configure and enable Security Assertion Markup Language (SAML) authentic
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
 
+=== TLS hardware offload
+You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
+
+link:https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html[Learn to configure TLS hardware offload^].
 
 == Networking
 
@@ -73,7 +77,27 @@ An interface group, also known as a Link Aggregation Group (LAG), is created by 
 
 link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html[Learn about Link Aggregation Groups^].
 
+== Performance
+
+Learn more about common performance features supported on ASA r2 systems.
+
+=== Modify default settings that control automatic QoS throughput ceiling increases
+
+Adaptive and non-adaptive QoS policy groups are automatically enabled to temporarily increase a workload’s throughput ceiling by 50% for a duration of 1 second to respond to short-term demands for higher performance by default. Beginning with ONTAP 9.19.1, you can modify these default settings.  In ONTAP 9.18.1 and earlier these settings cannot be changed.
+
+link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html[Learn more about QoS throughput ceilings^].
+
+== SAN configuration
+A storage area network (SAN) consists of a storage solution connected to hosts over a SAN transport protocol such as iSCSI or FC. You can configure your SAN so that your storage solution attaches to your hosts through one or more switches. If you are using iSCSI, you can also configure your SAN so that your storage solution attaches directly to your host without using a switch.
+
+=== SAN direct attachment
+
+Beginning with ONTAP 9.19.1, an FC switch is not required to establish connections between FC and FC-NVMe hosts and ONTAP storage.  Hosts can be directly connected to FC adapter ports on ASA r2 systems.  Direct-attachment capability can be especially valuable in remote sites and hybrid environments where simplicity is key. 
+
+* link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html#direct-attach-fc-and-fc-nvme-configurations[Learn more about SAN direct attachment^].
+
 == SAN Protocols
+
 ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP). 
 
 * link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html[Learn more about the iSCSI protocol^].
@@ -87,8 +111,21 @@ Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload e
 +
 Beginning with ONTAP 9.16.1, space deallocation (also called “hole punching” and “unmap”) is enabled for NVMe namespaces by default. Space deallocation allows a host to deallocate unused blocks from namespaces to reclaim space.
 
+== Storage efficiency
+Storage efficiency is the measure of how effectively a storage system uses available space by optimizing storage resources, minimizing wasted space, and reducing written data's physical footprint. 
+
+ONTAP provides various storage efficiency technologies that can help you optimize storage usage and reduce costs.
+
+link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.html[Learn more about ONTAP storage efficiency technologies].
+
+=== Global deduplication
+
+Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire Storage Availability Zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, storage efficiency can be significantly improved and total cost of ownership reduced. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
+
 == System Manager
 
 You can search for various actions, objects,and information topics in System Manager. You can also search table data for specific entries.
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
+
+// 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677, ONTAPDOC-3883

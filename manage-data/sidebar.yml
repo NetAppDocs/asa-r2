@@ -55,6 +55,8 @@ entries:
      entries:
      - title: Workflow 
        url: "/data-protection/snapmirror-active-sync.html" 
+     - title: Prepare AIX hosts
+       url: "/data-protection/prepare-aix-snapmirror-active-sync.html"  
      - title: Prepare to configure SnapMirror active sync
        url: "/data-protection/snapmirror-active-sync-prepare.html"
      - title: Confirm your cluster configuration
