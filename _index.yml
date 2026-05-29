@@ -39,12 +39,9 @@ indexpage:
           url: https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf
         - title: Best practices for NetApp ASA systems
           url: https://www.netapp.com/pdf.html?item=/media/137426-tr-5009-best-practices-for-netapp-asa.pdf 
-        - title: FlexPod on NetApp ASA  
-          url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf
         - title: REST API transition guide
           url: https://www.netapp.com/media/136585-tr-5008-restfulapi-transition-guide-asa-r2.pdf
-        - title: SnapCenter operations for ASA r2 systems
-          url: https://docs.netapp.com/us-en/snapcenter/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html        
+      
         - title: Oracle database performance on NetApp ASA 
           url: https://www.netapp.com/pdf.html?item=/media/138087-tr-5015-oracle-perf-on-asa.pdf
         - title: SAP HANA on NetApp ASA systems with FCP 
@@ -53,6 +50,10 @@ indexpage:
       links:
         - title: Documentation for other ONTAP systems 
           url: https://docs.netapp.com/us-en/ontap-family/
+        - title: FlexPod on NetApp ASA  
+          url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf  
+        - title: SnapCenter operations for ASA r2 systems
+          url: https://docs.netapp.com/us-en/snapcenter/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html                    
         - title: Learn about the advantages of using ONTAP for vSphere
           url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html
         - title: VMware Live Site Recovery with ONTAP 
