@@ -14,6 +14,8 @@ Instead of aggregates, the storage layer in ASA r2 systems use storage availabil
 
 Because of this simplified approach to storage management, `storage aggregate` commands are not supported on ASA r2 systems.  Support for certain `lun`, `storage` and `volume` commands and parameters is also limited.  
 
+Unless listed as unsupported, all other commands in the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] are supported for ASA r2 systems.
+
 The following commands and command sets are not supported on ASA on r2:
 
 .Unsupported `lun` commands
@@ -139,9 +141,6 @@ The `volume modify` command is not available when used in conjunction with the f
 * `volume snapshot policy modify`
 ====
 
-.For more information
-
-See the link:https://docs.netapp.com/us-en/ontap-cli/[ONTAP command reference] for a full list of supported commands
 
 == Set up an ONTAP ASA r2 cluster using the CLI
 
@@ -241,6 +240,7 @@ Cluster time-service ntp show
 .What's next?
 You are ready to link:../install-setup/set-up-data-access.html[set up data access] from your SAN clients to your system.
 
+// 2026 May 29, ONTAPDOC-3900
 // 2025 July 24, ONTAPDOC-2693
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Jan 25, ONTAPDOC 2260
