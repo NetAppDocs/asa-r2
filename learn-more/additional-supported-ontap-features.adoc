@@ -87,6 +87,13 @@ Adaptive and non-adaptive QoS policy groups are automatically enabled to tempora
 
 link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html[Learn more about QoS throughput ceilings^].
 
+=== IPspace TCP performance
+
+Beginning with ONTAP 9.19.1, ONTAP improves TCP data transfer performance over lossy, high-latency WAN links by integrating two loss-recovery features, PRR and RACK, into the ONTAP TCP stack. PRR is suitable for all networks and is enabled by default. RACK is suitable for congested networks with link speeds of approximately 25 Gigabits/second and is disabled by default. 
+
+link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html[Learn more about improving TCP WAN performance with PRR and RACK].
+
+
 == SAN configuration
 A storage area network (SAN) consists of a storage solution connected to hosts over a SAN transport protocol such as iSCSI or FC. You can configure your SAN so that your storage solution attaches to your hosts through one or more switches. If you are using iSCSI, you can also configure your SAN so that your storage solution attaches directly to your host without using a switch.
 
@@ -128,4 +135,5 @@ You can search for various actions, objects,and information topics in System Man
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
 
+//2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677, ONTAPDOC-3883
