@@ -22,6 +22,7 @@ When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the 
 * FabricPool
 * LUN thick provisioning 
 * MetroCluster 
+* NetApp Aggregate Encryption (NAE)
 * Object protocols
 * ONTAP S3 SnapMirror and S3 APIs
 
@@ -33,7 +34,7 @@ link:../secure-data/ransomware-protection.html[Learn how to lock snapshots] on y
 
 * Dual-layer encryption
 +
-link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.
+ASA r2 systems support hardware encryption using self-encrypting drives (SEDs) and software encryption using NetApp Volume Encryption (NVE) technology.  link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.
 
 == Support for SnapMirror replication
 
@@ -51,6 +52,7 @@ Learn more about link:../data-protection/pre-defined-protection-policies.html[Sn
 
 * See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
 
+// 2026 Jun 30, ONTAPDOC 3771
 // 2025 Oct 30, ONTAPDOC 2893
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Mar 10, GitIssue 34
