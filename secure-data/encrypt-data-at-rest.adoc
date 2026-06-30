@@ -14,12 +14,15 @@ When you encrypt data at rest, it can’t be read if a storage medium is repurpo
 
 NetApp Storage Encryption (NSE) supports hardware encryption using self-encrypting drives (SEDs).  SEDs encrypt data as it is written. Each SED contains a unique encryption key.  Encrypted data stored on the SED can’t be read without the SED's encryption key. Nodes attempting to read from an SED must be authenticated to access the SED's encryption key.  Nodes are authenticated by obtaining an authentication key from a key manager, then presenting the authentication key to the SED.  If the authentication key is valid, the SED will give the node its encryption key to access the data it contains.  
 
-[NOTE]
-In ASA r2 systems, SEDs are supported only for NVMe based SSD's.  
+NOTE: In ASA r2 systems, SEDs are supported only for NVMe based SSD's.  
 
 Use the ASA r2 onboard key manager or an external key manager to serve authentication keys to your nodes.
 
-In addition to NSE, you can also enable software encryption to add another layer of security to your data.
+In addition to NSE, you can also enable software encryption to add another layer of security to your data. ASA r2 systems use NetApp Volume Encryption (NVE) technology to encrypt data at the software level.  NetApp Aggregate Encryption (NAE) is not supported on ASA r2 systems because the storage layer in ASA r2 systems uses storage availability zones instead of aggregates.  
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html[NetApp Volume Encryption^].
+
+Learn more about link:https://docs.netapp.com/us-en/asa-r2/learn-more/hardware-comparison.html[the differences between ASA r2 systems and other ONTAP systems].
 
 .Steps
 
@@ -54,6 +57,7 @@ a|
 
 Now that you have encrypted your data at rest, if you are using the NVMe/TCP protocol, you can link:nvme-tcp-connections.html[encrypt all the data sent over the network] between your NVMe/TCP host and your ASA r2 system.
 
+// 2026 Jun 30, ONTAPDOC 3771
 // 2025 Dec 09, ONTAPDOC 3547
 // 2025, Aug 12, ONTAPDOC 3051
 // 2024 Nov 07, ONTAPDOC 2256
