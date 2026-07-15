@@ -16,7 +16,7 @@ View short videos that demonstrate how to use ONTAP System Manager to quickly an
 You can use ONTAP System Manager to quickly and easily configure your SAN protocols. In this example, we’ll configure IP addresses for iSCSI network interfaces.
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto]
+video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto, title="Configure SAN protocols on your ASA r2 system"]
 link:video_transcript_configure_san_protocols.html[Video transcript]
 // End snippet
 
@@ -24,7 +24,7 @@ link:video_transcript_configure_san_protocols.html[Video transcript]
 You can use ONTAP System Manager to quickly and easily provision storage units for hosts on your ASA r2 storage system. In this example, we'll create six new storage units for a VMware host.
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto]
+video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto, title="Provision SAN storage on your ASA r2 system"]
 link:video_transcript_provision_san_storage.html[Video transcript]
 // End snippet
 
