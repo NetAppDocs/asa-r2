@@ -11,7 +11,7 @@ summary: "If a storage availability zone is running low on space, you can move s
 [.lead]
 Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual machine (VM) from any standard ASA cluster to any ASA r2 cluster. Migrating from a standard ASA cluster to an ASA r2 cluster allows you to adopt the simplified and streamlined architecture of ASA r2 systems for SAN-only environments.
 
-NOTE: ASA r2 systems do not support MetroCluster configurations, so you cannot migrate a storage VM from an ASA MetroCluster to an ASA r2 cluster.
+NOTE: You cannot migrate a storage VM from an ASA MetroCluster to an ASA r2 cluster. ASA r2 systems do not support MetroCluster configurations.
 
 Storage VM migration between ASA and ASA r2 storage systems is supported as follows:
 
