@@ -13,20 +13,23 @@ summary: View short videos that demonstrate how to use ONTAP System Manager to q
 View short videos that demonstrate how to use ONTAP System Manager to quickly and easily perform common task on your ASA r2 storage systems.
 
 == Configure SAN protocols on your ASA r2 system
+You can use ONTAP System Manager to quickly and easily configure your SAN protocols. In this example, we’ll configure IP addresses for iSCSI network interfaces.
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto, title="Configure SAN protocols on your ASA r2 system"]
+video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto]
 link:video_transcript_configure_san_protocols.html[Video transcript]
 // End snippet
 
 == Provision SAN storage on your ASA r2 system
+You can use ONTAP System Manager to quickly and easily provision storage units for hosts on your ASA r2 storage system. In this example, we'll create six new storage units for a VMware host.
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
-video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto, title="Provision SAN storage on your ASA r2 system"]
+video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto]
 link:video_transcript_provision_san_storage.html[Video transcript]
 // End snippet
 
 == Replicate data to a remote cluster from an ASA r2 storage system
+You can use ONTAP System Manager to protect your data by scheduling snapshots of your storage units or consistency groups and replicating to a remote location. In this example we’ll schedule snapshots for existing storage units.
 // Start snippet: Video hosted on Panopto
 // 2 placeholders: panopto-id and "Link text"
 video::4b78312d-1bfa-4df5-afac-b1f0014ef80e[panopto]
