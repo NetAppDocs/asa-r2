@@ -91,7 +91,7 @@ link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-
 
 Beginning with ONTAP 9.19.1, ONTAP improves TCP data transfer performance over lossy, high-latency WAN links by integrating two loss-recovery features, PRR and RACK, into the ONTAP TCP stack. PRR is suitable for all networks and is enabled by default. RACK is suitable for congested networks with link speeds of approximately 25 Gigabits/second and is disabled by default. 
 
-link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html[Learn more about improving TCP WAN performance with PRR and RACK].
+link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html[Learn more about improving TCP WAN performance with PRR and RACK^].
 
 
 == SAN configuration
