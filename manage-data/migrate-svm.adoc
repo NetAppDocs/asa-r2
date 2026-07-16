@@ -9,7 +9,9 @@ summary: "If a storage availability zone is running low on space, you can move s
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual machine (VM) from any ASA cluster to any ASA r2 cluster. Migrating from an ASA cluster to an ASA r2 cluster allows you to adopt the simplified and streamlined architecture of ASA r2 systems for SAN-only environments.
+Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual machine (VM) from any standard ASA cluster to any ASA r2 cluster. Migrating from a standard ASA cluster to an ASA r2 cluster allows you to adopt the simplified and streamlined architecture of ASA r2 systems for SAN-only environments.
+
+NOTE: You cannot migrate a storage VM from an ASA MetroCluster to an ASA r2 cluster. ASA r2 systems do not support MetroCluster configurations.
 
 Storage VM migration between ASA and ASA r2 storage systems is supported as follows:
 
@@ -41,7 +43,6 @@ a|
 * ASA A20
 |===
 
-[NOTE]
 For the most current list of ASA and ASA r2 systems, see link:https://hwu.netapp.com/[NetApp Hardware Universe^]. ASA r2 systems are listed in NetApp Hardware Universe as "ASA A-Series/C-Series (New)".
 
 You can migrate a storage VM to an ASA r2 cluster from an ASA cluster only.  Migration from any other type of ONTAP system is not supported.
@@ -225,4 +226,5 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cut over your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
 
+// 2026 Jul 15, GitHub Issue 119
 // 2025 Nov 06, ONTAPDOC-3345
