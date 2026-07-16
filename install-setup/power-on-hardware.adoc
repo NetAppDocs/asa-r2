@@ -150,11 +150,11 @@ image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[Console con
 
 .A1K
 --
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+image::../media/drw_a1k_70-90_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
 --
 .A70 and A90
 --
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
+image::../media/drw_a1k_70-90_power_source_icon_ieops-1700.svg[A1K storage system and A70 or A90 power connection diagram]
 --
 .A20, A30, and A50
 --
