@@ -19,7 +19,7 @@ On ASA r2 systems, SnapMirror active sync supports symmetric active/active confi
 
 * Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on four-node configurations.  In ONTAP 9.17.1, SnapMirror active sync is supported on two-node configurations only.
 
-* Beginning with ONTAP 9.19.1 RC, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units. For ARP/AI enablement steps, see link:../secure-data/enable-anti-ransomware-protection.html[Enable Autonomous Ransomware Protection with AI].
+* Beginning with ONTAP 9.19.1, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units. For ARP/AI enablement steps, see link:../secure-data/enable-anti-ransomware-protection.html[Enable Autonomous Ransomware Protection with AI].
 
 .Before you begin
 
