@@ -74,49 +74,20 @@ Learn more about link:../administer/manage-client-vm-access.html[storage VMs for
 
 == Step 3: Create a replication relationship
 
-A snapshot replication relationship establishes a connection between your ASA r2 system and a remote location so that you can replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration. 
+A snapshot replication relationship establishes a connection between your ASA r2 system and a remote location so that you can replicate consistency groups to a remote cluster. Replicated consistency groups can be used for disaster recovery or for data migration.
 
-For protection against ransomware attacks, when you set up your replication relationship, you can select to lock the destination snapshots. Locked snapshots cannot be deleted accidentally or maliciously.  You can use locked snapshots to recover data if a storage unit is compromised by a ransomware attack.
+For added security against ransomware attacks, create a SnapLock for SnapVault replication relationship.
 
 .Before you begin
 
 * link:pre-defined-protection-policies.html[Learn about replication policies].
 +
-When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy.
-* If you want to lock your destination snapshots, you must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot compliance clock] before you create the replication relationship.
+When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy. 
 
-Create a replication relationship with or without locked destination snapshots.
+=== Create a relationship to replicate snapshots to a remote cluster
 
-// start tabbed area
+Protect your data by replicating snapshots to a remote cluster.  Replicated snapshots of your consistency groups can be used for disaster recovery or for data migration.
 
-[role="tabbed-block"]
-====
-
-.With locked snapshots
---
-.Steps
-
-. In System Manager, select *Protection > Consistency groups*.
-. Select a consistency group.
-. Select image:icon_kabob.gif[three vertical blue dots]; then select *Protect*.
-. Under *Remote protection*, select *Replicate to a remote cluster*.
-. Select the *Replication policy*.
-+
-You must select a _vault_ replication policy.
-. Select *Destination settings*.
-. Select *Lock destination snapshots to prevent deletion*
-. Enter the maximum and minimum data retention period.
-. To delay the start of the data transfer, deselect *Start transfer immediately*.
-+ 
-The initial data transfer begins immediately by default.  
-. Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
-+
-Your transfer schedule must be a minimum of 30 minutes to be supported.
-. Select *Save*. 
---
-
-.Without locked snapshots
---
 .Steps
 
 . In System Manager, select *Protection > Replication*.
@@ -146,16 +117,40 @@ a|
 |===
 
 . Select a replication policy.
-. To delay the start of the data transfer, select *Destination settings*; then deselect *Start transfer immediately*.
+. To delay the start of the data transfer, select *Destination settings* and then deselect *Start transfer immediately*.
 + 
 The initial data transfer begins immediately by default.  
 . Optionally, to override the default transfer schedule, select *Destination settings*, then select *Override transfer schedule*.
 +
 Your transfer schedule must be a minimum of 30 minutes to be supported.
-. Select *Save*. 
+. Select *Save*.
 
---
-====
+== Create a SnapLock for SnapVault replication relationship
+For protection against ransomware attacks, when you set up your replication relationship, you can enable SnapLock for SnapVault by selecting the a vault replication policy and then selecting to lock the destination snapshots. Snapshots protected by SnapLock for SnapVault cannot be deleted accidentally or maliciously. 
+
+NOTE: ASA r2 systems do not support SnapLock Compliance mode or SnapLock Enterprise mode.  Creating a SnapLock for SnapVault replication relationship only enables the locking of destination snapshots; it does not enable SnapLock Compliance or Enterprise mode.
+
+.Before you begin
+
+You must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot Compliance Clock].
+
+.Steps
+
+. In System Manager, select *Protection > Consistency groups*, and then select a consistency group.
+. Select image:icon_kabob.gif[three vertical blue dots], and then select *Protect*.
+. Under *Remote protection*, select *Replicate to a remote cluster*.
+. Select the *Replication policy*.
++
+You must select a _vault_ replication policy.
+. Select *Destination settings*, and then select *Lock destination snapshots to prevent deletion*
+. Enter the maximum and minimum data retention period.
+. To delay the start of the data transfer, deselect *Start transfer immediately*.
++ 
+The initial data transfer begins immediately by default.  
+. Optionally, to override the default transfer schedule, select *Destination settings*, and then select *Override transfer schedule*.
++
+Your transfer schedule must be a minimum of 30 minutes to be supported.
+. Select *Save*. 
 
 .What's next?
 
@@ -176,6 +171,7 @@ Optionally, validate that you can successfully serve data from replicated storag
 
 Now that your data is protected with snapshot replication for disaster recovery, you should link:../secure-data/encrypt-data-at-rest.html[encrypt your data at rest] so that it can't be read if a disk in your ASA r2 system is repurposed, returned, misplaced or stolen.
 
+// 2026 Aug 8, ONTAPDOC 3890
 // 2025 Oct 30, ONTAPDOC 2893
 // 2025 Sept 04, ONTAPDOC 2732
 // 2025 Sept 04, ONTAPDOC 2893
