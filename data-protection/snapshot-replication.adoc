@@ -142,7 +142,7 @@ You must link:../secure-data/ransomware-protection.html#initialize-the-snaplock-
 . Select the *Replication policy*.
 +
 You must select a _vault_ replication policy.
-. Select *Destination settings*, and then select *Lock destination snapshots to prevent deletion*
+. Select *Destination settings*, and then select *Lock destination snapshots to prevent deletion*.
 . Enter the maximum and minimum data retention period.
 . To delay the start of the data transfer, deselect *Start transfer immediately*.
 + 
