@@ -93,7 +93,14 @@ A LIF (network interface) is an IP address associated with a physical or logical
 
 On an ASA r2 system, you can create IP, FC, and NVMe/FC LIFs.  An IP data LIF can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
 
-If you want to enable automatic iSCSI LIF failover, you must create an IP LIF for iSCSI only traffic.  When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the IP iSCSI LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port for an IP iSCSI LIF becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
+.LIF failover on ASA r2 systems
+
+Beginning with ONTAP 9.19.1, default automatic LIF failover is supported for iSCSI, NVMe/TCP and shared IP LIFs. When automatic LIF failover is enabled, if a storage failover occurs, the LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
+
+In ONTAP 9.18.1 and earlier, automatic LIF failover is not supported for NVMe/TCP LIFs or for shared IP LIFs. It is enabled by default when you create iSCSI-only LIFs if there are no pre-existing iSCSI LIFs on the storage VM that are not enabled for automatic LIF failover. If there are iSCSI-only LIFs on the storage VM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled either. In such cases, you must first delete the existing iSCSI-only LIFs and then recreate them with automatic LIF failover.
+
+Persistent ports are used for failover of FC and NVMe/FC LIFs.
+
 
 .Before you begin
 
@@ -125,7 +132,7 @@ You can use the ONTAP command line interface (CLI) to create an iSCSI-only LIF w
 
 === Create a custom iSCSI-only LIF service policy
 
-If you would like to create iSCSI-only LIFs with automatic LIF failover, you must first create a custom iSCSI-only LIF service policy.  
+If you want to enable automatic iSCSI LIF failover in ONTAP 9.18.1 or earlier, you must first create a custom iSCSI-only LIF service policy.  
  
 You must use the ONTAP command line interface (CLI) to create the custom service policy.
 
@@ -161,7 +168,7 @@ set -privilege admin
 
 === Create iSCSI-only LIFs with automatic LIF failover 
 
-If there are iSCSI LIFs on the storage VM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled for automatic LIF failover either. If automatic LIF failover is not enabled and there is a failover event your iSCSI LIFs will not migrate. 
+In ONTAP 9.18.1 and earlier, automatic LIF failover is enabled by default when you create iSCSI-only LIFs if all other iSCSI LIFs on the storage VM are also enabled for automatic LIF failover. If there are iSCSI-only LIFs on the storage VM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled for automatic LIF failover either. 
 
 .Before you begin
 
@@ -224,6 +231,7 @@ ONTAP utilizes Network Time Protocol (NTP) to synchronize time across the cluste
 
 Your LIF has been modified.
 
+// 2026, Aug 07, ONTAPDOC-3890/3573
 // 2025 Sept 11, ONTAPDOC-3300
 // 2025 July 24, GitIssue 49
 // 2025 May 16, GitIssue 49
