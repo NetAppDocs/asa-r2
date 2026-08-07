@@ -28,7 +28,7 @@ Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/#key
 
 . In System Manager, select *Protection > Consistency groups*.
 . Hover over the name of the consistency group you want to protect with SnapMirror active sync.
-. Select image:icon_kabob.gif[three vertical blue dots]and then select *Protect*.
+. Select image:icon_kabob.gif[three vertical blue dots], and then select *Protect*.
 . Under *Remote protection*, select *Replicate to a remote cluster*.
 . Select an existing cluster peer or choose to *Add a new one*.
 . Select the storage VM.
