@@ -13,45 +13,39 @@ While ASA r2 systems offers a wide range of support for SAN solutions, certain O
 
 .ASA r2 systems do not support the following:
 
-* Default automatic iSCSI LIF failover
-+
-In ASA r2 systems, the default networking LIF is shared between NVMe and SCSI hosts, so doesn't support automatic failover.  To enable automatic iSCSI LIF failover, you must link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[create an iSCSI only LIF].  Automatic failover is enabled on iSCSI only LIFS by default.  
-+
-When automatic iSCSI LIF failover is enabled, if a storage failover occurs, the iSCSI LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port for an iSCSI LIF becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
-
 * FabricPool
 * LUN thick provisioning 
 * MetroCluster 
 * NetApp Aggregate Encryption (NAE)
 * Object protocols
 * ONTAP S3 SnapMirror and S3 APIs
+* SnapLock
++
+SnapLock Compliance and Enterprise mode are not supported on primary clusters in SAN environments.  SnapLock for SnapVault is supported on secondary clusters.
+
+* SnapMirror replication is supported on ASA r2 systems with the following limitations:
+
+** SnapMirror synchronous replication is not supported.
+
+** SnapMirror asynchronous replication is supported only between two ASA r2 systems.  SnapMirror asynchronous replication is not supported between an ASA r2 system and an ASA, AFF or FAS system or the cloud.
++
+Learn more about link:../data-protection/pre-defined-protection-policies.html[SnapMirror replication policies supported on ASA r2 systems].
+** SnapMirror active sync is supported only between two ASA r2 systems.
++
+Learn more about link:../data-protection/snapmirror-active-sync.html[SnapMirror active sync on ASA r2 systems].
 
 .ASA r2 systems support the following:
-
-* Snaplock
-+
-link:../secure-data/ransomware-protection.html[Learn how to lock snapshots] on your ASA r2 system.
 
 * Dual-layer encryption
 +
 ASA r2 systems support hardware encryption using self-encrypting drives (SEDs) and software encryption using NetApp Volume Encryption (NVE) technology.  link:../secure-data/encrypt-data-at-rest.html[Learn how to apply dual-layer encryption] to data on your ASA r2 system.
 
-== Support for SnapMirror replication
-
-SnapMirror replication is supported on ASA r2 systems with the following limitations:
-
-* SnapMirror synchronous replication is not supported.
-* SnapMirror active sync is supported only between two ASA r2 systems.
-+
-Learn more about link:../data-protection/snapmirror-active-sync.html[SnapMirror active sync on ASA r2 systems].
-* SnapMirror asynchronous replication is supported only between two ASA r2 systems.  SnapMirror asynchronous replication is not supported between an ASA r2 system and an ASA, AFF or FAS system or the cloud.
-+
-Learn more about link:../data-protection/pre-defined-protection-policies.html[SnapMirror replication policies supported on ASA r2 systems].
 
 .For more information
 
 * See the link:https://hwu.netapp.com/[NetApp Hardware Universe^] for more information on ASA r2 hardware support and limitations.
 
+// 2026, Aug 07, ONTAPDOC-3890
 // 2026 Jun 30, ONTAPDOC 3771
 // 2025 Oct 30, ONTAPDOC 2893
 // 2025 June 04, ONTAPDOC-2994
