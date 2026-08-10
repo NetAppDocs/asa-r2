@@ -1,4 +1,4 @@
 ---
 permalink: secure-data/ransomware-protection.html
-redirect: ontap/secure-data/snaplock.html
+redirect: asa-r2/secure-data/snaplock.html
 ---
