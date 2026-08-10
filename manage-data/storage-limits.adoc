@@ -21,7 +21,7 @@ NOTE: ASA r2 systems are listed in NetApp Hardware Universe under *Products* as 
 . Select *Products*.
 . Under *Platforms*, select *ASA* as your system type.
 . Select your specific system, and then select your ONTAP version.
-. Select *Show Results*
+. Select *Show Results*.
 
 .Results
 The supported limits for your specific ASA r2 system and ONTAP version are displayed.
