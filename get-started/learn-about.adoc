@@ -40,7 +40,7 @@ ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).  All pr
 
 * Learn more about link:https://docs.netapp.com/us-en/ontap/san-admin/multipath-automatic-lif-failover-support.html[SAN multipath support^].
 * Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/configure-iscsi-san-hosts-ha-pairs-reference.html[configurations for iSCSI and NVMe/TCP protocols^].
-* Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html[configurations for FC and NVMe/FC protocols.^]
+* Learn more about link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html[configurations for FC and NVMe/FC protocols^].
 
 ASA r2 systems do not support cluster mixing with ASA, AFF, or FAS systems.
 
