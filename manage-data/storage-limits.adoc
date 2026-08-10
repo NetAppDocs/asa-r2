@@ -4,7 +4,7 @@ permalink: manage-data/storage-limits.html
 keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30
 summary: "For optimal performance, configuration and support, you should be aware of ASA r2 storage limits."
 ---
-= ASA r2 storage limits
+= Determine your ASA r2 system storage limits
 :icons: font
 :imagesdir: ../media/
 
@@ -15,6 +15,16 @@ Limits might vary based upon your ASA r2 system and your ONTAP version. Refer to
 
 NOTE: ASA r2 systems are listed in NetApp Hardware Universe under *Products* as "ASA" platforms.
 
+.Steps
+ 
+. Go to link:https://hwu.netapp.com[NetApp Hardware Universe^].
+. Select *Products*.
+. Under *Platforms*, select *ASA* as your system type.
+. Select your specific system, and then select your ONTAP version.
+. Select *Show Results*
+
+.Results
+The supported limits for your specific ASA r2 system and ONTAP version are displayed.
 
 // 2026 Aug 7, GitIssue 124 and 123
 // 2025 Dec 16, ONTAPDOC-3400

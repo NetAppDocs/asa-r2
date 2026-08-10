@@ -1,15 +1,15 @@
 section: learn-more
 title: Learn more
 entries:
-- title: ASA r2 for ONTAP power users 
-  entries: 
-  - title: Compare hardware systems
-    url: "/learn-more/hardware-comparison.html"
-  - title: Software support and limitations
-    url: "/learn-more/software-support-limitations.html"  
+- title: Compare hardware systems
+  url: "/learn-more/hardware-comparison.html"   
+- title: Support for common ONTAP features
+  url: "/learn-more/additional-supported-ontap-features.html"    
+- title: Software support and limitations
+  url: "/learn-more/software-support-limitations.html"     
+- title: ASA r2 CLI and REST API support for ONTAP power users 
+  entries:  
   - title: CLI support
     url: "/learn-more/cli-support.html"
   - title: REST API support
     url: "/learn-more/rest-api-support.html"
-- title: Support for common ONTAP features
-  url: "/learn-more/additional-supported-ontap-features.html"  
