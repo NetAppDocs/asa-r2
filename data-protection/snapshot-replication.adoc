@@ -125,7 +125,7 @@ The initial data transfer begins immediately by default.
 Your transfer schedule must be a minimum of 30 minutes to be supported.
 . Select *Save*.
 
-What's next?
+.What's next?
 Now that you have created a replication policy and relationship, your initial data transfer begins as defined in your replication policy. You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 system goes offline.
 
 === Create a relationship to replicate snapshots with SnapLock for SnapVault
