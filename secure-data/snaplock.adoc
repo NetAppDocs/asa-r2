@@ -34,7 +34,8 @@ If you want to protect destination snapshots on a secondary system with SnapLock
 
 .What’s next?
 
-After you have initialized the SnapLock Compliance Clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html#create-a-snaplock-for-snapvault-replication-relationship[create a replication relationship with SnapLock for SnapVault].
+After you have initialized the SnapLock Compliance Clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html[create a replication relationship with SnapLock for SnapVault].
+
 
 // 2026 Aug 8, ONTAPDOC 3890
 // 2024 Sept 24, ONTAPDOC 1928
