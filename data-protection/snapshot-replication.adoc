@@ -135,7 +135,7 @@ NOTE: ASA r2 systems do not support SnapLock Compliance mode or SnapLock Enterpr
 
 .Before you begin
 
-You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot Compliance Clock].
+You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the SnapLock Compliance Clock].
 
 .Steps
 
