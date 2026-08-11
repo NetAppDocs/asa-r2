@@ -25,7 +25,7 @@ You can disable the default enablement during or after the initial 12-hour grace
 . Select *Cluster > Settings*.
 . Disable ARP:
 * To disable during the 12-hour grace period:
-.. Under *Anti-ransomware*, select *Don't enable* and then select *Disable*.
+.. Under *Anti-ransomware*, select *Don't enable*, and then select *Disable*.
 
 * To disable after the 12-hour grace period: 
 .. Under *Anti-ransomware*, select image:icon_pencil.gif[Edit] and then deselect *Enable for new storage units*.
