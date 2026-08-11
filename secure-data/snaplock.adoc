@@ -13,7 +13,7 @@ ONTAP SnapLock is a high-performance compliance solution for organizations that 
 
 The SnapLock Compliance Clock must be initialized to protect snapshots on your secondary systems with SnapLock for SnapVault.
 
-.Related inforamtion
+.Related information
 
 * Learn more about link:https://docs.netapp.com/us-en/ontap/san-admin/configure-backup-vaults-san-environment-concept.html[SnapLock for SnapVault in SAN environments^].
 * Learn more about link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^].

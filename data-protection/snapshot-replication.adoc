@@ -125,8 +125,8 @@ The initial data transfer begins immediately by default.
 Your transfer schedule must be a minimum of 30 minutes to be supported.
 . Select *Save*.
 
-What's next?
-Now that you have created a replication relationship, your initial data transfer begins as defined in your replication policy. You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 system goes offline.
+.What's next?
+Now that you have created a replication policy and relationship, your initial data transfer begins as defined in your replication policy. You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 system goes offline.
 
 === Create a relationship to replicate snapshots with SnapLock for SnapVault
 For protection against ransomware attacks, when you set up your replication relationship, you can enable SnapLock for SnapVault by selecting a vault replication policy, and then selecting to lock the destination snapshots. Snapshots protected by SnapLock for SnapVault cannot be deleted accidentally or maliciously. 
@@ -135,7 +135,7 @@ NOTE: ASA r2 systems do not support SnapLock Compliance mode or SnapLock Enterpr
 
 .Before you begin
 
-You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the Snapshot Compliance Clock].
+You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the SnapLock Compliance Clock].
 
 .Steps
 
