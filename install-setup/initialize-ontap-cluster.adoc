@@ -47,7 +47,7 @@ System Manager opens.
 +
 The password must be at least eight characters long and must contain at least one letter and one number.
 
-. Reenter the password to confirm and then select *Continue*.
+. Reenter the password to confirm, and then select *Continue*.
 
 . Under *Network addresses*, enter a storage system name or accept the default name.
 +

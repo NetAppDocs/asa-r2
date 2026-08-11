@@ -1,120 +1,32 @@
 ---
 sidebar: sidebar
 permalink: manage-data/storage-limits.html
-keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20,asa c30
+keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30
 summary: "For optimal performance, configuration and support, you should be aware of ASA r2 storage limits."
 ---
-= ASA r2 storage limits
+= Determine your ASA r2 system storage limits
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-For optimal performance, configuration and support, you should be aware ofASA r2 storage limits.
+For optimal performance, configuration and support, you should be aware of ASA r2 storage limits.
 
-For a complete list of the most current ASA r2 storage limits, see link:https://hwu.netapp.com/[NetApp Hardware Universe^]. 
+Limits might vary based upon your ASA r2 system and your ONTAP version. Refer to link:https://hwu.netapp.com/[NetApp Hardware Universe^] for a complete list of the most current limits for your specific system.  
 
-ASA r2 systems support the following storage limits:
+NOTE: ASA r2 systems are listed in NetApp Hardware Universe under *Products* as "ASA" platforms.
 
-[cols="3", options="header"]
-|===
+.Steps
+ 
+. Go to link:https://hwu.netapp.com[NetApp Hardware Universe^].
+. Select *Products*.
+. Under *Platforms*, select *ASA* as your system type.
+. Select your specific system, and then select your ONTAP version.
+. Select *Show Results*.
 
-| 
-| Maximum per HA pair
-| Maximum per cluster
+.Results
+The supported limits for your specific ASA r2 system and ONTAP version are displayed.
 
-| Consistency groups
-| 256
-| 256
-
-| Enterprise applications
-| 100
-| 350
-
-| Nodes
-| 2
-| 12
-
-| Replication groups
-| 50
-| 50
-
-| Storage availability zone size
-| 2 PB
-| 2 PB
-
-| Storage units
-| 10,000
-| 30,000
-
-| Storage unit size
-| 128 TB
-| 128 TB
-
-| Storage units per consistency group
-| 256
-| 256
-
-| Child consistency groups per parent consistency group
-| 64
-| 64
-
-| Storage virtual machines
-a| 
-* 256 (ONTAP 9.18.1 and later)
-* 32 (ONTAP 9.17.1 and earlier)
-a|
-* 256 (ONTAP 9.18.1 and later)
-* 32 (ONTAP 9.17.1 and earlier)
-
-| Virtual machines
-| 800
-| 1200
-
-// table end
-|===
-
-== Limits for SnapMirror asynchronous relationships
-
-The following limits apply to storage units and consistency groups in a SnapMirror asynchronous replication relationship.  For a complete list of the most current ASA r2 storage limits, link:https://hwu.netapp.com/[NetApp Hardware Universe^].
-
-[cols="3", options="header"]
-|===
-
-| Limit maximum
-| Per HA pair   
-| Per cluster
-
-| Consistency groups
-| 250
-| 750
-
-| Storage units
-| 4,000
-| 6,000
-
-
-|===
-
-== Limits for SnapMirror active sync relationship
-
-The following limits apply to storage units and consistency groups in a SnapMirror active sync replication relationship. SnapMirror active sync is supported beginning with ONTAP 9.17.1 on two-node clusters only. Beginning with ONTAP 9.18.1, SnapMirror active sync is supported on four-node clusters.
-
-For a complete list of the most current ASA r2 storage limits, link:https://hwu.netapp.com/[NetApp Hardware Universe^].
-
-[cols="2", options="header"]
-|===
-
-| Limit maximum
-| Per HA pair
-
-| Consistency groups
-| 50
-
-| Storage units
-| 400
-
-|===
-
+// 2026 Aug 7, GitIssue 124 and 123
 // 2025 Dec 16, ONTAPDOC-3400
 // 2025 Nov 06, ONTAPDOC-3264, ONTAPDOC-3358
 // 2025 Oct 10, ONTAPDOC-3400

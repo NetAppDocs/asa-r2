@@ -38,7 +38,7 @@ indexpage:
         - title: ASA datasheet 
           url: https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf
         - title: Best practices for NetApp ASA systems
-          url: https://www.netapp.com/pdf.html?item=/media/137426-tr-5009-best-practices-for-netapp-asa.pdf 
+          url: https://www.netapp.com/pdf.html?item=/media/138231-tr-5009-best-practices-for-netapp-asa.pdf
         - title: REST API transition guide
           url: https://www.netapp.com/media/136585-tr-5008-restfulapi-transition-guide-asa-r2.pdf
       
