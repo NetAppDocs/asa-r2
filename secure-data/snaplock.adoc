@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: secure-data/snaplock.html
+keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection, snaplock, snaplock compliance, snaplock enterprise, snaplock compliance clock
+summary: "Use tamper-proof snapshots to secure your data.  Tamper-proof snapshots can’t be deleted and can be used to recover data compromised by a ransomware attack." 
+---
+= Learn about SnapLock data protection for ASA r2 storage systems 
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP SnapLock is a high-performance compliance solution for organizations that use WORM storage to retain files in unmodified form for regulatory and governance purposes. You can run SnapLock in Compliance or Enterprise mode, which offer different levels of WORM data protection. SnapLock Compliance and Enterprise modes are not supported on primary clusters in  SAN environments, but you can enable SnapLock for SnapVault on your secondary systems to protect secondary snapshots from accidental or malicious deletion.
+
+The SnapLock Compliance Clock must be initialized to protect snapshots on your secondary systems with SnapLock for SnapVault.
+
+.Related information
+
+* Learn more about link:https://docs.netapp.com/us-en/ontap/san-admin/configure-backup-vaults-san-environment-concept.html[SnapLock for SnapVault in SAN environments^].
+* Learn more about link:https://docs.netapp.com/us-en/ontap/snaplock/index.html[ONTAP SnapLock^].
+
+
+== Initialize the SnapLock Compliance Clock
+
+If you want to protect destination snapshots on a secondary system with SnapLock for SnapVault, you must first initialize the SnapLock Compliance Clock on your local and destination clusters.
+
+.Steps
+
+. Select *Cluster > Overview*.
+. In the *Nodes* section, select *Initialize SnapLock Compliance Clock*.
+. Select *Initialize*.
+. Verify that the Compliance Clock is initialized.
+.. Select *Cluster > Overview*.   
+.. In the *Nodes* section, select image:icon_show_hide.png[three blue columns on white background]; then select *SnapLock Compliance Clock*.
+
+.What’s next?
+
+After you have initialized the SnapLock Compliance Clock on your local and destination clusters, you are ready to  link:../data-protection/snapshot-replication.html[create a replication relationship with SnapLock for SnapVault].
+
+
+// 2026 Aug 8, ONTAPDOC 3890
+// 2024 Sept 24, ONTAPDOC 1928

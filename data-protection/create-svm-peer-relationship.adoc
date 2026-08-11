@@ -24,5 +24,6 @@ You must have established a cluster peer relationship between the local and remo
 . Select the storage VM on the local cluster; then select the storage VM on the remote cluster.
 . Select *Add a storage VM peer*.
 
+
 // 2025 Jul 24, ONTAPDOC-2707
 // 2024 Sept 24, ONTAPDOC 1927

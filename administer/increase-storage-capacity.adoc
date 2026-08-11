@@ -29,7 +29,7 @@ You have confirmed that your new drive is supported and you know the appropriate
 
 == Install a new drive on the ASA r2
 
-The minimum number of drives you should add in a single procedure is six.  Adding a single drive might reduce performance.
+The minimum number of drives you should add in a single procedure is three.  Adding a single drive might reduce performance.
 
 .About this task
 You should repeat the steps in this procedure for each drive.
@@ -58,6 +58,7 @@ The new drives are not recognized until they are assigned to a node.
 After the new drives have been recognized, verify that they have been added and their ownership is specified correctly.
 
 
+// 2026 Aug 07, GitIssue 122
 // 2025 June 04 ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
 // 2025 Jan 25, ONTAPDOC 2260
