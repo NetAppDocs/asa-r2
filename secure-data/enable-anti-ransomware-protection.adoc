@@ -20,7 +20,7 @@ No ransomware detection or prevention system can completely guarantee safety fro
 
 * ARP/AI support is included with the link:https://kb.netapp.com/onprem/ontap/os/ONTAP_9.10.1_and_later_licensing_overview[ONTAP One license].
 
-* Beginning with ONTAP 9.19.1 RC, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units.
+* Beginning with ONTAP 9.19.1, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units.
 
 * Beginning with ONTAP 9.18.1, ARP/AI is enabled by default on all newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster.  
 
@@ -35,7 +35,7 @@ In ONTAP 9.18.1 and later, ARP/AI is enabled by default on all new storage units
 
 .Steps
 . In System Manager, select *Cluster > Settings*.
-. Next to *Anti-ransomware*, select image:icon_kabob.gif[Edit anti-ransomware settings] and then select *Enable on all existing storage units*.
+. Next to *Anti-ransomware*, select image:icon_kabob.gif[Edit anti-ransomware settings], and then select *Enable on all existing storage units*.
 . Select *Enable*.
 
 == Enable ARP/AI on all storage units in a storage VM
