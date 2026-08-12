@@ -29,7 +29,6 @@ Product: NetApp ASA r2 storage systems
 - Storage uses *storage availability zones* instead of aggregates; each HA pair shares one storage availability zone and both nodes in the pair can access its disks.
 - *Storage VMs* serve SAN data through *LIFs*; IP LIFs can carry *iSCSI* and *NVMe/TCP*, while *FC* and *NVMe/FC* use separate LIFs.
 - *SnapMirror active sync* provides symmetric active/active protection between two ASA r2 systems and uses *ONTAP Mediator* for monitoring and failover support.
-- ASA r2 systems do not support NAS protocols or cluster mixing with *ASA*, *AFF*, or *FAS* systems.
 
 **Key concepts:**
 - A *storage unit* is the object users provision for hosts; it means a *LUN* for SCSI hosts or an *NVMe namespace* for NVMe hosts.
