@@ -28,8 +28,8 @@ Learn about the new capabilities available in ONTAP 9.19.1 for ASA r2 systems.
 |===
 | Update
 | Description
-| Enhanced support for automatic SAN LIF failover
-| Default automatic LIF failover is supported for iSCSI and NVMe/TCP LIFs.
+| link:../administer/manage-client-vm-access.html#create-a-lif-network-interface[Enhanced support for automatic SAN LIF failover]
+| Default automatic LIF failover is supported for IP and and NVMe/TCP LIFs.
 |===
 
 == Performance
