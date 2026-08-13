@@ -4,7 +4,7 @@ permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.
 keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
 summary: "Before you configure SnapMirror active sync, you should confirm that your ASA r2 clusters are in a supported peering relationship and meet other configuration requirements."
 ---
-= Confirm your ASA r2 cluster configuration before configuring SnapMirror active sync
+= Confirm ASA r2 cluster configuration for SnapMirror active sync
 :icons: font
 :imagesdir: ../media/
 
