@@ -4,7 +4,7 @@ permalink: data-protection/snapshot-reserve.html
 keywords: asa r2, snapshot reserve, percentage
 summary: The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve.
 ---
-= Learn about ONTAP snapshot reserve on ASA r2 storage 
+= Learn about ONTAP snapshot reserve on ASA r2 storage systems 
 :icons: font
 :imagesdir: ../media/
 
