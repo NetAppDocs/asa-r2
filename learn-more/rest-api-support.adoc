@@ -52,7 +52,7 @@ You can access the REST API reference documentation through the Swagger UI at yo
 
 .About this task
 
-You should access the ASA r2 reference documentation page for details about the REST API. On that page, you can search for the string *Platform Specifics* to find details about ASA r2 system support for API calls and properties.
+You should access the ASA r2 reference documentation page for details about the REST API. As part of this, you can search for the string *Platform Specifics* to find details about ASA r2 system support for the API calls and properties.
 
 .Before you begin
 

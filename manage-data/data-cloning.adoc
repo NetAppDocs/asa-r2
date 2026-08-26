@@ -13,7 +13,7 @@ searchtitle: "Data cloning using ONTAP System Manager | ASA r2"
 :imagesdir: ../media/
 
 [.lead]
-Data cloning creates copies of storage units and consistency groups on your ASA r2 system by using ONTAP System Manager. You can use the copies for application development, testing, backups, data migration, and other administrative functions.
+Data cloning creates copies of storage units and consistency groups on your ASA r2 system. You can use the copies for application development, testing, backups, data migration, and other administrative functions.
 
 == Clone storage units
 When you clone a storage unit, you create a new storage unit on your ASA r2 system that is a point-in-time, writable copy of the storage unit you cloned. 
