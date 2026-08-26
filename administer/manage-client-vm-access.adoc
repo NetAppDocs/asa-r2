@@ -14,7 +14,7 @@ Storage units on an ASA r2 system are contained inside storage virtual machines 
 
 == Create a storage VM
 
-During cluster setup, your default data storage virtual machine (VM) is created. All new storage units are created inside your default data storage VM unless you create and select a different storage VM.  You might want to can create an additional storage VM to segregate your storage units for different applications, departments or clients.  For example, you might want to create a storage VM for your development environment and another storage VM for your production environment, or you might want to create a storage VM for your finance department and another storage VM for your marketing department.
+During cluster setup, your default data storage virtual machine (VM) is created. All new storage units are created inside your default data storage VM unless you create and select a different storage VM.  You might want to create an additional storage VM to segregate your storage units for different applications, departments, or clients.  For example, you might want to create a storage VM for your development environment and another storage VM for your production environment, or you might want to create a storage VM for your finance department and another storage VM for your marketing department.
 
 .Steps
 

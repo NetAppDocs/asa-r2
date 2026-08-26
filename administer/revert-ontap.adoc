@@ -11,9 +11,9 @@ summary: "ONTAP software reverts for ASA r2 systems follow the same process as r
 [.lead]
 ONTAP software reverts for ASA r2 systems follow the same process as reverts for other ONTAP systems.
 
-Reverting an ONTAP cluster is disruptive.  You must take the cluster offline for the duration of the reversion.  You should not revert a production cluster without assistance from technical support. You can revert a new or test cluster without assistance.  If the revert of a new or test system fails or if it finishes successfully, but you are not satisfied with the cluster performance in your production environment, you should contact technical support for assistance.
+Reverting an ONTAP cluster is disruptive. You must take the cluster offline for the duration of the reversion. You should not revert a production cluster without assistance from technical support. You can revert a new or test cluster without assistance. If the revert of a new or test system fails or if it finishes successfully, but you are not satisfied with the cluster performance in your production environment, you should contact technical support for assistance.
 
-link:https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.html[Revert an ONTAP cluster].
+See link:https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.html[Revert an ONTAP cluster] for the full revert procedure.
 
 == Revert requirements for ASA r2 systems
 
@@ -24,7 +24,7 @@ Certain ASA r2 cluster configurations require you to take specific actions befor
 If you are reverting from ONTAP 9.17.1 on an ASA r2 system, you should perform the following actions before you begin the revert:
 
 [NOTE]
-link:space-balancing.html[dynamic space balancing] is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You cannot revert from ONTAP 9.17.1 on your ASA r2 system after dynamic space balancing is enabled.   
+link:space-balancing.html[dynamic space balancing] is enabled by default 14 days after either upgrading to ONTAP 9.17.1 or initializing a new ONTAP 9.17.1 ASA r2 cluster. You cannot revert from ONTAP 9.17.1 on your ASA r2 system after dynamic space balancing is enabled.
 
 [cols="2", options="header"]
 |===

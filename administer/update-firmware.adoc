@@ -9,11 +9,11 @@ summary: "ONTAP automatically updates firmware on ASA r2 systems.  You can use S
 :imagesdir: ../media/
 
 [.lead]
-ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default.  If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use ONTAP System Manager to disable automated updates or to edit update parameters to show you notifications of available updates before any action is performed.
+ONTAP automatically downloads and updates firmware and system files on your ASA r2 system by default. If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can use System Manager to disable automated updates or to edit update parameters so that you are notified of available updates before any action is performed.
 
 == Enable automatic updates
 
-Recommended updates for storage firmware, SP/BMC firmware and system files are automatically downloaded and installed on your ASA r2 system by default.  If automatic updates have been disabled, you can enable them to reinstate the default behavior.
+Recommended updates for storage firmware, Service Processor/Baseboard Management Controller (SP/BMC) firmware, and system files are automatically downloaded and installed on your ASA r2 system by default. If automatic updates have been disabled, you can enable them to reinstate the default behavior.
 
 .Steps
 
@@ -39,7 +39,7 @@ Disable automatic updates only if you want to manage updates entirely yourself. 
 
 .Result
 
-Automatic updates are disabled.  You should regularly check for recommended updates and decide if you want to perform a manual installation.
+Automatic updates are disabled. You should regularly check for recommended updates and decide if you want to perform a manual installation.
 
 == View automatic updates
 
@@ -52,7 +52,7 @@ View a list of firmware and system file updates that have been downloaded to you
 
 == Edit automatic updates
 
-You can select to have recommended updates for your storage firmware, SP/BMC firmware and your system files automatically downloaded and installed on your cluster, or you can select to have recommended updates automatically dismissed.  If you want to manually control installation or dismissal of updates, select to be notified when a recommended update is available; then you can manually select to install or dismiss it. 
+You can select to have recommended updates for your storage firmware, SP/BMC firmware, and your system files automatically downloaded and installed on your cluster, or you can select to have recommended updates automatically dismissed.  If you want to manually control installation or dismissal of updates, select to be notified when a recommended update is available; then you can manually select to install or dismiss it. 
 
 .Steps
 
