@@ -1,0 +1,12 @@
+[
+  { "fileName": "disable-default-anti-ransomware-protection.adoc" },
+  { "fileName": "enable-anti-ransomware-protection.adoc" },
+  { "fileName": "encrypt-data-at-rest.adoc" },
+  { "fileName": "iscsi-nvme-tcp-connections.adoc" },
+  { "fileName": "migrate-encryption-keys-between-key-managers.adoc" },
+  { "fileName": "modify-arp-snapshot-retention-period.adoc" },
+  { "fileName": "nvme-tcp-connections.adoc" },
+  { "fileName": "pause-resume-anti-ransomware-protection.adoc" },
+  { "fileName": "respond-anti-ransomware-protection-alerts.adoc" },
+  { "fileName": "snaplock.adoc" }
+]
