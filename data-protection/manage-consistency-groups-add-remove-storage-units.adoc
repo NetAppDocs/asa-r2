@@ -37,7 +37,7 @@ You can modify the default settings for new storage units when you create the st
 link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
 .Before you begin
-If you are running ONTAP 9.16.1 and the consistency group you want to expand is in an SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before you can add storage units. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can expand the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
+If you are running ONTAP 9.16.1 and the consistency group you want to expand is in a SnapMirror active sync relationship, you must link:snapmirror-active-sync-delete-relationship.html[delete the SnapMirror active sync relationship] before you can add storage units. If you are running ONTAP 9.16.1 and the consistency group is in an asynchronous replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break the relationship] before you can expand the consistency group.  Deleting the SnapMirror active sync relationship or breaking the asynchronous relationship before expanding a consistency group is not required in ONTAP 9.17.1 and later releases.
 
 // start tabbed area
 
@@ -68,9 +68,9 @@ If you are running ONTAP 9.16.1 and the consistency group you want to expand is 
 If you create more than one unit, each unit is created with the same capacity and the same host operating system.  To assign a different capacity to each unit, select *Add a different capacity* to assign a different capacity to each unit.
 . Select *Expand*.
 
-.What’s next
+.What's next?
 
-After you create a new storage unit, you should link:../manage-data/provision-san-storage.html#add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a hosts allows the storage unit to begin serving data to the host it is mapped to.
+After you create a new storage unit, you should link:../manage-data/provision-san-storage.html#add-host-initiators[add host initiators] and link:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host[map the newly created storage unit to a host].  Adding host initiators makes hosts eligible to access the storage units and perform data operations.  Mapping a storage unit to a host allows the storage unit to begin serving data to the host it is mapped to.
 --
 ====
 // end tabbed area
@@ -91,7 +91,7 @@ Remove a storage unit from a consistency group to delete it, manage it as part o
 .Result
 The storage unit is no longer a member of the consistency group.
 
-.What's next
+.What's next?
 If you need to continue data protection for the storage unit, add the storage unit to another consistency group.
 
 // 2025 Nov 06, ONTAPDOC-3342

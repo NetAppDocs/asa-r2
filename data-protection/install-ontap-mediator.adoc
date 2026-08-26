@@ -15,7 +15,7 @@ Installing ONTAP Mediator includes preparing for installation, enabling access t
 
 To install ONTAP Mediator, follow link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html[this workflow^] 
 
-.What's next
+.What's next?
 After ONTAP Mediator is installed you should link:configure-ontap-mediator.html[configure ONTAP Mediator using self-signed certificates].
 
 // 2025 Jul 24, ONTAPDOC-2707

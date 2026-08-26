@@ -13,7 +13,7 @@ Data in a consistency group or storage unit that is protected by snapshots can b
 
 == Restore a consistency group
 
-Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Changes made to the storage units after the snapshot was created are not restored..
+Restoring a consistency group replaces the data in all the storage units in the consistency group with the data from a snapshot.  Changes made to the storage units after the snapshot was created are not restored.
 
 You can restore a consistency group from a local or remote snapshot.  
 

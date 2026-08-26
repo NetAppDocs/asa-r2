@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: data-protection/manage-hierarchical-consistency-groups.html
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity
-summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit. In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. 
+summary: Use consistency groups to perform various actions to multiple storage units at the same time instead of performing actions individually on each unit. In a hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. 
 ---
 = Manage hierarchical consistency groups on your ASA r2 system
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In an hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. You can apply individual snapshot policies to each child consistency group and replicate the snapshots of all the child consistency groups to a remote cluster as a single unit by replicating the parent. This simplifies data protection and management for complex data structures.   
+Beginning with ONTAP 9.16.1, you can use System Manager to create hierarchical consistency groups on your ASA r2 system.  In a hierarchical structure, one or more consistency groups are configured as children under a parent consistency group. You can apply individual snapshot policies to each child consistency group and replicate the snapshots of all the child consistency groups to a remote cluster as a single unit by replicating the parent. This simplifies data protection and management for complex data structures.   
 
 == Promote an existing consistency group into a parent consistency group
 
@@ -22,13 +22,13 @@ If you are running ONTAP 9.16.1 and the consistency group you want to promote is
 .Steps
 
 . In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group you want convert into a parent consistency group.
+. Hover over the consistency group you want to convert into a parent consistency group.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Promote to parent consistency group*.
 . Enter a name for the new child consistency group or accept the default name; then select the consistency group component type.
 . Select *Promote*.
 
 .What's next?
-You can create additional child consistency groups under the parent consistency group.  You can also link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy the parent and child consistency groups to a geographically remote location for backup and disaster recovery.
+You can create additional child consistency groups under the parent consistency group.  You can also link:snapshot-replication.html[set up snapshot replication] to copy the parent and child consistency groups to a geographically remote location for backup and disaster recovery.
 
 == Demote a parent consistency group to a single consistency group
 
@@ -98,7 +98,7 @@ If you select to create a new parent consistency group, enter a name for the par
 
 // end tabbed area
 
-.What's next
+.What's next?
 After you create a child consistency group, you can link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group[apply individual snapshot protection policies] to each child consistency group. You can also link:snapshot-replication.html[set up replication policies] on the parent and child consistency groups to replicate the consistency groups to a remote location.
 
 == Detach a child consistency group from a parent consistency group
@@ -113,7 +113,7 @@ If you are running ONTAP 9.16.1 and the consistency group you want to detach is 
 
 . In System Manager, select *Protection > Consistency groups*.
 . Select the parent consistency group.
-. Select over the child consistency group you want to detach.
+. Hover over the child consistency group you want to detach.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Detach from parent*.
 . Enter a new name for the consistency group you are detaching or accept the default name; then select the consistency group application type.
 . Select *Detach*.
