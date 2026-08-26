@@ -34,7 +34,7 @@ vserver migrate show
 
 Data is being served to your clients from the storage VM on your ASA r2 cluster.  
 
-.What’s next?
+.What's next?
 You are now ready to remove the storage VM from the source ASA cluster.
 
 == Manually remove an ASA storage VM after migration to an ASA r2 cluster

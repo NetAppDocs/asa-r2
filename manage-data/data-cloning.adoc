@@ -13,7 +13,7 @@ searchtitle: "Data cloning using ONTAP System Manager | ASA r2"
 :imagesdir: ../media/
 
 [.lead]
-Data cloning creates copies of storage units and consistency groups on your ASA r2 system using ONTAP System Manager that can be used for application development, testing, backups, data migration or other administrative functions.
+Data cloning creates copies of storage units and consistency groups on your ASA r2 system by using ONTAP System Manager. You can use the copies for application development, testing, backups, data migration, and other administrative functions.
 
 == Clone storage units
 When you clone a storage unit, you create a new storage unit on your ASA r2 system that is a point-in-time, writable copy of the storage unit you cloned. 
@@ -37,7 +37,7 @@ A new snapshot is created for the clone by default.
 
 a| Use an existing snapshot
 a| 
-.. Under *Snapshot to clone*, select *Use an existing snaphot*.
+.. Under *Snapshot to clone*, select *Use an existing snapshot*.
 .. Select the snapshot you want to use for the clone.
 
 a| Create a new host group
@@ -49,7 +49,7 @@ a|
 a| Add a new host
 a|
 .. Under *Host mapping*, select *New hosts*.
-.. Enter the a name for the new host; then select *FC* or *iSCSI*.
+.. Enter a name for the new host; then select *FC* or *iSCSI*.
 .. Select the host initiators from the list of existing initiators or select *Add* to add new initiators for the host.
 
 // table end
@@ -108,7 +108,7 @@ a|
 a| Add a new host
 a|
 .. Under *Host mapping*, select *New hosts*.
-.. Enter the name new host name; then select *FC* or *iSCSI*.
+.. Enter a name for the new host; then select *FC* or *iSCSI*.
 .. Select the host initiators from the list of existing initiators or select *Add initiator* to add new initiators for the host.
 
 // table end
@@ -144,7 +144,7 @@ When you split a consistency group clone, you dissociate the clone from the sour
 .Steps
 
 . In System Manager, select *Protection > Consistency groups*.
-. Hover over the consistency group clone that you want you want to split.
+. Hover over the consistency group clone that you want to split.
 . Select *Split clone*.
 . Select *Split*.
 
