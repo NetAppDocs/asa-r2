@@ -4,18 +4,18 @@ permalink: secure-data/disable-default-anti-ransomware-protection.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, ai, disable
 summary: "If you have an Autonomous Ransomware Protection license installed on your ASA r2 cluster, ARP is enabled by default on all existing and newly created storage units 12 hours after upgrading to ONTAP 9.18.1 or initializing a new ONTAP 9.18.1 ASA r2 cluster. "
 ---
-= Disable default Autonomous Ransomware Protection on your ASA r2 storage systems
+= Disable default Autonomous Ransomware Protection on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you initialize a new ONTAP 9.18.1 ASA r2 cluster or upgrade your cluster to ONTAP 9.18.1, ARP/AI is automatically enabled by default on all new storage units after a 12-hour grace period. If you don't disable ARP/AI during the grace period, it is enabled cluster-wide for new storage units when the grace period ends. 
+When you initialize a new ONTAP 9.18.1 ASA r2 cluster or upgrade a cluster to ONTAP 9.18.1, ARP/AI is enabled by default on all new storage units after a 12-hour grace period. If you do not disable ARP/AI during that period, ONTAP enables it cluster-wide for new storage units when the grace period ends.
 
 Storage units created in ONTAP 9.17.1 must be link:enable-anti-ransomware-protection.html[manually enabled] for ARP/AI.
 
 .Steps
 
-You can disable the default enablement during or after the initial 12-hour grace period.
+You can disable the default setting during or after the initial 12-hour grace period.
 
 [role="tabbed-block"]
 ====
@@ -41,7 +41,7 @@ You can disable the default enablement during or after the initial 12-hour grace
 security anti-ransomware auto-enable show
 ----
 
-. Disable default enablement for existing and new volumes:
+. Disable default enablement for existing and new storage units:
 +
 [source,cli]
 ----
