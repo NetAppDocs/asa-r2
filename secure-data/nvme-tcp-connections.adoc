@@ -9,12 +9,12 @@ summary: "Enhance your data security by configuring NVMe TCP over TLS to encrypt
 :imagesdir: ../media/
 
 [.lead]
-If you are using the NVMe protocol, you can configure in-band authentication to enhance your data security.  In-band authentication allows secure bidirectional and unidirectional authentication between your NVMe hosts and your ASA r2 system. In-band authentication is available for all NVMe hosts.  If you are using the NVMe/TCP protocol, you can further enhance your data security by configuring transport layer security (TLS) to encrypt all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
+If you use NVMe, you can configure in-band authentication to provide secure bidirectional and unidirectional authentication between your NVMe hosts and your ASA r2 system. In-band authentication is available for all NVMe hosts. If you use NVMe/TCP, you can also configure Transport Layer Security (TLS) to encrypt data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
 
 .Steps
 
 . Select *Hosts*; then select *NVMe*.
-. Select image:icon_add_blue_bg.png[blue square with a plus sign followed by the word Add in white letters] .
+. Select image:icon_add_blue_bg.png[blue square with a plus sign followed by the word Add in white letters].
 . Enter the host name; then select the host operating system.
 . Enter a host description; then select the storage VM to connect to the host.
 . Select image:icon_dropdown_arrow.gif[blue downward facing arrow] next to the host name.
