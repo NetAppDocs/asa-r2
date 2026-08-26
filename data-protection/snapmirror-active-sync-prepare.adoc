@@ -62,7 +62,7 @@ A consistency group can be mapped with multiple subsystems, but each subsystem c
 * Consistency group geometry change
 * link:https://docs.netapp.com/us-en/ontap/san-admin/microsoft-offloaded-data-transfer-odx-concept.html[Microsoft Offloaded Data Transfer (ODX)]
 
-.What’s next?
+.What's next?
 
 After you have completed the preparation necessary to enable SnapMirror active sync, you should link:snapmirror-active-sync-confirm-cluster-configuration.html[confirm your cluster configuration].
 // 2025 Jul 24, ONTAPDOC-2707

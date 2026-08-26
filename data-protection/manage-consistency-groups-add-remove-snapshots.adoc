@@ -56,8 +56,8 @@ then select image:icon_dropdown_arrow.gif[blue arrow pointing in downward direct
 
 . Select *Save*.
 
-.What's next
-Now that your data is protected with snapshots, you should link:../secure-data/encrypt-data-at-rest.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
+.What's next?
+Now that your data is protected with snapshots, you should link:snapshot-replication.html[set up snapshot replication] to copy your consistency groups to a geographically remote location for backup and disaster recovery.
 
 
 == Remove snapshot data protection from a consistency group
