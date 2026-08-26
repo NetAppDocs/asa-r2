@@ -4,7 +4,7 @@ permalink: administer/space-balancing.html
 keywords: capacity, space, rebalancing, balanced, placement, balance, asa r2
 summary: "For ASA r2 systems, ONTAP uses balanced placement, dynamic space balancing, or copy-based workload rebalancing to keep storage utilization balanced across storage availability zones."
 ---
-= ONTAP capacity balancing in an ASA r2 cluster
+= Learn about ONTAP capacity balancing in an ASA r2 cluster
 :icons: font
 :imagesdir: ../media/
 
