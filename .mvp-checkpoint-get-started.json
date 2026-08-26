@@ -1,0 +1,78 @@
+[
+  {
+    "fileName": "learn-about.adoc",
+    "titleReview": {
+      "originalTitle": "Learn about ASA r2 storage systems",
+      "titleLineNumber": 8,
+      "suggestedTitle": "Learn about ASA r2 storage systems",
+      "titleReasoning": "Title follows the standard 'Learn about <product>' concept pattern, includes the product name, is an appropriate length, and uses correct capitalization and grammar. No change needed."
+    },
+    "leadReview": {
+      "originalText": "The NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers. On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  ",
+      "suggestedRevision": "The NetApp ASA r2 systems deliver a unified hardware and software solution that simplifies the experience for SAN-only customers. On an ASA r2 system, ONTAP software and System Manager are streamlined to support essential SAN functionality while removing features not needed in SAN environments.",
+      "leadReasoning": "Tightened wordy phrasing and removed trailing whitespace.",
+      "leadLineNumber": 14,
+      "leadOffset": 2
+    },
+    "styleReview": {
+      "issues": [
+        { "criterion": "Trailing whitespace", "lineNumber": 14, "originalText": "SAN environments.  ", "suggestedRevision": "SAN environments.", "reasoning": "Subsumed by lead revision." },
+        { "criterion": "Trailing whitespace", "lineNumber": 30, "originalText": "for NVMe hosts. ", "suggestedRevision": "for NVMe hosts.", "reasoning": "Remove trailing space." },
+        { "criterion": "Trailing whitespace", "lineNumber": 31, "originalText": "single unit.  ", "suggestedRevision": "single unit.", "reasoning": "Remove trailing double space." },
+        { "criterion": "Double space", "lineNumber": 33, "originalText": "data protection.  For example", "suggestedRevision": "data protection. For example", "reasoning": "Remove extra space between sentences." },
+        { "criterion": "Missing serial comma", "lineNumber": 37, "originalText": "multi-factor authentication and multi-admin verification", "suggestedRevision": "multi-factor authentication, and multi-admin verification", "reasoning": "Add Oxford comma." },
+        { "criterion": "Trailing whitespace", "lineNumber": 37, "originalText": "maliciously deleted.  ", "suggestedRevision": "maliciously deleted.", "reasoning": "Remove trailing double space." },
+        { "criterion": "Double space", "lineNumber": 41, "originalText": "NVMe/TCP).  All protocols", "suggestedRevision": "NVMe/TCP). All protocols", "reasoning": "Remove extra space." }
+      ]
+    },
+    "azReview": {
+      "issues": [
+        { "lineNumber": 37, "originalText": "on-board key manager", "suggestedRevision": "onboard key manager", "reasoning": "NetApp style: 'onboard' one word." },
+        { "lineNumber": 37, "originalText": "multi-factor authentication", "suggestedRevision": "multifactor authentication", "reasoning": "NetApp style: 'multifactor' no hyphen." }
+      ],
+      "summary": { "azIssuesFound": 2 }
+    },
+    "combinedEdits": [
+      { "lineNumber": 13, "originalText": "The NetApp ASA r2 systems deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers. On an ASA r2 system, ONTAP software and System Manager are streamlined to provide support for essential SAN functionality while removing features and functions not supported in SAN environments.  ", "suggestedRevision": "The NetApp ASA r2 systems deliver a unified hardware and software solution that simplifies the experience for SAN-only customers. On an ASA r2 system, ONTAP software and System Manager are streamlined to support essential SAN functionality while removing features not needed in SAN environments.", "source": "lead", "leadOffset": 2, "skipped": false, "skipReason": "" },
+      { "lineNumber": 13, "originalText": "SAN environments.  ", "suggestedRevision": "SAN environments.", "source": "style", "skipped": true, "skipReason": "Subsumed by lead revision" },
+      { "lineNumber": 29, "originalText": "for NVMe hosts. ", "suggestedRevision": "for NVMe hosts.", "source": "style", "skipped": false, "skipReason": "" },
+      { "lineNumber": 30, "originalText": "single unit.  ", "suggestedRevision": "single unit.", "source": "style", "skipped": false, "skipReason": "" },
+      { "lineNumber": 32, "originalText": "data protection.  For example", "suggestedRevision": "data protection. For example", "source": "style", "skipped": false, "skipReason": "" },
+      { "lineNumber": 36, "originalText": "multi-factor authentication and multi-admin verification", "suggestedRevision": "multi-factor authentication, and multi-admin verification", "source": "style", "skipped": true, "skipReason": "Merged with AZ terminology fix into az-sourced entry" },
+      { "lineNumber": 36, "originalText": "multi-factor authentication", "suggestedRevision": "multifactor authentication", "source": "az", "skipped": true, "skipReason": "Merged into combined comma+terminology entry" },
+      { "lineNumber": 36, "originalText": "multi-factor authentication and multi-admin verification", "suggestedRevision": "multifactor authentication, and multi-admin verification", "source": "az", "skipped": false, "skipReason": "" },
+      { "lineNumber": 36, "originalText": "on-board key manager", "suggestedRevision": "onboard key manager", "source": "az", "skipped": false, "skipReason": "" },
+      { "lineNumber": 36, "originalText": "maliciously deleted.  ", "suggestedRevision": "maliciously deleted.", "source": "style", "skipped": false, "skipReason": "" },
+      { "lineNumber": 40, "originalText": "NVMe/TCP).  All protocols", "suggestedRevision": "NVMe/TCP). All protocols", "source": "style", "skipped": false, "skipReason": "" }
+    ]
+  },
+  {
+    "fileName": "quick-start.adoc",
+    "titleReview": {
+      "originalTitle": "Quick start for ASA r2 storage systems",
+      "titleLineNumber": 8,
+      "suggestedTitle": "Quick start for ASA r2 storage systems",
+      "titleReasoning": "Title follows the 'Quick start for <product>' pattern for Quick Start pages. No change needed."
+    },
+    "leadReview": {
+      "originalText": "To get up and running with your ASA r2 system, you install your hardware components, set up your cluster, set up data access from your hosts to the storage system, and provision your storage.",
+      "suggestedRevision": "To get up and running with your ASA r2 system, you install your hardware components, set up your cluster, set up data access from your SAN clients to the storage system, and provision your storage.",
+      "leadReasoning": "Changed 'hosts' to 'SAN clients' to match terminology used consistently elsewhere on the page.",
+      "leadLineNumber": 13,
+      "leadOffset": 1
+    },
+    "styleReview": {
+      "issues": [
+        { "criterion": "Inconsistent terminology", "lineNumber": 13, "originalText": "from your hosts to the storage system", "suggestedRevision": "from your SAN clients to the storage system", "reasoning": "Align with 'SAN clients' terminology used in steps 3 and 4." }
+      ]
+    },
+    "azReview": {
+      "issues": [],
+      "summary": { "azIssuesFound": 0 }
+    },
+    "combinedEdits": [
+      { "lineNumber": 13, "originalText": "To get up and running with your ASA r2 system, you install your hardware components, set up your cluster, set up data access from your hosts to the storage system, and provision your storage.", "suggestedRevision": "To get up and running with your ASA r2 system, you install your hardware components, set up your cluster, set up data access from your SAN clients to the storage system, and provision your storage.", "source": "lead", "leadOffset": 1, "skipped": false, "skipReason": "" },
+      { "lineNumber": 13, "originalText": "from your hosts to the storage system", "suggestedRevision": "from your SAN clients to the storage system", "source": "style", "skipped": true, "skipReason": "Subsumed by lead revision" }
+    ]
+  }
+]
