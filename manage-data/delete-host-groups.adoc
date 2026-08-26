@@ -17,7 +17,7 @@ On an ASA r2 system, a host group is the mechanism used to give hosts access to 
 . Under *Host mapping* select the host group you want to delete.
 . Select *Mapped storage*. 
 . Select *More*; then select *Delete*.
-. Select to verify that you want to continue; then select *Delete*.
+. Select the confirmation option to verify that you want to continue; then select *Delete*.
 
 .What's next?
 
