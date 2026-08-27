@@ -9,7 +9,7 @@ summary: "While ASA r2 systems offers a wide range of support for SAN solutions,
 :imagesdir: ../media/
 
 [.lead]
-While ASA r2 systems offers a wide range of support for SAN solutions, certain ONTAP software features are not supported.
+ASA r2 systems support a wide range of SAN capabilities, but some ONTAP software features are not supported.
 
 .ASA r2 systems do not support the following:
 
@@ -27,7 +27,7 @@ SnapLock Compliance and Enterprise mode are not supported on primary clusters in
 
 ** SnapMirror synchronous replication is not supported.
 
-** SnapMirror asynchronous replication is supported only between two ASA r2 systems.  SnapMirror asynchronous replication is not supported between an ASA r2 system and an ASA, AFF or FAS system or the cloud.
+** SnapMirror asynchronous replication is supported only between two ASA r2 systems.  SnapMirror asynchronous replication is not supported between an ASA r2 system and an ASA, AFF, or FAS system, or the cloud.
 +
 Learn more about link:../data-protection/pre-defined-protection-policies.html[SnapMirror replication policies supported on ASA r2 systems].
 ** SnapMirror active sync is supported only between two ASA r2 systems.

@@ -33,18 +33,18 @@ The prerequisites for cluster peering are the same for ASA r2 systems as for oth
 
 . On the local cluster, in System Manager, select *Cluster > Settings*.
 . Under *Intercluster Settings* next to *Cluster peers* select image:icon_kabob.gif[three vertical blue dots], then select *Add a cluster peer*.
-. Select *Lauch remote cluster*; this generates a passphrase you'll use to authenticate with the remote cluster.
+. Select *Launch remote cluster*; this generates a passphrase you'll use to authenticate with the remote cluster.
 . After the passphrase for the remote cluster is generated, paste it under *Passphrase* on the local cluster.
 . Select image:icon_add.gif[blue plus sign followed by the word add in blue letters]; then enter the intercluster network interface IP address.
 . Select *Initiate cluster peering*.
 
 .What's next?
 
-You have peered for local ASA r2 cluster with a remote cluster.  You can now create a replication relationship.
+You have peered your local ASA r2 cluster with a remote cluster.  You can now create a replication relationship.
 
 == Step 2: Optionally, create a custom replication policy
 
-The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP include various pre-defined data protection policies that you can use for your replication relationships.  If the pre-defined policies do not meet your needs, you can create a custom replication policy.
+The replication policy defines when updates performed on the ASA r2 cluster are replicated to the remote site.  ONTAP includes various pre-defined data protection policies that you can use for your replication relationships.  If the pre-defined policies do not meet your needs, you can create a custom replication policy.
 
 Learn about link:pre-defined-protection-policies.html[pre-defined ONTAP data protection policies].
 

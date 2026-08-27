@@ -23,7 +23,7 @@ SnapMirror active sync offers continuous availability for business-critical appl
 . Select the SnapMirror active sync relationship you want to fail over.
 . Select image:icon_kabob.gif[three vertical blue dots]; then select *Failover*.
 
-.What’s next
+.What's next?
 
 Use the `snapmirror failover show` command in the ONTAP command line interface (CLI) to monitor the status of the failover.
 

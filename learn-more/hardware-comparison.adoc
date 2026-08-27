@@ -10,7 +10,7 @@ searchtitle: "Differences between ASA r2 and other ONTAP systems"
 :imagesdir: ../media/
 
 [.lead]
-ASA r2 systems offer a hardware and software solution for SAN-only environments built on all flash solutions. ASA r2 systems vary from other ONTAP systems (ASA, AFF, and FAS) in the implementation of its ONTAP personality, storage layer and supported protocols.
+ASA r2 systems are hardware and software solutions for SAN-only environments built on all-flash systems. They differ from other ONTAP systems (ASA, AFF, and FAS) in ONTAP personality, storage layer, and supported protocols.
 
 The following are classified as ASA r2 systems:
 
@@ -24,7 +24,7 @@ The following are classified as ASA r2 systems:
 
 == Personality differences
 
-On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on ASA systems is identified as the _ASA ONTAP personality_.  ONTAP running on AFF and FAS ONTAP systems is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
+On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN-related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on ASA systems is identified as the _ASA ONTAP personality_.  ONTAP running on AFF and FAS ONTAP systems is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
 
 You can verify the personality of your ONTAP storage from System Manager or from the ONTAP CLI. 
 
@@ -41,7 +41,7 @@ ASA r2 systems use a simplified storage layer that is different from the storage
 
 .FAS, AFF, and ASA systems
 
-The storage layer for FAS, AFF, and ASA systems use aggregates as the base unit of storage. An aggregate owns a specific set of the disks available in a storage system. The aggregate allocates space on the disks it owns to volumes for LUNs and namespaces. With these systems, ONTAP users can create and modify aggregates, volumes, LUNs and namespaces.
+The storage layer for FAS, AFF, and ASA systems uses aggregates as the base unit of storage. An aggregate owns a specific set of the disks available in a storage system. The aggregate allocates space on the disks it owns to volumes for LUNs and namespaces. With these systems, ONTAP users can create and modify aggregates, volumes, LUNs and namespaces.
 
 .ASA r2 systems
 
@@ -93,7 +93,7 @@ Because of this automated and simplified approach to storage management, certain
 The major differences between ASA r2 systems and FAS, AFF, and ASA systems relevant to the ONTAP command line interface (CLI) and REST API are described below.
 
 .Default storage VM creation with protocol services
-New clusters automatically contain a default data storage virutal machine (VM) with the SAN protocols enabled. IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
+New clusters automatically contain a default data storage VM with SAN protocols enabled. IP data LIFs support iSCSI and NVMe/TCP protocols and use the `default-data-blocks` service policy by default.
 
 .Automatic volume creation
 Creating a storage unit (LUN or namespace) automatically creates a volume from the storage availability zone. This results in a simplified and common namespace. Deleting a storage unit automatically deletes the associated volume.

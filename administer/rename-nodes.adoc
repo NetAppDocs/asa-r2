@@ -9,7 +9,7 @@ summary: "You might need to rename a node to align with the naming conventions o
 :imagesdir: ../media/
 
 [.lead]
-You can use ONTAP System Manager to rename a node on your ASA r2 system.  You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons.  
+You can use System Manager to rename a node on your ASA r2 system to align with the naming conventions of your organization or for other administrative reasons.
 
 .Steps
 

@@ -9,8 +9,7 @@ summary: "Learn how to modify ARP snapshot retention periods to suit your storag
 :imagesdir: ../media/
 
 [.lead]
-
-If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, it automatically creates an ARP snapshot to protect the storage unit's data. Depending upon your storage capacity and the business requirements for your data, you might want to increase or decrease the default ARP snapshot retention period. For example, you might want to increase the retention period for business critical applications so that, if needed, you have longer retention periods for data recovery, or you might want to decrease the retention period for non-critical applications to save storage space.
+If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more storage units on your ASA r2 system, it automatically creates an ARP snapshot to protect the data. Depending on your storage capacity and business requirements, you might want to increase or decrease the default ARP snapshot retention period. For example, you might increase the retention period for business-critical applications to support longer data recovery windows or decrease it for noncritical applications to save storage space.
 
 The default retention period for the ARP snapshot varies depending on the action you take in response to the abnormal activity. 
 
@@ -22,7 +21,7 @@ The default retention period for the ARP snapshot varies depending on the action
 | Do not take immediate action | 10 days
 |===
 
-The default retention periods can be modified using the ONTAP command line interface (CLI). See https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-automatic-snapshot-options-task.html[Modify options for ONTAP automatic snapshots] for steps to change the default retention period.
+You can modify the default retention periods by using the ONTAP command line interface (CLI). See https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-automatic-snapshot-options-task.html[Modify options for ONTAP automatic snapshots] for steps to change the default retention period.
 
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928

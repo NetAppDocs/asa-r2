@@ -24,7 +24,7 @@ Gather the following information:
 .Steps
 
 . In System Manager, select *Cluster > Overview*.
-. Select image:icon_kabob.gif[three vertical blue dots] next to the node you want to join to the cluster; then select *Add node*
+. Select image:icon_kabob.gif[three vertical blue dots] next to the node you want to join to the cluster; then select *Add node*.
 . Enter the IP address for each node.
 . Enter the intercluster network interface IP address, subnet mask, and gateway.
 . If you want to configure the onboard key manager (OKM), enter the OKM passphrase.

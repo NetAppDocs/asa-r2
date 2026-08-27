@@ -46,8 +46,8 @@ You should repeat the steps in this procedure for each drive.
 Be sure to close the cam handle slowly so that it aligns correctly with the face of the drive.
 . Verify that the drive's activity LED (green) is illuminated.
 +
-* IF the LED is solid, the drive has power. 
-* If the LED is blinking, the drive has power and I/O is in progress. The LED will also blink if the drive firmware is being updated.   
+* If the LED is solid, the drive has power.
+* If the LED is blinking, the drive has power and I/O is in progress. The LED will also blink if the drive firmware is being updated.
 +
 Drive firmware is automatically updated (nondisruptively) on new drives that do not have current firmware versions.
 . If your node is configured for drive auto-assignment, you can wait for ONTAP to automatically assign the new drives to a node.  If your node isn’t configured for drive auto-assignment or if preferred, you can assign the drives manually.  

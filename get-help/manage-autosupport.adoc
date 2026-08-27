@@ -9,9 +9,9 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-AutoSupport is a mechanism that proactively monitors the health of your system and automatically sends messages to NetApp technical support, your internal support organization, and a support partner. 
+AutoSupport proactively monitors the health of your system and automatically sends messages to NetApp technical support, your internal support organization, and a support partner.
 
-AutoSupport messages to technical support are enabled by default when you set up your cluster.  You must set the correct options and have a valid mail host to have messages sent to your internal support organization. ONTAP begins sending AutoSupport messages 24 hours after it is enabled.
+AutoSupport messages to technical support are enabled by default when you set up your cluster. You must set the correct options and have a valid mail host to send messages to your internal support organization. ONTAP begins sending AutoSupport messages 24 hours after it is enabled.
 
 .Before you begin
 
@@ -23,7 +23,7 @@ After you have set up your cluster, you should test your AutoSupport connectivit
 
 .Steps
 
-. In System Manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Test connectivity*.
 . Enter a subject for the AutoSupport message; then select *Send test AutoSupport message*.
 
@@ -37,13 +37,13 @@ Add members of your internal support organization to the list of email addresses
 
 .Steps
 
-. In System Manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *More options*.
 . Next to *Email*, select image:icon_edit_pencil_blue_outline.png[pencil icon]; then select image:icon_add.gif[blue plus sign followed by the word Add].
-. Enter the email address for the recipient; then the the recipient category.
+. Enter the email address for the recipient; then select the recipient category.
 +
-For partners, select *Partner* for the recipient category.  Select *General* for members of your internal support organization.
-. Select save.
+For partners, select *Partner* for the recipient category. Select *General* for members of your internal support organization.
+. Select *Save*.
 
 .What's next?
 
@@ -56,7 +56,7 @@ Should a problem occur on your ASA r2 system, AutoSupport data can significantly
 
 .Steps
 
-. In System Manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Generate and send*.
 . Enter a subject for the AutoSupport message; then select *Send*.
 
@@ -70,14 +70,14 @@ If you are performing an upgrade or maintenance on your ASA r2 system, you might
 
 .Steps
 
-. In System Manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Suppress support case generation*.
 . Specify the number of hours to suppress the generation of support cases; then select the nodes for which you do not want cases generated.
 . Select *Send*.
 
 .What's next?
 
-AutoSupport cases will not be generated during the time you specified.  If you complete your upgrade or maintenance before the specified time expires, you should resume support case generation immediately.
+AutoSupport cases are not generated during the time you specified. If you complete your upgrade or maintenance before the specified time expires, resume support case generation immediately.
 
 == Resume support case generation
 
@@ -85,7 +85,7 @@ If you have suppressed the generation of support cases during an upgrade or main
 
 .Steps
 
-. In System Manager, select *Cluster >Settings*.
+. In System Manager, select *Cluster > Settings*.
 . Next to *AutoSupport* select image:icon_kabob.gif[three vertical blue dots]; then select *Resume support case generation*.
 . Select the nodes for which you want to resume AutoSupport cases generated.
 . Select *Send*.

@@ -69,7 +69,7 @@ a|
 // New row
 a| Create a new QoS policy
 a|
-.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction] .
+.. Under *Storage and optimization*, next to *Quality of service (QoS)*, select image:icon_dropdown_arrow.gif[icon of blue arrow pointing in downward direction].
 .. Select *Define new policy*.
 .. Enter a name for the new QoS policy.
 .. Set a QoS limit, a QoS guarantee, or both.
@@ -131,7 +131,7 @@ In-band authentication allows secure bidirectional and unidirectional authentica
 TLS encrypts all data sent over the network between your NVMe/TCP hosts and your ASA r2 system.
 .. Select *Add initiator* to add more initiators.
 +
-Format the host NQN as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string
+Format the host NQN as <nqn.yyyy-mm> followed by a fully qualified domain name. The year should be equal to or later than 1970. The total maximum length should be 223. An example of a valid NVMe initiator is nqn.2014-08.com.example:string.
 
 // table end
 |===

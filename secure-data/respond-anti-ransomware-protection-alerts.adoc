@@ -9,10 +9,9 @@ summary: "View warnings of potential ransomware attacks and take action in Syste
 :imagesdir: ../media/
 
 [.lead]
+If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more storage units on your ASA r2 system, System Manager displays a warning on the dashboard. Review the warning, verify the activity, and take action if necessary to protect your data.
 
-If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more of your ASA r2 system storage units, a warning is generated on the System Manager dashboard. You should view the warning, verify the activity and, if necessary, take action to stop any potential threat to your data.
-
-If an ARP/AI warning message is displayed, before you take action, you should use the appropriate application integrity checker to verify the integrity of the data on the storage unit.  Verifying the storage unit's data integrity helps you determine if the activity is acceptable or if it is a potential ransomware attack. 
+If an ARP/AI warning message is displayed, use the appropriate application integrity checker to verify the data on the storage unit before you take action.  Verifying the storage unit's data integrity helps you determine if the activity is acceptable or if it is a potential ransomware attack. 
 
 [cols="2,2", options="header"]
 |===
@@ -21,14 +20,14 @@ If an ARP/AI warning message is displayed, before you take action, you should us
 | A potential ransomware attack | Mark the activity as a potential ransomware attack.
 | Indeterminate | Do not take immediate action. 
 
-Monitor the storage unit to for up to 7 days. If the storage unit continues to operate normally, mark the activity as a false positive. If the storage unit continues to exhibit abnormal activity, mark the activity as a potential ransomware attack.
+Monitor the storage unit for up to 7 days. If the storage unit continues to operate normally, mark the activity as a false positive. If the storage unit continues to exhibit abnormal activity, mark the activity as a potential ransomware attack.
 |=== 
 
 .Steps
 
 . In System Manager, select *Dashboard*.
 +
-If ARP has detected abnormal activity on one or more storage units, a message appears under *Warnings*.
+If ARP/AI has detected abnormal activity on one or more storage units, a message appears under *Warnings*.
 . Select the warning message.
 . Under *Events overview*, select the *Warnings* message that indicates the number of storage units with abnormal activity.
 . Under *Storage units with abnormal activity*, select the storage unit.
@@ -40,7 +39,7 @@ If there is abnormal activity on the storage unit, a message is displayed under 
 
 .What's next?
 
-If you know of surges in your storage unit activity, either one-time surges or a surge that is characteristic of a new normal, you should report them as safe. Manually reporting these surges as safe helps to improve the accuracy of ARP's threat assessments.  Learn  how to link:https://docs.netapp.com/us-en/ontap/anti-ransomware/manage-parameters-task.html#report-known-surges[report known ARP/AI surges^]. 
+If you know of surges in your storage unit activity, either one-time surges or a surge that is characteristic of a new normal, you should report them as safe. Manually reporting these surges as safe helps to improve the accuracy of ARP's threat assessments.  Learn how to link:https://docs.netapp.com/us-en/ontap/anti-ransomware/manage-parameters-task.html#report-known-surges[report known ARP/AI surges^]. 
 
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928

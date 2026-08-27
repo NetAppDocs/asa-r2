@@ -14,7 +14,7 @@ If you are using the NVMe protocol, you can configure in-band authentication to 
 .Steps
 
 . Select *Hosts*; then select *NVMe*.
-. Select image:icon_add_blue_bg.png[blue square with a plus sign followed by the word Add in white letters] .
+. Select image:icon_add_blue_bg.png[blue square with a plus sign followed by the word Add in white letters].
 . Enter the host name; then select the host operating system.
 . Enter a host description; then select the storage VM to connect to the host.
 . Select image:icon_dropdown_arrow.gif[blue downward facing arrow] next to the host name.

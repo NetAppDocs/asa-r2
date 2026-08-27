@@ -2,15 +2,14 @@
 sidebar: sidebar
 permalink: administer/space-balancing.html
 keywords: capacity, space, rebalancing, balanced, placement, balance, asa r2
-summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
+summary: "For ASA r2 systems, ONTAP uses balanced placement, dynamic space balancing, or copy-based workload rebalancing to keep storage utilization balanced across storage availability zones."
 ---
 = Learn about ONTAP capacity balancing in an ASA r2 cluster
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-
-For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly created storage units in the best storage availability zone for optimal performance and balanced storage  utilization.  If you are running ONTAP 9.17.1 or later, space consumed by existing storage units is balanced using _dynamic space balancing_.  If you are running ONTAP 9.16.1, space consumed by existing storage units is balanced using _copy-based workload rebalancing_.
+For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly created storage units in the best storage availability zone for optimal performance and balanced storage utilization. If you are running ONTAP 9.17.1 or later, space consumed by existing storage units is balanced using _dynamic space balancing_. If you are running ONTAP 9.16.1, space consumed by existing storage units is balanced using _copy-based workload rebalancing_.
 
 [cols=2, options="header"]
 |===
@@ -22,10 +21,10 @@ For ASA r2 systems, ONTAP uses _balanced placement_ to automatically place newly
 |===
 
 .Balanced placement
-With _balanced placement_, newly created storage units are automatically placed within the best storage availability zone for optimal performance and balanced storage  utilization. Balanced placement is enabled by default in ONTAP 9.16.1 and later.
+With _balanced placement_, newly created storage units are automatically placed within the best storage availability zone for optimal performance and balanced storage utilization. Balanced placement is enabled by default in ONTAP 9.16.1 and later.
 
 .Dynamic space balancing
-With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units within storage availability zones to maintain balanced space utilization.  An EMS warning is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS alert is automatically issued if it reaches 90%.  
+With _dynamic space balancing_, ONTAP actively monitors the amount of free space in the cluster and automatically moves storage units within storage availability zones to maintain balanced space utilization. An Event Management System (EMS) warning is automatically issued if cluster-wide capacity utilization reaches 80% and an EMS alert is automatically issued if it reaches 90%.
 
 Dynamic space balancing is enabled by default 14 days after upgrading to or installing ONTAP 9.17.1 or later. If you need to modify the default 14-day enablement period, contact NetApp Support. You cannot revert from ONTAP 9.17.1 after dynamic space balancing is enabled. 
 

@@ -9,7 +9,6 @@ summary: "Use ONTAP System Manager to perform basic storage network administrati
 :imagesdir: ../media/
 
 [.lead]
-
 You can use ONTAP System Manager to perform basic storage network administration on your ASA r2 system. For example, you can add a broadcast domain or reassign ports to a different broadcast domain.
 
 == Add a broadcast domain
@@ -26,7 +25,7 @@ The maximum transmission unit (MTU) of the ports added to a broadcast domain are
 
 .Steps
 
-.  In System Manager, select *Network > Overview*.
+. In System Manager, select *Network > Overview*.
 . Under *Broadcast* domains, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters].
 . Enter a name for the broadcast domain or accept the default name.
 +
