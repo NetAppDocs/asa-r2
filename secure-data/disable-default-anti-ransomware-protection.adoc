@@ -15,7 +15,7 @@ Storage units created in ONTAP 9.17.1 must be link:enable-anti-ransomware-protec
 
 .Steps
 
-You can disable the default setting during or after the initial 12-hour grace period.
+You can disable the default enablement during or after the initial 12-hour grace period.
 
 [role="tabbed-block"]
 ====
