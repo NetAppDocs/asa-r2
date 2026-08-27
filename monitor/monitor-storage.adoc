@@ -10,7 +10,7 @@ searchtitle: "Monitor space utilization using ONTAP System Manager | ASA r2"
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP System Manager to monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.  
+Use ONTAP System Manager to monitor your storage utilization to ensure you have the storage capacity you need to serve current and future workloads.
 
 == Monitor cluster utilization
 
@@ -24,7 +24,7 @@ Regularly monitor the amount of storage consumed by your cluster to ensure that,
 The data reduction ratio represents the amount of space saved through storage efficiency.
 
 .What's next?
-If your cluster is running low on space or if it doesn't have the capacity to meet a future demand, you should plan to link:../administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity. 
+If your cluster is running low on space or does not have the capacity to meet future demand, link:../administer/increase-storage-capacity.html[add new drives] to your ASA r2 system to increase your storage capacity.
 
 == Monitor storage availability zone utilization
 
@@ -41,12 +41,12 @@ A summary of the storage availability zone utilization is displayed for each HA 
 
 . If you want more detailed metrics, select a specific storage availability.
 +
-Under *Overview*, the capacity of the storage availability zone, the amount of used space, and the data reduction ratio is displayed.
+Under *Overview*, the capacity of the storage availability zone, the amount of used space, and the data reduction ratio are displayed.
 + 
 Under *Storage units*, a list of all the storage units in the storage availability zone is displayed.
 
 .What's next?
-If your storage availability zone is running low on space, you should plan to link:../manage-data/move-storage-units.html[move storage units] to another storage availability zone to balance the storage utilization across the cluster, delete snapshots to free up space or add additional disks to your nodes to increase capacity.
+If your storage availability zone is running low on space, link:../manage-data/move-storage-units.html[move storage units] to another storage availability zone to balance the storage utilization across the cluster, delete snapshots to free up space, or add additional disks to your nodes to increase capacity.
 
 
 == Monitor storage unit utilization 
@@ -61,7 +61,7 @@ Monitor the amount of storage consumed by a storage unit so that you can proacti
 * Amount of used space
 * Data reduction ratio
 +
-The data reduction ratio represents the amount of space saved through storage efficiency
+The data reduction ratio represents the amount of space saved through storage efficiency.
 * Snapshot used
 +
 Snapshot used represents the amount of storage used by snapshots.

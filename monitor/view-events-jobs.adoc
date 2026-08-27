@@ -9,7 +9,7 @@ summary: "Use ONTAP System Manager to view a list of errors or alerts that have 
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP System Manager to view a list of errors or alerts that have occurred in your system along with recommended corrective actions.  You can also view system audit logs and a list of jobs that are active, completed, or failed.
+Use ONTAP System Manager to view a list of errors or alerts, recommended corrective actions, system audit logs, and active, completed, or failed jobs.
 
 .Steps
 
@@ -52,12 +52,12 @@ Configure your system to send a notification to specific email addresses when th
 
 . In System Manager, select *Cluster > Settings*.
 . Next to *Notifications management* select image:icon_kabob.gif[three vertical blue dots].
-. To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destinations*; then select *Audit log destinations*. 
+. To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destinations*; then select *Audit log destinations*.
 . Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters].
 . Enter the destination information; then select *Add*.
 
 .Result
 
-The email address you added will now receive the specified email notifications for cluster events and audit logs.
+The email address you added receives the specified email notifications for cluster events and audit logs.
 
 // 2024 Sept 24, ONTAPDOC 1930

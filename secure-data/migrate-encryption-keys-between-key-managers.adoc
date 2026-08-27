@@ -4,12 +4,12 @@ permalink: secure-data/migrate-encryption-keys-between-key-managers.html
 keywords: onboard key manager, external key manager, configure, migrate keys, store keys, authentication keys, encryption keys, asa r2
 summary: "You can use the ONTAP onboard key manager on your ASA r2 system or an external key manager or both (in one case) to manage data encryption keys."
 ---
-= Migrate ONTAP data encryption keys between key managers on your ASA r2 system
+= Migrate ONTAP data encryption keys between key managers on ASA r2 systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can manage your data encryption keys using either the ONTAP onboard key manager on your ASA r2 system or an external key manager (or both). External key managers can only be enabled at the storage VM level. At the ONTAP cluster level, you can enable either the onboard key manager or an external key manager.  
+You can manage data encryption keys with the ONTAP onboard key manager on your ASA r2 system, an external key manager, or both in supported configurations. External key managers are supported only at the storage VM level. At the ONTAP cluster level, you can use either the onboard key manager or an external key manager.
 
 [cols="2,2" options="header"]
 |===
@@ -46,14 +46,14 @@ Storage VM level: External key manager
 
 == Migrate keys between key managers at the ONTAP cluster level
 
-Beginning with ONTAP 9.16.1 you can use the ONTAP command line interface (CLI) to migrate keys between key managers at the cluster level. 
+Beginning with ONTAP 9.16.1, you can use the ONTAP command line interface (CLI) to migrate keys between key managers at the cluster level. 
 
 // start tabbed area
 
 [role="tabbed-block"]
 ====
 
-.From onboard to external 
+.From onboard key manager to external key manager 
 --
 .Steps
 
@@ -93,7 +93,7 @@ set -privilege admin
 ----
 --
 
-.From external to onboard
+.From external key manager to onboard key manager
 --
 
 .Steps
@@ -119,7 +119,7 @@ security key-manager onboard create-config
 security key-manager keystore enable -vserver <storage_vm_name> -type OKM
 ----
 
-. Delete the external key manger configuration
+. Delete the external key manager configuration
 +
 [source, cli]
 ----
@@ -142,7 +142,7 @@ set -privilege admin
 
 == Migrate keys between key managers across ONTAP cluster and storage VM levels
 
-You can use the ONTAP command line interface (CLI) to migrate keys between the key manager at the cluster level and a key manager at the storage VM level.  
+You can use the ONTAP command line interface (CLI) to migrate keys between key managers at the cluster and storage VM levels.  
 
 
 .Steps
