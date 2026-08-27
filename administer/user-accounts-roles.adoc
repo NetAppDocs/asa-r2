@@ -9,11 +9,11 @@ summary: Use System Manager to configure active directory domain controller acce
 :imagesdir: ../media/
 
 [.lead]
-Use System Manager to configure active directory domain controller access, LDAP and SAML authentication for your user accounts.  Create user account roles to define specific functions that users assigned to the roles can perform on your cluster.
+Use System Manager to configure Active Directory domain controller access, LDAP and SAML authentication for your user accounts. Create user account roles to define specific functions that users assigned to the roles can perform on your cluster.
 
-== Configure active directory domain controller access
+== Configure Active Directory domain controller access
 
-Configure active directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access. 
+Configure Active Directory (AD) domain controller access to your cluster or storage VM so that you can enable AD account access.
 
 .Steps
 
@@ -56,7 +56,7 @@ See the IdP documentation for configuration.
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Under *Security*, next to *SAML authentication*, select image:icon_gear_white_bg.png[blue outline of a mechanical gear] .
+. Under *Security*, next to *SAML authentication*, select image:icon_gear_white_bg.png[blue outline of a mechanical gear].
 . Select *Enable SAML authentication*.
 . Enter the IdP URL and the host system IP address; then select *Save*.
 +
@@ -73,7 +73,7 @@ You can now use SAML authentication for your user accounts.
 
 == Create user account roles
 
-Roles for cluster administrators and storage VM administrators are automatically created when your cluster is initialized. Create additional user account roles to define specific functions that users assigned to the roles can perform on your cluster.  
+Roles for cluster administrators and storage VM administrators are automatically created when your cluster is initialized. Create additional user account roles to define specific functions that users assigned to the roles can perform on your cluster.
 
 .Steps
 
@@ -100,7 +100,7 @@ Create an administrator user account to enable the account user to perform speci
 . Under *Users*, select image:icon_add_blue_bg.png[blue rectangle containing a plus sign followed by the word add in white letters]. 
 . Enter a username; then select a role to assign to the user.
 . Select the user login method and the authentication method.
-. To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method 
+. To enable MFA, select image:icon_add.gif[plus sign followed by the word add in blue letters]; then select a secondary login method and authentication method.
 . Enter a password for the user.
 . Select *Save*.
 

@@ -9,8 +9,7 @@ summary: "Use digital security certificates to verify the identity of remote ser
 :imagesdir: ../media/
 
 [.lead]
-
-Use digital security certificates to verify the identity of remote servers. 
+Use digital security certificates to verify the identity of remote servers.
 
 Online Certificate Status Protocol (OCSP) validates the status of digital certificate requests from ONTAP services using SSL and Transport Layer Security (TLS) connections. 
 
@@ -28,7 +27,7 @@ Generate a certificate signing request (CSR) to create a private key which can b
 
 .Result
 
-You have generated a CSR to which can be used to generate a public certificate.
+You have generated a CSR which can be used to generate a public certificate.
 
 == Add a trusted certificate authority
 
