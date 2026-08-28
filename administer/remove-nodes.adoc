@@ -11,10 +11,6 @@ summary: "You might need to rename a node to align with the naming conventions o
 [.lead]
 You might need to remove a node from the cluster for maintenance, replacement, or decommissioning purposes. Nodes must be removed one at a time. If you remove a node, you must also remove its HA partner.
 
-.Before you begin
-
-More than half of the nodes in the cluster must be healthy.
-
 == Step 1: Prepare to remove nodes from an ASA r2 cluster
 
 Before you remove a node from an ASA r2 cluster, you should verify that the cluster is healthy. Then, you should migrate or delete storage units, VLANs, and LIFs from the node and disable storage failover.
@@ -55,7 +51,7 @@ storage failover modify -enabled false -node <nodename>
 ----
 
 .What's next?
-After you have completed the preparation steps, you can remove the first node in the HA pair from the cluster and then remove its HA partner.
+Remove the first node in the HA pair from the cluster and then remove its HA partner.
 
 == Step 2: Remove a node from an ASA r2 cluster
 
@@ -162,7 +158,7 @@ cluster remove-node -node <node_name>
 cluster remove-node -cluster_ip <node_ip>
 ----
 +
-A failure message is generated if you have conditions that you must address before removing the node. If this happens, address the conditions and rerun the cluster remove-node command.
+A failure message is generated if you have conditions that you must address before removing the node. If this happens, address the conditions and rerun the `cluster remove-node` command.
 +
 The node automatically reboots after it is successfully removed from the cluster.
 
@@ -175,7 +171,7 @@ Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove
 
 == Step 3: Optionally, erase the node configuration and initialize all disks
 
-If you are repurposing a node that you have removed from a cluster, you must erase the node configuration and initialize all disks before it can rejoin a cluster.
+If you are repurposing a node that you have removed from your ASA r2 cluster, you must erase the node configuration and initialize all disks before it can rejoin a cluster.
 
 .Steps
 
