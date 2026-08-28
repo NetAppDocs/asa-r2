@@ -1,0 +1,184 @@
+---
+sidebar: sidebar
+permalink: administer/remove-nodes.html
+keywords: remove, node, removing, asa r2
+summary: "You might need to rename a node to align with the naming conventions of your organization or for other administrative reasons."
+---
+= Remove ASA r2 nodes from an ONTAP cluster
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You might need to remove a node from the cluster for maintenance, replacement, or decommissioning purposes. Nodes must be removed one at a time. If you remove a node, you must also remove its HA partner.
+
+.Before you begin
+
+More than half of the nodes in the cluster must be healthy.
+
+== Step 1: Prepare to remove nodes from an ASA r2 cluster
+
+Before you remove a node from an ASA r2 cluster, you should verify that the cluster is healthy. Then, you should migrate or delete storage units, VLANs, and LIFs from the node and disable storage failover.
+
+.Steps
+
+. Verify that the cluster is healthy:
++
+[source,cli]
+----
+cluster show
+----
+
+. link:../manage-data/move-storage-units.html[Move] or link:../manage-data/delete-storage-units.html[delete] all storage units from the node.
+
+. If you have SCSI storage units (LUNs) on the node to be removed, link:https://docs.netapp.com/us-en/ontap/san-admin/modify-slm-reporting-nodes-task.html[delete the node and its HA partner from the Selective LUN Map (SLM) reporting nodes list^]. 
++
+If you do not remove the node and its HA partner from the SLM reporting-nodes list, access to the LUNs previously on the node can be lost even though  the LUNs were moved to another node.
+
+. link:https://docs.netapp.com/us-en/ontap/networking/delete_a_lif.html[Delete^] or link:https://docs.netapp.com/us-en/ontap/san-admin/move-san-lifs-task.html[migrate^] all network interfaces (LIFs) from the node.
++
+
+* Data LIFs should be moved to another node or deleted.
++
+iSCSI LIF migration is limited to ports on the home-node or the HA partner only, so they must be deleted.
+* Intercluster LIFs should be deleted.
++
+When you delete intercluster LIFs, a warning is displayed that can be ignored. 
+* The cluster management LIF should be moved to another node.
+
+. link:../administer/manage-cluster-networking.html[Delete all VLANs] on the node.
+
+. Disable storage failover for the node.
++
+[source,cli]    
+----
+storage failover modify -enabled false -node <nodename>
+----
+
+.What's next?
+After you have completed the preparation steps, you can remove the first node in the HA pair from the cluster and then remove its HA partner.
+
+== Step 2: Remove a node from an ASA r2 cluster
+
+Remove a node from an ASA r2 cluster only after you have completed the steps necessary to prepare the node for removal. After you remove a node from the cluster, you must then remove its HA partner.
+
+.Before you begin
+
+It is recommended that you issue an AutoSupport message to notify NetApp technical support that you are removing a node from your cluster.
+
+NOTE: Do not remove a node from the cluster or rename a node when an automated ONTAP upgrade is in progress.
+
+.About this task
+
+* If you remove two nodes from a four-node cluster, cluster HA is automatically enabled on the two remaining nodes.
+* All system and user data, from all disks that are connected to the node, must be made inaccessible to users before removing a node from the cluster.
+* If a node was incorrectly removed from a cluster, contact NetApp Support for assistance with options for recovery.
+
+.Steps
+
+. Change the privilege level to advanced:
++
+[source,cli]
+----
+set -privilege advanced
+----
+
+. Identify the node in the cluster that holds epsilon:
++
+[source,cli]
+----
+cluster show
+----
++
+In the following example, "node0" currently holds epsilon:
++
+----
+cluster::*> cluster show
+Node                 Health  Eligibility  Epsilon
+-------------------- ------- ------------ ------------
+node0                true    true         true
+node1                true    true         false
+node2                true    true         false
+node3                true    true         false
+----
+
+. If the node that you are removing holds epsilon, move epsilon to a surviving node.
+.. Remove epsilon from the node:
++
+[source,cli]
+----
+cluster modify -node <name_of_node_to_be_removed> -epsilon false
+----
+
+.. Move epsilon to another node:
++
+[source,cli]
+----
+cluster modify -node <node_name> -epsilon true
+----
+
+. Identify the current primary node:
++
+[source,cli]
+----
+cluster ring show
+----
++
+The primary node is the node that holds processes such as mgmt, vldb, vifmgr, bcomd, and crs.
+
+. If the node you are removing is the current primary node, enable another node in the cluster to be elected as the primary node.
+.. Make the current primary node ineligible to participate in the cluster:
++
+[source,cli]
+----
+cluster modify -node <node_name> -eligibility false
+----
++
+When the primary node becomes ineligible, one of the remaining nodes is elected by the cluster quorum as the new primary. If you are performing this step on the first node in an HA pair, mark only that node as ineligible. Do not change the status of its HA partner until these steps are repeated on the partner.
++
+If the partner node is elected as the new primary and holds epsilon, you must move epsilon to another node before you mark the partner ineligible. 
+
+.. Make the previous primary node eligible to participate in the cluster again:
++
+[source,cli]
+----
+cluster modify -node <node_name> -eligibility true
+----
+
+. Log into the remote node management LIF or the cluster-management LIF on a node that you are not removing from the cluster.
+. Use the node name or the node IP address to remove the node from the cluster:
++
+If you have a mixed version cluster and you are removing the last lower version node, use the -skip-last-low-version-node-check parameter with these commands.
++
+* Use the node name to remove the node: 
++
+[source,cli]
+----
+cluster remove-node -node <node_name>
+----
+* Use the node IP address to remove the node: 
++
+[source,cli]
+----
+cluster remove-node -cluster_ip <node_ip>
+----
++
+A failure message is generated if you have conditions that you must address before removing the node. If this happens, address the conditions and rerun the cluster remove-node command.
++
+The node automatically reboots after it is successfully removed from the cluster.
+
+.What's next? 
+Repeat these steps to remove the failover partner from the cluster.
+
+.Related information
+
+Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove-node.html[cluster remove-node] command.
+
+== Step 3: Optionally, erase the node configuration and initialize all disks
+
+If you are repurposing a node that you have removed from a cluster, you must erase the node configuration and initialize all disks before it can rejoin a cluster.
+
+.Steps
+
+. During the boot process, when prompted, press *Ctrl-C* to display the boot menu.
+. Select the boot menu option *(4) Clean configuration and initialize all disks* or option *(9) Configure Advanced Drive Partitioning* to erase the node's configuration and initialize all disks.
+
