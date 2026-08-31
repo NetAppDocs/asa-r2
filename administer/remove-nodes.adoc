@@ -41,9 +41,9 @@ iSCSI LIF migration is limited to ports on the home-node or the HA partner only,
 When you delete intercluster LIFs, a warning is displayed that can be ignored. 
 * The cluster management LIF should be moved to another node.
 
-. link:../administer/manage-cluster-networking.html[Delete all VLANs] on the node.
+. link:../administer/manage-cluster-networking.html#delete-a-vlan[Delete all VLANs] on the node.
 
-. Disable storage failover for the node.
+. Disable storage failover for the node:
 +
 [source,cli]    
 ----
@@ -59,7 +59,7 @@ Remove a node from an ASA r2 cluster only after you have completed the steps nec
 
 .Before you begin
 
-It is recommended that you issue an AutoSupport message to notify NetApp technical support that you are removing a node from your cluster.
+It is recommended that you link:../get-help/manage-autosupport.html#send-autosupport-data[issue an AutoSupport message] to notify NetApp technical support that you are removing a node from your cluster.
 
 NOTE: Do not remove a node from the cluster or rename a node when an automated ONTAP upgrade is in progress.
 
