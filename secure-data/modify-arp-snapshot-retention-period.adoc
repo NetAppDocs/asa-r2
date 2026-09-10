@@ -11,15 +11,15 @@ summary: "Learn how to configure the ARP/AI snapshot response policy and modify 
 [.lead]
 If Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) detects abnormal activity on one or more storage units on your ASA r2 system, it can automatically create an ARP snapshot to protect the data. Beginning with ONTAP 9.20.1, you can configure whether ARP/AI creates these snapshots by setting a snapshot response policy, independent of ARP/AI's ransomware detection and alerting, which always remains active. Depending on your storage capacity and business requirements, you might also want to increase or decrease the default ARP snapshot retention period.
 
-== Configure a snapshot response policy for a storage unit
+== Configure a snapshot response policy
 
-The snapshot response policy controls whether ARP/AI creates periodic snapshots, attack-triggered snapshots, or no snapshots at all for a storage unit.
+The snapshot response policy controls whether ARP/AI creates periodic snapshots, attack-triggered snapshots, or no snapshots at all. ARP/AI detection and alerting remain active under every policy; only snapshot creation changes. You can set a default policy for a storage VM, which new storage units on that storage VM inherit, and override the default for an individual storage unit.
 
 [cols="1,3", options="header"]
 |===
 | Policy | Behavior
-| Periodic and proactive snapshots (default) | ARP/AI creates snapshots at regular intervals and creates an additional snapshot when it detects an attack.
-| Proactive snapshots only | ARP/AI creates a snapshot only when it detects an attack. No periodic snapshots are created.
+| Periodic and proactive snapshots (default) | ARP/AI generates alerts and event logs, creates snapshots at regular intervals, and creates an additional snapshot when it detects an attack.
+| Proactive snapshots only | ARP/AI generates alerts and event logs and creates a snapshot only when it detects an attack. No periodic snapshots are created.
 | Alert only | ARP/AI generates alerts and event logs only. No ARP/AI snapshots are created.
 |===
 
@@ -30,26 +30,24 @@ If you select the alert-only policy, ARP/AI does not create any snapshots. If a 
 When you change the snapshot response policy, existing ARP/AI snapshots are not deleted immediately. They are deleted when their scheduled expiry time is reached.
 
 .Steps
-. In System Manager, select *Storage* and select the storage unit.
-. Select *Security*.
-. Under *Anti-ransomware*, select image:icon_kabob.gif[three vertical blue dots], and then select *Edit anti-ransomware settings*.
-. Select the snapshot response policy to apply to the storage unit.
-. Select *Save*.
 
-// TODO(ONTAPDOC-4062): confirm exact protection-level option labels and edit affordance (kabob vs pencil) against an EAP/RC System Manager build before publishing.
+Configure the default snapshot response policy for a storage VM:
 
-== Configure a default snapshot response policy for a storage VM
-
-You can set a default snapshot response policy at the storage VM level. New storage units created on the storage VM inherit this default; you can still override the policy for individual storage units.
-
-.Steps
 . In System Manager, select *Cluster > Storage VMs*.
 . Select the storage VM.
 . In the *Security* section, next to *Anti-ransomware*, select image:icon_kabob.gif[three vertical blue dots], and then select *Edit anti-ransomware settings*.
 . Select the default snapshot response policy to apply to new storage units created on the storage VM.
 . Select *Save*.
 
-// TODO(ONTAPDOC-4062): SVM-level default snapshot-policy scope for ASA r2 storage units is not explicitly confirmed in available specs — verify with engineering/EAP build before publishing.
+Configure the snapshot response policy for a storage unit, overriding the storage VM default:
+
+. In System Manager, select *Storage* and select the storage unit.
+. Select *Security*.
+. Under *Anti-ransomware*, select image:icon_kabob.gif[three vertical blue dots], and then select *Edit anti-ransomware settings*.
+. Select the snapshot response policy to apply to the storage unit.
+. Select *Save*.
+
+// TODO(ONTAPDOC-4062): confirm exact protection-level option labels, edit affordance (kabob vs pencil), and SVM-level default scope against an EAP/RC System Manager build before publishing.
 
 == Modify ARP/AI snapshot retention periods
 
