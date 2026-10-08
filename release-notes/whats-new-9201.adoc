@@ -47,8 +47,8 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
-| 
-| 
+| link:../manage-data/migrate-svm.html[Support for improved performance after migrating storage VMs from an ASA system to an ASA r2 system]
+| Beginning with ONTAP 9.20.1, ONTAP reduces additional read latency and CPU usage that can occur after storage virtual machines (VMs) are migrated from an ASA system to an ASA r2 system. 
 |===
 
 == SAN configuration
@@ -88,6 +88,21 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |
 |===
 
+== System manager
+[cols="2,4" options="header"]
+|===
+| Update
+| Description
+
+| link:../learn-more/additional-supported-ontap-features.html[Support for certificate and user password expiration alerts]
+| System Manager displays a dashboard health alert 30 days before a cluster or storage virtual machine (SVM) certificate expires and updates it daily with the days remaining before expiration. 
+
+Also, the role associated with a user account is configured for password expiry alerts, the user receives a top-of-page banner alert in System Manager immediately after logging in, beginning 14 days before the password expires. The alert is updated each time the user logs in to show the number of days remaining until the password expires. 
+
+| link:../learn-more/additional-supported-ontap-features.html[Support for additional AutoSupport alerts]
+| System Manager displays new AutoSupport alerts that can help you address AutoSupport configuration issues.
+|===
+  
 == Upgrade
 [cols="2,4" options="header"]
 |===
@@ -97,6 +112,7 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |
 |===
 
+// 2026 Nov 5,  ONTAPDOC - 4220, ONTAPDOC - 4052
 // 2026, Aug 08, ONTAPDOC-3890/3574
 //2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499, ONTAPDOC 3678, ONTAPDOC-3884, ONTAPDOC-3709, ONTAPDOC-3494, ONTAPDOC-3617 
