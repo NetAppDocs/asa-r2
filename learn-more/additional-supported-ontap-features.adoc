@@ -13,6 +13,12 @@ Because ASA r2 systems run a streamlined version of ONTAP, you perform many comm
 
 For more information about common features and functions, see the following ONTAP documentation.
 
+== AutoSupport
+
+Beginning with ONTAP 9.20.1, System Manager displays AutoSupport alerts if AutoSupport is configured for the SMTP protocol instead of the HTTPs protocol, if AutoSupport is disabled but customer and partner email recipients remain configured and if an AutoSupport transmission fails because of a DNS issue.
+
+link:https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html[Learn more about AutoSupport^].
+
 == Data protection
 
 Learn more about common data protection features supported on ASA r2 systems.
@@ -134,5 +140,11 @@ You can search for various actions, objects, and information topics in System Ma
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
 
+=== User password expiration alerts
+Beginning with ONTAP 9.20.1, if the role associated with a user account is configured for password expiry alerts, the user receives a top-of-page banner alert in System Manager immediately after logging in, beginning 14 days before the password expires. The alert is updated each time the user logs in to show the number of days remaining until the password expires. You can configure expiry alerts when you add or edit an administrator role.
+
+link:https://docs.netapp.com/us-en/ontap/authentication/configure-password-expiry-alerts.html[Learn how to configure password expiry alerts in System Manager^].
+
+//2026 Nov 5,  ONTAPDOC - 4220
 //2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677, ONTAPDOC-3883
