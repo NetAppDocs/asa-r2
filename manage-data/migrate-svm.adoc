@@ -13,6 +13,8 @@ Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual 
 
 NOTE: You cannot migrate a storage VM from an ASA MetroCluster to an ASA r2 cluster. ASA r2 systems do not support MetroCluster configurations.
 
+ASA r2 systems support QuickAssist Technology (QAT).  ASA systems do not support QAT. Beginning with ONTAP 9.20.1, ONTAP reduces high read latency and CPU usage that can occur after a storage virtual machine (VM) is migrated from an ASA (non-QAT) system to an ASA r2 (QAT) system. 
+
 Storage VM migration between ASA and ASA r2 storage systems is supported as follows:
 
 [cols="2", options="header"]
@@ -226,5 +228,6 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cut over your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
 
+// 2025 Nov 5, ONTAPDOC - 4052
 // 2026 Jul 15, GitHub Issue 119
 // 2025 Nov 06, ONTAPDOC-3345
