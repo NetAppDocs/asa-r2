@@ -228,6 +228,6 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cut over your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
 
-// 2025 Nov 5, ONTAPDOC - 4052
+// 2025 Nov 5, ONTAPDOC-4052
 // 2026 Jul 15, GitHub Issue 119
 // 2025 Nov 06, ONTAPDOC-3345

@@ -75,8 +75,8 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
-|
-|
+| Support for simplified reporting of storage efficiency data reduction rate
+| The storage efficiency data reduction rate (DRR) provides a more precise assessment of ONTAP storage efficiency space savings by including only reducible data. In ONTAP 9.19.1 and earlier, the DRR includes both reducible and non-reducible data.
 |===
 
 == Storage resource management
@@ -112,7 +112,7 @@ Also, the role associated with a user account is configured for password expiry 
 |
 |===
 
-// 2026 Nov 5,  ONTAPDOC - 4220, ONTAPDOC - 4052
+// 2026 Nov 5,  ONTAPDOC-4220, ONTAPDOC-4052
 // 2026, Aug 08, ONTAPDOC-3890/3574
 //2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499, ONTAPDOC 3678, ONTAPDOC-3884, ONTAPDOC-3709, ONTAPDOC-3494, ONTAPDOC-3617 
