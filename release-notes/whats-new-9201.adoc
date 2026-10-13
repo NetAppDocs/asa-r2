@@ -66,8 +66,8 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
-| 
-| 
+| Support for FC-SP-3 authentication and encryption with Broadcom secure HBAs
+| ONTAP supports Fibre Channel Security Protocol 3 (FC-SP-3) authentication and encryption on Broadcom secure HBAs with ASA r2 systems. FC-SP-3 support enables hardware-level end-to-end encryption and device authentication to protect data in flight between FC and NVMe/FC SAN hosts and ONTAP storage systems while aligning with T11 Fibre Channel security standards.
 |===
 
 == Storage efficiency
@@ -75,8 +75,8 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
-| Support for simplified reporting of storage efficiency data reduction rate
-| The storage efficiency data reduction rate (DRR) provides a more precise assessment of ONTAP storage efficiency space savings by including only reducible data. In ONTAP 9.19.1 and earlier, the DRR includes both reducible and non-reducible data.
+| 
+| 
 |===
 
 == Storage resource management
@@ -84,8 +84,8 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
-|
-|
+| Support for simplified reporting of storage efficiency data reduction rate
+| The storage efficiency data reduction rate (DRR) provides a more precise assessment of ONTAP storage efficiency space savings by including only reducible data. In ONTAP 9.19.1 and earlier, the DRR includes both reducible and non-reducible data.
 |===
 
 == System manager

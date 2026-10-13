@@ -23,6 +23,9 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | Limit change
 | Changed in release...
 
+| SCSI persistent reservation registration scale
+| The maximum supported number of SCSI-3 persistent reservation registrations per LUN increases from 182 to 256. 
+
 | Storage VMs per cluster
 | The maximum number of supported storage virtual machines (VMs) per HA pair is increased from 32 to 256.
 | ONTAP 9.18.1
