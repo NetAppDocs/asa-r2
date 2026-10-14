@@ -47,8 +47,12 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
+
 | link:../manage-data/migrate-svm.html[Support for improved performance after migrating storage VMs from an ASA system to an ASA r2 system]
 | Beginning with ONTAP 9.20.1, ONTAP reduces additional read latency and CPU usage that can occur after storage virtual machines (VMs) are migrated from an ASA system to an ASA r2 system. 
+
+| link:../manage-data/migrate-svm.html[Support for improved performance after migrating storage VMs from an ASA system to an ASA r2 system]
+| Beginning with ONTAP 9.20.1, ONTAP reduces additional read latency and CPU usage that can occur after storage virtual machines (VMs) are migrated from an ASA system to an ASA r2 system.
 |===
 
 == SAN configuration
