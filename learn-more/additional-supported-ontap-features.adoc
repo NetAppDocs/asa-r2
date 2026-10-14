@@ -52,7 +52,7 @@ link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.
 === FC-SP-3 authentication and encryption
 Beginning with ONTAP 9.20.1, ONTAP supports Fibre Channel Security Protocol 3 (FC-SP-3) authentication and encryption on Broadcom secure HBAs with ASA r2 systems. FC-SP-3 support enables hardware-level end-to-end encryption and device authentication to protect data in flight between FC and NVMe/FC SAN hosts and ONTAP storage systems while aligning with T11 Fibre Channel security standards.
 
-* link:https://docs.netapp.com/us-en/ontap/system-administration/fc-sp-3-authentication-and-encryption.html[Learn about FC-SP-3 authentication and encryption^].
+* link:https://docs.netapp.com/us-en/ontap/san-admin/fc-sp-3-security-support.html[Learn about FC-SP-3 authentication and encryption^].
 
 === OAuth 2.0 authentication
 You can use the Open Authorization (OAuth 2.0) framework to control access to your ONTAP clusters. OAuth 2.0 restricts and controls access to protected resources using signed access tokens. 
