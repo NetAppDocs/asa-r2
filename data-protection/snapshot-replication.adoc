@@ -78,15 +78,23 @@ A snapshot replication relationship establishes a connection between your ASA r2
 
 For added security against ransomware attacks, create a SnapLock for SnapVault replication relationship.
 
-.Before you begin
+.About this task
 
-* link:pre-defined-protection-policies.html[Learn about replication policies].
-+
-When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy. 
+* When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy.   
 
 === Create a relationship to replicate snapshots to a remote cluster
 
 Protect your data by replicating snapshots to a remote cluster.  Replicated snapshots of your consistency groups can be used for disaster recovery or for data migration.
+
+.Before you begin
+
+* Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics. To do so, your ONTAP system backend must be configured for FC replication and both the FC fabric and the intercluster IP network must be operational. Replication data can transport over the FC fabric, but the intercluster IP network is required for cluster communications and replication management functions. link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html[Learn to configure your ONTAP system backend for FC replication^].
+
+.About this task
+
+* In ONTAP 9.20.1 and later, to create a Snapmirror relationship to replicate over your backend FC replication, use a supported, pre-defined asynchronous data protection policy and select FC for the transport protocol. Backend replication uses the IP protocol by default. * link:pre-defined-protection-policies.html[Learn which pre-defined replication policies support backend FC replication].
++
+To change the selected transport protocol after creating a replication relationship, you must delete and recreate the replication relationship with the desired transport protocol.
 
 .Steps
 
@@ -117,6 +125,7 @@ a|
 |===
 
 . Select a replication policy.
+. In ONTAP 9.20.1 and later, select the transport protocol for the replication relationship.
 . To delay the start of the data transfer, select *Destination settings*, and then deselect *Start transfer immediately*.
 + 
 The initial data transfer begins immediately by default.  

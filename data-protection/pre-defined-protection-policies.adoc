@@ -16,7 +16,16 @@ If the pre-defined policies do not meet your needs, you can link:snapshot-replic
 [NOTE]
 ASA r2 systems do not support synchronous replication.
 
-ASA r2 systems support the following pre-defined protection policies.
+ASA r2 systems support the following pre-defined protection policies. 
+[NOTE]
+====
+Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics using a supported asynchronous data protection policy.  The following pre-defined protection policies support backend FC replication:
+
+* Asynchronous
+* MirrorAllSnapshots
+* MirrorAndVault
+* XDPDefault
+====
 
 [cols="3,4,1"]
 |===
@@ -72,5 +81,6 @@ h| Policy h| Description h| Policy type
 
 |===
 
+// 2026 05 Nov, ONTAPDOC 3949
 // 2025 Oct 30, ONTAPDOC 2893
 // 2025 Sept 04, ONTAPDOC 2893
