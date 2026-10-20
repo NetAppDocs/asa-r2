@@ -1,0 +1,61 @@
+During an inter-cluster storage virtual machine (VM) migration, client I/O transitions to the destination cluster and the storage VM on the source cluster is automatically removed. If you choose to disable automatic cutover and removal of the source storage VM during the migration, you need to perform these steps manually after the migration is complete.
+
+=== Manually cut over clients after a storage VM migration
+
+If you disable automatic client cutover during the inter-cluster migration of a storage VM, after the migration relationship is ready for cutover, perform the cutover manually so the destination storage VM can serve data to clients.
+
+.About this task
+
+Perform this task from the destination cluster.
+
+.Steps
+
+. Manually execute client cutover:
++
+[source,cli]
+----
+vserver migrate cutover -vserver <storage_VM_name>
+----
+
+. Verify that the cutover operation is complete:
++
+[source,cli]
+----
+vserver migrate show
+----
+
+.Result
+
+Data is being served to your clients from the storage VM on your destination cluster.
+
+.What's next?
+You are now ready to remove the storage VM from the source cluster.
+
+=== Manually remove a storage VM after migration
+
+If you disable automatic source cleanup during an inter-cluster storage VM migration, after the migration is complete, remove the storage VM from the source cluster to free the storage space.
+
+.Before you begin
+
+Your clients should be serving data from the destination cluster.
+
+.Steps
+
+. From the source cluster, verify that the status of the source storage VM is *Ready for source cleanup*:
++
+[source,cli]
+----
+vserver migrate show
+----
+
+. Remove the source storage VM:
++
+[source,cli]
+----
+vserver migrate source-cleanup -vserver <storage_VM_name>
+----
+
+.Result
+The storage VM on your source cluster is removed.
+
+// 2025 Nov 06, ONTAPDOC-3345

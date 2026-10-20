@@ -1,0 +1,21 @@
+.Steps
+
+. From the source cluster, start the storage VM migration:
++
+[source,cli]
+----
+vserver migrate start -vserver <storage_VM_name> -source-cluster <source_cluster>
+----
++ 
+To disable automatic cutover, use the `-auto-cutover false` parameter. To disable the automatic removal of the source storage VM, use the `-auto-source-cleanup false` parameter.
+
+. Monitor the status of the migration
++
+[source,cli]
+----
+vserver migrate show -vserver <storage_VM_name>
+----
++
+If you need to pause or cancel the migration before automatic cutover begins, use the `vserver migrate pause` and the `vserver migrate abort` commands. You must pause the migration before cancelling it.  You cannot cancel the migration after cutover starts.
++
+If automatic cutover is enabled, when the migration is complete, the *status* displays as migration-complete. If automatic cutover is disabled, the *status* displays as *Ready for source cleanup*.

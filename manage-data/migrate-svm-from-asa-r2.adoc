@@ -1,0 +1,170 @@
+---
+sidebar: sidebar
+permalink: manage-data/migrate-svm-from-asa-r2.html
+keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
+summary: "Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster."
+---
+= Migrate a storage VM from an ASA cluster to an ASA r2 cluster
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster. You might need to migrate a storage VM to consolidate SAN and NAS workloads, adopt ONTAP features not available for ASA r2 systems, or as part of a hardware refresh for your environment.  Existing host mappings and storage unit configurations for LUNs and namespaces are maintained during migration, reducing operational effort and risk.
+
+.Before you begin
+
+* You must be a cluster administrator.  
+* All nodes in both clusters must be running ONTAP 9.20.1 or later.
+
+.About this task
+
+* You can migrate an ASA r2 storage VM from a 2-node ASA r2 cluster to a 2-node AFF cluster only.
+** You cannot migrate an ASA r2 storage VM to a FAS cluster, or to an ASA or AFF cluster with more than 2 nodes. 
+** You cannot migrate an ASA r2 storage VM from an ASA r2 cluster with more than 2 nodes.
+
+* Data migration from an ASA r2 cluster to an AFF cluster is not reversible.
++
+You can abort a migration before cutover, but after cutover is initiated, you cannot interrupt or revert the migration.  After the migration is complete, you cannot migrate data from an AFF cluster to an ASA r2 cluster. 
++
+You can link:migrate-svm.html[migrate an SVM from an ASA to an ASA r2 cluster].
+
+* You can migrate only one storage VM at a time.
+* The storage VM can contain a maximum of 400 storage units.
+* The storage VM cannot contain SnapMirror destination storage units.
+
+== Step 1: Create a cluster peer relationship 
+
+Before you can migrate a storage VM from an ASA r2 cluster, you need to create a peer relationship. A peer relationship defines network connections that enable ONTAP clusters and storage VMs to exchange data securely.
+
+.About this task
+In the following procedure, the ASA or AFF cluster is the _destination_ cluster and the ASA r2 cluster is the _source_ cluster.
+
+
+include::../_include/create-cluster-peer-relationship.adoc[]
+
+.Result
+
+The clusters are peered. Storage VM data can be securely transferred.
+
+.What’s next?
+
+You are ready to prepare your ASA r2 storage VM for migration.
+
+== Step 2: Prepare the ASA r2 storage VM for migration
+
+Before you migrate a storage virtual machine (VM) from an ASA r2 cluster, you need to remove replication and SnapMirror active sync relationships and perform various checks.
+
+.Steps
+
+. link:../data-protection/snapmirror-active-sync-break-relationship.html[Remove any existing replication relationships].
+
+. link:../data-protection/snapmirror-active-sync-delete-relationship.html[Remove any existing SnapMirrror active snyc relationships].
+
+. Check if IPsec is enabled:
++
+[source,cli]
+----
+security ipsec config show
+----
+
+.. If IPsec is enabled, disable it:
++
+[source,cli]
+----
+security ipsec config modify -is-enabled -false
+-----
++
+Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/security-ipsec-config-show.html[security ipsec config show^] command.
+
+. Check for iPv6 and virtual IP (VIP) LIFs:
++
+[source,cli]
+----
+network interface show -vserver <storage_vm_name> -fields address-family, is-vip
+----
++
+For iPv6 LIFs, the `-address-family` is `ipv6`. For VIP LIFs the `-is-vip` parameter is `true`.  
+
+.. If any iPv6 or VIP LIFs exist, remove them:
++
+[source,cli]
+----
+network interface delete -vserver <storage_vm_name> - lif <lif_name>
+----
+
+.. Verify that there are no iPv6 or VIP LIFs remaining on the storage VM:
++
+[source,cli]
+----
+network interface show -vserver <storage_VM_name>
+----
++
+Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html[network interface show^] and link:https://docs.netapp.com/us-en/ontap-cli/network-interface-delete.html[network interface delete^] commands.
+
+. Check if any interface groups are configured:
++
+[source,cli
+----
+network port ifgrp show
+----
+
+.. If interface groups are configured, check if any LIFs on the storage VM are bound to an interface group:
++
+[source,cli]
+----
+network interface show -vserver <storage_VM_name> -fields home,node, home-port, curr-node, curr-port
+----
+
+.. If a LIF on the storage VM is bound to an interface group, migrate the LIF to a different physical port:
++
+[source,cli]
+----
+network interface migrate -vserver <storage_VM_name> -lif <LIF> -des-node <destination_node> -dest-port <destination_port>
+----
+
+Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-show.html[network port ifgrp show^] command.
+
+.What’s next?
+
+Run the migration pre-check.
+
+
+== Step 3: Execute the migration pre-check
+
+Before you migrate a storage VM from an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check passes successfully.
+
+include::../_include/execute-migration-pre-check.adoc[]
+
+.What’s next?
+
+You are ready to migrate your storage VM from your ASA r2 cluster.
+
+== Step 4: Migrate a storage VM from an ASA r2 cluster
+
+After you have created the necessary cluster peer relationship between the ASA r2 and ASA or AFF clusters and completed the steps to prepare both clusters, you can begin the storage VM migration.
+
+When performing a storage VM migration, it is a best practice to leave 30% CPU headroom on both the ASA r2 cluster and the AFF cluster to enable the migration CPU workload to execute.
+
+.About this task
+
+After the storage VM migration, client I/O seamlessly transitions to the destination cluster with no disruption and the storage VM on the ASA r2 cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable one or both options and perform them manually.
+
+In the following procedure, the ASA r2 cluster is the _source_ cluster and the ASA or AFF cluster is the _destination_ cluster.
+
+
+include::../_include/migrate-svm.adoc[]
+
+.Result
+The storage VM is migrated from the ASA r2 cluster to the destination cluster.
+
+.What’s next?
+
+If you disabled automatic cutover and automatic storage VM removal, perform post-migration cutover and cleanup to manually cut over your ASA r2 clients to your destination cluster and remove the storage VM from the ASA r2 cluster.
+
+== Step 5: Post-migration cutover and cleanup
+
+include::../_include/svm-post-migration-cutover-cleanup.adoc[]
+
+// 2025 Nov 5, ONTAPDOC-4052
+// 2026 Jul 15, GitHub Issue 119
+// 2025 Nov 06, ONTAPDOC-3345
