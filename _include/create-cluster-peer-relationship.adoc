@@ -8,11 +8,11 @@ You must have created intercluster LIFs on every node in the clusters being peer
 
 .Steps
 
-. On the ASA r2 cluster, create a peer relationship with the ASA cluster and generate a passphrase:
+. On the destination cluster, create a peer relationship with the source cluster and generate a passphrase:
 +
 [source,cli]
 ----
-cluster peer create -peer-addrs <ASA_cluster_LIF_IPs> -generate-passphrase
+cluster peer create -peer-addrs <source_cluster_LIF_IPs> -generate-passphrase
 ----
 +
 The following example creates a cluster peer relationship between cluster 1 and cluster 2 and creates a system-generated passphrase:
@@ -30,14 +30,14 @@ Warning: make a note of the passphrase - it cannot be displayed again.
 
 . Copy the generated passphrase.
 
-. On the ASA cluster, create a peer relationship with the ASA r2 cluster:
+. On the source cluster, create a peer relationship with the destination cluster:
 +
 [source,cli]
 ----
-cluster peer create -peer-addrs <ASA_r2_LIF_IPs> 
+cluster peer create -peer-addrs <destination_cluster_LIF_IPs> 
 ----
 
-. Enter the passphrase generated on the ASA r2 cluster.
+. Enter the passphrase generated on the destination cluster.
 
 . Verify that the cluster peer relationship is created:
 +

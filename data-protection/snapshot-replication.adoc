@@ -88,13 +88,12 @@ Protect your data by replicating snapshots to a remote cluster.  Replicated snap
 
 .Before you begin
 
-* Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics. To do so, your ONTAP system backend must be configured for FC replication and both the FC fabric and the intercluster IP network must be operational. Replication data can transport over the FC fabric, but the intercluster IP network is required for cluster communications and replication management functions. link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html[Learn to configure your ONTAP system backend for FC replication^].
+Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics. To do so, your ONTAP system backend must be configured for FC replication and both the FC fabric and the intercluster IP network must be operational. Replication data can transport over the FC fabric, but the intercluster IP network is required for cluster communications and replication management functions. link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html[Learn to configure your ONTAP system backend for FC replication^].
 
-.About this task
+.In ONTAP 9.20.1 and later:
 
-* In ONTAP 9.20.1 and later, to create a Snapmirror relationship to replicate over your backend FC replication, use a supported, pre-defined asynchronous data protection policy and select FC for the transport protocol. Backend replication uses the IP protocol by default. * link:pre-defined-protection-policies.html[Learn which pre-defined replication policies support backend FC replication].
-+
-To change the selected transport protocol after creating a replication relationship, you must delete and recreate the replication relationship with the desired transport protocol.
+* to create a Snapmirror relationship using backend FC replication, you must use a supported, pre-defined asynchronous data protection policy and select FC for the transport protocol. Backend replication uses the IP protocol by default. link:pre-defined-protection-policies.html[Learn which pre-defined replication policies support backend FC replication].
+* To change the selected transport protocol after creating a replication relationship, you must delete and recreate the replication relationship with the desired transport protocol.
 
 .Steps
 

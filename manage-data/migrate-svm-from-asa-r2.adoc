@@ -4,7 +4,7 @@ permalink: manage-data/migrate-svm-from-asa-r2.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
 summary: "Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster."
 ---
-= Migrate a storage VM from an ASA cluster to an ASA r2 cluster
+= Migrate a storage VM from ASA r2 cluster to an ASA or AFF cluster
 :icons: font
 :imagesdir: ../media/
 
@@ -39,7 +39,6 @@ Before you can migrate a storage VM from an ASA r2 cluster, you need to create a
 .About this task
 In the following procedure, the ASA or AFF cluster is the _destination_ cluster and the ASA r2 cluster is the _source_ cluster.
 
-
 include::../_include/create-cluster-peer-relationship.adoc[]
 
 .Result
@@ -72,11 +71,11 @@ security ipsec config show
 [source,cli]
 ----
 security ipsec config modify -is-enabled -false
------
+----
 +
 Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/security-ipsec-config-show.html[security ipsec config show^] command.
 
-. Check for iPv6 and virtual IP (VIP) LIFs:
+.. Check for iPv6 and virtual IP (VIP) LIFs:
 +
 [source,cli]
 ----
@@ -103,7 +102,7 @@ Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/network-interf
 
 . Check if any interface groups are configured:
 +
-[source,cli
+[source,cli]
 ----
 network port ifgrp show
 ----
@@ -163,7 +162,7 @@ If you disabled automatic cutover and automatic storage VM removal, perform post
 
 == Step 5: Post-migration cutover and cleanup
 
-include::../_include/svm-post-migration-cutover-cleanup.adoc[]
+include::../_include/svm-post-migrate-cutover-cleanup.adoc[]
 
 // 2025 Nov 5, ONTAPDOC-4052
 // 2026 Jul 15, GitHub Issue 119

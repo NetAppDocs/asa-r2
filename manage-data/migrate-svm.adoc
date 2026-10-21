@@ -47,7 +47,7 @@ a|
 
 For the most current list of ASA and ASA r2 systems, see link:https://hwu.netapp.com/[NetApp Hardware Universe^]. ASA r2 systems are listed in NetApp Hardware Universe as "ASA A-Series/C-Series (New)".
 
-You can migrate a storage VM to an ASA r2 cluster from an ASA cluster only.  Migration from any other type of ONTAP system is not supported.
+You can migrate a storage VM to an ASA r2 cluster from an ASA cluster only.  Migration from any other type of ONTAP system to an ASA r2 system is not supported.
 
 .Before you begin
 
@@ -93,6 +93,9 @@ You are ready to create a cluster peer relationship between your ASA and ASA r2 
 == Step 2: Create a cluster peer relationship between your ASA and ASA r2 clusters
 Before you can migrate a storage VM from an ASA cluster to an ASA r2 cluster, you need to create a peer relationship.  A peer relationship defines network connections that enable ONTAP clusters and storage VMs to exchange data securely.
 
+.About this task
+The ASA cluster is the _source_ cluster from which the storage VM will be migrated, and the ASA r2 cluster is the _destination_ cluster to which the storage VM will be migrated.
+
 include::../_include/create-cluster-peer-relationship.adoc[]
 
 .Result
@@ -101,11 +104,14 @@ The ASA and ASA r2 clusters are peered and storage VM data can be securely trans
 
 .What’s next?
 
-You are ready to prepare your ASA storage VM for migration.
+You are ready to execute the migration pre-check.
 
 == Step 3: Execute the migration pre-check
 
-Before you migrate a storage virtual machine (VM) from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check passes successfully.
+Before you migrate a storage VM from an ASA cluster to an ASA r2 cluster, you must run a migration pre-check and fix any required issues. You cannot perform the migration until the pre-check passes successfully.
+
+.About this task
+The ASA cluster is the _source_ cluster from which the storage VM will be migrated, and the ASA r2 cluster is the _destination_ cluster to which the storage VM will be migrated.
 
 include::../_include/execute-migration-pre-check.adoc[]
 
@@ -121,7 +127,9 @@ When performing a storage VM migration, it is a best practice to leave 30% CPU h
 
 .About this task
 
-After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the storage VM removal manually.
+* After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the storage VM removal manually.
+
+* The ASA cluster is the _source_ cluster from which the storage VM will be migrated, and the ASA r2 cluster is the _destination_ cluster to which the storage VM will be migrated.
 
 .Before you begin
 
@@ -140,11 +148,11 @@ The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The stora
 
 .What’s next?
 
-If you disabled automatic cutover and automatic storage VM removal, link:svm-post-migrate-cutover-cleanup.html[manually cut over your ASA clients to your ASA r2 cluster and remove the storage VM from the ASA cluster].
+If you disabled automatic cutover and automatic storage VM removal, perform post-migration cutover and cleanup to manually cut over your ASA clients to your destination cluster and remove the storage VM from the ASA cluster.
 
 == Step 5: Post-migration cutover and cleanup
 
-include::../_include/svm-post-migration-cutover-cleanup.adoc[]
+include::../_include/svm-post-migrate-cutover-cleanup.adoc[]
 
 // 2025 Nov 5, ONTAPDOC-4052
 // 2026 Jul 15, GitHub Issue 119
