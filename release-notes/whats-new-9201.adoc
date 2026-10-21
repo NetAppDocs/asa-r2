@@ -33,8 +33,12 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
+
 | link:../learn-more/additional-supported-ontap-features.html#fc-sp-3-authentication-and-encryption[Support for FC-SP-3 authentication and encryption with Broadcom secure HBAs]
 | ONTAP supports Fibre Channel Security Protocol 3 (FC-SP-3) authentication and encryption on Broadcom secure HBAs with ASA r2 systems. FC-SP-3 support enables hardware-level end-to-end encryption and device authentication to protect data in flight between FC and NVMe/FC SAN hosts and ONTAP storage systems while aligning with T11 Fibre Channel security standards.
+
+| Support for web-management availability protection and precluster enhancements
+| Improvements are implemented that preserve web[1]management API availability during connection floods. Precluster Dynamic Host Configuration Protocol (DHCP) handling is also enhanced so that a node-management LIF can maintain and renew DHCP connectivity while waiting for cluster setup.
 |===
 
 == Storage resource management
@@ -42,8 +46,12 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 |===
 | Update
 | Description
+
 | link:../learn-more/additional-supported-ontap-features.html#storage-efficiency[Support for simplified reporting of storage efficiency data reduction rate]
 | The storage efficiency data reduction rate (DRR) provides a more precise assessment of ONTAP storage efficiency space savings by including only reducible data. In ONTAP 9.19.1 and earlier, the DRR includes both reducible and non-reducible data.
+
+| Support for SAN copyoffload performance improvements
+| ONTAP improves SAN copy offload performance for eligible NVMe and SCSI copy workloads in ONTAP 9.20.1. Contact your NetApp representative for details.
 |===
 
 == System manager
@@ -61,7 +69,7 @@ Also, the role associated with a user account is configured for password expiry 
 | System Manager displays new AutoSupport alerts that can help you address AutoSupport configuration issues.
 |===
   
-// 2026 Nov 5,  ONTAPDOC-4220, ONTAPDOC-4052
+// 2026 Nov 5,  ONTAPDOC-4220, ONTAPDOC-4052, ONTAPDOC-4163
 // 2026, Aug 08, ONTAPDOC-3890/3574
 //2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3601, ONTAPDOC-3499, ONTAPDOC 3678, ONTAPDOC-3884, ONTAPDOC-3709, ONTAPDOC-3494, ONTAPDOC-3617 
