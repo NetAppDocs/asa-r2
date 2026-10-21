@@ -1,4 +1,4 @@
-During an inter-cluster storage virtual machine (VM) migration, client I/O transitions to the destination cluster and the storage VM on the source cluster is automatically removed. If you choose to disable automatic cutover and removal of the source storage VM during the migration, you need to perform these steps manually after the migration is complete.
+During an inter-cluster storage VM migration, client I/O transitions to the destination cluster and the storage VM on the source cluster is automatically removed. If you choose to disable automatic cutover and removal of the source storage VM during the migration, you need to perform these steps manually after the migration status reaches *Ready for source cleanup*.
 
 === Manually cut over clients after a storage VM migration
 

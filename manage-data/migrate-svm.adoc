@@ -127,7 +127,7 @@ When performing a storage VM migration, it is a best practice to leave 30% CPU h
 
 .About this task
 
-* After the storage VM migration, clients are automatically cut over to the ASA r2 cluster and the storage VM on the ASA cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable them both and perform the cutover and the storage VM removal manually.
+* After the storage VM migration, client I/O seamlessly transitions to the destination cluster with no disruption and the storage VM on the ASA r2 cluster is automatically removed. Automatic cutover and automatic storage VM removal are enabled by default. You can optionally disable one or both options and perform them manually.
 
 * The ASA cluster is the _source_ cluster from which the storage VM will be migrated, and the ASA r2 cluster is the _destination_ cluster to which the storage VM will be migrated.
 
