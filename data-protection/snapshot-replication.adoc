@@ -82,13 +82,15 @@ For added security against ransomware attacks, create a SnapLock for SnapVault r
 
 * When you create a replication relationship, you must select the appropriate replication policy for your replication relationship.  You can use a pre-defined policy or create a custom policy.   
 
+.Before you begin
+
+Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics. To do so, your ONTAP system backend must be configured for FC replication and both the FC fabric and the intercluster IP network must be operational. Replication data can transport over the FC fabric, but the intercluster IP network is required for cluster communications and replication management functions. link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html[Learn to configure your ONTAP system backend for FC replication^].
+
 === Create a relationship to replicate snapshots to a remote cluster
 
 Protect your data by replicating snapshots to a remote cluster.  Replicated snapshots of your consistency groups can be used for disaster recovery or for data migration.
 
-.Before you begin
-
-Beginning with ONTAP 9.20.1, you can configure backend SnapMirror asynchronous replication over existing FC fabrics. To do so, your ONTAP system backend must be configured for FC replication and both the FC fabric and the intercluster IP network must be operational. Replication data can transport over the FC fabric, but the intercluster IP network is required for cluster communications and replication management functions. link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html[Learn to configure your ONTAP system backend for FC replication^].
+.About this task
 
 In ONTAP 9.20.1 and later:
 
@@ -143,7 +145,7 @@ NOTE: ASA r2 systems do not support SnapLock Compliance mode or SnapLock Enterpr
 
 .Before you begin
 
-You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the SnapLock Compliance Clock].
+* You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock[initialize the SnapLock Compliance Clock].
 
 .Steps
 
@@ -152,7 +154,10 @@ You must link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-cl
 . Under *Remote protection*, select *Replicate to a remote cluster*.
 . Select the *Replication policy*.
 +
-You must select a _vault_ replication policy.
+You must select a _vault_ replication policy. In ONTAP 9.20.1 and later, the _MirrorAndVault_ policy must be selected to configure backend FC replication.
+. In ONTAP 9.20.1 and later, select a transport protocol.
++
+To change the selected transport protocol after creating a replication relationship, you must link:snapmirror-active-sync-break-relationship.html[break] the relationship and then recreate it with the desired transport protocol.
 . Select *Destination settings*, and then select *Lock destination snapshots to prevent deletion*.
 . Enter the maximum and minimum data retention period.
 . To delay the start of the data transfer, deselect *Start transfer immediately*.
@@ -166,6 +171,10 @@ Your transfer schedule must be a minimum of 30 minutes to be supported.
 .What's next?
 
 Now that you have created a replication relationship, your initial data transfer begins as defined in your replication policy.  You can optionally test your replication failover to verify that successful failover can occur if your ASA r2 system goes offline.
+
+.Related information
+
+link:/pre-defined-protection-policies.html[Learn about pre-defined protection policies].
 
 == Step 4: Test replication failover
 
