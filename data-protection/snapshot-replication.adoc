@@ -174,7 +174,7 @@ Now that you have created a replication relationship, your initial data transfer
 
 .Related information
 
-link:/pre-defined-protection-policies.html[Learn about pre-defined protection policies].
+link:pre-defined-protection-policies.html[Learn about pre-defined protection policies].
 
 == Step 4: Test replication failover
 
