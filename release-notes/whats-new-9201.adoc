@@ -39,6 +39,16 @@ Learn about the new capabilities available in ONTAP 9.20.1 for ASA r2 systems.
 
 | Support for web-management availability protection and precluster enhancements
 | Improvements are implemented that preserve web[1]management API availability during connection floods. Precluster Dynamic Host Configuration Protocol (DHCP) handling is also enhanced so that a node-management LIF can maintain and renew DHCP connectivity while waiting for cluster setup.
+
+| link:../learn-more/additional-supported-ontap-features.html[Support for automatic migration of storage VM volume encryption keys#data-security]
+| When you enable an external key manager on a data storage VM, ONTAP automatically migrates that storage VM's volume encryption keys from the admin-scope key manager to the new data storage VM key manager. This simplifies the transition to external key management and removes the need for a separate manual migration step in the standard workflow.
+
+| link:../learn-more/additional-supported-ontap-features.html[MAV Groups Support#data-security]
+| MAV approval groups can include identity provider (IdP), Active Directory (AD), and LDAP (nsswitch) groups as approvers, in addition to individual administrators. Supported group types include Entra ID, ADFS, AD domain groups, and LDAP groups. Adding or removing users in the IdP, AD, or LDAP directory does not require any changes to the MAV configuration. 
+
+| link:../learn-more/additional-supported-ontap-features.html[SNMP support for SHA-512#data-security]
+| ONTAP supports SHA-512 authentication for SNMPv3 users. This enhancement lets you use stronger SNMPv3 authentication for external SNMP clients and for switch monitoring, including switches that require SHA-512 authentication. 
+
 |===
 
 == Storage efficiency

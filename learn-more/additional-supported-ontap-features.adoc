@@ -31,6 +31,8 @@ link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-ke
 === External key management for encryption at rest
 You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data.
 
+Beginning with ONTAP 9.20.1, when you enable an external key manager on a data storage VM, ONTAP automatically migrates that storage VM's volume encryption keys from the admin-scope key manager to the new data storage VM key manager. This simplifies the transition to external key management and removes the need for a separate manual migration step in the standard workflow.
+
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management^].
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
 
@@ -41,7 +43,7 @@ Learn more about common data security features supported on ASA r2 systems.
 === Administrator access management
 The role assigned to an administrator determines which functions the administrator can perform. Predefined roles for cluster administrators and storage VM administrators are provided by System Manager. You assign the role when you create the administrator’s account, or you can assign a different role later.
 
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
+link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
 
 === Client authentication and authorization
 
@@ -54,6 +56,9 @@ Beginning with ONTAP 9.20.1, ONTAP supports Fibre Channel Security Protocol 3 (F
 
 * link:https://docs.netapp.com/us-en/ontap/san-admin/fc-sp-3-security-support.html[Learn about FC-SP-3 authentication and encryption^].
 
+=== Multi-admin verification (MAV) 
+Beginning with ONTAP 9.20.1, MAV approval groups can include identity provider (IdP), Active Directory (AD), and LDAP (nsswitch) groups as approvers, in addition to individual administrators. Supported group types include Entra ID, ADFS, AD domain groups, and LDAP groups. Adding or removing users in the IdP, AD, or LDAP directory does not require any changes to the MAV configuration. link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html[Learn more about MAV^].
+
 === OAuth 2.0 authentication
 You can use the Open Authorization (OAuth 2.0) framework to control access to your ONTAP clusters. OAuth 2.0 restricts and controls access to protected resources using signed access tokens. 
 
@@ -64,6 +69,12 @@ link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Lea
 You can configure and enable Security Assertion Markup Language (SAML) authentication for web services.  SAML authenticates users by an external Identity Provider (IdP) instead of the directory service providers such as Active Directory and LDAP. 
 
 link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
+
+=== SNMP
+Beginning with ONTAP 9.20.1, ONTAP supports SHA-512 authentication for SNMPv3 users. This enhancement lets you use stronger SNMPv3 authentication for external SNMP clients and for switch monitoring, including switches that require SHA-512 authentication.
+
+* link:https://docs.netapp.com/us-en/ontap/networking/configure_snmpv3_users_in_a_cluster.html[Learn to configure SNMPv3 users^].
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cshm/config-snmpv3.html[Learn to configure SNMPv3 on switches^].
 
 === TLS hardware offload
 You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
