@@ -1,0 +1,10 @@
+.Step
+
+. From your destination cluster, execute the migration pre-check:
++
+[source,cli]
+----
+vserver migrate start -vserver <storage_VM> -source-cluster <sourcecluster> -check-only true
+----
++
+If you need to fix any issues to prepare for migration, the issue and the corrective action are displayed. Fix the issue and repeat the pre-check until it completes successfully.

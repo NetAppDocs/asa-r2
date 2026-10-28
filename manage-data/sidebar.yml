@@ -25,10 +25,10 @@ entries:
       url: "/manage-data/delete-storage-units.html" 
   - title: Migrate storage VMs 
     entries: 
-    - title: Migrate a storage VM from an ASA cluster
+    - title: Migrate an ASA storage VM to an ASA r2 cluster
       url: "/manage-data/migrate-svm.html"
-    - title: Cutover clients and clean up source storage VM
-      url: "/manage-data/svm-post-migrate-cutover-cleanup.html"
+    - title: Migrate an ASA r2 storage VM to an ASA or AFF cluster
+      url: "/manage-data/migrate-svm-from-asa-r2.html"
   - title: Storage limits
     url: "/manage-data/storage-limits.html"  
 - title: Protect your data

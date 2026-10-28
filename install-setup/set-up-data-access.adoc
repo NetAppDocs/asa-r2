@@ -9,7 +9,6 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-
 To set up data access, you should ensure that the critical parameters and settings on your SAN client for proper operation with ONTAP are configured correctly.  If you are providing storage for your VMware environment, you should install OTV 10.3 to simply the management of your ASA r2 storage.
 
 == Set up data access from SAN hosts
