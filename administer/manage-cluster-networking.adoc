@@ -9,7 +9,7 @@ summary: "Use ONTAP System Manager to perform basic storage network administrati
 :imagesdir: ../media/
 
 [.lead]
-You can use ONTAP System Manager to perform basic storage network administration on your ASA r2 system. For example, you can add a broadcast domain or reassign ports to a different broadcast domain.
+ONTAP System Manager enables you to perform basic storage network administration on your ASA r2 system, such as adding a broadcast domain or reassigning ports between broadcast domains, so you can organize network traffic to fit your infrastructure needs.
 
 == Add a broadcast domain
 
@@ -17,11 +17,11 @@ Use broadcast domains to simplify management of your cluster network by grouping
 
 The “Default” broadcast domain and the “Cluster” broadcast domain are created during cluster setup. The “Default” broadcast domain contains ports that are in the “Default” IPspace. These ports are used primarily to serve data. Cluster management and node management ports are also in this broadcast domain.  The “Cluster” broadcast domain contains ports that are in the “Cluster” IPspace.  These ports are used for cluster communication and include all cluster ports from all nodes in the cluster.
 
-You can create additional broadcast domains after your cluster has been initialized.  When you create a broadcast domain, a failover group that contains the same ports is automatically created.
+You can create additional broadcast domains after you initialize your cluster.  When you create a broadcast domain, a failover group that contains the same ports is automatically created.
 
 .About this task
 
-The maximum transmission unit (MTU) of the ports added to a broadcast domain are updated to the MTU value set in the broadcast domain.
+The maximum transmission unit (MTU) of the ports added to a broadcast domain is updated to the MTU value set in the broadcast domain.
 
 .Steps
 
@@ -86,4 +86,57 @@ The VLAN can’t be attached to a port hosting a cluster LIF or to ports assigne
 
 You have created a VLAN to increase security, isolate problems, and limit available paths within your IP network infrastructure.
 
+== Delete a VLAN
+
+You might have to delete a VLAN before removing a NIC from its slot or before removing a node from a cluster.  When you delete a VLAN, it is automatically removed from all the failover rules and groups that use it.
+
+.Before you begin
+
+Make sure there are no LIFs associated with the VLAN.
+
+.About this task
+Deleting the last VLAN from a port might cause a temporary disconnection of the network from the port.
+
+.Steps
+
+You can use System Manager or the CLI to delete a VLAN.
+
+[role="tabbed-block"]
+====
+
+.System Manager
+--
+. In System Manager, select *Network > Ethernet port > VLAN*.
+. Select the VLAN you want to remove.
+. Select *Delete*.
+
+--
+
+.CLI
+--
+. View your VLANs:
++
+[source,cli]
+----
+network port vlan show
+----
+
+. Delete a VLAN:
++
+[source,cli]
+----
+network port vlan delete -node <node> -vlan-name <vlan-name>
+----
+
+. Verify that the VLAN is deleted:
++
+[source,cli]
+----
+network port vlan show
+----
+
+--
+
+====
+// 2026 Aug 28, ONTAPDOC 3889
 // 2024 Sept 24, ONTAPDOC 1930
