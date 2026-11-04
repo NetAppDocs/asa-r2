@@ -9,13 +9,13 @@ summary: "Before you can enable SnapMirror active sync for your AIX hosts runnin
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.19.1, Transparent Application Failover for AIX is supported with SnapMirror active sync in symmetric active/active configurations.   SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. 
+Beginning with ONTAP 9.19.1, SnapMirror active sync supports Transparent Application Failover for AIX hosts in symmetric active/active configurations. SnapMirror active sync enables business services to continue operating through a complete site failure by failing over applications transparently to a secondary copy. 
 
 Before you can enable SnapMirror active sync for your AIX hosts running ONTAP 9.19.1 or later, the host access mode must be set to local.  Selecting the access mode is not required for other host types.  Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html[interoperability for SnapMirror active sync^]. 
 
 .Before you begin
 
-You must be running ONTAP 9.19.1 or later.  If you are running ONTAP 9.18.1 or earlier a Feature Policy Variance Request (FPVR) is required for AIX host support for SnapMirror active sync.
+You must be running ONTAP 9.19.1 or later.  If you are running ONTAP 9.18.1 or earlier, a Feature Policy Variance Request (FPVR) is required for AIX host support for SnapMirror active sync.
 
 .Steps
 

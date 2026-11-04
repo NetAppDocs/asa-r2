@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: administer/manage-client-vm-access.html
 keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface, iscsi lif failover, 
-summary: "Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration, and routing."
+summary: "Create a LIF to access data in storage units on your ASA r2. Use subnets to simplify LIF creation and IPspaces to provide secure administration and routing."
 searchtitle: "Manage client access to storage using ONTAP System Manager | ASA r2"
 ---
 = Manage client access to storage VMs on ASA r2 storage systems
@@ -57,7 +57,7 @@ Now that you have created an IPspace, you can use it to create a subnet.
 
 == Create subnets
 
-A subnet allows you to allocate specific blocks of IPv4 or IPv6 addresses to use when you create a LIF (network interface) . A subnet simplifies LIF creation by allowing you to specify the subnet name instead of a specific IP address and network mask for each LIF.
+A subnet allows you to allocate specific blocks of IPv4 or IPv6 addresses to use when you create a LIF (network interface). A subnet simplifies LIF creation by allowing you to specify the subnet name instead of a specific IP address and network mask for each LIF.
 
 .Before you begin
 * You must be a cluster administrator to perform this task.
@@ -89,11 +89,11 @@ You have created a subnet which you can now use to simplify the creation of your
 
 == Create a LIF (network interface)
 
-A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. On an ASA r2 system, you can create IP, FC, and NVMe/FC LIFs.  An IP data LIF can service both iSCSI and NVMe/TCP traffic by default.  Separate data LIFs must be created for FC and NVMe/FC traffic.
+A LIF (network interface) is an IP address associated with a physical or logical port.  Create LIFs on the ports you want to use to access data. Storage VMs serve data to clients through one or more LIFs. On an ASA r2 system, you can create IP, FC, and NVMe/FC LIFs.  An IP data LIF can service both iSCSI and NVMe/TCP traffic by default.  You must create separate data LIFs for FC and NVMe/FC traffic.
 
 .LIF failover on ASA r2 systems
 
-If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted. Beginning with ONTAP 9.19.1, automatic LIF failover is supported for IP LIFs by default. When automatic LIF failover is enabled, if a storage failover occurs, the LIF is automatically migrated from its home node or port to its HA partner node or port and then back once the failover is complete. Or, if the port becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port once the port is healthy again.
+If there is a component failure, a LIF can fail over or be migrated to a different physical port, so that network communication is not interrupted. Beginning with ONTAP 9.19.1, automatic LIF failover is supported for IP LIFs by default. When automatic LIF failover is enabled, if a storage failover occurs, the LIF is automatically migrated from its home node or port to its HA partner node or port and then back after the failover is complete. Or, if the port becomes unhealthy, the LIF is automatically migrated to a healthy port in its current home node and then back to its original port after the port is healthy again.
 
 In ONTAP 9.18.1 and earlier, automatic LIF failover is not supported for IP LIFs with both iSCSI and NVMe/TCP traffic. When you create iSCSI-only LIFs, automatic LIF failover is enabled by default unless the storage VM already has iSCSI LIFs that do not have automatic LIF failover enabled.  If there are iSCSI LIFs on the storage VM that are not enabled for automatic LIF failover, your newly created LIFs will not be enabled either. In such cases, you must first delete the existing iSCSI LIFs and then recreate them with automatic LIF failover. Learn how to link:https://docs.netapp.com/us-en/ontap/san-admin/delete-lif-san-environment-task.html[delete a LIF in a SAN environment^].
 
@@ -186,7 +186,7 @@ You must use the ONTAP command line interface (CLI) to create an iSCSI-only LIF.
 network interface create -vserver <storage_VM_name> -lif <iscsi_lif_name> -service-policy <service_policy_name> -home-node <home_node> -home-port <port_name> -address <ip_address> -netmask <netmask> -failover-policy sfo-partner-only -status-admin up
 ----
 +
-* It is recommended that you create two iSCSI LIFs on each node, one for fabric A and the other for fabric B.  This provides redundancy and load balancing for your iSCSI traffic.  In the following example, a total four iSCSI LIFs are created, two on each node, one for each fabric. 
+* Create two iSCSI LIFs on each node, one for fabric A and the other for fabric B.  This provides redundancy and load balancing for your iSCSI traffic.  In the following example, a total of four iSCSI LIFs are created, two on each node, one for each fabric. 
 +
 ----
 network interface create -vserver svm1 -lif iscsi-lif-01a -service-policy custom-data-iscsi -home-node node1 -home-port e2b -address <node01-iscsi-a–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
@@ -216,7 +216,7 @@ LIFs can be disabled or renamed as needed.  You can also change the LIF IP addre
 
 .About this task
 
-ONTAP utilizes Network Time Protocol (NTP) to synchronize time across the cluster. After changing LIF IP addresses, you may need to update the NTP configuration to prevent synchronization failures. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629[NTP synchronization fails after LIF IP change].
+ONTAP uses Network Time Protocol (NTP) to synchronize time across the cluster. After changing LIF IP addresses, you might need to update the NTP configuration to prevent synchronization failures. For more information, refer to the Knowledge Base article link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629[NTP synchronization fails after LIF IP change].
 
 .Steps
 

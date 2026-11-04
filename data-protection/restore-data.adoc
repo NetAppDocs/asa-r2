@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: data-protection/restore-data.html
 keywords: restore data, asa r2, data restoration
-summary: If data in a consistency group is corrupted or lost, you can restore the entire consistency group from a remote snapshot.
+summary: "Restore a consistency group or storage unit from a local or remote snapshot when data is lost or corrupted on your ASA r2 system."
 ---
 = Restore data on ASA r2 storage systems
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Data in a consistency group or storage unit that is protected by snapshots can be restored if it is lost or corrupted.
+If data in a consistency group or storage unit that is protected by snapshots is lost or corrupted, restore it from a snapshot to return the data to the point in time the snapshot was created.
 
 == Restore a consistency group
 
@@ -42,7 +42,7 @@ The consistency group details page opens.
 
 . In System Manager, select *Protection > Replication*.
 . Select *Local destinations*.
-. Select the *Source* you want to restore, then select image:icon_kabob.gif[three vertical blue dots].
+. Select the *Source* you want to restore; then select image:icon_kabob.gif[three vertical blue dots].
 . Select *Restore*.
 . Select the cluster, storage VM, and consistency group to which you want to restore data.
 . Select the snapshot you want to restore from. 

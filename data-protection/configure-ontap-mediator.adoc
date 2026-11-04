@@ -20,15 +20,15 @@ If you are using ONTAP Cloud Mediator, verify that your ASA r2 system meets the 
 . In System Manager, select *Protection > Overview*.
 . In the right pane under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.
-. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name and mediator password.
+. For a *Cloud* mediator, enter the organization ID, client ID, and client secret. For an *On-premises* mediator, enter the IP address, port, mediator user name, and mediator password.
 . Select the cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
 . Add the certificate information
 +
-* If you are using a self signed certificate, copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
+* If you are using a self-signed certificate, copy the content of the `intermediate.crt` file and paste it into the *Certificate* field, or select *Import* to navigate to the `intermediate.crt` file and import the certificate information.
 *  If you are using a third-party certificate, enter the certificate information into the *Certificate* field.
 . Select *Add*.
 
 .What's next?
-After you have initialized the mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+After you have initialized the mediator, you can link:configure-snapmirror-active-sync.html[configure SnapMirror active sync] to create a copy of your data at a secondary site and enable your host applications to automatically and transparently fail over if a disaster occurs. 
 
 // 2025 Jul 24, ONTAPDOC-2707
