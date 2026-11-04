@@ -26,7 +26,7 @@ Recommended updates for storage firmware, Service Processor/Baseboard Management
 
 .Result
 
-Recommended updates are automatically downloaded and installed on your ASA r2 system based upon your update selections.
+Recommended updates are automatically downloaded and installed on your ASA r2 system based on your update selections.
 
 == Disable automatic updates
 
@@ -52,7 +52,7 @@ View a list of firmware and system file updates that have been downloaded to you
 
 == Edit automatic updates
 
-You can select to have recommended updates for your storage firmware, SP/BMC firmware, and your system files automatically downloaded and installed on your cluster, or you can select to have recommended updates automatically dismissed.  If you want to manually control installation or dismissal of updates, select to be notified when a recommended update is available; then you can manually select to install or dismiss it. 
+You can have recommended updates for your storage firmware, SP/BMC firmware, and system files automatically downloaded and installed on your cluster, or automatically dismissed. To control installation or dismissal manually, choose to be notified when a recommended update is available, and then install or dismiss it yourself. 
 
 .Steps
 
@@ -67,7 +67,7 @@ Automatic updates are modified based on your selections.
 
 == Update firmware manually
 
-If you want the flexibility of viewing recommended updates before they are downloaded and installed, you can disable automated updates and update your firmware manually.
+To view recommended updates before they are downloaded and installed, disable automatic updates and update your firmware manually.
 
 .Steps
 

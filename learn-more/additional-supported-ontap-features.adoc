@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: learn-more/additional-supported-ontap-features.html
 keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, command line interface, clustered external key servers, external key management, encryption at rest, administrator access management, client authentication, oauth 2.0, saml authentication, fips compliance, link aggregation groups, iscsi, fibre channel, fc, nvme, nvme unmap, hole punch, deallocation, system manager 
-summary: "Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tasks and System Manager functions are performed the same way on ASA r2 systems as on other ONTAP systems."
+summary: "Learn which common ONTAP features, including encryption, authentication, networking, SAN protocols, and storage efficiency, work the same way on ASA r2 systems."
 ---
 = Common ONTAP features supported on ASA r2 systems
 :icons: font
@@ -41,7 +41,7 @@ Beginning with ONTAP 9.20.1, when you enable an external key manager on a data s
 Learn more about common data security features supported on ASA r2 systems.
 
 === Administrator access management
-The role assigned to an administrator determines which functions the administrator can perform. Predefined roles for cluster administrators and storage VM administrators are provided by System Manager. You assign the role when you create the administrator’s account, or you can assign a different role later.
+The role assigned to an administrator determines which functions the administrator can perform. System Manager provides predefined roles for cluster administrators and storage VM administrators. You assign the role when you create the administrator’s account, or you can assign a different role later.
 
 link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
 
@@ -68,7 +68,7 @@ link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Lea
 
 You can configure and enable Security Assertion Markup Language (SAML) authentication for web services.  SAML authenticates users by an external Identity Provider (IdP) instead of the directory service providers such as Active Directory and LDAP. 
 
-link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
+link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to configure SAML authentication^].
 
 === SNMP
 Beginning with ONTAP 9.20.1, ONTAP supports SHA-512 authentication for SNMPv3 users. This enhancement lets you use stronger SNMPv3 authentication for external SNMP clients and for switch monitoring, including switches that require SHA-512 authentication.
@@ -133,7 +133,7 @@ ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).
 * link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about the NVMe protocol ^].
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
 +
-Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
+Beginning with ONTAP 9.18.1, ONTAP supports NVMe copy offload. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
 
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/enable-space-allocation.html[Learn more about space allocation (unmap) for NVMe^].
 +
@@ -154,7 +154,7 @@ link:https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements.html[ Le
 
 === Global deduplication
 
-Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire storage availability zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, storage efficiency can be significantly improved and total cost of ownership reduced. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
+Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire storage availability zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, you can significantly improve storage efficiency and reduce total cost of ownership. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
 
 == System Manager
 
