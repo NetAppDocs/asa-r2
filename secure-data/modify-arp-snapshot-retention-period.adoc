@@ -47,8 +47,6 @@ Configure the snapshot response policy for a storage unit, overriding the storag
 . Select the snapshot response policy to apply to the storage unit.
 . Select *Save*.
 
-// TODO(ONTAPDOC-4062): confirm exact protection-level option labels, edit affordance (kabob vs pencil), and SVM-level default scope against an EAP/RC System Manager build before publishing.
-
 == Modify ARP/AI snapshot retention periods
 
 If the snapshot response policy for a storage unit creates periodic or attack-triggered ARP snapshots, the default retention period for those snapshots varies depending on the action you take in response to the abnormal activity.
