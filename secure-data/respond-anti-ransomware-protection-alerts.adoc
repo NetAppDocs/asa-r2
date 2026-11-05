@@ -41,5 +41,8 @@ If there is abnormal activity on the storage unit, a message is displayed under 
 
 If you know of surges in your storage unit activity, either one-time surges or a surge that is characteristic of a new normal, you should report them as safe. Manually reporting these surges as safe helps to improve the accuracy of ARP's threat assessments.  Learn how to link:https://docs.netapp.com/us-en/ontap/anti-ransomware/manage-parameters-task.html#report-known-surges[report known ARP/AI surges^]. 
 
+[NOTE]
+If a storage unit's link:modify-arp-snapshot-retention-period.html[snapshot response policy] is set to alert-only or to create attack-triggered snapshots only, no periodic ARP snapshots appear for that storage unit even when ARP/AI is enabled.
+
 // 2025 July 24, ONTAPDOC-2701
 // 2024 Sept 24, ONTAPDOC 1928
