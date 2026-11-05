@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: learn-more/hardware-comparison.html
 keywords: compare asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, hardware comparison, asa r2
-summary: "ASA systems offer hardware support that is optimized for SAN-only solutions.  ASA r2 systems offer optimization of hardware and software."
+summary: "Compare ASA r2 systems with ASA, AFF, and FAS systems, including ONTAP personality, storage layer, and supported protocols."
 searchtitle: "Differences between ASA r2 and other ONTAP systems"
 ---
 = Differences between ASA r2 and other ONTAP systems
@@ -24,7 +24,7 @@ The following are classified as ASA r2 systems:
 
 == Personality differences
 
-On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN-related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on ASA systems is identified as the _ASA ONTAP personality_.  ONTAP running on AFF and FAS ONTAP systems is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
+On an ASA r2 system, ONTAP software is streamlined to provide support for essential SAN functionality while limiting the visibility and availability of non-SAN-related features and functions. For example, System Manager running on an ASA r2 system does not display options to create home directories for NAS clients. This streamlined version of ONTAP is identified as the _ASA r2 personality_. ONTAP running on ASA systems is identified as the _ASA ONTAP personality_.  ONTAP running on AFF and FAS systems is identified as the _unified ONTAP personality_. The differences between ONTAP personalities are referenced in the ONTAP command reference (man pages), REST API specification, and EMS messages where applicable. 
 
 You can verify the personality of your ONTAP storage from System Manager or from the ONTAP CLI. 
 
@@ -45,7 +45,7 @@ The storage layer for FAS, AFF, and ASA systems uses aggregates as the base unit
 
 .ASA r2 systems
 
-Instead of aggregates, the storage layer in ASA r2 systems uses storage availability zones. A storage availability zone is a common pool of storage available to both nodes of a single HA pair. Both nodes in the HA pair have access to all available disks in their shared storage availability zone.  For example, in a 2-node ASA r2 system ONTAP cluster, there is one storage availability zone, accessible by both nodes in the cluster.  In a 4-node ASA r2 system ONTAP cluster, there are two storage availability zones.  Each HA pair in the cluster has access to one of the storage availability zones. 
+Instead of aggregates, the storage layer in ASA r2 systems uses storage availability zones. A storage availability zone is a common pool of storage available to both nodes of a single HA pair. Both nodes in the HA pair have access to all available disks in their shared storage availability zone.  For example, a two-node ASA r2 cluster has one storage availability zone that both nodes can access.  A four-node ASA r2 cluster has two storage availability zones.  Each HA pair in the cluster has access to one of the storage availability zones. 
 
 When a storage unit (based on either a LUN or an NVMe namespace) is created, ONTAP automatically creates a volume in the appropriate storage availability zone to house the storage unit. The newly created volume is automatically placed within the storage availability zone for optimal performance and balanced capacity utilization. Capacity utilization is balanced within the storage availability zone based on your version of ONTAP. link:../administer/space-balancing.html[Learn about capacity balancing in an ASA r2 cluster^].
 

@@ -44,7 +44,7 @@ You have added a new broadcast domain.
 
 == Reassign ports to a different broadcast domain
 
-Ports can belong to only one broadcast domain. If you want to change the broadcast domain to which a port belongs, you need to reassign the port from its existing broadcast domain to a new broadcast domain.
+Ports can belong to only one broadcast domain. To change the broadcast domain of a port, reassign the port from its existing broadcast domain to a new one.
 
 .Steps
 

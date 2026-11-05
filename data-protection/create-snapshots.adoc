@@ -18,7 +18,7 @@ A consistency group is a collection of storage units that are managed as a singl
 
 Create a consistency group using new storage units or create a consistency group using existing storage units.
 
-Beginning with ONTAP 9.18.1, you can set the snapshot reserve percentage and enable automatic snapshot deletion when creating a consistency group with new storage units.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve. If snapshot reserve and automatic snapshot deletion is enabled on a parent consistency group, it is enabled on all existing  child consistency groups. If new child consistency groups are added they do not inherit the snapshot reserve and snapshot deletion settings of the parent.
+Beginning with ONTAP 9.18.1, you can set the snapshot reserve percentage and enable automatic snapshot deletion when creating a consistency group with new storage units.  The snapshot reserve is the amount of space in the storage unit reserved specifically for snapshots.  When snapshot reserve is set with automatic snapshot deletion, older snapshots are automatically deleted when space used by snapshots exceeds the snapshot reserve. If snapshot reserve and automatic snapshot deletion are enabled on a parent consistency group, they are enabled on all existing  child consistency groups. If new child consistency groups are added, they do not inherit the snapshot reserve and snapshot deletion settings of the parent.
 
 link:snapshot-reserve.html[Learn more about snapshot reserve on ASA r2 storage systems].
 
@@ -97,7 +97,7 @@ You have created a consistency group containing the storage units you want to pr
 
 A snapshot is a local, read-only copy of your data that you can use to restore storage units to specific points in time.  
 
-Snapshots can be created on demand, or they can be created automatically in regular intervals based on a link:policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
+You can create snapshots on demand or automatically at regular intervals based on a link:policies-schedules.html[snapshot policy and schedule]. The snapshot policy and schedule specifies when to create the snapshots, how many copies to retain, how to name them, and how to label them for replication. For example, a system might create one snapshot every day at 12:10 a.m., retain the two most recent copies, name them “daily” (appended with a timestamp), and label them “daily” for replication.
 
 .Types of snapshots
 

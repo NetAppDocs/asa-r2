@@ -17,12 +17,12 @@ Before you install a new drive to a node or shelf, use the NetApp Hardware Unive
 
 .Steps
 
-. Go the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
+. Go to the link:https://hwu.netapp.com/[NetApp Hardware Universe^].
 . Under *Products*, select your hardware configurations.
 . Select your ASA r2 system.
 . Select your ONTAP version; then select *Show Results*.
 . Beneath the graphic, select *Click here to see alternative views*; then choose the view that matches your configuration.
-. Use the view of your configuration to confirm that your new drive is supported and the correct slot for installation.
+. Use the view of your configuration to confirm that your new drive is supported and identify the correct slot for installation.
 
 .Result
 You have confirmed that your new drive is supported and you know the appropriate slot for installation.
@@ -32,7 +32,7 @@ You have confirmed that your new drive is supported and you know the appropriate
 The minimum number of drives you should add in a single procedure is three.  Adding a single drive might reduce performance.
 
 .About this task
-You should repeat the steps in this procedure for each drive.
+Repeat the steps in this procedure for each drive.
 
 .Steps
 
@@ -50,7 +50,7 @@ Be sure to close the cam handle slowly so that it aligns correctly with the face
 * If the LED is blinking, the drive has power and I/O is in progress. The LED will also blink if the drive firmware is being updated.
 +
 Drive firmware is automatically updated (nondisruptively) on new drives that do not have current firmware versions.
-. If your node is configured for drive auto-assignment, you can wait for ONTAP to automatically assign the new drives to a node.  If your node isn’t configured for drive auto-assignment or if preferred, you can assign the drives manually.  
+. If your node is configured for drive auto-assignment, wait for ONTAP to assign the new drives to a node. If your node isn’t configured for drive auto-assignment, or if you prefer, assign the drives manually.  
 +
 The new drives are not recognized until they are assigned to a node.
 

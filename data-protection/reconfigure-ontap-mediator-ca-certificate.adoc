@@ -9,7 +9,7 @@ summary: "If you configure ONTAP Mediator or ONTAP Cloud Mediator with a self-si
 :imagesdir: ../media/
 
 [.lead]
-If you configure ONTAP Mediator or ONTAP Cloud Mediator with a self-signed certificate, you can reconfigure the mediator to use a third-party certificate.  Third party certificates might be preferred or required by your organization for security reasons.  
+Reconfigure ONTAP Mediator or ONTAP Cloud Mediator to use a third-party certificate instead of a self-signed certificate. Your organization might prefer or require third-party certificates for security reasons.  
 
 == Step 1: Remove the mediator configuration
 
@@ -43,7 +43,7 @@ After you have removed the associated self-signed certificate, you can reconfigu
 . Select *Protection > Overview*.
 . In the right pane, under *Mediators*, select *Add a mediator*.
 . Select the *Mediator type*.
-. For a *Cloud* mediator enter the organization ID, client ID and client secret.  For an *On-premises* mediator enter the IP address, port, mediator user name, and mediator password.
+. For a *Cloud* mediator, enter the organization ID, client ID, and client secret.  For an *On-premises* mediator, enter the IP address, port, mediator user name, and mediator password.
 . Select a cluster peer from the list of eligible cluster peers or select *Add a cluster peer* to add a new one.
 . Under *Certificate*, enter the third-party certificate information.
 . Select *Add*.
