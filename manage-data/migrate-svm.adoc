@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-data/migrate-svm.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
-summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
+summary: "Migrate a storage VM from an ASA cluster to an ASA r2 cluster without disruption, including verifying the storage VM, peering the clusters, running the pre-check, and migrating."
 ---
 = Migrate a storage VM from an ASA cluster to an ASA r2 cluster
 :icons: font
@@ -13,7 +13,7 @@ Beginning with ONTAP 9.18.1, you can non-disruptively migrate a storage virtual 
 
 NOTE: You cannot migrate a storage VM from an ASA MetroCluster to an ASA r2 cluster. ASA r2 systems do not support MetroCluster configurations.
 
-ASA r2 systems support QuickAssist Technology (QAT).  ASA systems do not support QAT. Beginning with ONTAP 9.20.1, ONTAP reduces high read latency and CPU usage that can occur after a storage virtual machine (VM) is migrated from an ASA (non-QAT) system to an ASA r2 (QAT) system. 
+ASA r2 systems support QuickAssist Technology (QAT). ASA systems do not support QAT. Beginning with ONTAP 9.20.1, ONTAP reduces high read latency and CPU usage that can occur after a storage VM is migrated from an ASA (non-QAT) system to an ASA r2 (QAT) system. 
 
 Storage VM migration between ASA and ASA r2 storage systems is supported as follows:
 
@@ -144,7 +144,7 @@ When performing a storage VM migration, it is a best practice to leave 30% CPU h
 include::../_include/migrate-svm.adoc[]
 
 .Result
-The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The storage VM’s name and UUID, the data LIF name, IP address, and object names, such as the volume name, remain unchanged. The UUID of the migrated objects in the storage VM are updated.
+The storage VM is migrated from the ASA cluster to the ASA r2 cluster. The storage VM’s name and UUID, the data LIF name, IP address, and object names, such as the volume name, remain unchanged. The UUID of the migrated objects in the storage VM is updated.
 
 .What’s next?
 
