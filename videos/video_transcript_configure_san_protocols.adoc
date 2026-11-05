@@ -9,7 +9,6 @@ summary: View short videos that demonstrate how to use ONTAP System Manager to q
 :imagesdir: ../media/
 
 [.lead]
-
 The following transcript is provided for the video `Configure SAN protocols on your ASA r2 storage system`.
 
 link:videos-common-tasks.html[Return to page]

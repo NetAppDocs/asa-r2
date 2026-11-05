@@ -16,7 +16,7 @@ SnapMirror active sync relies on peered clusters to protect your data in the eve
 . Confirm that a cluster peering relationship exists between the clusters.
 +
 [NOTE]
-The default IPspace is required by SnapMirror active sync for cluster peer relationships.  A custom IPspace isn’t supported.
+SnapMirror active sync requires the default IPspace for cluster peer relationships.  A custom IPspace isn’t supported.
 +
 link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship[Create a cluster peer relationship].
 

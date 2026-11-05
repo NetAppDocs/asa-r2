@@ -9,9 +9,9 @@ summary: "Use SnapMirror active sync, to protect host applications that require 
 :imagesdir: ../media/
 
 [.lead]
-ONTAP SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. There is no manual intervention or custom scripting required to trigger a failover with SnapMirror active sync.
+ONTAP SnapMirror active sync data protection enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. You don't need manual intervention or custom scripting to trigger a failover with SnapMirror active sync.
 
-While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture and operation of SnapMirror active sync is the same. link:https://www.netapp.com/pdf.html?item=/media/138366-sb-3457-san-disaster-recovery-netapp-asa.pdf[Learn more about disaster recovery with SnapMirror active sync on your ASA r2 system^]
+While the System Manager procedures for configuring SnapMirror active sync are different on ASA r2 systems than NetApp FAS, AFF, and ASA systems running the unified ONTAP personality, the requirements, architecture, and operation of SnapMirror active sync are the same. link:https://www.netapp.com/pdf.html?item=/media/138366-sb-3457-san-disaster-recovery-netapp-asa.pdf[Learn more about disaster recovery with SnapMirror active sync on your ASA r2 system^]
 
 On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations. In a symmetric active/active configuration, both sites can access local storage for active I/O. Learn more about link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive[symmetric active/active configurations^].
 
@@ -46,7 +46,7 @@ You can use ONTAP Mediator or ONTAP Cloud Mediator to monitor the health of your
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP Mediator or ONTAP Cloud Mediator using self-signed certificates.
 
 [role="quick-margin-para"]
-You must link:configure-ontap-mediator.html[configure ONTAP mediator or ONTAP cloud mediator] before you can begin using it with SnapMirror active sync for cluster monitoring.
+You must link:configure-ontap-mediator.html[configure ONTAP Mediator or ONTAP Cloud Mediator] before you can begin using it with SnapMirror active sync for cluster monitoring.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure SnapMirror active sync. 
 [role="quick-margin-para"]

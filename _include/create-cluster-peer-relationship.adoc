@@ -1,0 +1,58 @@
+.Before you begin
+
+You must have created intercluster LIFs on every node in the clusters being peered using one of the following methods.
+
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html[Configure intercluster LIFs on shared data ports^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-dedicated-ports-task.html[Configure intercluster LIFs on dedicated data ports^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-ports-own-networks-task.html[Configure intercluster LIFs in custom IPspaces^]
+
+.Steps
+
+. On the destination cluster, create a peer relationship with the source cluster and generate a passphrase:
++
+[source,cli]
+----
+cluster peer create -peer-addrs <source_cluster_LIF_IPs> -generate-passphrase
+----
++
+The following example creates a cluster peer relationship between cluster 1 and cluster 2 and creates a system-generated passphrase:
++
+----
+cluster1::> cluster peer create -peer-addrs 10.98.191.193 -generate-passphrase
+Passphrase: UCa+6lRVICXeL/gq1WrK7ShR
+            Peer Cluster Name: cluster2
+            Initial Allowed Vserver Peers: -
+            Expiration Time: 6/7/2017 09:16:10 +5:30
+            Intercluster LIF IP: 10.140.106.185
+Warning: make a note of the passphrase - it cannot be displayed again.
+
+----
+
+. Copy the generated passphrase.
+
+. On the source cluster, create a peer relationship with the destination cluster:
++
+[source,cli]
+----
+cluster peer create -peer-addrs <destination_cluster_LIF_IPs> 
+----
+
+. Enter the passphrase generated on the destination cluster.
+
+. Verify that the cluster peer relationship is created:
++
+[source,cli]
+----
+cluster peer show
+----
++
+The following example displays the expected output for successfully peered clusters.
++
+----
+cluster1::> cluster peer show
+
+Peer Cluster Name   Cluster Serial Number   Availability   Authentication
+-----------------   ---------------------   -------------- --------------
+cluster2             1-80-123456             Available      ok
+----
+
