@@ -9,7 +9,6 @@ summary:  ASA r2 systems follow the same recommendations and guidelines for SAN 
 :imagesdir: ../media/
 
 [.lead]
-
 ASA r2 systems follow the same recommendations and guidelines for SAN host configuration as all other ONTAP systems.
 
 It is recommended that you use two or more switches to connect your storage system to one or more SAN hosts. For iSCSI configurations, the network topology connecting your hosts, switches and storage system is referred to as a _network_.  For FC and FC-NVMe configurations, this same network topology is referred to as a _fabric_. 

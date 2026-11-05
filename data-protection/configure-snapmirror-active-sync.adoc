@@ -9,12 +9,12 @@ summary: "Learn how to configure SnapMirror active sync to ensure business conti
 :imagesdir: ../media/
 
 [.lead]
-Configure SnapMirror active sync to create a copy of your data at a secondary site and enable your host applications to automatically and transparently failover in the event of a disaster. 
+Configure SnapMirror active sync to create a copy of your data at a secondary site and enable your host applications to automatically and transparently fail over in the event of a disaster. 
 
 On ASA r2 systems, SnapMirror active sync supports symmetric active/active configurations.	In a symmetric active/active configuration, both sites can access local storage for active I/O.
 
 .About this task
-If you are using the iSCSI or FC protocol and use ONTAP tools for VMware Sphere, you can optionally link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html[use ONTAP Tools for VM ware to configure SnapMirror active sync^]. 
+If you are using the iSCSI or FC protocol and use ONTAP tools for VMware vSphere, you can optionally link:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html[use ONTAP tools for VMware vSphere to configure SnapMirror active sync^]. 
 
 [NOTE]
 Beginning with ONTAP 9.19.1, Autonomous Ransomware Protection with Artificial Intelligence (ARP/AI) supports primary read-write storage units in SnapMirror active sync SAN relationships on ASA r2 systems. ARP/AI runs on the active primary storage units, creates primary-only ARP snapshots, and provides machine-learning-based ransomware detection for those storage units. To enable ARP/AI, see link:../secure-data/enable-anti-ransomware-protection.html[Enable Autonomous Ransomware Protection with AI].
@@ -33,7 +33,7 @@ Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/#key
 . Select an existing cluster peer or choose to *Add a new one*.
 . Select the storage VM.
 . For the replication policy, select *AutomatedFailOverDuplex*.  
-. If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*; then input the name of the new destination consistency group you create before beginning this procedure.
+. If you are creating a non-uniform symmetric active/active configuration, select *Destination settings*, and then enter the name of the new destination consistency group that you created before beginning this procedure.
 . Select *Save*.
 
 .Result

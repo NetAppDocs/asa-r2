@@ -9,7 +9,7 @@ summary: "In certain situations, you might need to break an asynchronous replica
 :imagesdir: ../media/
 
 [.lead]
-In certain situations, you might need to break an asynchronous replication relationship.  For example, if are running ONTAP 9.16.1 and you want to increase the size of a consistency group that is in an asynchronous replication relationship, you must break the relationship before you can modify the consistency group's size.
+Break an asynchronous replication relationship when you need to make changes that require it. For example, if you run ONTAP 9.16.1 and want to increase the size of a consistency group in an asynchronous replication relationship, break the relationship before you modify the consistency group's size.
 
 .Steps
 

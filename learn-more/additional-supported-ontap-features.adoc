@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: learn-more/additional-supported-ontap-features.html
 keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, command line interface, clustered external key servers, external key management, encryption at rest, administrator access management, client authentication, oauth 2.0, saml authentication, fips compliance, link aggregation groups, iscsi, fibre channel, fc, nvme, nvme unmap, hole punch, deallocation, system manager 
-summary: "Because ASA r2 systems run a streamlined version of ONTAP, many common ONTAP tasks and System Manager functions are performed the same way on ASA r2 systems as on other ONTAP systems."
+summary: "Learn which common ONTAP features, including encryption, authentication, networking, SAN protocols, and storage efficiency, work the same way on ASA r2 systems."
 ---
 = Common ONTAP features supported on ASA r2 systems
 :icons: font
@@ -12,6 +12,12 @@ summary: "Because ASA r2 systems run a streamlined version of ONTAP, many common
 Because ASA r2 systems run a streamlined version of ONTAP, you perform many common ONTAP tasks and System Manager functions the same way as on other ONTAP systems.
 
 For more information about common features and functions, see the following ONTAP documentation.
+
+== AutoSupport
+
+Beginning with ONTAP 9.20.1, System Manager displays AutoSupport alerts if AutoSupport is configured for the SMTP protocol instead of the HTTPs protocol, if AutoSupport is disabled but customer and partner email recipients remain configured and if an AutoSupport transmission fails because of a DNS issue.
+
+link:https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html[Learn more about AutoSupport^].
 
 == Data protection
 
@@ -25,6 +31,8 @@ link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-ke
 === External key management for encryption at rest
 You can use one or more KMIP servers to secure the keys the cluster uses to access encrypted data.
 
+Beginning with ONTAP 9.20.1, when you enable an external key manager on a data storage VM, ONTAP automatically migrates that storage VM's volume encryption keys from the admin-scope key manager to the new data storage VM key manager. This simplifies the transition to external key management and removes the need for a separate manual migration step in the standard workflow.
+
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html[Enable external key management^].
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html[Enable external key management (NVE)^].
 
@@ -33,15 +41,23 @@ You can use one or more KMIP servers to secure the keys the cluster uses to acce
 Learn more about common data security features supported on ASA r2 systems.
 
 === Administrator access management
-The role assigned to an administrator determines which functions the administrator can perform. Predefined roles for cluster administrators and storage VM administrators are provided by System Manager. You assign the role when you create the administrator’s account, or you can assign a different role later.
+The role assigned to an administrator determines which functions the administrator can perform. System Manager provides predefined roles for cluster administrators and storage VM administrators. You assign the role when you create the administrator’s account, or you can assign a different role later.
 
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
+link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html[Learn to manage administrator access with System Manager^].
 
 === Client authentication and authorization
 
 ONTAP uses standard methods to secure client and administrator access to storage and to protect against viruses. Advanced technologies are available for encryption of data at rest and for WORM storage. ONTAP authenticates a client machine and user by verifying their identities with a trusted source. ONTAP authorizes a user to access a file or directory by comparing the user's credentials with the permissions configured on the file or directory.
 
 link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html[Learn about client authentication and authorization^].
+
+=== FC-SP-3 authentication and encryption
+Beginning with ONTAP 9.20.1, ONTAP supports Fibre Channel Security Protocol 3 (FC-SP-3) authentication and encryption on Broadcom secure HBAs with ASA r2 systems. FC-SP-3 support enables hardware-level end-to-end encryption and device authentication to protect data in flight between FC and NVMe/FC SAN hosts and ONTAP storage systems while aligning with T11 Fibre Channel security standards.
+
+* link:https://docs.netapp.com/us-en/ontap/san-admin/fc-sp-3-security-support.html[Learn about FC-SP-3 authentication and encryption^].
+
+=== Multi-admin verification (MAV) 
+Beginning with ONTAP 9.20.1, MAV approval groups can include identity provider (IdP), Active Directory (AD), and LDAP (nsswitch) groups as approvers, in addition to individual administrators. Supported group types include Entra ID, ADFS, AD domain groups, and LDAP groups. Adding or removing users in the IdP, AD, or LDAP directory does not require any changes to the MAV configuration. link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html[Learn more about MAV^].
 
 === OAuth 2.0 authentication
 You can use the Open Authorization (OAuth 2.0) framework to control access to your ONTAP clusters. OAuth 2.0 restricts and controls access to protected resources using signed access tokens. 
@@ -52,7 +68,13 @@ link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html[Lea
 
 You can configure and enable Security Assertion Markup Language (SAML) authentication for web services.  SAML authenticates users by an external Identity Provider (IdP) instead of the directory service providers such as Active Directory and LDAP. 
 
-link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to Configure SAML authentication^].
+link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html[Learn to configure SAML authentication^].
+
+=== SNMP
+Beginning with ONTAP 9.20.1, ONTAP supports SHA-512 authentication for SNMPv3 users. This enhancement lets you use stronger SNMPv3 authentication for external SNMP clients and for switch monitoring, including switches that require SHA-512 authentication.
+
+* link:https://docs.netapp.com/us-en/ontap/networking/configure_snmpv3_users_in_a_cluster.html[Learn to configure SNMPv3 users^].
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cshm/config-snmpv3.html[Learn to configure SNMPv3 on switches^].
 
 === TLS hardware offload
 You can offload Transport Layer Security (TLS) encryption and decryption for your entire cluster to supported Ethernet cards.  This reduces CPU overhead and improves performance for systems using TLS.
@@ -111,7 +133,7 @@ ASA r2 systems support all SAN protocols (iSCSI, FC, NVMe/FC, NVMe/TCP).
 * link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html[Learn about the NVMe protocol ^].
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html[Learn to configure NVMe copy offload^].
 +
-Beginning with ONTAP 9.18.1, NVMe copy offload is supported. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
+Beginning with ONTAP 9.18.1, ONTAP supports NVMe copy offload. NVMe copy offload enables an NVMe host to offload copy operations from its CPU to the CPU of the ONTAP storage controller.  The host can copy data from one NVMe namespace to another while reserving its CPU resources for application workloads.
 
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/enable-space-allocation.html[Learn more about space allocation (unmap) for NVMe^].
 +
@@ -124,9 +146,15 @@ ONTAP provides various storage efficiency technologies that can help you optimiz
 
 link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.html[Learn more about ONTAP storage efficiency technologies].
 
+=== Data reduction rate (DRR)
+
+Beginning with ONTAP 9.20.1, the storage efficiency data reduction rate (DRR) provides a more precise assessment of ONTAP storage efficiency space savings by including only reducible data. In ONTAP 9.19.1 and earlier, the DRR includes both reducible and non-reducible data.
+
+link:https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements.html[ Learn more about how ONTAP reports used storage^].
+
 === Global deduplication
 
-Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire storage availability zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, storage efficiency can be significantly improved and total cost of ownership reduced. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
+Beginning with ONTAP 9.19.1, _global deduplication_ extends the link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html[existing ONTAP deduplication space savings^] at the storage unit level to the entire storage availability zone (SAZ). By eliminating duplicate data blocks across all the storage units in the SAZ, you can significantly improve storage efficiency and reduce total cost of ownership. Global deduplication requires no feature license, is enabled by default, integrates seamlessly with existing storage efficiency technologies, and operates transparently with minimal performance impact and without the need for administrative configuration. 
 
 == System Manager
 
@@ -134,5 +162,11 @@ You can search for various actions, objects, and information topics in System Ma
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html[Learn to search, filter and sort information in System Manager^].
 
+=== User password expiration alerts
+Beginning with ONTAP 9.20.1, if the role associated with a user account is configured for password expiry alerts, the user receives a top-of-page banner alert in System Manager immediately after logging in, beginning 14 days before the password expires. The alert is updated each time the user logs in to show the number of days remaining until the password expires. You can configure expiry alerts when you add or edit an administrator role.
+
+link:https://docs.netapp.com/us-en/ontap/authentication/configure-password-expiry-alerts.html[Learn how to configure password expiry alerts in System Manager^].
+
+//2026 Nov 5,  ONTAPDOC-4220, ONTAPDOC-4052, ONTAPDOC-3966
 //2026 June 29, ONTAPDOC-3797, ONTAPDOC-3798
 // 2026, May 07, ONTAPDOC-3498, ONTAPDOC-3677, ONTAPDOC-3883

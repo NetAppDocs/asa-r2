@@ -13,21 +13,37 @@ Use digital security certificates to verify the identity of remote servers.
 
 Online Certificate Status Protocol (OCSP) validates the status of digital certificate requests from ONTAP services using SSL and Transport Layer Security (TLS) connections. 
 
+== Modify certificate expiration alerts
+
+Beginning with ONTAP 9.20.1, System Manager displays a dashboard health alert 30 days before a cluster or storage virtual machine (VM) certificate expires. The alert is updated daily to show the number of days remaining until expiration. You can modify the default alert threshold to any value from 0 to 90 days, disable it so that no alerts are displayed, or suppress alerts for already expired certificates while continuing to receive alerts for upcoming expirations.
+
+.Steps
+
+. In System Manager, select *Cluster > Settings*.
+. Under *Security*, next to Certificates, select image:icon_arrow.gif[blue arrow pointing to the right].
+. Select *Client/server certificates*.
+. Update the expiry warning threshold, disable, or suppress it:
++
+* Update the *Warning Threshold* to any number of days from 0 to 90. 
+* Select *Disable Expiry Warnings* to disable the alert.
+* Select *Suppress Expired Alerts* to hide alerts for already expired certificates while continuing to receive alerts for upcoming expirations.
+
+
 == Generate a certificate signing request
 
-Generate a certificate signing request (CSR) to create a private key which can be used to generate a public certificate.
+Generate a certificate signing request (CSR) to create a private key that can be used to generate a public certificate.
 
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right]; then select image:icon_generate_csr.png[blue rectangle containing a plus sign followed by the words generate csr].
 . Enter the subject common name; then select the country.
-. If you want to change the GSR defaults, select extended key usage, or add subject alternative names, select image:icon_more_options.png[two arrows facing diagonally opposite directions followed by the words more options]; then make the desired updates.
+. If you want to change the CSR defaults, select extended key usage, or add subject alternative names, select image:icon_more_options.png[two arrows facing diagonally opposite directions followed by the words more options]; then make the desired updates.
 . Select *Generate*.
 
 .Result
 
-You have generated a CSR which can be used to generate a public certificate.
+You have generated a CSR that can be used to generate a public certificate.
 
 == Add a trusted certificate authority
 
@@ -53,7 +69,7 @@ Trusted certificate authorities must be renewed annually.  If you do not want to
 . Select *Cluster > Settings*.
 . Under *Security*, next to *Certificates*, select image:icon_arrow.gif[blue arrow pointing to the right].
 . Select *Trusted certificate authorities*.
-. Select the trust certificate authority that you want to renew or delete.
+. Select the trusted certificate authority that you want to renew or delete.
 . Renew or delete the certificate authority.
 +
 [cols="2" options="header"]
@@ -122,4 +138,5 @@ Select image:icon_kabob.gif[three vertical blue dots]; then select *Delete*.
 
 You have renewed or deleted an existing client/server certificate or local certificate authority on your ASA r2 system.
 
+//2026 Nov 5,  ONTAPDOC - 4220
 // 2024 Sept 24, ONTAPDOC 1930

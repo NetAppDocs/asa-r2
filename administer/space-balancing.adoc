@@ -48,7 +48,7 @@ In low space mode, ONTAP checks every minute to determine if dynamic space balan
 
 .Copy-based workload rebalancing
 
-With _copy-based workload rebalancing_, if an imbalance in storage utilization occurs within the storage availability zones, ONTAP automatically copies the storage unit creating the imbalance to a storage availability zone with greater free space. If there is not enough free space in the destination storage availability zone, ONTAP does not perform any balancing action. Copy-based workload rebalancing applies only to ASA r2 system running ONTAP 9.16.1, and it is enabled by default on those systems. In ONTAP 9.17.1 and later, it is replaced with dynamic space balancing.
+With _copy-based workload rebalancing_, if an imbalance in storage utilization occurs within the storage availability zones, ONTAP automatically copies the storage unit creating the imbalance to a storage availability zone with greater free space. If there is not enough free space in the destination storage availability zone, ONTAP does not perform any balancing action. Copy-based workload rebalancing applies only to ASA r2 systems running ONTAP 9.16.1, and it is enabled by default on those systems. In ONTAP 9.17.1 and later, it is replaced with dynamic space balancing.
 
 If you need to modify the default settings for copy-based workload rebalancing, contact NetApp Support.
 
