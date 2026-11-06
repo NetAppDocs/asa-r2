@@ -28,9 +28,9 @@ If your cluster is running low on space or does not have the capacity to meet fu
 
 == Monitor storage availability zone utilization
 
-Each HA pair in an ASA r2 system uses a common pool of storage called a _storage availability zone_.  The storage availability zone has access to all available disks in the storage system and is visible to both nodes in the HA pair. Monitoring the available space of your storage availability zones allows you to decrease usage or increase capacity as needed so that you do not experience failed workloads due to insufficient space.
+Each HA pair in an ASA r2 system uses a common pool of storage called a _storage availability zone_. The storage availability zone has access to all available disks in the storage system and is visible to both nodes in the HA pair. Monitoring the available space of your storage availability zones allows you to decrease usage or increase capacity as needed so that you do not experience failed workloads due to insufficient space.
 
-If you have 4 or more nodes in your cluster, you can view the amount of space used by the storage availability zone for each HA pair. This metric is not available for 2-node clusters. 
+If you have four or more nodes in your cluster, you can view the amount of space used by the storage availability zone for each HA pair. This metric is not available for two-node clusters. 
 
 Beginning with ONTAP 9.19.1, an alert is displayed in System Manager *Insights* if a storage availability zone in one of your ASA r2 system HA pairs nears capacity. Learn more about System Manager link:view-insights.html[Insights].
 
@@ -39,14 +39,14 @@ Beginning with ONTAP 9.19.1, an alert is displayed in System Manager *Insights* 
 +
 A summary of the storage availability zone utilization is displayed for each HA pair in the cluster.
 
-. If you want more detailed metrics, select a specific storage availability.
+. If you want more detailed metrics, select a specific storage availability zone.
 +
 Under *Overview*, the capacity of the storage availability zone, the amount of used space, and the data reduction ratio are displayed.
 + 
 Under *Storage units*, a list of all the storage units in the storage availability zone is displayed.
 
 .What's next?
-If your storage availability zone is running low on space, link:../manage-data/move-storage-units.html[move storage units] to another storage availability zone to balance the storage utilization across the cluster, delete snapshots to free up space, or add additional disks to your nodes to increase capacity.
+If your storage availability zone is running low on space, link:../manage-data/move-storage-units.html[move storage units] to another storage availability zone to balance the storage utilization across the cluster, delete snapshots to free up space, or add disks to your nodes to increase capacity.
 
 
 == Monitor storage unit utilization 

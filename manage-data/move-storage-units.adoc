@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-data/move-storage-units.html
 keywords: move lun, lun move, move namespace, move storage unit, asa r2
-summary: "If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster."
+summary: "Move storage units to another storage availability zone to balance storage utilization across the cluster when a zone is running low on space."
 ---
 = Move storage units on ASA r2 storage systems
 :icons: font
@@ -11,7 +11,7 @@ summary: "If a storage availability zone is running low on space, you can move s
 [.lead]
 If a storage availability zone is running low on space, you can move storage units to another storage availability zone to balance the storage utilization across the cluster.
 
-You can move a storage unit while the storage unit is online and serving data.  The move operation is non-disruptive. 
+You can move a storage unit while it is online and serving data. The move operation is non-disruptive. 
 
 .Before you begin
 

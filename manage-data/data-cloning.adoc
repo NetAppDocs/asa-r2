@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-data/data-cloning.html
 keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups
-summary: Clone storage units and consistency groups on the ASA r2 to create data copies to use outside of your production environment for a variety of purposes. 
+summary: "Clone storage units and consistency groups on ASA r2 systems to create data copies for use outside your production environment." 
 searchtitle: "Data cloning using ONTAP System Manager | ASA r2"
 ---
 = Clone data on ASA r2 storage systems
@@ -67,7 +67,7 @@ When you clone a consistency group, you create a new consistency group that’s 
 
 The clone is created from a snapshot of the consistency group being cloned.  The snapshot used for the clone is taken at the point in time that the cloning process is initiated by default. You can modify the default behavior to use a pre-existing snapshot. 
 
-Storage unit mappings are copied as part of the cloning process.  Snapshot polices are not copied as part of the cloning process.  
+Storage unit mappings are copied as part of the cloning process.  Snapshot policies are not copied as part of the cloning process.  
 
 You can create clones from consistency groups stored locally on your ASA r2 system or from consistency groups that have been replicated to remote locations. 
 
