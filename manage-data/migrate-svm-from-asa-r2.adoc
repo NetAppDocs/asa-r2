@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-data/migrate-svm-from-asa-r2.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine
-summary: "Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster."
+summary: "Migrate a storage VM from a 2-node ASA r2 cluster to a 2-node ASA or AFF cluster without disruption, beginning with ONTAP 9.20.1."
 ---
-= Migrate a storage VM from ASA r2 cluster to an ASA or AFF cluster
+= Migrate a storage VM from an ASA r2 cluster to an ASA or AFF cluster
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster. You might need to migrate a storage VM to consolidate SAN and NAS workloads, adopt ONTAP features not available for ASA r2 systems, or as part of a hardware refresh for your environment.  Existing host mappings and storage unit configurations for LUNs and namespaces are maintained during migration, reducing operational effort and risk.
+Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual machine (VM) from a 2-node ASA r2 cluster to a 2-node ASA or a 2-node AFF cluster. You might need to migrate a storage VM to consolidate SAN and NAS workloads, adopt ONTAP features not available for ASA r2 systems, or refresh your hardware. Existing host mappings and storage unit configurations for LUNs and namespaces are maintained during migration, reducing operational effort and risk.
 
 .Before you begin
 
@@ -19,14 +19,14 @@ Beginning with ONTAP 9.20.1, you can non-disruptively migrate a storage virtual 
 .About this task
 
 * You can migrate an ASA r2 storage VM from a 2-node ASA r2 cluster to a 2-node AFF cluster only.
-** You cannot migrate an ASA r2 storage VM to a FAS cluster, or to an ASA or AFF cluster with more than 2 nodes. 
-** You cannot migrate an ASA r2 storage VM from an ASA r2 cluster with more than 2 nodes.
+** You cannot migrate an ASA r2 storage VM to a FAS cluster, or to an ASA or AFF cluster with more than two nodes. 
+** You cannot migrate an ASA r2 storage VM from an ASA r2 cluster with more than two nodes.
 
 * Data migration from an ASA r2 cluster to an AFF cluster is not reversible.
 +
 You can abort a migration before cutover, but after cutover is initiated, you cannot interrupt or revert the migration.  After the migration is complete, you cannot migrate data from an AFF cluster to an ASA r2 cluster. 
 +
-You can link:migrate-svm.html[migrate an SVM from an ASA to an ASA r2 cluster].
+You can link:migrate-svm.html[migrate a storage VM from an ASA to an ASA r2 cluster].
 
 * You can migrate only one storage VM at a time.
 * The storage VM can contain a maximum of 400 storage units.
@@ -57,7 +57,7 @@ Before you migrate a storage virtual machine (VM) from an ASA r2 cluster, you ne
 
 . link:../data-protection/snapmirror-active-sync-break-relationship.html[Remove any existing replication relationships].
 
-. link:../data-protection/snapmirror-active-sync-delete-relationship.html[Remove any existing SnapMirrror active snyc relationships].
+. link:../data-protection/snapmirror-active-sync-delete-relationship.html[Remove any existing SnapMirror active sync relationships].
 
 . Check if IPsec is enabled:
 +
@@ -75,23 +75,23 @@ security ipsec config modify -is-enabled -false
 +
 Learn more about the link:https://docs.netapp.com/us-en/ontap-cli/security-ipsec-config-show.html[security ipsec config show^] command.
 
-.. Check for iPv6 and virtual IP (VIP) LIFs:
+.. Check for IPv6 and virtual IP (VIP) LIFs:
 +
 [source,cli]
 ----
 network interface show -vserver <storage_vm_name> -fields address-family, is-vip
 ----
 +
-For iPv6 LIFs, the `-address-family` is `ipv6`. For VIP LIFs the `-is-vip` parameter is `true`.  
+For IPv6 LIFs, the `-address-family` is `ipv6`. For VIP LIFs the `-is-vip` parameter is `true`.  
 
-.. If any iPv6 or VIP LIFs exist, remove them:
+.. If any IPv6 or VIP LIFs exist, remove them:
 +
 [source,cli]
 ----
 network interface delete -vserver <storage_vm_name> - lif <lif_name>
 ----
 
-.. Verify that there are no iPv6 or VIP LIFs remaining on the storage VM:
+.. Verify that there are no IPv6 or VIP LIFs remaining on the storage VM:
 +
 [source,cli]
 ----
@@ -142,7 +142,7 @@ You are ready to migrate your storage VM from your ASA r2 cluster.
 
 After you have created the necessary cluster peer relationship between the ASA r2 and ASA or AFF clusters and completed the steps to prepare both clusters, you can begin the storage VM migration.
 
-When performing a storage VM migration, it is a best practice to leave 30% CPU headroom on both the ASA r2 cluster and the AFF cluster to enable the migration CPU workload to execute.
+As a best practice, leave 30% CPU headroom on both the ASA r2 cluster and the AFF cluster so the migration workload can run.
 
 .About this task
 

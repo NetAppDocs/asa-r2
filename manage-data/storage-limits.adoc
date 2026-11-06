@@ -2,18 +2,18 @@
 sidebar: sidebar
 permalink: manage-data/storage-limits.html
 keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30
-summary: "For optimal performance, configuration and support, you should be aware of ASA r2 storage limits."
+summary: "Look up ASA r2 storage limits for your system and ONTAP version in NetApp Hardware Universe to ensure optimal performance, configuration, and support."
 ---
 = Determine your ASA r2 system storage limits
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-For optimal performance, configuration, and support, you should be aware of ASA r2 storage limits.
+Knowing the storage limits of your ASA r2 system helps you configure it for optimal performance and support. You can look up the limits for your system and ONTAP version in NetApp Hardware Universe.
 
-Limits might vary based upon your ASA r2 system and your ONTAP version. Refer to link:https://hwu.netapp.com/[NetApp Hardware Universe^] for a complete list of the most current limits for your specific system.  
+Limits might vary based on your ASA r2 system and your ONTAP version. Refer to link:https://hwu.netapp.com/[NetApp Hardware Universe^] for a complete list of the most current limits for your specific system.  
 
-NOTE: Virtual machine (VM) limits are not listed in Hardware Universe.  The recommended maximum number of VMs per HA pair is 800 and per cluster is 1,200 based upon ASA r2 system volume limits. This limit does not apply to VMs residing in VMFS datastores. There is no maximum number of VMs for VMFS datastores.
+NOTE: Virtual machine (VM) limits are not listed in Hardware Universe.  The recommended maximum number of VMs per HA pair is 800 and per cluster is 1,200 based on ASA r2 system volume limits. This limit does not apply to VMs residing in VMFS datastores. There is no maximum number of VMs for VMFS datastores.
 
 .About this task
 ASA r2 systems are listed in NetApp Hardware Universe under *Products* as "ASA" platforms.

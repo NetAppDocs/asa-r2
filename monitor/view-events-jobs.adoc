@@ -51,7 +51,7 @@ Configure your system to send a notification to specific email addresses when th
 .Steps
 
 . In System Manager, select *Cluster > Settings*.
-. Next to *Notifications management* select image:icon_kabob.gif[three vertical blue dots].
+. Next to *Notifications management*, select image:icon_kabob.gif[three vertical blue dots].
 . To configure an event destination, select *View event destinations*; then select *Event destinations*. To configure an audit log destination, select *View audit destinations*; then select *Audit log destinations*.
 . Select image:icon_add_blue_bg.png[blue rectangle with plus sign followed by the word add in white letters].
 . Enter the destination information; then select *Add*.
