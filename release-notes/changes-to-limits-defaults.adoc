@@ -27,6 +27,10 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | The maximum supported number of SCSI-3 persistent reservation registrations per LUN increases from 182 to 256. 
 | ONTAP 9.20.1
 
+| SnapMirror active sync endpoints
+| SnapMirror active sync increases endpoints supported per HA pair from 400 to 600
+| ONTAP 9.20.1
+
 | Storage VMs per cluster
 | The maximum number of supported storage virtual machines (VMs) per HA pair is increased from 32 to 256.
 | ONTAP 9.18.1
@@ -48,6 +52,7 @@ If you are running ONTAP 9.16.1 with more than 2 nodes in a cluster, you cannot 
 
 |===
 
+// 2026 Nov 11, ONTAPDOC-4175
 // 2025 Nov 06, ONTAPDOC-3266
 // 2025 June 04, ONTAPDOC-2994
 // 2025 Feb 28, ONTAPDOC 2260
