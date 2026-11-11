@@ -28,7 +28,7 @@ Learn about the changes to limits and defaults affecting ASA r2 systems. NetApp 
 | ONTAP 9.20.1
 
 | SnapMirror active sync endpoints
-| SnapMirror active sync increases endpoints supported per HA pair from 400 to 600
+| SnapMirror active sync increases endpoints supported per HA pair from 400 to 600.
 | ONTAP 9.20.1
 
 | Storage VMs per cluster
